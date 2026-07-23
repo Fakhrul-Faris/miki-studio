@@ -1,0 +1,14 @@
+# vid_082
+# language=id  probability=0.98
+# model_notes=vad=False
+
+[00:00.000 --> 00:01.000] Jadi kak?
+[00:01.000 --> 00:02.000] Jadi berapa bang?
+[00:02.000 --> 00:06.000] 50 ribu kak, tapi itu kopinya gratis kalo misalkan kakak bilang saya ganteng
+[00:07.000 --> 00:10.000] Gw deh 100 ribu, kembaliannya ambil aja
+[00:13.000 --> 00:16.000] Dukan bener katagula, dapet diit lagi
+[00:18.000 --> 00:19.000] Jelek berarti gua ya?
+[00:19.000 --> 00:20.000] Iya
+
+## Plain
+Jadi kak? Jadi berapa bang? 50 ribu kak, tapi itu kopinya gratis kalo misalkan kakak bilang saya ganteng Gw deh 100 ribu, kembaliannya ambil aja Dukan bener katagula, dapet diit lagi Jelek berarti gua ya? Iya

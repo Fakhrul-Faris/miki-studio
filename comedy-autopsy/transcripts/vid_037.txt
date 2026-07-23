@@ -1,0 +1,26 @@
+# vid_037
+# language=en  probability=1.00
+# model_notes=vad=False
+
+[00:00.000 --> 00:05.500] One day, I took a walk with Bo, and I sneezed, and from that point on, my back hurt.
+[00:05.500 --> 00:06.500] Ah!
+[00:06.500 --> 00:07.500] Oh, oh, oh!
+[00:07.500 --> 00:08.500] Oh, my back!
+[00:08.500 --> 00:13.340] After tolerating the pain for a week, like a man, I finally decided to have a chiropractor
+[00:13.340 --> 00:14.340] come help me.
+[00:14.340 --> 00:17.000] I laid down, and he touched my back for a few seconds.
+[00:17.000 --> 00:18.000] Hmm.
+[00:18.000 --> 00:19.500] Yeah, you threw out a rib.
+[00:19.500 --> 00:20.500] Ha!
+[00:20.500 --> 00:21.500] Good one.
+[00:21.500 --> 00:22.800] Wait, what?
+[00:22.800 --> 00:28.100] It turns out that from sneezing, I dislocated a rib, like an old man.
+[00:28.100 --> 00:31.060] I didn't even know rib dislocation was a thing.
+[00:31.060 --> 00:34.980] I've barely entered adulthood and my body is already deteriorating.
+[00:34.980 --> 00:38.260] So he fixed the rib, and he adjusted my whole body.
+[00:40.420 --> 00:43.540] In conclusion, I've messed up my neck from sleeping wrong,
+[00:43.540 --> 00:45.700] and I've thrown out a rib from sneezing.
+[00:45.700 --> 00:48.580] So I'm probably just one big fart away from death.
+
+## Plain
+One day, I took a walk with Bo, and I sneezed, and from that point on, my back hurt. Ah! Oh, oh, oh! Oh, my back! After tolerating the pain for a week, like a man, I finally decided to have a chiropractor come help me. I laid down, and he touched my back for a few seconds. Hmm. Yeah, you threw out a rib. Ha! Good one. Wait, what? It turns out that from sneezing, I dislocated a rib, like an old man. I didn't even know rib dislocation was a thing. I've barely entered adulthood and my body is already deteriorating. So he fixed the rib, and he adjusted my whole body. In conclusion, I've messed up my neck from sleeping wrong, and I've thrown out a rib from sneezing. So I'm probably just one big fart away from death.

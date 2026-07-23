@@ -1,0 +1,17 @@
+# Keep catalog + structure in git; ignore heavy media dumps
+.venv/
+__pycache__/
+.DS_Store
+
+raw/*
+!raw/.gitkeep
+!raw/README.md
+raw/**/*.mp4
+raw/**/*.mov
+raw/**/*.webm
+raw/**/*.mkv
+raw/**/*.m4v
+
+# Extracted analysis frames can be regenerated
+# (comment out if you want frames in git)
+# frames/

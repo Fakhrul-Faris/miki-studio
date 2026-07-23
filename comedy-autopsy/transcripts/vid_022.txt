@@ -1,0 +1,17 @@
+# vid_022
+# language=en  probability=0.98
+# model_notes=vad=False
+
+[00:00.000 --> 00:02.000] Aw, he's so cute!
+[00:02.000 --> 00:03.500] Can I say hi to your dog?
+[00:03.500 --> 00:06.000] Oh yeah man, go ahead! He's super friendly.
+[00:09.000 --> 00:10.000] What the fuck?
+[00:10.000 --> 00:12.000] Hey man, name's Rex.
+[00:12.000 --> 00:14.000] Nice to meet you.
+[00:14.000 --> 00:16.000] Hey, that's a pleasure.
+[00:19.000 --> 00:21.000] Now, I know what you're thinking.
+[00:21.000 --> 00:23.000] He's pretty well trained, right?
+[00:23.000 --> 00:24.000] It actually took me...
+
+## Plain
+Aw, he's so cute! Can I say hi to your dog? Oh yeah man, go ahead! He's super friendly. What the fuck? Hey man, name's Rex. Nice to meet you. Hey, that's a pleasure. Now, I know what you're thinking. He's pretty well trained, right? It actually took me...

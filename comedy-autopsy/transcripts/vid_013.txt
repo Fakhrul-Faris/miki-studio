@@ -1,0 +1,10 @@
+# vid_013
+# language=en  probability=0.99
+# model_notes=vad=False
+
+[00:00.000 --> 00:04.880] We need to have a serious discussion about the type of Pokemon you've been catching lately.
+[00:06.260 --> 00:08.260] This one's just a straight-up man.
+[00:08.760 --> 00:10.760] No. He has a tail.
+
+## Plain
+We need to have a serious discussion about the type of Pokemon you've been catching lately. This one's just a straight-up man. No. He has a tail.

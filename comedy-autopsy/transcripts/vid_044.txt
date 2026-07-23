@@ -1,0 +1,11 @@
+# vid_044
+# language=en  probability=0.99
+# model_notes=vad=False
+
+[00:00.000 --> 00:05.280] good morning morning oh i'm sorry are you mad at me did i do something to make you mad at me or
+[00:05.280 --> 00:10.640] what are you talking about this sounds like you're mad like you dude i just said good morning no it's
+[00:10.640 --> 00:17.920] it's not what you said it's how you said it what morning morning like why do you hate me oh why do
+[00:17.920 --> 00:25.400] you hate me! What? We're good. We're good? Yeah. Okay, like we're for sure?
+
+## Plain
+good morning morning oh i'm sorry are you mad at me did i do something to make you mad at me or what are you talking about this sounds like you're mad like you dude i just said good morning no it's it's not what you said it's how you said it what morning morning like why do you hate me oh why do you hate me! What? We're good. We're good? Yeah. Okay, like we're for sure?

@@ -1,0 +1,14 @@
+# vid_039
+# language=en  probability=0.95
+# model_notes=vad=False
+
+[00:00.000 --> 00:02.000] Go on, get him!
+[00:02.000 --> 00:04.000] Hi, puppy!
+[00:04.000 --> 00:06.000] Someone's in a little fight to kill.
+[00:06.000 --> 00:08.000] Yes, you can't shoot on the farm!
+[00:08.000 --> 00:10.000] Who's your good boy?
+[00:10.000 --> 00:12.000] Partridge's the baby, aren't you?
+[00:12.000 --> 00:14.000] Who's your good boy?
+
+## Plain
+Go on, get him! Hi, puppy! Someone's in a little fight to kill. Yes, you can't shoot on the farm! Who's your good boy? Partridge's the baby, aren't you? Who's your good boy?

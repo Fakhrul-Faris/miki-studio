@@ -1,0 +1,17 @@
+# vid_058
+# language=ms  probability=0.99
+# model_notes=vad=False
+
+[00:00.000 --> 00:02.000] Make sure hari ini sayang kau tinggi, bapak.
+[00:02.000 --> 00:03.000] Boleh?
+[00:03.000 --> 00:04.000] Saya buat sekarang lho boss.
+[00:04.000 --> 00:05.000] Okey.
+[00:10.000 --> 00:12.000] Jalan gerai ini banyak sangat lah gambar.
+[00:12.000 --> 00:13.000] Kau tolong cuci betul-betul keliakan.
+[00:15.000 --> 00:16.000] Dah boss.
+[00:17.000 --> 00:19.000] Aku tak faham lah masjid ini kau breakdown untuk aku boleh?
+[00:19.000 --> 00:20.000] Jat boss!
+[00:20.000 --> 00:21.000] Jat boss!
+
+## Plain
+Make sure hari ini sayang kau tinggi, bapak. Boleh? Saya buat sekarang lho boss. Okey. Jalan gerai ini banyak sangat lah gambar. Kau tolong cuci betul-betul keliakan. Dah boss. Aku tak faham lah masjid ini kau breakdown untuk aku boleh? Jat boss! Jat boss!

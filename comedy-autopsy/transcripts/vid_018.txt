@@ -1,0 +1,21 @@
+# vid_018
+# qa=human_reviewed
+# medium=animation (DiemArchive)
+# note=Long mid gap is visual (filling every quiz bubble), not missing dialogue.
+
+## On-screen
+- "The bitch ass" (partial title card beat)
+- Watermark: DiemArchive.com
+
+## Beats
+[00:00 --> 00:05] TEACHER: Alright, class. The bitch-ass principal said I can't help you guys with your quizzes anymore, so good luck.
+[00:05 --> 00:07] STUDENT: Oh, gosh, uh...
+[00:07 --> 00:16] VISUAL: Pencil fills in bubbles A, B, C, and D (answers everything).
+[00:16 --> 00:19] STUDENT: Wow, I can't believe I got a hundred percent.
+[00:17 --> 00:19] TEACHER: Yeah, good shit, Tim.
+
+## Plain (speech only)
+Alright, class. The bitch-ass principal said I can't help you guys with your quizzes anymore, so good luck. Oh, gosh, uh... Wow, I can't believe I got a hundred percent. Yeah, good shit, Tim.
+
+## Joke machine
+Teacher can't help anymore → student panics → fills every bubble → somehow gets 100 → teacher endorses the cheat energy.

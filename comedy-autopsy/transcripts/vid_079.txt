@@ -1,0 +1,37 @@
+# vid_079
+# language=id  probability=0.99
+# model_notes=vad=False
+
+[00:00.000 --> 00:04.700] Misi udah dapet kisang sebagai galak. Makanya udah untuk nasinya, untuk porsinya.
+[00:06.300 --> 00:07.300] Misi untuk nasinya.
+[00:07.300 --> 00:07.800] Iya.
+[00:07.800 --> 00:09.600] Misi untuk sayurnya? Pake?
+[00:09.600 --> 00:10.700] Untuk singkongnya?
+[00:10.700 --> 00:11.700] Enggak.
+[00:11.700 --> 00:13.300] Untuk sayur kohanya?
+[00:13.300 --> 00:14.100] Enggak.
+[00:14.100 --> 00:15.300] Timunya?
+[00:15.300 --> 00:16.000] Enggak.
+[00:16.000 --> 00:17.300] Serius udah? Bapak kaya?
+[00:17.300 --> 00:18.200] Iya.
+[00:18.200 --> 00:20.200] Sambal merah sambal hijaunya?
+[00:20.200 --> 00:21.900] Enggak.
+[00:21.900 --> 00:23.000] Mampu merah?
+[00:23.000 --> 00:24.600] Enggak.
+[00:24.600 --> 00:25.900] Tuk kuahnya? Sampur?
+[00:25.900 --> 00:28.300] Ada kuah cincang sama kuah yang boleh?
+[00:28.300 --> 00:29.400] Enggak usah.
+[00:29.400 --> 00:30.820] Gusah udah serius?
+[00:30.820 --> 00:32.320] Gak iya, gusah
+[00:32.320 --> 00:34.320] Untuk mananya mungkin?
+[00:34.320 --> 00:35.820] Perkedel aja
+[00:35.820 --> 00:37.820] Beneran udah, perkedel doang
+[00:37.820 --> 00:39.320] Perkedel akan nangis
+[00:39.320 --> 00:40.820] Udahnya sakit udah?
+[00:40.820 --> 00:41.820] Enggak, amat
+[00:41.820 --> 00:43.320] Udah, soal melepati udah
+[00:43.320 --> 00:44.320] Iya, makasih
+[00:59.400 --> 01:01.400] Terima kasih kerana menonton.
+
+## Plain
+Misi udah dapet kisang sebagai galak. Makanya udah untuk nasinya, untuk porsinya. Misi untuk nasinya. Iya. Misi untuk sayurnya? Pake? Untuk singkongnya? Enggak. Untuk sayur kohanya? Enggak. Timunya? Enggak. Serius udah? Bapak kaya? Iya. Sambal merah sambal hijaunya? Enggak. Mampu merah? Enggak. Tuk kuahnya? Sampur? Ada kuah cincang sama kuah yang boleh? Enggak usah. Gusah udah serius? Gak iya, gusah Untuk mananya mungkin? Perkedel aja Beneran udah, perkedel doang Perkedel akan nangis Udahnya sakit udah? Enggak, amat Udah, soal melepati udah Iya, makasih Terima kasih kerana menonton.

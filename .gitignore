@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+**/.DS_Store
+
+# Blender backups
+*.blend1
+*.blend2
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Heavy ephemeral render dumps (keep short preview MP4s)
+production/**/EP001_render/seq_limited/
+production/**/EP001_render/**/frame_*.png

@@ -1,0 +1,43 @@
+# vid_001
+# language=en  probability=1.00
+# model_notes=vad=False
+
+[00:00.000 --> 00:03.680] Hey, Netflix, do you have the movie Pride and Prejudice?
+[00:03.680 --> 00:04.440] Pull...
+[00:04.440 --> 00:05.240] Planet of the Apes?
+[00:05.240 --> 00:07.600] Just hang on, I have to type it in one letter at a time.
+[00:07.600 --> 00:08.480] Plink...
+[00:08.480 --> 00:09.240] Plinkerdonkle!
+[00:09.240 --> 00:10.440] Yeah, Plinkerdonkle!
+[00:10.440 --> 00:12.240] Yeah, okay.
+[00:12.240 --> 00:14.240] Here's movies like Plinkerdonkle.
+[00:14.240 --> 00:15.600] Wait, you don't have it?
+[00:15.600 --> 00:16.600] Why'd you recommend it?
+[00:16.600 --> 00:19.440] Oh, no, I recommend it, but...
+[00:19.440 --> 00:20.720] Do you want to watch Rush Hour 2?
+[00:20.720 --> 00:21.680] Ugh.
+[00:21.680 --> 00:23.160] Mm-mm-mm.
+[00:23.160 --> 00:25.160] Plinkerdonkle's streaming.
+[00:25.160 --> 00:28.160] Here are some streaming services for Plinkerdonkle.
+[00:28.160 --> 00:29.040] That one!
+[00:29.040 --> 00:32.920] Hey Peacock, it's me, Ryan. Can I watch Plinkered Uncle?
+[00:32.920 --> 00:35.880] Hmm... If you're really Ryan...
+[00:35.880 --> 00:38.420] What four digit code did I just text you?
+[00:38.420 --> 00:41.160] Hey Ryan, yeah. I love you, too.
+[00:41.160 --> 00:43.260] It's one, two, three, five!
+[00:43.260 --> 00:45.960] Well, it's nice to have you back, Ryan. Here's Plinkered Uncle.
+[00:45.960 --> 00:49.080] Thank you, Peacock. You wouldn't believe what I've had to... Wait, what's this?
+[00:49.080 --> 00:51.420] Plinkered Uncle? From 1987.
+[00:51.420 --> 00:53.760] AHHHHHHHHHH!
+[00:53.760 --> 00:56.480] Hey buddy.
+[00:56.480 --> 01:00.160] Could I... join the crew again?
+[01:00.160 --> 01:04.240] I must warn you, this path is fraught with danger.
+[01:04.240 --> 01:07.520] Viruses and foreign captions you can't get rid of.
+[01:08.160 --> 01:09.520] Are you sure?
+[01:09.520 --> 01:10.240] Y-yes.
+[01:10.240 --> 01:11.840] Like you mean it, boy!
+[01:11.840 --> 01:12.800] Aye-aye, captain!
+[01:13.680 --> 01:15.520] Welcome aboard, matey.
+
+## Plain
+Hey, Netflix, do you have the movie Pride and Prejudice? Pull... Planet of the Apes? Just hang on, I have to type it in one letter at a time. Plink... Plinkerdonkle! Yeah, Plinkerdonkle! Yeah, okay. Here's movies like Plinkerdonkle. Wait, you don't have it? Why'd you recommend it? Oh, no, I recommend it, but... Do you want to watch Rush Hour 2? Ugh. Mm-mm-mm. Plinkerdonkle's streaming. Here are some streaming services for Plinkerdonkle. That one! Hey Peacock, it's me, Ryan. Can I watch Plinkered Uncle? Hmm... If you're really Ryan... What four digit code did I just text you? Hey Ryan, yeah. I love you, too. It's one, two, three, five! Well, it's nice to have you back, Ryan. Here's Plinkered Uncle. Thank you, Peacock. You wouldn't believe what I've had to... Wait, what's this? Plinkered Uncle? From 1987. AHHHHHHHHHH! Hey buddy. Could I... join the crew again? I must warn you, this path is fraught with danger. Viruses and foreign captions you can't get rid of. Are you sure? Y-yes. Like you mean it, boy! Aye-aye, captain! Welcome aboard, matey.

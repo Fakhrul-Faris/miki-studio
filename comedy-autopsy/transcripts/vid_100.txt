@@ -1,0 +1,17 @@
+# vid_100
+# language=visual  probability=n/a
+# model_notes=ASR glyph/CTA garbage only. Rejuiced 2026-07-20 from dense captions. Brand: The Stone Cafe. (large-v3 overwrite restored)
+
+## On-screen caption karaoke (builds)
+1. KAMU KOK
+2. ANAK BARU
+3. ANAK BARU KAMU DI SINI BAGIAN
+   (= roughly: “why are you… / new kid / you’re the new hire here in the [section]…”)
+
+## Visual beat sheet
+Night kitchen / warung counter under fluorescent tube. Young staff in beige mandarin-collar uniform (The Stone Cafe logo). Stacks of plates, rice cooker, red-shirt coworker behind.
+Face arc: listening / blank → mid-speech → deadpan accept while captions assemble the outing.
+Incomplete “bagian ___” leaves department hanging — label alone is the punch.
+
+## Plain
+“Why are you like this?” caption build → reveal: you’re the new hire in this section.

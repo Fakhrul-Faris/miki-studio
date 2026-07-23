@@ -1,0 +1,13 @@
+# vid_015
+# language=en  probability=0.98
+# model_notes=vad=False
+
+[00:00.000 --> 00:03.000] Well, I give up. I cannot solve this puzzle. I need to watch a tutorial.
+[00:03.000 --> 00:07.000] What is up gamers? Today we are going to solve the Legend of Veldor Phantom Everglass puzzle.
+[00:08.000 --> 00:14.000] Hmm, fuck. I'm not quite sure how to solve it, so I'm going to go ahead and watch a tutorial real quick.
+[00:14.000 --> 00:19.000] Hello everybody, today I'm going to show you how to solve the Phantom Everglass puzzle. So it is quite a stupid puzzle actually.
+[00:19.000 --> 00:24.000] First you want to open up a tutorial on YouTube and watch how to solve the puzzle then.
+[00:24.000 --> 00:27.000] You have to solve the puzzle based on a video you are watching.
+
+## Plain
+Well, I give up. I cannot solve this puzzle. I need to watch a tutorial. What is up gamers? Today we are going to solve the Legend of Veldor Phantom Everglass puzzle. Hmm, fuck. I'm not quite sure how to solve it, so I'm going to go ahead and watch a tutorial real quick. Hello everybody, today I'm going to show you how to solve the Phantom Everglass puzzle. So it is quite a stupid puzzle actually. First you want to open up a tutorial on YouTube and watch how to solve the puzzle then. You have to solve the puzzle based on a video you are watching.

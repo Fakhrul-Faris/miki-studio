@@ -1,0 +1,23 @@
+# vid_006
+# language=en  probability=0.99
+# model_notes=vad=False
+
+[00:00.000 --> 00:05.240] Okay, so in two miles you're gonna want to stay on this highway
+[00:06.080 --> 00:12.680] What what are you talking about? I'm just saying in two miles you'll want to use any lane to stay on this highway, okay?
+[00:12.680 --> 00:15.200] I feel like that's not really a
+[00:16.320 --> 00:23.840] Necessary instruction. Oh, I'm sorry. Are you saying my instructions aren't necessary? No, but like I'm already going to do that
+[00:23.840 --> 00:25.840] It's just
+[00:25.840 --> 00:36.840] When you say stuff, I feel disrespected?
+[00:36.840 --> 00:38.840] Okay, seriously? Stay on this highway.
+[00:38.840 --> 00:40.840] I- I know. No, I don't think you understand.
+[00:40.840 --> 00:44.840] You need to use any lane to stay on this highway right now.
+[00:44.840 --> 00:46.840] I am!
+[00:46.840 --> 00:47.840] Now what?
+[00:47.840 --> 00:48.840] I'm thinking!
+[00:48.840 --> 00:51.840] Okay!
+[00:51.840 --> 00:53.840] Take that exit you just drove past.
+[00:53.840 --> 00:54.340] God!
+[00:54.340 --> 00:55.340] Pfft!
+
+## Plain
+Okay, so in two miles you're gonna want to stay on this highway What what are you talking about? I'm just saying in two miles you'll want to use any lane to stay on this highway, okay? I feel like that's not really a Necessary instruction. Oh, I'm sorry. Are you saying my instructions aren't necessary? No, but like I'm already going to do that It's just When you say stuff, I feel disrespected? Okay, seriously? Stay on this highway. I- I know. No, I don't think you understand. You need to use any lane to stay on this highway right now. I am! Now what? I'm thinking! Okay! Take that exit you just drove past. God! Pfft!

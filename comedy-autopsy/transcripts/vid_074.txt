@@ -1,0 +1,18 @@
+# vid_074
+# language=id  probability=0.94
+# model_notes=vad=False
+
+[00:00.000 --> 00:02.000] Baka boleh orderan yang mau apa?
+[00:02.000 --> 00:03.000] Bahasa Melayu
+[00:03.000 --> 00:04.000] Hah?
+[00:04.000 --> 00:05.000] Cik?
+[00:05.000 --> 00:06.000] Hah?
+[00:06.000 --> 00:07.000] Apakah?
+[00:07.000 --> 00:08.000] Diblasannya
+[00:09.000 --> 00:10.000] Hah!
+[00:10.000 --> 00:11.000] Biplasannya
+[00:11.000 --> 00:12.000] Oh, biplasannya?
+[00:12.000 --> 00:14.000] Tunggu bentar ya, Kak?
+
+## Plain
+Baka boleh orderan yang mau apa? Bahasa Melayu Hah? Cik? Hah? Apakah? Diblasannya Hah! Biplasannya Oh, biplasannya? Tunggu bentar ya, Kak?

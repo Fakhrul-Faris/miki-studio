@@ -1,0 +1,14 @@
+# vid_098
+# language=id  probability=0.97
+# model_notes=vad=False
+
+[00:00.000 --> 00:01.440] totalnya jadi berapa pak?
+[00:01.440 --> 00:03.060] jadi 20 ribu pak
+[00:03.060 --> 00:04.060] lika uangnya?
+[00:04.060 --> 00:05.560] uangnya 100 ribu ya
+[00:05.560 --> 00:06.780] pembalannya 80 ribu
+[00:06.780 --> 00:08.200] 80 ribu dilihat si kaka
+[00:08.200 --> 00:08.700] aji
+
+## Plain
+totalnya jadi berapa pak? jadi 20 ribu pak lika uangnya? uangnya 100 ribu ya pembalannya 80 ribu 80 ribu dilihat si kaka aji

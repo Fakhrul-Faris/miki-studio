@@ -1,0 +1,12 @@
+# vid_086
+# language=id  probability=0.97
+# model_notes=vad=False
+
+[00:00.000 --> 00:02.000] Selakon bang mau pesan apa?
+[00:02.000 --> 00:04.000] Mau pesan brown sugar tapi...
+[00:04.000 --> 00:06.000] Bersedia tinggal
+[00:06.000 --> 00:08.000] Tapi saya ada fotonya
+[00:08.000 --> 00:10.000] Bisa-bisa bang
+
+## Plain
+Selakon bang mau pesan apa? Mau pesan brown sugar tapi... Bersedia tinggal Tapi saya ada fotonya Bisa-bisa bang

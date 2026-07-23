@@ -1,0 +1,14 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading model=medium vad=False (first run downloads weights)…
+transcribe vid_009.mp4 → vid_009.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_009.txt
+transcribe vid_013.mp4 → vid_013.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_013.txt
+transcribe vid_016.mp4 → vid_016.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_016.txt
+transcribe vid_019.mp4 → vid_019.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_019.txt
+transcribe vid_023.mp4 → vid_023.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_023.txt
+transcribe vid_032.mp4 → vid_032.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_032.txt

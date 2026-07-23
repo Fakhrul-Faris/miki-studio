@@ -1,0 +1,17 @@
+# vid_010
+# language=en  probability=0.99
+# model_notes=vad=False
+
+[00:00.000 --> 00:03.080] Yo, that's not a word.
+[00:03.080 --> 00:06.600] Oh, thanks Google Docs. Can you tell me how to spell it correctly?
+[00:06.600 --> 00:09.400] Yeah, let me take a look.
+[00:09.400 --> 00:11.600] Nope, never seen that word in my life.
+[00:11.600 --> 00:15.000] What? You can't tell what word I was trying to spell?
+[00:15.000 --> 00:18.300] That jumble of letters is so far off from being a word,
+[00:18.300 --> 00:20.600] it looks like no word I've ever seen.
+[00:20.600 --> 00:22.400] Ugh, let me ask your brother.
+[00:24.400 --> 00:25.400] Hey!
+[00:25.400 --> 00:36.200] How are you two related?
+
+## Plain
+Yo, that's not a word. Oh, thanks Google Docs. Can you tell me how to spell it correctly? Yeah, let me take a look. Nope, never seen that word in my life. What? You can't tell what word I was trying to spell? That jumble of letters is so far off from being a word, it looks like no word I've ever seen. Ugh, let me ask your brother. Hey! How are you two related?

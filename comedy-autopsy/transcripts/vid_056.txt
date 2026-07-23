@@ -1,0 +1,30 @@
+# vid_056
+# language=ms  probability=1.00
+# model_notes=vad=False
+
+[00:00.000 --> 00:02.400] Kenapa buguk sangat desain yang kau buat ni?
+[00:02.400 --> 00:04.000] Saya dah usaha dah.
+[00:04.000 --> 00:07.200] Tolonglah, bimor kritif lah, benda simple ya.
+[00:07.200 --> 00:09.120] Guna kritif VT japur ni.
+[00:09.120 --> 00:10.360] Kau dah siap prim belum ah?
+[00:10.360 --> 00:11.480] Belum.
+[00:11.480 --> 00:12.640] Apa yang lambat sangat?
+[00:12.640 --> 00:14.920] Takat letak-letak takat, tekan-tekan butang,
+[00:14.920 --> 00:16.280] tu pun slow.
+[00:16.280 --> 00:17.960] Mana selesai report tolong lepas siap?
+[00:17.960 --> 00:19.160] Tasi lagi ah boss.
+[00:19.160 --> 00:22.120] Benda tekan kalau yang SL japur, tu pun slow.
+[00:22.120 --> 00:24.120] Nurah, gaji dah siap kira belum?
+[00:24.120 --> 00:25.280] Belum.
+[00:25.280 --> 00:27.920] Asal lambat sangat, benda tambah tolak japur ni.
+[00:27.920 --> 00:29.280] Kalis.
+[00:29.280 --> 00:30.280] Ya, Boss.
+[00:30.280 --> 00:32.280] Kau dah siap belum produk baru?
+[00:32.280 --> 00:33.280] Belum, Boss.
+[00:33.280 --> 00:37.280] Benda guna AI dengan Google tak sampai sejam pun boleh siap.
+[00:37.280 --> 00:38.280] Kenapa slow sangat?
+[00:38.280 --> 00:39.280] So, siap-siap.
+[00:39.280 --> 00:41.280] Make sure jagi siap.
+
+## Plain
+Kenapa buguk sangat desain yang kau buat ni? Saya dah usaha dah. Tolonglah, bimor kritif lah, benda simple ya. Guna kritif VT japur ni. Kau dah siap prim belum ah? Belum. Apa yang lambat sangat? Takat letak-letak takat, tekan-tekan butang, tu pun slow. Mana selesai report tolong lepas siap? Tasi lagi ah boss. Benda tekan kalau yang SL japur, tu pun slow. Nurah, gaji dah siap kira belum? Belum. Asal lambat sangat, benda tambah tolak japur ni. Kalis. Ya, Boss. Kau dah siap belum produk baru? Belum, Boss. Benda guna AI dengan Google tak sampai sejam pun boleh siap. Kenapa slow sangat? So, siap-siap. Make sure jagi siap.

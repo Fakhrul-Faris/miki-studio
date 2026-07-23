@@ -1,0 +1,9 @@
+# vid_030
+# language=en  probability=0.96
+# model_notes=vad=False
+
+[00:00.000 --> 00:05.000] What? What do you want?
+[00:05.000 --> 00:08.000] Thanks for calling. How may I help you?
+
+## Plain
+What? What do you want? Thanks for calling. How may I help you?

@@ -1,0 +1,22 @@
+# vid_002
+# language=en  probability=0.99
+# model_notes=vad=False
+
+[00:00.700 --> 00:06.360] Hey, I challenge you to a Pokemon battle. Oh crap. I must have missed this one. Hey kid
+[00:06.360 --> 00:09.800] You don't want to do this. Trust me. Oh, are you too scared?
+[00:09.800 --> 00:15.440] Well, you walked in my direct line of sight, which means you have to face my toughest Pokemon yet
+[00:15.440 --> 00:17.600] I choose you, Ratata!
+[00:20.840 --> 00:26.120] Listen kid, I fight the elite four to train now. You really don't want to fight me!
+[00:26.120 --> 00:26.960] Hey!
+[00:28.080 --> 00:31.640] Alright, I choose you.
+[00:31.640 --> 00:33.480] You too.
+[00:33.480 --> 00:34.960] R-Rathew?
+[00:34.960 --> 00:36.680] Use quick attack?
+[00:38.800 --> 00:39.640] You too.
+[00:39.640 --> 00:43.200] Use, I don't know, hyper beam?
+[00:43.200 --> 00:44.040] Ah!
+[00:45.560 --> 00:48.240] Rathew, speak to me.
+[00:48.240 --> 00:51.080] Hey kid, you owe me 20 bucks.
+
+## Plain
+Hey, I challenge you to a Pokemon battle. Oh crap. I must have missed this one. Hey kid You don't want to do this. Trust me. Oh, are you too scared? Well, you walked in my direct line of sight, which means you have to face my toughest Pokemon yet I choose you, Ratata! Listen kid, I fight the elite four to train now. You really don't want to fight me! Hey! Alright, I choose you. You too. R-Rathew? Use quick attack? You too. Use, I don't know, hyper beam? Ah! Rathew, speak to me. Hey kid, you owe me 20 bucks.

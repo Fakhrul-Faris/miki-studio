@@ -1,0 +1,14 @@
+# vid_072
+# language=visual  probability=n/a
+# model_notes=ASR empty (nn). Rejuiced 2026-07-20 from frames — caption + prop gag only.
+
+## On-screen
+OS (whole clip): “POV: you slept 3 hours and still came to work”
+
+## Visual beat sheet
+1–5. Hardware/flooring counter (FloFX, Schluter Systems, Afterpay stickers). Clerk: wavy hair, glasses, beard, black tee, thousand-yard stare.
+   Left hand on keyboard. Right hand grips BOSTITCH stapler on white mousepad as if it were a mouse. Real wireless mouse sits unused inches away. Red cone in frame.
+6. Same freeze — optional micro-awareness glance at stapler without correcting.
+
+## Plain
+Sleep-dep POV caption + stapler-as-mouse while real mouse watches.

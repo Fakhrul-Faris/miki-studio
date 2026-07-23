@@ -1,0 +1,50 @@
+# vid_099
+# language=id  probability=0.96
+# model_notes=vad=False
+
+[00:00.000 --> 00:00.760] ini kebelajarnya
+[00:00.760 --> 00:01.920] oke terimakasih mas
+[00:01.920 --> 00:04.360] minta nomor wei aja bisa mas mau langganya susu disini saya
+[00:04.360 --> 00:05.160] oh iya
+[00:05.160 --> 00:05.840] nomornya?
+[00:05.840 --> 00:06.800] nomornya oke
+[00:06.800 --> 00:07.840] kosong 882
+[00:07.840 --> 00:09.080] kosong 882
+[00:09.080 --> 00:10.200] 2415
+[00:10.200 --> 00:11.160] 2415
+[00:11.160 --> 00:12.240] 6587
+[00:12.240 --> 00:13.760] 6587
+[00:13.760 --> 00:14.040] udah
+[00:14.040 --> 00:14.560] terus?
+[00:14.560 --> 00:15.080] eh?
+[00:15.720 --> 00:17.680] eh salah kali mas ya
+[00:17.680 --> 00:18.680] pasti salah ini
+[00:18.680 --> 00:19.960] coba ini ada yang kurang di mas ini
+[00:19.960 --> 00:20.920] coba sekali lagi mas
+[00:20.920 --> 00:21.560] iya
+[00:21.560 --> 00:22.480] iya kosong
+[00:22.480 --> 00:23.440] kosong 882
+[00:23.440 --> 00:24.320] cosong 882
+[00:24.320 --> 00:25.200] 2415
+[00:25.200 --> 00:26.480] 2515
+[00:26.480 --> 00:27.760] 6587
+[00:27.760 --> 00:29.120] 6587
+[00:29.120 --> 00:29.600] udah
+[00:30.000 --> 00:30.500] Udah?
+[00:30.500 --> 00:31.000] Udah.
+[00:33.000 --> 00:35.500] Harusnya masih ada tabar ya mas, 6587.
+[00:35.500 --> 00:37.000] Eh, saya minta ini aja deh.
+[00:37.000 --> 00:37.500] Oh.
+[00:37.500 --> 00:38.000] Kartu namanya.
+[00:38.000 --> 00:38.500] Oh iya.
+[00:38.500 --> 00:39.000] Ada?
+[00:39.000 --> 00:39.500] Coba lihat.
+[00:40.500 --> 00:42.500] Oh iya, emang cuma sampai situ ya.
+[00:42.500 --> 00:43.000] Udah, Udah, Udah.
+[00:43.000 --> 00:43.500] Terima kasih ya mas.
+[00:43.500 --> 00:44.500] Ya, mari.
+[00:44.500 --> 00:45.500] 6587.
+[00:46.000 --> 00:47.500] Oh, dia yang salah ini.
+
+## Plain
+ini kebelajarnya oke terimakasih mas minta nomor wei aja bisa mas mau langganya susu disini saya oh iya nomornya? nomornya oke kosong 882 kosong 882 2415 2415 6587 6587 udah terus? eh? eh salah kali mas ya pasti salah ini coba ini ada yang kurang di mas ini coba sekali lagi mas iya iya kosong kosong 882 cosong 882 2415 2515 6587 6587 udah Udah? Udah. Harusnya masih ada tabar ya mas, 6587. Eh, saya minta ini aja deh. Oh. Kartu namanya. Oh iya. Ada? Coba lihat. Oh iya, emang cuma sampai situ ya. Udah, Udah, Udah. Terima kasih ya mas. Ya, mari. 6587. Oh, dia yang salah ini.

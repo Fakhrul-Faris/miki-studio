@@ -1,0 +1,8 @@
+# vid_094
+# language=id  probability=0.98
+# model_notes=vad=False
+
+[00:00.000 --> 00:13.000] banggap dikit kak, liat bawah kak, liat depan kak, nyapuk kak, cuci mobil kak, pulang kak.
+
+## Plain
+banggap dikit kak, liat bawah kak, liat depan kak, nyapuk kak, cuci mobil kak, pulang kak.

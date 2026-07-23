@@ -1,0 +1,24 @@
+# vid_023
+# qa=human_reviewed
+# medium=animation (+ photo texture)
+# note=Missing hook overlay in prior ASR. End gap is visual outro, not truncated dialogue. Early Korean auto-detect was wrong.
+
+## On-screen
+- Hook: "Introverts at restaurants be like:"
+
+## Beats
+[00:00 --> 00:02] ON-SCREEN: Introverts at restaurants be like:
+[00:00 --> 00:10] STAFF?: Wait — didn't he order bulgogi over rice?
+[00:10 --> 00:15] STAFF?: I think we served him spicy pork over rice instead.
+[00:15 --> 00:17] STAFF?: Why didn't he say anything?
+[00:17 --> 00:21] STAFF?: We could have just made him a new one.
+[00:21 --> 00:22] What?
+[00:22 --> 00:29] Do you know why?
+[00:29 --> 00:31] You wouldn't get it.
+[00:31 --> 00:41] VISUAL / BUTTON: Cutaway / sunset walk-off — introvert leaves without correcting the order (status: avoiding confrontation).
+
+## Plain (speech only)
+Wait — didn't he order bulgogi over rice? I think we served him spicy pork over rice instead. Why didn't he say anything? We could have just made him a new one. What? Do you know why? You wouldn't get it.
+
+## Joke machine
+Wrong order is served → kitchen wonders why customer stayed quiet → answer is introvert conflict-avoidance (shown more than explained).

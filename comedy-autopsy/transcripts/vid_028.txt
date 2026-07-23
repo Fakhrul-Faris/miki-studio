@@ -1,0 +1,15 @@
+# vid_028
+# language=en  probability=0.97
+# model_notes=vad=False
+
+[00:00.000 --> 00:04.280] Did you know that if you spell socks really fast, it sounds like you're speaking in Spanish?
+[00:04.280 --> 00:04.980] Socks?
+[00:04.980 --> 00:05.480] Yes.
+[00:06.260 --> 00:07.280] So CKS?
+[00:07.280 --> 00:08.440] Yes!
+[00:09.520 --> 00:10.560] Si! Si!
+[00:11.560 --> 00:12.560] So CKS?
+[00:12.560 --> 00:14.280] So CKS!
+
+## Plain
+Did you know that if you spell socks really fast, it sounds like you're speaking in Spanish? Socks? Yes. So CKS? Yes! Si! Si! So CKS? So CKS!

@@ -1,0 +1,12 @@
+# vid_087
+# language=id  probability=0.93
+# model_notes=vad=False
+
+[00:00.000 --> 00:01.120] Udah kak?
+[00:01.120 --> 00:01.960] Iya, udah.
+[00:01.960 --> 00:06.160] Karena kakaknya pelanggan terakhir, jadi kakak bebas ambil apa aja selama 30 detik.
+[00:06.160 --> 00:07.160] Oke kak?
+[00:07.720 --> 00:09.720] Kak, maksudnya gak gitu.
+
+## Plain
+Udah kak? Iya, udah. Karena kakaknya pelanggan terakhir, jadi kakak bebas ambil apa aja selama 30 detik. Oke kak? Kak, maksudnya gak gitu.

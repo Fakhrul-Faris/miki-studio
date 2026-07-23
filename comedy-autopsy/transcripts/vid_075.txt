@@ -1,0 +1,12 @@
+# vid_075
+# language=id  probability=0.90
+# model_notes=vad=False
+
+[00:00.000 --> 00:04.840] Kak, gimana sih? Sayang kan pesanya seblako yang dateng ngala di Samp?
+[00:04.840 --> 00:07.000] Kak, kan kita jualannya baju.
+[00:07.000 --> 00:09.000] Aduh, lusang, lusang, lusang.
+[00:11.000 --> 00:12.000] Kakaknya cari apa?
+[00:12.000 --> 00:14.000] Sparkwarnio.
+
+## Plain
+Kak, gimana sih? Sayang kan pesanya seblako yang dateng ngala di Samp? Kak, kan kita jualannya baju. Aduh, lusang, lusang, lusang. Kakaknya cari apa? Sparkwarnio.

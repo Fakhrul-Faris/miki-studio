@@ -1,0 +1,10 @@
+# vid_076
+# language=id  probability=0.96
+# model_notes=vad=False
+
+[00:00.000 --> 00:02.000] Katanya 65 ribu ya, kak?
+[00:08.360 --> 00:10.360] Jadi wangnya kurang 35 ribu ya, kak?
+[00:10.360 --> 00:10.860] Eh?
+
+## Plain
+Katanya 65 ribu ya, kak? Jadi wangnya kurang 35 ribu ya, kak? Eh?

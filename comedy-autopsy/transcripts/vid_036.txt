@@ -1,0 +1,11 @@
+# vid_036
+# language=en  probability=1.00
+# model_notes=vad=False
+
+[00:00.000 --> 00:03.840] Ah, man. I'm pretty out of shape. Time to hit the gym.
+[00:09.520 --> 00:11.040] Six months later.
+[00:13.760 --> 00:16.240] Dang bro, nice work. You're super in shape.
+[00:17.280 --> 00:17.840] Thanks.
+
+## Plain
+Ah, man. I'm pretty out of shape. Time to hit the gym. Six months later. Dang bro, nice work. You're super in shape. Thanks.

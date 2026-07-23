@@ -1,0 +1,24 @@
+# vid_061
+# language=ms  probability=0.99
+# model_notes=vad=False
+
+[00:00.000 --> 00:02.000] Okay, tolong ambil minit of meeting.
+[00:02.000 --> 00:04.000] Boss, kenapa boss macam tak ada semangat?
+[00:04.000 --> 00:06.000] Biasa ya, mandi blues.
+[00:06.000 --> 00:09.000] Oh, boss suka tengok blues.
+[00:09.000 --> 00:10.000] Hei!
+[00:10.000 --> 00:11.000] Benda tu?
+[00:11.000 --> 00:15.000] By the way, kit sale kita semalam agak teruk sikit ah.
+[00:15.000 --> 00:17.000] Tapi bulan lepas pun teruk juga kan boss?
+[00:17.000 --> 00:18.000] Tuh ah.
+[00:18.000 --> 00:21.000] Benyaga tak berkat patut dia zikir tak masuk.
+[00:21.000 --> 00:22.000] Hei!
+[00:22.000 --> 00:23.000] Kau tak buat tengah ku ah?
+[00:23.000 --> 00:24.000] Hei!
+[00:24.000 --> 00:25.000] Khalis mana tak ada bagi ni?
+[00:25.000 --> 00:27.000] Khalis MC.
+[00:27.000 --> 00:32.200] Oh. Oh. Bos kanda dengan kades. Eh. Kau ni apa benda menulis
+[00:32.200 --> 00:36.600] minute of meeting begini dulu. Dia berat tadi tak betul?
+
+## Plain
+Okay, tolong ambil minit of meeting. Boss, kenapa boss macam tak ada semangat? Biasa ya, mandi blues. Oh, boss suka tengok blues. Hei! Benda tu? By the way, kit sale kita semalam agak teruk sikit ah. Tapi bulan lepas pun teruk juga kan boss? Tuh ah. Benyaga tak berkat patut dia zikir tak masuk. Hei! Kau tak buat tengah ku ah? Hei! Khalis mana tak ada bagi ni? Khalis MC. Oh. Oh. Bos kanda dengan kades. Eh. Kau ni apa benda menulis minute of meeting begini dulu. Dia berat tadi tak betul?

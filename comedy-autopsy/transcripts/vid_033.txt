@@ -1,0 +1,21 @@
+# vid_033
+# language=en  probability=1.00
+# model_notes=vad=False
+
+[00:00.000 --> 00:02.240] Okay, so you're not gonna do anything weird this time, right?
+[00:02.240 --> 00:06.800] Oh my god, are you kidding me? No, I'm like so apologetic. I didn't even know,
+[00:06.800 --> 00:09.920] but this is what's great. This is what's great about us. We're both learning from each other.
+[00:09.920 --> 00:13.120] I love that we're so communicative. Right, so you're not gonna make any weird
+[00:13.920 --> 00:19.040] like noises or say anything weird to me or you're just gonna make the coffee, right?
+[00:19.040 --> 00:24.160] 100% and honestly props to you, man, for letting me know last time that you weren't
+[00:24.160 --> 00:25.760] into what I was putting out.
+[00:25.760 --> 00:27.000] Okay, I'm clicking the button.
+[00:27.000 --> 00:30.320] Oh, oh, yes, yes, yes, yes, yes.
+[00:30.320 --> 00:32.520] Oh, look at it, look at me, look at me, look at me,
+[00:32.520 --> 00:33.880] look at me, look at me, look at me, look at me,
+[00:33.880 --> 00:35.200] oh my God, oh, you wouldn't drink it,
+[00:35.200 --> 00:37.980] don't you, so bad.
+[00:37.980 --> 00:39.780] All right, I'll get tea or some sh-
+
+## Plain
+Okay, so you're not gonna do anything weird this time, right? Oh my god, are you kidding me? No, I'm like so apologetic. I didn't even know, but this is what's great. This is what's great about us. We're both learning from each other. I love that we're so communicative. Right, so you're not gonna make any weird like noises or say anything weird to me or you're just gonna make the coffee, right? 100% and honestly props to you, man, for letting me know last time that you weren't into what I was putting out. Okay, I'm clicking the button. Oh, oh, yes, yes, yes, yes, yes. Oh, look at it, look at me, look at me, look at me, look at me, look at me, look at me, look at me, oh my God, oh, you wouldn't drink it, don't you, so bad. All right, I'll get tea or some sh-

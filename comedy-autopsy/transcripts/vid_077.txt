@@ -1,0 +1,21 @@
+# vid_077
+# language=id  probability=0.74
+# model_notes=vad=False
+
+[00:00.000 --> 00:05.000] Misalkan, ini totalnya jadi batu sipu, pembalonnya muka atau kris.
+[00:05.000 --> 00:06.000] Duna aja mas?
+[00:06.000 --> 00:07.000] Duna, silahkan.
+[00:07.000 --> 00:08.000] Adaannya?
+[00:08.000 --> 00:09.000] Edisi.
+[00:09.000 --> 00:10.000] Edisi ini, silahkan kan?
+[00:10.000 --> 00:11.000] Oke.
+[00:11.000 --> 00:12.000] Oke, selamat.
+[00:12.000 --> 00:13.000] Udah, coba mas.
+[00:13.000 --> 00:14.000] Kita dulu mas.
+[00:14.000 --> 00:16.000] Oke.
+[00:16.000 --> 00:18.000] Oh, berhasil kan?
+[00:18.000 --> 00:19.000] Oke, selamat ya.
+[00:19.000 --> 00:20.000] Oke.
+
+## Plain
+Misalkan, ini totalnya jadi batu sipu, pembalonnya muka atau kris. Duna aja mas? Duna, silahkan. Adaannya? Edisi. Edisi ini, silahkan kan? Oke. Oke, selamat. Udah, coba mas. Kita dulu mas. Oke. Oh, berhasil kan? Oke, selamat ya. Oke.

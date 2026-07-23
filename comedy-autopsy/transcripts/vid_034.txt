@@ -1,0 +1,22 @@
+# vid_034
+# language=en  probability=0.98
+# model_notes=vad=False
+
+[00:00.000 --> 00:01.600] So why should we hire you?
+[00:01.600 --> 00:02.600] What?
+[00:02.600 --> 00:04.800] Because you guys are hiring.
+[00:04.800 --> 00:06.800] That is not an acceptable answer.
+[00:06.800 --> 00:09.200] You know what? Why should I accept this position?
+[00:09.200 --> 00:09.800] What?
+[00:09.800 --> 00:11.800] Yeah, why is this position open?
+[00:11.800 --> 00:13.000] Do people keep quitting?
+[00:13.000 --> 00:14.000] Um...
+[00:14.000 --> 00:15.400] Uh...
+[00:15.400 --> 00:16.800] Why are people quitting this job?
+[00:16.800 --> 00:18.400] Is there something I should know?
+[00:18.400 --> 00:19.800] Okay, well, thank you for your time.
+[00:19.800 --> 00:20.600] I'll see you on Monday.
+[00:20.600 --> 00:21.600] Okay, well, thank you for your time.
+
+## Plain
+So why should we hire you? What? Because you guys are hiring. That is not an acceptable answer. You know what? Why should I accept this position? What? Yeah, why is this position open? Do people keep quitting? Um... Uh... Why are people quitting this job? Is there something I should know? Okay, well, thank you for your time. I'll see you on Monday. Okay, well, thank you for your time.

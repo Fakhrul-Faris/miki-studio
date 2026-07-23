@@ -1,0 +1,40 @@
+# vid_066
+# language=ms  probability=1.00
+# model_notes=vad=False
+
+[00:00.000 --> 00:05.000] Bos, ni kat komentar tadi, by the way raya ni aku cuti seminggu ah
+[00:05.000 --> 00:07.000] Kok, kok aku siap bro?
+[00:07.000 --> 00:11.000] Maafkan gua bos, ni kat yang bos order tu
+[00:11.000 --> 00:15.000] By the way, raya ni saya kena balik Kelantan lah bos
+[00:15.000 --> 00:18.000] So, bos saya dah minta cuti seminggu boleh?
+[00:18.000 --> 00:19.000] Boleh
+[00:19.000 --> 00:20.000] Terima kasih bos eh
+[00:20.000 --> 00:23.000] Eh bos, kat bos ah sampai ya?
+[00:23.000 --> 00:24.000] Cantik lah bos ni saya
+[00:24.000 --> 00:25.000] Oh iya
+[00:25.000 --> 00:26.000] Andai
+[00:26.000 --> 00:27.000] Thank you
+[00:27.000 --> 00:28.000] Bos raya bagaimana tu ni?
+[00:28.000 --> 00:30.000] saya dah keluang
+[00:30.000 --> 00:32.000] keluang? saya kena pergi klantat semuanya
+[00:32.000 --> 00:35.000] so saya kena cuci lah seminggu macam tu
+[00:35.000 --> 00:37.000] boleh ikut Boss ah? Boss tak ada yang dulu tu
+[00:37.000 --> 00:39.000] tak ada, cuci je lah
+[00:39.000 --> 00:41.000] alright, thank you
+[00:41.000 --> 00:43.000] Boss, ni kat Boss, kenapa beli tiga ya?
+[00:43.000 --> 00:44.000] kenapa?
+[00:44.000 --> 00:47.000] tak apa, nanti saya beli lagi sepuluh untuk Boss
+[00:47.000 --> 00:50.000] eh, saya itu rumah Tok K dapat nak saya hantar Mak
+[00:50.000 --> 00:52.000] oh, dapat? sedap
+[00:52.000 --> 00:54.000] oh, thank you, thank you
+[00:54.000 --> 00:56.000] Boss, saya kat UK ke tuan ni
+[00:56.000 --> 00:57.000] iya
+[00:57.000 --> 00:59.320] bolehlah kita jumpa, saya pun nak pergi UK
+[00:59.320 --> 01:01.600] tapi tuah saya pergi sebulan
+[01:01.600 --> 01:03.600] jadi saya tak ada sebulan, tak apa-apa
+[01:03.600 --> 01:06.000] tapi saya pun cintis minggu saja
+[01:06.000 --> 01:08.000] lah tak apa lah Bos
+[01:08.000 --> 01:10.000] Bos nak apa-apa di UK, cakap-cakap
+
+## Plain
+Bos, ni kat komentar tadi, by the way raya ni aku cuti seminggu ah Kok, kok aku siap bro? Maafkan gua bos, ni kat yang bos order tu By the way, raya ni saya kena balik Kelantan lah bos So, bos saya dah minta cuti seminggu boleh? Boleh Terima kasih bos eh Eh bos, kat bos ah sampai ya? Cantik lah bos ni saya Oh iya Andai Thank you Bos raya bagaimana tu ni? saya dah keluang keluang? saya kena pergi klantat semuanya so saya kena cuci lah seminggu macam tu boleh ikut Boss ah? Boss tak ada yang dulu tu tak ada, cuci je lah alright, thank you Boss, ni kat Boss, kenapa beli tiga ya? kenapa? tak apa, nanti saya beli lagi sepuluh untuk Boss eh, saya itu rumah Tok K dapat nak saya hantar Mak oh, dapat? sedap oh, thank you, thank you Boss, saya kat UK ke tuan ni iya bolehlah kita jumpa, saya pun nak pergi UK tapi tuah saya pergi sebulan jadi saya tak ada sebulan, tak apa-apa tapi saya pun cintis minggu saja lah tak apa lah Bos Bos nak apa-apa di UK, cakap-cakap

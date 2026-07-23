@@ -1,0 +1,111 @@
+Loading model=small vad=False (first run downloads weights)…
+transcribe vid_001.mp4 → vid_001.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_001.txt
+transcribe vid_002.mp4 → vid_002.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_002.txt
+transcribe vid_003.mp4 → vid_003.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_003.txt
+transcribe vid_004.mp4 → vid_004.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_004.txt
+transcribe vid_005.mp4 → vid_005.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_005.txt
+transcribe vid_006.mp4 → vid_006.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_006.txt
+transcribe vid_007.mp4 → vid_007.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_007.txt
+transcribe vid_008.mp4 → vid_008.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_008.txt
+transcribe vid_009.mp4 → vid_009.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_009.txt
+transcribe vid_010.mp4 → vid_010.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_010.txt
+transcribe vid_011.mp4 → vid_011.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_011.txt
+transcribe vid_012.mp4 → vid_012.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_012.txt
+transcribe vid_013.mp4 → vid_013.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_013.txt
+transcribe vid_014.mp4 → vid_014.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_014.txt
+transcribe vid_015.mp4 → vid_015.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_015.txt
+transcribe vid_016.mp4 → vid_016.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_016.txt
+transcribe vid_017.mp4 → vid_017.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_017.txt
+transcribe vid_018.mp4 → vid_018.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_018.txt
+transcribe vid_019.mp4 → vid_019.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_019.txt
+transcribe vid_020.mp4 → vid_020.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_020.txt
+transcribe vid_021.mp4 → vid_021.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_021.txt
+transcribe vid_022.mp4 → vid_022.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_022.txt
+transcribe vid_023.mp4 → vid_023.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_023.txt
+transcribe vid_024.mp4 → vid_024.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_024.txt
+transcribe vid_025.mp4 → vid_025.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_025.txt
+transcribe vid_026.mp4 → vid_026.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_026.txt
+transcribe vid_027.mp4 → vid_027.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_027.txt
+transcribe vid_028.mp4 → vid_028.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_028.txt
+transcribe vid_029.mp4 → vid_029.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_029.txt
+transcribe vid_030.mp4 → vid_030.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_030.txt
+transcribe vid_031.mp4 → vid_031.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_031.txt
+transcribe vid_032.mp4 → vid_032.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_032.txt
+transcribe vid_033.mp4 → vid_033.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_033.txt
+transcribe vid_034.mp4 → vid_034.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_034.txt
+transcribe vid_035.mp4 → vid_035.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_035.txt
+transcribe vid_036.mp4 → vid_036.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_036.txt
+transcribe vid_037.mp4 → vid_037.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_037.txt
+transcribe vid_038.mp4 → vid_038.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_038.txt
+transcribe vid_039.mp4 → vid_039.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_039.txt
+transcribe vid_040.mp4 → vid_040.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_040.txt
+transcribe vid_041.mp4 → vid_041.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_041.txt
+transcribe vid_042.mp4 → vid_042.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_042.txt
+transcribe vid_043.mp4 → vid_043.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_043.txt
+transcribe vid_044.mp4 → vid_044.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_044.txt
+transcribe vid_045.mp4 → vid_045.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_045.txt
+transcribe vid_046.mp4 → vid_046.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_046.txt
+transcribe vid_047.mp4 → vid_047.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_047.txt
+transcribe vid_048.mp4 → vid_048.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_048.txt
+transcribe vid_049.mp4 → vid_049.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_049.txt
+transcribe vid_050.mp4 → vid_050.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_050.txt
+transcribe vid_051.mp4 → vid_051.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_051.txt
+transcribe vid_052.mp4 → vid_052.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_052.txt
+transcribe vid_053.mp4 → vid_053.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_053.txt
+transcribe vid_054.mp4 → vid_054.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_054.txt
+transcribe vid_055.mp4 → vid_055.txt
+wrote /Users/user/Private/miki-studio/comedy-autopsy/transcripts/vid_055.txt

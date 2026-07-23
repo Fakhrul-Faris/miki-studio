@@ -1,0 +1,13 @@
+# vid_026
+# language=en  probability=1.00
+# model_notes=vad=False
+
+[00:00.000 --> 00:02.280] Oh my god, I get it now.
+[00:02.280 --> 00:03.280] You get what?
+[00:03.280 --> 00:05.920] You know when things heat up, they expand.
+[00:05.920 --> 00:07.160] And?
+[00:07.160 --> 00:08.080] I'm not fat.
+[00:08.080 --> 00:09.920] I'm hot.
+
+## Plain
+Oh my god, I get it now. You get what? You know when things heat up, they expand. And? I'm not fat. I'm hot.

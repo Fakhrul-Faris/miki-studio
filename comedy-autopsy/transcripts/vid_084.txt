@@ -1,0 +1,11 @@
+# vid_084
+# language=id  probability=1.00
+# model_notes=vad=False
+
+[00:00.000 --> 00:01.000] Cik, totalnya berapa?
+[00:01.000 --> 00:01.800] 50 ribu
+[00:01.800 --> 00:03.800] Karena cicinya cantik dan misalnya enak
+[00:04.200 --> 00:05.700] Aku bayar 2 kali gitu, Pak
+
+## Plain
+Cik, totalnya berapa? 50 ribu Karena cicinya cantik dan misalnya enak Aku bayar 2 kali gitu, Pak

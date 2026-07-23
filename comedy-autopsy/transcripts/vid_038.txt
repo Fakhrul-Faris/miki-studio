@@ -1,0 +1,27 @@
+# vid_038
+# language=en  probability=1.00
+# model_notes=vad=False
+
+[00:00.000 --> 00:06.160] You know how once in a while your parents randomly dropped the most interesting piece of lore about their lives out of nowhere?
+[00:06.160 --> 00:13.900] I've known you my whole life and you're only just now telling me that you were a teenage underwear model in Hong Kong?
+[00:13.900 --> 00:15.920] Why didn't you lead with that?
+[00:15.920 --> 00:19.840] I thought you were just some middle-aged white guy who likes making sourdough bread.
+[00:19.840 --> 00:26.120] I literally only just learned that my dad used to sell knives and he accidentally cut one of his fingers,
+[00:26.120 --> 00:28.040] went to the doctor to get it fixed
+[00:28.040 --> 00:31.640] and ended up selling a set of knives to the doctor.
+[00:31.640 --> 00:33.320] Take notice of the unimpeded blood flow
+[00:33.320 --> 00:34.840] and clear view of the finger bone.
+[00:34.840 --> 00:37.280] You only get incredibly clean cuts like this
+[00:37.280 --> 00:39.920] with quality German G2 stainless steel sharpened
+[00:39.920 --> 00:42.200] at a 20% bevel for ideal cutting.
+[00:42.200 --> 00:44.040] This is paired with a full tank construction
+[00:44.040 --> 00:45.280] and an ergonomic handle.
+[00:45.280 --> 00:48.240] Throw in a lifetime warranty and this is a no brainer.
+[00:48.240 --> 00:50.920] You can walk away with this very knife today.
+[00:50.920 --> 00:51.960] And if you get the full set,
+[00:51.960 --> 00:53.840] I'll throw in a 30% discount.
+[00:53.840 --> 00:54.920] Can't argue with that.
+[00:54.920 --> 00:56.000] You got a deal.
+
+## Plain
+You know how once in a while your parents randomly dropped the most interesting piece of lore about their lives out of nowhere? I've known you my whole life and you're only just now telling me that you were a teenage underwear model in Hong Kong? Why didn't you lead with that? I thought you were just some middle-aged white guy who likes making sourdough bread. I literally only just learned that my dad used to sell knives and he accidentally cut one of his fingers, went to the doctor to get it fixed and ended up selling a set of knives to the doctor. Take notice of the unimpeded blood flow and clear view of the finger bone. You only get incredibly clean cuts like this with quality German G2 stainless steel sharpened at a 20% bevel for ideal cutting. This is paired with a full tank construction and an ergonomic handle. Throw in a lifetime warranty and this is a no brainer. You can walk away with this very knife today. And if you get the full set, I'll throw in a 30% discount. Can't argue with that. You got a deal.
