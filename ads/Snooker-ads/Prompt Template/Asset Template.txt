@@ -1,0 +1,25 @@
+### Prompt Template for assets:
+
+- [IMAGE TYPE]
+- [SUBJECT]
+- [DESIGN]
+- [POSE]
+- [ENVIRONMENT: Pure white seamless studio background.]
+- [CAMERA]
+- [EXCLUSIONS]
+
+*[IMAGE TYPE: Isolated costume production asset]*
+
+### Example
+
+*[SUBJECT: One extremely long oversized tan trench coat designed to disguise three 68 cm creatures stacked vertically as one approximately 2-meter-tall figure.]*
+
+*[DESIGN: Warm camel-tan cotton gabardine, wide structured shoulders, oversized storm collar, vintage dark horn buttons, long sleeves made for thin elongated arms, belt hanging loosely, hem nearly reaching the floor. Slight natural wear and soft fabric creases.]*
+
+*[POSE: Coat completely closed and buttoned, displayed on an invisible humanoid form approximately 2 meters tall. Broad mysterious silhouette, but still slightly awkward and comedic.]*
+
+*[ENVIRONMENT: Pure white seamless studio background.]*
+
+*[CAMERA: Full front view, 85mm lens, f/8, sharp commercial costume photography.]*
+
+*[EXCLUSIONS: No creature visible, no human body, no hanger, no logos, no props.]*

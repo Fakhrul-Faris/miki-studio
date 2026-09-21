@@ -14,3 +14,6 @@ __pycache__/
 # Heavy ephemeral render dumps (keep short preview MP4s)
 production/**/EP001_render/seq_limited/
 production/**/EP001_render/**/frame_*.png
+
+# Archived pre-restructure project tree
+archive-ignore/

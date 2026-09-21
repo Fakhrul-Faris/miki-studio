@@ -1,0 +1,99 @@
+## [FORMAT]
+
+### [GOAL]
+[What kind of video this is, and what happens from beginning to end in one sentence.]
+**Duration:** [how many seconds].
+
+### [REFERENCES]
+- **@image1** — [Character A's face and body. Say what to ignore, for example: not the clothing, they wear the coat below.]
+- **@image2** — [Character A's coat.]
+- **@image3** — [Character A's case, bag, or main prop.]
+- **@image4** — [An item that goes inside that case.]
+- **@image5** — [Another item that goes inside that case.]
+- **@image6** — [Character B's face and body, including the clothes they wear underneath.]
+- **@image7** — [Character B's hat, glasses, or accessory. Say whether it stays on the whole time or comes off at some point.]
+- **@audio1** — Voice reference for [character]. Match this voice exactly for their dialogue. Do not use any other audio from it.
+- **@video1** — [What to take from this video: the motion, the pacing, the camera move. Then say what not to take — the person, their clothes, the location.]
+- Do not use any of the backgrounds from the photos.
+
+### [CONTINUITY]
+- **[Character A]** — [what they look like and what they wear the whole way through.]
+- **[Character B]** — [same. Then anything that changes, and exactly when it changes.]
+- **The scene** — [one location and one lighting setup, the same from start to finish.]
+
+### [STAGES]
+- **STAGE 1** — 0-[3]s — [name the beat] — [what happens, and how it is framed] — NO CUT
+- **STAGE 2** — [n]-[n]s — [name the beat] — [what happens] — CUT
+- **STAGE 3** — [n]-[n]s — [name the beat] — [what happens] — CUT
+- **STAGE 4** — [n]-[n]s — [name the beat] — [how they deliver it]. In their voice (@audio1), [language]: [[the line]] — CUT
+- **STAGE 5, 6, 7...** keep going until the times add up to the full duration.
+- **LAST STAGE** — [n]-[n]s — [name the beat] — [the closing shot, and what stays on screen as it ends] — NO CUT
+
+*If it is one continuous take instead: delete the stages and write one paragraph — what happens, how the shot moves, and all the dialogue in order.*
+
+### [LOOK]
+[Sharpness and format, for example large-format clarity or handheld phone video.] [Colour and grain.]
+[Lighting and shadow.] [The overall mood.]
+
+### [CAMERA AND PERFORMANCE]
+**Cutting** — [fast and punchy, or slow and held. Then name any camera moves you do not want.]Here is the transcribed content from the image in Markdown format:
+- **[Character A]** — [how they carry themselves and how the performance should read.]
+- **[Character B]** — [same.]
+
+### [AUDIO]
+- **Music** — [the style, and when it drops out.]
+- **Sound** — [an effect, and the moment it happens.]
+- **Sound** — [another effect.]
+- **Ambience** — [what is heard underneath the whole time.]
+- **Subtitles** — [on or off.]
+
+### [KEEP CONSISTENT]
+Same [character A] and same [character B] throughout — [faces, clothing, and props]. [Anything that changes, and the stage it changes at.] Same items in the same positions once they are shown. Same location and lighting throughout.
+
+### [DO NOT INCLUDE]
+[Brand logos, extra people, text on screen, or anything else you do not want in frame.]
+
+---
+
+## [EXAMPLE]
+
+### [GOAL]
+Cinematic chase sequence shot with large-format IMAX clarity, as a single continuous tracking/near-POV take. A man sprints through rugged terrain pursued by a giant cyclops, and leaps across a ravine in slow motion. Duration: 15 seconds, one continuous shot, no cuts.
+
+### [CONTINUITY]
+Subject: one man, athletic build, plain rugged clothing, generic appearance — not representing any real or copyrighted individual. Creature: one giant cyclops, roughly 8-10 meters tall, single large central eye, muscular humanoid build, weathered rough skin, no armor or markings tied to any existing character design — fully original. Scene: one continuous rocky/forested terrain leading to the edge of a wide ravine — same location and lighting throughout, no cuts to break continuity.
+
+### [STAGE 1 | 0-4s | The chase begins]
+Immersive over-the-shoulder tracking shot, close behind and slightly beside the man as he sprints at full speed through the terrain; the giant cyclops looms and pursues in the background, footsteps shaking the ground.
+End state: man at full sprint, cyclops visibly gaining, ravine not yet in view. NO CUT.
+
+### [STAGE 2 | 4-8s | Approaching the edge]
+Camera stays close and tracking as he weaves around rocks and terrain, the ravine's edge coming into view ahead; the cyclops's heavy footsteps and reaching arm loom closer behind.
+End state: man nearing the ravine's edge, cyclops close behind, about to plant his last stride. NO CUT.
+
+### [STAGE 3 | 8-9s | The leap begins]
+He plants his foot and launches off the ravine's edge; speed ramps sharply into slow motion exactly as his feet leave the ground.
+End state: his body fully airborne, frozen at the peak of the launch, cyclops's hand swiping just behind him. NO CUT (speed ramp into slow motion).
+
+### [STAGE 4 | 9-13s | Mid-air, slow motion]
+Continuous slow motion as he arcs across the ravine, dust and debris trailing from his clothes, the camera drifting alongside him at his eye level, the ravine's depth visible below and the cyclops receding behind at the edge, unable to follow.
+End state: he is descending toward the far edge, body angled for landing. NO CUT.
+
+### [STAGE 5 | 13-15s | Landing, speed resumes]
+Speed ramps back to normal exactly as his feet touch the far ledge; he lands hard, rolling or stumbling forward with the momentum, camera still tracking close behind him.
+End state: he is upright or just recovering from the roll, safely on the far side, the cyclops stranded across the ravine behind him. NO CUT.
+
+### [VISUAL STYLE]
+Large-format IMAX-style clarity: extremely sharp, hyper-detailed image, deep focus keeping both the man and the pursuing cyclops readable at any distance, wide immersive field of view, naturalistic high-dynamic-range color, fine true film grain. Rugged, sunlit outdoor palette — dusty earth tones against a wide open sky. Slow-motion segment (Stage 3-4) shifts to slightly cooler, crisper color with heightened texture on dust and debris.
+
+### [CAMERA AND PERFORMANCE]
+One continuous tracking/near-POV take, no cuts anywhere in the sequence — only a speed ramp bridges normal running speed into the slow-motion jump and back. Camera stays close and dynamic throughout, as if physically running alongside him. His fear and effort shown only through visible cues: gritted teeth, wide eyes glancing back, straining muscles, ragged breathing — never just labeled "scared."
+
+### [AUDIO]
+(Driving, tense orchestral-percussive score that drops to a deep sub-bass swell during the slow-motion jump, then snaps back to full intensity on landing) <Footsteps pounding and heavy breathing throughout> <The cyclops's massive footsteps shaking the ground and a guttural roar> <Wind rushing during the airborne slow-motion arc> <A hard impact thud on landing> No dialogue, no subtitles.
+
+### [EXCLUSIONS]
+Keep the cyclops fully original in design — no armor, markings, or silhouette resembling any existing copyrighted character or franchise. No blood or gore. Keep the man's face generic, non-representational of any real person. No visible cuts or edits — the entire sequence must read as one unbroken take.
+
+### [MAINTAIN CONSISTENCY]
+One man et one cyclops throughout, same designs from first frame to last. Same terrain, ravine, and lighting throughout. The camera never cuts away — continuity of motion and framing is preserved across the entire 15 seconds, including through the speed ramp into and out of slow motion.
