@@ -1,0 +1,267 @@
+{
+  "video": "/Users/user/Private/miki-studio/ads/Snooker-ads/Ad Reference/Cloudmonster On Running 1080p.mp4",
+  "duration": 25.001667,
+  "scene_thresh": 0.35,
+  "shots": [
+    {
+      "shot": 1,
+      "start": 0.0,
+      "end": 1.8,
+      "duration": 1.8,
+      "frames": {
+        "start": {
+          "timestamp": 0.15,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot01_start_00-00-00_150.jpg"
+        },
+        "mid": {
+          "timestamp": 0.9,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot01_mid_00-00-00_900.jpg"
+        },
+        "end": {
+          "timestamp": 1.65,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot01_end_00-00-01_650.jpg"
+        }
+      }
+    },
+    {
+      "shot": 2,
+      "start": 1.8,
+      "end": 3.6,
+      "duration": 1.8,
+      "frames": {
+        "start": {
+          "timestamp": 1.95,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot02_start_00-00-01_950.jpg"
+        },
+        "mid": {
+          "timestamp": 2.7,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot02_mid_00-00-02_700.jpg"
+        },
+        "end": {
+          "timestamp": 3.45,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot02_end_00-00-03_450.jpg"
+        }
+      }
+    },
+    {
+      "shot": 3,
+      "start": 3.6,
+      "end": 5.24,
+      "duration": 1.64,
+      "frames": {
+        "start": {
+          "timestamp": 3.75,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot03_start_00-00-03_750.jpg"
+        },
+        "mid": {
+          "timestamp": 4.42,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot03_mid_00-00-04_420.jpg"
+        },
+        "end": {
+          "timestamp": 5.09,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot03_end_00-00-05_090.jpg"
+        }
+      }
+    },
+    {
+      "shot": 4,
+      "start": 5.24,
+      "end": 6.88,
+      "duration": 1.64,
+      "frames": {
+        "start": {
+          "timestamp": 5.39,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot04_start_00-00-05_390.jpg"
+        },
+        "mid": {
+          "timestamp": 6.06,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot04_mid_00-00-06_060.jpg"
+        },
+        "end": {
+          "timestamp": 6.73,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot04_end_00-00-06_730.jpg"
+        }
+      }
+    },
+    {
+      "shot": 5,
+      "start": 6.88,
+      "end": 8.6,
+      "duration": 1.72,
+      "frames": {
+        "start": {
+          "timestamp": 7.03,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot05_start_00-00-07_030.jpg"
+        },
+        "mid": {
+          "timestamp": 7.74,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot05_mid_00-00-07_740.jpg"
+        },
+        "end": {
+          "timestamp": 8.45,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot05_end_00-00-08_450.jpg"
+        }
+      }
+    },
+    {
+      "shot": 6,
+      "start": 8.6,
+      "end": 10.32,
+      "duration": 1.72,
+      "frames": {
+        "start": {
+          "timestamp": 8.75,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot06_start_00-00-08_750.jpg"
+        },
+        "mid": {
+          "timestamp": 9.46,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot06_mid_00-00-09_460.jpg"
+        },
+        "end": {
+          "timestamp": 10.17,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot06_end_00-00-10_170.jpg"
+        }
+      }
+    },
+    {
+      "shot": 7,
+      "start": 10.32,
+      "end": 12.66,
+      "duration": 2.34,
+      "frames": {
+        "start": {
+          "timestamp": 10.47,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot07_start_00-00-10_470.jpg"
+        },
+        "mid": {
+          "timestamp": 11.49,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot07_mid_00-00-11_490.jpg"
+        },
+        "end": {
+          "timestamp": 12.51,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot07_end_00-00-12_510.jpg"
+        }
+      }
+    },
+    {
+      "shot": 8,
+      "start": 12.66,
+      "end": 15.0,
+      "duration": 2.34,
+      "frames": {
+        "start": {
+          "timestamp": 12.81,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot08_start_00-00-12_810.jpg"
+        },
+        "mid": {
+          "timestamp": 13.83,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot08_mid_00-00-13_830.jpg"
+        },
+        "end": {
+          "timestamp": 14.85,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot08_end_00-00-14_850.jpg"
+        }
+      }
+    },
+    {
+      "shot": 9,
+      "start": 15.0,
+      "end": 16.9,
+      "duration": 1.9,
+      "frames": {
+        "start": {
+          "timestamp": 15.15,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot09_start_00-00-15_150.jpg"
+        },
+        "mid": {
+          "timestamp": 15.95,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot09_mid_00-00-15_950.jpg"
+        },
+        "end": {
+          "timestamp": 16.75,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot09_end_00-00-16_750.jpg"
+        }
+      }
+    },
+    {
+      "shot": 10,
+      "start": 16.9,
+      "end": 18.8,
+      "duration": 1.9,
+      "frames": {
+        "start": {
+          "timestamp": 17.05,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot10_start_00-00-17_050.jpg"
+        },
+        "mid": {
+          "timestamp": 17.85,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot10_mid_00-00-17_850.jpg"
+        },
+        "end": {
+          "timestamp": 18.65,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot10_end_00-00-18_650.jpg"
+        }
+      }
+    },
+    {
+      "shot": 11,
+      "start": 18.8,
+      "end": 21.72,
+      "duration": 2.92,
+      "frames": {
+        "start": {
+          "timestamp": 18.95,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot11_start_00-00-18_950.jpg"
+        },
+        "mid": {
+          "timestamp": 20.26,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot11_mid_00-00-20_260.jpg"
+        },
+        "end": {
+          "timestamp": 21.57,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot11_end_00-00-21_570.jpg"
+        }
+      }
+    },
+    {
+      "shot": 12,
+      "start": 21.72,
+      "end": 23.361,
+      "duration": 1.641,
+      "frames": {
+        "start": {
+          "timestamp": 21.87,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot12_start_00-00-21_870.jpg"
+        },
+        "mid": {
+          "timestamp": 22.541,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot12_mid_00-00-22_541.jpg"
+        },
+        "end": {
+          "timestamp": 23.211,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot12_end_00-00-23_211.jpg"
+        }
+      }
+    },
+    {
+      "shot": 13,
+      "start": 23.361,
+      "end": 25.002,
+      "duration": 1.641,
+      "frames": {
+        "start": {
+          "timestamp": 23.511,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot13_start_00-00-23_511.jpg"
+        },
+        "mid": {
+          "timestamp": 24.181,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot13_mid_00-00-24_181.jpg"
+        },
+        "end": {
+          "timestamp": 24.852,
+          "file": "Cloudmonster_On_Running_1080p_shots/shot13_end_00-00-24_852.jpg"
+        }
+      }
+    }
+  ]
+}
