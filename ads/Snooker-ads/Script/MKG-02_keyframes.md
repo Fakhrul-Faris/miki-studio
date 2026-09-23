@@ -4,8 +4,25 @@
 
 ## Shared look block
 ```
-Cinematic live-action commercial, warm late-afternoon Saturday light, stable camera, 35 mm lens with shallow depth of field, warm amber-and-teal grade with soft contrast, fine film grain, colourful lived-in production design, real skin texture, classic brick city-street neighbourhood with a retro wood-panelled barbershop, no on-screen text, no logos, no legible signage.
+Authentic live-action documentary realism (`references/documentary-realism.md` in the seedance-commercial-production skill is the governing technique — real camera behavior, ordinary practical lighting, restrained natural color, moderate depth of field, incidental human-scale composition, physical wear on every surface; no teal-and-orange grade, no artificial haze, no hero framing). Classic brick city-street neighbourhood with a classic Americana barbershop: deep burgundy/maroon leather chairs with heavy chrome mechanisms showing wear, black-and-white checkerboard tile floor with years of accumulated use, dark wood wainscoting below aged cream plaster, large aged wood-framed mirrors over a pale marble counter with casually arranged tools, a red/white/blue barber pole, a wall of old black-and-white photos, a jukebox-shaped decor piece with no real branding. No on-screen text, no logos, no legible signage.
 ```
+
+---
+
+## Video generation — how each still becomes a shot
+
+This is a workflow note, not a template. From here, the process for turning a locked keyframe into a video instruction changes: **you attach the actual generated still, and I look at it and direct it** — the way a director calls the next setup off what's actually on the monitor, not off what the shot list predicted would be there. The keyframe prompts above got us a still worth shooting; what happens next is a judgment call made from the image itself.
+
+What I write for each still will read like a shot direction, not a form:
+- What's already true in the frame, and what has to happen next for the story to move — said the way you'd say it to a DP and an actor, not itemized into fields.
+- The one thing this shot is *for* — the beat it has to land — stated plainly, so nothing else competes with it.
+- Performance as behavior, not labels: what a face does, what a hand does, what changes and when it changes, triggered by something happening in frame, not by a clock.
+- Camera as a decision, not a menu: does it hold, does it breathe, does it move — and only because the shot earns it, never as decoration.
+- The cut out, if there is one, and what it's cutting to.
+
+**I'll follow the script's intent, not necessarily its exact staging.** If the still shows something the written stage description didn't quite anticipate — a hand fell differently, a gaze landed somewhere better, the room reads calmer or more chaotic than planned — I'll direct what's actually in front of me and say so, rather than force the original stage notes onto a frame that's telling a slightly different, better story. The beat still has to land (the count, the tap, the poof, the shrug, the payoff), but how it gets there is open once the still exists. Flag anything I change from the locked script explicitly, so it's a visible decision, not a quiet drift.
+
+This replaces the mechanical `[STAGES]` field-filling for these instructions — the segment-spec template still exists as the record of what was decided, but the decision itself gets made by looking at the image, not by filling in blanks.
 
 ---
 
@@ -39,7 +56,7 @@ Do not re-describe the eye/face beyond what's above; do not use any background f
 [CAST IN FRAME] @player bent over the table lining up his shot, cue level. @opponent standing across the table, leaning on his own cue, watching. Up to 4 background queue figures, paired, soft focus, curving back along the brick wall.
 [EMOTION LOCK] @player: eyes fixed on the cue ball, jaw relaxed, focused stillness. @opponent: relaxed posture, faint amusement, weight on one hip.
 [LIGHTING LOCK] [shared look block]
-[ENVIRONMENT] @lane_A: brick street, sage-green shopfront, plain brick wall receding to center, cobblestone foreground, street lamp, no legible signage.
+[ENVIRONMENT] @lane_A → use @laneAfar.png (wide/farther camera variant): brick street, classic barbershop storefront with a red/white/blue barber pole and awning, plain brick wall receding to center, cobblestone foreground, street lamp, no legible signage.
 [PROPS IN FRAME] @table centered, both players' cues in hand.
 [REFERENCES]
 - @image1 - @player_face. Controls face and hair only. Do not use its background.
@@ -47,7 +64,7 @@ Do not re-describe the eye/face beyond what's above; do not use any background f
 - @image3 - @opponent_face. Controls face and hair only. Do not use its background.
 - @image4 - @opponent_body. Controls build and wardrobe only. Do not use its background.
 - @image5 - @table. Controls table structure and layout only; exactly one table appears.
-- @image6 - @lane_A. Controls the location and light only. Do not use any people from it.
+- @image6 - @lane_A (@laneAfar.png). Controls the location and light only. Do not use any people from it.
 Do not re-describe either player's face, hair or wardrobe beyond pose above.
 [CAMERA] 35mm feel, shallow DOF, fine film grain.
 [EXCLUSIONS] No text, no logos, no more than 4 clear background figures, no cars.
@@ -65,7 +82,7 @@ Do not re-describe either player's face, hair or wardrobe beyond pose above.
 [CAST IN FRAME] @barber standing still, clippers loose in one hand, facing the window, watching outside.
 [EMOTION LOCK] @barber: steady gaze fixed through the glass, faint tension in the jaw, otherwise still.
 [LIGHTING LOCK] [shared look block]
-[ENVIRONMENT] @shop_B: front-facing angle, window visible, mint-green interior wall.
+[ENVIRONMENT] @shop_B: front-facing angle, window visible, cream plaster interior wall above wood wainscoting.
 [PROPS IN FRAME] Clippers held loosely in the barber's hand, at rest.
 [REFERENCES]
 - @image1 - @barber_face. Controls face and hair only. Do not use its background.
@@ -85,10 +102,10 @@ Do not re-describe the barber's face, hair or wardrobe beyond pose above.
 [KEYFRAME ID] MKG-02-S4-KF-START
 [SHOT] 3a
 [COMPOSITION] Medium-close, eye level, static. Barber and chair centered.
-[CAST IN FRAME] @barber standing beside the maroon leather chair, clippers paused mid-air near a seated customer's head. Customer's back to camera, unreferenced, plain wardrobe. Barber's gaze angled off toward the window.
+[CAST IN FRAME] @barber standing beside the deep red/maroon leather chair, clippers paused mid-air near a seated customer's head. Customer's back to camera, unreferenced, plain wardrobe. Barber's gaze angled off toward the window.
 [EMOTION LOCK] @barber: lips slightly parted mid-count, eyes distant, brow faintly drawn.
 [LIGHTING LOCK] [shared look block]
-[ENVIRONMENT] @shop_A: chair-row hero angle, mirrors behind, mint-green wall, ceiling fan suggested top of frame.
+[ENVIRONMENT] @shop_A: chair-row hero angle, large wood-framed mirrors behind, black-and-white checkerboard floor, cream wall above wood wainscoting, warm tungsten sconce light suggested top of frame.
 [PROPS IN FRAME] Clippers held near the customer's head, not touching hair.
 [REFERENCES]
 - @image1 - @barber_face. Controls face and hair only. Do not use its background.
@@ -112,7 +129,7 @@ Do not re-describe the barber's face, hair or wardrobe beyond pose above. Backgr
 [CAST IN FRAME] @barber, centered, reaching toward the counter, both hands empty, about to bend for the tablet.
 [EMOTION LOCK] @barber: focused downward gaze, calm, unhurried posture.
 [LIGHTING LOCK] [shared look block]
-[ENVIRONMENT] @shop_C: counter view, clear countertop space, plain mint-green wall.
+[ENVIRONMENT] @shop_C: counter view, clear countertop space, plain cream wall above wood wainscoting.
 [PROPS IN FRAME] Nothing in his hands yet. Tablet not visible (still under the counter).
 [REFERENCES]
 - @image1 - @barber_face. Controls face and hair only. Do not use its background.
@@ -165,12 +182,12 @@ Do not re-describe the barber's face, hair or wardrobe beyond pose above. Backgr
 [CAST IN FRAME] @barber, back/shoulder in foreground, finger about to touch the tablet screen. All four chairs beyond him empty. Two unreferenced background barbers already standing beside the two nearest chairs, waiting.
 [EMOTION LOCK] @barber: focused on the tablet, unbothered.
 [LIGHTING LOCK] [shared look block]
-[ENVIRONMENT] @shop_E: chair-row plate, four chairs.
+[ENVIRONMENT] @shop_A (reused — no separate @shop_E plate was generated; same chair-row/mirror/counter room as S4).
 [PROPS IN FRAME] @tablet in the barber's hand, all four chairs empty.
 [REFERENCES]
 - @image1 - @barber_face. Controls face and hair only. Do not use its background.
 - @image2 - @barber_body. Controls build and wardrobe only. Do not use its background.
-- @image3 - @shop_E. Controls the space, chair and mirror layout only. Do not use any people in it.
+- @image3 - @shop_A (reused as @shop_E). Controls the space, chair and mirror layout only. Do not use any people in it.
 - @image4 - @tablet. Controls case shape and the flat chroma-key green screen only.
 [CAMERA] 35mm feel, shallow DOF.
 [EXCLUSIONS] No faces on the background barbers, no customers seated yet, no readable UI on the tablet.
@@ -220,7 +237,7 @@ Do not re-describe the barber's face, hair or wardrobe beyond pose above. Backgr
 [CAST IN FRAME] Third chair now occupied and being cut. Fourth chair still empty. First two chairs unchanged from S6a-KF-END.
 [EMOTION LOCK] @barber: unchanged.
 [LIGHTING LOCK] [shared look block]
-[ENVIRONMENT] @shop_E.
+[ENVIRONMENT] @shop_A (reused as @shop_E).
 [PROPS IN FRAME] Three chairs occupied, three barbers cutting.
 [REFERENCES] Same as S6a-KF-START.
 [CAMERA] Identical to S6a.
@@ -234,7 +251,7 @@ Do not re-describe the barber's face, hair or wardrobe beyond pose above. Backgr
 [CAST IN FRAME] All four chairs occupied and being cut. The customer at the last (fourth) chair is clearly holding a snooker cue, leaning it against the chair arm.
 [EMOTION LOCK] @barber: unchanged.
 [LIGHTING LOCK] [shared look block]
-[ENVIRONMENT] @shop_E.
+[ENVIRONMENT] @shop_A (reused as @shop_E).
 [PROPS IN FRAME] Four chairs occupied, four barbers cutting, the cue clearly visible and unambiguous at the last chair — this detail must read clearly since it pays off in S9.
 [REFERENCES] Same as S6a-KF-START.
 [CAMERA] Identical to S6a.
@@ -253,14 +270,14 @@ Do not re-describe the barber's face, hair or wardrobe beyond pose above. Backgr
 [CAST IN FRAME] @opponent, cue lifted mid-aim, head turning slightly toward his pocket. @player stays down at the table in the background, soft focus.
 [EMOTION LOCK] @opponent: mid-distraction, eyes flicking off his shot, brow twitching. @player: unchanged focus on his own stance.
 [LIGHTING LOCK] [shared look block]
-[ENVIRONMENT] @lane_A, same table setup as S2.
+[ENVIRONMENT] @lane_A → use @laneA.png (tighter/nearer camera variant, matching this shot's medium framing), same table setup as S2.
 [PROPS IN FRAME] @table, both cues in hand.
 [REFERENCES]
 - @image1 - @opponent_face. Controls face and hair only. Do not use its background.
 - @image2 - @opponent_body. Controls build and wardrobe only. Do not use its background.
 - @image3 - @player_body. Controls build and wardrobe only (background figure). Do not use its background.
 - @image4 - @table. Controls table structure only.
-- @image5 - @lane_A. Controls the location and light only.
+- @image5 - @lane_A (@laneA.png). Controls the location and light only.
 [CAMERA] 35mm feel, shallow DOF.
 [EXCLUSIONS] No text, no logos, no third person, no rendered ball/pocket physics.
 ```
@@ -434,12 +451,17 @@ Identical structure to S8a, same locked framing, two more distinct hands/phones 
 [CAST IN FRAME] Barbers (backs to camera, unreferenced) working down the row of chairs, each cutting a customer's hair (backs to camera). The rightmost chair holds the customer with the snooker cue — matching MKG-02-S6b-KF-END exactly — caped and mid-cut, cue leaning against the chair arm.
 [EMOTION LOCK] N/A (backs to camera; no faces in frame).
 [LIGHTING LOCK] [shared look block]
-[ENVIRONMENT] @shop_D: empty plate with plain mint-green upper third.
+[ENVIRONMENT] @shop_A (reused — no separate @shop_D plate was generated). CAUTION: the
+generated @shop_A still shows ceiling detail (a light fixture, crown molding, water
+staining) near the top of frame, not a guaranteed clean band. When composing this
+keyframe, crop/frame so the text-safe upper third lands on the plainer stretch of
+wall above the mirrors rather than the ceiling — check this specifically when
+reviewing the generated still, since S9's logo/tagline compositing depends on it.
 [PROPS IN FRAME] Full row occupied, cue clearly visible at the rightmost chair, upper third clean — no fans, frames or clutter.
 [REFERENCES]
 - @image1 - @barber_face. Controls face and hair only (barber is present in the row but back to camera; identity carried loosely). Do not use its background.
 - @image2 - @barber_body. Controls build and wardrobe only. Do not use its background.
-- @image3 - @shop_D. Controls the space and the clear upper band only. Do not use any people in it.
+- @image3 - @shop_A (reused as @shop_D). Controls the space only — see the CAUTION above about the upper band. Do not use any people in it.
 [CAMERA] 35mm feel, shallow DOF, fine film grain.
 [EXCLUSIONS] No ceiling fans, frames or clutter in the upper third, no on-screen text or logo (composited later), no faces on background customers.
 [FEEDS] MKG-02-S9, single-frame stage (route: I2V/R2V from this frame, held/minimal settle).

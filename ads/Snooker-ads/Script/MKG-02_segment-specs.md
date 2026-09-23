@@ -4,7 +4,7 @@ Supersedes the pre-keyframe version of this file. 11 generations, each routed I2
 
 ## Shared look block
 ```
-Cinematic live-action commercial, warm late-afternoon Saturday light, stable camera, 35 mm lens with shallow depth of field, warm amber-and-teal grade with soft contrast, fine film grain, colourful lived-in production design, real skin texture, classic brick city-street neighbourhood with a retro wood-panelled barbershop, no on-screen text, no logos, no legible signage.
+Authentic live-action documentary realism (`references/documentary-realism.md` in the seedance-commercial-production skill is the governing technique — real camera behavior, ordinary practical lighting, restrained natural color, moderate depth of field, incidental human-scale composition, physical wear on every surface; no teal-and-orange grade, no artificial haze, no hero framing). Classic brick city-street neighbourhood with a classic Americana barbershop: deep burgundy/maroon leather chairs with heavy chrome mechanisms showing wear, black-and-white checkerboard tile floor with years of accumulated use, dark wood wainscoting below aged cream plaster, large aged wood-framed mirrors over a pale marble counter with casually arranged tools, a red/white/blue barber pole, a wall of old black-and-white photos, a jukebox-shaped decor piece with no real branding. No on-screen text, no logos, no legible signage.
 ```
 
 ## Project-wide DO NOT INCLUDE (restate the top 2-3 per segment)
