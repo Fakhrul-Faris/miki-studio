@@ -200,24 +200,29 @@ I2V (Image-to-Video)
 
 [Motion Description]
 
-STAGE 2A (Doorway A, 0:00-0:03):
-Shawn approaches doorway A from the left. BarberA stands in the open doorway, glancing at him while 
-glancing back at the crowded shop behind. Camera is static, medium shot framing both of them with the 
-doorway central. Shawn steps closer, mouth beginning to open to ask his question. His eyes search 
-barberA's face for a glimmer of possibility. BarberA's eyes narrow — decision already made. Shawn 
-asks "Can you help me? How long would a cut take?" his voice carries hope but resignation underneath.
+[Motion Description - Stage 2A (Doorway A, 0:00-0:03)]:
+Shawn approaches doorway A from the left. Camera subtly breathes inward (gentle push-in, ~8%), tightening
+the framing as Shawn gets closer to barberA. BarberA stands in the open doorway, glancing at him while
+glancing back at the crowded shop behind. Shawn steps closer, mouth beginning to open to ask his question.
+His eyes search barberA's face for a glimmer of possibility. BarberA's eyes narrow — decision already made.
+Shawn asks "Can you help me? How long would a cut take?" his voice carries hope but resignation underneath.
 
-BarberA says flatly "Can't tell you" and pulls the door. The camera subtly shifts focus (shallow rack 
-focus) from Shawn's hopeful face to barberA's closed expression as the door closes. By 0:03, the door 
-is nearly shut, barberA is turned away, Shawn is left on the step with shoulders dropping.
+BarberA says flatly "Can't tell you" and pulls the door. As the door closes, the camera subtly shifts focus
+(shallow rack focus) from Shawn's hopeful face to barberA's closed expression, and simultaneously pulls back
+(reversing the push-in), giving space as the rejection happens. By 0:03, the door is nearly shut, barberA is
+turned away, Shawn is left on the step with shoulders dropping. Camera has settled back to original framing.
 
 STAGE 2B (Doorway B, 0:03-0:06):
-Hard cut. Jump to doorway B, a visually distinct storefront down the block. Camera frames this new 
-doorway in the same medium shot composition (establishing that this is a different location). Shawn 
-is already approaching barberB in this doorway. BarberB is already shaking his head before Shawn 
-finishes his approach — the preemptive refusal. 
+Hard cut. Jump to doorway B, a visually distinct storefront down the block. Camera frames this new doorway
+in the same medium shot composition. Shawn is already approaching barberB in this doorway. BarberB is already
+shaking his head before Shawn finishes his approach — the preemptive refusal.
 
-Camera holds static as Shawn delivers his second question "Do you have any openings? Even a quick cut?" 
+Camera subtly breathes inward as Shawn approaches (push-in, ~8%), tightening the frame on the coming rejection.
+Shawn delivers his second question "Do you have any openings? Even a quick cut?" with slightly more urgency.
+BarberB's expression does not soften. He says "No idea, man" and shuts the door faster than barberA. As the
+door closes, camera pulls back slightly, giving space as the second rejection lands. By 0:06, door is fully
+closed, barberB is gone, and Shawn turns away from the doorway, walking back toward the street. Camera follows
+his turn with a subtle pan-back, tracking him as he exits the frame
 with slightly more urgency, already knowing the answer. BarberB's expression doesn't soften. He says 
 "No idea, man" and shuts the door faster than barberA. By 0:06, door is fully closed, barberB is gone, 
 and Shawn turns away from the doorway, walking back toward the street. Camera subtly pulls back as he 
@@ -551,23 +556,26 @@ I2V (Image-to-Video)
 [Motion Description]
 
 Shawn walks out of the shop, relaxed posture, faint smile of relief on his face. He doesn't see the 
-puddle. Camera is framed slightly low, showing the sidewalk surface clearly in the lower frame. Shawn 
-walks toward and into the puddle area. His stride is natural, confident in the moment of relief.
+puddle. Camera is framed slightly low, showing the sidewalk surface clearly in the lower frame. As Shawn 
+approaches the puddle, the camera subtly breathes inward (gentle push-in, ~5%), tightening the focus on 
+his face and the puddle area together — building anticipation.
 
 At 0:02, his right foot lands in the puddle. Water breaks around the shoe. First droplets lift. 
-SFX: splash sound. Camera holds static, capturing the contact from a slightly low angle that shows 
-the water displacement clearly.
+SFX: splash sound. At the exact moment of impact, the camera flinches back slightly (sharp pull-back, ~10%), 
+a reactive movement to the splash moment. This isn't a slow, graceful pull-back — it's a quick response 
+that makes the collision feel real and physical.
 
 At 0:02-0:03, water splashes, droplets settling around his ankle and shoe. Shawn's torso stiffens 
-with irritation. His expression hardens. An irritated exhale begins. In sync with the breath, his 
-hair pulses outward and downward, lengthening instantly from short to full past-collar length. 
-SFX: hair-growth whoosh.
+with irritation. His expression hardens. An irritated exhale begins. In sync with the breath, his hair 
+pulses outward and downward, lengthening instantly from short to full past-collar length. SFX: hair-growth whoosh. 
+The camera subtly breathes back inward (gentle push-in, ~3%) as the hair grows, following the expansion 
+of the moment.
 
 At 0:03-0:04, hair at full extended length past his collar, exhale complete, expression flat with 
-frustrated acceptance. Puddle water is settling. By 0:04, frame holds at end state — puddle disturbed, 
-hair regrown, frustration hardening the face.
+frustrated acceptance. Puddle water is settling. The camera has settled back to a neutral framing. By 0:04, 
+frame holds at end state — puddle disturbed, hair regrown, frustration hardening the face.
 
-At 0:04-0:05, camera remains static as Shawn absorbs the moment. Frame is completely held and static 
+At 0:04-0:05, camera remains settled as Shawn absorbs the moment. Frame is completely held and static 
 by 0:05 (end state).
 
 [Camera Technique]
