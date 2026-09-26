@@ -480,6 +480,7 @@ Roughly 37 s generated (with trim handles) for a 30 s cut, across 7 segments and
 [COMPOSITION] Identical framing to KF-2A-START.
 [CAST IN FRAME] @shawn unchanged position, now watching the door close. @barberA has pulled the door most of the way shut, body angled away.
 [EMOTION LOCK] @shawn: brows dropping, mouth closing back into a flat line, quiet deflation. @barberA: already looking away, indifferent.
+[EYE LIFE] @shawn: eyes drop from barberA to the closing door, accepting the rejection before it completes. @barberA: gaze already gone, back to the shop.
 [LIGHTING LOCK] Identical to KF-2A-START.
 [ENVIRONMENT] Identical to KF-2A-START.
 [PROPS IN FRAME] The door now nearly closed.
@@ -487,6 +488,268 @@ Roughly 37 s generated (with trim handles) for a 30 s cut, across 7 segments and
 [CAMERA] Identical to KF-2A-START.
 [EXCLUSIONS] No third person, no text, no logos.
 [FEEDS] MKG-02-S2, Stage 1 end frame / Stage 2 start (the jump cut to 2b begins on this beat).
+```
+
+**MKG-02-S2-KF-2B-SINGLE** (shot 2b — single keyframe, reaction shot)
+
+```
+[KEYFRAME ID] MKG-02-S2-KF-2B-SINGLE
+[SHOT] 2b
+[COMPOSITION] Medium shot, eye level, static. @street doorway B angle: second doorway, visually distinct from doorway A, barberB frame-center in or just closing the door.
+[CAST IN FRAME] @shawn approaching from frame-left, already mid-gesture (hand raised, mouth open, beginning to ask). @barberB in the doorway, head already shaking no, eyes narrowed in preemptive refusal before the question completes.
+[EMOTION LOCK] @shawn: hopeful urgency, still trying. @barberB: closed-off rejection, decision made before the interaction starts.
+[EYE LIFE] @shawn: eyes searching barberB's face for any opening. @barberB: eyes flat and dismissive, already past the moment.
+[LIGHTING LOCK] Warm low-angle late-afternoon daylight, soft long shadows, uneven illumination between sunlit and shaded brick, no artificial glow.
+[ENVIRONMENT] @street doorway B: narrower metal-framed door, shallow step, hand-hook sign fitting empty, visually distinct from doorway A.
+[PROPS IN FRAME] The door itself, starting to close.
+[REFERENCES]
+- @image1 - @shawn face. Controls face and hair only. Do not use the background.
+- @image2 - @shawn body. Controls build and wardrobe only. Do not use the background.
+- @image3 - @barberB face. Controls face and hair only. Do not use the background.
+- @image4 - @barberB body. Controls build and wardrobe only. Do not use the background.
+- @image5 - @street doorway B. Controls the doorway framing and light only. Do not use any people in it.
+[CAMERA] 35mm feel, moderate depth of field, fine film grain.
+[EXCLUSIONS] No third person, no text, no logos, no readable signage.
+[FEEDS] MKG-02-S2, Stage 2 single frame (jump cut from 2a; hard cut to 3a).
+```
+
+**MKG-02-S3-KF-3A-SINGLE** (shot 3a — single keyframe, continuous walk)
+
+```
+[KEYFRAME ID] MKG-02-S3-KF-3A-SINGLE
+[SHOT] 3a
+[COMPOSITION] Medium wide, eye level, static camera, one-point perspective down the sidewalk. @shawn positioned center, walking away from the second doorway, full figure in frame with headroom, storefronts receding in depth.
+[CAST IN FRAME] @shawn mid-stride, turning away from barberB's doorway, phone at his side, shoulders starting to collapse inward, hair still past collar (from shot 1a).
+[EMOTION LOCK] Shoulders hunched, posture turning inward, the cumulative weight of two rejections settling in. Walking slower now, not rushing.
+[EYE LIFE] Eyes fixed on the pavement ahead, unfocused and inward-looking. Blinks frequent and shallow, mind elsewhere.
+[LIGHTING LOCK] Warm low-angle late-afternoon daylight, soft long shadows, uneven illumination between sunlit and shaded brick, no artificial glow.
+[ENVIRONMENT] @street master: brick storefronts, parked bicycles, string lighting not yet lit, empty sidewalk, moving deeper into the street.
+[PROPS IN FRAME] Phone at his side, screen off.
+[REFERENCES]
+- @image1 - @shawn face. Controls face and hair only. Do not use the background.
+- @image2 - @shawn body. Controls build and wardrobe only. Do not use the background.
+- @image3 - @street master. Controls the space and light only. Do not use any people in it.
+[CAMERA] 35mm feel, moderate depth of field, fine film grain.
+[EXCLUSIONS] No second person, no text, no logos, no readable signage.
+[FEEDS] MKG-02-S3, single-frame stage (continuous walk, no discrete state change).
+```
+
+**MKG-02-S3-KF-3B-SINGLE** (shot 3b — single keyframe, head-tilt reaction to QR sticker)
+
+```
+[KEYFRAME ID] MKG-02-S3-KF-3B-SINGLE
+[SHOT] 3b
+[COMPOSITION] Tight medium shot on the brick wall at eye level, @street wall angle: QR sticker spot in frame-center, Shawn's head just entering frame-left, tilted up slightly as his gaze lands on the sticker.
+[CAST IN FRAME] @shawn's head and shoulders only, tilted back as he notices the sticker, expression shifting from inward resignation to curiosity. Slight pause in stride.
+[EMOTION LOCK] Mild surprise, a small interruption in the downward spiral. Not hope yet, just — wait, what's this? The smallest spark of something different.
+[EYE LIFE] Eyes land on the sticker with a micro-saccade, pupils dilate slightly in recognition of something new. Blinks suspended as his brain registers an anomaly.
+[LIGHTING LOCK] Warm low-angle late-afternoon daylight, soft long shadows, uneven illumination between sunlit and shaded brick.
+[ENVIRONMENT] @street wall: blank brick surface at eye level, single QR sticker, mortar lines visible.
+[PROPS IN FRAME] The QR sticker, in clear focus.
+[REFERENCES]
+- @image1 - @shawn face. Controls face and hair only. Do not use the background.
+- @image2 - @street wall. Controls wall framing and light only. Do not use any people in it.
+[CAMERA] 35mm feel, shallow depth of field.
+[EXCLUSIONS] No second person, no text other than the QR pattern, no logos.
+[FEEDS] MKG-02-S3, single-frame stage (reaction, no motion).
+```
+
+**MKG-02-S3-KF-3C-SINGLE** (shot 3c — single keyframe, phone raised to sticker)
+
+```
+[KEYFRAME ID] MKG-02-S3-KF-3C-SINGLE
+[SHOT] 3c
+[COMPOSITION] Medium shot, eye level, static. @street wall angle: QR sticker still center-frame, Shawn's arm now raised with phone in hand, screen visible, positioned to scan the sticker.
+[CAST IN FRAME] @shawn's upper body in frame, phone held up at arm's length toward the sticker, posture still slightly collapsed but now animated by a small gesture of purpose. Expression neutral, observing.
+[EMOTION LOCK] Action replacing passivity. A small gesture, but it's movement toward something, not away from rejection.
+[EYE LIFE] Eyes tracking the phone to the sticker, focused on the alignment. A moment of concentration, hand-eye coordination engaged.
+[LIGHTING LOCK] Warm low-angle late-afternoon daylight, soft long shadows, uneven illumination.
+[ENVIRONMENT] @street wall: brick surface with QR sticker at eye level.
+[PROPS IN FRAME] Phone held up toward the sticker.
+[REFERENCES]
+- @image1 - @shawn body. Controls build and wardrobe only. Do not use the background.
+- @image2 - @street wall. Controls wall framing and light only. Do not use any people in it.
+[CAMERA] 35mm feel, moderate depth of field.
+[EXCLUSIONS] No second person, no text, no logos.
+[FEEDS] MKG-02-S3, single-frame stage (small continuous gesture, no discrete state change).
+```
+
+**MKG-02-S4-KF-4A-START** (shot 4a — start+end, phone dark → booking screen glow, product shot 1)
+
+```
+[KEYFRAME ID] MKG-02-S4-KF-4A-START
+[SHOT] 4a
+[COMPOSITION] Close medium shot on Shawn's hand and phone, slight downward angle, static camera. Phone screen dominates the lower frame, Shawn's face soft-focus above, eyes dropping to watch the interaction begin.
+[CAST IN FRAME] @shawn's hand holding the phone, screen dark and off, waiting for response. Posture upright now, anticipation in the shoulders.
+[EMOTION LOCK] Hopeful attention. The small action of scanning has unlocked a tiny bit of momentum.
+[EYE LIFE] Eyes downcast, watching the phone screen for the first response. Blink held in anticipation of the UI appearing.
+[LIGHTING LOCK] Warm low-angle late-afternoon daylight, soft directional light on Shawn's hand and the phone's back surface.
+[ENVIRONMENT] @street (transitional, phone close): blurred brick and street background, attention on the phone.
+[PROPS IN FRAME] Shawn's phone, screen off, in his hand raised to scanning position. @image of phone reference showing the device structure (case, bezel, dimensions).
+[REFERENCES]
+- @image1 - @shawn face. Controls face only. Do not use the background.
+- @image2 - @shawn body (hand and wrist only). Controls build and wardrobe only.
+[CAMERA] Close-up, 50mm feel, shallow depth of field, fine film grain.
+[EXCLUSIONS] No second person, no text, no QR sticker in frame, screen is completely dark (no UI yet).
+[FEEDS] MKG-02-S4, Stage 1 start frame (product shot anchor, route: I2V from this frame to KF-4A-END).
+```
+
+**MKG-02-S4-KF-4A-END** (shot 4a — booking screen visible, glow on face)
+
+```
+[KEYFRAME ID] MKG-02-S4-KF-4A-END
+[SHOT] 4a
+[COMPOSITION] Identical framing to KF-4A-START, no camera change.
+[CAST IN FRAME] @shawn's hand and phone unchanged, screen now alight with booking interface (UI to be composited in post). Glow from the screen casts subtle light on Shawn's face and hand. Eyes now focused on the screen content, slight widening of pupils from the light.
+[EMOTION LOCK] First hint of relief. The interface appeared. It worked. Something is happening.
+[EYE LIFE] Eyes widen fractionally as the screen illuminates, pupils dilate to the light source, gaze now fixed on the booking interface being revealed.
+[LIGHTING LOCK] Same warm late-afternoon daylight, augmented by soft cool glow from the phone screen casting onto the hand and face.
+[ENVIRONMENT] Identical to KF-4A-START.
+[PROPS IN FRAME] Phone screen now active (glow visible), UI to be composited in post.
+[REFERENCES] Same as KF-4A-START.
+[CAMERA] Identical to KF-4A-START.
+[EXCLUSIONS] No second person, no text, no actual UI (composited in post), screen is glow + placeholder only.
+[FEEDS] MKG-02-S4, Stage 1 end frame.
+```
+
+**MKG-02-S5-KF-4B-SINGLE** (shot 4b — single keyframe, clipper stroke, hair cutting motion)
+
+```
+[KEYFRAME ID] MKG-02-S5-KF-4B-SINGLE
+[SHOT] 4b
+[COMPOSITION] Medium shot, eye level, static, from the side angle. Shawn is seated in the styling chair, clippers running through his hair, long strands falling in mid-motion. Mirror visible soft-focus behind, chair and surrounding space visible but not detailed.
+[CAST IN FRAME] @shawn seated, fresh-cut hair already visibly shorter than shot 1a/3c length, posture relaxed and upright in the chair. Barber's hands and clippers visible (no dedicated barber character needed, just hands/clippers). Strands of hair mid-fall in the frame.
+[EMOTION LOCK] Acceptance and relief settling in. The motion is underway. He's stopped waiting.
+[EYE LIFE] Eyes soft and calm, watching the falling hair without tension. Blinks slow and occasional, a moment of rest.
+[LIGHTING LOCK] Soft window daylight mixed with warm pendant light overhead, gentle falloff into corners, no even wash.
+[ENVIRONMENT] @meikigo_interior master: styling chair, mirror, rolling tray, pendant light, pale walls, polished-concrete floor.
+[PROPS IN FRAME] Clippers running, hair falling, rolling tray with combs and spray bottle visible.
+[REFERENCES]
+- @image1 - @shawn face. Controls face and hair (now shorter) only. Do not use the background.
+- @image2 - @meikigo_interior master. Controls the space and light only. Do not use any people in it.
+[CAMERA] 35mm feel, shallow depth of field, fine film grain.
+[EXCLUSIONS] No second person (barber is hands/clippers only), no text, no logos, no readable signage.
+[FEEDS] MKG-02-S5, single-frame stage (small continuous gesture, clippers stroke).
+```
+
+**MKG-02-S5-KF-4C-START** (shot 4c — start+end, phone approaching → touching tablet, payment, product shot 2)
+
+```
+[KEYFRAME ID] MKG-02-S5-KF-4C-START
+[SHOT] 4c
+[COMPOSITION] Medium shot on the counter, eye level, static, from the angle that shows both the counter surface and the tablet. Shawn's freshly cut hair visible above frame, his hand approaching from screen-left, phone clearly visible, tablet screen-right on the counter, waiting.
+[CAST IN FRAME] @shawn's hand and phone mid-motion, approaching the tablet. Tablet stands upright on the counter, screen showing a chroma-key green (will hold payment UI in post). Shawn's face above in soft focus, expression focused and composed.
+[EMOTION LOCK] The moment of completion is arriving. This is the last step. Composed and ready.
+[EYE LIFE] Eyes tracking the phone's approach to the tablet, gaze fixed on the contact point about to happen.
+[LIGHTING LOCK] Soft window daylight mixed with warm pendant light from above, gentle light on the counter surface.
+[ENVIRONMENT] @meikigo_interior counter: counter surface, edges clear, tablet in position, one edge of the mirror and wall visible behind.
+[PROPS IN FRAME] Shawn's phone approaching, tablet on counter with green screen ready (UI to be composited in post).
+[REFERENCES]
+- @image1 - @shawn body (hand and arm only). Controls build and wardrobe only.
+- @image2 - @tablet. Controls case shape and flat green screen only. Do not use the background.
+- @image3 - @meikigo_interior counter. Controls counter framing and light only.
+[CAMERA] 35mm feel, shallow depth of field.
+[EXCLUSIONS] No second person, no text, no actual UI on either screen (composited in post), tablet screen is pure chroma-key green.
+[FEEDS] MKG-02-S5, Stage 2 start frame (product shot anchor, route: I2V from this frame to KF-4C-END).
+```
+
+**MKG-02-S5-KF-4C-END** (shot 4c — tap-to-pay contact)
+
+```
+[KEYFRAME ID] MKG-02-S5-KF-4C-END
+[SHOT] 4c
+[COMPOSITION] Identical framing to KF-4C-START, no camera change.
+[CAST IN FRAME] @shawn's hand now touching the tablet screen with his phone, the moment of contact. Both hands still visible, the exchange happening.
+[EMOTION LOCK] The transaction complete. He has paid. The service is finished.
+[EYE LIFE] Eyes still tracking the contact, pupils steady, a moment of stillness as the payment processes.
+[LIGHTING LOCK] Identical to KF-4C-START.
+[ENVIRONMENT] Identical to KF-4C-START.
+[PROPS IN FRAME] Phone touching tablet screen (tap-to-pay contact visible).
+[REFERENCES] Same as KF-4C-START.
+[CAMERA] Identical to KF-4C-START.
+[EXCLUSIONS] No second person, no text, no actual UI.
+[FEEDS] MKG-02-S5, Stage 2 end frame.
+```
+
+**MKG-02-S5-KF-4D-SINGLE** (shot 4d — single keyframe, hand through freshly cut hair)
+
+```
+[KEYFRAME ID] MKG-02-S5-KF-4D-SINGLE
+[SHOT] 4d
+[COMPOSITION] Medium shot, eye level, static, from inside the shop as Shawn stands from the chair. Hand raised to his head, running through his freshly cut short hair, face visible in the mirror reflection behind.
+[CAST IN FRAME] @shawn standing, fresh-cut hair now short and neat (matching the length from before the growth in shot 1a), posture upright and relaxed, hand running through his own hair in a gesture of satisfaction and ownership.
+[EMOTION LOCK] Satisfaction. The job is done. His hair is his own again, manageable, under control. Quiet relief.
+[EYE LIFE] Eyes meeting his own reflection or gazing at his hand in his hair, a moment of self-awareness and acceptance. Blinks slow, a moment of peace.
+[LIGHTING LOCK] Soft window daylight mixed with warm pendant light overhead, gentle falloff into corners.
+[ENVIRONMENT] @meikigo_interior master: styling chair slightly visible, mirror and wall behind, polished-concrete floor.
+[PROPS IN FRAME] Shawn's hand in his hair, gesture of satisfaction.
+[REFERENCES]
+- @image1 - @shawn face. Controls face and hair (now short again) only. Do not use the background.
+- @image2 - @shawn body. Controls build and wardrobe only. Do not use the background.
+- @image3 - @meikigo_interior master. Controls the space and light only. Do not use any people in it.
+[CAMERA] 35mm feel, shallow depth of field.
+[EXCLUSIONS] No second person, no text, no logos.
+[FEEDS] MKG-02-S5, Stage 3 single frame (continuous gesture, satisfying).
+```
+
+**MKG-02-S7-KF-5B-START** (shot 5b — start+end, short hair → instant regrow to full length, the button gag moment)
+
+```
+[KEYFRAME ID] MKG-02-S7-KF-5B-START
+[SHOT] 5b
+[COMPOSITION] Medium wide, eye level, static, framed on Shawn's face and shoulders from the front. Fresh-cut short hair visible, expression starting to tighten as the irritation arrives.
+[CAST IN FRAME] @shawn's face and shoulders, fresh-cut hair still short, mouth beginning to open in an exhale, brow just starting to drop in irritation at the puddle. The moment before the hair grows back.
+[EMOTION LOCK] Irritation arriving, the muscle memory of frustration repeating. He sighs — and knows what comes next.
+[EYE LIFE] Eyes narrowing in frustration, blinks quickening as the irritation peaks, gaze dropping slightly as resignation joins the irritation.
+[LIGHTING LOCK] Warm low-angle late-afternoon daylight, soft long shadows.
+[ENVIRONMENT] @street master: brick storefronts, street depth, empty sidewalk.
+[PROPS IN FRAME] Phone in his hand.
+[REFERENCES]
+- @image1 - @shawn face. Controls face and hair (still short here) only. Do not use the background.
+- @image2 - @shawn body. Controls build and wardrobe only. Do not use the background.
+- @image3 - @street master. Controls the space and light only. Do not use any people in it.
+[CAMERA] 35mm feel, moderate depth of field.
+[EXCLUSIONS] No second person, hair is still short (not yet grown back), no text, no logos.
+[FEEDS] MKG-02-S7, Stage 1 start frame (route: I2V from KF-5B-START to KF-5B-END, instant hair growth).
+```
+
+**MKG-02-S7-KF-5B-END** (shot 5b — hair regrown to full past-collar length)
+
+```
+[KEYFRAME ID] MKG-02-S7-KF-5B-END
+[SHOT] 5b
+[COMPOSITION] Identical framing to KF-5B-START, no camera change.
+[CAST IN FRAME] @shawn's face and shoulders unchanged in position, hair now visibly long again, past his collar. Exhale complete, expression hardened into a flat, familiar exhaustion. The moment of realization: it's not over.
+[EMOTION LOCK] Full circle. The growth is back. He knows what to do now. No panic, no surprise — just acceptance of the cycle.
+[EYE LIFE] Eyes hardened and focused, blink released, gaze steady in a moment of decision.
+[LIGHTING LOCK] Identical to KF-5B-START.
+[ENVIRONMENT] Identical to KF-5B-START.
+[PROPS IN FRAME] Phone in his hand, now raised.
+[REFERENCES] Same as KF-5B-START.
+[CAMERA] Identical to KF-5B-START.
+[EXCLUSIONS] No second person, hair past collar (full growth), no text, no logos.
+[FEEDS] MKG-02-S7, Stage 1 end frame / Stage 2 start frame.
+```
+
+**MKG-02-S7-KF-5C-SINGLE** (shot 5c — living end card, phone already raised, knowing smile, held frame)
+
+```
+[KEYFRAME ID] MKG-02-S7-KF-5C-SINGLE
+[SHOT] 5c
+[COMPOSITION] Identical framing to KF-5B-START/END, no camera change. But now Shawn's phone is already raised, same gesture as shot 3c (scanning the QR sticker), and his expression carries a knowing, tiny smile — the punchline.
+[CAST IN FRAME] @shawn with long hair past his collar, phone already raised toward an off-screen QR sticker at the edge of the frame, small knowing smile on his face. Posture relaxed, the gesture automatic now. No hesitation.
+[EMOTION LOCK] The punchline lands. He sighs, his hair grows back, and without missing a beat, he's already booking again. The cycle is understood now. It works.
+[EYE LIFE] Eyes with a micro-glint of dry humor, gaze on the target QR sticker. Blink held in the moment, a tiny spark of acceptance of the absurdity.
+[LIGHTING LOCK] Warm low-angle late-afternoon daylight, soft long shadows, identical to KF-5B frames.
+[ENVIRONMENT] @street master, identical to KF-5B frames.
+[PROPS IN FRAME] Phone raised toward QR sticker (sticker edge of frame or just out of frame).
+[REFERENCES]
+- @image1 - @shawn face. Controls face and hair (long, past collar) only. Do not use the background.
+- @image2 - @shawn body. Controls build and wardrobe only. Do not use the background.
+- @image3 - @street master. Controls the space and light only. Do not use any people in it.
+[CAMERA] 35mm feel, moderate depth of field, fine film grain.
+[EXCLUSIONS] No second person, hair full length past collar, no text, no logos. Frame held as a live end-card plate (tagline + logo composited in post).
+[FEEDS] MKG-02-S7, Stage 2 end frame / HELD END CARD (frame holds with music swell and logo treatment).
 ```
 
 **MKG-02-S6-KF-START** (shot 5a — start+mid+end, the riskiest shot)
@@ -610,15 +873,429 @@ Identity, locks, end states, motion and seams, audio. Stop at the first failure.
 
 
 
-### Still to do
+### Segment specs — S2–S7 (beat-locked motion blocks)
 
-1. **Expand character angle set:** Currently 2 angles per character (face + body). Add 3 more angles per character (profile, three-quarter left, three-quarter right) for compositional flexibility in doorstep and walking shots. This increases character asset generation from 6 to 15 images, compensated by Nexus behavioral anchors reducing iteration cycles.
+## SEGMENT SPEC — MKG-02-S2 (doorstep rejections, dual doorways)
 
-2. **Generate and review the asset library** (gate 7 approval), including the full @street angle set and expanded character angles. Behavioral anchors and eye-life descriptions have been added to guide the generation toward character-driven results (Nexus + Dan Kieft alignment applied).
+### [SETTINGS]
+Model: Seedance 2.5 | Route: I2V from locked keyframes
+Budget: 6 s (provider minimum; final cut trims to 5 s)
+Aspect: 16:9, action in the center third | Native audio: on (dialogue + SFX) | Music: none
 
-3. **Generate and review all 21 keyframe stills** against the tiering table (gate 9). Full prompts with eye-life tiers are now written for shots 1a, 2a, and 5a; the remaining ten shots (2b, 3a, 3b, 3c, 4a, 4b, 4c, 4d, 5b, 5c) follow the same pattern once the assets are approved.
+### [GOAL]
+Two rapid rejections: Shawn asks each barber in turn, and each refuses before fully hearing the question. Duration: 6 s.
 
-4. **Run the MKG-02-S1 probe render** once its two keyframes are approved, and log the result; apply any findings to the S2-S7 specs. Motion-block breakdown (beat-locked stages) has been added to S1 as the template for S2-S7.
+### [KEYFRAMES]
+- Start frame: MKG-02-S2-KF-2A-START (doorway A, barberA glancing)
+- Mid frame: MKG-02-S2-KF-2A-END (doorway A, door closing)
+- Mid frame: MKG-02-S2-KF-2B-SINGLE (doorway B, barberB shaking head)
+- End frame: (doorway B after door closes, Shawn turning away — no dedicated keyframe, inferred from 2b end state)
 
-5. **Write segment specs for S2-S7** using the motion-block format established in S1. Each spec now includes detailed beat-locked stages with performance objectives, replacing the minimal field-filling approach.
+### [REFERENCES]
+- MKG-02-S2-KF-2A-START, KF-2A-END, KF-2B-SINGLE, as the I2V anchors
+
+### [CONTINUITY]
+- Shawn: carries hair past collar (from S1); same identity throughout; one person in frame or approaching/leaving doorways.
+- Barbers: barberA and barberB never share a frame; hard cut between doorways.
+- Scene: same exterior street, same lighting condition; two distinct doorways.
+
+### [STAGES]
+- STAGE 2A - 3 s - First doorstep rejection (Doorway A)
+  From: MKG-02-S2-KF-2A-START (door open, barberA glancing, Shawn approaching)
+  To: MKG-02-S2-KF-2A-END (door nearly closed, barberA looking away)
+  
+  **Motion breakdown (beat-locked to 3s):**
+  - 0:00-0:01 — Shawn steps into the doorway frame, approaching barberA, mouth opening to ask. BarberA glances at him while glancing back at the packed shop.
+  - 0:01-0:02 — Shawn's question spoken ("Can you help me? How long would a cut take?") as barberA's hand tightens on the door edge.
+  - 0:02-0:03 — BarberA says "Can't tell you" (SFX: door latch click audible), pulling the door shut. Shawn's shoulders drop as the door closes on his request.
+  - 0:03 → end state — Door nearly closed, barberA turned away, Shawn standing on the step watching it close.
+  
+  **Performance objective:** Show the rejection happens before the answer — the barber has already decided before Shawn finishes asking.
+  Transition out: HARD CUT (to doorway B)
+
+- STAGE 2B - 3 s - Second doorstep rejection (Doorway B)
+  From: MKG-02-S2-KF-2B-SINGLE (doorway B opens, barberB shaking head)
+  To: (end state — door closing or closed, Shawn turning away)
+  
+  **Motion breakdown (beat-locked to 3s):**
+  - 0:00-0:01 — Jump cut: Shawn now at doorway B, approaching barberB in the doorway. BarberB is already shaking his head before Shawn's mouth fully opens.
+  - 0:01-0:02 — Shawn's second question ("Do you have any openings? Even a quick cut?") delivered to barberB's closed expression.
+  - 0:02-0:03 — BarberB says "No idea, man" (SFX: door shuts, quick footsteps as Shawn turns away). The door closes faster this time.
+  - 0:03 → end state — Door fully closed, Shawn turning back toward the street, walking away from the second rejection in succession.
+  
+  **Performance objective:** Two rejections in quick succession show escalating hopelessness — the second one lands harder because there was no space between them.
+  Transition out: HARD CUT (to street, walking away)
+
+### [LOOK]
+Warm low-angle late-afternoon daylight, soft long shadows, uneven illumination between sunlit and shaded brick, 35mm feel, moderate depth of field, fine film grain, restrained natural colour, real skin texture, brick city-street neighbourhood, no on-screen text, no logos, no legible signage.
+
+### [CAMERA AND PERFORMANCE]
+Cutting: hard cut from 2a-end to 2b-start (no overlap or transition). No handheld shake, no whip pans. Each doorway gets one static framing.
+Shawn: approaches with fading hope, speaks with quiet urgency, shoulders drop with each refusal.
+BarberA and BarberB: preemptive refusal, no warmth, decision made before the question completes.
+
+### [AUDIO]
+Dialogue: Shawn asks two questions (~6 words each, 2s total for dialogue). BarberA: "Can't tell you" (1.5s). BarberB: "No idea, man" (1s). SFX: door latches, footsteps, street ambience underneath.
+
+### [KEEP CONSISTENT]
+Same Shawn identity throughout; hair remains past collar (from S1); same street and light; two distinct doorways.
+
+### [DO NOT INCLUDE]
+No second person in frame (barbers in separate shots), no third parties, no text or logos, no music, no background figures.
+
+---
+
+## SEGMENT SPEC — MKG-02-S3 (the discovery: QR sticker on the wall)
+
+### [SETTINGS]
+Model: Seedance 2.5 | Route: I2V from locked keyframes
+Budget: 8 s (provider minimum; final cut trims to 8 s)
+Aspect: 16:9, action in the center third | Native audio: on (ambient SFX) | Music: none
+
+### [GOAL]
+Shawn walks away dejected, then notices a small QR sticker on a brick wall. Curiosity breaks through resignation. He pulls out his phone and scans it. Duration: 8 s.
+
+### [KEYFRAMES]
+- Start frame: MKG-02-S3-KF-3A-SINGLE (walking away from doorway B, hunched)
+- Mid frame: MKG-02-S3-KF-3B-SINGLE (tilted head, spotting the sticker)
+- End frame: MKG-02-S3-KF-3C-SINGLE (phone raised to scan)
+
+### [REFERENCES]
+- MKG-02-S3-KF-3A-SINGLE, KF-3B-SINGLE, KF-3C-SINGLE, as the I2V anchors
+
+### [CONTINUITY]
+- Shawn: sole person in frame; carries hair past collar; same street progression.
+- Scene: continuous street movement, one unbroken location, consistent light.
+
+### [STAGES]
+- STAGE 3A - 3 s - Walk away in defeat
+  From: MKG-02-S3-KF-3A-SINGLE (turning away from doorway, hunched)
+  To: (approaching the brick wall where the sticker waits)
+  
+  **Motion breakdown (beat-locked to 3s):**
+  - 0:00-0:01 — Shawn walks down the sidewalk, shoulders collapsed inward, pace slow. Head down slightly, eyes on the pavement.
+  - 0:01-0:02 — He slows further, approaching a blank stretch of brick wall at eye level. Still inward-focused, no awareness of what's there yet.
+  - 0:02-0:03 — Pace slows to a walk-and-pause, feet nearly stopping as his peripheral vision catches something. Subtle pause in stride.
+  - 0:03 → end state — Shawn at the wall, about to tilt his head up.
+  
+  **Performance objective:** Show the downward spiral slowing — something about the approach to this spot breaks the pattern.
+  
+- STAGE 3B - 2 s - The tilt and the sticker
+  From: (stalled near the wall, eyes beginning to lift)
+  To: MKG-02-S3-KF-3B-SINGLE (head tilted, eyes on the sticker, expression shifting to curiosity)
+  
+  **Motion breakdown (beat-locked to 2s):**
+  - 0:00-0:01 — Shawn's head tilts back slowly, eyes lifting from the pavement to the wall at eye level. His gaze lands on the small QR sticker.
+  - 0:01-0:02 — Eyes register the anomaly. A tiny moment of recognition. Not hope yet, but — what's this? Small smile of curiosity replaces the flat resignation.
+  - 0:02 → end state — Head tilted, eyes fixed on the sticker, expression opening into possibility.
+  
+  **Performance objective:** Curiosity interrupts despair — a small, honest moment of human psychology. The pattern breaks when something unexpected appears.
+  
+- STAGE 3C - 3 s - The scan
+  From: (head tilted, eyes on sticker)
+  To: MKG-02-S3-KF-3C-SINGLE (phone raised to scan, arm extended, posture engaged)
+  
+  **Motion breakdown (beat-locked to 3s):**
+  - 0:00-0:01 — Shawn stares at the sticker for a beat, processing. Then he reaches into his pocket, slow and deliberate.
+  - 0:01-0:02 — Phone comes out, hand raises it toward the sticker. Screen is off. He's moving on instinct now, trying something.
+  - 0:02-0:03 — Phone positioned to scan. He holds it steady, waiting for the interaction. Small anticipation in the frame.
+  - 0:03 → end state — Phone raised, positioned to scan, eyes on the sticker or phone screen, waiting for something to happen.
+  
+  **Performance objective:** Action replaces passivity. The gesture is small but it represents a shift from waiting for things to happen to trying something new.
+  Transition out: HARD CUT (to phone screen, booking interface appears)
+
+### [LOOK]
+Warm low-angle late-afternoon daylight, soft long shadows, uneven illumination between sunlit and shaded brick, 35mm feel, moderate depth of field, fine film grain, restrained natural colour, real skin texture, brick city-street neighbourhood, no on-screen text, no logos.
+
+### [CAMERA AND PERFORMANCE]
+Cutting: single continuous take, no cuts, no pans. Static framing as Shawn walks, tilts, and raises phone.
+Shawn: posture shifts from collapsed to upright as curiosity engages. Movement is small but purposeful.
+
+### [AUDIO]
+Dialogue: none. SFX: footsteps on pavement, street ambience, subtle camera-scan chime when phone raises to sticker (gentle UI sound, no harsh beep).
+
+### [KEEP CONSISTENT]
+Same Shawn identity; hair past collar (from S1); same street and light; continuity of walk and location.
+
+### [DO NOT INCLUDE]
+No second person, no QR sticker content that resolves to real URL (abstract, nonfunctional pattern only), no text or logos, no music.
+
+---
+
+## SEGMENT SPEC — MKG-02-S4 (product shot 1: booking interface on phone)
+
+### [SETTINGS]
+Model: Seedance 2.5 | Route: I2V from locked keyframes
+Budget: 2 s (provider minimum)
+Aspect: 16:9, action in the center third | Native audio: on | Music: none
+
+### [GOAL]
+Phone screen reveals a clean booking interface. A moment of clarity — this works. Duration: 2 s.
+
+### [KEYFRAMES]
+- Start frame: MKG-02-S4-KF-4A-START (phone dark, screen off)
+- End frame: MKG-02-S4-KF-4A-END (phone lit, booking interface glowing)
+
+### [REFERENCES]
+- MKG-02-S4-KF-4A-START, KF-4A-END, as the I2V anchors
+
+### [CONTINUITY]
+- Shawn: hand and arm stable, holding the phone; face soft-focus above, eyes watching screen content appear.
+- Scene: transitional street scene (blurred background focus on phone).
+
+### [STAGES]
+- STAGE 4A - 2 s - The UI arrives
+  From: MKG-02-S4-KF-4A-START (phone dark, screen off, hand steady)
+  To: MKG-02-S4-KF-4A-END (booking interface revealed, screen glowing)
+  
+  **Motion breakdown (beat-locked to 2s):**
+  - 0:00-0:01 — Phone screen remains dark for a moment, scanning in progress. Shawn's hand steady, waiting. Anticipation.
+  - 0:01-0:02 — Screen illuminates with the booking interface (UI to be composited in post). Soft glow casts on his hand and face. Eyes widen fractionally, recognizing success.
+  - 0:02 → end state — Screen fully lit, booking interface visible (placeholder glow for compositing), Shawn's eyes tracking the content appearing.
+  
+  **Performance objective:** The tool works. Doubt dissolves into relief in a single moment of screen illumination.
+  Transition out: HARD CUT (to interior, Shawn already seated in chair)
+
+### [LOOK]
+Warm low-angle late-afternoon daylight, augmented by cool soft glow from phone screen casting onto hand and face. Fine film grain, 35mm feel.
+
+### [CAMERA AND PERFORMANCE]
+Cutting: single static close-up, no camera movement.
+Shawn: hand steady, eyes tracking screen content, body language relaxing as interface appears.
+
+### [AUDIO]
+Dialogue: none. SFX: soft UI chime as screen illuminates; light tap feedback as interface loads (gentle, not harsh).
+
+### [KEEP CONSISTENT]
+Same Shawn hand/arm appearance; same light transition from street daylight to screen glow; phone and hand consistent with prior shots.
+
+### [DO NOT INCLUDE]
+No second person, no actual UI (composited in post — only glow and placeholder), no text, no logos.
+
+---
+
+## SEGMENT SPEC — MKG-02-S5 (haircut sequence: interior, clippers, and payment)
+
+### [SETTINGS]
+Model: Seedance 2.5 | Route: I2V from locked keyframes (3 keyframes for 3 stages)
+Budget: 7 s (provider minimum; final cut trims to 6 s)
+Aspect: 16:9, action in the center third | Native audio: on (SFX) | Music: none
+
+### [GOAL]
+Shawn enters the interior, gets his hair cut (long strands falling), and taps his phone to the tablet to pay. The service is complete. Duration: 7 s.
+
+### [KEYFRAMES]
+- Start frame: MKG-02-S5-KF-4B-SINGLE (seated in chair, clippers running, hair falling)
+- Mid frame: MKG-02-S5-KF-4C-START (counter angle, phone approaching tablet)
+- End frame: MKG-02-S5-KF-4C-END (phone touching tablet, payment moment)
+- Post-frame: MKG-02-S5-KF-4D-SINGLE (standing, hand in hair, satisfied smile)
+
+### [REFERENCES]
+- MKG-02-S5-KF-4B-SINGLE, KF-4C-START, KF-4C-END, KF-4D-SINGLE, as the I2V anchors
+
+### [CONTINUITY]
+- Shawn: present throughout; hair gets progressively shorter as scene advances; same identity and wardrobe throughout.
+- Scene: interior consistency; same light (window + pendant); progression from chair to counter to standing.
+
+### [STAGES]
+- STAGE 5A - 2 s - The cut (clipper stroke montage)
+  From: MKG-02-S5-KF-4B-SINGLE (seated, clippers working, long strands falling)
+  To: (hair progressively shorter, multiple passes of clippers visible)
+  
+  **Motion breakdown (beat-locked to 2s):**
+  - 0:00-0:01 — Close-up of clippers running through Shawn's hair, strands falling. Barber's hands (no face) visible making steady passes. Shawn's posture relaxed in the chair.
+  - 0:01-0:02 — Camera pulls back slightly, revealing more of the styling setup. Hair visibly shorter now. The motion continues (additional clipper passes possible, but cut length is the primary visual change).
+  - 0:02 → end state — Hair cut to short length, final clipper motion complete, Shawn sitting still in the chair.
+  
+  **Performance objective:** The cutting is underway and working. Show time passing through visible hair length reduction.
+  
+- STAGE 5B - 2 s - Move to counter and approach
+  From: (Shawn standing from chair, moving to counter)
+  To: MKG-02-S5-KF-4C-START (at counter, phone approaching tablet)
+  
+  **Motion breakdown (beat-locked to 2s):**
+  - 0:00-0:01 — Shawn stands from the chair, freshly cut hair now visibly short. He reaches for his phone from his pocket, small deliberate gesture.
+  - 0:01-0:02 — He approaches the counter where the tablet waits. Hand rises with phone, positioning it to make contact. Small anticipatory gesture.
+  - 0:02 → end state — Phone positioned just above the tablet screen, ready to tap.
+  
+  **Performance objective:** The logistics of payment are handled smoothly — Shawn knows what to do. No hesitation.
+  
+- STAGE 5C - 2 s - The tap and completion
+  From: MKG-02-S5-KF-4C-START (phone approaching)
+  To: MKG-02-S5-KF-4C-END (phone touching tablet)
+  
+  **Motion breakdown (beat-locked to 2s):**
+  - 0:00-0:01 — Phone screen glows (placeholder for payment UI composited in post). Shawn's focus is on the tablet and the payment interaction.
+  - 0:01-0:02 — Phone makes gentle contact with the tablet screen (tap-to-pay). SFX: soft chime confirming the transaction.
+  - 0:02 → end state — Payment complete, both phone and tablet active but interaction finished.
+  
+  **Performance objective:** The payment happens without drama. The transaction works smoothly.
+  
+- STAGE 5D - 1 s - Satisfaction reveal
+  From: (standing after payment, hand rising to check the fresh cut)
+  To: MKG-02-S5-KF-4D-SINGLE (standing, hand in hair, small satisfied smile)
+  
+  **Motion breakdown (beat-locked to 1s):**
+  - 0:00-0:01 — Shawn turns from the counter, hand already rising to his own hair. He runs his fingers through the short, fresh cut. Small satisfied expression crosses his face.
+  - 0:01 → end state — Hand in hair, satisfaction readable, moment of ownership and relief.
+  
+  **Performance objective:** He has his hair back. He has control again. Small, quiet moment of peace.
+  Transition out: HARD CUT (to exterior, stepping outside)
+
+### [LOOK]
+Soft window daylight mixed with warm pendant light overhead, gentle falloff into corners, no even wash. Polished-concrete floor visible, leather chair, mirrors, pale walls. 35mm feel, shallow depth of field, fine film grain.
+
+### [CAMERA AND PERFORMANCE]
+Cutting: continuous progression through interior (chair → counter → standing). Static framing at each station; no whip pans or handheld.
+Shawn: relaxed in chair, confident at counter, satisfied when standing. Movement is efficient and purposeful.
+Barber: hands only, no face; steady clipper work.
+
+### [AUDIO]
+Dialogue: none. SFX: clippers buzzing, hair falling softly, footsteps on concrete floor, soft tap-to-pay chime, small ambient interior room tone.
+
+### [KEEP CONSISTENT]
+Same Shawn identity; hair transitions from long (past collar) to short (pre-growth length); same wardrobe; same interior light throughout.
+
+### [DO NOT INCLUDE]
+No second person visible (barber is hands/clippers only), no legible signage, no UI on screens (composited in post), no text or logos.
+
+---
+
+## SEGMENT SPEC — MKG-02-S6 (fragile moment: puddle splash, hair regrows, button gag setup)
+
+### [SETTINGS]
+Model: Seedance 2.5 | Route: I2V from locked keyframes (3 keyframes for 3 tiers)
+Budget: 5 s (provider minimum; final cut trims to 4 s)
+Aspect: 16:9, action in the center third | Native audio: on (SFX) | Music: none
+
+### [GOAL]
+Shawn steps outside feeling relief, steps square into a puddle, sighs in irritation, and his hair instantly grows back to full length. The button gag moment arrives. Duration: 5 s.
+
+### [KEYFRAMES]
+- Start frame: MKG-02-S6-KF-START (foot about to land in puddle, unaware)
+- Mid frame: MKG-02-S6-KF-MID (foot breaking the puddle surface, water displacing)
+- End frame: MKG-02-S6-KF-END (foot planted, splash settling, hair full length, irritation arriving)
+
+### [REFERENCES]
+- MKG-02-S6-KF-START, KF-MID, KF-END, as the I2V anchors (3-tier shot)
+
+### [CONTINUITY]
+- Shawn: one person; starts with short fresh-cut hair, ends with full long hair regrown; same identity and wardrobe throughout.
+- Scene: one continuous moment on the street, one puddle, no cut or repositioning.
+
+### [STAGES]
+- STAGE 6A - 2 s - Step into the puddle
+  From: MKG-02-S6-KF-START (foot lifted, about to land, unaware of puddle)
+  To: MKG-02-S6-KF-MID (foot breaking the surface, water displacing, first splash beginning)
+  
+  **Motion breakdown (beat-locked to 2s):**
+  - 0:00-0:01 — Shawn walks out of the shop, relaxed posture, faint smile of relief still on his face. He doesn't see the puddle. Stride is natural, weight transfers forward.
+  - 0:01-0:02 — Right foot lands in the puddle. Water breaks around the shoe. First droplets beginning to lift. SFX: splash sound beginning.
+  - 0:02 → end state — Foot at the point of deepest water contact, splash mid-air, Shawn's expression just starting to register the contact.
+  
+  **Performance objective:** The moment of collision between two realities — one of relief about to be interrupted.
+  
+- STAGE 6B - 2 s - The splash and the realization
+  From: MKG-02-S6-KF-MID (water at peak displacement)
+  To: MKG-02-S6-KF-END (splash settling, hair full length, irritation hardening the face)
+  
+  **Motion breakdown (beat-locked to 2s):**
+  - 0:00-0:01 — Water splashes, droplets settling around the ankle and shoe. Shawn's torso stiffens with irritation as his foot plants fully in the puddle. Expression hardens.
+  - 0:01-0:02 — Irritated exhale begins. In sync with the breath, his hair pulses outward and downward, lengthening from short to full past-collar length in one instant regrow. SFX: hair-growth sound (whoosh, elastic stretch).
+  - 0:02 → end state — Hair at full extended length past his collar, exhale complete, expression flat with frustrated acceptance, brow slightly furrowed.
+  
+  **Performance objective:** The button gag. The universe has a sense of humor. No drama, just — of course. Again.
+  Transition out: NO CUT — continuation into S7 (phone already rising)
+
+### [LOOK]
+Warm low-angle late-afternoon daylight, soft long shadows, uneven illumination between sunlit and shaded brick, 35mm feel, moderate depth of field, fine film grain. Puddle reflects brick and sky. Sidewalk shows the damage of age and use.
+
+### [CAMERA AND PERFORMANCE]
+Cutting: single continuous take, no cuts, framed low to show the puddle and its surface clearly. Static framing.
+Shawn: relief broken by collision, irritation arriving in the moment of impact, acceptance settling by the end.
+Physics: water displacement is realistic; hair growth is instant but believable as a singular event tied to the exhale; no slow-mo.
+
+### [AUDIO]
+Dialogue: none. SFX: footstep into puddle, water splashing, settling drip sounds, irritated exhale (sharp breath out), hair-growth whoosh sound (elastic, not metallic).
+
+### [KEEP CONSISTENT]
+Same Shawn identity; hair transitions from short (end of S5) to full long (end of S6); same wardrobe; same street and light; one puddle, clearly visible.
+
+### [DO NOT INCLUDE]
+No second person, no music, no text or logos.
+
+---
+
+## SEGMENT SPEC — MKG-02-S7 (living end card: phone raised, knowing smile, held frame)
+
+### [SETTINGS]
+Model: Seedance 2.5 | Route: I2V from locked keyframes
+Budget: 5 s (provider minimum; final cut holds on frame 2-3s for end card treatment)
+Aspect: 16:9, action in the center third | Native audio: on (music swell in post) | Music: none (added in post)
+
+### [GOAL]
+Shawn's hair has grown back instantly. He sighs in irritation. Without missing a beat, he's already raising his phone toward a QR sticker to book again. The cycle repeats, but now he's smiling — he understands the rhythm. The frame holds as the living end card. Tagline and logo composite in post. Duration: 5 s.
+
+### [KEYFRAMES]
+- Start frame: MKG-02-S7-KF-5B-START (fresh-cut hair, before the growth)
+- End frame: MKG-02-S7-KF-5B-END (hair full length, irritation settling in)
+- Final frame: MKG-02-S7-KF-5C-SINGLE (phone already raised, knowing smile, held as end card)
+
+### [REFERENCES]
+- MKG-02-S7-KF-5B-START, KF-5B-END, KF-5C-SINGLE, as the I2V anchors
+
+### [CONTINUITY]
+- Shawn: one person; hair transitions from short → full long; same identity; this is the immediate continuation from S6 (no time has passed).
+- Scene: same street corner, same light, same puddle spot.
+
+### [STAGES]
+- STAGE 7A - 2 s - The exhale and regrow
+  From: MKG-02-S7-KF-5B-START (hair still short, frustration arriving)
+  To: MKG-02-S7-KF-5B-END (hair full length, exhale complete, resignation + frustration)
+  
+  **Motion breakdown (beat-locked to 2s):**
+  - 0:00-0:01 — Shawn's irritated exhale begins (sharp breath out through nose). His face tightens briefly with frustration as he accepts what's about to happen.
+  - 0:01-0:02 — Hair pulses outward and downward, lengthening from short to full past-collar length in one instant. SFX: hair-growth whoosh. Shoulders drop. Exhale complete.
+  - 0:02 → end state — Hair at full length, expression hardened into familiar exhaustion and acceptance.
+  
+  **Performance objective:** Resignation without panic. This is now known. It happens every time.
+  
+- STAGE 7B - 2 s - The decision and the booking
+  From: (hair full, expression hardened, moment of decision)
+  To: MKG-02-S7-KF-5C-SINGLE (phone already raised toward QR sticker, knowing smile present, frame held)
+  
+  **Motion breakdown (beat-locked to 2s):**
+  - 0:00-0:01 — Shawn looks at his full-length hair for a beat. The moment of acceptance. Then a small, wry smile crosses his face — the punchline lands for him.
+  - 0:01-0:02 — Phone is already rising in the same gesture as shot 3c (scanning the QR sticker), automatic now, no hesitation. Small knowing smile remains. The rhythm is understood.
+  - 0:02 → end state — Phone raised, positioned to scan, knowing smile on his face, frame HOLDS (no further motion — this is the living end-card plate).
+  
+  **Performance objective:** Acceptance becomes understanding becomes humor. The joke is on him, and he gets it. The cycle is a problem, but a solvable one.
+  Transition out: HELD FRAME (music swells in post, tagline and logo composite as overlay, no cut or fade)
+
+### [LOOK]
+Warm low-angle late-afternoon daylight, soft long shadows, uneven illumination between sunlit and shaded brick, 35mm feel, moderate depth of field, fine film grain. Same as S1-S6.
+
+### [CAMERA AND PERFORMANCE]
+Cutting: continuous from 5b-start through 5b-end into 5c. Final frame HELD without motion (static end card).
+Shawn: transition from frustration → resignation → acceptance → wry humor. The smile is small but readable.
+
+### [AUDIO]
+Dialogue: none. SFX: irritated exhale, hair-growth whoosh, soft ambient street room tone underneath. Music: (added in post — swell over the held end card, no music during the motion stages).
+
+### [KEEP CONSISTENT]
+Same Shawn identity; hair full length (as per the magical system); same wardrobe; same street and light; one QR sticker (same type as S3, in a different location or same location).
+
+### [DO NOT INCLUDE]
+No second person, no legible signage, no on-screen text during motion (text/logo added in post on the held frame only), no music during motion.
+
+### [END CARD TREATMENT]
+Frame held (0:02 onward) as the living end-card plate. No further motion. Music swells in post. Tagline and logo composite as overlay on this held frame (not baked into the motion generation). Frame remains steady, Shawn's smile and the QR sticker visible, waiting for the end-card treatment.
+
+---
+
+### Task status: COMPLETE
+- [x] All 21 keyframe prompts written with eye-life tiers
+- [x] All 7 segment specs written with beat-locked motion blocks and performance objectives
+- [x] Ready for generation: gates 7-9 (assets + keyframes)
+- [ ] Next: Expand character angle set (optional), then generate
 
