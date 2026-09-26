@@ -203,85 +203,87 @@ No dedicated reference is planned for the Meikigo barber cutting hair (hands + c
 
 ```
 [IMAGE TYPE] Location plate
-[SUBJECT] A brick-lined city sidewalk street corner, empty, no people, no vehicles.
-[DESIGN] Warm red-brown brick storefronts along one side, uneven mortar lines and a few mismatched repair bricks, a narrow paved sidewalk with faint stains and a patched section, two or three street trees in slightly rusted iron grates, two or three bicycles locked to a rack at uneven angles, overhead string lighting sagging slightly between poles, not yet lit, a weathered awning over one storefront, a blank taped-over notice board with no legible text.
-[POSE] N/A — three-quarter angle down the sidewalk so both the storefronts and the depth of the street read, ordinary eye-level camera height, not perfectly centered.
-[ENVIRONMENT] The scene itself — late afternoon, empty.
-[LIGHT] Warm low-angle late-afternoon daylight, soft long shadows, uneven illumination between sunlit and shaded brick, no artificial glow.
-[CAMERA] 35mm feel, eye level, moderate depth of field, fine film grain, natural highlight rolloff.
-[EXCLUSIONS] No people, no vehicles, no text, no readable signage, no logos, no HDR or glossy sheen.
+[SUBJECT] A brick-lined city sidewalk street corner, empty, no people, no vehicles. The load-bearing detail: one blank brick wall at eye level, plain and empty, waiting.
+[DESIGN] Warm red-brown brick storefronts along one side, uneven mortar lines and a few mismatched repair bricks, a narrow paved sidewalk with faint stains and a patched section, two or three street trees in slightly rusted iron grates, two or three bicycles locked to a rack at uneven angles, overhead string lighting sagging slightly between poles, not yet lit, a weathered awning over one storefront, a blank taped-over notice board with no legible text. The dominant feature: one plain stretch of brick wall at eye level, unbroken, with no signage or marking — this is where the sticker will land. This wall is the turning point of the narrative.
+[POSE] N/A — three-quarter angle down the sidewalk so both the storefronts and the depth of the street read, ordinary eye-level camera height, not perfectly centered. The wall should be clearly visible and accessible to the frame.
+[ENVIRONMENT] The scene itself — late afternoon, empty. A neighborhood that has seen better days but still functions. This is a place where small solutions appear without fanfare.
+[LIGHT] Warm low-angle late-afternoon daylight, soft long shadows, uneven illumination between sunlit and shaded brick, no artificial glow. Light should be directional enough to cast subtle shadows from the mortar lines and the small sticker when it appears.
+[CAMERA] 35mm feel, eye level, moderate depth of field, fine film grain, natural highlight rolloff. The brick wall detail should resolve clearly when framed in close-ups (3b, 3c angles).
+[EXCLUSIONS] No people, no vehicles, no text, no readable signage, no logos, no HDR or glossy sheen, no perfectly pristine surfaces (age and use visible on every material).
 [REFERENCE ANCHOR] @image1 - reference-library/cloudmonster-on-running/shots/shot01_mid_00-00-00_900.jpg (Shot 1) - ATTACH AS AN IMAGE INPUT, not cited by path only - controls camera angle (static three-quarter, eye level), lens/atmosphere/grain and the warm low-angle golden-hour lighting direction only - do not use its subjects, the On/Cloudmonster branding, or its exact building (design our own corner under this cinematography).
-[SEEDANCE ROLE] @street master - used in 10 of 13 shots - controls the space, materials and light only - do not use any people in it.
+[SEEDANCE ROLE] @street master - used in 10 of 13 shots - controls the space, materials and light only - do not use any people in it. World anchor: this street is ordinary until a small sticker appears. That detail changes everything.
 ```
 
 **Character face reference: @barberA.**
 
 ```
 [IMAGE TYPE] Character face reference
-[SUBJECT] One man: barber at doorstep A, mid-40s, broad build.
-[DESIGN] Rounded face, heavy brow, close-cropped greying hair, short salt-and-pepper beard, medium-tan skin with real pores and faint acne scarring at the jaw, tired half-lidded eyes. No product shine on the hair.
-[POSE] Head and shoulders, facing camera, neutral relaxed expression, mouth closed.
+[SUBJECT] One man: barber at doorstep A, mid-40s, broad build. Tired, experienced, already decided.
+[DESIGN] Rounded face, heavy brow, close-cropped greying hair, short salt-and-pepper beard, medium-tan skin with real pores and faint acne scarring at the jaw, tired half-lidded eyes. No product shine on the hair. The face of someone who has said no a thousand times and will say it again without hesitation.
+[POSE] Head and shoulders, facing camera, neutral relaxed expression, mouth closed. A baseline of indifference — this is his resting state when dismissing requests.
+[EYES] Eyes that are half-lidded even at rest, a weariness that runs deep. When he glances at Shawn, the eyes narrow imperceptibly — a preemptive gate closing before the question arrives.
 [ENVIRONMENT] Pure white seamless studio background.
 [LIGHT] Neutral soft even wrap-around, 5600K, no colour cast, eye catchlights.
 [CAMERA] Front view, 85mm lens, f/4, sharp on the eyes.
 [EXCLUSIONS] No text, no logos, no second person, no props.
-[SEEDANCE ROLE] @barberA face - used in shot 2a - controls face and hair only - do not use the background.
+[SEEDANCE ROLE] @barberA face - used in shot 2a - controls face and hair only - do not use the background. Psychological anchor: this face closes doors before they're fully open.
 ```
 
 **Character full-body reference: @barberA.**
 
 ```
 [IMAGE TYPE] Character full-body reference
-[SUBJECT] Same man as @barberA face, broad build, about 1.80 m.
-[DESIGN] Same face and hair as the face reference. Dark green barber smock over a black t-shirt, short sleeves, dark jeans, worn brown leather work shoes. No logos or text.
-[POSE] Standing straight, arms relaxed, head to toe, shoes in frame, facing camera, slightly closed-off posture, weight back, chin down.
+[SUBJECT] Same man as @barberA face, broad build, about 1.80 m. Heavy-shouldered, worn down by the work.
+[DESIGN] Same face and hair as the face reference. Dark green barber smock over a black t-shirt, short sleeves, dark jeans, worn brown leather work shoes. No logos or text. The smock hangs with the weight of routine — worn, familiar, unchanging.
+[POSTURE] Standing straight but weight centered back on his heels, not forward. Shoulders broad but slightly rolled back, a closed-off stance. Head level or chin slightly down. Body language says: I'm not inviting engagement. One hand can rest on or near the door frame — ready to move it.
 [ENVIRONMENT] Very light grey seamless studio background.
 [LIGHT] Neutral soft even wrap-around, 5600K, no colour cast.
 [CAMERA] Full-body front view, 50mm lens, f/8, sharp commercial photography.
-[EXCLUSIONS] No text, no logos, no second person, no props in hands.
-[SEEDANCE ROLE] @barberA body - used in shot 2a - controls build and wardrobe only - do not use the background.
+[EXCLUSIONS] No text, no logos, no second person, no props in hands except door frame contact point.
+[SEEDANCE ROLE] @barberA body - used in shot 2a - controls build, wardrobe, and weight distribution only - do not use the background. Behavioral anchor: this man's body language says the conversation is already over.
 ```
 
 **Character face reference: @barberB.**
 
 ```
 [IMAGE TYPE] Character face reference
-[SUBJECT] One man: barber at doorstep B, late 20s, lean build.
-[DESIGN] Angular face, sharp jawline, high fade with a textured top, clean-shaven, deep brown skin with real pores and natural texture, sharp attentive eyes already narrowing before he speaks.
-[POSE] Head and shoulders, facing camera, neutral relaxed expression, mouth closed.
+[SUBJECT] One man: barber at doorstep B, late 20s, lean build. Sharp, quick to judge, already checked out.
+[DESIGN] Angular face, sharp jawline, high fade with a textured top, clean-shaven, deep brown skin with real pores and natural texture, sharp attentive eyes that narrow imperceptibly in preemptive dismissal. The face of someone young enough to still have energy but old enough to have heard every excuse.
+[POSE] Head and shoulders, facing camera, neutral relaxed expression, mouth closed. But the neutrality is a mask — the eyes are already saying no.
+[EYES] Eyes sharp and cutting, with a micro-expression of disdain barely suppressed. When looking at an incoming request, the pupils narrow slightly — the gatekeep reflex. Eyes are quick, reactive, missing nothing.
 [ENVIRONMENT] Pure white seamless studio background.
 [LIGHT] Neutral soft even wrap-around, 5600K, no colour cast, eye catchlights.
 [CAMERA] Front view, 85mm lens, f/4, sharp on the eyes.
 [EXCLUSIONS] No text, no logos, no second person, no props.
-[SEEDANCE ROLE] @barberB face - used in shot 2b - controls face and hair only - do not use the background.
+[SEEDANCE ROLE] @barberB face - used in shot 2b - controls face and hair only - do not use the background. Psychological anchor: this face reads people and rejects them in the same moment.
 ```
 
 **Character full-body reference: @barberB.**
 
 ```
 [IMAGE TYPE] Character full-body reference
-[SUBJECT] Same man as @barberB face, lean build, about 1.75 m.
-[DESIGN] Same face and hair as the face reference. Black fitted t-shirt under a denim apron, dark grey joggers, black sneakers. No logos or text.
-[POSE] Standing straight, arms relaxed, head to toe, shoes in frame, facing camera, one shoulder slightly turned as if already about to close the door.
+[SUBJECT] Same man as @barberB face, lean build, about 1.75 m. Energetic but dismissive, already moving away.
+[DESIGN] Same face and hair as the face reference. Black fitted t-shirt under a denim apron, dark grey joggers, black sneakers. No logos or text. The apron is clean and tidy — this barber keeps his space organized but closed off.
+[POSTURE] Standing straight but with one shoulder already rotated as if turning away. Weight is forward and ready to close the door or step back. Head straight but will turn away mid-conversation. Body language is: I'm about to leave this interaction.
 [ENVIRONMENT] Very light grey seamless studio background.
 [LIGHT] Neutral soft even wrap-around, 5600K, no colour cast.
 [CAMERA] Full-body front view, 50mm lens, f/8, sharp commercial photography.
 [EXCLUSIONS] No text, no logos, no second person, no props in hands.
-[SEEDANCE ROLE] @barberB body - used in shot 2b - controls build and wardrobe only - do not use the background.
+[SEEDANCE ROLE] @barberB body - used in shot 2b - controls build, wardrobe, and weight distribution only - do not use the background. Behavioral anchor: this man's shoulders are already leaving before his words arrive.
 ```
 
 **Location plate: @meikigo_interior (master).**
 
 ```
 [IMAGE TYPE] Location plate
-[SUBJECT] Empty modern barbershop interior, one styling station and a counter, no people.
-[DESIGN] A single black leather styling chair facing a large plain mirror in a thin brass frame, a small rolling tray beside it with combs and a spray bottle, one hanging pendant light above, pale grey walls with a couple of unreadable framed prints, slightly scuffed polished-concrete floor with visible dust near the chair base, a folded towel draped slightly off-center on the chair arm.
-[POSE] N/A — three-quarter angle from the doorway so the chair, mirror and a slice of the counter read in one frame, ordinary eye-level camera height.
-[ENVIRONMENT] The scene itself — daytime, soft interior light.
-[LIGHT] Soft window daylight from one side mixed with the warm pendant light overhead, gentle falloff into the corners, no even or flat wash.
-[CAMERA] 35mm feel, eye level, moderate depth of field, fine film grain.
-[EXCLUSIONS] No people, no text, no readable signage, no logos, no on-screen UI anywhere.
-[SEEDANCE ROLE] @meikigo_interior master - used in shot 4b - controls the space and light only - do not use any people in it.
+[SUBJECT] Empty modern barbershop interior, one styling station and a counter, no people. The load-bearing detail: everything works, nothing pretends to be more than it is.
+[DESIGN] A single black leather styling chair facing a large plain mirror in a thin brass frame, a small rolling tray beside it with combs and a spray bottle, one hanging pendant light above, pale grey walls with a couple of unreadable framed prints, slightly scuffed polished-concrete floor with visible dust near the chair base, a folded towel draped slightly off-center on the chair arm. The space is functional, clean, honest — no luxury, no pretense, just the things a haircut needs: a chair, a mirror, light, tools. The tablet on the counter (separate shot) will sit waiting for the payment moment.
+[POSE] N/A — three-quarter angle from the doorway so the chair, mirror and a slice of the counter read in one frame, ordinary eye-level camera height. The depth should allow the viewer to understand this is a real working space, not a studio.
+[ENVIRONMENT] The scene itself — daytime, soft interior light. This is a place where the solution happens. Quietness here is welcome.
+[LIGHT] Soft window daylight from one side mixed with the warm pendant light overhead, gentle falloff into the corners, no even or flat wash. Light should feel natural and earned, not artificial or designed.
+[CAMERA] 35mm feel, eye level, moderate depth of field, fine film grain. Details like the dust, the crease in the towel, the wear on the chair should be visible enough to feel real.
+[EXCLUSIONS] No people, no text, no readable signage, no logos, no on-screen UI anywhere, no excessive cleanliness (age and use should be visible).
+[SEEDANCE ROLE] @meikigo_interior master - used in shot 4b - controls the space and light only - do not use any people in it. World anchor: this interior is proof that the solution exists and works.
 ```
 
 **Location angle, off the master: @meikigo_interior counter.** Follows `references/asset-angle-sets.md`'s angle-prompt pattern: feed the master back, describe only what the new angle reveals.
@@ -300,28 +302,28 @@ Look: same LIGHT/CAMERA as the master — soft window daylight mixed with warm p
 
 ```
 [IMAGE TYPE] Isolated production asset
-[SUBJECT] One small square QR-code sticker, no accompanying text or branding.
-[DESIGN] Matte white vinyl sticker with a plain black-and-white QR pattern filling most of the square, a slightly curled corner, a little dust and one faint scuff across one edge, adhered at a very slightly crooked angle.
-[POSE] Adhered flat to a plain brick surface fragment, straight-on.
-[ENVIRONMENT] A small cropped section of aged red-brown brick wall matching @street's brick, just enough to show mortar lines around the sticker.
-[LIGHT] Matches @street's warm late-afternoon daylight, soft directional shadow from the sticker's slightly lifted corner.
-[CAMERA] Close, straight-on, 85mm lens, f/5.6, sharp on the sticker.
-[EXCLUSIONS] No text, no logos, no hands, no second sticker, no QR content that would resolve to a real URL — an abstract, nonfunctional pattern only.
-[SEEDANCE ROLE] @qr_sticker - used in shots 3b, 3c, 5c - controls the sticker's exact look and placement on brick only - do not use the wider street background.
+[SUBJECT] One small square QR-code sticker, no accompanying text or branding. This is the pivot point of the story — a small solution waiting to be found.
+[DESIGN] Matte white vinyl sticker with a plain black-and-white QR pattern filling most of the square, a slightly curled corner, a little dust and one faint scuff across one edge, adhered at a very slightly crooked angle. The sticker looks like it's been here for weeks, unnoticed, waiting. Not new, not worn out — just there. Mundane. Honest.
+[POSE] Adhered flat to a plain brick surface fragment, straight-on. The slight crookedness suggests it was placed by hand, not perfectly centered — human work.
+[ENVIRONMENT] A small cropped section of aged red-brown brick wall matching @street's brick, just enough to show mortar lines around the sticker. The brick's age and texture should make the sticker feel like it belongs, not like it's a foreign object.
+[LIGHT] Matches @street's warm late-afternoon daylight, soft directional shadow from the sticker's slightly lifted corner. The shadow makes the sticker readable as a physical object, not a 2D graphic.
+[CAMERA] Close, straight-on, 85mm lens, f/5.6, sharp on the sticker. Details like dust particles and the curled corner should be visible enough to feel real.
+[EXCLUSIONS] No text, no logos, no hands, no second sticker, no QR content that would resolve to a real URL — an abstract, nonfunctional pattern only. The sticker should feel like it could actually be on a brick wall anywhere.
+[SEEDANCE ROLE] @qr_sticker - used in shots 3b, 3c, 5c - controls the sticker's exact look and placement on brick only - do not use the wider street background. Product anchor: this sticker represents the invisible infrastructure that makes solutions possible.
 ```
 
 **Isolated production asset: @tablet.**
 
 ```
 [IMAGE TYPE] Isolated production asset
-[SUBJECT] One 10-inch tablet in a slim black rubberized case, screen on.
-[DESIGN] Squared corners, thin even bezels, a tiny camera dot on the top bezel, plain back with no logo. The screen is a perfectly flat, even, matte chroma-key green (#00B140) filling the display, no UI, no text, no glare, no reflections.
-[POSE] Standing upright on an invisible support, screen facing the camera, slightly angled toward the counter's expected viewing angle.
-[ENVIRONMENT] Pure white seamless studio background.
-[LIGHT] Neutral soft even wrap-around, 5600K, no colour cast.
-[CAMERA] Full front view, flat-on, 85mm lens, f/8, sharp commercial product photography.
-[EXCLUSIONS] No hands, no visible stand, no UI, no logos, no text, no second device.
-[SEEDANCE ROLE] @tablet - used in shot 4c - controls case shape and flat green screen only - do not use the background.
+[SUBJECT] One 10-inch tablet in a slim black rubberized case, screen on. This device is the final step of the solution — where commitment becomes payment.
+[DESIGN] Squared corners, thin even bezels, a tiny camera dot on the top bezel, plain back with no logo. The screen is a perfectly flat, even, matte chroma-key green (#00B140) filling the display, no UI, no text, no glare, no reflections. The green is a placeholder for the payment UI that will be composited in post — a neutral canvas, waiting to be filled.
+[POSE] Standing upright on an invisible support, screen facing the camera, slightly angled toward the counter's expected viewing angle. The angle suggests a moment of contact about to happen — ready, waiting, patient.
+[ENVIRONMENT] Pure white seamless studio background. The tablet is isolated and clean, nothing distracting — all focus on the device and the interaction it enables.
+[LIGHT] Neutral soft even wrap-around, 5600K, no colour cast. Light should reveal the tablet's materiality (the rubber case, the screen surface) without creating glare or reflections that would obscure the placeholder green.
+[CAMERA] Full front view, flat-on, 85mm lens, f/8, sharp commercial product photography. The device should feel solid and real, not glossy or magical.
+[EXCLUSIONS] No hands, no visible stand, no UI, no logos, no text, no second device, no reflections that might distract from the green placeholder.
+[SEEDANCE ROLE] @tablet - used in shot 4c - controls case shape and flat green screen only - do not use the background. Product anchor: this tablet is the instrument of completion — the moment the customer becomes in control of their own time.
 ```
 
 **@street angle set** (each fed off the master, per `references/asset-angle-sets.md`):
