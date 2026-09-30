@@ -26,6 +26,28 @@ When writing a `Location plate` asset prompt (see the `seedance-commercial-produ
 4. Add one row per real shot to `index.md` below.
 5. Get the analysis approved before anchoring any generation to it.
 
+## Motion design ads (kinetic typography / UI screen ads)
+
+Some reference ads are not live-action footage at all — they're screen-recorded UI walkthroughs and kinetic-typography spots (e.g. SaaS/product ads). These carry no camera, lighting, or physical location, so the live-action anchor fields above don't apply. They get a parallel workflow and are tracked separately in `motion-design-index.md`, not `index.md`.
+
+**Source files:** dropped in `reference-library/Motion Design/` with a `(MD)` suffix on the filename so they're identifiable at a glance (e.g. `Wise (MD).mp4`).
+
+**What a motion-design anchor contributes:**
+- **Typography** — typeface weight/size hierarchy, case, how text enters/exits (fade, slide, scale, typewriter, masked reveal).
+- **Animation & transition** — cut vs. crossfade vs. wipe vs. morph/shared-element, easing feel (linear, ease-out, spring/snap).
+- **Layout & composition** — placement, alignment, grid/margins, how much of the frame is used.
+- **Background & accent motifs** — background treatment (flat color, gradient, dark/light) and recurring graphic devices (dot-grid, waveform ticks, radial bursts, dashed lines).
+- **Pacing** — beat duration and rhythm (how much changes per second; where the spot slows down vs. rapid-fires).
+
+**What it does not contribute:** the source product's name, logo, wordmark, UI chrome branding, or on-screen copy. Describe UI chrome generically (e.g. "a floating input card with rounded corners") and never reuse the actual brand's product/marketing copy.
+
+**Workflow:**
+1. Copy the source video into `reference-library/<slug>/source.mp4` (same slug convention as live-action ads).
+2. Run `tools/shot_extractor.py` for a first pass, but treat its output as a rough sampling grid, not real shot boundaries — motion-design ads rarely have hard cuts, so the algorithmic splits are usually near-uniform fixed intervals. View the frames and manually re-derive the real **beats** (a beat = one distinct animation/typography state), collapsing or re-timing the algorithmic splits accordingly.
+3. Write `shots/shot_analysis.md` per beat, using the fields above instead of camera/location/lighting.
+4. Add an entry to `motion-design-index.md`.
+5. Get the analysis approved before anchoring any generation to it.
+
 ## Reference ads in this library
 
 | Slug | Source | Shots | Notes |

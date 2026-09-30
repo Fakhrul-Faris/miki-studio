@@ -1,0 +1,67 @@
+{
+  "video": "/Users/user/Private/miki-studio/reference-library/apple-card/source.mp4",
+  "duration": 6.006,
+  "scene_thresh": 0.15,
+  "shots": [
+    {
+      "shot": 1,
+      "start": 0.0,
+      "end": 0.968,
+      "duration": 0.968,
+      "frames": {
+        "start": {
+          "timestamp": 0.15,
+          "file": "shots/shot01_start_00-00-00_150.jpg"
+        },
+        "mid": {
+          "timestamp": 0.484,
+          "file": "shots/shot01_mid_00-00-00_484.jpg"
+        },
+        "end": {
+          "timestamp": 0.818,
+          "file": "shots/shot01_end_00-00-00_818.jpg"
+        }
+      }
+    },
+    {
+      "shot": 2,
+      "start": 0.968,
+      "end": 3.487,
+      "duration": 2.519,
+      "frames": {
+        "start": {
+          "timestamp": 1.118,
+          "file": "shots/shot02_start_00-00-01_118.jpg"
+        },
+        "mid": {
+          "timestamp": 2.228,
+          "file": "shots/shot02_mid_00-00-02_228.jpg"
+        },
+        "end": {
+          "timestamp": 3.337,
+          "file": "shots/shot02_end_00-00-03_337.jpg"
+        }
+      }
+    },
+    {
+      "shot": 3,
+      "start": 3.487,
+      "end": 6.006,
+      "duration": 2.519,
+      "frames": {
+        "start": {
+          "timestamp": 3.637,
+          "file": "shots/shot03_start_00-00-03_637.jpg"
+        },
+        "mid": {
+          "timestamp": 4.747,
+          "file": "shots/shot03_mid_00-00-04_747.jpg"
+        },
+        "end": {
+          "timestamp": 5.856,
+          "file": "shots/shot03_end_00-00-05_856.jpg"
+        }
+      }
+    }
+  ]
+}

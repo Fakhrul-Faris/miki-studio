@@ -1,0 +1,107 @@
+{
+  "video": "/Users/user/Private/miki-studio/reference-library/tap-to-cash/source.mp4",
+  "duration": 14.1,
+  "scene_thresh": 0.15,
+  "shots": [
+    {
+      "shot": 1,
+      "start": 0.0,
+      "end": 2.82,
+      "duration": 2.82,
+      "frames": {
+        "start": {
+          "timestamp": 0.15,
+          "file": "shots/shot01_start_00-00-00_150.jpg"
+        },
+        "mid": {
+          "timestamp": 1.41,
+          "file": "shots/shot01_mid_00-00-01_410.jpg"
+        },
+        "end": {
+          "timestamp": 2.67,
+          "file": "shots/shot01_end_00-00-02_670.jpg"
+        }
+      }
+    },
+    {
+      "shot": 2,
+      "start": 2.82,
+      "end": 5.64,
+      "duration": 2.82,
+      "frames": {
+        "start": {
+          "timestamp": 2.97,
+          "file": "shots/shot02_start_00-00-02_970.jpg"
+        },
+        "mid": {
+          "timestamp": 4.23,
+          "file": "shots/shot02_mid_00-00-04_230.jpg"
+        },
+        "end": {
+          "timestamp": 5.49,
+          "file": "shots/shot02_end_00-00-05_490.jpg"
+        }
+      }
+    },
+    {
+      "shot": 3,
+      "start": 5.64,
+      "end": 8.46,
+      "duration": 2.82,
+      "frames": {
+        "start": {
+          "timestamp": 5.79,
+          "file": "shots/shot03_start_00-00-05_790.jpg"
+        },
+        "mid": {
+          "timestamp": 7.05,
+          "file": "shots/shot03_mid_00-00-07_050.jpg"
+        },
+        "end": {
+          "timestamp": 8.31,
+          "file": "shots/shot03_end_00-00-08_310.jpg"
+        }
+      }
+    },
+    {
+      "shot": 4,
+      "start": 8.46,
+      "end": 11.28,
+      "duration": 2.82,
+      "frames": {
+        "start": {
+          "timestamp": 8.61,
+          "file": "shots/shot04_start_00-00-08_610.jpg"
+        },
+        "mid": {
+          "timestamp": 9.87,
+          "file": "shots/shot04_mid_00-00-09_870.jpg"
+        },
+        "end": {
+          "timestamp": 11.13,
+          "file": "shots/shot04_end_00-00-11_130.jpg"
+        }
+      }
+    },
+    {
+      "shot": 5,
+      "start": 11.28,
+      "end": 14.1,
+      "duration": 2.82,
+      "frames": {
+        "start": {
+          "timestamp": 11.43,
+          "file": "shots/shot05_start_00-00-11_430.jpg"
+        },
+        "mid": {
+          "timestamp": 12.69,
+          "file": "shots/shot05_mid_00-00-12_690.jpg"
+        },
+        "end": {
+          "timestamp": 13.95,
+          "file": "shots/shot05_end_00-00-13_950.jpg"
+        }
+      }
+    }
+  ]
+}

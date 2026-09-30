@@ -1,0 +1,351 @@
+{
+  "video": "/Users/user/Private/miki-studio/reference-library/the-deal/source.mp4",
+  "duration": 46.765011,
+  "scene_thresh": 0.15,
+  "shots": [
+    {
+      "shot": 1,
+      "start": 0.0,
+      "end": 3.716,
+      "duration": 3.716,
+      "frames": {
+        "start": {
+          "timestamp": 0.15,
+          "file": "shots/shot01_start_00-00-00_150.jpg"
+        },
+        "mid": {
+          "timestamp": 1.858,
+          "file": "shots/shot01_mid_00-00-01_858.jpg"
+        },
+        "end": {
+          "timestamp": 3.566,
+          "file": "shots/shot01_end_00-00-03_566.jpg"
+        }
+      }
+    },
+    {
+      "shot": 2,
+      "start": 3.716,
+      "end": 7.433,
+      "duration": 3.717,
+      "frames": {
+        "start": {
+          "timestamp": 3.866,
+          "file": "shots/shot02_start_00-00-03_866.jpg"
+        },
+        "mid": {
+          "timestamp": 5.575,
+          "file": "shots/shot02_mid_00-00-05_575.jpg"
+        },
+        "end": {
+          "timestamp": 7.283,
+          "file": "shots/shot02_end_00-00-07_283.jpg"
+        }
+      }
+    },
+    {
+      "shot": 3,
+      "start": 7.433,
+      "end": 10.428,
+      "duration": 2.995,
+      "frames": {
+        "start": {
+          "timestamp": 7.583,
+          "file": "shots/shot03_start_00-00-07_583.jpg"
+        },
+        "mid": {
+          "timestamp": 8.931,
+          "file": "shots/shot03_mid_00-00-08_931.jpg"
+        },
+        "end": {
+          "timestamp": 10.278,
+          "file": "shots/shot03_end_00-00-10_278.jpg"
+        }
+      }
+    },
+    {
+      "shot": 4,
+      "start": 10.428,
+      "end": 13.424,
+      "duration": 2.996,
+      "frames": {
+        "start": {
+          "timestamp": 10.578,
+          "file": "shots/shot04_start_00-00-10_578.jpg"
+        },
+        "mid": {
+          "timestamp": 11.926,
+          "file": "shots/shot04_mid_00-00-11_926.jpg"
+        },
+        "end": {
+          "timestamp": 13.274,
+          "file": "shots/shot04_end_00-00-13_274.jpg"
+        }
+      }
+    },
+    {
+      "shot": 5,
+      "start": 13.424,
+      "end": 16.419,
+      "duration": 2.995,
+      "frames": {
+        "start": {
+          "timestamp": 13.574,
+          "file": "shots/shot05_start_00-00-13_574.jpg"
+        },
+        "mid": {
+          "timestamp": 14.921,
+          "file": "shots/shot05_mid_00-00-14_921.jpg"
+        },
+        "end": {
+          "timestamp": 16.269,
+          "file": "shots/shot05_end_00-00-16_269.jpg"
+        }
+      }
+    },
+    {
+      "shot": 6,
+      "start": 16.419,
+      "end": 19.414,
+      "duration": 2.995,
+      "frames": {
+        "start": {
+          "timestamp": 16.569,
+          "file": "shots/shot06_start_00-00-16_569.jpg"
+        },
+        "mid": {
+          "timestamp": 17.916,
+          "file": "shots/shot06_mid_00-00-17_916.jpg"
+        },
+        "end": {
+          "timestamp": 19.264,
+          "file": "shots/shot06_end_00-00-19_264.jpg"
+        }
+      }
+    },
+    {
+      "shot": 7,
+      "start": 19.414,
+      "end": 22.409,
+      "duration": 2.995,
+      "frames": {
+        "start": {
+          "timestamp": 19.564,
+          "file": "shots/shot07_start_00-00-19_564.jpg"
+        },
+        "mid": {
+          "timestamp": 20.912,
+          "file": "shots/shot07_mid_00-00-20_912.jpg"
+        },
+        "end": {
+          "timestamp": 22.259,
+          "file": "shots/shot07_end_00-00-22_259.jpg"
+        }
+      }
+    },
+    {
+      "shot": 8,
+      "start": 22.409,
+      "end": 25.405,
+      "duration": 2.996,
+      "frames": {
+        "start": {
+          "timestamp": 22.559,
+          "file": "shots/shot08_start_00-00-22_559.jpg"
+        },
+        "mid": {
+          "timestamp": 23.907,
+          "file": "shots/shot08_mid_00-00-23_907.jpg"
+        },
+        "end": {
+          "timestamp": 25.255,
+          "file": "shots/shot08_end_00-00-25_255.jpg"
+        }
+      }
+    },
+    {
+      "shot": 9,
+      "start": 25.405,
+      "end": 28.4,
+      "duration": 2.995,
+      "frames": {
+        "start": {
+          "timestamp": 25.555,
+          "file": "shots/shot09_start_00-00-25_555.jpg"
+        },
+        "mid": {
+          "timestamp": 26.902,
+          "file": "shots/shot09_mid_00-00-26_902.jpg"
+        },
+        "end": {
+          "timestamp": 28.25,
+          "file": "shots/shot09_end_00-00-28_250.jpg"
+        }
+      }
+    },
+    {
+      "shot": 10,
+      "start": 28.4,
+      "end": 28.433,
+      "duration": 0.033,
+      "frames": {
+        "mid": {
+          "timestamp": 28.416,
+          "file": "shots/shot10_mid_00-00-28_416.jpg"
+        }
+      }
+    },
+    {
+      "shot": 11,
+      "start": 28.433,
+      "end": 28.467,
+      "duration": 0.034,
+      "frames": {
+        "mid": {
+          "timestamp": 28.45,
+          "file": "shots/shot11_mid_00-00-28_450.jpg"
+        }
+      }
+    },
+    {
+      "shot": 12,
+      "start": 28.467,
+      "end": 30.767,
+      "duration": 2.3,
+      "frames": {
+        "start": {
+          "timestamp": 28.617,
+          "file": "shots/shot12_start_00-00-28_617.jpg"
+        },
+        "mid": {
+          "timestamp": 29.617,
+          "file": "shots/shot12_mid_00-00-29_617.jpg"
+        },
+        "end": {
+          "timestamp": 30.617,
+          "file": "shots/shot12_end_00-00-30_617.jpg"
+        }
+      }
+    },
+    {
+      "shot": 13,
+      "start": 30.767,
+      "end": 33.067,
+      "duration": 2.3,
+      "frames": {
+        "start": {
+          "timestamp": 30.917,
+          "file": "shots/shot13_start_00-00-30_917.jpg"
+        },
+        "mid": {
+          "timestamp": 31.917,
+          "file": "shots/shot13_mid_00-00-31_917.jpg"
+        },
+        "end": {
+          "timestamp": 32.917,
+          "file": "shots/shot13_end_00-00-32_917.jpg"
+        }
+      }
+    },
+    {
+      "shot": 14,
+      "start": 33.067,
+      "end": 35.807,
+      "duration": 2.74,
+      "frames": {
+        "start": {
+          "timestamp": 33.217,
+          "file": "shots/shot14_start_00-00-33_217.jpg"
+        },
+        "mid": {
+          "timestamp": 34.437,
+          "file": "shots/shot14_mid_00-00-34_437.jpg"
+        },
+        "end": {
+          "timestamp": 35.657,
+          "file": "shots/shot14_end_00-00-35_657.jpg"
+        }
+      }
+    },
+    {
+      "shot": 15,
+      "start": 35.807,
+      "end": 38.546,
+      "duration": 2.739,
+      "frames": {
+        "start": {
+          "timestamp": 35.957,
+          "file": "shots/shot15_start_00-00-35_957.jpg"
+        },
+        "mid": {
+          "timestamp": 37.177,
+          "file": "shots/shot15_mid_00-00-37_177.jpg"
+        },
+        "end": {
+          "timestamp": 38.396,
+          "file": "shots/shot15_end_00-00-38_396.jpg"
+        }
+      }
+    },
+    {
+      "shot": 16,
+      "start": 38.546,
+      "end": 41.286,
+      "duration": 2.74,
+      "frames": {
+        "start": {
+          "timestamp": 38.696,
+          "file": "shots/shot16_start_00-00-38_696.jpg"
+        },
+        "mid": {
+          "timestamp": 39.916,
+          "file": "shots/shot16_mid_00-00-39_916.jpg"
+        },
+        "end": {
+          "timestamp": 41.136,
+          "file": "shots/shot16_end_00-00-41_136.jpg"
+        }
+      }
+    },
+    {
+      "shot": 17,
+      "start": 41.286,
+      "end": 44.025,
+      "duration": 2.739,
+      "frames": {
+        "start": {
+          "timestamp": 41.436,
+          "file": "shots/shot17_start_00-00-41_436.jpg"
+        },
+        "mid": {
+          "timestamp": 42.656,
+          "file": "shots/shot17_mid_00-00-42_656.jpg"
+        },
+        "end": {
+          "timestamp": 43.875,
+          "file": "shots/shot17_end_00-00-43_875.jpg"
+        }
+      }
+    },
+    {
+      "shot": 18,
+      "start": 44.025,
+      "end": 46.765,
+      "duration": 2.74,
+      "frames": {
+        "start": {
+          "timestamp": 44.175,
+          "file": "shots/shot18_start_00-00-44_175.jpg"
+        },
+        "mid": {
+          "timestamp": 45.395,
+          "file": "shots/shot18_mid_00-00-45_395.jpg"
+        },
+        "end": {
+          "timestamp": 46.615,
+          "file": "shots/shot18_end_00-00-46_615.jpg"
+        }
+      }
+    }
+  ]
+}

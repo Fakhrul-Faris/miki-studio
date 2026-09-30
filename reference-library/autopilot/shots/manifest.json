@@ -1,0 +1,67 @@
+{
+  "video": "/Users/user/Private/miki-studio/reference-library/autopilot/source.mp4",
+  "duration": 9.216009,
+  "scene_thresh": 0.15,
+  "shots": [
+    {
+      "shot": 1,
+      "start": 0.0,
+      "end": 3.072,
+      "duration": 3.072,
+      "frames": {
+        "start": {
+          "timestamp": 0.15,
+          "file": "shots/shot01_start_00-00-00_150.jpg"
+        },
+        "mid": {
+          "timestamp": 1.536,
+          "file": "shots/shot01_mid_00-00-01_536.jpg"
+        },
+        "end": {
+          "timestamp": 2.922,
+          "file": "shots/shot01_end_00-00-02_922.jpg"
+        }
+      }
+    },
+    {
+      "shot": 2,
+      "start": 3.072,
+      "end": 6.144,
+      "duration": 3.072,
+      "frames": {
+        "start": {
+          "timestamp": 3.222,
+          "file": "shots/shot02_start_00-00-03_222.jpg"
+        },
+        "mid": {
+          "timestamp": 4.608,
+          "file": "shots/shot02_mid_00-00-04_608.jpg"
+        },
+        "end": {
+          "timestamp": 5.994,
+          "file": "shots/shot02_end_00-00-05_994.jpg"
+        }
+      }
+    },
+    {
+      "shot": 3,
+      "start": 6.144,
+      "end": 9.216,
+      "duration": 3.072,
+      "frames": {
+        "start": {
+          "timestamp": 6.294,
+          "file": "shots/shot03_start_00-00-06_294.jpg"
+        },
+        "mid": {
+          "timestamp": 7.68,
+          "file": "shots/shot03_mid_00-00-07_680.jpg"
+        },
+        "end": {
+          "timestamp": 9.066,
+          "file": "shots/shot03_end_00-00-09_066.jpg"
+        }
+      }
+    }
+  ]
+}
