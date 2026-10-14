@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MKG-04 — Meikigo ad (build-in-progress)</title>
+<style>
+  :root { color-scheme: dark; }
+  html, body {
+    margin: 0; padding: 0; height: 100%;
+    background: #1b1c1e; color: #e8e8ea;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  body { display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 18px; box-sizing: border-box; }
+  #stageWrap {
+    flex: 1 1 auto; min-height: 0; display: flex; align-items: center; justify-content: center; width: 100%;
+  }
+  #stage {
+    height: 100%; max-height: 82vh; width: auto; max-width: 100%;
+    background: #000; box-shadow: 0 10px 40px rgba(0,0,0,.5);
+    border-radius: 4px;
+  }
+  #bar {
+    width: 100%; max-width: 760px;
+    display: flex; align-items: center; gap: 12px;
+    background: #27282b; border-radius: 12px; padding: 10px 16px;
+    box-sizing: border-box;
+  }
+  button {
+    background: #3a3b3f; color: #fff; border: none; border-radius: 8px;
+    padding: 8px 14px; font-size: 14px; cursor: pointer; font-weight: 600;
+  }
+  button:hover { background: #47484d; }
+  button.active { background: #4f8cff; }
+  input[type=range] { flex: 1 1 auto; accent-color: #4f8cff; }
+  #time { font-variant-numeric: tabular-nums; font-size: 13px; color: #a9abb1; min-width: 92px; text-align: right; }
+  #meta { font-size: 12px; color: #86888f; max-width: 760px; text-align: center; line-height: 1.5; }
+  code { color: #c7d4ff; }
+</style>
+</head>
+<body>
+
+<div id="stageWrap">
+  <canvas id="stage" width="1080" height="1920"></canvas>
+</div>
+
+<div id="bar">
+  <button id="playBtn">▶ Play</button>
+  <button id="restartBtn">⟲ Restart</button>
+  <input id="scrub" type="range" min="0" max="2700" step="1" value="0">
+  <span id="time">0.00s / 2.70s</span>
+  <button id="muteBtn">🔊</button>
+</div>
+
+<div id="meta">
+  Part 1, beat 1a — Hook (0.0–2.8s). Helvetica throughout. A live-counting UI chip
+  (Pulse's own device) appears after the headline, then its own scale-up is the
+  "camera push" into the next beat — no virtual camera, the element does the zoom.
+</div>
+
+<script>
+"use strict";
+
+/* ============================== CONFIG ============================== */
+
+const WIDTH = 1080, HEIGHT = 1920;
+const BEAT_1A_DURATION = 2.7; // seconds — this chunk only
+const FONT = `"Helvetica Neue", Helvetica, Arial, sans-serif`;
+
+const COLORS = {
+  bg: "#000000",
+  textWhite: [245, 245, 247],
+  textDim: [120, 122, 128],
+  accent: "#0E9F7E",      // placeholder Meikigo teal-green, per the UI spec
+  accentFlood: "#0B8468", // slightly darker for the flooded full-frame state
+  chipLabel: "rgba(255,255,255,0.86)",
+};
+
+/* ============================== EASING ============================== */
+
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const lerp = (a, b, t) => a + (b - a) * t;
+const easeOutCubic = (x) => 1 - Math.pow(1 - x, 3);
+const easeInCubic = (x) => x * x * x;
+function easeOutBack(x) {
+  const c1 = 1.70158, c3 = c1 + 1;
+  return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2);
+}
+
+/* ======================= BEAT 1a — CONTENT DATA ======================= */
+
+// Script line 1: "Your barber is great. Your queue is not." Two short
+// statements, Pulse-fast cadence (~0.08s/word — words land almost on top
+// of each other, like Pulse's own hook). Line 1 stays a muted aside
+// (never goes fully bright); line 2 is the real point, full white.
+const CAPTION_LINES = [
+  {
+    muted: true,
+    words: [
+      { text: "Your", at: 0.00 },
+      { text: "barber", at: 0.09 },
+      { text: "is", at: 0.18 },
+      { text: "great.", at: 0.25 },
+    ],
+  },
+  {
+    muted: false,
+    words: [
+      { text: "Your", at: 0.34 },
+      { text: "queue", at: 0.42 },
+      { text: "is", at: 0.51 },
+      { text: "not.", at: 0.58 },
+    ],
+  },
+];
+const CAPTION_WORD_IN = 0.14;     // seconds per word — fast snap, not a slow fade
+const CAPTION_SLIDE_FROM = 46;    // px: word slides in from the right, Pulse-style
+const CAPTION_FONT_SIZE = 76;
+const CAPTION_LINE_HEIGHT = 96;
+const CAPTION_CENTER_Y = 840;
+
+// The UI chip — Pulse's own device: a small live-counting badge, not a
+// decorative card. Tied to the word "queue" so the number is motivated by
+// the line, not bolted on. Appears once the line lands, counts up fast,
+// holds, then its own scale-up becomes the transition into beat 1b (the
+// chat list) — the "camera push" is the chip growing, not a camera.
+const CHIP = {
+  appearAt: 0.72,
+  popDur: 0.16,
+  countFrom: 0,
+  countTo: 12,
+  countStart: 0.80,
+  countEnd: 1.05,
+  label: "waiting right now",
+  expandStart: 1.85,
+  expandEnd: 2.70,
+  y: 1060,
+  h: 108,
+  padX: 36,
+  gap: 16,
+};
+const CHIP_EXPAND_SCALE = 42; // large enough that the pill's corners vanish off-frame
+
+/* ============================== DRAWING ============================== */
+
+function drawCaption(ctx, t) {
+  // both lines fade out together once the chip starts its push, so the
+  // flooding colour doesn't fight with leftover text
+  const chipTakeover = clamp((t - CHIP.expandStart) / 0.3, 0, 1);
+  const globalFade = 1 - chipTakeover;
+  if (globalFade <= 0) return;
+
+  ctx.font = `700 ${CAPTION_FONT_SIZE}px ${FONT}`;
+  ctx.textBaseline = "alphabetic";
+
+  const startY = CAPTION_CENTER_Y - ((CAPTION_LINES.length - 1) * CAPTION_LINE_HEIGHT) / 2;
+  const WORD_GAP = 22;
+
+  CAPTION_LINES.forEach((line, li) => {
+    const [r, g, b] = line.muted ? COLORS.textDim : COLORS.textWhite;
+    const widths = line.words.map(w => ctx.measureText(w.text).width);
+    const totalWidth = widths.reduce((a, w) => a + w, 0) + WORD_GAP * (line.words.length - 1);
+    let x = (WIDTH - totalWidth) / 2;
+    const y = startY + li * CAPTION_LINE_HEIGHT;
+
+    line.words.forEach((word, wi) => {
+      const p = clamp((t - word.at) / CAPTION_WORD_IN, 0, 1);
+      if (p > 0) {
+        // Pulse-style entrance: the word slides in from the right and
+        // settles into its final (left-to-right reading order) slot —
+        // motion direction is leftward, not upward.
+        const eased = easeOutCubic(p);
+        const slideX = (1 - eased) * CAPTION_SLIDE_FROM;
+        ctx.save();
+        ctx.globalAlpha = eased * globalFade;
+        ctx.fillStyle = `rgb(${r},${g},${b})`;
+        ctx.fillText(word.text, x + slideX, y);
+        ctx.restore();
+      }
+      x += widths[wi] + WORD_GAP;
+    });
+  });
+}
+
+function roundRectPath(ctx, w, h, r) {
+  const x = -w / 2, y = -h / 2;
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.arcTo(x + w, y, x + w, y + h, r);
+  ctx.arcTo(x + w, y + h, x, y + h, r);
+  ctx.arcTo(x, y + h, x, y, r);
+  ctx.arcTo(x, y, x + w, y, r);
+  ctx.closePath();
+}
+
+function drawChip(ctx, t) {
+  const popP = clamp((t - CHIP.appearAt) / CHIP.popDur, 0, 1);
+  if (popP <= 0) return;
+
+  // live count-up, eased so it decelerates into its final number like Pulse's badge
+  const countP = clamp((t - CHIP.countStart) / (CHIP.countEnd - CHIP.countStart), 0, 1);
+  const count = Math.round(lerp(CHIP.countFrom, CHIP.countTo, easeOutCubic(countP)));
+
+  // measure content to size the pill to its text, not a fixed guess
+  const numberFont = `700 52px ${FONT}`;
+  const labelFont = `500 30px ${FONT}`;
+  ctx.font = numberFont;
+  const numberText = String(count);
+  const numberWidth = ctx.measureText(numberText).width;
+  ctx.font = labelFont;
+  const labelWidth = ctx.measureText(CHIP.label).width;
+
+  const contentWidth = numberWidth + CHIP.gap + labelWidth;
+  const w = contentWidth + CHIP.padX * 2;
+  const h = CHIP.h;
+  const r = h / 2;
+
+  // scale: pop-in (easeOutBack, small overshoot) -> hold at 1 -> expand (easeInCubic, the "push")
+  let scale;
+  if (t < CHIP.expandStart) {
+    scale = easeOutBack(popP);
+  } else {
+    const expandP = clamp((t - CHIP.expandStart) / (CHIP.expandEnd - CHIP.expandStart), 0, 1);
+    scale = lerp(1, CHIP_EXPAND_SCALE, easeInCubic(expandP));
+  }
+
+  const expandP = clamp((t - CHIP.expandStart) / (CHIP.expandEnd - CHIP.expandStart), 0, 1);
+  const fillColor = t >= CHIP.expandStart
+    ? lerpColor(COLORS.accent, COLORS.accentFlood, expandP)
+    : COLORS.accent;
+
+  // as the chip blows up past a few x scale, fade out its inner text fast
+  // (it would otherwise read as giant illegible letters mid-transition)
+  const textFade = t >= CHIP.expandStart
+    ? clamp(1 - expandP / 0.22, 0, 1)
+    : 1;
+
+  ctx.save();
+  ctx.translate(WIDTH / 2, CHIP.y);
+  ctx.scale(scale, scale);
+  ctx.globalAlpha = clamp(popP * 3, 0, 1);
+
+  ctx.fillStyle = fillColor;
+  roundRectPath(ctx, w, h, r);
+  ctx.fill();
+
+  if (textFade > 0) {
+    ctx.globalAlpha = clamp(popP * 3, 0, 1) * textFade;
+    ctx.textBaseline = "middle";
+    let cx = -contentWidth / 2;
+
+    ctx.textAlign = "left";
+    ctx.font = numberFont;
+    ctx.fillStyle = "#FFFFFF";
+    ctx.fillText(numberText, cx, 2);
+    cx += numberWidth + CHIP.gap;
+
+    ctx.font = labelFont;
+    ctx.fillStyle = COLORS.chipLabel;
+    ctx.fillText(CHIP.label, cx, 4);
+  }
+
+  ctx.restore();
+}
+
+function lerpColor(hexA, hexB, t) {
+  const a = hexToRgb(hexA), b = hexToRgb(hexB);
+  const r = Math.round(lerp(a[0], b[0], t));
+  const g = Math.round(lerp(a[1], b[1], t));
+  const bch = Math.round(lerp(a[2], b[2], t));
+  return `rgb(${r},${g},${bch})`;
+}
+function hexToRgb(hex) {
+  const v = hex.replace("#", "");
+  return [parseInt(v.slice(0, 2), 16), parseInt(v.slice(2, 4), 16), parseInt(v.slice(4, 6), 16)];
+}
+
+function drawBeat_1a(ctx, t) {
+  ctx.clearRect(0, 0, WIDTH, HEIGHT);
+  ctx.fillStyle = COLORS.bg;
+  ctx.fillRect(0, 0, WIDTH, HEIGHT);
+  drawCaption(ctx, t);
+  drawChip(ctx, t);
+}
+
+/* ============================== AUDIO ============================== */
+
+let audioCtx = null;
+let masterGain = null;
+let activeNodes = [];
+let muted = false;
+
+function ensureAudio() {
+  if (!audioCtx) {
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    masterGain = audioCtx.createGain();
+    masterGain.gain.value = muted ? 0 : 1;
+    masterGain.connect(audioCtx.destination);
+  }
+  return audioCtx;
+}
+
+function stopAllAudio() {
+  activeNodes.forEach(n => { try { n.stop && n.stop(); } catch (e) {} try { n.disconnect(); } catch (e) {} });
+  activeNodes = [];
+}
+
+function scheduleWordTick(ctx, when, pitch) {
+  const dur = 0.05;
+  const osc = ctx.createOscillator();
+  osc.type = "sine";
+  osc.frequency.value = 520 * pitch;
+  const gain = ctx.createGain();
+  gain.gain.setValueAtTime(0, when);
+  gain.gain.linearRampToValueAtTime(0.035, when + 0.006);
+  gain.gain.exponentialRampToValueAtTime(0.0008, when + dur);
+  osc.connect(gain).connect(masterGain);
+  osc.start(when);
+  osc.stop(when + dur + 0.02);
+  activeNodes.push(osc);
+}
+
+// quick rising chip-pop
+function scheduleChipPop(ctx, when) {
+  const osc = ctx.createOscillator();
+  osc.type = "triangle";
+  osc.frequency.setValueAtTime(380, when);
+  osc.frequency.exponentialRampToValueAtTime(760, when + 0.09);
+  const gain = ctx.createGain();
+  gain.gain.setValueAtTime(0.05, when);
+  gain.gain.exponentialRampToValueAtTime(0.0008, when + 0.12);
+  osc.connect(gain).connect(masterGain);
+  osc.start(when);
+  osc.stop(when + 0.14);
+  activeNodes.push(osc);
+}
+
+// rapid soft ticks while the counter counts up
+function scheduleCounterTicks(ctx, base, fromT) {
+  const steps = 7;
+  for (let i = 1; i <= steps; i++) {
+    const at = CHIP.countStart + (CHIP.countEnd - CHIP.countStart) * (i / steps);
+    if (at >= fromT) {
+      const when = base + (at - fromT);
+      const osc = ctx.createOscillator();
+      osc.type = "square";
+      osc.frequency.value = 900 + i * 18;
+      const gain = ctx.createGain();
+      gain.gain.setValueAtTime(0.012, when);
+      gain.gain.exponentialRampToValueAtTime(0.0006, when + 0.03);
+      osc.connect(gain).connect(masterGain);
+      osc.start(when);
+      osc.stop(when + 0.04);
+      activeNodes.push(osc);
+    }
+  }
+}
+
+// rising whoosh under the chip's expand-push
+function scheduleExpandWhoosh(ctx, when, duration) {
+  const bufferSize = Math.floor(ctx.sampleRate * duration);
+  const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+  const data = buffer.getChannelData(0);
+  for (let i = 0; i < bufferSize; i++) data[i] = Math.random() * 2 - 1;
+
+  const src = ctx.createBufferSource();
+  src.buffer = buffer;
+
+  const bp = ctx.createBiquadFilter();
+  bp.type = "bandpass";
+  bp.Q.value = 0.8;
+  bp.frequency.setValueAtTime(300, when);
+  bp.frequency.exponentialRampToValueAtTime(3200, when + duration);
+
+  const gain = ctx.createGain();
+  gain.gain.setValueAtTime(0.0001, when);
+  gain.gain.exponentialRampToValueAtTime(0.09, when + duration * 0.7);
+  gain.gain.exponentialRampToValueAtTime(0.0001, when + duration);
+
+  src.connect(bp).connect(gain).connect(masterGain);
+  src.start(when);
+  src.stop(when + duration + 0.05);
+  activeNodes.push(src);
+}
+
+function scheduleLowPad(ctx, when, duration) {
+  const freqs = [55, 82.5];
+  const padGain = ctx.createGain();
+  padGain.gain.setValueAtTime(0, when);
+  padGain.gain.linearRampToValueAtTime(0.06, when + 1.0);
+  padGain.gain.setValueAtTime(0.06, when + Math.max(0.2, duration - 0.5));
+  padGain.gain.linearRampToValueAtTime(0, when + duration);
+
+  const lp = ctx.createBiquadFilter();
+  lp.type = "lowpass";
+  lp.frequency.value = 420;
+  padGain.connect(lp).connect(masterGain);
+
+  freqs.forEach((f, i) => {
+    const osc = ctx.createOscillator();
+    osc.type = i === 0 ? "sine" : "triangle";
+    osc.frequency.value = f;
+    osc.connect(padGain);
+    osc.start(when);
+    osc.stop(when + duration + 0.05);
+    activeNodes.push(osc);
+  });
+}
+
+const ALL_WORDS = CAPTION_LINES.flatMap(line => line.words);
+
+function scheduleAudio_1a(ctx, base, fromT) {
+  const padDur = BEAT_1A_DURATION;
+  if (padDur > fromT) scheduleLowPad(ctx, base, padDur - fromT);
+
+  ALL_WORDS.forEach((w, i) => {
+    if (w.at >= fromT) scheduleWordTick(ctx, base + (w.at - fromT), 1 + i * 0.05);
+  });
+
+  if (CHIP.appearAt >= fromT) scheduleChipPop(ctx, base + (CHIP.appearAt - fromT));
+  scheduleCounterTicks(ctx, base, fromT);
+  if (CHIP.expandStart >= fromT) {
+    scheduleExpandWhoosh(ctx, base + (CHIP.expandStart - fromT), CHIP.expandEnd - CHIP.expandStart);
+  }
+}
+
+/* ============================== PLAYBACK ============================== */
+
+const canvas = document.getElementById("stage");
+const ctx = canvas.getContext("2d");
+const playBtn = document.getElementById("playBtn");
+const restartBtn = document.getElementById("restartBtn");
+const scrub = document.getElementById("scrub");
+const timeLabel = document.getElementById("time");
+const muteBtn = document.getElementById("muteBtn");
+
+let t = 0;
+let playing = false;
+let lastNow = 0;
+
+function render() {
+  drawBeat_1a(ctx, t);
+  scrub.value = Math.round(t * 1000);
+  timeLabel.textContent = `${t.toFixed(2)}s / ${BEAT_1A_DURATION.toFixed(2)}s`;
+}
+
+function tick(now) {
+  if (!playing) return;
+  const dt = (now - lastNow) / 1000;
+  lastNow = now;
+  t = clamp(t + dt, 0, BEAT_1A_DURATION);
+  render();
+  if (t >= BEAT_1A_DURATION) {
+    playing = false;
+    playBtn.textContent = "▶ Play";
+    return;
+  }
+  requestAnimationFrame(tick);
+}
+
+function play() {
+  const ctxA = ensureAudio();
+  if (ctxA.state === "suspended") ctxA.resume();
+  stopAllAudio();
+  scheduleAudio_1a(ctxA, ctxA.currentTime, t);
+  playing = true;
+  playBtn.textContent = "⏸ Pause";
+  lastNow = performance.now();
+  requestAnimationFrame(tick);
+}
+
+function pause() {
+  playing = false;
+  playBtn.textContent = "▶ Play";
+  stopAllAudio();
+}
+
+playBtn.addEventListener("click", () => { playing ? pause() : play(); });
+restartBtn.addEventListener("click", () => {
+  pause();
+  t = 0;
+  render();
+});
+scrub.addEventListener("input", () => {
+  pause();
+  t = clamp(Number(scrub.value) / 1000, 0, BEAT_1A_DURATION);
+  render();
+});
+muteBtn.addEventListener("click", () => {
+  muted = !muted;
+  muteBtn.textContent = muted ? "🔇" : "🔊";
+  if (masterGain) masterGain.gain.value = muted ? 0 : 1;
+});
+
+render();
+</script>
+</body>
+</html>

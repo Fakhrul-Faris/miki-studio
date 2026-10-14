@@ -142,4 +142,22 @@ One row per real beat (not per algorithmic sub-split, per each ad's own `shots/s
 | shapes | 9 | Big stat numbers | Cards slide in; numbers count | Cream/blue | ~8s | Proof | `shapes/shots/*` frames 48–56s |
 | shapes | 10 | Wordmark | Shape zoom, hard cut to static wordmark | White then black | ~11s | Sign-off | `shapes/shots/*` frames 56–67s |
 
+| pulse | 1 | Huge centered word-by-word build + live count-up badge | Word steps + number ticks up, pill morphs out | Pure black | ~2.7s | Hook: a specific result stated as already true | `pulse/shots/shot01_*` |
+| pulse | 2 | "Organic Content" scramble-in headline, upper-left | Real photo + floating UI notification cards, shrinks out | Warm photo, green grade | ~2.7s | Names the source, proves it with "live" UI | `pulse/shots/shot02_*` |
+| pulse | 3 | Word-by-word typed sentence, blinking cursor bar | Typewriter build, green pill payoff, quick-cut out | Pure black | ~2.7s | The turn: undercuts the easy win | `pulse/shots/shot03_*` |
+| pulse | 4 | Green pill caption inside an embedded video | Tall 9:16 "video in video," flash-cut swaps caption | Black letterbox, naturalistic inside | ~2.7s | Dramatizes the problem concretely | `pulse/shots/shot04_*` |
+| pulse | 5 | Two words build letter-by-letter with blur/glow | Pulse-ring graphic contracts into the logo dot, hard cut out | Pure black, green glow | ~2.4s | Mid-roll brand sting ("Meet Pulse"), fast | `pulse/shots/shot04_*`-`shot05_*` |
+| pulse | 6 | Short caption, one word in a pill | Dashboard's own revenue number ticks up live beside it | White dashboard, green accent | ~3s | Product reveal 1, proof moves with the pitch | `pulse/shots/shot05_*`-`shot06_*` |
+| pulse | 7 | Word-by-word phrase, left-aligned | Ranked content list scrolls, into per-channel sparkline cards | White, native platform colors | ~3s | Grounds the claim at the content level | `pulse/shots/shot06_*`-`shot07_*` |
+| pulse | 8 | Phrase bookends both edges; then logo substituted as the final word | Channel cards stack center; wordmark slides in to complete a sentence | White, native colors; black-on-white | ~3s | Attribution proof, then a logo pun mid-piece | `pulse/shots/shot07_*`-`shot08_*` |
+| pulse | 9 | Two short centered sentences back to back | Funnel diagram, then dashboard ticking again | White, dot-grid canvas | ~3s | Confident close to one feature, readies the pivot | `pulse/shots/shot08_*`-`shot09_*` |
+| pulse | 10 | Word-by-word sentence (not a lone word), black on white | Settles alone, hard cut both sides | Pure white | ~3s | Punch beat: an imperative, not a rest beat | `pulse/shots/shot09_*`-`shot10_*` |
+| pulse | 11 | Long two-clause sentence, word-by-word | Sidebar nav highlights in sync with the keyword; list gets a glow outline | White, glow highlight | ~3s | UI state changes locked to the exact word | `pulse/shots/shot10_*`-`shot11_*` |
+| pulse | 12 | Two-line phrase, word-by-word | Nav switches page mid-sentence; per-channel cards stack | White, native colors | ~3s | Channel-level version of "double down" | `pulse/shots/shot11_*`-`shot12_*` |
+| pulse | 13 | Short pill caption | CRM table's own lead count/revenue ticks up live; toast notification | White, toast elevation | ~3s | Live/automatic tracking, proven in real time | `pulse/shots/shot12_*`-`shot13_*` |
+| pulse | 14 | None | Named-row table, cursor clicks through, contact timeline modal opens | White | ~3s | Pure UI demo before the biggest line | `pulse/shots/shot13_*`-`shot14_*` |
+| pulse | 15 | Longest sentence in the piece, 11-word build | Same timeline modal holds under a green vignette wash | White, green corner-glow | ~3s | Emotional peak: full journey to a sale | `pulse/shots/shot14_*`-`shot15_*` |
+| pulse | 16 | None (chips carry their own numerals) | Metric chip-chain pans, numbers tick up, chain merges into the logo | Black, bright-green chips | ~3s | Funnel summary; data becomes the brand mark | `pulse/shots/shot15_*`-`shot16_*` |
+| pulse | 17 | Pivot question; agency dashboard; wordmark+tagline; CTA, all word-by-word | White pivot card -> workspace modal + notifications -> rings into logo -> CTA fade | White; black with green glow | ~5.5s | Qualify, prove at scale, close on brand + CTA | `pulse/shots/shot16_*`-`shot18_*` |
+
 Full per-beat writeups (background/motif detail, cross-beat notes) live in each ad's own `shots/shot_analysis.md`.

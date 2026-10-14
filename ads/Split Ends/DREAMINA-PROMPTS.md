@@ -129,6 +129,8 @@ This segment is a probe for the entire production. Validate:
 
 ---
 
+
+
 ## Why Camera Movement Matters Here
 
 **Static + Magic = Feels flat**
@@ -138,11 +140,14 @@ If the camera never moves and magic happens, it reads as passive observation.
 Subtle push-in during tension → pull-back during release = The camera is *feeling* the moment with Shawn.
 
 **Technical benefit:**
+
 - Push-in tightens focus on face (where the tension is)
 - Pull-back gives room for the hair growth to be readable (space to expand into)
 - Motion emphasizes the emotional turning point without calling attention to itself
 
 ---
+
+
 
 ## Timing Breakdown (For Reference)
 
@@ -164,6 +169,8 @@ Key moments:
 
 ---
 
+
+
 ## Ready for Dreamina
 
 Copy the entire **[Complete Dreamina I2V Prompt]** section above (from [Route] to [Post-Production Notes]) and paste into Dreamina.
@@ -171,11 +178,14 @@ Copy the entire **[Complete Dreamina I2V Prompt]** section above (from [Route] t
 Upload the two keyframes, set duration to 3s, and generate.
 
 This is the probe segment. If this works well, apply the same camera-breathing principle to S2-S7.
+
 # SEGMENTS 2–7 (Complete with Camera Movement)
 
 All segments formatted with camera direction for Dreamina I2V generation.
 
 ---
+
+
 
 ## SEGMENT 2 (S2) — Two Doorstep Rejections
 
@@ -188,6 +198,8 @@ Keyframe 1: MKG-02-S2-KF-2A-START.png
 Keyframe 2: MKG-02-S2-KF-2A-END.png
 Keyframe 3: MKG-02-S2-KF-2B-SINGLE.png
 ```
+
+
 
 ### Dreamina Prompt
 
@@ -277,6 +289,8 @@ Quality: High | Format: MP4
 
 ---
 
+
+
 ## SEGMENT 3 (S3) — The Discovery: QR Sticker
 
 **Duration:** 8s | **Keyframes:** 3 | **Camera:** Breathing push-in on discovery, pull-out as phone raises
@@ -288,6 +302,8 @@ Keyframe 1: MKG-02-S3-KF-3A-SINGLE.png
 Keyframe 2: MKG-02-S3-KF-3B-SINGLE.png
 Keyframe 3: MKG-02-S3-KF-3C-SINGLE.png
 ```
+
+
 
 ### Dreamina Prompt
 
@@ -365,6 +381,8 @@ Quality: High | Format: MP4
 
 ---
 
+
+
 ## SEGMENT 4 (S4) — Product Shot 1: Booking Interface
 
 **Duration:** 2s | **Keyframes:** 2 | **Camera:** Subtle push-in on screen illuminate
@@ -375,6 +393,8 @@ Quality: High | Format: MP4
 Keyframe 1: MKG-02-S4-KF-4A-START.png
 Keyframe 2: MKG-02-S4-KF-4A-END.png
 ```
+
+
 
 ### Dreamina Prompt
 
@@ -393,7 +413,7 @@ screen begins to illuminate — a subtle glow starting from the edges of the scr
 The camera subtly pushes in (very shallow push, maybe 5%) as the screen lights up, emphasizing the 
 moment of activation.
 
-Cool blue-green glow casts on his hand and face. His eyes widen fractionally, recognition of success. 
+Cool white-green glow casts on his hand and face. His eyes widen fractionally, recognition of success. 
 The booking interface is visible (UI to be composited in post — just the placeholder glow for now). 
 By 0:02, the screen is fully lit, the push-in is complete, and the camera holds on the moment of 
 success. Frame is static by end state.
@@ -438,6 +458,8 @@ Quality: High | Format: MP4
 
 ---
 
+
+
 ## SEGMENT 5 (S5) — Haircut & Payment
 
 **Duration:** 7s | **Keyframes:** 4 | **Camera:** Follow through interior, subtle pans and push-ins
@@ -450,6 +472,8 @@ Keyframe 2: MKG-02-S5-KF-4C-START.png
 Keyframe 3: MKG-02-S5-KF-4C-END.png
 Keyframe 4: MKG-02-S5-KF-4D-SINGLE.png
 ```
+
+
 
 ### Dreamina Prompt
 
@@ -532,6 +556,8 @@ Quality: High | Format: MP4
 
 ---
 
+
+
 ## SEGMENT 6 (S6) — Fragile Moment: Puddle Splash
 
 **Duration:** 5s | **Keyframes:** 3 | **Camera:** Static, low framing to show puddle surface
@@ -543,6 +569,8 @@ Keyframe 1: MKG-02-S6-KF-START.png
 Keyframe 2: MKG-02-S6-KF-MID.png
 Keyframe 3: MKG-02-S6-KF-END.png
 ```
+
+
 
 ### Dreamina Prompt
 
@@ -619,6 +647,8 @@ Quality: High | Format: MP4
 
 ---
 
+
+
 ## SEGMENT 7 (S7) — Living End Card
 
 **Duration:** 5s (held for 2-3s as end card) | **Keyframes:** 3 | **Camera:** Static held frame
@@ -630,6 +660,8 @@ Keyframe 1: MKG-02-S7-KF-5B-START.png
 Keyframe 2: MKG-02-S7-KF-5B-END.png
 Keyframe 3: MKG-02-S7-KF-5C-SINGLE.png
 ```
+
+
 
 ### Dreamina Prompt
 
@@ -711,16 +743,20 @@ This frame must be perfectly still and locked. No motion after 0:03 mark.
 
 ---
 
+
+
 ## Summary: Camera Movement Principles Applied
 
-| Segment | Camera Technique | Why |
-|---------|------------------|-----|
-| S1 | Push-in on tension, pull-back on release | Emotional emphasis on the magical moment |
-| S2 | Static in each location, hard cut between | Hard cut sells the rejection, static framing sells the rejection flatness |
-| S3 | Push-in on discovery, pull-back as phone raises | Camera mirrors the curiosity → purposeful action arc |
-| S4 | Subtle push-in as screen illuminates | Emphasis on the moment of success |
-| S5 | Pull-back in cutting, pan to counter, static on payment | Camera follows the spatial progression and service completion |
-| S6 | Static throughout | Physics moment requires stable reference; no distraction |
-| S7 | Subtle push-in as phone raises, then held | Camera celebrates the understanding, then locks for end card |
+
+| Segment | Camera Technique                                        | Why                                                                       |
+| ------- | ------------------------------------------------------- | ------------------------------------------------------------------------- |
+| S1      | Push-in on tension, pull-back on release                | Emotional emphasis on the magical moment                                  |
+| S2      | Static in each location, hard cut between               | Hard cut sells the rejection, static framing sells the rejection flatness |
+| S3      | Push-in on discovery, pull-back as phone raises         | Camera mirrors the curiosity → purposeful action arc                      |
+| S4      | Subtle push-in as screen illuminates                    | Emphasis on the moment of success                                         |
+| S5      | Pull-back in cutting, pan to counter, static on payment | Camera follows the spatial progression and service completion             |
+| S6      | Static throughout                                       | Physics moment requires stable reference; no distraction                  |
+| S7      | Subtle push-in as phone raises, then held               | Camera celebrates the understanding, then locks for end card              |
+
 
 All camera movements are **motivated by emotional or spatial logic**, not arbitrary. Each movement emphasizes the story beat without calling attention to itself.
