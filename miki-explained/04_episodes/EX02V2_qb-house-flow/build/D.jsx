@@ -53,11 +53,8 @@ opac(comp.layer("Visitor"), [[0, 0], [WI - 0.1, 0], [WI + 0.3, 100]]);
 glide(comp.layer("Visitor"), [[w("L04", 31), [140, 1330]], [w("L04", 33) + 0.6, [880, 1330]]], 0);
 leave(comp.layer("Visitor"), END - 0.2, 0.4);
 // the pull-back: the signal is one of a field of signals; 701 on a calm panel
-var cs = tf(comp.layer("CAM")).property("ADBE Scale"), cp = P(comp.layer("CAM"));
-cs.setValueAtTime(0, [100, 100]); cs.setValueAtTime(END, [100, 100]); cs.setValueAtTime(END + 1.8, [24, 24]); cs.setValueAtTime(30.45, [24, 24]);
-cp.setValueAtTime(0, [540, 960]); cp.setValueAtTime(END, [540, 960]); cp.setValueAtTime(END + 1.8, [540, 1060]); cp.setValueAtTime(30.45, [540, 1060]);
-soft(cs, 92); soft(cp, 92);
-var k = 0;
+camMove([END, END + 1.8, 100, 24, [540, 960], [540, 1060]]);
+var k = 0, field = [];
 for (var gx = -5; gx <= 5; gx++) for (var gy = -6; gy <= 6; gy++) {
   if (gx == 0 && gy == 0) continue;
   var cx = 540 + gx * 420, cy = 760 + gy * 760, fn = "Sig " + (++k), sl = shapeLayer(fn);
@@ -66,10 +63,11 @@ for (var gx = -5; gx <= 5; gx++) for (var gy = -6; gy <= 6; gy++) {
   for (var q = 0; q < 3; q++) { var lg = grp(sl); lg.addProperty("ADBE Vector Shape - Ellipse").property("ADBE Vector Ellipse Size").setValue([110, 110]);
     lg.property(1).property("ADBE Vector Ellipse Position").setValue([cx, cy - 200 + q * 200]);
     var cc = [RED, YELLOW, ANSWER][q]; fill(lg, q == lit ? cc : [cc[0] * 0.25 + 0.72, cc[1] * 0.25 + 0.71, cc[2] * 0.25 + 0.69]); }   // one lit, the others pale
-  inCam(fn);
   var d = Math.sqrt(gx * gx + gy * gy), t1 = END + 0.3 + d * 0.12;
+  field.push([fn, d]);
   opac(comp.layer(fn), [[0, 0], [t1, 0], [t1 + 0.6, 80]]);
 }
+depth(field, 0.1, "Dot glow");   // the field curves away from the hero: far signals lag on the pull-back and the push
 card("Panel", [540, 400], [940, 340], 44, CREAM); enter(comp.layer("Panel"), w("L04", 34) + 0.2, 0.8);
 ws("Count", "0", "Light", 170, INK, [40, 250, 1000, 220], "center"); enter(comp.layer("Count"), w("L04", 35), 0.6);
 app.run("prop.setExpression", { layer: comp.layer("Count").index, path: "text/sourceText",

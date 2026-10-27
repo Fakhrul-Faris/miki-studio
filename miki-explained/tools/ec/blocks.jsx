@@ -153,5 +153,41 @@ function calmReveal(l, times) {
   wordReveal(l, times, 10);
   try { comp.layer(l.name).property("ADBE Text Properties").property("ADBE Text Animators").property(1).property("ADBE Text Animator Properties").addProperty("ADBE Text Blur").setValue([10, 10]); } catch (x) {}
 }
-// camera(): one null that everything in the scene hangs from; animate its scale/position for push, pull, pan.
+// camera(): one null that everything in the scene hangs from; move it with camMove() for push, pull, pan.
 function camera(name) { nul(name || "CAM", [540, 960]); return comp.layer(name || "CAM"); }
+// camMove(): a camera move on CAM, as expressions: log-space zoom (even perceived speed; linear scale keys lurch, then
+// crawl) with cubic ease-in-out (a camera eases out of rest too; soft() stays for objects arriving). Proven in EX00V4.
+// seg = [t0, t1, s0, s1, [x0, y0], [x1, y1]]. Calls add up across beats; CAM holds the last value between moves.
+var CAM_EASE = "function e(x){x=Math.min(1,Math.max(0,x));return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;}";
+function camMove(seg, name) {
+  var l = comp.layer(name || "CAM"), sp = tf(l).property("ADBE Scale"), segs = [], ex = sp.expression || "", a = ex.indexOf("var S=");
+  if (a >= 0) segs = JSON.parse(ex.substring(a + 6, ex.indexOf(";var s=")));
+  segs.push(seg); segs.sort(function (p, q) { return p[0] - q[0]; });
+  var body = CAM_EASE + "var S=" + JSON.stringify(segs) + ";var s=S[0][2],x=S[0][4][0],y=S[0][4][1];" +
+    "for(var i=0;i<S.length;i++){var g=S[i];if(time>=g[0]){var p=e((time-g[0])/(g[1]-g[0]));" +
+    "s=g[2]*Math.pow(g[3]/g[2],p);x=g[4][0]+(g[5][0]-g[4][0])*p;y=g[4][1]+(g[5][1]-g[4][1])*p;}}";
+  sp.expression = body + "[s,s]";
+  P(comp.layer(name || "CAM")).expression = body + "[x,y]";
+}
+// depth(): dolly parallax for a field around the hero. items = [[layer name, distance from the hero], ...] (any unit).
+// Each layer hangs from a plane null at depth K * distance, which shows at s/(1+s*z) while CAM shows at s: far layers grow
+// less, and no ring overtakes the one inside it. K = 0.1 keeps a field full-frame (0.25 shrank it into a cluster; random
+// depths overlapped). Stacks the layers under `below`, farthest lowest.
+function depth(items, K, below, name) {
+  var cn = name || "CAM", made = {}, placed = [], i;
+  for (i = 0; i < items.length; i++) {
+    var z = Math.round(K * items[i][1] * 1000) / 1000, pn = "PLANE " + z;
+    if (!made[pn]) {
+      made[pn] = true; nul(pn, [540, 960]);
+      tf(comp.layer(pn)).property("ADBE Scale").expression = 'var s=thisComp.layer("' + cn + '").transform.scale[0]/100;var q=s/(1+s*' + z + ');[q*100,q*100]';
+      P(comp.layer(pn)).expression = 'thisComp.layer("' + cn + '").transform.position';
+    }
+    // .parent = compensates under a scaled parent (effectcraft-notes #32): set the layer's own transform back
+    var l = comp.layer(items[i][0]), keep = [tf(l).property("ADBE Anchor Point").value, P(l).value, tf(l).property("ADBE Scale").value];
+    l.parent = comp.layer(pn);
+    l = comp.layer(items[i][0]); tf(l).property("ADBE Anchor Point").setValue(keep[0]); P(l).setValue(keep[1]); tf(l).property("ADBE Scale").setValue(keep[2]);
+    placed.push([z, items[i][0]]);
+  }
+  placed.sort(function (p, q) { return q[0] - p[0]; });
+  for (i = 0; i < placed.length; i++) comp.layer(placed[i][1]).moveAfter(comp.layer(below));
+}

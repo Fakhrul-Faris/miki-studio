@@ -59,6 +59,23 @@ Not yet confirmed in an explainer reference. Adopt only if they fit a beat.
 | D46 | Thread | One hero element carried through every beat; beats are its states | r19, r12, r13, EX00V3 | design rule |
 | D47 | Shape match | A shape becomes a different thing of the same shape (circle → pitch circle, dot → scene) | r04, r23, r30 | `glide` + cross-fade |
 | D48 | Morph merge | Several elements converge and cross-fade into one at the same place and size | EX00V3, r19 | expression + `blurFx` |
-| D49 | Pull-back reveal | The camera retreats until the subject is one of many | EX00V3, r19 | `camera()` + `soft` |
+| D49 | Pull-back reveal | The camera retreats until the subject is one of many | EX00V3, r19, EX02V2 | `camMove` + `depth` |
 | D50 | Bookend | End on the opening shape, changed by the story | r13, r20, r21 | design rule |
 | D51 | Glide in | Arrive from off-frame on a curved path, decelerate, no overshoot | r19, r15 | `glide` |
+
+## Camera moves (names to ask for)
+
+From the camera-moves set in showheyohtaki/motion-explainer, kept to the ones that fit the north point. A request is
+"name + time + direction": "dolly in on the lamp, 1.5s". All use `camMove()` (log-space zoom, ease-in-out), never `soft()`.
+
+| ID | Name | What you see | Kit |
+|---|---|---|---|
+| D52 | Dolly in / out | The camera travels; near things grow a lot, far things barely change (parallax) | `camMove` + `depth` |
+| D53 | Zoom in / out | The lens magnifies; everything grows by the same ratio (flat) | `camMove` alone |
+| D54 | Pan | The view slides sideways at one speed for every layer | `camMove` (x only, s0 = s1) |
+| D55 | Pull-back reveal | A dolly out until the subject is one of many (= D49) | `camMove` + `depth` |
+| D56 | Push-through | A dolly in until one element fills the frame and becomes the next scene (EX02V2's lamp) | `camMove` + `depth` |
+| D57 | Rack focus | Blur moves from the far layer to the near one (or back) to hand over attention without a cut | `blurFx` |
+
+Not used (rushed or flashy for this series): whip pan, smash cut, Dutch angle, handheld shake, FPV, speed ramp. Dolly zoom
+(Vertigo): at most once in the series, for a turn.

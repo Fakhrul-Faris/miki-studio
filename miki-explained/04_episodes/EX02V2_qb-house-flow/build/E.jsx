@@ -1,13 +1,10 @@
 // E — Turn (L05 31.3–36.0): the camera pushes into one green lamp until it fills the frame; it deepens to brown.
 // Inside: M3 in a door-shaped frame, a full bench, a visitor at the doorway who guesses.
-var PUSH0 = 30.5, PUSH1 = 31.45;
+var PUSH0 = 30.25, PUSH1 = 31.75;   // 1.5s push (EX00V4 variant D): fills the gap before L05 without retiming the voice
 // centre signal's green lamp sits at world [540, 960]: scaling CAM about it keeps it centred
-var cs = tf(comp.layer("CAM")).property("ADBE Scale"), cp = P(comp.layer("CAM"));
-cs.setValueAtTime(PUSH0, [24, 24]); cs.setValueAtTime(PUSH1, [2600, 2600]);
-cp.setValueAtTime(PUSH0, [540, 1060]); cp.setValueAtTime(PUSH1, [540, 960]);
-soft(cs, 70); soft(cp, 70);
-opac(comp.layer("Lamp Green"), [[END = 28.3, 0], [PUSH0 - 0.4, 0], [PUSH0, 100]]);   // the centre lamp lights again before we dive into it
-leave(comp.layer("Panel"), PUSH0 - 0.3, 0.4); leave(comp.layer("Count"), PUSH0 - 0.3, 0.4); leave(comp.layer("Count label"), PUSH0 - 0.3, 0.4);
+camMove([PUSH0, PUSH1, 24, 2600, [540, 1060], [540, 960]]);
+opac(comp.layer("Lamp Green"), [[END = 28.3, 0], [PUSH0 - 0.5, 0], [PUSH0 - 0.1, 100]]);   // the centre lamp lights again before we dive into it
+leave(comp.layer("Panel"), PUSH0 - 0.05, 0.4); leave(comp.layer("Count"), PUSH0 - 0.05, 0.4); leave(comp.layer("Count label"), PUSH0 - 0.05, 0.4);
 comp.layers.addSolid(BROWN, "Brown", W, H, 1); opac(comp.layer("Brown"), [[0, 0], [PUSH1 - 0.15, 0], [PUSH1 + 0.35, 100]]);
 // the doorway: M3 inside a door-shaped frame
 still("M3.png", "M3"); var m3 = comp.layer("M3"); P(m3).setValue([540, 900]); tf(m3).property("ADBE Scale").setValue([75, 75]);

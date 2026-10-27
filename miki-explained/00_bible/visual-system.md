@@ -14,11 +14,14 @@ time, in plenty of space. This is what all 32 references share (`01_references/v
    travelling or pulling back (EX00V3's field reveal). Cross-fades only *during* a morph. No flash fills, bursts, sparks.
 4. **Soft motion:** decelerate into place, no bounce (`pop()` is soft by default; `popBounce()` is a rare exception);
    big moves 0.6–1.2s; moves overlap; the camera never stops drifting.
+   **Camera moves ease in and out** (`camMove()`: log-space zoom, a 1.5–2s move with holds either side), and a field around the
+   hero sits in depth (`depth()`) so the camera reads as travelling, not zooming a flat page (EX00V4).
 5. **One subject, lots of space.** At most ~3 things moving; text small and calm, beside the subject; holds of at least 1s.
 6. **2D first.** 3D only where a beat truly needs depth; humans only Fern-style (generated stills in space).
 7. **Velocity comes from travel and the camera**, not from effects.
 
-Kit: `soft`, `enter`, `leave`, `glide`, `calmReveal`, `camera` (blocks.jsx); proven in `04_episodes/EX00V3_flow-test`.
+Kit: `soft`, `enter`, `leave`, `glide`, `calmReveal`, `camera`, `camMove`, `depth` (blocks.jsx); proven in `04_episodes/EX00V3_flow-test`
+and `04_episodes/EX00V4_camera-test`.
 
 ---
 

@@ -62,7 +62,8 @@ python3 miki-explained/tools/captions.py <ep> L01=0.4 L02=… --mute <guess wind
    on this 16 GB Mac and kernel-panicked it.
 2. Copy `templates/config.jsx` → `build/config.jsx` (DIR, COMPNAME, T, DUR) and `logo.png` into `media/`.
 3. Write beats as `build/A.jsx` … `F.jsx` (`templates/beat.jsx`): A starts with `clearComp(); importLines([...]); group("DRIFT")`.
-   Flow blocks first: `camera`, `glide`, `enter`, `leave`, `calmReveal`, `soft`. Then `bleed`, `print`, `chip`, `card`, `tile` + `pict*`,
+   Flow blocks first: `camera` + `camMove` (every camera move; ease-in-out, log-space zoom), `depth` (a field around the hero),
+   `glide`, `enter`, `leave`, `calmReveal`, `soft` (objects arriving, never the camera). Then `bleed`, `print`, `chip`, `card`, `tile` + `pict*`,
    `bar`, `dashLine`, `typeOn`, `nudge`, `concept`. `zoomThrough`/`dimmer` only if the thread really calls for them. G = `credit(); captions(); soundTrack(); outro(ob);`; finish = `finish([...onTop])`.
 4. Run: `miki-explained/tools/build.sh <ep> A B C D E F G finish`. **Always rebuild from A** (re-running one beat duplicates layers).
    On a long build, run one beat per call and save after each (`exec file.saveAs`), so a crash loses one beat, not the episode.
