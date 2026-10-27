@@ -30,9 +30,17 @@ for L in T:
             left += 1
             if ws[k][0][-1] in ".,?!": break
             k += 1
-        if word[-1] in ".,?!" or gap > 0.35 or len(cur) >= 6 or (len(cur) >= 4 and left > 2):
+        numeric = word.replace(",", "").isdigit()          # never split "3 / million"
+        if word[-1] in ".,?!" or gap > 0.35 or len(cur) >= 6 or (len(cur) >= 4 and left > 2 and not numeric):
             chunks.append(cur); cur = []
     if cur: chunks.append(cur)
+# merge a one-word tail ending in punctuation ("them.") into the phrase before it (same voice line)
+merged = []
+for c in chunks:
+    if merged and len(c) == 1 and c[0][0][-1] in ".,?!" and len(merged[-1]) <= 6 and c[0][1] - merged[-1][-1][2] < 0.35:
+        merged[-1] = merged[-1] + c
+    else: merged.append(c)
+chunks = merged
 out = []
 for i, c in enumerate(chunks):
     text = " ".join(x[0] for x in c)

@@ -6,3 +6,4 @@ One term per episode, coined in the takeaway. After 5–6 episodes this becomes 
 |---|---|---|
 | **The Wait Tax** | Customers don't hate the minutes, they hate the *empty* minutes. Idle waiting costs you goodwill. | EX01 Houston airport |
 | **The Doorway Decision** | People decide at the door, in seconds, from what they can see. A long wait they can plan around; an unknown wait they walk away from. | EX02 QB House |
+| **The Zero-Question Checkout** | Every question at the counter ("cash only?", "which app?", "send the screenshot") is friction. The best checkout asks none. | EX03 One sticker (DuitNow QR) |

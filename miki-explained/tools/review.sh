@@ -14,4 +14,4 @@ for spec in "$@"; do
   rows+=(-i $EP/review/m_$n.jpg)
 done
 if [ ${#rows[@]} -gt 0 ]; then n=$(( ${#rows[@]} / 2 )); ffmpeg -v error -y "${rows[@]}" -filter_complex "vstack=inputs=$n" $EP/review/motion.jpg 2>/dev/null || cp $EP/review/m_$n.jpg $EP/review/motion.jpg; fi
-ffmpeg -hide_banner -i $EP/export/$C.mp4 -af silencedetect=noise=-40dB:d=0.3 -f null - 2>&1 | grep silence_end | awk '{printf "%s ",$5} END{print "  ← speech starts (check against T)"}'
+ffmpeg -hide_banner -i $EP/export/$C.mp4 -af silencedetect=noise=-27dB:d=0.3 -f null - 2>&1 | grep silence_end | awk '{printf "%s ",$5} END{print "  ← speech starts (check against T)"}'

@@ -13,7 +13,7 @@ Only verified ideas become episode folders.
 | 5 | Psychology of Waiting | Disney's hidden queues 🔍 | "Disney lies about your wait. On purpose." | Unfair waits feel longer → fair booking + walk-in order | ☐ | |
 | 6 | Business Autopsy | Blockbuster late fees 🔍 | "Everyone thinks no-show fees work. Blockbuster proved otherwise." | Smarter booking deposits | ☐ | |
 | 7 | The System Behind | Ichiran ticket machines | "This ramen shop removed the counter conversation." | Counter as bottleneck → one shared tablet | ☐ | |
-| 8 | Money Stories | How Malaysia went QR 🔍 | "Your mamak accepted QR before your bank app worked." | "Ada cash tak?" → DuitNow QR checkout | ☐ | |
+| 8 | Money Stories | How Malaysia went QR 🔍 | "Your mamak accepted QR before your bank app worked." | "Ada cash tak?" → DuitNow QR checkout | ✓ PayNet 2026, BNM IFTF 2026 | EX03 |
 | 9 | Queue Math | Kingman / utilisation curve | "Why one sick barber triples the wait." | Reading demand before it breaks | ☐ | |
 | 10 | The Price Trick | The Economist decoy (Ariely) | "The most useless option on this menu made them millions." | Price list design | ☐ | |
 | 11 | Customer Brain | Peak-end rule (Kahneman) | "Customers forget the haircut. They remember the last 30 seconds." | Checkout as the last memory | ☐ | |

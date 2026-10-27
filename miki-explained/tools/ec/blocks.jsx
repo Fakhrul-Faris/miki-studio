@@ -55,11 +55,11 @@ function dimmer(t0, t1) { comp.layers.addSolid(CREAM, "Dimmer", W, H, 1); opac(c
 
 // --- the takeaway ---------------------------------------------------------------------------------------
 // Two-line named concept with a highlighter behind line 2, then the question. times: [line1 words], [line2 words], [question words]
-function concept(line1, line2, hlEnd, t1, t2, tq, question, color) {
-  var DIMC = CREAM;
-  ws("Concept 1", line1, "Black", 130, DIMC, [80, 700, 960, 160]); wordReveal(comp.layer("Concept 1"), t1);
-  bar("Highlighter", [70, 945], [hlEnd, 945], color || ANSWER, 150, t2[0] - 0.05, t2[t2.length - 1] + 0.3);
-  ws("Concept 2", line2, "Black", 130, DIMC, [80, 860, 960, 160]); wordReveal(comp.layer("Concept 2"), t2);
+function concept(line1, line2, hlEnd, t1, t2, tq, question, color, size) {
+  var DIMC = CREAM, z = size || 130, k = z / 130;                     // size: smaller for long words (must fit 960 px)
+  ws("Concept 1", line1, "Black", z, DIMC, [80, 860 - Math.round(160 * k), 960, Math.round(160 * k)]); wordReveal(comp.layer("Concept 1"), t1);
+  bar("Highlighter", [70, 860 + Math.round(85 * k)], [hlEnd, 860 + Math.round(85 * k)], color || ANSWER, Math.round(150 * k), t2[0] - 0.05, t2[t2.length - 1] + 0.3);
+  ws("Concept 2", line2, "Black", z, DIMC, [80, 860, 960, Math.round(160 * k)]); wordReveal(comp.layer("Concept 2"), t2);
   inc("Question", question, "Medium", 46, DIMC, [80, 1100, 920, 70]); wordReveal(comp.layer("Question"), tq, 12);
 }
 
@@ -75,12 +75,13 @@ function captions() {
     wordReveal(comp.layer(n), c.w, 0);
   }
 }
-function credit(text, tOut, wpx) {
+function credit(text, tOut, wpx, tIn) {
   wpx = wpx || Math.min(980, text.length * 17 + 60);          // sized to the 32 px text
+  var t0 = tIn || 0.3;                                         // show it when the sourced numbers are on screen
   card("Credit chip", [60 + wpx / 2, 250], [wpx, 54], 27, INK);
   inc("Credit text", text, "SemiBold", 32, CREAM, [70, 230, wpx - 20, 44], "center");
-  opac(comp.layer("Credit chip"), [[0, 0], [0.3 - F, 0], [0.3, 92], [tOut, 92], [tOut + 0.2, 0]]);
-  opac(comp.layer("Credit text"), [[0, 0], [0.3 - F, 0], [0.3, 100], [tOut, 100], [tOut + 0.2, 0]]);
+  opac(comp.layer("Credit chip"), [[0, 0], [t0 - F, 0], [t0, 92], [tOut, 92], [tOut + 0.2, 0]]);
+  opac(comp.layer("Credit text"), [[0, 0], [t0 - F, 0], [t0, 100], [tOut, 100], [tOut + 0.2, 0]]);
 }
 function soundTrack() { app.run("file.import", { paths: [DIR + "sfx/sfx_mix.wav"], addToComp: true, time: 0 }); }
 // Silent outro: blur + dim everything, then the logo (no sound effect on the logo, ever).
@@ -109,4 +110,14 @@ function finish(onTop) {
   comp.layer("Grain").outPoint = comp.duration;
   comp.motionBlur = true;
   if (comp.layer("DRIFT")) anim(tf(comp.layer("DRIFT")).property("ADBE Scale"), [[0, [100, 100]], [DUR, [104, 104]]], 0.1);
+}
+
+// QR-code pictogram for tile(): three finder squares + a few data blocks, in ink.
+function pictQR(s, sz) {
+  var k = sz / 100, g = grp(s), f = [[-22, -22], [22, -22], [-22, 22]];
+  for (var i = 0; i < 3; i++) { rectIn(g, [26 * k, 26 * k], 3 * k, [f[i][0] * k, f[i][1] * k]); }
+  stroke(g, INK, 5 * k, 1);
+  var d = grp(s), pts = [[14, 14], [26, 14], [14, 28], [28, 30], [-22, -22], [22, -22], [-22, 22]];
+  for (i = 0; i < pts.length; i++) rectIn(d, [9 * k, 9 * k], 1, [pts[i][0] * k, pts[i][1] * k]);
+  fill(d, INK);
 }
