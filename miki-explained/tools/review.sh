@@ -5,7 +5,8 @@
 # Writes export/<COMPNAME>.mp4 and review/motion.jpg (12 fps strips, one row per window). Review in motion, not stills.
 set -e
 EP=${1:A}; C=$2; shift 2; mkdir -p $EP/export $EP/review
-effectcraft-cli exec file.saveAs --params "{\"path\":\"$EP/$C.ecproj\"}" --bridge 9877 >/dev/null
+# save through the app when it is open; render headless either way (quit the app first: app + render ran memory to 3%)
+if effectcraft-cli info --bridge 9877 >/dev/null 2>&1; then effectcraft-cli exec file.saveAs --params "{\"path\":\"$EP/$C.ecproj\"}" --bridge 9877 >/dev/null; fi
 effectcraft-cli render --project $EP/$C.ecproj --comp $C --out $EP/export/$C.mp4 --format h264 --audio on | tail -1
 rows=()
 for spec in "$@"; do

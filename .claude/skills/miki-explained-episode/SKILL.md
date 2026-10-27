@@ -72,10 +72,21 @@ python3 miki-explained/tools/captions.py <ep> L01=0.4 L02=… --mute <guess wind
 
 ### 6. Sound, render, review
 `python3 miki-explained/tools/sfxmix.py <ep> <DUR> "pop@t:0.4" "whoosh_long@t:0.55" "whoosh@t:0.35" "swipe@t:0.3"` (rerun the G beat after).
-Then `miki-explained/tools/review.sh <ep> EXNN "t:len:label" …` with a window per transition, and read `review/motion.jpg`.
-The render runs as its own `effectcraft-cli` process (about 5–6 GB for a 48s episode). `review.sh` saves through the app first,
-so **quit the app (`exec app.quit --bridge 9877`) once the render has started**: app + render together pushed free memory to 3%.
+Then **save and quit the app** (`exec file.saveAs …`, then `exec app.quit --bridge 9877`): app + render together pushed free
+memory to 3%. Run `miki-explained/tools/review.sh <ep> EXNN "t:len:label" …` with a window per transition; it renders headless
+(about 5–7 GB, 4 min for EX02V2) and saves through the app only if it's open. Read `review/motion.jpg`.
 Fix anything found, then rebuild and re-render.
+
+### Testing a motion change (the EX00V4 method)
+When a technique is new or in doubt (a camera curve, depth, a morph), test it before it touches an episode or the kit:
+1. Copy the episode's `.ecproj` into `04_episodes/EX00Vn_<name>-test/` as `A.ecproj`. Write one `build/<name>.jsx` that takes a
+   `VARIANT` and applies the change headless: `effectcraft-cli script _v.jsx --project A.ecproj --save-as $PWD/B.ecproj`.
+   **One change per variant** (B = curve, C = B + depth, D = C + timing), so the user sees what each one adds.
+2. Measure, don't just look: sample the property every frame with `valueAtTime` in a script and plot it (`review/speed.png`).
+3. Check full-size stills at the key times before rendering; fix what's broken (EX00V4's random depths overlapped).
+4. Render only the window: `effectcraft-cli render --project B.ecproj --comp … --start … --end … --audio off`, then one
+   side-by-side `review/compare.mp4` (A | B | C | D, labels via `qlmanage -t` on an SVG: this ffmpeg has no drawtext).
+5. The user picks. Only then move it into `blocks.jsx`, the episode, the docs and this skill, and record it in the test's `episode.md`.
 
 ### 7. Post
 Caption, hashtags, pinned comment with the source and a DM keyword, and the before-posting checklist (series-plan),
