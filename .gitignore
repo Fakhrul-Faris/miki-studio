@@ -17,3 +17,25 @@ production/**/EP001_render/**/frame_*.png
 
 # Archived pre-restructure project tree
 archive-ignore/
+
+# miki-explained: renders, review frames and regenerable/large files (scripts, bible, analyses, voice and sfx library are tracked)
+miki-explained/04_episodes/*/export/
+miki-explained/04_episodes/*/review/
+miki-explained/04_episodes/*/build/frames/
+miki-explained/04_episodes/*/build/_run.jsx
+miki-explained/04_episodes/*/v2/frames/
+miki-explained/04_episodes/*/v2/_run.jsx
+miki-explained/04_episodes/*/v3review/
+miki-explained/04_episodes/*/tests/
+miki-explained/04_episodes/*/*.ecproj
+miki-explained/04_episodes/*/media/*.png
+!miki-explained/04_episodes/*/media/logo.png
+miki-explained/04_episodes/*/sfx/*.wav
+miki-explained/01_references/*/source.mp4
+miki-explained/01_references/*/shots/
+miki-explained/01_references/*/contact_sheets*/
+miki-explained/04_episodes/*/*.mp4
+miki-explained/04_episodes/*/EffectCraft Auto-Save/
+miki-explained/04_episodes/*/build/*.jpg
+miki-explained/04_episodes/*/v2/*.jpg
+miki-explained/04_episodes/*/v2/*.png

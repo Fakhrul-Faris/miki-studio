@@ -1,0 +1,17 @@
+lang=en p=0.99
+[  0.00-  2.00] Builders don't imagine a business.
+[  2.00-  5.00] They build it on base 44.
+[  5.00-  7.00] You have the idea.
+[  7.00- 10.00] The only thing left is to start.
+[ 10.00- 14.00] From one app to entire systems.
+[ 14.00- 17.00] Rethink what your business can be.
+[ 17.00- 18.00] Keep going.
+[ 18.00- 22.00] Sharpen every decision.
+[ 22.00- 24.00] Automate to anything.
+[ 24.00- 28.00] Not a minute wasted.
+[ 28.00- 32.00] Wherever you go, get seen.
+[ 32.00- 40.00] Spread the word so you can expand further.
+[ 40.00- 44.00] And when you're finally off the clock, the system keeps running.
+[ 44.00- 46.00] Secure and reliable.
+[ 46.00- 49.00] Be the builder your business needs.
+[ 49.00- 51.00] Base 44.

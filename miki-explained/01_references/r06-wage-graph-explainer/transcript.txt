@@ -1,0 +1,12 @@
+lang=en p=0.99
+[  0.96-  6.32] What if a single line on a graph could explain why so many people are working non-stop and still
+[  6.32- 15.44] can't afford to live? This is Philadelphia. Two people, two wages. One earns the federal minimum
+[ 15.44- 23.44] wage, $7.25 an hour. Another earns $23 an hour based on MIT's living wage estimate for Philadelphia.
+[ 23.44- 28.96] Same city, same rising costs, very different outcomes. When we graph hours worked against
+[ 28.96- 34.96] total money earned, income grows hour by hour and that growth forms a line. In math, the steepness
+[ 34.96- 40.00] of that line is called slope. Here, it means how much money is earned for each hour worked.
+[ 40.00- 46.24] A steeper line means income grows faster. When rent, food, and transportation rise at one rate,
+[ 46.24- 50.24] but wages rise at another, the difference in slope tells the real story.
+[ 51.60- 56.32] This isn't just algebra, it's affordability. In this video, we'll use slope from a graph
+[ 56.32- 60.72] to explore the difference between minimum wage and a livable wage and what the math reveals about
+[ 60.72- 61.92] everyday life.

@@ -1,0 +1,12 @@
+for (var k = comp.numLayers; k >= 1; k--) comp.layer(k).remove();
+nul("B1", [540, 960]);
+var c = card("Complaint 1", [270, 520], [430, 132], 30);
+writeLn("A " + (P(c) ? "pos" : "null") + " name=" + c.name);
+var c2 = comp.layer("Complaint 1");
+writeLn("B " + (P(c2) ? "pos" : "null"));
+c2.parent = comp.layer("B1");
+var c3 = comp.layer("Complaint 1");
+writeLn("C " + (P(c3) ? "pos" : "null") + " tg=" + (tf(c3) ? "y" : "n"));
+var pp = P(c3); writeLn("D value " + pp.value);
+pp.setValueAtTime(1, [0, 0]); writeLn("E keyed");
+"ok";
