@@ -15,6 +15,15 @@ var comp = getComp(COMPNAME);
 if (!comp) { comp = app.project.items.addComp(COMPNAME, W, H, 1, DUR, FPS); comp.bgColor = CREAM; }
 app.run("comp.open", { comp: COMPNAME });
 function w(L, i) { return WT[L][i]; }
+// soft(): decelerate into every key (fast start, long landing), like an expo-out. Use it instead of easeAll for moves.
+function soft(p, land) {
+  var n = p.value instanceof Array ? p.value.length : 1, i, j;
+  for (i = 1; i <= p.numKeys; i++) {
+    var inE = [], outE = [];
+    for (j = 0; j < n; j++) { inE.push(new KeyframeEase(0, land || 88)); outE.push(new KeyframeEase(0, 18)); }
+    p.setTemporalEaseAtKey(i, inE, outE);
+  }
+}
 
 function hex(c) { var s = "#"; for (var i = 0; i < 3; i++) { var h = Math.round(c[i] * 255).toString(16); s += (h.length < 2 ? "0" : "") + h; } return s; }
 function tf(l) { return l.property("ADBE Transform Group"); }
@@ -44,7 +53,7 @@ function wordReveal(l, times, rise) {
   var a = l.property("ADBE Text Properties").property("ADBE Text Animators").addProperty("ADBE Text Animator");
   var ap = a.property("ADBE Text Animator Properties");
   ap.addProperty("ADBE Text Opacity").setValue(0);
-  ap.addProperty("ADBE Text Position 3D").setValue([0, rise === undefined ? 24 : rise, 0]);
+  ap.addProperty("ADBE Text Position 3D").setValue([0, rise === undefined ? 10 : rise, 0]);   // V2: small rise
   var sel = a.property("ADBE Text Selectors").addProperty("ADBE Text Selector");
   sel.property("advanced").property("basedOn").setValue(3);
   sel.property("advanced").property("smoothness").setValue(100);
@@ -85,8 +94,12 @@ function shadow(l, dist, size, opac) {
   return l;
 }
 // Pop-in: scale from 0 with a little overshoot.
-function pop(l, t, dur) { var d = dur || 0.18, s = tf(l).property("ADBE Scale"); s.setValueAtTime(t, [0, 0]); s.setValueAtTime(t + d, [116, 116]); s.setValueAtTime(t + d + 0.1, [96, 96]); s.setValueAtTime(t + d + 0.2, [100, 100]); easeAll(s, 75); }
-function pulse(l, t) { var s = tf(l).property("ADBE Scale"); s.setValueAtTime(t, [100, 100]); s.setValueAtTime(t + 0.08, [92, 92]); s.setValueAtTime(t + 0.2, [114, 114]); s.setValueAtTime(t + 0.34, [100, 100]); easeAll(s, 75); }
+// pop(): V2 default = soft arrival (scale 92→100 + fade, long deceleration, NO overshoot). Bounce is retired:
+// it reads as AI-made (user, 2026-10-28). popBounce() keeps the old behaviour for the rare playful beat.
+function pop(l, t, dur) { var d = dur || 0.5, s = tf(l).property("ADBE Scale"), v = s.value; s.setValueAtTime(t, [v[0] * 0.92, v[1] * 0.92]); s.setValueAtTime(t + d, [v[0], v[1]]); soft(s); var o = tf(l).property("ADBE Opacity"); o.setValueAtTime(0, 0); o.setValueAtTime(t, 0); o.setValueAtTime(t + d * 0.6, 100); }
+function popBounce(l, t, dur) { var d = dur || 0.18, s = tf(l).property("ADBE Scale"); s.setValueAtTime(t, [0, 0]); s.setValueAtTime(t + d, [116, 116]); s.setValueAtTime(t + d + 0.1, [96, 96]); s.setValueAtTime(t + d + 0.2, [100, 100]); easeAll(s, 75); }
+// pulse(): a gentle swell for emphasis (100 → 106 → 100, slow), no squash.
+function pulse(l, t) { var s = tf(l).property("ADBE Scale"); s.setValueAtTime(t, [100, 100]); s.setValueAtTime(t + 0.35, [106, 106]); s.setValueAtTime(t + 0.9, [100, 100]); soft(s); }
 
 // Flat colour tile with a black pictogram drawn by fn(group).
 function tile(name, pos, size, color, pict) {

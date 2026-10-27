@@ -51,3 +51,14 @@ Not yet confirmed in an explainer reference. Adopt only if they fit a beat.
 | D26 | Inline icon replaces a word | A word in the sentence swaps for a small icon/diagram | sleeko B2, B8 | ☐ |
 | D27 | Active line in a word stack | A stacked list where a highlight moves to the current item | autopilot B2–5 | ☐ |
 | D28 | Phrase extends in place | The sentence grows its second half without moving the first | shopboxo B9, iphone-16e B7 | ☐ |
+
+## V2 patterns (north point: nothing appears from nowhere)
+
+| ID | Name | What it does | Source | Kit |
+|---|---|---|---|---|
+| D46 | Thread | One hero element carried through every beat; beats are its states | r19, r12, r13, EX00V3 | design rule |
+| D47 | Shape match | A shape becomes a different thing of the same shape (circle → pitch circle, dot → scene) | r04, r23, r30 | `glide` + cross-fade |
+| D48 | Morph merge | Several elements converge and cross-fade into one at the same place and size | EX00V3, r19 | expression + `blurFx` |
+| D49 | Pull-back reveal | The camera retreats until the subject is one of many | EX00V3, r19 | `camera()` + `soft` |
+| D50 | Bookend | End on the opening shape, changed by the story | r13, r20, r21 | design rule |
+| D51 | Glide in | Arrive from off-frame on a curved path, decelerate, no overshoot | r19, r15 | `glide` |

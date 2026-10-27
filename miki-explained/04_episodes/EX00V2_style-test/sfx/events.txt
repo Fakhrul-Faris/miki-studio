@@ -1,0 +1,6 @@
+  0.00  drone.wav        gain 0.32
+  1.50  whoosh.wav       gain 0.35
+  3.14  pop.wav          gain 0.35
+  7.60  whoosh_long.wav  gain 0.45
+ 11.55  whoosh.wav       gain 0.35
+(logo outro: silent)

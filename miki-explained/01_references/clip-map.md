@@ -1,6 +1,6 @@
 # Clip map
 
-Family: A = editorial collage docu-essay, B = clean diagram / data viz, C = SaaS product promo.
+Family: A = editorial collage docu-essay, B = clean diagram / data viz, C = SaaS product promo, V2 = the "elevate" batch (more 3D, camera, velocity), added 2026-10-28.
 
 | # | Folder | Family | Original filename |
 |---|---|---|---|
@@ -23,3 +23,16 @@ Family: A = editorial collage docu-essay, B = clean diagram / data viz, C = SaaS
 | r17 | `r17-brand-value-charts/` | B | Pinterest Video Downloader (15).mp4 |
 | r18 | `r18-luminovo-dark-glow/` | C | Pinterest Video Downloader (16).mp4 |
 | r19 | `r19-agentic-ai-orbs/` | C | Pinterest Video Downloader (17).mp4 |
+| r20 | `r20-monoline-circle-doodles/` | V2 | Instagram Video 6712.mp4 |
+| r21 | `r21-ai-montage-dead/` | V2 | Instagram Reels Video 7372.mp4 |
+| r22 | `r22-docu-kinetic-data/` | V2 | Instagram Reels Video 41078.mp4 |
+| r23 | `r23-travel-app-ui/` | V2 | Instagram Reels Video 55801.mp4 |
+| r24 | `r24-pixel-abstract-glitch/` | V2 | Instagram Reels Video 9576.mp4 |
+| r25 | `r25-code-editor-story-timeline/` | V2 | Instagram Reels Video.mp4 |
+| r26 | `r26-interview-documentary/` | V2 | Instagram Reels Video 86735.mp4 |
+| r27 | `r27-polymarket-perps-glow/` | V2 | Instagram Reels Video 23477.mp4 |
+| r28 | `r28-red-kinetic-3d-objects/` | V2 | Instagram Reels Video 34228.mp4 |
+| r29 | `r29-sky-ui-loopr/` | V2 | Instagram Reels Video 70831.mp4 |
+| r30 | `r30-jewellery-macro-3d/` | V2 | Instagram Reels Video 39268.mp4 |
+| r31 | `r31-perfume-physics-3d-explainer/` | V2 | Instagram Reels Video 6824.mp4 |
+| r32 | `r32-cream-stamp-frames/` | V2 | Instagram Reels Video 42330.mp4 |

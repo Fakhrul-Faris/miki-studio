@@ -91,3 +91,5 @@ Word times come from faster-whisper word timestamps, corrected with silencedetec
 28. **No caption feature in 0.17** (GitHub issue #308 asks for one). Build captions as text layers from the
     faster-whisper word times: phrase chunks of up to 6 words, a dark pill per phrase, words revealed as spoken (EX01 `build/G.jsx`).
 29. **Outro blur:** an adjustment solid with Gaussian Blur keyed 0→46 blurs everything beneath it; layers created after it (the logo) stay sharp.
+30. **`app.run` `layer:` is the layer id, not its index.** Pass `l.id`. `l.index` only works while the layer is still index 1 (just created), which is why `shadow()` inside `card()` works; keying a card's shadow later with `.index` fails with "no property `layerStyles/dropShadow/opacity`" (EX02V2 A).
+31. **Memory: EffectCraft grows on renders, not builds.** Building EX02V2 A→finish stayed under 1 GB; three 640px stills took it to 2.7 GB. A session that built EX00V2, EX00V3 and EX02V2 reached 24 GB on a 16 GB Mac and kernel-panicked it (watchdog, 2026-10-28). Save after every beat, and quit and relaunch EffectCraft between episodes.

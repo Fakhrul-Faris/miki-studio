@@ -1,5 +1,29 @@
 # Visual system
 
+## North point (V2, 2026-10-28): **nothing appears from nowhere**
+
+Every frame is born from the one before it. The next scene grows out of a shape, position, colour or object already on
+screen, carried by motion (a morph, a shape match, the camera travelling), never by a cut or an effect. One subject at a
+time, in plenty of space. This is what all 32 references share (`01_references/v2-style-study.md` § North point).
+
+### How to apply it
+1. **Choose the thread first.** Before the visuals, decide the one hero element the episode carries (a sticker, a dot,
+   a line, a chair, a coin). Every beat is a new *state* of it.
+2. **Bookend.** End on the shape you opened with, changed by what the story taught.
+3. **Transitions are motion:** morph (same place, new form), shape match (a circle becomes a different circle), the camera
+   travelling or pulling back (EX00V3's field reveal). Cross-fades only *during* a morph. No flash fills, bursts, sparks.
+4. **Soft motion:** decelerate into place, no bounce (`pop()` is soft by default; `popBounce()` is a rare exception);
+   big moves 0.6–1.2s; moves overlap; the camera never stops drifting.
+5. **One subject, lots of space.** At most ~3 things moving; text small and calm, beside the subject; holds of at least 1s.
+6. **2D first.** 3D only where a beat truly needs depth; humans only Fern-style (generated stills in space).
+7. **Velocity comes from travel and the camera**, not from effects.
+
+Kit: `soft`, `enter`, `leave`, `glide`, `calmReveal`, `camera` (blocks.jsx); proven in `04_episodes/EX00V3_flow-test`.
+
+---
+
+## V1 system (EX01–EX03), still valid for colour, type, captions, safe zones and sound
+
 r06's storytelling grammar (claim → evidence → "what it means" → turn), built with Base44's craft (UI cards,
 flat tiles, assembly bursts, framed photos, constant drift). Proven in EX01 and EX02. The look is the brand, since
 there is no series name. All of it lives in `tools/ec/core.jsx` and `tools/ec/blocks.jsx`.

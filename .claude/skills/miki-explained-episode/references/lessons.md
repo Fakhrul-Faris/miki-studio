@@ -17,3 +17,7 @@ Full detail: `miki-explained/00_bible/effectcraft-notes.md`. Read before proposi
 | 49 synth sound effects + logo pop (EX01) | Too much | 4–6 effects, silent logo (sfxmix.py) |
 | Captions + identical headline | Doubled text | `captions.py --mute` windows |
 | Green meant both good and bad | Grammar drift | ANSWER green = fix, PROBLEM coral = problem |
+| 3D style test (orbit ring, particles, shatter, bounce pops) | "AI-looking": rushed, flashy, bouncy | 2D flow: one thread, soft easing, camera drift, morphs (EX00V3) |
+| Each beat a new set + zoom-through (EX01–EX03) | Felt like a template | North point: nothing appears from nowhere; pick the thread first |
+| Building and rendering three episodes in one app session | 24 GB on a 16 GB Mac, kernel panic, EX02V2 lost unsaved | One episode per app session; save after every beat; quit the app before rendering |
+| `app.run("prop.set", { layer: l.index, … })` on an older layer | "no property `layerStyles/dropShadow/opacity`" | `layer: l.id` (index only works for a just-created layer) |

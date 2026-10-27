@@ -121,3 +121,37 @@ function pictQR(s, sz) {
   for (i = 0; i < pts.length; i++) rectIn(d, [9 * k, 9 * k], 1, [pts[i][0] * k, pts[i][1] * k]);
   fill(d, INK);
 }
+
+// --- flow motion (V2, 2026-10-28): human-feeling motion. No bounce, no overshoot. --------------------------------
+// enter(): fade in + scale 94→100 + blur 14→0 over `dur` (default 0.7s). leave(): the reverse, drifting `dy` px.
+function blurFx(l) { var e = l.property("ADBE Effect Parade"); for (var i = 1; i <= e.numProperties; i++) if (e.property(i).name == "Gaussian Blur") return e.property(i).property(1); e.addProperty("ADBE Gaussian Blur 2"); return l.property("ADBE Effect Parade").property(e.numProperties).property(1); }
+function enter(l, t, dur) {
+  var d = dur || 0.7, nm = l.name;
+  opac(comp.layer(nm), [[0, 0], [t, 0], [t + d * 0.6, 100]]);
+  var s = tf(comp.layer(nm)).property("ADBE Scale"), v = s.value; s.setValueAtTime(t, [v[0] * 0.94, v[1] * 0.94]); s.setValueAtTime(t + d, [v[0], v[1]]); soft(s);
+  var b = blurFx(comp.layer(nm)); b.setValueAtTime(t, 14); b.setValueAtTime(t + d, 0); soft(b);
+}
+function leave(l, t, dur, dy) {
+  var d = dur || 0.5, nm = l.name;
+  var o = tf(comp.layer(nm)).property("ADBE Opacity"); o.setValueAtTime(t, o.valueAtTime(t, false)); o.setValueAtTime(t + d, 0);
+  var b = blurFx(comp.layer(nm)); b.setValueAtTime(t, 0); b.setValueAtTime(t + d, 12);
+  if (dy) nudge(comp.layer(nm), [[t, [0, 0]], [t + d, [0, dy]]], 40);
+}
+// glide(): travel along a curved path. keys = [[t, [x, y]], ...]; bend = perpendicular pull of the curve (px).
+function glide(l, keys, bend) {
+  var p = P(comp.layer(l.name)), i;
+  for (i = 0; i < keys.length; i++) p.setValueAtTime(keys[i][0], keys[i][1]);
+  for (i = 1; i < keys.length; i++) {
+    var a = keys[i - 1][1], b = keys[i][1], dx = b[0] - a[0], dy = b[1] - a[1], k = (bend || 0) / Math.max(1, Math.sqrt(dx * dx + dy * dy));
+    p.setSpatialTangentsAtKey(i, p.keyInSpatialTangent(i), [dx / 3 - dy * k, dy / 3 + dx * k]);
+    p.setSpatialTangentsAtKey(i + 1, [-dx / 3 - dy * k, -dy / 3 + dx * k], p.keyOutSpatialTangent(i + 1));
+  }
+  soft(p);
+}
+// calmReveal(): words arrive with a blur-in and a small rise (vs wordReveal's bigger rise).
+function calmReveal(l, times) {
+  wordReveal(l, times, 10);
+  try { comp.layer(l.name).property("ADBE Text Properties").property("ADBE Text Animators").property(1).property("ADBE Text Animator Properties").addProperty("ADBE Text Blur").setValue([10, 10]); } catch (x) {}
+}
+// camera(): one null that everything in the scene hangs from; animate its scale/position for push, pull, pan.
+function camera(name) { nul(name || "CAM", [540, 960]); return comp.layer(name || "CAM"); }

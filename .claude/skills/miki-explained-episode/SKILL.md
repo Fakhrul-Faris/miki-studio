@@ -9,6 +9,14 @@ The process that produced EX01 (Houston airport) and EX02 (QB House). The series
 each episode is `miki-explained/04_episodes/EXNN_slug/`. Read `00_bible/` (series-plan, visual-system, voice,
 glossary) and `00_bible/effectcraft-notes.md` (every EffectCraft trap found so far) before building.
 
+## North point (read first)
+
+**Nothing appears from nowhere.** Every frame is born from the one before it, carried by motion. Pick the episode's
+**thread** (one hero element) before any visuals; every beat is a state of it; bookend on the opening shape. Soft motion
+only (no bounce), 2D first, the camera always drifting, one subject at a time. See `00_bible/visual-system.md` § North point
+and the reference builds `04_episodes/EX00V3_flow-test/build/A.jsx` and `04_episodes/EX02V2_qb-house-flow/build/`
+(a full episode in the flow style; the user confirmed its direction, 2026-10-28).
+
 ## How to work with this user
 
 - **Plan before acting on anything new** (a new episode, method or restructure); wait for approval. Small fixes to approved work: just do them.
@@ -22,7 +30,7 @@ glossary) and `00_bible/effectcraft-notes.md` (every EffectCraft trap found so f
 | # | Gate | Output | User approves |
 |---|---|---|---|
 | 1 | Story + facts | backlog row, sources in `episode.md` | the story |
-| 2 | Script | `episode.md` script table (≈130 words, 6 lines) | the script |
+| 2 | Script + thread | `episode.md` script table (≈130 words, 6 lines) + the thread (hero element, its states, the bookend) | the script and the thread |
 | 3 | Voice + stills | user renders L01–L06 (Paige) → `audio/`, Seedream → `media/` | — |
 | 4 | Timings + captions | `build/times.jsx`, `build/captions.jsx` | — |
 | 5 | Build (live) | `build/config.jsx`, `A`–`F.jsx`, `G.jsx`, `finish.jsx` | watches it land in the app |
@@ -50,16 +58,22 @@ python3 miki-explained/tools/captions.py <ep> L01=0.4 L02=… --mute <guess wind
 
 ### 5. Build live
 1. Start the app with its control channel (background): `/Applications/EffectCraft.app/Contents/MacOS/EffectCraft --control 9877`.
+   **One episode per app session**: quit and relaunch between episodes. A session that built three episodes reached 24 GB
+   on this 16 GB Mac and kernel-panicked it.
 2. Copy `templates/config.jsx` → `build/config.jsx` (DIR, COMPNAME, T, DUR) and `logo.png` into `media/`.
 3. Write beats as `build/A.jsx` … `F.jsx` (`templates/beat.jsx`): A starts with `clearComp(); importLines([...]); group("DRIFT")`.
-   Use the blocks: `bleed`, `print`, `chip`, `card`, `tile` + `pict*`, `bar`, `dashLine`, `wordReveal`, `typeOn`, `ripple`,
-   `nudge`, `dimmer`, `zoomThrough`, `concept`. G = `credit(); captions(); soundTrack(); outro(ob);`; finish = `finish([...onTop])`.
+   Flow blocks first: `camera`, `glide`, `enter`, `leave`, `calmReveal`, `soft`. Then `bleed`, `print`, `chip`, `card`, `tile` + `pict*`,
+   `bar`, `dashLine`, `typeOn`, `nudge`, `concept`. `zoomThrough`/`dimmer` only if the thread really calls for them. G = `credit(); captions(); soundTrack(); outro(ob);`; finish = `finish([...onTop])`.
 4. Run: `miki-explained/tools/build.sh <ep> A B C D E F G finish`. **Always rebuild from A** (re-running one beat duplicates layers).
+   On a long build, run one beat per call and save after each (`exec file.saveAs`), so a crash loses one beat, not the episode.
+   In `app.run(...)`, `layer:` is the layer **id** (`l.id`), not its index.
 5. Check stills per beat (`effectcraft-cli render-frame --comp … --bridge 9877 --out <absolute path>`), fix, rerun.
 
 ### 6. Sound, render, review
 `python3 miki-explained/tools/sfxmix.py <ep> <DUR> "pop@t:0.4" "whoosh_long@t:0.55" "whoosh@t:0.35" "swipe@t:0.3"` (rerun the G beat after).
 Then `miki-explained/tools/review.sh <ep> EXNN "t:len:label" …` with a window per transition, and read `review/motion.jpg`.
+The render runs as its own `effectcraft-cli` process (about 5–6 GB for a 48s episode). `review.sh` saves through the app first,
+so **quit the app (`exec app.quit --bridge 9877`) once the render has started**: app + render together pushed free memory to 3%.
 Fix anything found, then rebuild and re-render.
 
 ### 7. Post
