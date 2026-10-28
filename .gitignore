@@ -39,3 +39,9 @@ miki-explained/04_episodes/*/EffectCraft Auto-Save/
 miki-explained/04_episodes/*/build/*.jpg
 miki-explained/04_episodes/*/v2/*.jpg
 miki-explained/04_episodes/*/v2/*.png
+# miki-explained V3 (Doorway format): PhotoCraft layers are regenerable from media/; downloaded sound/music and archives stay local
+miki-explained/04_episodes/*/layers/
+miki-explained/04_episodes/*/_archive/
+miki-explained/04_episodes/*/audio/*.wav
+miki-explained/04_episodes/*/sfx/source/
+miki-explained/04_episodes/EX02V3_doorway/audio/Hip Hop Chill Beat.mp3

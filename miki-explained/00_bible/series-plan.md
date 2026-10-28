@@ -3,10 +3,12 @@
 ## Format
 
 - Under 60 seconds, 9:16, TikTok + Instagram Reels. Each post stands alone; no "Part 1/2".
-- No series name or title card. Recognition comes from the look (see `visual-system.md`) and the voice.
+- No series name. Recognition comes from the look (the cut-paper house format, `visual-system.md`) and the voice.
+  The named concept gets its own title card in the takeaway (EX02V3: THE DOORWAY DECISION).
+- Every episode mixes collage, 2–3 documentary images and diagram animation, and runs about 40–45s, cut to the voice.
 - One new story every post, same skeleton every time. (The Belzona model: never the same repair,
   always the same shape.)
-- Meikigo appears only as the problem in the shop turn, plus a small logo on the end card.
+- Meikigo appears only as the problem in the shop turn; a small logo end card is optional (EX02V3 ended on black).
   No product shot, no "download now". The CTA lives in the pinned comment.
 
 ## The 55-second skeleton
@@ -17,7 +19,7 @@
 | 3–15s | **Setup** | The problem, and the obvious fix that didn't work. |
 | 15–20s | **The guess** | "Most people think it's ___." The viewer forms a theory. |
 | 20–35s | **Reveal** | The hidden system, shown with one diagram, not five. |
-| 35–48s | **The turn** | Camera pans to a Malaysian shop drawn in the same style: "Your shop has the same problem." |
+| 35–48s | **The turn** | A documentary image of a real Malaysian shop: "Your shop has the same problem." |
 | 48–55s | **Takeaway** | A named concept (e.g. "the Wait Tax") + one question for the comments. |
 
 ## Why it makes people feel clever
@@ -84,9 +86,10 @@ talks about the shop across the road.
 
 ## Sound rules
 
-- **Sparse.** Sound effects only on the few key moments (the main transition, the reveal, the turn). The voice and a
-  quiet drone bed carry the rest. Not every pop, tick or card needs a sound.
-- **The Meikigo logo outro is silent.** No sound effect on the logo, ever.
+- **Key moments only:** about 8–10 hits (stamps, a snip, a paper tear, a relay click when a light changes, one swell into
+  the title). The voice and a low drone bed carry the rest; music, if any, sits at about −23 dB under everything.
+- The user supplies the sound files; trim each to its hit and line the hit up with its frame (`sfx/events.txt`).
+- **A Meikigo logo outro, if used, is silent.** No sound effect on the logo, ever.
 
 ## Story balance
 
@@ -104,5 +107,5 @@ or pinned post, so the series is bingeable and owners get shorthand they repeat.
 1. Every fact has a source in `episode.md`; open questions are resolved or the line is cut.
 2. Source credit chip on screen in the hook, and the source in the pinned comment.
 3. **Turn on the platform's AI-generated content label** if the episode uses generated photos.
-4. Captions muted where the on-screen headline already says the words.
-5. Watched once at full speed with sound; the logo outro is silent.
+4. Subtitles hidden where the same words are already on screen.
+5. Watched once at full speed with sound; any logo outro is silent.

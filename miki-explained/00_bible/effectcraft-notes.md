@@ -95,3 +95,18 @@ Word times come from faster-whisper word timestamps, corrected with silencedetec
 31. **Memory: EffectCraft grows on renders, not builds.** Building EX02V2 A→finish stayed under 1 GB; three 640px stills took it to 2.7 GB. A session that built EX00V2, EX00V3 and EX02V2 reached 24 GB on a 16 GB Mac and kernel-panicked it (watchdog, 2026-10-28). Save after every beat, and quit and relaunch EffectCraft between episodes.
 32. **`.parent = x` in a script compensates when the parent is not at rest.** Re-parenting 142 signals onto scaled plane nulls (EX00V4) rewrote each child's anchor, position and scale to cancel the parent (Sig 1 became 295%), which undid the depth. Under a null at rest (scale 100, anchor = position) it changes nothing, which is why parenting to CAM at build time looked uncompensated (#6). To re-parent onto a moving or scaled parent, save anchor, position and scale first and set them back after.
 33. **Zoom in log space, not linear scale keys.** EX02V2's push keyed CAM 24% → 2600% in 0.95s: 94% of the perceived zoom happened in the first half (38.6 doublings/s on its first frame). `camMove()` interpolates s0·(s1/s0)^p with cubic ease-in-out; peak speed fell to 12.8 doublings/s over 1.5s (EX00V4 `review/speed.png`).
+
+## Cut-paper build (EX02V3, headless, 2026-10-28)
+
+34. **12fps steps work through expressions:** `posterizeTime(12); …` on any property holds each value 2 frames. The episode's
+    `stepped(p, "out"|"in"|"lin")` (EX02V3 `build/lib.jsx`) reads the keys and applies expo-out / cubic-in / linear between them.
+    Vector math in expressions: use `add`, `sub`, `mul`. Set it with `property.expression = "…"` in a script.
+35. **3D camera:** `comp.layers.addCamera(name, [540, 960])` has zoom 1500 in a 1080-wide comp, so a layer at z=0 is 100% when
+    the camera sits at z=-1500; scale s needs z = -1500/s. `layer.threeDLayer = true`.
+36. **Expo-out on a short move collapses to one step at 12fps:** over 6 frames it reaches 90% on the first step, so a "draw-on"
+    reads as a cut. Use linear or a longer window if the draw must be seen.
+37. `comp.layers.add(item)` adds footage or a precomp; `item.remove()` deletes a comp; `comp.addMarker {time, comment}` needs `comp.open` first.
+38. **Linear Wipe sweeps the whole layer's bounds,** not the visible pixels. On a text layer (bounds far wider than the word) a 25% step showed nothing and 75% showed everything. For a word wipe, put a rect mask on the word's `sourceRectAtTime` bounds and key its path with HOLD keys every 2 frames (EX02V3 `build/1A.jsx`).
+39. **Motion blur doubles stepped layers:** the shutter straddles a 12fps step and shows both poses. Turn `motionBlur` on only for layers that move with the camera alone (EX02V3 `build/3A.jsx`).
+40. **A comp's `bgColor` does not render when it is nested** in another comp (the precomp is transparent there). Put a solid at the bottom if the colour matters (EX02V3 4A rendered black in the MASTER).
+41. **`misreg()` on a stamped layer:** the duplicate inherits opacity keys, so `setValue` throws; clear the keys first (EX02V3 lib).

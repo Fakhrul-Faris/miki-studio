@@ -1,0 +1,12 @@
+stamp hit 9.21s gain 0.38
+snip hit 13.62s gain 0.6
+rip hit 16.54s gain 0.4
+click hit 18.79s gain 0.6
+click hit 20.75s gain 0.6
+click hit 22.17s gain 0.6
+beep hit 24.88s gain 0.3
+rip hit 29.71s gain 0.26
+swell hit 38.92s gain 0.2
+click hit 42.25s gain 0.65
+bed: Free Drone Bed 0.16, fade in 1.5s / out 2.5s
+sources: audio/*.mp3 (user-supplied), trims in this mix

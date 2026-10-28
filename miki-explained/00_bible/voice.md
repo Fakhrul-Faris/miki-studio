@@ -2,13 +2,14 @@
 
 - **Direction:** calm, low, unhurried. A documentary narrator, not an ad read.
 - **Language:** English only.
-- **Word budget:** 55s at ~145 words/min ≈ **130 words max.** One idea per video.
-- **Render line by line** so pauses can be retimed in the edit. The silence before the reveal is
+- **Word budget:** ≈ **130 words max** (about 40s once tightened). One idea per video.
+- **Render line by line** (L01–L06) so pauses can be retimed in the edit (`tools/vo_tighten.py`). The silence before the reveal is
   what makes it land.
 - Lock one voice and never change it; the voice is half the series identity.
 
 ## Locked voice
 
-- **Name:** Paige, engaging narrator
-- **ElevenLabs voice ID:** `NDTYOmYEjbDIVCKB35i3`
-- Locked 2026-10-27 (used for EX00 and EX01). Every episode uses this voice; record any settings changes here.
+- **Name:** Nathan, narrator
+- **ElevenLabs voice ID:** `v4k7NzxipnuJNJtrKxob`
+- Locked 2026-10-28 (EX02V3 "The Doorway"). Every episode uses this voice; record any settings changes here.
+- Earlier: Paige (`NDTYOmYEjbDIVCKB35i3`), EX00–EX02V2. Retired.

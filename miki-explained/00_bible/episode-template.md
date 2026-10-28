@@ -24,11 +24,15 @@ Every fact in the script, with its source. No unverified claims.
 
 Word count: _
 
-## Diagram shot list
+## Shot list (cut to the voice)
 
-| # | Time | Canvas position / camera move | What draws on | Accent line? |
+Every episode mixes all three ingredients: collage, documentary image (2–3), diagram.
+
+| Shot | Starts on word | Ingredient | Key moment → word | Transition in |
 |---|---|---|---|---|
-| 1 | | | | |
+| 1A | | collage | | |
+
+Media prompts: `how-i-generate.md` (from `templates/media-prompts.md`).
 
 ## Voice
 

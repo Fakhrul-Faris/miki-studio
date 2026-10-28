@@ -1,87 +1,75 @@
 # Visual system
 
-## North point (V2, 2026-10-28): **nothing appears from nowhere**
+## House format (V3, from 2026-10-28): cut-paper mixed media
 
-Every frame is born from the one before it. The next scene grows out of a shape, position, colour or object already on
-screen, carried by motion (a morph, a shape match, the camera travelling), never by a cut or an effect. One subject at a
-time, in plenty of space. This is what all 32 references share (`01_references/v2-style-study.md` § North point).
+Every Miki Explained episode is built like **EX02V3 "The Doorway"** (`04_episodes/EX02V3_doorway`, see its README).
+It replaces V1 (cards and tiles on cream/brown) and V2 (flow style, Work Sans, 3D chrome-head humans).
 
-### How to apply it
-1. **Choose the thread first.** Before the visuals, decide the one hero element the episode carries (a sticker, a dot,
-   a line, a chair, a coin). Every beat is a new *state* of it.
-2. **Bookend.** End on the shape you opened with, changed by what the story taught.
-3. **Transitions are motion:** morph (same place, new form), shape match (a circle becomes a different circle), the camera
-   travelling or pulling back (EX00V3's field reveal). Cross-fades only *during* a morph. No flash fills, bursts, sparks.
-4. **Soft motion:** decelerate into place, no bounce (`pop()` is soft by default; `popBounce()` is a rare exception);
-   big moves 0.6–1.2s; moves overlap; the camera never stops drifting.
-   **Camera moves ease in and out** (`camMove()`: log-space zoom, a 1.5–2s move with holds either side), and a field around the
-   hero sits in depth (`depth()`) so the camera reads as travelling, not zooming a flat page (EX00V4).
-5. **One subject, lots of space.** At most ~3 things moving; text small and calm, beside the subject; holds of at least 1s.
-6. **2D first.** 3D only where a beat truly needs depth; humans only Fern-style (generated stills in space).
-7. **Velocity comes from travel and the camera**, not from effects.
+### Three ingredients, every episode
 
-Kit: `soft`, `enter`, `leave`, `glide`, `calmReveal`, `camera`, `camMove`, `depth` (blocks.jsx); proven in `04_episodes/EX00V3_flow-test`
-and `04_episodes/EX00V4_camera-test`.
+| Ingredient | Use it for | Made by |
+|---|---|---|
+| **Collage** | Scenes in cut paper: places, people, objects. Carries the look. | User generates stills → PhotoCraft separates layers |
+| **Documentary images** (2–3, required) | The real thing the story is about: the shop, the place, the moment | User generates documentary photos → PhotoCraft prints them as torn ink-and-paper photos |
+| **Diagram animation** | Anything abstract: comparisons, numbers, counters, maps, time, typography | Native in EffectCraft |
 
----
+If a line names a real place or object, show a documentary image. If it explains how something works or compares two
+things, use a diagram or typography (Doorway: "over an hour", "just the cut, ten minutes", "a long wait vs an unknown wait").
+Collage carries the rest. Prompts: `.claude/skills/miki-explained-episode/templates/media-prompts.md`.
 
-## V1 system (EX01–EX03), still valid for colour, type, captions, safe zones and sound
+### Art direction
 
-r06's storytelling grammar (claim → evidence → "what it means" → turn), built with Base44's craft (UI cards,
-flat tiles, assembly bursts, framed photos, constant drift). Proven in EX01 and EX02. The look is the brand, since
-there is no series name. All of it lives in `tools/ec/core.jsx` and `tools/ec/blocks.jsx`.
+- Editorial collage in the spirit of Vox and Fern: torn edges, halftone photo cut-outs, risograph grain, slight ink misregistration,
+  hard directional light, soft paper shadows, one hero element per frame, generous negative space.
+- **Palette:** paper `#EFE8DC`, ink `#111111`, one ochre accent `#C98A2B`. **One extra colour family** only in the one segment
+  that needs it (Doorway: signal green / yellow / red in Segment 4). Documentary photos are recoloured to ink and paper
+  (Gradient Map) with a torn paper rim.
+- **Type:** Anton for headlines and stamps, IBM Plex Mono for labels, counters and subtitles. All type is built natively,
+  never baked into images.
+- **Overlay on every shot** (one `OVERLAY` precomp): grain 7% overlay, paper texture 12% multiply, faint vignette.
 
-## Colour: one meaning each
+### Motion
 
-| Name (core.jsx) | Colour | Means | Never use it for |
-|---|---|---|---|
-| `ANSWER` | green `#21A35E` | the fix, the good outcome, Meikigo, the named concept's highlighter | the problem |
-| `PROBLEM` | coral `#E65C42` | the problem: the waiting, the loss, the customer who walks out | anything good |
-| `BLUE` | `#4F6BF5` | neutral data (walking time, handlers, a person who isn't the problem yet) | emphasis |
-| `INK` / `CREAM` / `CARD` | | text, background, cards | |
-| `BROWN` | `#2A221C` | "your shop": the turn and the takeaway are always on brown | the story half |
-| `RED` / `YELLOW` | | only when drawing something literally that colour (a traffic signal) | meaning |
+- **Two clocks:** elements step at 12fps (`posterizeTime(12)`), the camera moves smoothly at 24fps.
+- Expo ease-out (fast start, long settle); linear only for mechanical motion. No bounce, overshoot or elastic.
+- **Type never fades:** it is stamped (118% → 100% in 2 frames, with a misregistered multiply copy), mask-wiped, or cut on
+  letter by letter / word by word.
+- 3D layers in Z with one camera per shot; parallax comes from the camera.
+- No gradients, lens flares or glows, except a light the story switches on.
 
-EX01 and EX02 predate this rule (green meant both). From EX03 on, green is never the problem.
+### Transitions: nothing appears from nowhere
 
-## Structure
+No dissolves or fades. Each shot is born from the last one:
+- **Match cuts:** the same shape, number or light in the same place (the torn patch → the hole; the "10" → the stopwatch's 10;
+  a lamp → the photo's signal).
+- **Camera carries:** a push that continues through the cut, one continuous tilt across related shots.
+- **Paper moves:** a sheet slides over, the page tears and falls away, the last frame splits into flaps that fold back.
+  6–10 frames, calm, with a soft shadow.
 
-- **Story half on cream, "your shop" half on brown.** The zoom-through (a bar swells to fill the frame, then darkens to
-  brown) is the hinge, every episode.
-- **One continuous canvas.** The camera drifts (DRIFT null, 100→104% over the episode) and pushes in to annotate.
-  No hard cuts except into brown.
-- **Shared elements carry across beats.** A tile or photo from one beat becomes part of the next (the EX01 suitcase → card header).
+### Edit: the voice sets the tempo
 
-## Type
+- Narration is one continuous track: pauses over 0.45s trimmed to about 0.3s, 0.25s between lines (`tools/vo_tighten.py`).
+- Every cut starts on its word; every key moment (stamp, light, count) lands on the word it illustrates.
+- Holds are deliberate, about 1s, only where they earn it (after the hook line, before the closing question).
+- Episodes run about 40–45s.
 
-- **Work Sans** (Medium / SemiBold / Black) for claims, numbers and headlines. **Inclusive Sans** (Medium / SemiBold) for
-  labels, chips and captions.
-- **Minimum 32px for any text** (`MIN_TEXT`, enforced in `core.jsx`). Labels that need to be smaller are a sign of too much on screen.
-- **Hook line at least 84px**, and something visibly changes within the first 0.5s (a push, a pop, a burst).
-- Words appear as they are spoken (word timings from `tools/words.py`). The screen never runs ahead of the voice.
+### Subtitles
 
-## Mixed media
+IBM Plex Mono Medium 44px, ink on a paper pill, phrases of up to about 5 words cut on with the voice.
+**Hidden wherever the same words are already on screen** (stamps, typography shots, the title, the closing question).
+Keep the pill above **y 1460**: platform UI covers the bottom (Doorway's sat at y 1573–1651, too low, fix next episode).
 
-- AI-generated stills (Seedream): grayscale-tinted documentary photos as full-bleed backgrounds (`bleed()`) or white-framed
-  prints (`print()`). Generic only: no logos, no readable signage, no identifiable people.
-- **Label it.** Turn on the platform's AI-generated content label (TikTok "AI-generated content", Instagram "AI info") on every
-  post that uses generated photos. The series runs on credibility.
-- Check generated details against the facts (EX02's signal came out red/yellow/**blue**). Prompt the detail explicitly or crop it.
+### Sound
 
-## Layout and safe zones
+Voice, a low drone bed, and **about 8–10 hits on key moments only**: stamps, the snip, a paper rip or tear, a relay click when
+a light changes, a scanner beep, one swell into the title. Music, if any, sits under everything at about −23 dB.
+The user supplies the sound files; trim each to its hit and align the hit to the frame (`sfx/events.txt`).
+A Meikigo logo outro, if used, is silent.
 
-- Nothing important below **y 1460** (captions sit at y 1488–1552; platform UI covers below ~1536) or right of **x 960**.
-- Captions: dark pill, Inclusive Sans SemiBold 40, words revealed as spoken (`captions()`). **Mute captions** where the big
-  on-screen headline says the same words (the guess, the named concept): `captions.py --mute`.
+### Still valid from V1/V2
 
-## Motion
-
-- Pops: scale 0 → 116 → 96 → 100 (`pop()`). Anticipation on emphasis: 100 → 92 → 114 → 100 (`pulse()`).
-- Motion blur on anything that travels (cards, pointer, the zoom-through, walking tiles).
-- Constant slow drift; nothing holds dead still for more than ~1s.
-- Review in motion at 12fps (`tools/review.sh`), never on stills alone.
-
-## Sound
-
-Drone bed under the voice (−12dB) plus **4–6 effects on key moments only**. **The logo outro is always silent.**
-See `06_sfx/README.md` and `series-plan.md` § Sound rules.
+- Facts first: check generated details against the sources (EX02's signal came out red / white / blue). Prompt the detail or crop it.
+- **AI label:** turn on the platform's AI-generated content label on every post (TikTok "AI-generated content", Instagram "AI info").
+- Nothing important right of **x 960** or below **y 1460**.
+- Review in motion, not on stills: frame strips across every transition.
+- Flow, cohesion and cleanliness over flashy effects; nothing rushed or bouncy.

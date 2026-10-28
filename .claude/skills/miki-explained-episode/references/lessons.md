@@ -22,3 +22,12 @@ Full detail: `miki-explained/00_bible/effectcraft-notes.md`. Read before proposi
 | Building and rendering three episodes in one app session | 24 GB on a 16 GB Mac, kernel panic, EX02V2 lost unsaved | One episode per app session; save after every beat; quit the app before rendering |
 | `app.run("prop.set", { layer: l.index, … })` on an older layer | "no property `layerStyles/dropShadow/opacity`" | `layer: l.id` (index only works for a just-created layer) |
 | Camera as linear CAM scale keys + `soft()` (EX02V2) | Lurched then crawled: 38.6 doublings/s on the push's first frame; a flat page, no parallax | `camMove()` (log zoom, ease-in-out) + `depth()`, 1.5–2s moves (EX00V4 D) |
+| Brief timings (53 s of fixed frame counts) | Gaps between the voice lines, slow tempo | Voice sets the tempo: `vo_tighten.py`, every cut on its word (EX02V3) |
+| Hard cuts only | Choppy, no cohesion | Match cuts, camera carries, paper slides / tears / flaps; no dissolves |
+| Stills generated 16:9, with text, lights on | Regeneration, then PhotoCraft removal of every word and glow | `templates/media-prompts.md`: 9:16, no text, lights off, cut-out sheet |
+| Tape measure and scissors collages for "an hour" / "ten minutes" | Busy, slow to read | Typography for abstract beats; documentary photo (M2) for the real thing |
+| Two-track collage for "known vs unknown wait" | Figures without walk poses, fog not separable | Line diagram, native |
+| Illustration only | Viewer can't see what we mean | 2–3 documentary images, printed as torn duotones, every episode |
+| `select.subject` in PhotoCraft | Picked a building, not the man | `select.object` with a box |
+| Content-Aware Fill on flat paper | Smears, tints, ghosts | Copy clean areas of the same image (feathered, mirrored) |
+| Scripted find-and-replace adding `// comment` inside a call | Broke several shot scripts | Put comments at the end of the line, never inside a call |

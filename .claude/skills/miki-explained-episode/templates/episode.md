@@ -1,7 +1,7 @@
 # EXNN — Working title
 
 Status: _story → script → voice/media → build → posted_
-Voice: Paige, `NDTYOmYEjbDIVCKB35i3`
+Voice: Nathan, narrator, `v4k7NzxipnuJNJtrKxob`
 
 Lane: _
 Hook pattern: _
@@ -27,11 +27,15 @@ Every fact in the script, with its source. No unverified claims.
 
 Word count: _
 
-## Diagram shot list
+## Shot list (cut to the voice)
 
-| # | Time | Canvas position / camera move | What draws on | Accent line? |
+Every episode mixes all three ingredients: collage, documentary image (2–3), diagram.
+
+| Shot | Starts on word | Ingredient | Key moment → word | Transition in |
 |---|---|---|---|---|
-| 1 | | | | |
+| 1A | | collage | | |
+
+Media prompts: `how-i-generate.md` (from `templates/media-prompts.md`).
 
 ## Voice
 
@@ -48,12 +52,11 @@ Lines to paste into ElevenLabs, one per render.
 - Posted: _date_ · Link: _
 - Results (owner comments / owner DMs, not views): _
 
-## Mixed media (Seedream, generic, no logos/readable text, documentary 35mm, vertical 9:16)
+## Media
 
-- M1:
-- M3:
+Prompts for collage stills, the cut-out sheet and the documentary images live in `how-i-generate.md`.
 
-## Sound (4–6 moments, logo silent)
+## Sound (about 8–10 hits on key moments, any logo silent)
 
 - 
 
@@ -62,5 +65,5 @@ Lines to paste into ElevenLabs, one per render.
 - [ ] Sources quoted, open facts resolved
 - [ ] Credit chip + source in pinned comment
 - [ ] AI-generated content label on
-- [ ] Captions muted under matching headlines
+- [ ] Subtitles hidden where the words are on screen
 - [ ] Watched at full speed with sound
