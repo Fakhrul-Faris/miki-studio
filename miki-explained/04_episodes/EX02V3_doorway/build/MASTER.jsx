@@ -54,7 +54,7 @@ tear("4F", "5A", 1000, 11);
 tear("5A", "6A", 818, 29);
 // Subtitles: IBM Plex Mono, ink on a paper pill, lower third; cut on per phrase, hidden where the words are already on screen
 for (var si = 0; si < SUBS.length; si++) {
-  var sb = SUBS[si], txt = sb[2], wpx = txt.length * 26.4 + 60, SY = 1612;
+  var sb = SUBS[si], txt = sb[2], wpx = txt.length * 26.4 + 60, SY = 1390;   // TikTok safe area: pill bottom above y 1440 (Doorway was posted with SY 1612)
   var pill = c.layers.addShape(); pill.name = "sub pill " + (si + 1); P(pill).setValue([0, 0]); A(pill).setValue([0, 0]);
   var pg = pill.property("ADBE Root Vectors Group").addProperty("ADBE Vector Group").property("ADBE Vectors Group");
   var pr = pg.addProperty("ADBE Vector Shape - Rect"); pr.property("ADBE Vector Rect Size").setValue([wpx, 78]); pr.property("ADBE Vector Rect Position").setValue([W / 2, SY]); pr.property("ADBE Vector Rect Roundness").setValue(8);

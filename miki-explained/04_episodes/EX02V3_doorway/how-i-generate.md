@@ -30,6 +30,7 @@ Tools: Midjourney, Nano Banana, GPT-Image, Flux or Seedream. Each frame has a on
   Ask for blank labels, blank flags, blank screens, and empty paper or sky where a headline will go.
 - **Lights and glows off.** The glow is added natively at the moment it turns on, so generate the lamp dark.
 - **Anything that moves needs its own picture:** both poses of a pose swap, a walking figure, one icon to duplicate.
+- **Keep the hero and headline space inside the TikTok safe window** (clear 160 px top, 480 bottom, 60 left, 120 right).
 - **Keep figures in front of simple backgrounds.** A plate filled in behind a figure is the roughest part of any shot.
 
 ## Style lock (paste before every collage prompt)

@@ -66,4 +66,5 @@ Prompts for collage stills, the cut-out sheet and the documentary images live in
 - [ ] Credit chip + source in pinned comment
 - [ ] AI-generated content label on
 - [ ] Subtitles hidden where the words are on screen
+- [ ] TikTok safe area: every word and key subject inside x 60–960, y 160–1440 (one frame per shot checked)
 - [ ] Watched at full speed with sound

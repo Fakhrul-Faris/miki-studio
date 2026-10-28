@@ -30,6 +30,8 @@ compares two things, use a diagram; collage carries everything else and holds th
 - Lights and glows off (added natively when they turn on).
 - Anything that moves needs its own picture: both poses of a swap, a walker, one icon to duplicate.
 - Figures in front of simple backgrounds.
+- Keep the hero subject and any empty headline space inside the TikTok safe window (the middle of the frame, away from
+  the bottom quarter and the right edge): the UI covers the top 160 px, the bottom 480 px, 60 px left and 120 px right.
 - Check named details in documentary images against the facts; say them explicitly or plan to crop.
 
 ## Style lock (paste before every collage prompt)

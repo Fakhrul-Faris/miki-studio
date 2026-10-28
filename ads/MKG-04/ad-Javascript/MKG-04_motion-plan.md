@@ -6,21 +6,23 @@ Status: **draft v3 — Pulse idiom + Pulse's own visual/typographic language + a
 
 Short, present-tense, fragment-style — matches Pulse's own register more than a narrated voice-over would. This is now the authoritative on-screen copy; a separate voice-over may or may not read it word for word (not decided yet).
 
-| # | Line | Beat |
-|---|---|---|
-| 1 | "Your barber is great. Your queue is not." | 1a — Hook (**built**) |
-| 2 | "Bookings buried in chats. Commissions on scrap paper. Nobody agrees on the numbers." | 1b — Problem (3-stage highlight, one beat) |
-| 3 | "Meet Meikigo." | 2a — Brand sting |
-| 4 | "Customers pick their barber." | 2d — Phone |
-| 5 | "Pick a time, and book." | 2d — Phone |
-| 6 | "No app to download." | 2d — Phone |
-| 6.5 | "No POS terminal to buy." | 3a — Phone→tablet hand-off (new — makes explicit that everything runs on the phone, tablet and laptop they already own, no special hardware) |
-| 7 | "One tap to check in." | 3b — Tablet |
-| 8 | "One tap to get paid." | 3c — Tablet |
-| 9 | "Every chair. Every barber. One screen." | 4a — Laptop/portal |
-| 10 | "No more chasing commissions." | 4a — Laptop/portal (callback to line 2) |
-| 11 | "From booking to payout in 5 minutes." | 4b — Tagline (locked brand claim) |
-| 12 | "Sign up for free." | 4c — CTA (locked brand requirement) |
+
+| #   | Line                                                                                  | Beat                                                                                                                                         |
+| --- | ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | "Your barber is great. Your queue is not."                                            | 1a — Hook (**built**)                                                                                                                        |
+| 2   | "Bookings buried in chats. Commissions on scrap paper. Nobody agrees on the numbers." | 1b — Problem (3-stage highlight, one beat)                                                                                                   |
+| 3   | "Meet Meikigo."                                                                       | 2a — Brand sting                                                                                                                             |
+| 4   | "Customers pick their barber."                                                        | 2d — Phone                                                                                                                                   |
+| 5   | "Pick a time, and book."                                                              | 2d — Phone                                                                                                                                   |
+| 6   | "No app to download."                                                                 | 2d — Phone                                                                                                                                   |
+| 6.5 | "No POS terminal to buy."                                                             | 3a — Phone→tablet hand-off (new — makes explicit that everything runs on the phone, tablet and laptop they already own, no special hardware) |
+| 7   | "One tap to check in."                                                                | 3b — Tablet                                                                                                                                  |
+| 8   | "One tap to get paid."                                                                | 3c — Tablet                                                                                                                                  |
+| 9   | "Every chair. Every barber. One screen."                                              | 4a — Laptop/portal                                                                                                                           |
+| 10  | "No more chasing commissions."                                                        | 4a — Laptop/portal (callback to line 2)                                                                                                      |
+| 11  | "From booking to payout in 5 minutes."                                                | 4b — Tagline (locked brand claim)                                                                                                            |
+| 12  | "Sign up for free."                                                                   | 4c — CTA (locked brand requirement)                                                                                                          |
+
 
 Line 6.5 and lines 9-12 are proposed, pending your confirmation; lines 1-6, 7 and 8 are confirmed. Line 6.5 is constructed to rhyme with line 6 ("No [thing] to [verb].") — one for the customer side (no app), one for the merchant side (no special hardware) — bookending the device hand-off from phone to tablet.
 
@@ -32,6 +34,8 @@ Beat 1a surfaced two more gaps between the plan and Pulse beyond pure motion tec
 - **Background: pure black** for any beat that is pure kinetic type with no device UI on screen (matches Pulse's own hook/punch/pivot beats), not the off-white the `storyboard/` frames used. Device-UI beats (phone/tablet/laptop screens) still read light/white, matching the real product.
 - **Per-word entrance: slide in from the right, not rise from below.** Each word settles into its final reading-order slot from a rightward offset, fast (~0.14s per word, ~0.08-0.09s between word starts) — this is now the default cascade for every caption in the piece, replacing the earlier bottom-up fade.
 - **No decorative cards.** The pastel sticky-note ticket cards from `storyboard/` frame 01 are dropped entirely. Where a "proof" element is needed beside kinetic type, it's a small live-counting UI chip (flat accent-colour pill, white number, muted label) in Pulse's own register — not an illustrated card.
+
+
 
 ## How beat 1a actually works now (built, in `MKG-04_ad.html`)
 

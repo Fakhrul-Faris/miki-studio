@@ -53,11 +53,24 @@ No dissolves or fades. Each shot is born from the last one:
 - Holds are deliberate, about 1s, only where they earn it (after the hook line, before the closing question).
 - Episodes run about 40–45s.
 
+### TikTok safe area (1080 × 1920)
+
+| Edge | Keep clear | Why |
+|---|---|---|
+| Top | **160 px** (at least 108) | Following / For You tabs, search |
+| Bottom | **480 px** (at least 320) | username, caption, audio, nav bar |
+| Left | **60 px** | |
+| Right | **120 px** | like / comment / share rail |
+
+**Safe window: x 60–960, y 160–1440.** Every word on screen (headlines, stamps, labels, counters, subtitles) and every
+key subject sits inside it; text in the central **840 × 1280** sweet spot (about x 90–930). Backgrounds and plates still
+bleed to the frame edge. Check one frame per shot against a safe-area guide before the final render.
+
 ### Subtitles
 
 IBM Plex Mono Medium 44px, ink on a paper pill, phrases of up to about 5 words cut on with the voice.
 **Hidden wherever the same words are already on screen** (stamps, typography shots, the title, the closing question).
-Keep the pill above **y 1460**: platform UI covers the bottom (Doorway's sat at y 1573–1651, too low, fix next episode).
+The pill sits inside the safe window, its bottom edge at or above **y 1440** (centre about y 1390). Doorway's sat at y 1573–1651, inside the bottom UI.
 
 ### Sound
 
@@ -70,6 +83,6 @@ A Meikigo logo outro, if used, is silent.
 
 - Facts first: check generated details against the sources (EX02's signal came out red / white / blue). Prompt the detail or crop it.
 - **AI label:** turn on the platform's AI-generated content label on every post (TikTok "AI-generated content", Instagram "AI info").
-- Nothing important right of **x 960** or below **y 1460**.
+- The TikTok safe window (x 60–960, y 160–1440) holds every word and key subject; see § TikTok safe area.
 - Review in motion, not on stills: frame strips across every transition.
 - Flow, cohesion and cleanliness over flashy effects; nothing rushed or bouncy.

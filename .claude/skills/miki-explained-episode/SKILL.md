@@ -83,6 +83,8 @@ Copy `EX02V3_doorway/build/` as the starting kit: `lib.jsx` (set `DIR`; helpers 
 `<shot>.jsx` per shot and `MASTER.jsx` (shots at their word frames, paper slides and tears, match-ins, subtitles from
 `subs.jsx`, the audio). Rebuild with `build/run.sh overlay <shots…> MASTER`; each shot script rebuilds its own comp, so
 rerunning one is safe. Key frames inside a shot are frames from the shot's start, set from the word times.
+**TikTok safe area:** every word and key subject inside x 60–960, y 160–1440 (clear 160 top, 480 bottom, 60 left, 120 right;
+text in the central 840 × 1280); subtitles end above y 1440. Check one frame per shot against it before the final render.
 Review with frame strips across every transition and on every key word (render-frame / ffmpeg tiles of a half-res
 render), then a half-res MASTER preview for the user.
 

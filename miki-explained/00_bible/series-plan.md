@@ -108,4 +108,5 @@ or pinned post, so the series is bingeable and owners get shorthand they repeat.
 2. Source credit chip on screen in the hook, and the source in the pinned comment.
 3. **Turn on the platform's AI-generated content label** if the episode uses generated photos.
 4. Subtitles hidden where the same words are already on screen.
+4b. TikTok safe area checked: every word and key subject inside x 60–960, y 160–1440 (`visual-system.md` § TikTok safe area).
 5. Watched once at full speed with sound; any logo outro is silent.
