@@ -110,3 +110,25 @@ Word times come from faster-whisper word timestamps, corrected with silencedetec
 39. **Motion blur doubles stepped layers:** the shutter straddles a 12fps step and shows both poses. Turn `motionBlur` on only for layers that move with the camera alone (EX02V3 `build/3A.jsx`).
 40. **A comp's `bgColor` does not render when it is nested** in another comp (the precomp is transparent there). Put a solid at the bottom if the colour matters (EX02V3 4A rendered black in the MASTER).
 41. **`misreg()` on a stamped layer:** the duplicate inherits opacity keys, so `setValue` throws; clear the keys first (EX02V3 lib).
+
+## Blender (3D paper shots, from 2026-10-30)
+
+Blender 5.2.3 (`brew install --cask blender`, command `blender`), driven **headless**: `blender -b --python shot.py -- <out_dir>`.
+Kit: **`tools/blender/paperkit.py`** (import it from the shot script). Renders 9:16 transparent PNG frames that go into
+EffectCraft like any other layer.
+
+| Function | What |
+|---|---|
+| `setup(frames, w, h)` | EEVEE, transparent film, **Standard** colour (the default AgX washes stills out) |
+| `card(png, height, loc, thickness, wobble)` | a still or cut-out standing upright; PNG alpha keeps torn edges; slight random tilt (no machine-perfect paper) |
+| `sheet(w, h, loc, colour, rot)` | plain paper wall / floor / backing |
+| `lights()` | hard sun key (crisp paper shadows) + soft area fill |
+| `rig(distance, height, lens, target)` | camera that tracks a target empty; rotate the target to orbit |
+| `orbit` · `perfect_loop` · `swing_loop` · `speed_ramp` · `crane` · `push` · `walk` | camera moves (kevinbadi/blender-skills recipes, rebuilt headless and 9:16) |
+| `falling_paper(png, …)` + `bake_physics(frames)` | a sheet that drops and bends (stiff cloth preset); step frames from 1 before rendering |
+| `render(out, frames, step)` | write `prefix_0001.png…`; `step=2` for the 12 fps look |
+
+Proven 2026-10-30 at 540×960: a seamless sway loop over a 3-layer paper set (5 frames ~6 s) and a falling complaint slip
+landing on a desk with its shadow (4 frames ~4 s), ~0.5 GB each.
+Traps: `perfect_loop` keys the end one frame past the last rendered frame, LINEAR (frame N flows into frame 1); a full 360°
+shows the backs of flat cards, so use `swing_loop` for paper sets; cloth only simulates frame by frame from its start.

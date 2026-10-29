@@ -9,6 +9,8 @@ promote to an episode folder (`04_episodes/EXNN_slug/`) and fill the episode col
 **How an idea becomes an episode:** verify the facts → script on reveal → contrast → urgency → proof → shot list with all
 three ingredients (collage, documentary image, diagram) → `how-i-generate.md` → build. See the `miki-explained-episode` skill.
 
+Editing, camera and animation tests (one per episode): `03_ideas/experiments.md`.
+
 ## Contents
 1. Stories (single episodes, by lane)
 2. Series: How It Makes Money
