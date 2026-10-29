@@ -53,6 +53,19 @@ No dissolves or fades. Each shot is born from the last one:
 - Holds are deliberate, about 1s, only where they earn it (after the hook line, before the closing question).
 - Episodes run about 40–45s.
 
+### Anti-slideshow check (every cut; from wuwangzhang1216/DirectorSKILL)
+
+Videos built from stills read as a slideshow when the cuts are lazy. Check each cut against these:
+1. Something is moving in the last 12 frames of A and the first 12 frames of B, in the same general direction.
+2. Change the shot size by two steps (wide → close), or the angle by 30°+; never two same-size, same-angle shots in a row
+   (unless repetition is the device).
+3. One continuous sound bed under the whole video, never restarted at a cut.
+4. Let a movement start in A and finish in B (a hand reaches in A; the object is held in B).
+5. Vary shot lengths: three cuts within 0.3 s of the same length tick like a metronome.
+6. Change direction of travel at least once every four shots.
+7. Never open two shots in a row on a static frame; if B starts still, give A a moving exit.
+8. Every shot has at least two layers of motion (subject, something secondary, the environment or the camera).
+
 ### TikTok safe area (1080 × 1920)
 
 | Edge | Keep clear | Why |

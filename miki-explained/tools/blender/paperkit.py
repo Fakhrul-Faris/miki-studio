@@ -186,3 +186,54 @@ def render(out, frames=None, step=1, prefix="f"):
     for f in fr:
         sc.frame_set(f); sc.render.filepath = f"{out}/{prefix}_{f:04d}.png"
         bpy.ops.render.render(write_still=True)
+
+
+# ---------- stop-motion feel (from angrypenguinpng/blender-claymation-skill, look-guide numbers) ----------
+def on_twos(objs, frames, every=2):
+    """Re-key each object's evaluated transform every `every` frames and hold it (CONSTANT): 12 fps 'on twos'.
+    Smooth tweening is the biggest tell that it's CG. Use on paper pieces, never on the camera."""
+    sc = bpy.context.scene; poses = {}
+    for f in range(1, frames + 1, every):
+        sc.frame_set(f)
+        poses[f] = [(o.location.copy(), o.rotation_euler.copy(), o.scale.copy()) for o in objs]
+    for o in objs:
+        if o.animation_data:
+            o.animation_data_clear()
+    for f, ps in poses.items():
+        for o, (l, r, s) in zip(objs, ps):
+            o.location, o.rotation_euler, o.scale = l, r, s
+            o.keyframe_insert("location", frame=f); o.keyframe_insert("rotation_euler", frame=f); o.keyframe_insert("scale", frame=f)
+    for o in objs:
+        interpolation(o, "CONSTANT")
+
+
+def boil(objs, frames, amp=0.0006, rot=0.25, every=2, seed=1):
+    """Hand-placement jitter: a tiny random offset (amp in metres, rot in degrees) per held pose, also during holds.
+    Run after on_twos (or on still pieces). Leave the backdrop still."""
+    r = random.Random(seed)
+    for o in objs:
+        base = [(o.location.copy(), o.rotation_euler.copy())]
+        for f in range(1, frames + 1, every):
+            bpy.context.scene.frame_set(f)
+            l, e = o.location.copy(), o.rotation_euler.copy()
+            o.location = (l.x + r.uniform(-amp, amp), l.y + r.uniform(-amp, amp) * 0.5, l.z + r.uniform(-amp, amp))
+            o.rotation_euler = (e.x + math.radians(r.uniform(-rot, rot)), e.y + math.radians(r.uniform(-rot, rot)), e.z + math.radians(r.uniform(-rot, rot)))
+            o.keyframe_insert("location", frame=f); o.keyframe_insert("rotation_euler", frame=f)
+            o.location, o.rotation_euler = l, e
+        interpolation(o, "CONSTANT")
+
+
+def flicker(light, frames, pct=1.5, every=2, seed=2):
+    """Real stop-motion sets flicker: key light energy ±pct % per held frame (practicals can go ±10 %)."""
+    r = random.Random(seed); e0 = light.data.energy
+    for f in range(1, frames + 1, every):
+        light.data.energy = e0 * (1 + r.uniform(-pct, pct) / 100); light.data.keyframe_insert("energy", frame=f)
+    light.data.energy = e0
+    interpolation(light.data, "CONSTANT")
+
+
+def miniature(cam, focus_obj=None, fstop=4.0, lens=50):
+    """Tabletop-miniature depth of field (50 mm, f/3–5): the background softens like a real paper set."""
+    cam.data.lens = lens; cam.data.dof.use_dof = True; cam.data.dof.aperture_fstop = fstop
+    if focus_obj:
+        cam.data.dof.focus_object = focus_obj

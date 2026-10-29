@@ -15,6 +15,8 @@ diagrams); **the editing, camera, motion and structure do.**
   drop is, comments / shares / saves per 1 000 views. Two or three episodes per test before calling it.
 - **Keep what wins in the house format; retire what loses.** Log the verdict in the Verdict column.
 
+Sources folded in (2026-10-30): claymation look numbers (angrypenguinpng/blender-claymation-skill), paper mechanisms, depth planes, piece-by-piece assembly and the paper SFX list (MiniMax-H3 papercraft and paper-collage skills), staircase montage (smixs/visual-skills), rhythm patterns and director overlays (wuwangzhang1216/DirectorSKILL; its anti-slideshow rules are now house QC in `00_bible/visual-system.md`).
+
 Built with what we have: EffectCraft (2D/3D layers, cameras, expressions, masks, time remap), PhotoCraft (cut-outs, depth
 plates, fills), ffmpeg, and the stills / voice the user generates. **Feasibility:** ✓ easy · ◐ needs extra media or a test ·
 ✗ not with our tools.
@@ -60,6 +62,12 @@ cards with thickness, real light and shadow, rendered with transparency and comp
 | E5 | **Cut on the beat**: cuts locked to the music's beats, not the voice | Rhythm feels "edited", not narrated | Beat detection with ffmpeg; cut list from beats | Avg watch, rewatches | ✓ |
 | E6 | **Silence drop**: all sound cuts to nothing for 0.5 s before the key fact | The brain leans in when sound vanishes | Duck voice/music/bed | Retention at that moment | ✓ |
 | E7 | **Freeze frame + call-out**: the picture freezes, an ink circle and arrow point at the detail | Directs the eye; "look at this" | Time remap hold + trim-path circle | Retention at the freeze, shares | ✓ |
+| E9 | **Staircase montage**: shot lengths long → shorter → shorter → a pause → the impact shot | Builds tension into the key fact (a classic montage rhythm) | Plan shot lengths against the voice | Retention at the impact | ✓ |
+| E10 | **Accelerating sequence**: each shot about 0.7× the last (4.0 / 2.8 / 2.0 / 1.4 / 1.0 / 0.7 s), then one long 5–8 s release | Pressure building to a decision; the release is mandatory | Plan shot lengths against the voice | Retention through the sequence | ✓ |
+| E11 | **Long hold, sudden cut**: one 8–14 s held shot, then a 0.5–1 s shot | The mismatch is the effect | Script a long line over one shot | Retention at the cut | ✓ |
+| E12 | **The breath**: a near-empty 2.5–4 s shot with only ambience right after the big fact | The fact sinks in and is remembered | Hold an empty paper frame, music out | Retention after the fact, saves | ✓ |
+| E13 | **Rule of three**: three shots the same size, angle and length with one thing escalating, broken on the fourth | Setup → payoff, works for comedy and tension | Three matched shots, then a different size and length | Retention at the break, shares | ✓ |
+| E14 | **Director overlay**: borrow one director's rhythm and camera rules for a whole episode (e.g. Kubrick symmetry and long holds, Wong Kar-wai step-printed motion, Fincher locked precise moves) | A strong, consistent authorial feel | DirectorSKILL style notes: average shot length, allowed and forbidden moves | Avg watch, comments | ✓ |
 | E8 | **Speed ramp**: a move rushes, then slows to near-still on the key word | Emphasis by time, not by size | Time remap curves on the camera | Retention at the ramp | ✓ |
 
 ## 3. Camera
@@ -72,18 +80,21 @@ cards with thickness, real light and shadow, rendered with transparency and comp
 | C4 | **First-person walk**: the camera is the customer walking in, waiting, paying | The viewer lives the story | A corridor of plates in depth, a slow bobbing camera | Avg watch, % full | ◐ |
 | C5 | **Crash zoom on numbers**: the camera snaps into each figure | Punch on data | 3–4 frame zoom with a short hold | Retention at the zoom | ✓ |
 | C6 | **Tilt-shift miniature**: documentary photos made to look like tiny models | Makes real places feel like a diagram | Graduated blur top and bottom in PhotoCraft + EffectCraft | Shares, saves | ✓ |
+| C8 | **Four depth planes with foreground occluders**: paper leaves, clouds or a frame edge in front of the subject, plus midground, background and far background | Real parallax and a "peeking into a miniature" feel | Blender `card`/`sheet` at 4 depths + `miniature()` depth of field | Avg watch | ✓ |
 | C7 | **Locked-off camera, everything moves to it**: the camera never moves, all motion comes from paper | Opposite of the drift; reads as stop-motion | No camera; layers move | Avg watch | ✓ |
 
 ## 4. Animation and motion
 
 | # | Test | Why | How | Measure | Feas. |
 |---|---|---|---|---|---|
-| A1 | **True stop-motion at 8 fps**, with slight jitter | Feels physical and handmade, not digital | posterizeTime(8) + 1 px random wobble on everything | Avg watch, comments ("how was this made?") | ✓ |
+| A1 | **True stop-motion**: poses held on twos (12 fps) or 8 fps, with *boil* (tiny random hand-placement jitter on every held pose, also during holds) and a ±1–2 % light flicker | Feels physical and handmade, not digital | EffectCraft: posterizeTime + seeded 1–2 px / 0.2° random per step. Blender: `paperkit.on_twos`, `boil`, `flicker` | Avg watch, comments ("how was this made?") | ✓ |
 | A2 | **Kinetic typography only**: no pictures, the words carry it | Readable with the sound off | Type-only shots, stamps, wipes | % full, retention with sound off | ✓ |
 | A3 | **Morph between objects**: a clock becomes a carousel becomes a coin | Continuity without cuts | Shape layers morphing, or matched masks | Avg watch | ◐ |
 | A4 | **Live data build**: charts draw from real numbers, bar by bar, as the voice says them | Proof feels earned | Bars and lines keyed to word times | Saves, shares | ✓ |
 | A5 | **Paper physics**: cards fall, flutter and settle with weight | Tactile; satisfying | Stepped keyframes with overshoot-free settles, slight rotation drift | Avg watch | ✓ |
 | A6 | **Rotoscoped documentary**: a real photo traced into ink lines that draw on | Bridges photo and diagram | PhotoCraft edge trace → trim-path reveal | Retention at the reveal | ◐ |
+| A8 | **Paper mechanisms**: things move like real paper toys (pull-tabs, sliders, rotating discs, page flips, pop-up folds) | Mechanical cause and effect reads instantly and is satisfying | Hinged layers (anchor on the fold), masks for pull-tabs, Blender for pop-ups | Avg watch, shares | ◐ |
+| A9 | **Build the still piece by piece**: each shot starts on empty paper and the final still assembles from its cut-outs (base, then the main object, then details), then holds | Viewers watch to see it complete | The PhotoCraft cut-outs we already make, entering one by one with press-flat settles | Avg watch, % full | ✓ |
 | A7 | **Halftone dissolve**: a photo breaks into dots that become the diagram | A signature transition built from the style itself | Halftone layers + stepped masks | Avg watch | ◐ |
 
 ## 5. Structure and story
@@ -103,7 +114,7 @@ cards with thickness, real light and shadow, rendered with transparency and comp
 | # | Test | Why | How | Measure | Feas. |
 |---|---|---|---|---|---|
 | U1 | **No music**, voice and effects only | Clarity vs mood | Mute the music layer | Avg watch | ✓ |
-| U2 | **Paper foley throughout**: every card makes its real sound (slide, tap, tear) | ASMR texture keeps people in | Small library of paper sounds | Avg watch, comments | ◐ (sound files) |
+| U2 | **Paper foley throughout**: every card makes its real sound (paper flip, scissor snip, cardboard slide, rustle, tape peel, press-flat tap, small paper snap) | ASMR texture keeps people in | Small library of paper sounds | Avg watch, comments | ◐ (sound files) |
 | U3 | **Voice-off, text-only** version | Most people scroll muted | Captions become the main text | Retention, sound-off share | ✓ |
 | U4 | **Faster voice** (+10 % speed) | Same words, less time | ffmpeg atempo on the voice | % full | ✓ |
 

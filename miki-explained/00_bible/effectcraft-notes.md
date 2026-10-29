@@ -126,6 +126,8 @@ EffectCraft like any other layer.
 | `rig(distance, height, lens, target)` | camera that tracks a target empty; rotate the target to orbit |
 | `orbit` · `perfect_loop` · `swing_loop` · `speed_ramp` · `crane` · `push` · `walk` | camera moves (kevinbadi/blender-skills recipes, rebuilt headless and 9:16) |
 | `falling_paper(png, …)` + `bake_physics(frames)` | a sheet that drops and bends (stiff cloth preset); step frames from 1 before rendering |
+| `on_twos(objs, frames)` · `boil(objs, frames)` · `flicker(light, frames)` | stop-motion feel: poses held 2 frames (CONSTANT), tiny hand-placement jitter on every held pose, ±1.5 % light flicker (numbers from angrypenguinpng/blender-claymation-skill) |
+| `miniature(cam, focus_obj, fstop)` | tabletop depth of field, 50 mm, f/3–5 |
 | `render(out, frames, step)` | write `prefix_0001.png…`; `step=2` for the 12 fps look |
 
 Proven 2026-10-30 at 540×960: a seamless sway loop over a 3-layer paper set (5 frames ~6 s) and a falling complaint slip
