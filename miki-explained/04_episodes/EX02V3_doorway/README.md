@@ -15,4 +15,4 @@
 | `media-to-generate.md` | Cut-outs still using stand-ins. |
 | `_archive/` | Files not used by the episode. |
 
-Brief: `../EX02_qb-house/instruction.md` (timings superseded: the cut follows the voice).
+Brief: `../_archive/EX02_qb-house/instruction.md` (timings superseded: the cut follows the voice).

@@ -1,0 +1,8 @@
+stamp f3 (frame-0 data)
+click f198 (2.5)
+click f220 (1.7)
+rip f326 (tear to the timeline)
+stamp f481 (THE PEAK-END RULE)
+rip f520 (tear to the real shop)
+tick f588 (0:30 countdown starts)
+bed: drone 0.16 · music: Dark Synthwave Beat, own MASTER layer at -15 dB (same as EX01V3, so the hook test changes only the hook)

@@ -1,6 +1,6 @@
 # EX01V3 — The Wait Tax (remake of EX01 in the house format)
 
-Status: **exported 2026-10-29**: `export/EX01V3.mp4` (45.2 s) → post
+Status: **posted 29 Oct 2026** (`export/EX01V3.mp4`, 45.2 s)
 Voice: Nathan, narrator, `v4k7NzxipnuJNJtrKxob`
 Format: cut-paper house format (`00_bible/visual-system.md`), TikTok safe area, cut to the voice
 
@@ -87,9 +87,28 @@ footsteps under M2 (2D), stamp (2E), swell into the title (5B), one last tick on
 
 ## Post
 
-- Caption: _
-- Hashtags: _
-- Pinned comment: Want us to check your shop for the Wait Tax? DM "WAIT". (Sources: NYT 2012; D. Maister, 1985.)
+**Caption:**
+```
+The fastest way to fix a long wait isn't making it shorter ⏱️
+
+A Houston airport hired more baggage handlers. The wait fell to 8 minutes. The complaints didn't. So they made passengers walk 6x further to the belt, and complaints dropped to near zero.
+
+Customers don't mind long waits. They mind empty ones. That's the Wait Tax.
+
+What does your waiting area give people to do? 👇
+
+#customerexperience #smallbusiness #barbershop #businesstips #psychology
+```
+
+**Pinned comment:**
+```
+Want us to check your shop for the Wait Tax? DM "WAIT".
+Sources: Alex Stone, "Why Waiting Is Torture", The New York Times (2012); David Maister, "The Psychology of Waiting Lines" (1985).
+```
+
+- Turn on the AI-generated content label (generated photos and stills).
+- Posted: 29 Oct 2026 · Link: _
+- Results (owner comments / owner DMs, not views): _
 
 ## Before posting
 

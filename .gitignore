@@ -45,3 +45,6 @@ miki-explained/04_episodes/*/_archive/
 miki-explained/04_episodes/*/audio/*.wav
 miki-explained/04_episodes/*/sfx/source/
 miki-explained/04_episodes/*/audio/* *.mp3
+
+# archived episodes: anything not already tracked stays local
+miki-explained/04_episodes/_archive/**

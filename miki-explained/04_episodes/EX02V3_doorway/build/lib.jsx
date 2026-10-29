@@ -1,5 +1,5 @@
 // EX02V3 "The Doorway": shared helpers for the headless shot builds.
-// Brief: ../EX02_qb-house/instruction.md (overrides in media-to-generate.md and the episode memory: 9:16, stop after every shot).
+// Brief: ../_archive/EX02_qb-house/instruction.md (overrides in media-to-generate.md and the episode memory: 9:16, stop after every shot).
 // Each shot script rebuilds its own comps from scratch, so it can be rerun safely.
 var W = 1080, H = 1920, FPS = 24, F = 1 / 24;
 var DIR = "/Users/user/Private/miki-studio/miki-explained/04_episodes/EX02V3_doorway/";

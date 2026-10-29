@@ -30,7 +30,7 @@ narration track, every cut and key moment on its word. Simple subtitles, about 8
 
 | # | Gate | Output | User approves |
 |---|---|---|---|
-| 1 | Story + facts | backlog row, sources in `episode.md` | the story |
+| 1 | Story + facts | content-bank row, sources in `episode.md` | the story |
 | 2 | Script + shot list | `episode.md`: script (≈130 words, 6 lines), shot list with an ingredient per shot | the script and shot list |
 | 3 | Media prompts | `how-i-generate.md` (from `templates/media-prompts.md`) | the prompts |
 | 4 | Voice + media | user renders L01–L06 → `audio/`, stills, cut-out sheet and M1–M3 → `media/` | — |
@@ -41,7 +41,7 @@ narration track, every cut and key moment on its word. Simple subtitles, about 8
 | 9 | Post + calendar | `episode.md` § Post, `05_calendar/calendar.md`, `glossary.md` | — |
 
 ### 1. Story + facts
-Pick from `03_ideas/backlog.md`, rotating lanes; **at least every third episode is Malaysian**. Verify every number against
+Pick from `03_ideas/content-bank.md` (stories, the How It Makes Money series, series pitches), rotating lanes; **at least every third episode is Malaysian**. Verify every number against
 a primary source and quote it in `episode.md` § Sources. Unconfirmable details are cut or flagged. Never invent stats.
 
 ### 2. Script + shot list

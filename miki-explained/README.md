@@ -18,7 +18,7 @@ solves without ever pitching the product.
 | ├ `voice.md` | ElevenLabs direction and word budget | Every voice render |
 | └ `episode-template.md` | Copy into each episode folder | New episode |
 | `01_references/` | Example clips + per-clip analysis, beat index, diagram patterns | Learning the style |
-| `03_ideas/backlog.md` | Story ideas → fact check → promoted to episode | Writing new episodes |
+| `03_ideas/content-bank.md` | All ideas (stories, series, pitches) → fact check → promoted to episode | Writing new episodes |
 | `04_episodes/EXNN_slug/` | One folder per episode | Daily work |
 | `05_calendar/calendar.md` | Day → episode → status → link | Scheduling |
 | `06_sfx/` | Shared sound library (ElevenLabs set + synth placeholders) | Sound mix |
@@ -29,7 +29,7 @@ solves without ever pitching the product.
 Use the **`miki-explained-episode` skill** (`.claude/skills/miki-explained-episode/`): gates, commands, templates, lessons.
 Short version:
 
-1. Pick an idea in `03_ideas/backlog.md`. Every 🔍 fact must be verified against a source first.
+1. Pick an idea in `03_ideas/content-bank.md`. Every 🔍 fact must be verified against a source first.
 2. Create `04_episodes/EXNN_slug/` and copy `00_bible/episode-template.md` in as `episode.md`.
 3. Fill it in order: sources → script (≤130 words) → diagram shot list → voice → post copy.
 4. Add a row to the calendar.

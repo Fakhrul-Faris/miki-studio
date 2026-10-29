@@ -1,7 +1,7 @@
 # EffectCraft notes (v0.17.0)
 
 What works, how to drive it, and the traps found while testing. Read before building.
-Tests live in `04_episodes/EX00_effectcraft-test/tests/` (t1–t5).
+Tests live in `04_episodes/_archive/EX00_effectcraft-test/tests/` (t1–t5).
 
 ## How to drive it
 
@@ -50,7 +50,7 @@ Tests live in `04_episodes/EX00_effectcraft-test/tests/` (t1–t5).
 
 ## Build pattern (EX00)
 
-`04_episodes/EX00_effectcraft-test/build.jsx` is the working template: helpers for `heavy()` /
+`04_episodes/_archive/EX00_effectcraft-test/build.jsx` is the working template: helpers for `heavy()` /
 `detail()` text, `wordReveal()` (D02), `typeOn()` (D03), `line()` draw-on (D05), `circle()`,
 `ripple()` (D07/D17), a camera null for the push (D06) with `scr()` to place unparented overlays
 in pushed screen space, Gaussian blur defocus (D08) and the Linear Wipe flip (D09).
