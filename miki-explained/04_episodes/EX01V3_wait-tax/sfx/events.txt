@@ -1,0 +1,13 @@
+tick f8 0.5
+stamp f63 (SHORTER)
+rip f164 (They don't)
+stamp f276 (HOLIDAY SEASON)
+rip f304 (tear to the airport)
+click f404 (counter hits 8)
+swell peak f535 (end of the dolly zoom)
+stamp f648 (NEAR ZERO)
+rip f772 (tear to the real bench)
+swell peak f974 (THE WAIT TAX)
+tick f1061 (ochre pulse)
+bed: drone 0.16; sources sfx/source/ (stamp, rip, click, swell, drone from EX02V3; tick from 06_sfx/synth)
+music: Dark Synthwave Beat (user, in EffectCraft): own MASTER layer at -15 dB; copy in audio/ (project links ~/Downloads). City Lights not used.
