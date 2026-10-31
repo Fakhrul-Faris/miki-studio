@@ -19,9 +19,9 @@ Batch it: script 5, generate media for 5, build 5, and keep a buffer of 3 ready 
 | 3 | Sun 01 Nov | Queue Math | One Barber Down (EX05, #9) | "One sick barber can make the wait ten times longer." | H3 · E4 · C5 · A4 · S1 · U1 · T1 · L2 · Bridge:off · 3D: Blender set | ready | | |
 | 4 | Mon 02 Nov | How It Makes Money | The Swipe Tax (banks) (EX06, #24) | "Your bank says checking is free. It isn't." | H4 · E7 · C0 · A1 · S0 · U2 · T3 · L3 · Bridge:on (C7, S4 dropped in the v2 rebuild: they emptied the frame) | ready | | |
 | 5 | Tue 03 Nov | How It Makes Money | The Hotel That Owns No Hotels (EX07, #27; minibar hook was false) | "Marriott barely owns any of its hotels." | H2 · E1 · C4 · A5 · S2 · U4 · T0 (T2 dropped: subtitles added) · L1 · Bridge:off · diagram-led, 2 stills | ready | | |
-| 6 | Wed 04 Nov | Designed on Purpose | Prices ending in .99 (P1) | "Why does everything cost 9.99?" | H6 · E2 · C6 · A2 · S3 · U3 · T3 | ☐ | | |
-| 7 | Thu 05 Nov | The Invisible Queue | Airport security lanes (P12) | "Why the other line always moves faster." | H5 · E8 · C2 · A3 · S1 · U1 · T2 | ☐ | | |
-| 8 | Fri 06 Nov | How It Makes Money | Cinemas (#18) | "Cinemas barely make money on the movie." | H1 · E6 · C1 · A7 · S2 · U2 · T1 | ☐ | | |
+| 6 | Wed 04 Nov | Designed on Purpose | The .99 Trick (EX08, P1) | "Why does everything end in .99?" | H6 · E2 · C7 (C6 swapped: no photos) · A2 · S3 · U3 · T3 · L2 · Bridge:on · type only, no voice | ready | | |
+| 7 | Thu 05 Nov | The Invisible Queue | The Other Line (EX09, P12; supermarket) | "Why does the other line always move faster?" | H2 · E8 · C2 · A3 · S1 · U1 · subs · L3 · Bridge:off · CTA-end · END-next | ready | | |
+| 8 | Fri 06 Nov | How It Makes Money | The Popcorn Business (EX10, #18; cinema) | "Cinemas barely make money on the movie." | H1 · E6 · C1 · A7 · S2 · U2 · T1 · L2 · Bridge:off · CTA-end · END-reframe | ready | | |
 | 9 | Sat 07 Nov | The Number | What a no-show really costs (P7) | "One no-show costs more than the haircut." | H4 · E5 · C3 · A1 · S6 · U4 · T2 | ☐ | | |
 | 10 | Sun 08 Nov | Designed on Purpose | The lift 'close door' button (P2) | "That button might not do anything." |  | ☐ | | |
 | 11 | Mon 09 Nov | How It Makes Money | Costco hot dog (#22) | "This hot dog has cost $1.50 since 1985. On purpose." |  | ☐ | | |

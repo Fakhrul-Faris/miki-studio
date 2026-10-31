@@ -29,8 +29,8 @@ plates, fills), ffmpeg, and the stills / voice the user generates. **Feasibility
 | 3 | EX05 One Barber Down | L2 standard (~108 w) | **off (test)** | H3 motion at frame 0 | E4 interrupt every 4 s | C5 crash zoom on numbers | A4 live data build | S1 seamless loop | U1 no music | T1 big word captions | _ |
 | 4 | The Swipe Tax (EX06; C7 + S4 dropped in v2, still untested) | H4 wrong-on-purpose | E7 freeze + call-out | C7 locked-off camera | A1 stop-motion 8 fps | S4 myth vs fact split | U2 paper foley | T3 persistent headline | _ |
 | 5 | EX07 Owns No Hotels (L1, Bridge off, diagram-led, 2 stills) | H2 answer first | E1 one unbroken take | C8 four depth planes | A8 paper mechanisms | S2 open loop | U4 faster voice | house subtitles (T2 dropped at review) | _ |
-| 6 | Prices ending in .99 | H6 guess-the-timer | E2 cut every 1–1.5 s | C6 tilt-shift miniature | A2 type only | S3 countdown list | U3 voice-off, text only | T3 persistent headline | _ |
-| 7 | Airport security lanes | H5 your shop first | E8 speed ramp | C2 paper-set orbit (Blender) | A3 morph | S1 seamless loop | U1 no music | T2 no captions | _ |
+| 6 | EX08 The .99 Trick (L2, Bridge on, type only) | H6 guess-the-timer | E2 cut every 1–1.5 s (1.27 s, on the beat) | C7 locked-off (C6 swapped: no photos) | A2 type only | S3 countdown list | U3 voice-off, text only | T3 persistent headline | _ |
+| 7 | EX09 The Other Line (L3, Bridge off, CTA-end, END-next, supermarket) | H2 answer first (H5 dropped: hook is no longer shop-first) | E8 speed ramp | C2 paper-set orbit (Blender) | A3 morph | S1 seamless loop | U1 no music | subtitles (T2 dropped at plan) | _ |
 | 8 | Cinemas | H1 data at frame 0 | E6 silence drop | C1 infinite zoom | A7 halftone dissolve | S2 open loop | U2 paper foley | T1 big word captions | _ |
 | 9 | What a no-show costs | H4 wrong-on-purpose | E5 cut on the beat | C3 top-down paper hands | A1 stop-motion 8 fps | S6 under 20 s | U4 faster voice | T2 no captions | _ |
 
@@ -147,6 +147,25 @@ the caption and pinned comment instead.
 |---|---|---|---|---|---|
 | BR-on | **Bridge present** (house default) | The format's reason to exist; direct CTA | "Now picture your shop…" before the Loop | baseline | ✓ |
 | BR-off | **No bridge**: end on Payoff → Loop, general not shop-specific | Removes the moment that can feel like a pitch | Move any documentary image to Stakes; shop tie-in moves to caption/pinned comment | avg watch, % full, comments vs DM-keyword replies | ✓ |
+
+## 10. Follow call-to-action
+
+User, 2026-10-31: "place [the follow] at the end, follow meikigo account for more content."
+
+| # | Test | Why | How | Measure | Feas. |
+|---|---|---|---|---|---|
+| CTA-none | No follow line (EX01V3–EX08) | baseline | — | follows per 1k views | ✓ |
+| CTA-end | **"Follow Meikigo for more."** as the last line | A clear ask after the payoff, tied to more of the same | Last voice line + "FOLLOW MEIKIGO" chip and logo (silent) | follows per 1k views, % watched full | ✓ |
+| CTA-mid | A teasing follow mid-video ("Follow, because the fix looks completely wrong") | Catches viewers before the drop | After Stakes | follows per 1k, retention at that second | ✓ |
+
+## 11. Ending type
+
+| # | Ending | Example |
+|---|---|---|
+| END-q | A question (the old default; use sparingly) | "So which line are you in?" |
+| END-reframe | One line that recasts the whole story | "They never checked your receipt. They only listened." |
+| END-next | A "next time you…" instruction | "Next time you see one long snaking line, don't groan. It's the fast one." |
+| END-callback | The hook, answered in its own words | "The other line moves faster. Because it usually does." |
 
 ## First eight to run (in calendar order, one per episode)
 

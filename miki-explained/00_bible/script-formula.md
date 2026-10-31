@@ -7,7 +7,7 @@ for reference). Every script is written to this shape, then checked against the 
 
 **HOOK → STAKES → MECHANISM → TWIST → PAYOFF → BRIDGE → LOOP**
 
-BRIDGE is our brand's required addition (the series' "Niche Variant"): no episode skips it.
+BRIDGE is our brand's addition (the series' "Niche Variant"); it's now optional and tested (below).
 
 | Beat | Job | Rule |
 |---|---|---|
@@ -17,7 +17,8 @@ BRIDGE is our brand's required addition (the series' "Niche Variant"): no episod
 | Twist | An assumption the viewer held gets flipped | At about the 60% mark. "It wasn't X, it was Y." Without this it's an explainer, not a story |
 | Payoff | Hard numbers, a clear before/after | At least 3 specific numbers total across the script |
 | Bridge | "Now picture your shop…", one concrete scene | Our named concept gets a title card here or in Twist/Payoff |
-| Loop | Invites a comment, share, follow, or rewatch | Callback to the hook, or an open question tied to the audience |
+| End | A landing line (rotated: reframe · "next time you…" · callback · question sparingly) | Not a question by default — see the competitor rules below |
+| Follow | "Follow Meikigo for more." | Last line, after the End |
 
 ## The Bridge is optional, and tested
 
@@ -26,6 +27,28 @@ The Bridge ("now picture your shop…") is the series' default, but whether to i
 retention. **Default: on** (series-plan's "every story ends inside a shop" rule). When a script tests it **off**: end on
 Payoff → Loop, move any documentary image earlier (Stakes is a natural spot) so the three-ingredient rule still holds,
 and carry the shop tie-in in the caption and pinned comment instead of the narration.
+
+## Competitor-informed rules (2026-10-31)
+
+The user flagged the scripts as repetitive ("it will always be question at the end") and pointed at two competitor scripts
+(how the store exit gates know you didn't pay; hedge funds counting cars from space). What they do, and what we now do:
+
+1. **Everyday, viewer's-eye topics are allowed** — the viewer as a customer ("why does the other line move faster?"), not
+   only "your shop". The shop tie-in can live in the caption and pinned comment (Bridge off).
+2. **Contradict in the first breath:** "How do the gates know? They don't." / "Because it usually does."
+3. **Go deep and physical in the Mechanism:** a concrete size, count or material ("38 mm, thinner than paper, 58,000 times
+   a second") and **one** comparison (a tuning fork).
+4. **Put the viewer in the scene** at least once: "Imagine you're walking out with…"
+5. **Name the thing they've lived:** "That's why the alarm goes off even when you did pay." — the "so THAT's why" moment.
+6. **Escalate when the topic allows:** "But X is just the start" → two more cases, each with a number.
+7. **Rotate the ending — no default question.** Pick one per episode and log it (`experiments.md` § 11):
+   reframe line ("They never checked your receipt. They only listened.") · "next time you…" instruction · callback to the
+   hook · a question (sparingly).
+8. **Follow line at the end:** "Follow Meikigo for more." (user, 2026-10-31: put the follow at the end). Its presence and
+   wording are logged (`experiments.md` § 10).
+
+The beats become: **HOOK → STAKES → MECHANISM → TWIST → PAYOFF → (BRIDGE) → END → FOLLOW**. "Loop" in older episodes =
+END here; a seamless visual loop (S1) can still carry the last frame back to the first.
 
 ## Length is a variable, not fixed
 
