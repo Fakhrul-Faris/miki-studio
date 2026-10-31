@@ -45,11 +45,14 @@ Pick from `03_ideas/content-bank.md` (stories, the How It Makes Money series, se
 a primary source and quote it in `episode.md` § Sources. Unconfirmable details are cut or flagged. Never invent stats.
 
 ### 2. Script + shot list
-Copy `templates/episode.md`. Six lines (Hook · Setup · Guess · Reveal · Turn · Takeaway), ≈130 words; the takeaway coins one
-named concept (glossary) and ends on a question. Voice direction for Nathan, narrator (ElevenLabs `v4k7NzxipnuJNJtrKxob`, `00_bible/voice.md`).
-Shot list: one shot per phrase, each with its ingredient. If the line names a real place or object → documentary image;
-if it explains or compares → diagram or typography; collage carries the rest. Plan the transition into each shot
-(match cut, camera carry, paper slide / tear / flaps) and the 1–2 deliberate holds (after the hook line, before the question).
+Copy `templates/episode.md`. Write to the formula in `00_bible/script-formula.md`: **Hook → Stakes → Mechanism → Twist →
+Payoff → Bridge → Loop**, run its quality checklist, and fix anything scoring below 6/7 before presenting it. Length
+(word count, seconds) is a tested variable (`03_ideas/experiments.md` § 8) — state the target, don't default to a fixed
+count. The named concept (glossary) gets a title card around Twist/Payoff; the Bridge is "now picture your shop…"; the
+Loop ends on a question or callback. Voice direction for Nathan, narrator (ElevenLabs `v4k7NzxipnuJNJtrKxob`, `00_bible/voice.md`).
+Shot list: one shot per beat (a beat can span or share a shot), each with its ingredient. If a line names a real place or
+object → documentary image; if it explains or compares → diagram or typography; collage carries the rest. Plan the
+transition into each shot (match cut, camera carry, paper slide / tear / flaps) and 1–2 deliberate holds.
 
 ### 3. Media prompts
 Copy `templates/media-prompts.md` → `how-i-generate.md`. Worked example: `EX02V3_doorway/how-i-generate.md`.

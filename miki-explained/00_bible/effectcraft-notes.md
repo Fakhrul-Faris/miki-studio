@@ -134,3 +134,8 @@ Proven 2026-10-30 at 540×960: a seamless sway loop over a 3-layer paper set (5 
 landing on a desk with its shadow (4 frames ~4 s), ~0.5 GB each.
 Traps: `perfect_loop` keys the end one frame past the last rendered frame, LINEAR (frame N flows into frame 1); a full 360°
 shows the backs of flat cards, so use `swing_loop` for paper sets; cloth only simulates frame by frame from its start.
+
+42. **Masks are in the layer's own space, not comp space.** `layer.addMask` rect coords are source pixels of that layer (a 1440×2560 still, a precomp's own size), before anchor/position/scale. A comp-space "left half" rect on a scaled still clipped a random corner (EX06 v1).
+43. **`seedRandom(n, true)` is timeless: one value forever.** For a per-step boil, put the step in the seed: `seedRandom(n + Math.floor(time * 12), true)` (EX06 `boilStep`).
+44. **Image sequences import at 30 fps.** `file.import` with `sequence: true` (e.g. Blender frames `f_0001.png`) comes in at 30 fps; set `item.mainSource.conformFrameRate = 24` right after (EX05 `seq()`). Rename the item: every Blender folder imports as the same `f_[0001-0144].png`.
+45. **Blender: key `hide_render` after `on_twos`/`boil`.** Both clear and re-key the object's animation, which wipes visibility keys set earlier (EX05 `shop.py`). Colours typed into `sheet()` are linear, not sRGB: convert, or an extension sheet won't match the wall still beside it.

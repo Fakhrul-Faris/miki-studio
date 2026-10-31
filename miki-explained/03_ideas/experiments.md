@@ -21,14 +21,14 @@ Built with what we have: EffectCraft (2D/3D layers, cameras, expressions, masks,
 plates, fills), ffmpeg, and the stills / voice the user generates. **Feasibility:** ✓ easy · ◐ needs extra media or a test ·
 ✗ not with our tools.
 
-## Running (assigned 2026-10-30)
+## Running (assigned 2026-10-30; Scr and Bridge columns added 2026-10-31)
 
-| Day | Episode | H hook | E edit | C camera | A animation | S structure | U sound | T text | Verdict |
-|---|---|---|---|---|---|---|---|---|---|
-| 2 | EX04 The Peak-End Rule | H1 data at frame 0 | house | house | house | house | house | house | _ |
-| 3 | Queue maths | H3 motion at frame 0 | E4 interrupt every 4 s | C5 crash zoom on numbers | A4 live data build | S1 seamless loop | U1 no music | T1 big word captions | _ |
-| 4 | The decoy | H4 wrong-on-purpose | E7 freeze + call-out | C7 locked-off camera | A1 stop-motion 8 fps | S4 myth vs fact split | U2 paper foley | T3 persistent headline | _ |
-| 5 | Hotels | H2 answer first | E1 one unbroken take | C4 first-person walk | A5 paper physics | S2 open loop | U4 faster voice | T1 big word captions | _ |
+| Day | Episode | Scr length | Bridge | H hook | E edit | C camera | A animation | S structure | U sound | T text | Verdict |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 2 | EX04 The Peak-End Rule | L1 short (95 w / 32 s) | on | H1 data at frame 0 | house | house | house | house | house | house | _ |
+| 3 | EX05 One Barber Down | L2 standard (~108 w) | **off (test)** | H3 motion at frame 0 | E4 interrupt every 4 s | C5 crash zoom on numbers | A4 live data build | S1 seamless loop | U1 no music | T1 big word captions | _ |
+| 4 | The Swipe Tax (EX06; C7 + S4 dropped in v2, still untested) | H4 wrong-on-purpose | E7 freeze + call-out | C7 locked-off camera | A1 stop-motion 8 fps | S4 myth vs fact split | U2 paper foley | T3 persistent headline | _ |
+| 5 | EX07 Owns No Hotels (L1, Bridge off, diagram-led, 2 stills) | H2 answer first | E1 one unbroken take | C8 four depth planes | A8 paper mechanisms | S2 open loop | U4 faster voice | house subtitles (T2 dropped at review) | _ |
 | 6 | Prices ending in .99 | H6 guess-the-timer | E2 cut every 1–1.5 s | C6 tilt-shift miniature | A2 type only | S3 countdown list | U3 voice-off, text only | T3 persistent headline | _ |
 | 7 | Airport security lanes | H5 your shop first | E8 speed ramp | C2 paper-set orbit (Blender) | A3 morph | S1 seamless loop | U1 no music | T2 no captions | _ |
 | 8 | Cinemas | H1 data at frame 0 | E6 silence drop | C1 infinite zoom | A7 halftone dissolve | S2 open loop | U2 paper foley | T1 big word captions | _ |
@@ -125,6 +125,28 @@ cards with thickness, real light and shadow, rendered with transparency and comp
 | T1 | **Big word-by-word captions** in the middle (instead of the small pill) | Reads at a glance, muted | Anton word captions | Retention, % full | ✓ |
 | T2 | **No captions at all** | Cleaner picture | Turn subtitles off | Retention vs T1 | ✓ |
 | T3 | **One persistent headline** that stays on top all the way through | Viewers always know the point | A fixed title in the safe area | Mid-video drop | ✓ |
+
+## 8. Script length and formula adherence
+
+User, 2026-10-31: length "can be varied… we need to experiment" — never default to a fixed word count. Written against
+`00_bible/script-formula.md` (Hook → Stakes → Mechanism → Twist → Payoff → Bridge → Loop).
+
+| # | Test | Why | How | Measure | Feas. |
+|---|---|---|---|---|---|
+| L1 | **Short cut**, ~70–100 words / 22–32 s | Faster finish, higher completion | Compress Stakes and Mechanism to one line each | % watched full, avg watch | ✓ |
+| L2 | **Standard**, ~100–135 words / 32–45 s | The house baseline so far | Normal beat lengths, one Mechanism line | all | ✓ |
+| L3 | **Full formula length**, ~135–170 words / 45–60 s | The formula's native target; room for a fuller Mechanism and Twist | Don't compress; let Payoff and Bridge breathe, maybe split Mechanism in two lines | avg watch, saves | ✓ |
+
+## 9. Bridge presence
+
+User, 2026-10-31: "maybe we can skip turning back to business" — the Bridge is the moment most likely to read as a pitch.
+Testing whether dropping it helps retention costs the explicit on-screen "your shop" CTA; the tie-in then has to live in
+the caption and pinned comment instead.
+
+| # | Test | Why | How | Measure | Feas. |
+|---|---|---|---|---|---|
+| BR-on | **Bridge present** (house default) | The format's reason to exist; direct CTA | "Now picture your shop…" before the Loop | baseline | ✓ |
+| BR-off | **No bridge**: end on Payoff → Loop, general not shop-specific | Removes the moment that can feel like a pitch | Move any documentary image to Stakes; shop tie-in moves to caption/pinned comment | avg watch, % full, comments vs DM-keyword replies | ✓ |
 
 ## First eight to run (in calendar order, one per episode)
 

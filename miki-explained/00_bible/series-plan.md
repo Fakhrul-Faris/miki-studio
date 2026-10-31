@@ -11,36 +11,19 @@
 - Meikigo appears only as the problem in the shop turn; a small logo end card is optional (EX02V3 ended on black).
   No product shot, no "download now". The CTA lives in the pinned comment.
 
-## The 55-second skeleton
+## Script formula
 
-| Time | Beat | Job |
-|---|---|---|
-| 0–3s | **Hook** | Strange fact, on screen and in the voice at once. Diagram already moving. |
-| 3–15s | **Setup** | The problem, and the obvious fix that didn't work. |
-| 15–20s | **The guess** | "Most people think it's ___." The viewer forms a theory. |
-| 20–35s | **Reveal** | The hidden system, shown with one diagram, not five. |
-| 35–48s | **The turn** | A documentary image of a real Malaysian shop: "Your shop has the same problem." |
-| 48–55s | **Takeaway** | A named concept (e.g. "the Wait Tax") + one question for the comments. |
+See `00_bible/script-formula.md`: **Hook → Stakes → Mechanism → Twist → Payoff → Bridge ("now picture your shop") → Loop.**
+Replaces the Hook/Setup/Guess/Reveal/Turn/Takeaway skeleton above (adopted 2026-10-31). Length is a tested variable
+(`03_ideas/experiments.md` § 8), not fixed at 55s.
 
 ## Why it makes people feel clever
 
 1. Open with a puzzle: something doesn't add up.
-2. Let them guess before the reveal.
+2. Let them guess before the twist.
 3. Reveal a system, never "a bad person".
 4. Connect unrelated things (airport ↔ barbershop).
 5. Leave them one sentence they can retell.
-
-## Hook rules
-
-- First frame is already in motion. Never open on a title.
-- Under 12 words.
-- **The first 0.5s must change something big** (a push, a burst, a pop), and the hook line is at least 84px.
-- Rotate five patterns:
-  1. **The backwards fix:** "This airport fixed complaints by making people walk further."
-  2. **The impossible number:** "A haircut takes the same time as in 1950. So why does it cost 10× more?"
-  3. **The hidden villain:** "The thing killing your Saturday isn't the customers."
-  4. **Mysterious behaviour:** "Why are barbershops always next to each other?"
-  5. **The confident wrong answer:** "Everyone thinks no-show fees work. Blockbuster proved otherwise."
 
 ## Lanes
 
@@ -70,6 +53,8 @@ talks about the shop across the road.
 ## Rules
 
 - **Every story ends inside a shop.** The story can start anywhere; the lesson lands on a service counter.
+  Default; whether to keep it is itself tested from EX05 on (`03_ideas/experiments.md` § 9 Bridge presence) — when off,
+  the shop tie-in moves to the caption and pinned comment instead of the narration.
 - **Verify every fact** and list sources in the episode file. One debunked claim kills the format.
 - **No local scandals with names.** Malaysian defamation law and CMA s.233 make it dangerous. Keep
   scandals foreign, historical and well documented; local stories use composites.
@@ -79,8 +64,8 @@ talks about the shop across the road.
 ## Instagram extras
 
 - Post the same video as a Reel.
-- Make a 7-slide carousel from the same diagrams: hook → setup → guess → reveal → your shop →
-  concept → question.
+- Make a 7-slide carousel from the same diagrams: hook → stakes → mechanism → twist → payoff →
+  bridge (your shop) → loop (question).
 - Pinned comment on both: "Want us to check your shop for the Wait Tax? DM 'CASE'." (Adjust the
   keyword to each episode's concept.)
 

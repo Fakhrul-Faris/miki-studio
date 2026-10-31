@@ -5,6 +5,9 @@ the mix allows (How It Makes Money is 12 of 43 posts, so it returns about every 
 (scandals, failures) are never back to back. Ready and queued episodes go first. Ideas and facts to verify:
 `03_ideas/content-bank.md`. Dates start Fri 30 Oct 2026; shift them freely, keep the order.
 
+**2026-10-31:** Banks (#24) swapped from Day 35 into Day 4 at the user's request (picked next out of order), keeping Day
+4's pre-assigned test stack; "the decoy" (#10) moved to Day 35 to fill the gap. Both still hold their lane-spacing.
+
 Status: ready = exported · queued = next to script · ☐ = idea (verify → script → media → build).
 Production: one finished episode a day is more than the pipeline makes today (about one per working day once media is in).
 Batch it: script 5, generate media for 5, build 5, and keep a buffer of 3 ready episodes before daily posting starts.
@@ -13,9 +16,9 @@ Batch it: script 5, generate media for 5, build 5, and keep a buffer of 3 ready 
 |---|---|---|---|---|---|---|---|---|
 | 1 | Fri 30 Oct | Psychology of Waiting | The Wait Tax (airport) (EX01V3) | "The fastest way to fix a long wait isn't making it shorter." | baseline (story hook) | ready | ✓ 29 Oct 2026 | |
 | 2 | Sat 31 Oct | Customer Brain | The Peak-End Rule (EX04, data-first hook) | "682 PATIENTS. LONGER PROCEDURE. LESS PAIN." | H1 Data at frame 0 | ready | | |
-| 3 | Sun 01 Nov | Queue Math | One sick barber triples the wait (#9) | "Why one sick barber triples the wait." | H3 · E4 · C5 · A4 · S1 · U1 · T1 | queued | | |
-| 4 | Mon 02 Nov | The Price Trick | The useless option that sells (decoy) (#10) | "The most useless option on this menu made them millions." | H4 · E7 · C7 · A1 · S4 · U2 · T3 | queued | | |
-| 5 | Tue 03 Nov | How It Makes Money | Hotels (#27) | "The room isn't the profit. The minibar was." | H2 · E1 · C4 · A5 · S2 · U4 · T1 | ☐ | | |
+| 3 | Sun 01 Nov | Queue Math | One Barber Down (EX05, #9) | "One sick barber can make the wait ten times longer." | H3 · E4 · C5 · A4 · S1 · U1 · T1 · L2 · Bridge:off · 3D: Blender set | ready | | |
+| 4 | Mon 02 Nov | How It Makes Money | The Swipe Tax (banks) (EX06, #24) | "Your bank says checking is free. It isn't." | H4 · E7 · C0 · A1 · S0 · U2 · T3 · L3 · Bridge:on (C7, S4 dropped in the v2 rebuild: they emptied the frame) | ready | | |
+| 5 | Tue 03 Nov | How It Makes Money | The Hotel That Owns No Hotels (EX07, #27; minibar hook was false) | "Marriott barely owns any of its hotels." | H2 · E1 · C4 · A5 · S2 · U4 · T0 (T2 dropped: subtitles added) · L1 · Bridge:off · diagram-led, 2 stills | ready | | |
 | 6 | Wed 04 Nov | Designed on Purpose | Prices ending in .99 (P1) | "Why does everything cost 9.99?" | H6 · E2 · C6 · A2 · S3 · U3 · T3 | ☐ | | |
 | 7 | Thu 05 Nov | The Invisible Queue | Airport security lanes (P12) | "Why the other line always moves faster." | H5 · E8 · C2 · A3 · S1 · U1 · T2 | ☐ | | |
 | 8 | Fri 06 Nov | How It Makes Money | Cinemas (#18) | "Cinemas barely make money on the movie." | H1 · E6 · C1 · A7 · S2 · U2 · T1 | ☐ | | |
@@ -45,7 +48,7 @@ Batch it: script 5, generate media for 5, build 5, and keep a buffer of 3 ready 
 | 32 | Mon 30 Nov | How It Makes Money | Airlines (#19) | "Some airlines are worth less than their frequent-flyer programme." |  | ☐ | | |
 | 33 | Tue 01 Dec | Why Good Tools Die | Self-checkout rollbacks (#13) | "Supermarkets spent millions on self-checkout. Now they're removing it." |  | ☐ | | |
 | 34 | Wed 02 Dec | Business Autopsy | Blockbuster late fees (#6) | "Everyone thinks no-show fees work. Blockbuster proved otherwise." |  | ☐ | | |
-| 35 | Thu 03 Dec | How It Makes Money | Banks (#24) | "Your free bank account isn't free." |  | ☐ | | |
+| 35 | Thu 03 Dec | The Price Trick | The useless option that sells (decoy) (#10) | "The most useless option on this menu made them millions." |  | ☐ | | |
 | 36 | Fri 04 Dec | Incentive Backfires | Wells Fargo sales targets (#4) | "A bank's staff opened millions of fake accounts. Nobody told them to." |  | ☐ | | |
 | 37 | Sat 05 Dec | Hidden Economics | Baumol's cost disease (haircuts) (#3) | "A haircut takes the same time as in 1950. So why does it cost 10× more?" |  | ☐ | | |
 | 38 | Sun 06 Dec | Designed on Purpose | Casinos have no clocks (P3) | "Why casinos never show you the time." |  | ☐ | | |
@@ -77,7 +80,7 @@ One row per posted episode, same columns every time, so the experiments can be c
 | EX01V3 The Wait Tax | baseline (story hook) | | | | | | | | | |
 | EX04 The Peak-End Rule | H1 data at frame 0 | | | | | | | | | |
 | Day 3 | H3 · E4 · C5 · A4 · S1 · U1 · T1 | | | | | | | | | |
-| Day 4 | H4 · E7 · C7 · A1 · S4 · U2 · T3 | | | | | | | | | |
+| Day 4 | H4 · E7 · C0 · A1 · S0 · U2 · T3 | | | | | | | | | |
 | Day 5 | H2 · E1 · C4 · A5 · S2 · U4 · T1 | | | | | | | | | |
 | Day 6 | H6 · E2 · C6 · A2 · S3 · U3 · T3 | | | | | | | | | |
 | Day 7 | H5 · E8 · C2 · A3 · S1 · U1 · T2 | | | | | | | | | |

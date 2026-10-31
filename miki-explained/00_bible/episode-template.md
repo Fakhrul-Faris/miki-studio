@@ -11,18 +11,19 @@ Every fact in the script, with its source. No unverified claims.
 
 - _fact_ — _source link_
 
-## Script (≤130 words)
+## Script (`00_bible/script-formula.md`; length is a tested variable, `03_ideas/experiments.md` § 8 — state the target)
 
-| Time | Beat | Voice | On screen |
-|---|---|---|---|
-| 0–3s | Hook | | |
-| 3–15s | Setup | | |
-| 15–20s | Guess | | |
-| 20–35s | Reveal | | |
-| 35–48s | Turn | | |
-| 48–55s | Takeaway | | |
+| Line | Beat | Voice |
+|---|---|---|
+| L01 | Hook | |
+| L02 | Stakes | |
+| L03 | Mechanism | |
+| L04 | Twist | |
+| L05 | Payoff | |
+| L06 | Bridge ("now picture your shop…") | |
+| L07 | Loop | |
 
-Word count: _
+Word count: _ (target: _) · Checklist score: _/7
 
 ## Shot list (cut to the voice)
 

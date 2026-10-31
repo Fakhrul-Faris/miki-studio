@@ -2,7 +2,8 @@
 
 - **Direction:** calm, low, unhurried. A documentary narrator, not an ad read.
 - **Language:** English only.
-- **Word budget:** ≈ **130 words max** (about 40s once tightened). One idea per video.
+- **Word budget:** varies by episode — length is a tested variable (`03_ideas/experiments.md` § 8). The script formula
+  (`00_bible/script-formula.md`) natively runs 120–170 words / 45–60s; compress or extend per test. One idea per video.
 - **Render line by line** (L01–L06) so pauses can be retimed in the edit (`tools/vo_tighten.py`). The silence before the reveal is
   what makes it land.
 - Lock one voice and never change it; the voice is half the series identity.

@@ -34,7 +34,7 @@ Only verified ideas become episode folders. Every script follows reveal → cont
 | 6 | Business Autopsy | Blockbuster late fees 🔍 | "Everyone thinks no-show fees work. Blockbuster proved otherwise." | Smarter booking deposits | ☐ | |
 | 7 | The System Behind | Ichiran ticket machines | "This ramen shop removed the counter conversation." | Counter as bottleneck → one shared tablet | ☐ | |
 | 8 | Money Stories | How Malaysia went QR 🔍 | "Your mamak accepted QR before your bank app worked." | "Ada cash tak?" → DuitNow QR checkout | ✓ PayNet 2026, BNM IFTF 2026 | EX03 |
-| 9 | Queue Math | Kingman / utilisation curve (Kingman 1961) | "Why one sick barber triples the wait." Reveal: at 90% busy the wait doesn't creep up, it explodes. Show a computed 3-vs-2-barber Saturday on screen. | Reading demand before it breaks | ☐ | **next #2** |
+| 9 | Queue Math | Kingman / utilisation curve (Kingman 1961) | "Why one sick barber triples the wait." Reveal: at 90% busy the wait doesn't creep up, it explodes. Show a computed 3-vs-2-barber Saturday on screen. | Reading demand before it breaks | ✓ Erlang C computed (5/h, 20-min cuts: 4.5 → 45.5 min) + Kingman 1961 | **EX05** |
 | 10 | The Price Trick | The Economist decoy (Ariely, *Predictably Irrational*, 2008) 🔍 | "The most useless option on this menu made them millions." Proof to verify: with the decoy 84% chose the bundle, without it 32%. | Price list design | ☐ | **next #3** |
 | 11 | Customer Brain | Peak-end rule (Redelmeier, Katz & Kahneman 2003, 682 colonoscopy patients; Redelmeier & Kahneman 1996) | "Customers forget the haircut. They remember the last 30 seconds." Contrast: everyone thinks the whole visit counts. | Checkout as the last memory | ✓ Pain 2003 RCT (682) + Pain 1996 | **EX04** (data-first hook test) |
 | 12 | Borrowed from Other Industries | Airline overbooking | "Airlines sell seats they don't have. And they're right to." | No-show maths | ☐ | |
@@ -44,6 +44,10 @@ Only verified ideas become episode folders. Every script follows reveal → cont
 | 16 | Small Leaks, Big Money | 1 lost walk-in a day | "You lose RM___ a year to people you never met." | Running cost of doing nothing | ☐ | |
 
 ## 2. Series: How It Makes Money
+
+**Tone (user, 2026-10-31): call it out.** Name the company directly, "insider secret" framing (`script-formula.md`
+topic type 3) — not a neutral explainer. The villain-is-a-system rule still applies: the practice is the target, not
+any named employee.
 
 Everyday things whose real business model is hidden. People want to know this, it travels well, and each one ends on a
 lesson for the shop (where *your* margin really is). Lane: **How It Makes Money**. Every number below is a lead to verify
@@ -59,7 +63,7 @@ that may turn out to be wrong, and "it's a myth" is a good episode too.
 | 21 | Printers | "The printer is cheap. The ink is the business." | Razor-and-blades model; ink price per litre: manufacturer filings, consumer reports | Cheap first visit, earn on the return | ☐ |
 | 22 | Costco hot dog | "This hot dog has cost $1.50 since 1985. On purpose." | Costco statements, annual reports; membership fees as the profit | A loss-leader that brings people back | ☐ |
 | 23 | McDonald's | "McDonald's might be a property company that sells burgers." | Share of revenue from franchise rent: McDonald's 10-K | Own what you can, rent what you must | ☐ |
-| 24 | Banks | "Your free bank account isn't free." | Interchange fees, interest margin: bank annual reports | The hidden fee in "free" payment methods | ☐ |
+| 24 | Banks | "Your bank says checking is free. It isn't." | Interchange fees, interest margin: FDIC (0.07% APY), Bankrate (~11–12% loans), Nilson Report (2.36% avg interchange, $198B total fees) | The hidden fee in "free" payment methods | ✓ (one figure — $1,100+/household — sourced to a merchant advocacy group, flagged in episode.md) → **EX06** |
 | 25 | Petrol stations | "The petrol pays for the lights. The snacks pay the bills." | Fuel vs convenience-store margin: industry reports | Where your margin actually is | ☐ |
 | 26 | Supermarkets | "Brands pay for the shelf you see first." | Slotting fees and eye-level placement paid by suppliers (retailer filings, competition-regulator reports) | What your customer sees first in the shop | ☐ |
 | 27 | Hotels | "The room isn't the profit. The minibar was." | Hotel revenue mix (rooms vs F&B vs fees) | Upsell at the right moment | ☐ |

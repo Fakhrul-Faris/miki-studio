@@ -48,3 +48,9 @@ miki-explained/04_episodes/*/audio/* *.mp3
 
 # archived episodes: anything not already tracked stays local
 miki-explained/04_episodes/_archive/**
+
+# Telegram storage: files pulled back from the channel
+miki-explained/storage/pulled/
+# Blender test renders and take previews (regenerable)
+miki-explained/04_episodes/*/build/blender_test/out/
+miki-explained/04_episodes/*/build/*.mp4
