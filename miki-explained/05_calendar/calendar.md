@@ -15,7 +15,7 @@ Batch it: script 5, generate media for 5, build 5, and keep a buffer of 3 ready 
 | Day | Date | Series / lane | Episode | Hook | Test | Status | Posted | Link |
 |---|---|---|---|---|---|---|---|---|
 | 1 | Fri 30 Oct | Psychology of Waiting | The Wait Tax (airport) (EX01V3) | "The fastest way to fix a long wait isn't making it shorter." | baseline (story hook) | ready | ✓ 29 Oct 2026 | |
-| 2 | Sat 31 Oct | Customer Brain | The Peak-End Rule (EX04, data-first hook) | "682 PATIENTS. LONGER PROCEDURE. LESS PAIN." | H1 Data at frame 0 | ready | | |
+| 2 | Sat 31 Oct | Customer Brain | The Peak-End Rule (EX04, data-first hook) | "682 PATIENTS. LONGER PROCEDURE. LESS PAIN." | H1 Data at frame 0 | ready | ✓ 31 Oct 2026 | |
 | 3 | Sun 01 Nov | Queue Math | One Barber Down (EX05, #9) | "One sick barber can make the wait ten times longer." | H3 · E4 · C5 · A4 · S1 · U1 · T1 · L2 · Bridge:off · 3D: Blender set | ready | | |
 | 4 | Mon 02 Nov | How It Makes Money | The Swipe Tax (banks) (EX06, #24) | "Your bank says checking is free. It isn't." | H4 · E7 · C0 · A1 · S0 · U2 · T3 · L3 · Bridge:on (C7, S4 dropped in the v2 rebuild: they emptied the frame) | ready | | |
 | 5 | Tue 03 Nov | How It Makes Money | The Hotel That Owns No Hotels (EX07, #27; minibar hook was false) | "Marriott barely owns any of its hotels." | H2 · E1 · C4 · A5 · S2 · U4 · T0 (T2 dropped: subtitles added) · L1 · Bridge:off · diagram-led, 2 stills | ready | | |

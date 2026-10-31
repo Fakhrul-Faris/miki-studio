@@ -11,6 +11,8 @@ final export back. Standard library only. Run from anywhere:
   python3 miki-explained/tools/tgstore.py push-all              # every episode in 04_episodes (not _archive)
   python3 miki-explained/tools/tgstore.py commands              # the bot's / menu: one command per stored episode, with its title
   python3 miki-explained/tools/tgstore.py serve                 # answers those commands in your chat (run by launchd at login)
+  python3 miki-explained/tools/tgstore.py posted                # which episodes are posted (also /posted in the bot)
+  python3 miki-explained/tools/tgstore.py mark-posted EX04 [2026-11-01]   # also: /posted ex04 in the bot; updates calendar.md
   python3 miki-explained/tools/tgstore.py recaption             # rewrite stored captions in the current style
   python3 miki-explained/tools/tgstore.py logout-cloud --yes    # one time, before switching to the local Bot API server
 
@@ -27,6 +29,7 @@ from urllib.parse import urlsplit, urlencode
 
 REPO = Path(__file__).resolve().parents[1]                       # miki-explained/
 EPISODES, INDEX = REPO / "04_episodes", REPO / "storage" / "telegram-index.json"
+POSTED, CALENDAR = REPO / "storage" / "posted.json", REPO / "05_calendar" / "calendar.md"
 CONF = Path.home() / ".config" / "telegram" / "tgstore.env"
 SOURCE_DIRS, FINAL_DIR, FINAL_EXT = ("media", "audio"), "export", {".mp4", ".mov"}
 ICON = {"final": "🎬", "render": "🎞", "source": "📎"}
@@ -304,6 +307,47 @@ def cmd_pull(args):
             subprocess.run([sys.executable, str(REPO / "tools" / "postiz.py"), "upload", str(dest)], check=True)
 
 
+def load_posted():
+    return json.loads(POSTED.read_text()) if POSTED.exists() else {}
+
+
+def mark_posted(ep, date=None):
+    """Record ep as posted (date default: today) in storage/posted.json and in calendar.md's Posted column."""
+    date = date or time.strftime("%Y-%m-%d"); pd = load_posted(); pd[ep] = date
+    POSTED.parent.mkdir(parents=True, exist_ok=True); POSTED.write_text(json.dumps(pd, indent=1, sort_keys=True))
+    if CALENDAR.exists():
+        rows, nice = CALENDAR.read_text().split("\n"), "✓ " + time.strftime("%d %b %Y", time.strptime(date, "%Y-%m-%d"))
+        for i, r in enumerate(rows):
+            c = r.split("|")
+            if len(c) >= 10 and re.search(r"\(" + re.escape(ep) + r"[,)]", c[4]) and not c[8].strip():
+                c[7], c[8] = " ready ", f" {nice} "; rows[i] = "|".join(c)
+        CALENDAR.write_text("\n".join(rows))
+    return date
+
+
+def posted_lines():
+    ix, pd = load_index(), load_posted(); out = []
+    for ep in episodes(ix):
+        d = pd.get(ep)
+        when = "" if not d or d == "posted" else " · " + time.strftime("%d %b", time.strptime(d, "%Y-%m-%d"))
+        out.append(f"{'✅' if d else '⏳'} /{ep.lower()}  <b>{html.escape(ep_title(ep))}</b>{' — posted' + when if d else ' — not posted'}")
+    return out
+
+
+def reply_posted(chat, note=""):
+    lines = ([note, ""] if note else []) + ["📣 <b>Posted?</b>", ""] + posted_lines() + ["", "Mark one: <code>/posted ex04</code>"]
+    call("sendMessage", {"chat_id": chat, "parse_mode": "HTML", "text": "\n".join(lines)})
+
+
+def cmd_posted(_):
+    for l in posted_lines():
+        print(re.sub(r"<[^>]+>", "", l))
+
+
+def cmd_mark_posted(args):
+    ep = args[0].upper(); print(f"{ep} posted {mark_posted(ep, args[1] if len(args) > 1 else None)}")
+
+
 def episodes(ix):
     eps = {}
     for v in files(ix).values():
@@ -321,7 +365,8 @@ def cmd_push_all(_):
 
 
 def cmd_commands(_):
-    ix = load_index(); cmds = [{"command": "start", "description": "📼 All episodes in storage"}]
+    ix = load_index(); cmds = [{"command": "start", "description": "📼 All episodes in storage"},
+                               {"command": "posted", "description": "📣 Which episodes are posted · /posted ex04 marks one"}]
     for ep in episodes(ix):
         cmds.append({"command": ep.lower(), "description": (f"🎬 {ep} · {ep_title(ep)}")[:256]})
     call("setMyCommands", {"commands": json.dumps(cmds)})
@@ -330,10 +375,24 @@ def cmd_commands(_):
 
 
 def reply_list(chat):
-    ix = load_index(); lines = ["📼 <b>Miki Explained · storage</b>", ""]
+    ix, pd = load_index(), load_posted(); lines = ["📼 <b>Miki Explained · storage</b>", ""]
     for ep, e in episodes(ix).items():
-        lines.append(f"/{ep.lower()}  <b>{html.escape(ep_title(ep))}</b> · {e['n']} files · {e['mb']:.0f} MB{' · 🎬 final' if e['final'] else ''}")
+        lines.append(f"{'✅' if pd.get(ep) else '⏳'} /{ep.lower()}  <b>{html.escape(ep_title(ep))}</b> · {e['n']} files · {e['mb']:.0f} MB{' · 🎬 final' if e['final'] else ''}")
+    lines += ["", "✅ posted · ⏳ not yet · /posted for the list"]
     call("sendMessage", {"chat_id": chat, "parse_mode": "HTML", "text": "\n".join(lines)})
+
+
+def post_text(ep):
+    """The episode's caption and pinned comment from episode.md (or README.md) § Post: [(label, text), …]."""
+    try:
+        root = episode_dir(ep); doc = next(f for f in (root / "episode.md", root / "README.md") if f.exists()).read_text()
+    except (SystemExit, StopIteration, OSError):
+        return []
+    out = []
+    for label in ("Caption", "Pinned comment"):
+        m = re.search(r"\*\*" + label + r":\*\*\s*```\n(.*?)\n```", doc, re.S)
+        if m: out.append((label, m.group(1).strip()))
+    return out
 
 
 def reply_episode(chat, ep):
@@ -345,6 +404,8 @@ def reply_episode(chat, ep):
         lines.append(f"{ICON[v['role']]} <code>{html.escape(v['path'])}</code> · {v['size'] / MB:.1f} MB")
     hd = ix.get("_headers", {}).get(ep)
     call("sendMessage", {"chat_id": chat, "parse_mode": "HTML", "text": "\n".join(lines)[:4000], **({"reply_to_message_id": hd} if hd else {})})
+    for label, txt in post_text(ep):                          # the caption and pinned comment, each one tap to copy
+        call("sendMessage", {"chat_id": chat, "parse_mode": "HTML", "text": f"{'📝' if label == 'Caption' else '📌'} <b>{label}</b>\n<pre>{html.escape(txt)}</pre>"[:4096]})
     for v in rows:
         if v["role"] == "final":                              # re-send the final from storage (by file_id: no upload)
             call("sendDocument", {"chat_id": chat, "document": v["file_id"], "parse_mode": "HTML",
@@ -364,10 +425,15 @@ def cmd_serve(_):
             off = u["update_id"] + 1; m = u.get("message") or {}
             if str(m.get("chat", {}).get("id")) != me or not m.get("text", "").startswith("/"):
                 continue
-            cmd = m["text"].split()[0][1:].split("@")[0].lower()
+            parts = m["text"].split(); cmd = parts[0][1:].split("@")[0].lower()
             try:
                 eps = {e.lower(): e for e in episodes(load_index())}
-                if cmd in eps: reply_episode(me, eps[cmd])
+                if cmd == "posted" and len(parts) > 1:
+                    ep = eps.get(parts[1].lstrip("/").lower())
+                    if ep: reply_posted(me, f"✅ Marked <b>{ep} · {html.escape(ep_title(ep))}</b> posted ({mark_posted(ep)}).")
+                    else: reply_posted(me, f"No episode called {html.escape(parts[1])}.")
+                elif cmd == "posted": reply_posted(me)
+                elif cmd in eps: reply_episode(me, eps[cmd])
                 else: reply_list(me)
             except TgError as e:
                 print(f"error: {e}", flush=True)
@@ -394,7 +460,7 @@ def cmd_logout_cloud(args):
 
 CMDS = {"check": cmd_check, "find-chat": cmd_find_chat, "push-episode": cmd_push_episode, "push": cmd_push,
         "ls": cmd_ls, "pull": cmd_pull, "logout-cloud": cmd_logout_cloud, "push-all": cmd_push_all, "commands": cmd_commands,
-        "serve": cmd_serve, "recaption": cmd_recaption}
+        "serve": cmd_serve, "recaption": cmd_recaption, "posted": cmd_posted, "mark-posted": cmd_mark_posted}
 if __name__ == "__main__":
     if len(sys.argv) < 2 or sys.argv[1] not in CMDS:
         sys.exit(__doc__)

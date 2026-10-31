@@ -93,8 +93,28 @@ Pattern breaks (myth↔fact split, stop-motion arrivals) replace the usual pan/d
 
 ## Post
 
-- Caption: _ (name the $1,100+/yr figure, attribute "merchant groups say")
-- Pinned comment: _ (Nilson Report via Merchants Payments Coalition; FDIC; Bankrate — flag the coalition's interest)
+**Caption:**
+```
+Your bank says checking is free. It isn't. 💳
+
+Banks pay about 0.07% on checking money, then charge 11%+ on loans. And every card tap sends the shop a fee: about 2.4% of the sale.
+
+Shops build that fee into their prices, so you pay it even when you pay cash. Merchant groups say it adds up to over $1,000 per household a year.
+
+That's the Swipe Tax. What's a "free" checkout actually costing you? 👇
+
+#money #banking #personalfinance #smallbusiness #businesstips
+```
+
+**Pinned comment:**
+```
+Running a shop? DM "SWIPE" and we'll show you what each tap really costs.
+Sources (US figures): FDIC national average checking rate 0.07% APY (via The Motley Fool); Bankrate average personal loan rate ~11–12% (Oct 2026); Nilson Report: average Visa/Mastercard interchange 2.36% (2025) and $198.25B in US card fees (2025). The $1,100+ per household figure comes from the Merchants Payments Coalition, a retailer group that campaigns against swipe fees.
+```
+
+- Turn on the AI-generated content label (generated stills and voice).
+- Posted: _date_ · Link: _
+- Results: fill the metrics table at 72 h.
 
 ## Before posting
 

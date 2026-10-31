@@ -96,7 +96,7 @@ Source: Redelmeier, Katz & Kahneman, "Memories of colonoscopy: a randomized tria
 ```
 
 - Turn on the AI-generated content label (generated photos and stills).
-- Posted: _date_ · Link: _
+- Posted: 31 Oct 2026 · Link: _
 - Results: fill the metrics table above at 72 h.
 
 ## Before posting

@@ -88,8 +88,28 @@ Pattern interrupts land on the 96-frame grid wherever no shot change falls. Colo
 
 Bridge is off in the video (§ 9 test): the shop tie-in lives here instead of in the narration.
 
-- Caption: _ (end with the shop tie-in and the DM keyword, since the video doesn't say it)
-- Pinned comment: _ (model + assumptions + Kingman 1961 + DM keyword)
+**Caption:**
+```
+One sick barber can turn a 4-minute wait into 45 ⏱️
+
+Three barbers, 56% busy: about a 4-minute wait. One calls in sick. Same customers walking in. The shop is only 1.5× busier, but the wait is 10× longer.
+
+That's the queueing curve: near full, every extra customer adds more wait than the last.
+
+Your shop is probably closer to that edge than it looks. How many chairs are you running on a Saturday? 👇
+
+#smallbusiness #barbershop #businesstips #customerexperience #math
+```
+
+**Pinned comment:**
+```
+Want to see where your shop sits on the curve? DM "CURVE".
+Model: a standard multi-server queue (Erlang C, M/M/c), 5 walk-ins an hour, 20-minute cuts on average. 3 barbers: 56% busy, 4.5 min average wait. 2 barbers: 83% busy, 45.5 min. Why it curves: Kingman, "The single server queue in heavy traffic" (1961).
+```
+
+- Turn on the AI-generated content label (generated stills and voice).
+- Posted: _date_ · Link: _
+- Results: fill the metrics table at 72 h.
 
 ## Before posting
 

@@ -78,8 +78,29 @@ Speed setting ~1.1 (U4: brisker than usual, still clear). One file per line, `au
 | L06 | Push into one star on the card | A tiny figure inside the star: YOU'RE THE POINTS |
 
 ## Post
-- Caption: _
-- Pinned comment: _ (sources: Marriott 10-K 2024, FY2025 results)
+
+**Caption:**
+```
+Marriott barely owns any of its hotels. Less than 1%. 🏨
+
+9,361 hotels, almost all owned by someone else. Owners pay Marriott to use the name: $5.4 billion in fees last year. (The minibar? It loses money.)
+
+The fastest-growing money isn't from guests at all. Banks paid Marriott $716 million in 2025 for points to give away on credit cards.
+
+You're not the guest. You're the points. 👇
+
+#money #business #hotels #travel #howitmakesmoney
+```
+
+**Pinned comment:**
+```
+Your regulars are your points too. DM "POINTS" to see how your shop can keep them coming back.
+Sources: Marriott 10-K for 2024 (9,361 properties; owns or leases less than 1% of its system); Marriott Q4 & full-year 2025 results (gross fee revenues $5.4B; co-branded credit card fees $716M). Minibar: Marriott CEO via Fast Company; consultant Bjorn Hanson via CNN.
+```
+
+- Turn on the AI-generated content label (generated stills and voice).
+- Posted: _date_ · Link: _
+- Results: fill the metrics table at 72 h.
 
 ## Before posting
 - [ ] Sources quoted; "last year" = 2025 figures
