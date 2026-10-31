@@ -32,7 +32,8 @@ plates, fills), ffmpeg, and the stills / voice the user generates. **Feasibility
 | 6 | EX08 The .99 Trick (L2, Bridge on, type only) | H6 guess-the-timer | E2 cut every 1–1.5 s (1.27 s, on the beat) | C7 locked-off (C6 swapped: no photos) | A2 type only | S3 countdown list | U3 voice-off, text only | T3 persistent headline | _ |
 | 7 | EX09 The Other Line (L3, Bridge off, CTA-end, END-next, supermarket) | H2 answer first (H5 dropped: hook is no longer shop-first) | E8 speed ramp | C2 paper-set orbit (Blender) | A3 morph | S1 seamless loop | U1 no music | subtitles (T2 dropped at plan) | _ |
 | 8 | Cinemas | H1 data at frame 0 | E6 silence drop | C1 infinite zoom | A7 halftone dissolve | S2 open loop | U2 paper foley | T1 big word captions | _ |
-| 9 | What a no-show costs | H4 wrong-on-purpose | E5 cut on the beat | C3 top-down paper hands | A1 stop-motion 8 fps | S6 under 20 s | U4 faster voice | T2 no captions | _ |
+| 9 | EX11 The Price of a No-Show (L1, Bridge off, CTA-end, END-callback, clinic; first paperkit v2 set) | H4 wrong-on-purpose | E5 cut on the beat (every 2 beats, 100 BPM) | C3 top-down paper hands (Blender) | A1 stop-motion 8 fps | S6 under 20 s (19.2 s) | U4 faster voice (×1.1) | subtitles (T2 dropped at plan) | _ |
+| 10 | EX12 The Button That Does Nothing (L3, Bridge on: bubble tea, CTA-end, END-next) | H6 guess-the-timer | E13 rule of three (1 · 2 · 3 matched presses, broken by the pull-back) | C4 first-person walk (Blender, five sets) | A8 paper mechanisms (buttons, sliding doors) | S3 countdown list | U2 paper foley + clicks | T1 big word captions | _ |
 
 Each option shown twice or more is paired with different partners (e.g. S1 with E4/C5 on Day 3 and E8/C2 on Day 7).
 Not yet scheduled: E3 long holds, S5 cliffhanger, S7 comment reply (needs comments), A6 rotoscope.

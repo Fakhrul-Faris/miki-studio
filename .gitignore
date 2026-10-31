@@ -65,3 +65,6 @@ tools-venv/
 miki-explained/04_episodes/_tests/**/out/
 miki-explained/04_episodes/_tests/**/box/
 miki-explained/04_episodes/_tests/**/*.png
+# downloaded music/sound copied into an episode or dropped in 06_sfx stay local
+miki-explained/04_episodes/*/sfx/*.mp3
+miki-explained/06_sfx/* *.mp3

@@ -22,8 +22,8 @@ Batch it: script 5, generate media for 5, build 5, and keep a buffer of 3 ready 
 | 6 | Wed 04 Nov | Designed on Purpose | The .99 Trick (EX08, P1) | "Why does everything end in .99?" | H6 · E2 · C7 (C6 swapped: no photos) · A2 · S3 · U3 · T3 · L2 · Bridge:on · type only, no voice | ready | | |
 | 7 | Thu 05 Nov | The Invisible Queue | The Other Line (EX09, P12; supermarket) | "Why does the other line always move faster?" | H2 · E8 · C2 · A3 · S1 · U1 · subs · L3 · Bridge:off · CTA-end · END-next | ready | | |
 | 8 | Fri 06 Nov | How It Makes Money | The Popcorn Business (EX10, #18; cinema) | "Cinemas barely make money on the movie." | H1 · E6 · C1 · A7 · S2 · U2 · T1 · L2 · Bridge:off · CTA-end · END-reframe | ready | | |
-| 9 | Sat 07 Nov | The Number | What a no-show really costs (P7) | "One no-show costs more than the haircut." | H4 · E5 · C3 · A1 · S6 · U4 · T2 | ☐ | | |
-| 10 | Sun 08 Nov | Designed on Purpose | The lift 'close door' button (P2) | "That button might not do anything." |  | ☐ | | |
+| 9 | Sat 07 Nov | The Number | The Price of a No-Show (EX11, clinic) | "A reminder text stops no-shows? Barely." | H4 · E5 · C3 · A1 · S6 · U4 · L1 · Bridge:off · CTA-end · END-callback (T2 dropped: subtitles) | ready | | |
+| 10 | Sun 08 Nov | Designed on Purpose | The Button That Does Nothing (EX12, bubble tea) | "You jab the close-door button. Does it do anything? Guess." | H6 · E13 · C4 · A8 · S3 · U2 · T1 · L3 · Bridge:on · CTA-end · END-next | ready | | |
 | 11 | Mon 09 Nov | How It Makes Money | Costco hot dog (#22) | "This hot dog has cost $1.50 since 1985. On purpose." |  | ☐ | | |
 | 12 | Tue 10 Nov | Myth or Math | "5× cheaper to keep a customer" (P9) | "Everyone quotes this number. Where did it come from?" |  | ☐ | | |
 | 13 | Wed 11 Nov | The Invisible Queue | Emergency-room triage (P11) | "The ER doesn't serve you in order. Here's the order." |  | ☐ | | |
