@@ -121,6 +121,24 @@ Stage generated stills as a paper diorama in Blender (`tools/blender/paperkit.py
 Reference: `04_episodes/_tests/EX00V5_paperkit2/` (kit_test.py, compare_flat_vs_v2.mp4). Ask for environment plates in
 how-i-generate.md (backdrop, set dressing) — see the memory note on Blender environments.
 
+## Printed 3D (crowd, halftone, ink; from EX00V6)
+
+When a beat needs real depth (a camera that orbits, a crowd seen from every side), build it in 3D and print it: the
+user's picks r33–r42 (`01_references/v3-pro3d-study.md`) read "pro" as art direction, not realism.
+1. **People:** `tools/blender/crowd.py` builds nine seated MPFB people (free, CC0 clothes/hair, varied poses, two on phones)
+   into `02_kit/people/` once: `blender -b --python miki-explained/tools/blender/crowd.py -- build`. Needs the MPFB extension
+   (`blender --online-mode -c extension install --enable mpfb`) and the makehuman_system_assets pack unzipped into
+   `~/Library/Application Support/Blender/5.2/extensions/.user/blender_org/mpfb/data/` (use the files.makehumancommunity.org mirror).
+2. In the shot: `load_person(name, link=False)` → set `col.instance_offset = hip` → `seat(proto, hip_at, turn, mirror)` per seat;
+   2–3 real copies (`load_person(name)`) carry the story moves with `move(rig, bone, [(frame, deg), …])`. Vary pose per row:
+   nobody wants a room of identical heads down.
+3. **Look:** `paperkit.halftone(mat, gain≈3)` (paper dots on ink, sized by light, fixed to the body's rest shape so they
+   ride the rig) on every `clay …` material, then `paperkit.ink_outline(meshes)` (paper-coloured inverted-hull edge).
+   The ochre accent stays a solid, unprinted object. Dark set, light pools, haze (look B). EEVEE, ~4 s a frame at 1080×1920.
+4. Don't: Grease Pencil Line Art (drew nothing on instanced crowds in background renders); free image-to-3D (Hugging Face
+   ZeroGPU quota runs out after ~2 models a day; `tools/img3d.py` is kept for one-off hero props).
+Reference: `04_episodes/_tests/EX00V6_polish/` (shot3d.py `-- <out> mpfb halftone ink`, compare_*.mp4, look_F_final.mp4).
+
 ## When something goes wrong
 Check `00_bible/effectcraft-notes.md` first (#34–41 are the Doorway traps: 12fps expressions, the 3D camera, Linear Wipe on
 text, motion blur on stepped layers, nested comp background, misreg keys). `references/lessons.md` has the short list.

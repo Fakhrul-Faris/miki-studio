@@ -368,3 +368,68 @@ def fold(o, hinge_obj, frames, axis="X"):
         hinge_obj.rotation_euler[i] = math.radians(deg); hinge_obj.keyframe_insert("rotation_euler", index=i, frame=f)
     interpolation(hinge_obj, "CONSTANT")
     return hinge_obj
+
+
+# ---------- printed 3D (EX00V6): halftone dots + an ink outline, for 3D people, props and sets ----------
+PRINT_DOT, PRINT_GROUND = (0.53, 0.50, 0.45, 1), (0.012, 0.011, 0.010, 1)   # paper dots on near-black ink (dark sets)
+
+
+def halftone(m, gain=2.2, cell=0.02, space="object", dot=PRINT_DOT, ground=PRINT_GROUND, cells=210):
+    """Turn a material into a printed halftone: dots of `dot` on `ground`, sized by how lit the surface is (light → bigger).
+    space="object": dots are fixed to the surface (rest shape, so they ride bodies and bend with a rig), cell in metres;
+    space="screen": a flat print screen over the frame (dots stay put while the camera moves), `cells` across the height.
+    The material's Principled base colour (a grey) sets the tone. Ink dots on a paper ground (cream sets) grow with shadow
+    instead. EEVEE only (Shader to RGB)."""
+    nt = m.node_tree; b = next((n for n in nt.nodes if n.type == "BSDF_PRINCIPLED"), None)
+    if b is None: return m
+    col = tuple(b.inputs["Base Color"].default_value); out = next(n for n in nt.nodes if n.type == "OUTPUT_MATERIAL")
+    N, L = nt.nodes.new, nt.links.new
+    d = N("ShaderNodeBsdfDiffuse"); d.inputs["Color"].default_value = col
+    s2r = N("ShaderNodeShaderToRGB"); bw = N("ShaderNodeRGBToBW"); L(d.outputs[0], s2r.inputs[0]); L(s2r.outputs["Color"], bw.inputs[0])
+    tone = N("ShaderNodeMath"); tone.operation = "MULTIPLY"; tone.use_clamp = True; tone.inputs[1].default_value = gain; L(bw.outputs[0], tone.inputs[0])
+    if sum(dot[:3]) < sum(ground[:3]):                        # ink dots on paper: dots grow with shadow, not light
+        inv = N("ShaderNodeMath"); inv.operation = "SUBTRACT"; inv.inputs[0].default_value = 1.0; L(tone.outputs[0], inv.inputs[1]); tone = inv
+    sq = N("ShaderNodeMath"); sq.operation = "SQRT"; L(tone.outputs[0], sq.inputs[0])          # radius ∝ √tone: dot area ∝ tone
+    tc = N("ShaderNodeTexCoord")
+    if space == "object":
+        # Generated = the undeformed rest shape in 0..1 of its bounds: scale back to metres with the mesh's own size
+        users = [o for o in bpy.data.objects if o.type == "MESH" and m.name in [s.material.name for s in o.material_slots if s.material]]
+        if users:
+            vs = [v.co for v in users[0].data.vertices]
+            size = [max(v[i] for v in vs) - min(v[i] for v in vs) for i in range(3)]
+        else: size = [1, 1, 1]
+        sc_ = N("ShaderNodeVectorMath"); sc_.operation = "MULTIPLY"; sc_.inputs[1].default_value = tuple(s / cell for s in size)
+        L(tc.outputs["Generated"], sc_.inputs[0])
+        vo = N("ShaderNodeTexVoronoi"); vo.voronoi_dimensions = "3D"; vo.inputs["Randomness"].default_value = 0.0
+        vo.inputs["Scale"].default_value = 1.0; L(sc_.outputs[0], vo.inputs["Vector"]); dist = vo.outputs["Distance"]; k = 1.0           # the surface cuts the dot lattice between centres: wider dots
+    else:
+        sc_ = N("ShaderNodeVectorMath"); sc_.operation = "MULTIPLY"
+        rs = bpy.context.scene.render; sc_.inputs[1].default_value = (cells * rs.resolution_x / rs.resolution_y, cells, 0)
+        L(tc.outputs["Window"], sc_.inputs[0])
+        rot = N("ShaderNodeVectorRotate"); rot.rotation_type = "Z_AXIS"; rot.inputs["Angle"].default_value = math.radians(45); L(sc_.outputs[0], rot.inputs["Vector"])
+        fr = N("ShaderNodeVectorMath"); fr.operation = "FRACTION"; L(rot.outputs[0], fr.inputs[0])
+        ce = N("ShaderNodeVectorMath"); ce.operation = "SUBTRACT"; ce.inputs[1].default_value = (0.5, 0.5, 0); L(fr.outputs[0], ce.inputs[0])
+        ln = N("ShaderNodeVectorMath"); ln.operation = "LENGTH"; L(ce.outputs[0], ln.inputs[0]); dist = ln.outputs["Value"]; k = 0.72
+    r = N("ShaderNodeMath"); r.operation = "MULTIPLY"; r.inputs[1].default_value = k; L(sq.outputs[0], r.inputs[0])
+    dt = N("ShaderNodeMath"); dt.operation = "LESS_THAN"; L(dist, dt.inputs[0]); L(r.outputs[0], dt.inputs[1])
+    mix = N("ShaderNodeMix"); mix.data_type = "RGBA"; mix.inputs[6].default_value = ground; mix.inputs[7].default_value = dot
+    L(dt.outputs[0], mix.inputs["Factor"])
+    em = N("ShaderNodeEmission"); L(mix.outputs[2], em.inputs["Color"]); L(em.outputs[0], out.inputs["Surface"])
+    return m
+
+
+def ink_outline(objs, width=0.009, colour=(0.47, 0.44, 0.40, 1)):
+    """An inked edge round each mesh (inverted hull: a slightly larger flipped shell whose back faces show as a rim).
+    Works on instances and rigged bodies; colour is paper on dark sets, use ink (0.012, …) on cream sets.
+    (Grease Pencil Line Art drew nothing on instanced crowds in background renders, EX00V6.)"""
+    m = bpy.data.materials.get("ink line %s" % (colour,)) or bpy.data.materials.new("ink line %s" % (colour,))
+    if not m.node_tree or not any(n.type == "EMISSION" for n in m.node_tree.nodes):
+        m.use_nodes = True; nt = m.node_tree; nt.nodes.clear()
+        em = nt.nodes.new("ShaderNodeEmission"); em.inputs["Color"].default_value = colour
+        o_ = nt.nodes.new("ShaderNodeOutputMaterial"); nt.links.new(em.outputs[0], o_.inputs["Surface"]); m.use_backface_culling = True
+    for o in objs:
+        if o.type != "MESH" or any(md.type == "SOLIDIFY" and md.name == "ink" for md in o.modifiers): continue
+        n = len(o.data.materials); o.data.materials.append(m)
+        sd = o.modifiers.new("ink", "SOLIDIFY"); sd.thickness = width; sd.offset = 1; sd.use_flip_normals = True
+        sd.use_rim = False; sd.material_offset = n
+    return m

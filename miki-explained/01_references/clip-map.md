@@ -1,6 +1,7 @@
 # Clip map
 
 Family: A = editorial collage docu-essay, B = clean diagram / data viz, C = SaaS product promo, V2 = the "elevate" batch (more 3D, camera, velocity), added 2026-10-28.
+V3 = the user's "polished" batch (named by what they like), added 2026-11-01.
 
 | # | Folder | Family | Original filename |
 |---|---|---|---|
@@ -36,3 +37,13 @@ Family: A = editorial collage docu-essay, B = clean diagram / data viz, C = SaaS
 | r30 | `r30-jewellery-macro-3d/` | V2 | Instagram Reels Video 39268.mp4 |
 | r31 | `r31-perfume-physics-3d-explainer/` | V2 | Instagram Reels Video 6824.mp4 |
 | r32 | `r32-cream-stamp-frames/` | V2 | Instagram Reels Video 42330.mp4 |
+| r33 | `r33-text-highlight-typing/` | V3 | Text-animatoin.mp4 |
+| r34 | `r34-felt-paper-texture/` | V3 | Paper texture.gif |
+| r35 | `r35-cruel-intern-pace-cohesion/` | V3 | pace-cameramotion-contemporaryCohesiveness.mp4 |
+| r36 | `r36-mr-queen-collage-transitions/` | V3 | good-scene-transition.mp4 |
+| r37 | `r37-dear-tupac-motion-story/` | V3 | Motionthattellstory.mp4 |
+| r38 | `r38-study-group-just-great/` | V3 | just-great.mp4 |
+| r39 | `r39-spatial-equity-worldbuilding/` | V3 | great-worldbuilding.mp4 |
+| r40 | `r40-perspective-shift-car/` | V3 | good-perspective shift.gif |
+| r41 | `r41-gross-blue-dog-camera-angles/` | V3 | great-non-boring-cameraangle.mp4 |
+| r42 | `r42-lighthouse-approaching-style/` | V3 | approaching-this-style.gif |
