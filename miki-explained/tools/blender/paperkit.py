@@ -237,3 +237,134 @@ def miniature(cam, focus_obj=None, fstop=4.0, lens=50):
     cam.data.lens = lens; cam.data.dof.use_dof = True; cam.data.dof.aperture_fstop = fstop
     if focus_obj:
         cam.data.dof.focus_object = focus_obj
+
+
+# ---------- v2 (EX00V5, 2026-10-31): depth shadow boxes, in-set ink, practical lights, paper mechanisms ----------
+import json as _json
+_PH, _ZC, _DIST = 4.0, 2.0, None                     # shadow-box plate height (m), centre height, camera distance that frames it
+
+
+def frame_dist(h, lens=35):
+    """Camera distance at which a height h fills a 9:16 frame (vertical, sensor 36 mm)."""
+    return (h / 2) / math.tan(math.atan(18 / lens))
+
+
+def glow(o, k=0.85):
+    """Let a plate keep its own colours: feed its texture into emission (still takes the cut-outs' shadows)."""
+    m = o.data.materials[0]; nt = m.node_tree; b = nt.nodes["Principled BSDF"]; t = [n for n in nt.nodes if n.type == "TEX_IMAGE"][0]
+    nt.links.new(t.outputs["Color"], b.inputs["Emission Color"]); b.inputs["Emission Strength"].default_value = k
+    return o
+
+
+def shadowbox(box_dir, height=4.0, centre=2.0, gap=0.55, lens=35, thickness=0.012):
+    """A generated environment plate as a paper shadow box. box_dir comes from tools/depth.py (band_0 = the full plate …
+    band_N = the nearest layer, bands.json). Band k stands gap·k m in front and is shrunk so all bands line up from a camera
+    at frame_dist(height) on the axis. Returns the band objects; use on_band() to place cut-outs."""
+    global _PH, _ZC, _DIST
+    _PH, _ZC, _DIST = height, centre, frame_dist(height, lens)
+    out = []
+    for b in _json.load(open(box_dir + "/bands.json")):
+        k = b["band"]; d = gap * k; s = (_DIST - d) / _DIST
+        o = card(box_dir + "/band_%d.png" % k, height * s, loc=(0, -d, centre), wobble=0 if k == 0 else 0.4, name="band %d" % k)
+        glow(o, 0.8)
+        if k and thickness:
+            o.modifiers.new("thickness", "SOLIDIFY").thickness = thickness
+        out.append(o)
+    return out
+
+
+def on_band(k, fx, fy, front=0.03, gap=0.55, aspect=1440 / 2560):
+    """World position of a point on band k, given as fractions of the plate image (fx across, fy down), plus the band's
+    scale. Seat a cut-out just in front of the band whose seats/counter it belongs to."""
+    d = gap * k; s = (_DIST - d) / _DIST
+    return ((fx - 0.5) * _PH * aspect * s, -d - front, _ZC + (0.5 - fy) * _PH * s), s
+
+
+def translucent(objs, weight=0.25):
+    """Thin paper lets a little light through (subsurface on cut-outs)."""
+    for o in objs:
+        b = o.data.materials[0].node_tree.nodes["Principled BSDF"]
+        b.inputs["Subsurface Weight"].default_value = weight; b.inputs["Subsurface Radius"].default_value = (0.02, 0.015, 0.01)
+
+
+def collection(name, objs):
+    c = bpy.data.collections.new(name); bpy.context.scene.collection.children.link(c)
+    for o in objs:
+        for u in o.users_collection:
+            u.objects.unlink(o)
+        c.objects.link(o)
+    return c
+
+
+def practical_light(loc, size, energy, colour=(1, 0.88, 0.7), aim=(-90, 0, 0), only=None, glow_rect=None, glow_strength=0.9):
+    """A practical (screen, lamp, window): an area light, optionally linked so it lights — and is shadowed by — only the
+    collection `only` (light + shadow linking). glow_rect=(centre, (w, h)) adds a visible emissive card for the source."""
+    bpy.ops.object.light_add(type="AREA", location=loc); l = bpy.context.object
+    l.data.energy = energy; l.data.color = colour; l.data.size = size; l.rotation_euler = tuple(math.radians(a) for a in aim)
+    if only is not None:
+        l.light_linking.receiver_collection = only; l.light_linking.blocker_collection = only
+    if glow_rect:
+        (cx, cy, cz), (w, h) = glow_rect
+        bpy.ops.mesh.primitive_plane_add(size=1, location=(cx, cy, cz)); g = bpy.context.object; g.name = "practical glow"
+        g.scale = (w, h, 1); g.rotation_euler = (math.radians(90), 0, 0)
+        m = bpy.data.materials.new("practical"); m.use_nodes = True; b = m.node_tree.nodes["Principled BSDF"]
+        b.inputs["Base Color"].default_value = colour + (1,); b.inputs["Emission Color"].default_value = colour + (1,)
+        b.inputs["Emission Strength"].default_value = glow_strength; g.data.materials.append(m)
+    return l
+
+
+def bloom(strength=0.15, threshold=1.0, size=0.5):
+    """Soft bloom on practicals (EEVEE's own bloom left in 4.2). Blender 5: the compositor tree is a data-block and the
+    Glare type is an input. A broken tree renders black — keep this exact shape."""
+    sc = bpy.context.scene
+    tree = bpy.data.node_groups.new("bloom", "CompositorNodeTree"); sc.compositing_node_group = tree
+    tree.interface.new_socket("Image", in_out="OUTPUT", socket_type="NodeSocketColor")
+    rl = tree.nodes.new("CompositorNodeRLayers"); gl = tree.nodes.new("CompositorNodeGlare"); out = tree.nodes.new("NodeGroupOutput")
+    gl.inputs["Type"].default_value = "Bloom"; gl.inputs["Threshold"].default_value = threshold
+    gl.inputs["Strength"].default_value = strength; gl.inputs["Size"].default_value = size
+    tree.links.new(rl.outputs["Image"], gl.inputs["Image"]); tree.links.new(gl.outputs["Image"], out.inputs["Image"])
+    sc.render.use_compositing = True
+    return tree
+
+
+def ink(points, colour=(0.79, 0.54, 0.17, 1), radius=0.006, name="ink", frame=1, draw=None):
+    """A hand-inked stroke that lives in the set (Grease Pencil v3), so it stays on its object as the camera moves.
+    points: [(x, y, z), …]. draw=(f0, f1) reveals it along its length on twos (points appear in order)."""
+    gp = bpy.data.grease_pencils.new(name); o = bpy.data.objects.new(name, gp); bpy.context.scene.collection.objects.link(o)
+    m = bpy.data.materials.new(name + " ink"); bpy.data.materials.create_gpencil_data(m); m.grease_pencil.color = colour; gp.materials.append(m)
+    lay = gp.layers.new("ink"); n = len(points)
+    steps = [(frame, n)] if not draw else [(f, max(2, round(n * (f - draw[0]) / max(1, draw[1] - draw[0])))) for f in range(draw[0], draw[1] + 1, 2)]
+    for f, k in steps:
+        dr = lay.frames.new(f).drawing; dr.add_strokes([k]); st = dr.strokes[0]
+        for i in range(k):
+            st.points[i].position = points[i]; st.points[i].radius = radius
+    return o
+
+
+def ink_ring(centre, rx, rz, n=48, **kw):
+    """An ink circle drawn around a point, slightly open like a hand-drawn loop (faces the camera on -Y)."""
+    cx, cy, cz = centre; pts = []
+    for i in range(n):
+        a = 2 * math.pi * i / (n - 6); r = 1 + 0.05 * math.sin(3 * i)
+        pts.append((cx + rx * r * math.cos(a), cy - 0.02, cz + rz * r * math.sin(a)))
+    return ink(pts, **kw)
+
+
+def roll(o, axis_obj, frames, turns_deg=540):
+    """Unroll a paper strip (Simple Deform bend about axis_obj): keys = [(frame, 0..1 unrolled), …] → angle turns_deg → 0.
+    The object should be a subdivided plane (paper)."""
+    sd = o.modifiers.new("roll", "SIMPLE_DEFORM"); sd.deform_method = "BEND"; sd.deform_axis = "Z"; sd.origin = axis_obj
+    for f, u in frames:
+        sd.angle = math.radians(turns_deg * (1 - u)); sd.keyframe_insert("angle", frame=f)
+    return sd
+
+
+def fold(o, hinge_obj, frames, axis="X"):
+    """Fold a card on a hinge (pop-up / flap): parent o to hinge_obj (an Empty on the fold line) and key its rotation.
+    frames = [(frame, degrees), …], held on twos (stop-motion)."""
+    o.parent = hinge_obj; o.matrix_parent_inverse = hinge_obj.matrix_world.inverted()
+    i = "XYZ".index(axis)
+    for f, deg in frames:
+        hinge_obj.rotation_euler[i] = math.radians(deg); hinge_obj.keyframe_insert("rotation_euler", index=i, frame=f)
+    interpolation(hinge_obj, "CONSTANT")
+    return hinge_obj

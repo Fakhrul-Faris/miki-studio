@@ -109,6 +109,18 @@ The user picks; only then move it into the kit, the docs and this skill.
 Caption, hashtags, pinned comment with the source and a DM keyword, the before-posting checklist (series-plan), including
 the **AI-generated content label**. Update the calendar and the glossary.
 
+## Blender sets (paperkit v2, from EX11)
+
+Stage generated stills as a paper diorama in Blender (`tools/blender/paperkit.py`), never as a procedural 3D world:
+1. Environment plate → `tools-venv/depth/bin/python miki-explained/tools/depth.py <plate> <box_dir> 4` → `shadowbox(box_dir)`:
+   the plate becomes depth layers with torn edges, so the camera moves *through* it.
+2. Cut-outs placed with `on_band(k, fx, fy, front=…)` (by their spot in the plate), mirrored/recoloured for crowds.
+3. Light: `practical_light(..., only=collection(...))` for screens/lamps/windows (light + shadow linking), `translucent()`,
+   `bloom()`. Labels that must stay on objects: `ink()` / `ink_ring()` in the set, not screen-space overlays.
+4. Mechanisms: `roll()`, `fold()`; stop-motion `boil()`/`flicker()`; camera smooth; render transparent PNG frames.
+Reference: `04_episodes/_tests/EX00V5_paperkit2/` (kit_test.py, compare_flat_vs_v2.mp4). Ask for environment plates in
+how-i-generate.md (backdrop, set dressing) — see the memory note on Blender environments.
+
 ## When something goes wrong
 Check `00_bible/effectcraft-notes.md` first (#34–41 are the Doorway traps: 12fps expressions, the 3D camera, Linear Wipe on
 text, motion blur on stepped layers, nested comp background, misreg keys). `references/lessons.md` has the short list.

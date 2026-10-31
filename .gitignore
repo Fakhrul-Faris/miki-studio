@@ -57,3 +57,11 @@ miki-explained/04_episodes/*/build/*.mp4
 # shared kit (reusable paper pieces) and the downloaded sound/music library stay local
 miki-explained/02_kit/
 miki-explained/06_sfx/library/
+
+# local Python environments (depth model etc.)
+tools-venv/
+
+# technique tests: keep scripts and the comparison video, not frames/plates
+miki-explained/04_episodes/_tests/**/out/
+miki-explained/04_episodes/_tests/**/box/
+miki-explained/04_episodes/_tests/**/*.png

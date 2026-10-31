@@ -140,3 +140,36 @@ shows the backs of flat cards, so use `swing_loop` for paper sets; cloth only si
 44. **Image sequences import at 30 fps.** `file.import` with `sequence: true` (e.g. Blender frames `f_0001.png`) comes in at 30 fps; set `item.mainSource.conformFrameRate = 24` right after (EX05 `seq()`). Rename the item: every Blender folder imports as the same `f_[0001-0144].png`.
 45. **Blender: key `hide_render` after `on_twos`/`boil`.** Both clear and re-key the object's animation, which wipes visibility keys set earlier (EX05 `shop.py`). Colours typed into `sheet()` are linear, not sRGB: convert, or an extension sheet won't match the wall still beside it.
 46. **Never name a footage folder CON (or PRN, AUX, NUL, COM1…).** A PNG sequence in `layers/CON/` imported with the right size and duration but rendered nothing; the same frames as a still, or in `layers/COUNTER/`, rendered fine. EffectCraft treats Windows reserved device names as invalid paths, silently (EX10).
+
+### Blender v2 test (EX00V5, 2026-10-31) — what works in 5.2.3 LTS, headless
+- **Depth shadow box:** `tools/depth.py` (Depth Anything V2 Small in `tools-venv/depth`, ~25 s a plate on the M5) splits a
+  plate into nested depth bands with torn rims. Stand band k at `0.55·k` m in front, scaled `(DIST − d)/DIST` so it lines up
+  from the start pose. **Place cut-outs by plate fractions, not by eye** (`on_band(k, fx, fy)`): a seat in band 3 is not where
+  it looks in world space once the band is shrunk. Put a seated cut-out just in front of the band whose seats it sits in.
+- **Light + shadow linking:** `light.light_linking.receiver_collection = coll` (only these are lit) and
+  `.blocker_collection = coll` (only these cast its shadows) — works in EEVEE from a script.
+- **Bloom (EEVEE's own left in 4.2):** compositor. In 5.x the tree is a data-block: `tree = bpy.data.node_groups.new(n,
+  "CompositorNodeTree"); scene.compositing_node_group = tree`, with a `NodeGroupOutput` and an Image output socket. The Glare
+  node's type is now an **input**: `glare.inputs["Type"].default_value = "Bloom"` (`glare_type` no longer exists). A broken
+  tree renders **black**. Keep strength ~0.15, threshold ~1.0 — more washes a paper set out.
+- **Grease Pencil v3 ink in 3D:** `gp = bpy.data.grease_pencils.new(); lay = gp.layers.new(); dr = lay.frames.new(1).drawing;
+  dr.add_strokes([n]); dr.strokes[0].points[i].position / .radius`; material via `bpy.data.materials.create_gpencil_data(m)`.
+  The stroke lives in the set, so it tracks the object as the camera moves (no screen-space label drift).
+- **Roll / unfold:** a subdivided plane + `SIMPLE_DEFORM` (BEND, axis Z, origin = an Empty), key `angle` 540° → 0.
+- **Paper translucency:** Principled `Subsurface Weight` ~0.25 with a small radius on cut-outs.
+
+**paperkit v2 functions** (`tools/blender/paperkit.py`, proven in `04_episodes/_tests/EX00V5_paperkit2/kit_test.py`):
+
+| Function | Does |
+|---|---|
+| `shadowbox(box_dir)` | A plate's depth bands (from `tools/depth.py`) as paper layers at their depths; sets the frame distance |
+| `on_band(k, fx, fy, front=…)` | World position on band k from plate-image fractions (**front is the 4th arg; gap the 5th**) |
+| `frame_dist(h, lens)` | Camera distance that frames a height h in 9:16 |
+| `glow(o, k)` | A plate keeps its own colours (texture → emission) |
+| `translucent(objs)` | Thin paper lets light through (subsurface) |
+| `collection(name, objs)` | Group cut-outs for light linking |
+| `practical_light(loc, size, energy, only=coll, glow_rect=…)` | A screen/lamp/window: area light linked to `only` (light + shadow), optional emissive card |
+| `bloom(strength, threshold)` | Soft compositor bloom on practicals (Blender 5 compositor) |
+| `ink(points, draw=(f0, f1))` / `ink_ring(centre, rx, rz)` | Grease Pencil ink in the set; draws on along its length on twos |
+| `roll(o, axis, frames)` | Unroll a subdivided paper strip (Simple Deform bend) |
+| `fold(o, hinge, frames)` | Fold a card on a hinge Empty (pop-up / flap), on twos |
