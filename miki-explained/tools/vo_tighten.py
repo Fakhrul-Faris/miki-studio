@@ -2,14 +2,14 @@
 """Tighten an episode's narration into one continuous track (the Doorway method).
 
 Usage (from the repo root, after tools/words.py has written audio/words.json):
-  python3 miki-explained/tools/vo_tighten.py <episode_dir> [--hold L01@2.12:1.0] [--hold L06@5.29:1.0] ...
+  python3 miki-explained/tools/vo_tighten.py <episode_dir> [--hold L01@2.12:1.0] [--hold L06@5.29:1.0] ... [--fps 60]
 
 - Lines L01…L0n play back to back with GAP s between them.
 - Any pause inside a line longer than LONG s (between two words) is cut down to about 0.3 s.
 - --hold inserts deliberate silence at a file time inside a line (pick a point inside a real pause);
   --hold L01@end:1.0 adds it after the line instead.
 Writes audio/voice.wav and audio/vo_timeline.json (every word's start in the tightened track) and prints each word
-with its index and MASTER frame, so shots can start on words: start frame = floor(t * 24).
+with its index and MASTER frame, so shots can start on words: start frame = floor(t * fps) (24 by default; --fps 60 for V3).
 Whisper's start for a word right after a cut can be early: check cut points with silencedetect on voice.wav.
 """
 import json, math, subprocess, sys
@@ -20,6 +20,7 @@ ep = Path(sys.argv[1]); args = sys.argv[2:]
 holds = {}
 while args:
     flag, spec = args[0], args[1]; args = args[2:]
+    if flag == "--fps": FPS = int(spec)
     if flag == "--hold":
         L, rest = spec.split("@"); t, d = rest.split(":"); holds[(L, 1e9 if t == "end" else float(t))] = float(d)
 W = json.loads((ep / "audio/words.json").read_text())

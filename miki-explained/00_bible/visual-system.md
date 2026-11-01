@@ -1,6 +1,38 @@
 # Visual system
 
-## House format (V3, from 2026-10-28): cut-paper mixed media
+## House format (from 2026-11-01): smooth isometric — EX14 "The Long Path"
+
+User, on EX14: "i really really love what you did with this. this is what i'm looking for." It supersedes the cut-paper
+format below (kept for reference). Reference build: `04_episodes/EX14_long-path` (README, build/, export/EX14.mp4).
+(In `03_ideas/experiments.md` this style is the "V3 smooth isometric" style beat.)
+
+- **No generated images.** Everything is built: a Blender orthographic isometric world + EffectCraft type and cards. Real
+  black-and-white footage is still allowed when a beat needs the real thing (`tools/footage.py --bw --twos`).
+- **Palette:** near-black ground `#0E0E10`, floor `#1B1B1F`, walls `#3A3A42`, furniture `#4C4C55`, people and labels `#8C8C96`,
+  warm white type `#EDE7DC`, **one accent: green `#57D100`** (build it straight into Blender; EX14 rendered ochre and
+  recoloured it in the comp with `accent()`).
+- **World:** flat-shaded shapes with small bevels, a soft sun + grey ambient (the camera sees the dark ground), no outlines,
+  no textures, no paper, grain or halftone. Isotype pictogram people (round head, tapered rounded body); "you" in the accent.
+- **Camera:** one continuous orthographic camera: a pivot (location, tilt, spin) + ortho scale. True isometric = tilt
+  54.7356°, spin 45°; wide shots tilt toward top-down (a full plan is too wide for 9:16 at true iso). It moves through key
+  poses on monotone (pchip) curves keyed to word frames, blends into following the subject when they walk, holds gently,
+  never hard-cuts, and ends on the opening frame (seamless loop).
+- **Motion:** 60 fps, eased (smootherstep; a small back-out overshoot only on arrivals), motion blur on, no stepping.
+  Devices that worked: a path that draws itself, x-ray walls with glowing hidden doors, a sight cone, a 10×10 dot grid that
+  fills to a percentage, a counter, a pull-out to a city of instanced tiles for scale.
+- **Type:** Inter Display (Black for titles and counters, Bold for quotes and the follow card, Medium for captions), IBM Plex
+  Mono Medium for labels and sources; a soft dark drop-shadow halo on all type.
+- **Captions:** sentence-case blocks at the bottom (panel bottom y 1430), Inter Display Medium 46 on a rounded `#0E0E10`
+  panel at 82% that grows with the words; each word fades in and rises 10 px over 14 frames on its spoken frame
+  (`capBlock()`; `build/caps.py` groups sentences). Centre cards (quote, counter, the named-concept title) replace captions
+  while they show.
+- **Follow card:** the Meikigo logo (`02_kit/brand/meikigo-logo.png`) above "Follow Meikigo for more." (Inter Display Bold 66),
+  no sound effects on it.
+- **Sound:** drone bed at 0.10 + about 10 soft hits (pop, tick, low sink, whoosh); nothing on the follow card.
+- **Review:** a cheap Blender preview first (quarter size, every 2nd frame, voice under it, ~3 min) for the user before the
+  full render; after it, per-frame difference (no spikes, no stalls), full-size frames on every card, the TikTok safe area.
+
+## Previous house format (V3, 2026-10-28 → 2026-11-01): cut-paper mixed media
 
 Every Miki Explained episode is built like **EX02V3 "The Doorway"** (`04_episodes/EX02V3_doorway`, see its README).
 It replaces V1 (cards and tiles on cream/brown) and V2 (flow style, Work Sans, 3D chrome-head humans).

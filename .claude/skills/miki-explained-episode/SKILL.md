@@ -1,44 +1,48 @@
 ---
 name: miki-explained-episode
-description: Playbook for making an episode of the Miki Explained series (miki-explained/ in this repo): about 40–45s 9:16 explainers for TikTok/Instagram that take a business, psychology or economics story and turn to "your shop", in the house cut-paper mixed-media format of EX02V3 "The Doorway" (collage + documentary images + diagram animation). Covers story choice and fact-checking, the script and Nathan narrator voice direction, the media prompts the user generates (how-i-generate.md), separating stills into layers in PhotoCraft, tightening the voice and cutting every shot to its word, building headless in EffectCraft, transitions, subtitles, sound, render and post copy. Use this whenever the user wants a new explainer, "the next episode", "EX03", a script, hook or storyboard for miki-explained, image prompts for an episode, to build/render/fix an episode in EffectCraft or PhotoCraft, or asks about the series' look, subtitles or sound — even if they don't say "episode" or "skill".
+description: Playbook for making an episode of the Miki Explained series (miki-explained/ in this repo): 40–50s 9:16 explainers for TikTok/Instagram that take a business, psychology or economics story and turn to "your shop", in the house smooth-isometric format of EX14 "The Long Path" (a Blender orthographic isometric world, one continuous camera, 60 fps, dark greys + one green accent, caption panel at the bottom; no generated images). Covers story choice and fact-checking, the script and Nathan narrator voice direction, tightening the voice to 60 fps word frames, building the world and camera in Blender, the cheap preview before rendering, the EffectCraft master (captions, cards, sound), frame-by-frame QA, render and post copy. Use this whenever the user wants a new explainer, "the next episode", "EX15", a script, hook or storyboard for miki-explained, to build/render/fix an episode, or asks about the series' look, captions or sound — even if they don't say "episode" or "skill".
 ---
 
 # Miki Explained — episode playbook
 
-Every episode follows the house format set by **EX02V3 "The Doorway"** (`miki-explained/04_episodes/EX02V3_doorway`,
-read its `README.md`). Episodes live in `miki-explained/04_episodes/EXNN_slug/`. Before building, read `00_bible/`
-(`visual-system.md` = the format, `series-plan.md`, `voice.md`, `glossary.md`) and `00_bible/effectcraft-notes.md`.
+Every episode follows the house format set by **EX14 "The Long Path"** (`miki-explained/04_episodes/EX14_long-path`,
+read its `README.md` and `episode.md`). User, 2026-11-01: "i really really love what you did with this. this is what i'm
+looking for." Episodes live in `miki-explained/04_episodes/EXNN_slug/`. Before building, read `00_bible/visual-system.md`
+(the format), `series-plan.md`, `script-formula.md`, `voice.md`, `glossary.md` and `00_bible/effectcraft-notes.md`.
 
 ## The format in one breath
 
-Cut-paper editorial collage (Vox / Fern) in paper `#EFE8DC`, ink `#111111` and one ochre `#C98A2B`, plus one extra colour
-only where the story needs it. **Every episode uses all three ingredients:** collage stills (scenes), 2–3 **documentary
-images** (the real thing, printed as torn ink-and-paper photos) and **diagram animation** (anything abstract, native).
-Elements step at 12fps, the camera glides; stamps with misregistration; Anton + IBM Plex Mono, all type native.
-Transitions are match cuts, camera carries and paper moves, never dissolves. **The voice sets the tempo:** one tightened
-narration track, every cut and key moment on its word. Simple subtitles, about 8–10 sound hits.
+A dark, clean **isometric world built in Blender** (near-black `#0E0E10`, flat greys, soft light, no outlines or textures,
+Isotype pictogram people) with **one accent, green `#57D100`**, filmed by **one continuous orthographic camera** at
+**60 fps**: smooth eased moves keyed to the voice, no hard cuts, no stepping, motion blur, ending on its first frame.
+**No generated images, no paper, no halftone.** EffectCraft adds the type: **captions** as sentence-case blocks on a rounded
+dark panel at the bottom (each word fades in and rises on its spoken frame), centre cards for quotes, counters and the
+named concept, and the **follow card** (Meikigo logo above "Follow Meikigo for more.", silent). Inter Display + IBM Plex
+Mono. **The voice sets the tempo.** About 10 soft sound hits on a low drone.
 
 ## How to work with this user
 
 - **Plan before acting on anything new** (a new episode, method or restructure); wait for approval. Small fixes to approved work: just do them.
-- **One gate at a time.** The user generates voice, images and sound files (credits are limited).
-- **EffectCraft only, never After Effects.** PhotoCraft for image work.
-- **Build headless** (no live window): cheaper and steadier. The user stops per-shot review once the first shots are approved.
-- English only, plain language. Report honestly what was checked (stills, frame strips, measured audio) and what wasn't watched or heard.
+- **One gate at a time.** The user records the voice (ElevenLabs credits are limited) and may supply sound files.
+- **Preview before rendering** (user, 2026-11-01): before any full Blender render, make the cheap preview
+  (`episode.py -- <out> preview` → `out/preview.mp4`, quarter size, every 2nd frame, voice under it, ~3 min) and show it.
+  Render the full 40-minute pass only after it looks right. Small text/colour/sound changes don't need Blender at all.
+- **EffectCraft only, never After Effects.** Build headless.
+- English only, plain language. Report honestly what was checked (stills, frame strips, measured audio, per-frame numbers)
+  and what wasn't watched or heard.
 
 ## The gates
 
 | # | Gate | Output | User approves |
 |---|---|---|---|
 | 1 | Story + facts | content-bank row, sources in `episode.md` | the story |
-| 2 | Script + shot list | `episode.md`: script (≈130 words, 6 lines), shot list with an ingredient per shot | the script and shot list |
-| 3 | Media prompts | `how-i-generate.md` (from `templates/media-prompts.md`) | the prompts |
-| 4 | Voice + media | user renders L01–L06 → `audio/`, stills, cut-out sheet and M1–M3 → `media/` | — |
-| 5 | Layers | PhotoCraft: cut-outs, plates, printed photos → `layers/` | — |
-| 6 | Voice timeline | `audio/voice.wav`, `audio/vo_timeline.json` | — |
-| 7 | Build + review | `build/*.jsx`, `EXNN.ecproj`, half-res preview | the cut |
-| 8 | Sound + render | `sfx/mix.wav`, `sfx/events.txt`, `export/EXNN.mp4`, an `_edit.ecproj` copy for the user | the final |
-| 9 | Post + calendar | `episode.md` § Post, `05_calendar/calendar.md`, `glossary.md` | — |
+| 2 | Script + shot list | `episode.md`: script, beats in the world, camera moves | the script and shot list |
+| 3 | Voice | `how-i-generate.md` (voice lines + reads); user renders `audio/L01…` | — |
+| 4 | Voice timeline | `audio/voice.wav`, `audio/vo_timeline.json` at 60 fps | — |
+| 5 | World + preview | `build/world.py`, `build/episode.py`, style stills for anything new, `out/preview.mp4` | the preview |
+| 6 | Render + master | `out/frames`, `build/caps.py`, `MASTER.jsx`, `sfx/mix.wav`, QA numbers | — |
+| 7 | Final + hand-off | `export/EXNN.mp4`, `EXNN_edit.ecproj`, `README.md` | the final |
+| 8 | Post + calendar | `episode.md` § Post, `05_calendar/calendar.md`, `glossary.md`, experiments row | — |
 
 ### 1. Story + facts
 Pick from `03_ideas/content-bank.md` (stories, the How It Makes Money series, series pitches), rotating lanes; **at least every third episode is Malaysian**. Verify every number against
@@ -52,16 +56,59 @@ count. The named concept (glossary) gets a title card around Twist/Payoff; the B
 the End rotates (reframe · "next time you…" · callback · question sparingly) and the last line is "Follow Meikigo for more."
 Apply the competitor-informed rules in script-formula.md (everyday viewer-POV topics, contradict early, one physical
 detail + one comparison, "that's why…", escalation). Rotate business types (retail, F&B, clinics…), not barbers by default. Voice direction for Nathan, narrator (ElevenLabs `v4k7NzxipnuJNJtrKxob`, `00_bible/voice.md`).
-Shot list: one shot per beat (a beat can span or share a shot), each with its ingredient. If a line names a real place or
-object → documentary image; if it explains or compares → diagram or typography; collage carries the rest. Plan the
-transition into each shot (match cut, camera carry, paper slide / tear / flaps) and 1–2 deliberate holds.
+Shot list: one beat per line, each with **what we see in the world** and **how the one camera gets there** (carry,
+rise, follow, pull-out, fly-through); pick a device per idea (a path that draws, x-ray, a cone, a dot grid, a counter, a
+city of tiles) and 1–2 gentle holds. The last beat returns to the opening frame (seamless loop).
 
-### 3. Media prompts
+### 3–4. Voice and its timeline
+`how-i-generate.md` holds only the voice now: one row per line with how to read it, plus pronunciations. Then:
+```
+archive-ignore/comedy-autopsy/.venv/bin/python miki-explained/tools/words.py <ep> L01=0 … L08=0
+python3 miki-explained/tools/vo_tighten.py <ep> [--hold L04@end:0.5] --fps 60
+```
+Every word gets its MASTER frame = floor(t × 60). Scripts read `audio/vo_timeline.json` directly (`w("L03", 10)`), so
+nothing is typed by hand. L08 can reuse an earlier episode's "Follow Meikigo for more."
+
+### 5. World + preview (Blender)
+Copy `EX14_long-path/build/` as the starting kit:
+- `world.py`: the set: `box()` (bevelled flat boxes), `mat()` (flat, roughness 1, no specular), `person()` (Isotype
+  pictogram), `fillet()` + `at(s)` (a rounded path sampled by arc length), floor arrows lit by object colour, the camera
+  rig `set_cam(f, pivot, tilt, spin, ortho_scale)`, `ease`/`span` (smootherstep). Set the accent to `#57D100` here.
+- `episode.py`: execs `world.py`, adds each beat's props, reads word frames, and bakes every frame: the camera through
+  key poses `CK` on monotone `pchip`/`vcurve` curves + `follow_w(f)` blends for walking shots; props on `span()`/`back_out()`.
+  Key heavy props only inside their window (`f in (0, N-1) or lo <= f <= hi`) or the setup takes minutes.
+- `preview` argument → `tools/blender/preview.py` → `out/preview.mp4`. **Show it before the full render.**
+- Full render: `blender -b --python build/episode.py -- $PWD/out/frames` (EEVEE, ~0.85 s a frame, ~40 min for 46 s).
+Measure before rendering: the camera speed per frame and that the subject sits clear of the caption panel and words.
+
+### 6. Master (EffectCraft, 60 fps)
+`lib.jsx` (FPS 60): `capBlock()` (caption panel), `card()` (centre cards, rise + fade, dark halo), `accent()` (recolour a
+rendered accent if needed), counters via a Source Text expression. `caps.py` → `caps.jsx` (sentence blocks; words under a
+centre card are skipped; blocks end before a card). `MASTER.jsx`: the world sequence, captions, cards, the follow card with
+`layers/logo.png`, `sfx/mix.wav`. `sfxmix.py` (FPS 60): drone 0.10 + ~10 hits, none on the follow card.
+Rebuild: `rm EXNN.ecproj; build/run.sh MASTER` (always from scratch: the image sequence item is reused otherwise), render
+`effectcraft-cli render --project EXNN.ecproj --comp MASTER --out export/EXNN.mp4 --format h264 --fps 60 --audio on`.
+
+### 7. QA and hand-off
+- Per-frame difference of `out/frames` (ffmpeg tblend + signalstats): no spikes against neighbours, no unintended stalls.
+- `render-frame` full-size stills on every card and caption block; TikTok safe area (x 60–960, y 160–1440).
+- Length, frame count, loudness about −19 LUFS. Copy `EXNN_edit.ecproj` for the user (never rebuild into it), write
+  `README.md`, drop previews and temp renders.
+
+### 8. Post + calendar
+Caption, hashtags, pinned comment with the source and a DM keyword, the before-posting checklist (series-plan), including
+the **AI-generated content label**. Update the calendar and the glossary.
+
+## Legacy: the cut-paper format (EX02V3–EX13)
+
+Kept for reference and for reuse of single techniques (real footage, PhotoCraft). Don't build new episodes this way.
+
+#### 3. Media prompts
 Copy `templates/media-prompts.md` → `how-i-generate.md`. Worked example: `EX02V3_doorway/how-i-generate.md`.
 Hard rules: **9:16, no text in any image, lights off, anything that moves gets its own picture** (cut-out sheet),
 2–3 documentary images with the named details spelled out.
 
-### 4–5. Layers in PhotoCraft
+#### 4–5. Layers in PhotoCraft
 Launch with the control server scoped to the episode (see memory `photocraft-automation` for the protocol):
 `/Applications/PhotoCraft.app/Contents/MacOS/PhotoCraft --control 47321 --control-token-file <scratch>/token --automation-read-root <miki-explained> --automation-write-root <miki-explained>`.
 - Figures: `select.object` with a box (not `select.subject`), `select.refineEdge`, `layer.new.layerViaCopy`.
@@ -73,7 +120,7 @@ Launch with the control server scoped to the episode (see memory `photocraft-aut
   a torn-edge lasso, a paper rim layer filled `#e9e1d2` behind it.
 - Save each layer as a full-canvas PNG in `layers/` plus a layered PSD in `layers/psd/`. Quit PhotoCraft when done.
 
-### 6. Voice timeline
+#### 6. Voice timeline
 ```
 archive-ignore/comedy-autopsy/.venv/bin/python miki-explained/tools/words.py <ep> L01=0 L02=0 L03=0 L04=0 L05=0 L06=0
 python3 miki-explained/tools/vo_tighten.py <ep> [--hold L01@<file s>:1.0] [--hold L06@<file s>:1.0]
@@ -82,7 +129,7 @@ python3 miki-explained/tools/vo_tighten.py <ep> [--hold L01@<file s>:1.0] [--hol
 word with its MASTER frame. A shot starts at floor(word time × 24). Whisper's start for a word right after a cut can be
 early: confirm cut points with `silencedetect` on `voice.wav`.
 
-### 7. Build (headless)
+#### 7. Build (headless)
 Copy `EX02V3_doorway/build/` as the starting kit: `lib.jsx` (set `DIR`; helpers `plate`, `stepped`, `stamp`, `misreg`,
 `hold`, `cutOn`, `cutWords`, `maskReveal`, `glowLayer`, `washLayer`, `camera`, `camZ`, `overlay`), `overlay.jsx`, `run.sh`, one
 `<shot>.jsx` per shot and `MASTER.jsx` (shots at their word frames, paper slides and tears, match-ins, subtitles from
@@ -93,23 +140,19 @@ text in the central 840 × 1280); subtitles end above y 1440. Check one frame pe
 Review with frame strips across every transition and on every key word (render-frame / ffmpeg tiles of a half-res
 render), then a half-res MASTER preview for the user.
 
-### 8. Sound, render, hand-off
+#### 8. Sound, render, hand-off
 The user supplies sound files. Find each file's hit (peak scan), trim, and place the hit on its frame: copy
 `EX02V3_doorway/build/sfxmix.py` and edit its table. MASTER imports `sfx/mix.wav`. About 8–10 hits; music at about −23 dB if used.
 Render `effectcraft-cli render --project … --comp MASTER --out export/EXNN.mp4 --format h264 --audio on`, check length,
 frames and loudness (about −18 LUFS, no clipping). Give the user an `EXNN_edit.ecproj` copy for their own changes; never
 rebuild into it. Clean up: drop previews and temp files, write a `README.md`.
 
-### Testing a motion change (the EX00V4 method)
+#### Testing a motion change (the EX00V4 method)
 When a technique is new or in doubt, test it in `04_episodes/EX00Vn_<name>-test/` first: one change per variant (B, C, D),
 measure the property per frame with `valueAtTime`, check full-size stills, render only the window, show a side-by-side.
 The user picks; only then move it into the kit, the docs and this skill.
 
-### 9. Post
-Caption, hashtags, pinned comment with the source and a DM keyword, the before-posting checklist (series-plan), including
-the **AI-generated content label**. Update the calendar and the glossary.
-
-## Blender sets (paperkit v2, from EX11)
+### Blender sets (paperkit v2, from EX11)
 
 Stage generated stills as a paper diorama in Blender (`tools/blender/paperkit.py`), never as a procedural 3D world:
 1. Environment plate → `tools-venv/depth/bin/python miki-explained/tools/depth.py <plate> <box_dir> 4` → `shadowbox(box_dir)`:
@@ -121,7 +164,7 @@ Stage generated stills as a paper diorama in Blender (`tools/blender/paperkit.py
 Reference: `04_episodes/_tests/EX00V5_paperkit2/` (kit_test.py, compare_flat_vs_v2.mp4). Ask for environment plates in
 how-i-generate.md (backdrop, set dressing) — see the memory note on Blender environments.
 
-## Printed 3D (crowd, halftone, ink; from EX00V6)
+### Printed 3D (crowd, halftone, ink; from EX00V6)
 
 When a beat needs real depth (a camera that orbits, a crowd seen from every side), build it in 3D and print it: the
 user's picks r33–r42 (`01_references/v3-pro3d-study.md`) read "pro" as art direction, not realism.

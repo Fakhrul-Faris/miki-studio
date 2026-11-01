@@ -30,13 +30,13 @@ Word count: _ (target: _) · Checklist score: _/7
 
 ## Shot list (cut to the voice)
 
-Every episode mixes all three ingredients: collage, documentary image (2–3), diagram.
+House format: EX14 smooth isometric (one Blender world, one continuous camera, 60 fps). One beat per line.
 
-| Shot | Starts on word | Ingredient | Key moment → word | Transition in |
+| Shot | Starts on | What we see (world + device) | Camera | Transition in |
 |---|---|---|---|---|
-| 1A | | collage | | |
+| 1 | L01 (frame 0, already moving) | | | — |
 
-Media prompts: `how-i-generate.md` (from `templates/media-prompts.md`).
+Voice notes: `how-i-generate.md` (voice lines and reads only; no images).
 
 ## Voice
 
@@ -52,10 +52,6 @@ Lines to paste into ElevenLabs, one per render.
 - Carousel (7 slides):
 - Posted: _date_ · Link: _
 - Results (owner comments / owner DMs, not views): _
-
-## Media
-
-Prompts for collage stills, the cut-out sheet and the documentary images live in `how-i-generate.md`.
 
 ## Sound (about 8–10 hits on key moments, any logo silent)
 

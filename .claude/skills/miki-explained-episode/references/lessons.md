@@ -37,3 +37,21 @@ Full detail: `miki-explained/00_bible/effectcraft-notes.md`. Read before proposi
   rest-shape coords), even though screen dots stay put while the camera moves (EX00V6).
 - Free Hugging Face image-to-3D (TRELLIS, Hunyuan3D) runs out of anonymous ZeroGPU quota after ~2 models a day (EX00V6).
 
+
+**EX00V7–EX14 (2026-11-01): from generated posters to the smooth isometric house format**
+- Seedream poster stills + depth bands + printed footage (EX00V7): only "partly okay". Generated images are retired; the
+  world is built in Blender, isometric, flat, 60 fps (EX14, loved).
+- Old film is 18 fps padded to 29.97 with uneven duplicates: dedupe and step evenly (`footage.py --twos`); dots/posterised
+  prints made footage unreadable: plain black and white (`--bw`).
+- Camera built from separately eased pieces stops and lurches at every join: one monotone (pchip) curve through key poses,
+  or one designed speed curve; check camera speed per frame and the per-frame difference before showing anything.
+- Hiding big objects on one frame pops: fly past them instead (the EX00V7 tunnel along the holes' own axis).
+- Blender: `bevel_factor_mapping_end` has no "LENGTH" in 5.2 (use "SPLINE"); world.py's objects live in the scene's
+  "Collection", not the master collection; a collection instance of a collection that's excluded drops it (instance the store
+  collection itself, exclude only the extra-paths collection); don't name a variable `WT` in episode.py (world.py's wall
+  thickness); key heavy props only inside their window.
+- EffectCraft: rebuild MASTER from an empty project (a reused image-sequence item keeps its old length); text anchors need
+  `position + rect offset` (setting position = anchor put words at the top); counters work as a Source Text expression;
+  "Change to Color" recolours a rendered accent (hue 12, saturation 40 tolerance keeps cream and greys untouched).
+- Captions: words sliding 18 px into a 0.28-em gap touch the previous word; 8–10 px and a 0.34-em gap, or the panel style.
+- Always preview before a full render (`preview.py`, ~3 min vs ~40): the user asked for it.

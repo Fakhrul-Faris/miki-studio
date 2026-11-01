@@ -74,3 +74,12 @@ miki-explained/04_episodes/_tests/*/models/
 miki-explained/04_episodes/_tests/*/P*.png
 miki-explained/04_episodes/_tests/*/look_*.mp4
 miki-explained/04_episodes/_tests/*/explore/*.png
+# V3 smooth isometric (EX14 on): Blender frame renders + previews, regenerable footage clips, test-folder renders/projects
+miki-explained/04_episodes/*/out/
+miki-explained/04_episodes/*/*.mov
+miki-explained/04_episodes/_tests/*/out/
+miki-explained/04_episodes/_tests/*/export/
+miki-explained/04_episodes/_tests/*/*.ecproj
+miki-explained/04_episodes/_tests/*/audio/*.wav
+miki-explained/04_episodes/*/footage/*.mp4
+miki-explained/04_episodes/_tests/*/footage/*.mp4
