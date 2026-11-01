@@ -102,12 +102,24 @@ Lines to paste into ElevenLabs, one per render (after script approval).
 
 ## Post
 
-- Caption: IKEA's maze isn't bad design. It's the business. One path, hidden shortcuts, and an estimated 60% of what people
-  buy was never on their list. Now picture your shop's walk. #MeikigoExplained
-- Hashtags: #ikea #retail #storedesign #smallbusiness #businesstips #consumerpsychology #malaysia #kedai
-- Pinned comment: Sources: Prof. Alan Penn (UCL Bartlett), 2011 lecture, via The Times and The Globe and Mail (60% is his
-  estimate) · Ingka Group's head of retail, Fortune, 1 Sep 2023 · Ingka Group Annual Summary FY24 (729 million store visits).
-  Comment PATH and I'll send the one-page shop-walk checklist.
+**Caption:**
+```
+IKEA's maze isn't bad design. It's the business. 🧭
+
+One path, arrows on the floor, shortcuts tucked out of sight. UCL architecture professor Alan Penn estimates 60% of what people buy at IKEA was never on their list. When IKEA tried small city stores without the long path, shoppers told them: "No, no, no, this is a big shop."
+
+Running a hardware shop, a pharmacy or a kedai runcit? Put what they came for at the back, and let the walk pass everything else.
+
+#ikea #retail #storedesign #smallbusinessmalaysia #consumerpsychology
+```
+
+**Pinned comment:**
+```
+Want your shop's walk to sell more? DM "PATH" and we'll send a one-page layout checklist.
+Sources: Prof. Alan Penn (UCL Bartlett), 2011 lecture, via The Times and The Globe and Mail (60% is his estimate, not an IKEA figure); Ingka Group's head of retail, Fortune, 1 Sep 2023 ("No, no, no, this is a big shop!"); Ingka Group Annual Summary FY24 (729 million store visits). IKEA has denied the layout is meant to confuse.
+```
+
+- Turn on the AI-generated content label (synthetic voice, code-built graphics).
 - Posted: _date_ · Link: _
 
 ## Sound (about 8–10 hits on key moments, end card silent)
