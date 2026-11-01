@@ -16,6 +16,10 @@ final export back. Standard library only. Run from anywhere:
   python3 miki-explained/tools/tgstore.py recaption             # rewrite stored captions in the current style
   python3 miki-explained/tools/tgstore.py logout-cloud --yes    # one time, before switching to the local Bot API server
 
+In the chat (serve, on the Air): /exNN · /posted · /posted ex13 [tiktok|instagram|threads] [HH:MM | YYYY-MM-DD HH:MM]
+· /scheduled ex13 [HH:MM | YYYY-MM-DD HH:MM] (scheduled in TikTok Studio; counts as posted at that time)
+· /stats ex13 72h with an analytics screenshot (saved to ~/miki-ops/stats and the dashboard inbox) · /dash
+
 Roles: media/ and audio/ are "source"; export/*-Final.mp4 is "final" (what pull returns); other exports are "render".
 
 Config: ~/.config/telegram/tgstore.env (chmod 600; see tgstore.env.example). The bot token is read from TG_TOKEN_FILE and
@@ -366,7 +370,10 @@ def cmd_push_all(_):
 
 def cmd_commands(_):
     ix = load_index(); cmds = [{"command": "start", "description": "📼 All episodes in storage"},
-                               {"command": "posted", "description": "📣 Which episodes are posted · /posted ex04 marks one"}]
+                               {"command": "posted", "description": "📣 Posted? · /posted ex13 tiktok 18:00 marks one"},
+                               {"command": "scheduled", "description": "📅 Scheduled in TikTok Studio · /scheduled ex05 12:30"},
+                               {"command": "stats", "description": "📊 Send a screenshot with /stats ex13 72h"},
+                               {"command": "dash", "description": "📈 Dashboard summary and link"}]
     for ep in episodes(ix):
         cmds.append({"command": ep.lower(), "description": (f"🎬 {ep} · {ep_title(ep)}")[:256]})
     call("setMyCommands", {"commands": json.dumps(cmds)})
@@ -412,30 +419,146 @@ def reply_episode(chat, ep):
                                   "caption": caption(ep, ep_title(ep), v["path"], v["role"], v["size"], v["sha256"])})
 
 
+# ---------- dashboard hooks (the Air: tools/dash, ~/miki-ops) ----------
+STATS = Path.home() / "miki-ops" / "stats"
+DASH_URL = os.environ.get("MIKI_DASH_URL", "")
+
+
+def dash():
+    sys.path.insert(0, str(Path(__file__).parent / "dash")); import db; return db
+
+
+def local_file(file_id):
+    """getFile on the local Bot API server → the file on this machine's disk."""
+    f = call("getFile", {"file_id": file_id}); src = Path(f["file_path"])
+    data = Path(C.get("TG_LOCAL_DATA", "~/Private/telegram-bot-api/data")).expanduser()
+    return data / src.relative_to("/var/lib/telegram-bot-api") if src.is_absolute() else data / src
+
+
+def save_stat(chat, ep, cp, m):
+    """An analytics screenshot (photo or image file) for ep at checkpoint cp → ~/miki-ops/stats/EP/ + the dashboard inbox."""
+    fid = (m.get("photo") or [{}])[-1].get("file_id") or ((m.get("document") or {}).get("mime_type", "").startswith("image/") and m["document"]["file_id"])
+    if not fid:
+        call("sendMessage", {"chat_id": chat, "text": f"Send the screenshot as a photo with the caption /stats {ep.lower()} {cp}"}); return
+    src = local_file(fid); d = STATS / ep; d.mkdir(parents=True, exist_ok=True)
+    dest = d / f"{cp}_{time.strftime('%Y%m%d-%H%M%S')}_{m['message_id']}{src.suffix or '.jpg'}"; shutil.copyfile(src, dest)
+    try:
+        sys.path.insert(0, str(Path(__file__).parent / "dash")); import ocrparse; sug = ocrparse.read(str(dest))
+    except Exception:
+        sug = {}
+    dash().add_inbox(ep, cp, f"{ep}/{dest.name}", sug, "bot")
+    got = ", ".join(f"{k} {v}" for k, v in sug.items()) or "no numbers found"
+    call("sendMessage", {"chat_id": chat, "parse_mode": "HTML", "text": f"📊 Saved <b>{ep} · {cp}</b>. Read: {html.escape(got)}.\n"
+                         f"Confirm it in the dashboard Inbox{(': ' + DASH_URL + '/#inbox') if DASH_URL else ''}."})
+
+
+def parse_when(parts):
+    """['18:00'] / ['2026-11-02', '18:00'] / [] → ISO minutes (today when only a time is given)."""
+    t = " ".join(parts).strip()
+    if not t: return None
+    if re.fullmatch(r"\d{1,2}:\d{2}", t): return time.strftime("%Y-%m-%d") + "T" + t.zfill(5)
+    m = re.fullmatch(r"(\d{4}-\d\d-\d\d)[ T](\d{1,2}:\d{2})", t)
+    return f"{m.group(1)}T{m.group(2).zfill(5)}" if m else None
+
+
+def reply_dash(chat):
+    with dash().conn() as c:
+        n_post = c.execute("select count(*) from posts where posted_at is not null").fetchone()[0]
+        n_ready = c.execute("select count(*) from episodes where status='ready'").fetchone()[0]
+        unread = c.execute("select count(*) from inbox where processed=0").fetchone()[0]
+        nxt = c.execute("select episode, planned_at from posts where posted_at is null and planned_at is not null order by planned_at limit 3").fetchall()
+    lines = ["📈 <b>Miki dashboard</b>", f"Posted: {n_post} · ready: {n_ready} · screenshots to read: {unread}"]
+    if nxt: lines += ["", "Up next:"] + [f"• {e} · {w.replace('T', ' ')}" for e, w in nxt]
+    if DASH_URL: lines += ["", DASH_URL]
+    call("sendMessage", {"chat_id": chat, "parse_mode": "HTML", "text": "\n".join(lines), "disable_web_page_preview": True})
+
+
+def quiet(s, t):
+    a, b = s["quiet"]; hm = t.strftime("%H:%M")
+    return (a <= hm or hm < b) if a > b else (a <= hm < b)
+
+
+def tick(chat):
+    """Every poll: remind before a planned slot (video + caption), and nudge for stats that have come due."""
+    import datetime as dt
+    D = dash(); t = dt.datetime.now(); s = D.settings(); ix = load_index()
+    with D.conn() as c:
+        D.auto_post(c)
+        soon = c.execute("select id, episode, planned_at from posts where platform='tiktok' and posted_at is null and planned_at is not null "
+                         "and scheduled_at is null and reminded = 0").fetchall()
+        for p in soon:
+            at = dt.datetime.fromisoformat(p["planned_at"])
+            if not (t <= at <= t + dt.timedelta(minutes=int(s["lead_min"]))): continue
+            ep = p["episode"]
+            call("sendMessage", {"chat_id": chat, "parse_mode": "HTML", "text":
+                 f"⏰ <b>{ep} · {html.escape(ep_title(ep))}</b> is due on TikTok at <b>{at.strftime('%H:%M')}</b>.\n"
+                 f"Video and caption below. Schedule it in TikTok Studio, then <code>/scheduled {ep.lower()}</code> (or tap the button on the dashboard)."})
+            for label, txt in post_text(ep):
+                call("sendMessage", {"chat_id": chat, "parse_mode": "HTML", "text": f"{'📝' if label == 'Caption' else '📌'} <b>{label}</b>\n<pre>{html.escape(txt)}</pre>"[:4096]})
+            fin = next((v for v in files(ix).values() if v["episode"] == ep and v["role"] == "final"), None)
+            if fin: call("sendDocument", {"chat_id": chat, "document": fin["file_id"], "caption": f"{ep} final"})
+            c.execute("update posts set reminded = 1 where id = ?", (p["id"],))
+        if quiet(s, t): return
+        for d in D.due(c):
+            if d["state"] != "due": continue
+            if c.execute("select 1 from nudges where post_id=? and checkpoint=?", (d["post_id"], d["checkpoint"])).fetchone(): continue
+            ep, cp = d["episode"], d["checkpoint"]
+            call("sendMessage", {"chat_id": chat, "parse_mode": "HTML", "text":
+                 f"📊 <b>{ep}</b> {cp} numbers are due ({d['platform']}). Screenshot the post's analytics in TikTok Studio and send it here "
+                 f"with the caption <code>/stats {ep.lower()} {cp}</code>, or upload it on the dashboard."})
+            c.execute("insert into nudges values(?, ?, ?)", (d["post_id"], cp, D.now()))
+
+
 def cmd_serve(_):
     """Long-poll for commands in the storage chat only; everyone else is ignored."""
     me, off = str(channel()), 0
     print("serving /start and /<episode> in the storage chat", flush=True)
     while True:
         try:
+            try: tick(me)
+            except Exception as e: print(f"tick: {e}", flush=True)
             ups = call("getUpdates", {"offset": off, "timeout": 50, "allowed_updates": json.dumps(["message"])})
-        except TgError as e:
+        except (TgError, OSError) as e:
             print(f"error: {e}", flush=True); time.sleep(10); continue
         for u in ups:
             off = u["update_id"] + 1; m = u.get("message") or {}
-            if str(m.get("chat", {}).get("id")) != me or not m.get("text", "").startswith("/"):
+            text = m.get("text") or m.get("caption") or ""
+            if str(m.get("chat", {}).get("id")) != me or not text.startswith("/"):
                 continue
-            parts = m["text"].split(); cmd = parts[0][1:].split("@")[0].lower()
+            parts = text.split(); cmd = parts[0][1:].split("@")[0].lower()
             try:
                 eps = {e.lower(): e for e in episodes(load_index())}
-                if cmd == "posted" and len(parts) > 1:
+                if cmd == "stats" and len(parts) > 2 and eps.get(parts[1].lstrip("/").lower()) and parts[2].lower() in ("24h", "72h", "7d"):
+                    save_stat(me, eps[parts[1].lstrip("/").lower()], parts[2].lower(), m)
+                elif cmd == "stats":
+                    call("sendMessage", {"chat_id": me, "parse_mode": "HTML", "text": "Send the analytics screenshot as a photo with the caption <code>/stats ex13 72h</code> (24h, 72h or 7d)."})
+                elif cmd == "dash":
+                    reply_dash(me)
+                elif cmd == "scheduled" and len(parts) > 1 and eps.get(parts[1].lstrip("/").lower()):
+                    ep = eps[parts[1].lstrip("/").lower()]; w = parse_when(parts[2:])
+                    if not w:
+                        with dash().conn() as c: r = c.execute("select planned_at from posts where episode=? and platform='tiktok'", (ep,)).fetchone()
+                        w = r["planned_at"] if r and r["planned_at"] else None
+                    if w:
+                        dash().schedule(ep, w)
+                        call("sendMessage", {"chat_id": me, "parse_mode": "HTML", "text": f"📅 <b>{ep}</b> scheduled in TikTok Studio for {w.replace('T', ' ')}. It counts as posted then; stats reminders start from that time."})
+                    else:
+                        call("sendMessage", {"chat_id": me, "parse_mode": "HTML", "text": f"When? <code>/scheduled {ep.lower()} 18:00</code> or <code>/scheduled {ep.lower()} 2026-11-03 18:00</code>"})
+                elif cmd == "posted" and len(parts) > 1:
                     ep = eps.get(parts[1].lstrip("/").lower())
-                    if ep: reply_posted(me, f"✅ Marked <b>{ep} · {html.escape(ep_title(ep))}</b> posted ({mark_posted(ep)}).")
+                    plat = parts[2].lower() if len(parts) > 2 and parts[2].lower() in ("tiktok", "instagram", "threads") else "tiktok"
+                    rest = parts[3:] if len(parts) > 2 and parts[2].lower() in ("tiktok", "instagram", "threads") else parts[2:]
+                    w = parse_when(rest)
+                    if ep:
+                        day = mark_posted(ep, w[:10] if w else None)
+                        try: dash().record_post(ep, plat, w or time.strftime("%Y-%m-%dT%H:%M"))
+                        except Exception as e: print(f"dashboard: {e}", flush=True)
+                        reply_posted(me, f"✅ Marked <b>{ep} · {html.escape(ep_title(ep))}</b> posted on {plat} ({w.replace('T', ' ') if w else day}).")
                     else: reply_posted(me, f"No episode called {html.escape(parts[1])}.")
                 elif cmd == "posted": reply_posted(me)
                 elif cmd in eps: reply_episode(me, eps[cmd])
                 else: reply_list(me)
-            except TgError as e:
+            except (TgError, OSError, ValueError) as e:
                 print(f"error: {e}", flush=True)
 
 

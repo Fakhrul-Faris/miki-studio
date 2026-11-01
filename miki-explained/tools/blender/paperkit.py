@@ -374,10 +374,11 @@ def fold(o, hinge_obj, frames, axis="X"):
 PRINT_DOT, PRINT_GROUND = (0.53, 0.50, 0.45, 1), (0.012, 0.011, 0.010, 1)   # paper dots on near-black ink (dark sets)
 
 
-def halftone(m, gain=2.2, cell=0.02, space="object", dot=PRINT_DOT, ground=PRINT_GROUND, cells=210):
+def halftone(m, gain=2.2, cell=0.02, space="screen", dot=PRINT_DOT, ground=PRINT_GROUND, cells=210):
     """Turn a material into a printed halftone: dots of `dot` on `ground`, sized by how lit the surface is (light → bigger).
-    space="object": dots are fixed to the surface (rest shape, so they ride bodies and bend with a rig), cell in metres;
-    space="screen": a flat print screen over the frame (dots stay put while the camera moves), `cells` across the height.
+    space="screen" (house default, user pick 2026-11-01): a flat print screen over the frame, `cells` across the height;
+    the dots stay put while the camera moves, like a printed page.
+    space="object": dots fixed to the surface (rest shape, so they ride bodies and bend with a rig), cell in metres.
     The material's Principled base colour (a grey) sets the tone. Ink dots on a paper ground (cream sets) grow with shadow
     instead. EEVEE only (Shader to RGB)."""
     nt = m.node_tree; b = next((n for n in nt.nodes if n.type == "BSDF_PRINCIPLED"), None)

@@ -30,7 +30,7 @@ Only verified ideas become episode folders. Every script follows reveal → cont
 | 2 | The System Behind | QB House wait lights 🔍 | "This barbershop tells you the wait before you walk in." | Customers deciding at the door → live queue status | ✓ QB Net 2024 report (colours via FAQ) | EX02, EX02V3 (posted) |
 | 3 | Hidden Economics | Baumol's cost disease (haircuts) | "A haircut takes the same time as in 1950. So why does it cost 10× more?" | Can't cut faster → stop losing empty chair time | ☐ | |
 | 4 | Incentive Backfires | Wells Fargo sales targets | "A bank made its staff open 3.5 million fake accounts. Nobody told them to." 🔍 | Commission fights → per-staff tracking | ☐ | |
-| 5 | Psychology of Waiting | Disney's hidden queues 🔍 | "Disney lies about your wait. On purpose." | Unfair waits feel longer → fair booking + walk-in order | ☐ | |
+| 5 | Psychology of Waiting | Disney's hidden queues 🔍 | "Disney lies about your wait. On purpose." | Quote a wait you can beat, hide the line's length → Malaysian F&B queue | ✓ Touring Plans 2021/2023, PopSci 2020 (Larson) | EX13 |
 | 6 | Business Autopsy | Blockbuster late fees 🔍 | "Everyone thinks no-show fees work. Blockbuster proved otherwise." | Smarter booking deposits | ☐ | |
 | 7 | The System Behind | Ichiran ticket machines | "This ramen shop removed the counter conversation." | Counter as bottleneck → one shared tablet | ☐ | |
 | 8 | Money Stories | How Malaysia went QR 🔍 | "Your mamak accepted QR before your bank app worked." | "Ada cash tak?" → DuitNow QR checkout | ✓ PayNet 2026, BNM IFTF 2026 | EX03 |

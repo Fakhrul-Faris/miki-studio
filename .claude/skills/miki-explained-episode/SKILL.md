@@ -132,8 +132,8 @@ user's picks r33–r42 (`01_references/v3-pro3d-study.md`) read "pro" as art dir
 2. In the shot: `load_person(name, link=False)` → set `col.instance_offset = hip` → `seat(proto, hip_at, turn, mirror)` per seat;
    2–3 real copies (`load_person(name)`) carry the story moves with `move(rig, bone, [(frame, deg), …])`. Vary pose per row:
    nobody wants a room of identical heads down.
-3. **Look:** `paperkit.halftone(mat, gain≈3)` (paper dots on ink, sized by light, fixed to the body's rest shape so they
-   ride the rig) on every `clay …` material, then `paperkit.ink_outline(meshes)` (paper-coloured inverted-hull edge).
+3. **Look:** `paperkit.halftone(mat, gain≈3)` (paper dots on ink, sized by light, on a flat screen: the user chose screen dots over
+   dots fixed to the body, 2026-11-01) on every `clay …` material, then `paperkit.ink_outline(meshes)` (paper-coloured inverted-hull edge).
    The ochre accent stays a solid, unprinted object. Dark set, light pools, haze (look B). EEVEE, ~4 s a frame at 1080×1920.
 4. Don't: Grease Pencil Line Art (drew nothing on instanced crowds in background renders); free image-to-3D (Hugging Face
    ZeroGPU quota runs out after ~2 models a day; `tools/img3d.py` is kept for one-off hero props).

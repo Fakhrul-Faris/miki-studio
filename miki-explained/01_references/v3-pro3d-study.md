@@ -107,7 +107,7 @@ Same voice line, same length; judge on the phone.
 ## Result (2026-11-01, EX00V6)
 
 Tested A (flat 3D, cream) vs B (lit paper, dark) → B, then the audience made 3D. Picked: **printed 3D**: free MPFB
-people (nine varied seated poses) with halftone dots fixed to the body and a paper ink outline, in the dark lit room, with the
+people (nine varied seated poses) with halftone dots on a flat screen (the user tried dots fixed to the body and reverted) and a paper ink outline, in the dark lit room, with the
 ochre empty seats the only solid colour (`04_episodes/_tests/EX00V6_polish/compare_E_vs_F.mp4`). Method: the episode skill
 § Printed 3D; kit: `tools/blender/crowd.py`, `paperkit.halftone()`, `paperkit.ink_outline()`. The same print works on props
 and sets (`explore/explore_sheet.jpg`: café cart, night street, coin-stack chart, cream variant).

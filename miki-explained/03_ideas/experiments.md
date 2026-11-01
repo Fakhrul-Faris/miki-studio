@@ -34,6 +34,7 @@ plates, fills), ffmpeg, and the stills / voice the user generates. **Feasibility
 | 8 | Cinemas | H1 data at frame 0 | E6 silence drop | C1 infinite zoom | A7 halftone dissolve | S2 open loop | U2 paper foley | T1 big word captions | _ |
 | 9 | EX11 The Price of a No-Show (L1, Bridge off, CTA-end, END-callback, clinic; first paperkit v2 set) | H4 wrong-on-purpose | E5 cut on the beat (every 2 beats, 100 BPM) | C3 top-down paper hands (Blender) | A1 stop-motion 8 fps | S6 under 20 s (19.2 s) | U4 faster voice (×1.1) | subtitles (T2 dropped at plan) | _ |
 | 10 | EX12 The Button That Does Nothing (L3, Bridge on: bubble tea, CTA-end, END-next) | H6 guess-the-timer | E13 rule of three (1 · 2 · 3 matched presses, broken by the pull-back) | C4 first-person walk (Blender, five sets) | A8 paper mechanisms (buttons, sliding doors) | S3 countdown list | U2 paper foley + clicks | T1 big word captions | _ |
+| 11 | EX13 The Hidden Queue (L2 134 w, Bridge on: Malaysian nasi kandar, CTA-end, END-reframe; first Opuscar beats) | H1 data at frame 0 (split-flap 60 → 23) | E12 the breath (2 s after "walk away") | C2 orbit (printed 3D queue, walls sink) | A4 live data build (pencil chart) | S1 seamless loop (board flips back to the opening) | house + flap clacks | subtitles | V1 News Package + V2 Data Storytelling | _ |
 
 Each option shown twice or more is paired with different partners (e.g. S1 with E4/C5 on Day 3 and E8/C2 on Day 7).
 Not yet scheduled: E3 long holds, S5 cliffhanger, S7 comment reply (needs comments), A6 rotoscope.
@@ -178,3 +179,21 @@ User, 2026-10-31: "place [the follow] at the end, follow meikigo account for mor
 6. **C2 Paper-diorama orbit**: real depth on paper
 7. **E6 Silence drop** before the key fact
 8. **S6 Under 20 s cut**: does shorter win on completion?
+
+## 12. Visual style beat (Opuscar, from 2026-11-01)
+
+One style from `00_bible/style-menu.md` carries one or two beats per episode, rendered as its own clip and cut in
+EffectCraft. Rotate; log the style, the beat and the retention at that second.
+
+| # | Style | Beat it carries | Feas. |
+|---|---|---|---|
+| V1 | Broadcast News Package (split-flap, quote card, stamp) | hook / evidence | ✓ |
+| V2 | Data Storytelling (pencil chart, "headline revised") | evidence / payoff | ✓ |
+| V3 | Constructivist Montage (ink-paper cut-outs, red bar → number block) | any | ✓ |
+| V4 | Caption News (number rolls in, stacked captions) | hook | ✓ |
+| V5 | Isometric Picture Book (floor type, lid off, bars on the ground) | mechanism / Bridge | ✓ |
+| V6 | Memphis Diorama (cutaway) | mechanism | ✓ |
+| V7 | Desktop Flythrough (printed app cards, whip) | data / Bridge | ✓ |
+| V8 | Spy Title Sequence (type as set, stop-time) | hook / twist | ✓ |
+| V9 | Visual Investigation (view cones, then-vs-record) | evidence / twist | ◐ |
+| V10 | Data Physicalization (stacks, paired climb) | payoff | ◐ |

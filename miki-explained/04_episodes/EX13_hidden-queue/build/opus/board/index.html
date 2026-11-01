@@ -1,0 +1,161 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>EX13 board</title>
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>html,body{margin:0;background:#111;overflow:hidden}canvas{display:block}</style>
+</head><body><canvas id="c"></canvas>
+<script type="module">
+// EX13 board shots in the Broadcast News Package system (Lemo-Opuscar, MIT), recoloured to the house palette:
+// ink ground, paper type, ochre accent (replaces the package's lemon). Split-flap = old and new value on one board.
+// ?shot=1A | 4A | 7A. Times are seconds from the shot's start, set from the voice (audio/vo_timeline.json).
+const SHOT = new URLSearchParams(location.search).get('shot') || '1A';
+const W = innerWidth, H = innerHeight, cv = document.getElementById('c'); cv.width = W; cv.height = H;
+const g = cv.getContext('2d');
+const C = { ink: '#111111', card: '#1C1B19', tile: '#22201D', tileHi: '#2B2925', paper: '#EFE8DC', paperDim: '#B9B1A4', ochre: '#C98A2B', ochreHi: '#DDA244', rule: '#3A3732' };
+const DURS = { '1A': 98 / 24, '4A': 177 / 24, '7A': 130 / 24 };
+window.DUR = DURS[SHOT];
+const clamp = (v, a = 0, b = 1) => Math.max(a, Math.min(b, v)), lerp = (a, b, u) => a + (b - a) * u;
+const easeOut = u => 1 - Math.pow(1 - clamp(u), 3), backOut = u => { u = clamp(u); const s = 1.4; return 1 + (s + 1) * Math.pow(u - 1, 3) + s * Math.pow(u - 1, 2); };
+const hash = n => { const x = Math.sin(n * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); };
+const SAFE = { x0: 60, x1: 960, y0: 160, y1: 1440 };
+
+// ---------- package parts ----------
+function ground(t) {
+  g.fillStyle = C.ink; g.fillRect(0, 0, W, H);
+  // the package's light streaks, very low, drifting
+  g.save(); g.globalAlpha = 0.06; g.fillStyle = C.paper;
+  for (let i = 0; i < 5; i++) { const x = ((i * 337 + t * 40) % (W + 600)) - 300; g.save(); g.translate(x, 0); g.rotate(0.35); g.fillRect(0, -200, 26 + i * 8, H + 600); g.restore(); }
+  g.restore();
+  // paper grain
+  g.save(); g.globalAlpha = 0.05; for (let i = 0; i < 900; i++) { g.fillStyle = hash(i + Math.floor(t * 12) * 0.37) > .5 ? '#fff' : '#000'; g.fillRect(hash(i * 3.1) * W, hash(i * 7.7) * H, 2, 2); } g.restore();
+}
+function tab(x, y, text, a = 1) {               // accent tab: mono, ink text
+  g.save(); g.globalAlpha = a; g.font = '700 30px "IBM Plex Mono"'; const w = g.measureText(text).width + 40;
+  g.fillStyle = C.ochre; g.beginPath(); g.moveTo(x, y); g.lineTo(x + w + 18, y); g.lineTo(x + w, y + 54); g.lineTo(x, y + 54); g.fill();
+  g.fillStyle = C.ink; g.textBaseline = 'middle'; g.fillText(text, x + 20, y + 28); g.restore(); return w;
+}
+function mono(text, x, y, size, col, a = 1, align = 'left', weight = 500) {
+  g.save(); g.globalAlpha = a; g.font = `${weight} ${size}px "IBM Plex Mono"`; g.fillStyle = col; g.textAlign = align; g.textBaseline = 'alphabetic'; g.fillText(text, x, y); g.restore();
+}
+// one split-flap tile: shows `from` → `to` flipping, flip = 0..1 (top half falls first, then bottom)
+function tile(x, y, w, h, from, to, flip, col = C.paper, hi = false) {
+  const font = `${Math.round(h * 0.82)}px Anton`;
+  const half = (ch, top, sy) => {     // draw one half of a character card
+    g.save(); g.beginPath(); top ? g.rect(x, y, w, h / 2) : g.rect(x, y + h / 2, w, h / 2); g.clip();
+    g.translate(x + w / 2, y + h / 2); g.scale(1, sy); g.translate(-(x + w / 2), -(y + h / 2));
+    g.fillStyle = hi ? C.tileHi : C.tile; roundRect(x, y, w, h, 10); g.fill();
+    g.fillStyle = col; g.font = font; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(ch, x + w / 2, y + h / 2 + h * 0.04);
+    g.restore();
+  };
+  const f = clamp(flip);
+  half(to, true, 1); half(f < 0.5 ? from : to, false, 1);             // static: new top, old bottom until the flap lands
+  if (f > 0 && f < 1) {
+    if (f < 0.5) half(from, true, 1 - f * 2);                          // old top flap falling
+    else half(to, false, (f - 0.5) * 2);                               // new bottom flap landing
+  } else if (f === 0) { half(from, true, 1); half(from, false, 1); }
+  g.fillStyle = 'rgba(0,0,0,0.55)'; g.fillRect(x, y + h / 2 - 2, w, 4);             // the split
+}
+function roundRect(x, y, w, h, r) { g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); }
+const DIG = '0123456789', ABC = 'ABCDEFGHIKLMNOPRSTUW';   // a word row spins through letters, a number row through digits
+// a row of tiles that cascades from `fromStr` to `toStr`, landing at tLand (each tile 0.08 s later), spinning through digits before
+function flapRow(x, y, w, h, gap, fromStr, toStr, t, tStart, tLand, col, hi) {
+  for (let i = 0; i < toStr.length; i++) {
+    const land = tLand + i * 0.08, steps = 6, dt = (land - tStart) / steps;
+    const a = fromStr[i] || ' ', b = toStr[i];
+    let from = a, to = a, f = 0;
+    if (t >= land) { from = b; to = b; f = 1; }
+    else if (t > tStart) {
+      const k = Math.floor((t - tStart) / dt), u = ((t - tStart) / dt) % 1;
+      const seq = [a]; const pool = /[0-9]/.test(toStr) ? DIG : ABC; for (let s = 1; s < steps; s++) seq.push(pool[Math.floor(hash(i * 13 + s + b.charCodeAt(0)) * pool.length)]); seq.push(b);
+      from = seq[Math.min(k, steps)]; to = seq[Math.min(k + 1, steps)]; f = u;
+    }
+    tile(x + i * (w + gap), y, w, h, from, to, f, col, hi);
+  }
+}
+function stamp(text, cx, cy, t, t0, rot = -8, size = 92) {
+  if (t < t0) return; const u = clamp((t - t0) / 0.16), s = lerp(1.9, 1, easeOut(u));
+  g.save(); g.translate(cx, cy); g.rotate(rot * Math.PI / 180); g.scale(s, s); g.globalAlpha = clamp(u * 2);
+  g.font = `${size}px Anton`; const w = g.measureText(text).width + 70, h = size * 1.35;
+  g.fillStyle = C.ochre; roundRect(-w / 2, -h / 2, w, h, 6); g.fill();
+  g.strokeStyle = C.ink; g.lineWidth = 5; roundRect(-w / 2 + 12, -h / 2 + 12, w - 24, h - 24, 4); g.stroke();
+  g.fillStyle = C.ink; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(text, 0, size * 0.04);
+  g.restore();
+  const e = clamp((t - t0) / 0.5); if (e > 0 && e < 1) { g.save(); g.strokeStyle = C.ochre; g.globalAlpha = 1 - e; g.lineWidth = 4; g.beginPath(); g.ellipse(cx, cy, 260 + e * 260, 120 + e * 120, rot * Math.PI / 180, 0, Math.PI * 2); g.stroke(); g.restore(); }
+}
+
+// ---------- the board (1A and 7A share it) ----------
+const TW = 250, TH = 380, TG = 26, BX = SAFE.x0 + 40;
+function board(t, rows) {
+  // header
+  tab(SAFE.x0 + 40, 220, 'DISNEY WORLD');
+  mono('PIRATES OF THE CARIBBEAN', SAFE.x0 + 40, 336, 38, C.paper, 1, 'left', 700);
+  mono('20 JUL 2021', SAFE.x0 + 40, 386, 34, C.paperDim);
+  g.fillStyle = C.rule; g.fillRect(SAFE.x0 + 40, 416, 820, 3);
+  for (const r of rows) {
+    mono(r.label, SAFE.x0 + 40, r.y - 26, 44, r.labelCol || C.paperDim, 1, 'left', 700);
+    flapRow(BX, r.y, TW, TH, TG, r.from, r.to, t, r.t0, r.t1, r.col, r.hi);
+    mono('MIN', BX + 2 * (TW + TG) + 26, r.y + TH * 0.64, 96, r.minCol || C.paperDim, r.minA ?? 1, 'left', 700);
+  }
+}
+
+function shot1A(t) {          // frame 0 already flipping; 60 lands on "sixty" (1.0 s); 23 lands on "twenty-three" (2.29 s)
+  ground(t);
+  board(t, [
+    { label: 'POSTED WAIT', y: 480, from: '88', to: '60', t0: -0.4, t1: 1.0, col: C.paper },
+    { label: 'YOUR WAIT', y: 930, from: '60', to: '23', t0: 1.85, t1: 2.29, col: C.ochre, hi: true, labelCol: C.ochre, minCol: C.ochre },
+  ]);
+  if (t > 2.55) { const u = easeOut((t - 2.55) / 0.3); mono('−37', BX + 2 * (TW + TG) + 26, 1290, 84, C.ochre, u, 'left', 700); }
+  stamp('NOT LUCK', 400, 1250, t, 3.37, -8, 120);
+}
+
+function shot7A(t) {          // WAIT → WON on "won" (2.33 s); cut on "Follow" (3.96 s) to 1A's opening board (S1 loop)
+  if (t >= 3.96) { shot1A(t - DUR); return; }
+  ground(t);
+  tab(SAFE.x0 + 40, 220, 'DISNEY WORLD'); mono('THE BEATABLE WAIT', SAFE.x0 + 40, 336, 38, C.paper, 1, 'left', 700); g.fillStyle = C.rule; g.fillRect(SAFE.x0 + 40, 416, 820, 3);
+  const LW = 196, LH = 320, gap = 18, x0 = SAFE.x0 + 40;
+  mono('IT FEELS', SAFE.x0 + 40, 520, 44, C.paperDim, 1, 'left', 700);
+  flapRow(x0, 560, LW, LH, gap, 'LONG', 'WAIT', t, 0.0, 0.88, C.paper);
+  mono('IT FEELS', SAFE.x0 + 40, 970, 44, C.ochre, clamp((t - 1.8) / 0.2), 'left', 700);
+  flapRow(x0, 1010, LW, LH, gap, 'WAIT', ' WON', t, 1.95, 2.33, C.ochre, true);
+}
+
+// ---------- the quote card (4A) ----------
+function shot4A(t) {
+  ground(t);
+  // 0–0.95 "Broken clocks?": the board shudders, a strike, "BROKEN?"
+  if (t < 1.0) {
+    const sh = t > 0.2 ? Math.sin(t * 90) * 6 * (1 - t) : 0; g.save(); g.translate(sh, 0);
+    board(10, [{ label: 'POSTED WAIT', y: 480, from: '60', to: '60', t0: 0, t1: 0, col: C.paper }, { label: 'YOUR WAIT', y: 930, from: '23', to: '23', t0: 0, t1: 0, col: C.ochre, hi: true, labelCol: C.ochre, minCol: C.ochre }]);
+    g.restore(); mono('BROKEN CLOCK?', W / 2, 1300, 84, C.paper, clamp((t - 0.1) / 0.15), 'center', 700);
+    return;
+  }
+  // the card flips in on the flap axis (1.0–1.25), then the package's quote order
+  const fl = clamp((t - 1.0) / 0.25), sy = fl < 1 ? Math.abs(Math.cos((1 - fl) * Math.PI / 2)) : 1;
+  g.save(); g.translate(0, H / 2); g.scale(1, Math.max(0.02, sy)); g.translate(0, -H / 2);
+  const cx = SAFE.x0 + 20, cw = 860, cy = 200, ch = 1000;
+  g.fillStyle = C.card; roundRect(cx, cy, cw, ch, 14); g.fill(); g.fillStyle = C.ochre; g.fillRect(cx, cy, cw, 10);          // ink card, accent top edge
+  // big accent quotation mark lands first (Richard 2.0)
+  if (t > 1.2) { const u = backOut((t - 1.2) / 0.3); g.save(); g.translate(cx + 70, cy + 230); g.scale(u, u); g.font = '360px Anton'; g.fillStyle = C.ochre; g.textBaseline = 'alphabetic'; g.fillText('“', -30, 120); g.restore(); }
+  // the words, in the source's quotation marks only: "a Machiavellian twist" (lines push up 0.18 s apart from 3.0)
+  const lines = [['a', 3.0], ['Machiavellian', 3.18], ['twist.', 3.36]];
+  lines.forEach(([s, t0], i) => { if (t < t0) return; const u = easeOut((t - t0) / 0.25);
+    g.save(); g.globalAlpha = u; g.font = `${i === 1 ? 128 : 128}px Anton`; g.fillStyle = C.paper; g.fillText(s.toUpperCase(), cx + 70, cy + 430 + i * 140 + (1 - u) * 40); g.restore(); });
+  // underline sweeps "MACHIAVELLIAN" as the voice says it (3.17–3.75)
+  if (t > 3.17) { const u = easeOut((t - 3.17) / 0.55); g.font = '128px Anton'; const w = g.measureText('MACHIAVELLIAN').width; g.fillStyle = C.ochre; g.fillRect(cx + 70, cy + 590, w * u, 12); }
+  // gold rule, name, occasion, date (Larson 2.25)
+  if (t > 2.0) { const u = easeOut((t - 2.0) / 0.3);
+    g.fillStyle = C.ochre; g.fillRect(cx + 70, cy + 780, 300 * u, 4);
+    mono('RICHARD LARSON', cx + 70, cy + 850, 54, C.paper, u, 'left', 700);
+    mono('MIT · QUEUEING EXPERT', cx + 70, cy + 905, 36, C.paperDim, u);
+    mono('POPULAR SCIENCE · AUG 2020', cx + 70, cy + 950, 32, C.paperDim, u * 0.85); }
+  g.restore();
+  // "Beat the sign…" (4.33): the card slides up, a small board below: 60 → 23, "+37 MIN BACK"
+  // "won minutes back" (6.17): the named concept lands as a stamp
+  stamp('THE BEATABLE WAIT', W / 2 - 40, 1235, t, 6.17, -6, 82);
+  if (t > 4.4 && t < 6.17) mono('BEAT THE SIGN →', W / 2 - 40, 1255, 64, C.paper, clamp((t - 4.4) / 0.2), 'center', 700);
+}
+
+const SH = { '1A': shot1A, '4A': shot4A, '7A': shot7A }[SHOT];
+window.render = t => { g.setTransform(1, 0, 0, 1, 0, 0); SH(t); };
+window.TEXTS = () => [];
+document.fonts.load('100px Anton').then(() => document.fonts.load('30px "IBM Plex Mono"')).then(() => document.fonts.ready).then(() => { window.render(0); window.READY = true; });
+</script></body></html>

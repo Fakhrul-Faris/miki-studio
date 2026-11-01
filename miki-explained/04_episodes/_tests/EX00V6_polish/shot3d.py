@@ -1,7 +1,7 @@
 # EX00V6 C: look B (dark lit room) with a 3D audience and an orbiting camera.
 #   blender -b --python shot3d.py -- <out_dir> [still f,f,…] [half] [mpfb]
 # mpfb: the audience is MPFB people (mpfb_people.py) instead of the Hunyuan3D shapes; two of them move.
-# halftone: people printed as paper dots fixed to the body ([screen]: a flat screen instead). ink: an outline round every person.
+# halftone: people printed as paper dots on a flat screen ([body]: dots fixed to the body instead). ink: an outline round every person.
 # People: Hunyuan3D shapes with the user's stills projected from the front (person.py). Chairs are 3D for every seat;
 # the 4 empty ones (1 in 9) are ochre, the only accent. Camera: over the shoulders of the empty seat's neighbours, from the aisle →
 # orbits ~70° to the front while rising to a high wide of the whole room (expo ease-out) → holds → dives straight down
@@ -113,11 +113,11 @@ sc.eevee.volumetric_tile_size = "4"; sc.eevee.volumetric_samples = 96
 bloom(strength=0.25, threshold=0.8, size=0.6)
 sc.view_settings.view_transform = "AgX"; sc.view_settings.look = "AgX - Medium High Contrast"
 
-# ---------- printed: halftone dots fixed to each body + an ink outline (paperkit) ----------
+# ---------- printed: halftone dots (screen) + an ink outline (paperkit) ----------
 from paperkit import halftone, ink_outline
 if "halftone" in a:
     for m in list(bpy.data.materials):
-        if m.name.startswith("clay ") and m.use_nodes: halftone(m, 3.0, space="screen" if "screen" in a else "object")
+        if m.name.startswith("clay ") and m.use_nodes: halftone(m, 3.0, space="object" if "body" in a else "screen")
 if "ink" in a:
     ink_outline([o for o in bpy.data.objects if o.type == "MESH" and o.data.materials and o.data.materials[0]
                  and o.data.materials[0].name.startswith("clay ")])

@@ -33,7 +33,7 @@ Full detail: `miki-explained/00_bible/effectcraft-notes.md`. Read before proposi
 | Scripted find-and-replace adding `// comment` inside a call | Broke several shot scripts | Put comments at the end of the line, never inside a call |
 - Blender Line Art (Grease Pencil) ignores collection instances and drew nothing on a crowd in background renders: use
   `paperkit.ink_outline()` (inverted hull) instead (EX00V6).
-- Screen-space halftone looks like dots sliding over the people when the camera moves; use `halftone(space="object")`, which
-  reads the undeformed rest shape (Generated coords) so dots stay on the body through rigs and orbits (EX00V6).
+- Halftone dots: the user prefers the flat screen (`halftone()` default) over dots fixed to the body (`space="object"`, Generated
+  rest-shape coords), even though screen dots stay put while the camera moves (EX00V6).
 - Free Hugging Face image-to-3D (TRELLIS, Hunyuan3D) runs out of anonymous ZeroGPU quota after ~2 models a day (EX00V6).
 
