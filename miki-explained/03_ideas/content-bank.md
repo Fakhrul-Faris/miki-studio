@@ -73,7 +73,7 @@ that may turn out to be wrong, and "it's a myth" is a good episode too.
 
 | Series | Idea | Why people watch | Example episodes |
 |---|---|---|---|
-| **Designed on Purpose** | Everyday things that feel random but were designed to change what you do | "Ohh, that's why" | Prices ending in .99; why lift "close door" buttons may do nothing; why casinos have no clocks; why IKEA's path is a maze |
+| **Designed on Purpose** | Everyday things that feel random but were designed to change what you do | "Ohh, that's why" | Prices ending in .99 (EX08); why lift "close door" buttons may do nothing (EX12); why casinos have no clocks; why IKEA's path is a maze (EX14) |
 | **The Number** | One number that explains a whole business | Quick, shareable, a single big reveal | Chair-hours a barber sells a year; how many customers a shop needs a day to break even; how much a no-show really costs |
 | **Myth or Math** | Popular business "facts", checked | Comments argue, which drives reach; the series earns trust | "The customer is always right" (where it came from); "it takes 5× more to win a new customer"; the milk-at-the-back claim |
 | **The Invisible Queue** | Queues you don't see, and how the best places run them | Everyone waits somewhere | Emergency-room triage; airport security lanes; restaurant waitlists; theme-park virtual queues |
