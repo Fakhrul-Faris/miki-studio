@@ -70,7 +70,11 @@ Every word gets its MASTER frame = floor(t × 60). Scripts read `audio/vo_timeli
 nothing is typed by hand. L08 can reuse an earlier episode's "Follow Meikigo for more."
 
 ### 5. World + preview (Blender)
-Copy `EX14_long-path/build/` as the starting kit:
+**Kit: `tools/blender/isokit.py`** (from EX15): `setup()`, palette (ACCENT green), `mat`/`colmat`, `box` (origin at its centre),
+`cyl`, `person`, `Path` (rounded, by arc length, `.curve()` ribbon), `Rig` (camera keys on pchip curves), `ease`/`span`/
+`back_out`, `anchor()` (labels pinned to world points → `build/anchors.jsx` → `pin()` in lib.jsx), and `finish(EP, N, OUT,
+argv)` (full render · `still f,f` · `preview` · `anchors` only). Reference episode: `EX15_hot-dog/build/episode.py`.
+EX14's original layout, for reference:
 - `world.py`: the set: `box()` (bevelled flat boxes), `mat()` (flat, roughness 1, no specular), `person()` (Isotype
   pictogram), `fillet()` + `at(s)` (a rounded path sampled by arc length), floor arrows lit by object colour, the camera
   rig `set_cam(f, pivot, tilt, spin, ortho_scale)`, `ease`/`span` (smootherstep). Set the accent to `#57D100` here.

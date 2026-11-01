@@ -55,3 +55,9 @@ Full detail: `miki-explained/00_bible/effectcraft-notes.md`. Read before proposi
   "Change to Color" recolours a rendered accent (hue 12, saturation 40 tolerance keeps cream and greys untouched).
 - Captions: words sliding 18 px into a 0.28-em gap touch the previous word; 8–10 px and a 0.34-em gap, or the panel style.
 - Always preview before a full render (`preview.py`, ~3 min vs ~40): the user asked for it.
+- Blender 5.2 `transform_apply(scale=True)` also applies location (its defaults are all True): every box's origin ended at the
+  world origin, so pulses scaled about (0,0,0), "grounded" columns floated and pinned labels pointed off screen (EX15).
+  `isokit.box()` now calls `transform_apply(location=False, rotation=False, scale=True)`; check a prop's `location` before
+  animating its scale or pinning a label to it. (EX14's world.py has the old behaviour; harmless there.)
+- Pinned labels (`isokit.anchor()` → `build/anchors.jsx` → `pin()` in lib.jsx) need `view_layer.update()` after the
+  camera is set each frame, and a still check that the anchors land on screen.

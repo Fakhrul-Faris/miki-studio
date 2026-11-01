@@ -12,7 +12,7 @@ def preview(out_mp4, frames, step=2, scale=0.25, audio=None):
     keep = (r.resolution_percentage, r.use_motion_blur, sc.eevee.taa_render_samples, r.filepath, r.image_settings.file_format)
     r.resolution_percentage = int(scale * 100); r.use_motion_blur = False; sc.eevee.taa_render_samples = 1
     r.image_settings.file_format = "JPEG"
-    tmp = tempfile.mkdtemp(prefix="preview_")
+    tmp = tempfile.mkdtemp(prefix="preview_"); os.makedirs(os.path.dirname(out_mp4), exist_ok=True)
     try:
         fr = list(frames)[::step]
         for i, f in enumerate(fr):
