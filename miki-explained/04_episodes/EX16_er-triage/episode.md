@@ -119,24 +119,51 @@ whether cutting the shop turn costs or helps 3 s retention and % watched full, p
 
 `how-i-generate.md` (six lines; L07 reuses an earlier episode).
 
-## Build
+## Build (v2 remake, 2026-11-02)
 
-- `build/episode.py` (on `tools/blender/isokit.py`) → `out/frames` (2,264 frames); `build/caps.py` (numeric-merge fix for
-  Whisper splitting "71.8%." into three tokens) → `caps.jsx`; `build/MASTER.jsx` (gauge/legend/wait-counter pins, follow
-  card, no centre cards — Bridge off); `build/sfxmix.py` → `sfx/mix.wav` (9 hits).
-- Export: `export/EX16.mp4`, 37.7 s, -19.1 LUFS. Checked: per-frame difference, full-size frames on every caption block,
-  gauge label and the wait counter.
-- **Found and fixed during the build** (all logged in `references/lessons.md`): bpy Objects don't accept arbitrary Python
-  attrs (gauge tick closures moved to paired tuples); a late-binding closure bug in the gauge sweep timing; the hero
-  device's walk target sat behind the desk from camera, occluding it; the camera never actually held at a look-at point,
-  it continuously drifted toward the next keyframe, so two of four triage events played off-screen — cut to two,
-  each timed inside a real camera hold, verified with `world_to_camera_view` before re-rendering; a 22-unit-deep room
-  skewed badly off-centre at spin 45° isometric, shortened to 15 and the queue brought closer together.
-- **Open question, not resolved:** several stretches hold the camera still for 3-4 seconds at a time (the legend
-  transition ~16-20s, the gauge pull-back ~27-31s) while the median frame-to-frame change (0.07) is far below EX14/EX15's
-  (0.7-1.8). This may just be this episode's more measured, numbers-led rhythm (Analytical angle, mostly dark with small
-  moving elements) — or it may read as sluggish next to EX14/EX15's constant motion. Watch it before posting; I'd
-  welcome a second pair of eyes here specifically.
+User rejected v1 ("too simple, similar to previous episode which don't prove the point"; v1 kept as
+`build/episode_v1.py`). v2 world (`build/episode.py`, on `tools/blender/isokit.py`):
+- **Hero:** a 10-floor cutaway hospital, 100 beds; 71.8% = 72 beds light green in a wave from the first bed; 17 go dark
+  for "55.3"; the same beds relight on "sorted first" (no new floors: "isn't more beds").
+- **Mechanism:** a floating sorter plaza; one queue splits into 5 lanes (resuscitation short and green, routine a long
+  switchback); badges light at the splitter.
+- **One surprise, the metaphor made literal:** the old 3-lane sorter; tiles fall away under a cold spotlight and a patient
+  drops into the dark on "fall through the cracks"; the gaps close and the next patient is caught.
+- **Payoff:** a small clinic, 91 of 100 beds light; a slow pull-out over the lit campus at night under the follow card.
+- **Light:** night, warm ceiling strips, green practicals, compositor bloom. Near-level camera (tilt 72-76) on the tower:
+  at iso elevation the slabs hid every bed.
+- **Sound:** earshot's free code bank (`sfx/es_*.wav`); `earshot sheet --cues`: 11/11 cues have an onset within 100 ms,
+  27% land as strong accents (EX15's published mix: 67%, one inaudible).
+- Export: `export/EX16.mp4`, 37.7 s, 60 fps, -19.1 LUFS. Checked: per-frame difference (largest change is the deliberate
+  swoop from the tower down to the sorter at ~11 s; calm ending), full frames on every pinned label and caption block.
+- Status: final for review; not yet watched in real time with sound.
+
+## Post
+
+Caption stays general, matching the video (Bridge off); the shop tie-in lives only in the pinned comment, per
+`series-plan.md`'s "CTA lives in the pinned comment" — user confirmed 2026-11-02.
+
+**Caption:**
+```
+The ER doesn't see you in the order you arrived. It never did. 🏥
+
+Malaysia rebuilt its hospital triage system this year: five levels, from Resuscitation down to Routine, sorting by how sick you are, not when you walked in.
+
+It's working. 71.8% of major government hospitals now get patients a ward bed within eight hours, up from 55.3% last year. Smaller hospitals do even better: 91.3%.
+
+Being called out of turn isn't unfair. It means the system is working.
+
+#malaysia #hospital #emergencyroom #triage #howthingswork
+```
+
+**Pinned comment:**
+```
+Ever wonder if your own queue should sort by urgency instead of arrival order? DM "SORT" and we'll show you how.
+Sources: Malay Mail, 3 Jul 2026 (MOH's Malaysian Triage Scale overhaul — five levels, the "fall through the cracks" quote); Health Minister Dzulkefly Ahmad via The Sun, 2026 (71.8% / 55.26% / 91.3% figures — these measure the wait for a ward bed after admission, not triage speed itself).
+```
+
+- Turn on the AI-generated content label (synthetic voice, code-built graphics).
+- Posted: _date_ · Link: _
 
 ## Before posting
 
