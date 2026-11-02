@@ -1,6 +1,6 @@
 # EX18 — The Landlord
 
-Status: **story ✓ (sources below)** → script (awaiting approval) → voice → preview → build → final → posted
+Status: story ✓ → **script ✓ (2026-11-03: twist after hook, L06 trimmed)** → voice (prompts in how-i-generate.md) → voice → preview → build → final → posted
 Voice: Nathan, narrator, `v4k7NzxipnuJNJtrKxob`
 Calendar: Day 12, Sat 07 Nov 2026, 12:30 (may move: first long-edu, 1–3 a week)
 
@@ -55,25 +55,27 @@ EX18 goes Anthropological.
 | Line | Beat | Voice |
 |---|---|---|
 | L01 | Hook (felt riddle) | Almost every time you buy a Big Mac, two businesses get paid. Only one of them sells burgers. |
-| L02 | Origin | 1954. A milkshake-machine salesman named Ray Kroc walks into a burger stand in San Bernardino. Two brothers. A tiny menu. Served fast. He signs up to franchise it across America. |
-| L03 | The problem | But franchising burgers barely paid. Kroc took a thin slice of each restaurant's sales. Half a percent of every sale went to the brothers. |
-| L04 | The shortcut | Then Harry Sonneborn, the man running his money, had another idea. Don't just sell the name. Own the ground. Buy or lease the land, build the restaurant, and rent it to the franchisee. At a markup. |
-| L05 | Lock-in | In 1961, Kroc bought the brothers out for 2.7 million dollars. The ground stayed with the company. |
-| L06 | Scale | Today, 95 percent of the world's 45,000 McDonald's are run by franchisees. Last year they sold almost 130 billion dollars of food. McDonald's kept 10.4 billion of it as rent. |
-| L07 | Twist | Here's the part nobody sees. The restaurants McDonald's runs itself made it 1.4 billion. The ones it rents out made it 13.9 billion. Almost ten times more, for not cooking. |
+| L02 | Twist (up front) | Last year, the restaurants McDonald's runs itself made it 1.4 billion dollars. The ones it doesn't run made it 13.9 billion. Almost ten times more, for not cooking. |
+| L03 | Origin | To see why, go back to 1954. A milkshake-machine salesman named Ray Kroc walks into a burger stand in San Bernardino. Two brothers. A tiny menu. Served fast. He signs up to franchise it across America. |
+| L04 | The problem | But franchising burgers barely paid. Kroc took a thin slice of each restaurant's sales. Half a percent of every sale went to the brothers. |
+| L05 | The shortcut | Then Harry Sonneborn, the man running his money, had another idea. Don't just sell the name. Own the ground. Buy or lease the land, build the restaurant, and rent it to the franchisee. At a markup. |
+| L06 | Lock-in | In 1961, Kroc bought the brothers out for 2.7 million dollars. |
+| L07 | Scale | Today, 95 percent of the world's 45,000 McDonald's are run by franchisees. Last year they sold almost 130 billion dollars of food. McDonald's took 10.4 billion of it as rent. More than it made from royalties. |
 | L08 | Payoff | And franchisees already owe it at least 31 billion dollars in future rent. |
 | L09 | End (debate question) | So is McDonald's a burger company that owns land, or a landlord that sells burgers? |
 | L10 | Follow | Follow Meikigo for more. (reuse) |
 
-Word count: ~205 · Checklist: hook works sound-off ("2 businesses get paid. 1 sells burgers." on screen) ✓ · named
+**Structure (user, 2026-11-03):** the Twist comes straight after the Hook ("it will hook viewer more if twist come after
+hook") — the 10× flip opens the loop, the 1954 story closes it. L06's "The ground stayed with the company" cut (weakest
+sourcing).
+
+Word count: ~210 · Checklist: hook works sound-off ("2 businesses get paid. 1 sells burgers." on screen) ✓ · named
 person (Kroc, Sonneborn) ✓ · one physical detail (milkshake machines; the ground) ✓ · twist ✓ (it's not the
 restaurants it runs; it's the ones it doesn't) · escalation ✓ (stand → franchise → land → 45,000 → 10× → $31B locked) ·
 numbers: 1954, 0.5%, 1961, $2.7M, 95%, 45,000, $130B, $10.4B, $1.4B, $13.9B, 10×, $31B (all sourced) · no vague
 intensifiers ✓
 - Honesty: "made it" = margins (10-K "franchised margins" / "company-owned and operated margins"), not revenue; "kept
-  … as rent" = rent revenue, not profit. "Almost every time" because ~5% of restaurants are company-run. "The ground
-  stayed with the company" = the real-estate arm was the company's, not the brothers'. ⚠ L05's second sentence is the
-  softest claim: cut it if you'd rather not carry it.
+  … as rent" = rent revenue, not profit. "Almost every time" because ~5% of restaurants are company-run.
 
 ## Scene brief (device log § 13 — not the bed tower, not the hollow monument)
 
@@ -96,20 +98,20 @@ One continuous camera, three worlds joined by camera moves (no cuts), EX17 kit a
 
 | Shot | Starts on | What we see | Camera |
 |---|---|---|---|
-| 1 | L01 frame 0 | a Big Mac on a tray; two coins split off: one to a till, one down into the floor | tight, top-down → tilts |
-| 2 | L02 "1954" | camera rises out of the tray into a warm 1954 world: the San Bernardino stand, Kroc with a milkshake mixer | flies back in time (colour shift) |
-| 3 | "franchise it across America" | copies of the stand pop up along a road | pulls up |
-| 4 | L03 | tiny coin slices trickle from each stand: one thin stream to Kroc, a thinner one to the brothers | holds |
-| 5 | L04 "Own the ground" | the stand lifts off its plot like a lid; the plot glows green (**hero**) | low, near-level |
-| 6 | "rent it to the franchisee" | green coins flow from the till down into the plot | close |
-| 7 | L05 | the brothers' sign swapped; the light shifts from 1954 cream to present-day night | slow push |
-| 8 | L06 | nested zoom out: one restaurant → street → city → a world of 45,000 lit green plots | one long pull-out |
-| 9 | L07 | two restaurants side by side: company-run (short pile 1.4) vs rented (tower 13.9); the kitchen goes dark (**surprise**) | iso, holds |
+| 1 | L01 frame 0 | a Big Mac on a tray (SimReady tray, cup); two coins split off: one to a till, one down into the floor | tight, top-down → tilts |
+| 2 | L02 | pull out to two restaurants side by side: company-run (short pile 1.4) vs rented (tower 13.9); the company-run kitchen goes dark on "for not cooking" (**surprise**) | iso, holds |
+| 3 | L03 "1954" | the camera dives into the rented restaurant's floor and comes out in a warm 1954 world: the San Bernardino stand, Kroc with a milkshake mixer | flies back in time (colour shift) |
+| 4 | "franchise it across America" | copies of the stand pop up along a road | pulls up |
+| 5 | L04 | thin coin slices trickle from each stand: one thin stream to Kroc, a thinner one to the brothers | holds |
+| 6 | L05 "Own the ground" | the stand lifts off its plot like a lid; the plot glows green (**hero**) | low, near-level |
+| 7 | "rent it to the franchisee" | green coins flow from the till down into the plot | close |
+| 8 | L06 | the brothers' sign swapped; the light shifts from 1954 cream to present-day night | slow push |
+| 9 | L07 | nested zoom out: one restaurant → street → city → a world of 45,000 lit green plots | one long pull-out |
 | 10 | L08 | a green ribbon of future rent runs off into the dark (years ahead) | tracks along it |
 | 11 | L09 | restaurants fade to outlines; only the green ground stays lit | wide hold |
 | 12 | L10 | follow card | slow drift |
 
 ## Experiments
 
-Long-edu (1st) · Bridge off (3rd run) · Twist on · END-question · Anthropological angle · new: flashback colour grade,
+Long-edu (1st) · Bridge off (3rd run) · Twist on, **right after the Hook** (user) · END-question · Anthropological angle · new: flashback colour grade,
 nested scale zoom, fold/reveal hero, SimReady props (pending test)
