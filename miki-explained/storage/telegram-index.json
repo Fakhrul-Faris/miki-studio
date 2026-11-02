@@ -2819,6 +2819,150 @@
   "size": 87649600,
   "stored": "2026-11-01 21:18:52"
  },
+ "EX15/audio/L01.mp3": {
+  "chat_id": 8165127397,
+  "episode": "EX15",
+  "file_id": "BQACAgUAAxkDAAIBDmroPbHdHcfEv_hkRfUtAAHFH-8J1AAC_iQAAhfrQFekuwfQvAABT0U9BA",
+  "file_unique_id": "AgAD_iQAAhfrQFc",
+  "message_id": 270,
+  "path": "audio/L01.mp3",
+  "role": "source",
+  "sha256": "95ef7ef18a8c00188937ef692f96c38e0285a097385a01464268c1c58b2d9e23",
+  "size": 84228,
+  "stored": "2026-11-02 15:37:21"
+ },
+ "EX15/audio/L02.mp3": {
+  "chat_id": 8165127397,
+  "episode": "EX15",
+  "file_id": "BQACAgUAAxkDAAIBD2roPbMMtgy6rMNSvelUoBrWyjjCAAL_JAACF-tAV5twlxZvy5ZJPQQ",
+  "file_unique_id": "AgAD_yQAAhfrQFc",
+  "message_id": 271,
+  "path": "audio/L02.mp3",
+  "role": "source",
+  "sha256": "f664b1ad43fcd3b8b71a99e7fca36303b8e79e5d452f966cb568163e58345557",
+  "size": 169910,
+  "stored": "2026-11-02 15:37:23"
+ },
+ "EX15/audio/L03.mp3": {
+  "chat_id": 8165127397,
+  "episode": "EX15",
+  "file_id": "BQACAgUAAxkDAAIBEGroPbRnLuQeBEckIa9lglA-YoBzAAMlAAIX60BXnL8L_tnD1UU9BA",
+  "file_unique_id": "AgAEJQACF-tAVw",
+  "message_id": 272,
+  "path": "audio/L03.mp3",
+  "role": "source",
+  "sha256": "b9784659f34097e583e444fd095bf4a55665d81a0e373789dd22f5fc65695e00",
+  "size": 143160,
+  "stored": "2026-11-02 15:37:24"
+ },
+ "EX15/audio/L04.mp3": {
+  "chat_id": 8165127397,
+  "episode": "EX15",
+  "file_id": "BQACAgUAAxkDAAIBEWroPbb2V-q2G4gyf1ofKj2wNjFRAAIBJQACF-tAV0Geu7TwXUiMPQQ",
+  "file_unique_id": "AgADASUAAhfrQFc",
+  "message_id": 273,
+  "path": "audio/L04.mp3",
+  "role": "source",
+  "sha256": "f68c7d3591447016559779c6ee6439bc846afd5c46fd22d65ce7e82c7942d430",
+  "size": 143996,
+  "stored": "2026-11-02 15:37:26"
+ },
+ "EX15/audio/L05.mp3": {
+  "chat_id": 8165127397,
+  "episode": "EX15",
+  "file_id": "BQACAgUAAxkDAAIBEmroPbeu2CdmdZPoh9WUpNAN4IbyAAICJQACF-tAV8ZxWZgLmcqVPQQ",
+  "file_unique_id": "AgADAiUAAhfrQFc",
+  "message_id": 274,
+  "path": "audio/L05.mp3",
+  "role": "source",
+  "sha256": "d0a52f6e7ef50d1dbd81e7d69d3856d97c4cef0fc568d59dfb696dd92128e1a2",
+  "size": 94677,
+  "stored": "2026-11-02 15:37:27"
+ },
+ "EX15/audio/L06.mp3": {
+  "chat_id": 8165127397,
+  "episode": "EX15",
+  "file_id": "BQACAgUAAxkDAAIBE2roPbjWvOVs1YPJ2fxMIzQ-MMOgAAIDJQACF-tAV5yZXuo9awFMPQQ",
+  "file_unique_id": "AgADAyUAAhfrQFc",
+  "message_id": 275,
+  "path": "audio/L06.mp3",
+  "role": "source",
+  "sha256": "8c9522ef28d84fc830f5ef62dfd08bc6b4fb933947ebdf6e0564635f829d6356",
+  "size": 110977,
+  "stored": "2026-11-02 15:37:29"
+ },
+ "EX15/audio/L07.mp3": {
+  "chat_id": 8165127397,
+  "episode": "EX15",
+  "file_id": "BQACAgUAAxkDAAIBFGroPboAAR43XkQs_PRpv4etPvKicQACBCUAAhfrQFcaQhs6Qh8bcT0E",
+  "file_unique_id": "AgADBCUAAhfrQFc",
+  "message_id": 276,
+  "path": "audio/L07.mp3",
+  "role": "source",
+  "sha256": "7cc6e3f588fce8513180a149acffa3e5a6e96b8d256c8ad1ec39203fef906715",
+  "size": 63748,
+  "stored": "2026-11-02 15:37:30"
+ },
+ "EX15/audio/L08.mp3": {
+  "chat_id": 8165127397,
+  "episode": "EX15",
+  "file_id": "BQACAgUAAxkDAAIBFWroPbtDxcn2qV3R0POLqWoIaf3MAAIFJQACF-tAV3pRnbVLGqfDPQQ",
+  "file_unique_id": "AgADBSUAAhfrQFc",
+  "message_id": 277,
+  "path": "audio/L08.mp3",
+  "role": "source",
+  "sha256": "6725eae755d346d284fd0afb4d1f2ab509cff52992e248ad85b57791d687af0f",
+  "size": 42014,
+  "stored": "2026-11-02 15:37:32"
+ },
+ "EX15/audio/vo_timeline.json": {
+  "chat_id": 8165127397,
+  "episode": "EX15",
+  "file_id": "BQACAgUAAxkDAAIBFmroPb2cY220jVsX0A-4kKMtD6myAAIGJQACF-tAV0r-8ZrHixozPQQ",
+  "file_unique_id": "AgADBiUAAhfrQFc",
+  "message_id": 278,
+  "path": "audio/vo_timeline.json",
+  "role": "source",
+  "sha256": "2c26531caeba8c1272e78da955bee0515f9649798a1c1610d59573766ddf6bec",
+  "size": 6080,
+  "stored": "2026-11-02 15:37:33"
+ },
+ "EX15/audio/voice.wav": {
+  "chat_id": 8165127397,
+  "episode": "EX15",
+  "file_id": "BQACAgUAAxkDAAIBF2roPb-j4LFY3mpyQ80bA02Q3Ty1AAIHJQACF-tAVwbtxkZjj-ZvPQQ",
+  "file_unique_id": "AgADByUAAhfrQFc",
+  "message_id": 279,
+  "path": "audio/voice.wav",
+  "role": "source",
+  "sha256": "38a95ebc829159a188a8e018bfd22b9b4c3a9766ee9923c9ef151eb4b338e8e8",
+  "size": 7928970,
+  "stored": "2026-11-02 15:37:35"
+ },
+ "EX15/audio/words.json": {
+  "chat_id": 8165127397,
+  "episode": "EX15",
+  "file_id": "BQACAgUAAxkDAAIBGGroPcE-zR39HNbhHAnp9bDHImAyAAIIJQACF-tAV55iMdUCvIXDPQQ",
+  "file_unique_id": "AgADCCUAAhfrQFc",
+  "message_id": 280,
+  "path": "audio/words.json",
+  "role": "source",
+  "sha256": "eaaf83e7009f5d14c0ebbaa2166755b05d6cddd86efc50ac13931796b79e58bf",
+  "size": 5546,
+  "stored": "2026-11-02 15:37:37"
+ },
+ "EX15/export/EX15.mp4": {
+  "chat_id": 8165127397,
+  "episode": "EX15",
+  "file_id": "BQACAgUAAxkDAAIBGWroPc7_gV89rBy_T93eZxSbt_PxAAIJJQACF-tAVy35BvKkUCSaPQQ",
+  "file_unique_id": "AgADCSUAAhfrQFc",
+  "message_id": 281,
+  "path": "export/EX15.mp4",
+  "role": "final",
+  "sha256": "0ea6f2b4606030a9f8a73b15f68335ed62725cad81895c63589f6d6a866bcaf3",
+  "size": 85044382,
+  "stored": "2026-11-02 15:37:50"
+ },
  "_headers": {
   "EX01V3": 4,
   "EX02V3": 31,
@@ -2832,6 +2976,7 @@
   "EX11": 184,
   "EX12": 205,
   "EX13": 230,
-  "EX14": 256
+  "EX14": 256,
+  "EX15": 269
  }
 }

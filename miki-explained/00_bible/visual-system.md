@@ -31,6 +31,11 @@ format below (kept for reference). Reference build: `04_episodes/EX14_long-path`
 - **Sound:** drone bed at 0.10 + about 10 soft hits (pop, tick, low sink, whoosh); nothing on the follow card.
 - **Review:** a cheap Blender preview first (quarter size, every 2nd frame, voice under it, ~3 min) for the user before the
   full render; after it, per-frame difference (no spikes, no stalls), full-size frames on every card, the TikTok safe area.
+- **Devices don't repeat:** each episode's hero device (the mechanism the Twist/Payoff beat is built from) must differ
+  from the last 2 episodes', and each plans one deliberate visual anomaly (a scale or colour break, something out of
+  place) landing on the Twist, separate from the narrative twist in the voice. Logged in `03_ideas/experiments.md` § 13,
+  with a silhouette check (does the hero object read as one shape at small size, stripped of colour) before the full
+  render. Added 2026-11-02, adapted from an external Blender stat-viz workflow the user shared.
 
 ## Previous house format (V3, 2026-10-28 → 2026-11-01): cut-paper mixed media
 

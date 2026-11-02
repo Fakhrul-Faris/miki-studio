@@ -36,12 +36,12 @@ Mono. **The voice sets the tempo.** About 10 soft sound hits on a low drone.
 | # | Gate | Output | User approves |
 |---|---|---|---|
 | 1 | Story + facts | content-bank row, sources in `episode.md` | the story |
-| 2 | Script + shot list | `episode.md`: script, beats in the world, camera moves | the script and shot list |
+| 2 | Script + shot list | `episode.md`: script, scene brief (hero device, one surprise), shot list, camera moves | the script and shot list |
 | 3 | Voice | `how-i-generate.md` (voice lines + reads); user renders `audio/L01…` | — |
 | 4 | Voice timeline | `audio/voice.wav`, `audio/vo_timeline.json` at 60 fps | — |
 | 5 | World + preview | `build/world.py`, `build/episode.py`, style stills for anything new, `out/preview.mp4` | the preview |
 | 6 | Render + master | `out/frames`, `build/caps.py`, `MASTER.jsx`, `sfx/mix.wav`, QA numbers | — |
-| 7 | Final + hand-off | `export/EXNN.mp4`, `EXNN_edit.ecproj`, `README.md` | the final |
+| 7 | Final + hand-off | `export/EXNN.mp4`, `EXNN_edit.ecproj`, `README.md`, critique scores | the final |
 | 8 | Post + calendar | `episode.md` § Post, `05_calendar/calendar.md`, `glossary.md`, experiments row | — |
 
 ### 1. Story + facts
@@ -56,9 +56,16 @@ count. The named concept (glossary) gets a title card around Twist/Payoff; the B
 the End rotates (reframe · "next time you…" · callback · question sparingly) and the last line is "Follow Meikigo for more."
 Apply the competitor-informed rules in script-formula.md (everyday viewer-POV topics, contradict early, one physical
 detail + one comparison, "that's why…", escalation). Rotate business types (retail, F&B, clinics…), not barbers by default. Voice direction for Nathan, narrator (ElevenLabs `v4k7NzxipnuJNJtrKxob`, `00_bible/voice.md`).
+**Scene brief, before the shot list:** read `03_ideas/experiments.md` § 13 (the device log, last 5 episodes). Pick a
+**hero device** — the 3D mechanism the Twist/Payoff beat is built from — that differs from the last 2 episodes' hero
+devices; supporting devices may repeat but not more than 2 should match the immediately previous episode. Plan **one
+surprise**: one deliberate visual anomaly in the world (a scale break, a colour break, something out of place) landing on
+or just before the Twist line, separate from the narrative twist in the voice — something that gives the frame a reason
+to be looked at twice. Name both in the shot list.
+
 Shot list: one beat per line, each with **what we see in the world** and **how the one camera gets there** (carry,
-rise, follow, pull-out, fly-through); pick a device per idea (a path that draws, x-ray, a cone, a dot grid, a counter, a
-city of tiles) and 1–2 gentle holds. The last beat returns to the opening frame (seamless loop).
+rise, follow, pull-out, fly-through); the hero device carries the Twist/Payoff beat, supporting devices carry the rest,
+the one surprise is marked on its beat, and 1–2 gentle holds. The last beat returns to the opening frame (seamless loop).
 
 ### 3–4. Voice and its timeline
 `how-i-generate.md` holds only the voice now: one row per line with how to read it, plus pronunciations. Then:
@@ -94,6 +101,14 @@ Rebuild: `rm EXNN.ecproj; build/run.sh MASTER` (always from scratch: the image s
 `effectcraft-cli render --project EXNN.ecproj --comp MASTER --out export/EXNN.mp4 --format h264 --fps 60 --audio on`.
 
 ### 7. QA and hand-off
+- **Silhouette check:** crop the hero device/object to its own frame at a frame where it's fully formed, scale it down
+  to roughly thumbnail size, strip colour (grayscale). It should still read as one clear shape. If not, simplify the
+  shape or raise its contrast against the floor — don't just add light. Log pass/fail in `experiments.md` § 13.
+- **Critique, 1–5 each**, from the preview or early render frames, before the full render if anything looks doubtful:
+  idea clarity (readable in 2 s), scale feeling (does the number feel big), novelty against the device log, silhouette,
+  caption-panel cleanliness (nothing important hidden behind it). Anything below 4: revise the shot list or the camera
+  framing (not the whole build) and re-check with another cheap preview. One revision pass; then ship the best version
+  and note the scores honestly in `episode.md`.
 - Per-frame difference of `out/frames` (ffmpeg tblend + signalstats): no spikes against neighbours, no unintended stalls.
 - `render-frame` full-size stills on every card and caption block; TikTok safe area (x 60–960, y 160–1440).
 - Length, frame count, loudness about −19 LUFS. Copy `EXNN_edit.ecproj` for the user (never rebuild into it), write
@@ -101,7 +116,8 @@ Rebuild: `rm EXNN.ecproj; build/run.sh MASTER` (always from scratch: the image s
 
 ### 8. Post + calendar
 Caption, hashtags, pinned comment with the source and a DM keyword, the before-posting checklist (series-plan), including
-the **AI-generated content label**. Update the calendar and the glossary.
+the **AI-generated content label**. Update the calendar, the glossary, and `03_ideas/experiments.md` § 13 (the device
+log row for this episode: hero device, supporting devices, the one surprise, the silhouette check result).
 
 ## Legacy: the cut-paper format (EX02V3–EX13)
 

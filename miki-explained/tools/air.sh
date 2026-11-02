@@ -13,7 +13,7 @@ ME=${0:A:h:h}                                       # miki-explained/ on the Pro
 OPS=miki-ops/miki-explained                         # its copy on the Air
 PY=/Users/mac/.local/share/uv/python/cpython-3.12-macos-aarch64-none/bin/python3.12
 up() { rsync -a --prune-empty-dirs --include='tools/***' --include='03_ideas/' --include='03_ideas/experiments.md' --include='04_episodes/' --include='04_episodes/*/' \
-         --include='04_episodes/*/episode.md' --include='04_episodes/*/README.md' --exclude='*' --exclude='__pycache__' "$ME/" air:$OPS/; }
+         --include='04_episodes/*/episode.md' --include='04_episodes/*/README.md' --include='05_calendar/' --include='05_calendar/*' --exclude='*' --exclude='__pycache__' "$ME/" air:$OPS/; }
 down() { rsync -a air:$OPS/storage/ "$ME/storage/"; rsync -a air:$OPS/05_calendar/ "$ME/05_calendar/"; }
 case $1 in
   sync) up; down; echo synced ;;

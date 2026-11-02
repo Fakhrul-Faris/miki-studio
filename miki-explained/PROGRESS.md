@@ -29,8 +29,19 @@ Source of truth = dashboard (http://100.107.126.69:8787/api/state), not calendar
 EX05–EX13 (old cut-paper episodes) scheduled 2–10 Nov in TikTok Studio. EX14–EX18 planned as the new-format test block
 (12–15 Nov), to compare watch-time stats against the old format.
 
+## Device-usage tracking (added 2026-11-02)
+User shared an external stat-viz Blender workflow, asked what's worth stealing. Added:
+- `03_ideas/experiments.md` § 13: device log. Hero device per episode must differ from last 2 episodes'. Logged EX14/EX15
+  retroactively. **Read this before picking EX16's shot-list devices** — don't reach for path-draws-itself or conveyor again.
+- Skill step 2: scene brief (hero device + one deliberate visual anomaly on the Twist beat) before shot list.
+- Skill step 7: silhouette check (hero object reads as one shape at small size, stripped of colour) + 1-5 critique scores
+  (idea clarity, scale feeling, novelty, silhouette, caption-panel cleanliness) before shipping, one revision pass max.
+- `00_bible/visual-system.md`: one-line summary of the rule.
+Deliberately NOT adopted: medium rotation (breaks house style, we lock one medium on purpose), never-reuse-script-as-template
+(we reuse isokit.py on purpose, it's a recurring series not one-off art pieces).
+
 ## Next up
-EX16: ER triage, set in Malaysian hospital, Fri 13 Nov slot. Not started.
+EX16: ER triage, set in Malaysian hospital, Fri 13 Nov slot. Not started. Check device log first (§13 above).
 
 ## Accounts
 Session now under muhammadfakhrulfaris@gmail.com (changed from admin@forestone.com.my mid-session, 2026-11-02).

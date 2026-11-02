@@ -198,3 +198,32 @@ EffectCraft. Rotate; log the style, the beat and the retention at that second.
 | V8 | Spy Title Sequence (type as set, stop-time) | hook / twist | ✓ |
 | V9 | Visual Investigation (view cones, then-vs-record) | evidence / twist | ◐ |
 | V10 | Data Physicalization (stacks, paired climb) | payoff | ◐ |
+
+## 13. Visual device log (added 2026-11-02, adapted from an external stat-viz Blender workflow)
+
+**Why:** devices (the 3D mechanism a beat is built from — a path that draws itself, x-ray walls, a counter) can repeat
+across episodes without anyone noticing, the same way camera angles or edits can. Log them so the next shot list checks
+before picking.
+
+**Rule:** before writing a shot list (skill step 2), read the last 5 episodes' rows below. The new episode's **hero
+device** (the one the Twist/Payoff beat is built from) must not match the hero device of the last 2 episodes. Supporting
+devices may repeat, but not more than 2 of them should match the immediately previous episode's set.
+
+**One surprise:** every episode plans one deliberate visual anomaly in the world (a scale break, a colour break, an
+object out of place) landing on or just before the Twist line — not just a narrative twist in the voice, something the
+eye catches on a second look. Note it in the shot list and in the row below.
+
+**Silhouette check:** before the full render, the hero object/device is checked at small size — cropped to its own
+frame, scaled down to roughly thumbnail size, eyeballed for whether it still reads as one clear shape with the colour
+stripped. Note pass/fail below; if it fails, simplify the shape or raise its contrast against the floor, not just add
+more light.
+
+| Episode | Hero device | Supporting devices | One surprise | Silhouette check |
+|---|---|---|---|---|
+| EX14 The Long Path | path that draws itself through the whole plan | x-ray walls + glowing hidden doors, sight cone, 10×10 dot grid filling to a %, counter roll-up, pull-out to a city of instanced tiles | the ochre figure stepping into an otherwise all-grey queue | pass (figure silhouette distinct on the grey line) |
+| EX15 The $1.50 Promise | a conveyor belt snaking through every aisle carrying 245M hot dogs | price bars rising except one, x-ray walls (racks lower), two compared columns (fees vs profit) with pinned labels, counter roll-up, members looping through a gate | one green hot-dog-price bar staying flat while eight grey bars climb past it | pass (green bar reads against the grey row even at thumbnail size) |
+
+Next episode (EX16): hero device must not be "path that draws itself" or "conveyor belt" — pick from the unused list:
+x-ray already used twice, dot grid once, counter roll-up twice (retire for one episode), pull-out-to-many-instances once,
+compared columns once, gate/loop-with-colour-change once. Favor something not yet tried: a fold/reveal (lid off, roof
+lifts), a sort/reflow (items regroup into a new pattern), an erosion/depletion (something visibly runs out).
