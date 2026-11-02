@@ -223,10 +223,16 @@ more light.
 | EX14 The Long Path | path that draws itself through the whole plan | x-ray walls + glowing hidden doors, sight cone, 10×10 dot grid filling to a %, counter roll-up, pull-out to a city of instanced tiles | the ochre figure stepping into an otherwise all-grey queue | pass (figure silhouette distinct on the grey line) |
 | EX15 The $1.50 Promise | a conveyor belt snaking through every aisle carrying 245M hot dogs | price bars rising except one, x-ray walls (racks lower), two compared columns (fees vs profit) with pinned labels, counter roll-up, members looping through a gate | one green hot-dog-price bar staying flat while eight grey bars climb past it | pass (green bar reads against the grey row even at thumbnail size) |
 
-Next episode (EX16): hero device must not be "path that draws itself" or "conveyor belt" — pick from the unused list:
-x-ray already used twice, dot grid once, counter roll-up twice (retire for one episode), pull-out-to-many-instances once,
-compared columns once, gate/loop-with-colour-change once. Favor something not yet tried: a fold/reveal (lid off, roof
-lifts), a sort/reflow (items regroup into a new pattern), an erosion/depletion (something visibly runs out).
+| EX16 Out of Turn | a reflow/resort queue: patients jump the line by severity badge, not arrival order | arc gauges (new — not another roll-up counter) for 71.8%/55.3%/91.3%, a 5-level legend fading in over a 3-bar ghost of the old system, a wait counter pinned above the one patient who never gets called | the calm first-arrival patient's wait counter keeps climbing the whole episode while others cut in | pass (visually confirmed the badge colour reads distinct from the plain grey ones during the preview pass), not re-verified with a formal thumbnail crop |
+
+**EX16 note:** the brief planned 4 reorder events; cut to 2 during the build because the camera never actually held
+still at each look-at point (it continuously drifted toward the next keyframe), so most of the events played off-screen.
+Two, each timed inside a verified camera hold, read clearly; see `episode.md` § Build for the full account.
+
+Next episode (EX17): hero device must not be "a reflow/resort queue" or "a conveyor belt" — pick from the unused list:
+x-ray used twice (retire), dot grid once, counter roll-up twice (retire), pull-out-to-many-instances once, compared
+columns once, gate/loop-with-colour-change once, arc gauges once. Favor something not yet tried: a fold/reveal (lid off,
+roof lifts), an erosion/depletion (something visibly runs out).
 
 ## 14. Narrative angle log (added 2026-11-02, from the same external workflow as § 13)
 
@@ -238,7 +244,7 @@ lifts), a sort/reflow (items regroup into a new pattern), an erosion/depletion (
 | EX13 The Hidden Queue | Anthropological (the felt moment: you wait, it's padded on purpose) | H1 data at frame 0 (60→23 split-flap) | theme park / Malaysian nasi kandar counter |
 | EX14 The Long Path | Anthropological (the maze feels accidental, isn't) | H2 answer first | retail store / Klang hardware shop |
 | EX15 The $1.50 Promise | Anthropological (a flat price feels like a mistake, isn't) | H3 surprising claim | warehouse retail / Shah Alam car wash |
-| EX16 Out of Turn | **Analytical** (the number leads: 71.8%, then why) | H1 data at frame 0 | hospital ED / Klang bengkel |
+| EX16 Out of Turn | **Analytical** (the number leads: 71.8%, then why) | H1 data at frame 0 | hospital ED (Bridge turned off before the final cut — no shop shown) |
 
 Found on backfill: EX13–EX15 are all Anthropological — three in a row before anyone noticed, because nothing was
 checking. EX16 switches to Analytical specifically to break that run, not because the topic demanded it either way.
@@ -253,7 +259,7 @@ The six openers are in `00_bible/script-formula.md` § Bridge openers. Check the
 | EX13 The Hidden Queue | "Now picture your nasi kandar counter at one o'clock." — same |
 | EX14 The Long Path | "Now picture your hardware shop in Klang." — same |
 | EX15 The $1.50 Promise | "Now picture your car wash in Shah Alam." — same |
-| EX16 Out of Turn | **B1 fragment** — "Your bengkel in Klang." |
+| EX16 Out of Turn | n/a — Bridge off, see § 9; the B1 draft is in episode.md history |
 
 Found on backfill: five straight episodes opened the Bridge with "Now picture your…" before this log existed to catch
 it. EX16 switches to B1; the next one shouldn't repeat B1, or match EX13–EX15's "Now picture" default either.
