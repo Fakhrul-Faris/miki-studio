@@ -5,7 +5,10 @@ description: Playbook for making an episode of the Miki Explained series (miki-e
 
 # Miki Explained — episode playbook
 
-**New base: EX16 v2 "Out of Turn"** (`04_episodes/EX16_er-triage`; user, 2026-11-02: "ex16 is the new base… getting closer
+**New height: EX17 "Five Times"** (`04_episodes/EX17_five-times`; user, 2026-11-03: "ex17 is the new height… keep
+climbing"): a scale journey (crowd → cutaway → systems → back), a physical surprise on the Twist, walk cycles (`Fig`),
+bounded haze for light cones (never a world volume: it blacks out the sun), in-world value bars. Start from its
+`build/episode.py` and add at least one technique the series hasn't used yet. Before it: **New base: EX16 v2 "Out of Turn"** (`04_episodes/EX16_er-triage`; user, 2026-11-02: "ex16 is the new base… getting closer
 to Kurzgesagt style… push it to the higher limit"): make the number physical, one dominant hero object, light as
 emotion, the script's metaphor made literal. Start from its `build/episode.py`. The format was set by **EX14 "The Long Path"** (`miki-explained/04_episodes/EX14_long-path`,
 read its `README.md` and `episode.md`). User, 2026-11-01: "i really really love what you did with this. this is what i'm
