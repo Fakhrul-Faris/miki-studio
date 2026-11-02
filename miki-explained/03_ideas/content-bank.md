@@ -15,6 +15,7 @@ Editing, camera and animation tests (one per episode): `03_ideas/experiments.md`
 1. Stories (single episodes, by lane)
 2. Series: How It Makes Money
 3. Series pitches
+4. Next focus: story types, global (shorts and long-edu)
 
 ## 1. Stories (single episodes, by lane)
 
@@ -81,6 +82,55 @@ that may turn out to be wrong, and "it's a myth" is a good episode too.
 
 Each series keeps the house format (collage + documentary image + diagram), the reveal → contrast → urgency → proof script,
 and ends inside a shop.
+
+## 4. Next focus: story types, global (added 2026-11-03)
+
+User, 2026-11-03: target is **global**, not only Malaysia; "i like all of it. log them as our next focus." Each idea is
+tagged by length: **short** = fits under 30 s (one idea, one reveal) · **long-edu** = needs 60 s+ (a chain of causes,
+several worlds). Long-edu runs 1–3 a week and must meet the TikTok Creator Rewards bar (original, over 1 minute) and later
+YouTube. **No fixed template:** every episode is a fresh take in the Meikigo look; the story types below are a menu, not a
+structure. Every lead is unverified (🔍) until checked against a primary source.
+
+| # | Story type | Why it works | Idea | Draft hook | Lead to verify | Length | Status |
+|---|---|---|---|---|---|---|---|
+| 1 | Rise (one shop → empire) | aspiration, "how?" | IKEA from a mail-order catalogue | "IKEA started by selling pens by mail." | Ingvar Kamprad founding story, IKEA history pages | long-edu | 🔍 |
+| 1 | Rise | | Mr DIY, a Malaysian hardware chain that outgrew the region | "One hardware shop in KL. Now thousands across Asia." | Mr DIY Group annual report, store count | long-edu | 🔍 |
+| 1 | Rise | | Zara: shop to world in two-week fashion | "Zara can design, make and ship a dress in weeks." | Inditex annual report, lead times | long-edu | 🔍 |
+| 2 | Fall (a giant collapses) | warning, top comment driver | Kodak invented the digital camera, then died of it | "Kodak built the first digital camera. In 1975." | Steve Sasson / Kodak 1975 prototype; 2012 Chapter 11 | long-edu | 🔍 (EX20 slot) |
+| 2 | Fall | | Nokia: from 40% of phones to sold off | "In 2007 Nokia sold almost half the world's phones." | Nokia market share 2007, Microsoft deal 2013 | long-edu | 🔍 |
+| 2 | Fall | | Blockbuster's late fees | "Blockbuster made millions from being late." | late-fee revenue figures, Netflix offer story | short | 🔍 |
+| 3 | Hidden business model | "so THAT's how" | McDonald's is a property company | "McDonald's isn't really a burger company." | McDonald's 10-K: franchise rent revenue, land owned | long-edu | 🔍 **EX18** |
+| 3 | Hidden business model | | Printers sold near cost, ink is the business | "Printer ink can cost more than champagne." | ink price per ml vs champagne; HP filings | short | 🔍 |
+| 3 | Hidden business model | | Airlines make more from loyalty miles than flying | "Some airlines' miles programmes are worth more than the airline." | 2020 loan collateral valuations (United, Delta) | long-edu | 🔍 |
+| 4 | Who secretly owns what | shock, people tag friends | Luxottica / EssilorLuxottica: Ray-Ban, Oakley and the shops | "The brand and the shop that sells it are the same company." | EssilorLuxottica brand and retail list | short | 🔍 |
+| 4 | Who secretly owns what | | Two "rival" products, one parent | "These two rivals send profit to the same place." | pick a pair with a filing behind it | short | 🔍 |
+| 5 | Where your money goes | personal, everyday | Your $5 coffee split by who gets what | "Of your $5 coffee, the beans get about…" | coffee cost breakdown studies (e.g. Specialty Coffee Association) | short | 🔍 |
+| 5 | Where your money goes | | Your ride-hailing fare: driver, app, tax | "The app keeps more of your ride than you think." | Uber/Grab take-rate disclosures | short | 🔍 |
+| 5 | Where your money goes | | A litre of petrol: oil, refining, tax, station | "The petrol station barely profits from petrol." | IEA / government price breakdowns | long-edu | 🔍 (EX21 slot) |
+| 6 | Behind the scenes at scale | wonder | A day of Amazon parcels | "A parcel can be picked by a robot in seconds." | Amazon robotics figures | long-edu | 🔍 |
+| 6 | Behind the scenes at scale | | Singles' Day / 11.11: a year's shopping in a day | "One day. More sales than…" | Alibaba / Shopee published 11.11 figures | long-edu | 🔍 |
+| 6 | Behind the scenes at scale | | How an airport loses (and finds) your bag | "Your bag travels a hidden road under the airport." | SITA baggage report | long-edu | 🔍 |
+| 7 | Psychology of selling | "they did this to me" | Casinos have no clocks or windows | "Casinos don't want you to know what time it is." | casino design literature (Friedman) | short | 🔍 |
+| 7 | Psychology of selling | | The decoy price (the medium popcorn) | "The medium popcorn exists to sell you the large." | Ariely's Economist subscription study | short | 🔍 |
+| 8 | Rivalries and wars | sides, comments | Coke vs Pepsi: the Pepsi Challenge | "Pepsi won the taste test. Coke still won." | Pepsi Challenge history, New Coke 1985 | long-edu | 🔍 |
+| 8 | Rivalries and wars | | Uber vs Grab: why Uber left Southeast Asia | "Uber sold its Southeast Asia business to its rival." | 2018 Uber–Grab deal terms | long-edu | 🔍 |
+| 9 | Strategic paradox | debate | Netflix killed its own DVD business | "Netflix destroyed its most profitable business. On purpose." | Qwikster 2011, DVD revenue | long-edu | 🔍 |
+| 9 | Strategic paradox | | Apple's iPhone ate the iPod | "Apple built the product that killed its best seller." | iPod unit sales after 2007 | short | 🔍 |
+| 10 | Myth or math | correcting a "fact" | "Most restaurants fail in year one" | "Everyone says 90% of restaurants fail. The data says otherwise." | Parsa et al. 2005 restaurant failure study; BLS | short | 🔍 |
+| 10 | Myth or math | | "The customer is always right" | "It was never about the customer being right." | Selfridge / Ritz origin claims | short | 🔍 |
+| 11 | Scams and scandals | outrage (legal care: documented cases only) | Theranos: the blood test that didn't exist | "Nine billion dollars. One finger-prick. No test." | court records, SEC complaint | long-edu | 🔍 |
+| 11 | Scams and scandals | | Wirecard: €1.9 billion that wasn't there | "The money was in the accounts. It wasn't in the bank." | Wirecard insolvency, EY audit reporting | long-edu | 🔍 |
+| 12 | Economics made concrete | "why is everything expensive" | Shrinkflation: same price, less product | "Your chocolate bar got smaller. The price didn't." | ONS / BLS shrinkflation reports | short | 🔍 |
+| 12 | Economics made concrete | | Why a Big Mac costs different everywhere (Big Mac index) | "A Big Mac tells you if your currency is cheap." | The Economist Big Mac index | long-edu | 🔍 |
+| 13 | Big-number scale | awe | Saudi Aramco's profit vs whole countries | "One company earns more than most countries." | Aramco annual report vs World Bank GDP | short | 🔍 |
+| 13 | Big-number scale | | Visa processes how many payments a second | "Every second, thousands of cards swipe at once." | Visa annual report capacity figures | short | 🔍 |
+| 14 | Founder people stories | personality | Ray Kroc vs the McDonald brothers | "The founder of McDonald's didn't found McDonald's." | 1961 buyout, $2.7M | short (or inside EX18) | 🔍 |
+| 14 | Founder people stories | | Tony Fernandes bought an airline for one ringgit | "He bought an airline for one ringgit. And its debt." | AirAsia 2001 purchase terms | long-edu | 🔍 |
+| 15 | Small-business teardown (Meikigo's home; tests the "your shop" turn) | relatable, practical | How a 24-hour diner/mamak covers the night shift | "The busiest hour isn't when you think." | real operator data, trade surveys | long-edu | 🔍 |
+| 15 | Small-business teardown | | What a laundromat actually earns per machine | "Each washing machine is a tiny business." | industry cost surveys (CLA) | short | 🔍 |
+
+**Kept careful:** scandals (documented, court-backed facts only, no accusations) and local politics or economics (sourced
+numbers, no side-taking). **Weakest fit:** plain how-to (crowded, talking-head led), so it isn't in the menu.
 
 ## Adding ideas
 

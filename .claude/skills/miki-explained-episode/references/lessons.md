@@ -69,3 +69,13 @@ Full detail: `miki-explained/00_bible/effectcraft-notes.md`. Read before proposi
   noticing the real render had never run.
 - We couldn't hear our mixes. earshot (`sheet --cues`) showed EX15's hits mostly buried under the voice; EX16 v2's mix went
   from 67% -> 100% cues audible within 100 ms.
+
+## NVIDIA SimReady props (test EX00V8, 2026-11-03)
+- `tools/blender/simready.py`: fetch shape only (skip `Textures/`, `source_assets/`): counter 38.5 MB of 388, tray 2.3 of
+  52, ketchup 1.1 of 20. `kit` → a 0.2–0.6 MB `.blend` in `02_kit/simready/`, flat house material, origin bottom centre.
+  Then `clean` the cache. Credit "3D assets: NVIDIA SimReady (CC-BY-4.0)" in the pinned comment.
+- Decimate **planar first** (DISSOLVE, 3°), then collapse: a plain collapse to 4% tore the counter apart.
+- Metres → world units: × 0.47 (a 0.8-unit figure ≈ 1.7 m).
+- **Close-ups only.** At hero scale (a tray filling the frame) the real shapes (tray compartments, a ribbed cup, a squeeze
+  bottle) beat boxes and still read as the house look. In wide shots small props are a few pixels and big fixtures bring
+  odd real-world shapes (the counter is a cabinet with a sink cut-out); hand-built boxes stay cleaner there.
