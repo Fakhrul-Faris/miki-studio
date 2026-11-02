@@ -68,42 +68,31 @@ Word count: 122 (numbers spoken in full) · Checklist score: 6/7 (Bridge item no
 - No vague intensifiers (checked against the new Writing rule) · Honesty: 71.8%/55.3%/91.3% are the **ward-bed wait**,
   not triage speed; L02 states that distinction in-line
 
-## Scene brief (device log check: `03_ideas/experiments.md` § 13)
+## Scene brief (v2; device log `03_ideas/experiments.md` § 13)
 
-Last 2 episodes' hero devices: EX14 = a path that draws itself; EX15 = a conveyor belt. Neither fits here, so:
+- **Hero device:** a 10-floor cutaway hospital tower, 100 beds. The percentage is physical: 72 beds light green (71.8%),
+  17 go dark for last year (55.3%), the same beds relight. Scale anchor: 100 beds.
+- **Mechanism:** a floating triage sorter at the tower's foot; one queue splits into 5 lanes by severity badge
+  (resuscitation short and green, routine a long switchback).
+- **One surprise:** "fall through the cracks" made literal: the old 3-lane sorter's tiles fall away under a cold spotlight
+  and a patient drops into the dark; the gaps close and the next patient is caught.
+- **Payoff:** a small clinic, 91 of 100 beds light. **Light:** night, warm interior strips, green practicals, bloom.
+- **Reveal beat:** frame 0, a single bed lights; the pull-out turns it into 72 of 100 by "hours".
+- **Silhouette check:** pass (lit beds and the hole both read at thumbnail size).
 
-- **Hero device (new): a reflow/resort queue.** Pictogram patients stand in a line in arrival order. As each is triaged,
-  a coloured severity badge appears over their head and they **physically jump queue position** by severity, not by how
-  long they've waited — the camera holds long enough that the reordering itself is the thing to watch.
-- **Supporting devices:** an arc gauge sweeping to 71.8% at frame 0 (the Hook's number, landing immediately — new use;
-  EX14/EX15 both used a roll-up counter instead, so this episode uses the gauge for the *lead* number and retires the
-  counter a second episode running); a second, smaller gauge beside it for 55.3% (the Stakes comparison); floating
-  severity badges pinned above each patient as they're triaged (new use of `pin()` — on a moving figure, not a static
-  world point like EX15's signage); a five-level legend built as a vertical bar diagram; a third small gauge for 91.3%
-  at Payoff. No Bridge scene (Bridge off) — the hospital floor is the only setting, held a few seconds longer at the
-  end instead of cutting away to a shop.
-- **One surprise:** the patient who arrived first and looks calm and fine has a small wait-time counter pinned above
-  them that keeps climbing, visibly, through every beat, while more urgent patients keep cutting in front — the
-  anomaly is that the "normal-looking" person is the one the frame keeps drawing you back to.
-- **Reveal beat:** L01, frame 0 — the Hook's number (71.8%) lands immediately, on the gauge, before the world has even
-  resolved into the hospital floor (Analytical angle: number first, everything after explains it). The Twist's number
-  (91.3%, L05) lands as a second, smaller reveal, not a repeat of the same device at the same size.
-- **Silhouette check:** to run once the hero queue is built — the badge colours must read as distinct dots even at small
-  size; if two badge colours look the same stripped of hue, raise the brightness gap between them, not just the hue gap.
+## Shot list (v2: one camera, 60 fps)
 
-## Shot list (one isometric world, one camera, 60 fps)
-
-| Shot | Starts on | What we see (world + device) | Camera |
+| Shot | Starts on | What we see | Camera |
 |---|---|---|---|
-| 1 | L01 frame 0 (already moving) | An arc gauge sweeps to 71.8%, alone in the dark | push in on the gauge, already sweeping at frame 0 |
-| 2 | "ward bed" | The gauge resolves into the ED floor: a waiting line in arrival order, a triage desk at the front | pulls back from the gauge into the iso world |
-| 3 | "Last year" | A second, smaller gauge appears beside the first, sweeping to 55.3%, visibly shorter | holds on both gauges |
-| 4 | "sorted first" | The patient two back from "you" is pulled from the line first; a red badge appears over them | push in on the triage desk, holds on the reorder |
-| 5 | "Health Ministry" | Legend card builds beside the desk: five bars, Resuscitation (tall, red) down to Routine (short, green) | camera drifts along the legend |
-| 6 | "rebuild it" | A ghost line (the old 3-tier version, thinner, grey) dissolves and reforms into the 5-level line | match cut: old legend → new legend |
-| 7 | L05 "91.3 percent" | A third, smaller gauge sweeps in beside the first two, fullest of the three | pulls back to frame all three gauges |
-| 8 | L06 | Back to shot 2's framing (seamless loop); "you", the first-arrival patient, is finally called — their wait counter stops | pulls back to the waiting line, holds (no cutaway — Bridge off) |
-| 9 | L07 | Follow card: Meikigo logo + "Follow Meikigo for more." | — |
+| 1 | L01 frame 0 | one bed's blanket lights green | tight, near-level |
+| 2 | "That's how many" | beds light in a wave to 72 of 100 | pulls out up the tower |
+| 3 | "Last year" | 17 beds go dark (55.3%), then relight on "sorted first" | slow orbit |
+| 4 | L03 | the sorter: one queue splits into 5 lanes, badges light | swoops down, orbits and drifts up the lanes |
+| 5 | L04 "the old system" | 3 old lanes, tiles fall away, a patient falls through | close, cold spotlight |
+| 6 | "The new one" | gaps close, the next patient gets a badge and a lane | widens to the sorter |
+| 7 | L05 "91.3" | the clinic: 91 of 100 beds light | over the clinic |
+| 8 | L06 | the whole lit campus at night | pulls back, slow drift |
+| 9 | L07 | follow card over the campus | slow drift |
 
 ## Experiments
 
