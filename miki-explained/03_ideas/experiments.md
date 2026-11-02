@@ -224,6 +224,7 @@ more light.
 | EX15 The $1.50 Promise | a conveyor belt snaking through every aisle carrying 245M hot dogs | price bars rising except one, x-ray walls (racks lower), two compared columns (fees vs profit) with pinned labels, counter roll-up, members looping through a gate | one green hot-dog-price bar staying flat while eight grey bars climb past it | pass (green bar reads against the grey row even at thumbnail size) |
 
 | EX16 Out of Turn (v2) | a 100-bed cutaway tower where the percentage is beds lighting (72 of 100) | a 5-lane triage sorter splitting one queue, a 91/100 clinic, a pulled-back night campus | the old sorter's tiles fall away and a patient drops through the crack on "fall through the cracks" | pass (lit beds and the hole both read at thumbnail size). v1 (reflow queue + gauges) rejected as too simple |
+| EX17 Five Times | a hollow monument: a 5× on a plinth whose ground is cut open into strata (2014 / 1990 / late-1980s memo) that crumble away | ground opening like a cake cut, two roads of customers through year gates, coin stacks lifting the kept, two value bars, walk cycles, bounded haze | the column under the plinth crumbles and the 5× stays in mid-air over the empty slot on "No study behind it" | pass (green 5× over a black slot reads at thumbnail size) |
 
 **EX16 note:** the brief planned 4 reorder events; cut to 2 during the build because the camera never actually held
 still at each look-at point (it continuously drifted toward the next keyframe), so most of the events played off-screen.
@@ -233,6 +234,9 @@ Next episode (EX17): hero device must not be "a reflow/resort queue" or "a conve
 x-ray used twice (retire), dot grid once, counter roll-up twice (retire), pull-out-to-many-instances once, compared
 columns once, gate/loop-with-colour-change once, arc gauges once. Favor something not yet tried: a fold/reveal (lid off,
 roof lifts), an erosion/depletion (something visibly runs out).
+
+Next episode (EX18): hero must not be the tower of beds (EX16) or the hollow monument / strata cutaway (EX17). EX17 used
+erosion; still unused: a fold/reveal (lid off, roof lifts), a scale zoom through nested worlds, a balance/scale tipping.
 
 ## 14. Narrative angle log (added 2026-11-02, from the same external workflow as § 13)
 
@@ -245,6 +249,7 @@ roof lifts), an erosion/depletion (something visibly runs out).
 | EX14 The Long Path | Anthropological (the maze feels accidental, isn't) | H2 answer first | retail store / Klang hardware shop |
 | EX15 The $1.50 Promise | Anthropological (a flat price feels like a mistake, isn't) | H3 surprising claim | warehouse retail / Shah Alam car wash |
 | EX16 Out of Turn | **Analytical** (the number leads: 71.8%, then why) | H1 data at frame 0 | hospital ED (Bridge turned off before the final cut — no shop shown) |
+| EX17 Five Times | Analytical (the number leads, contradicted in the same breath) | H3 surprising claim | business folklore (Bridge off) |
 
 Found on backfill: EX13–EX15 are all Anthropological — three in a row before anyone noticed, because nothing was
 checking. EX16 switches to Analytical specifically to break that run, not because the topic demanded it either way.
@@ -260,6 +265,7 @@ The six openers are in `00_bible/script-formula.md` § Bridge openers. Check the
 | EX14 The Long Path | "Now picture your hardware shop in Klang." — same |
 | EX15 The $1.50 Promise | "Now picture your car wash in Shah Alam." — same |
 | EX16 Out of Turn | n/a — Bridge off, see § 9; the B1 draft is in episode.md history |
+| EX17 Five Times | n/a — Bridge off (2nd run); shop tie-in in the pinned comment only |
 
 Found on backfill: five straight episodes opened the Bridge with "Now picture your…" before this log existed to catch
 it. EX16 switches to B1; the next one shouldn't repeat B1, or match EX13–EX15's "Now picture" default either.
