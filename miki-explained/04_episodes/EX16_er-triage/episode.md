@@ -7,8 +7,9 @@ Calendar: Day 14, Fri 13 Nov 2026, 21:00
 Lane: The Invisible Queue (P11) · Topic type: everyday thing nobody questioned
 Hook pattern: H1 data at frame 0 (the number opens the frame)
 Named concept: **Sorted by how sick, not when** (title card at Twist/Payoff)
-Lands on (Meikigo problem): a queue sorted by what each customer actually needs, not arrival order
-(a car workshop/bengkel in Klang: automotive service, not a repeat of EX11's clinic)
+**Bridge: off** (`experiments.md` § 9 BR-off test, user 2026-11-02: "skip Klang or back to business, serve the masses
+first"). No shop turn in the video — the episode ends on Payoff → End → Follow, general-audience, nobody's queue named.
+Any shop tie-in lives only in the caption/pinned comment, not on screen or in the voice.
 
 **Style:** house format, smooth isometric (`isokit.py`). Setting is a generic Malaysian government hospital emergency
 department — no real hospital's name or branding.
@@ -53,15 +54,15 @@ it's deliberate). Three in a row, so EX16 takes the other angle instead of defau
 | L03 | Mechanism | Hospitals don't queue you by when you arrived. They queue you by how sick you are. This year the Health Ministry rebuilt the whole scale: five levels, Resuscitation down to Routine. |
 | L04 | Twist | Why rebuild it? Officials said the old system let chronic patients fall through the cracks. The new one catches them first. |
 | L05 | Payoff | Smaller hospitals do even better. Ninety-one point three percent now average under four hours. Sharper sorting, not more capacity. |
-| L06 | Bridge (B1 fragment, `experiments.md` § 15) | Your bengkel in Klang. The car that won't start goes first. The oil change waits its turn. |
-| L07 | End (reframe) | Being called out of turn isn't unfair. It means the sorting is working. |
-| L08 | Follow | Follow Meikigo for more. (reuse an earlier episode's L08) |
+| L06 | End (reframe) | Being called out of turn isn't unfair. It means the sorting is working. |
+| L07 | Follow | Follow Meikigo for more. (reuse an earlier episode's L08) |
 
-Word count: 139 (numbers spoken in full) · Checklist score: 7/7
-- Sound-off hook ✓ ("71.8%" on screen at frame 0) · one idea (sorted by severity, not arrival), one comparison (urgent
-  car repair vs a routine oil change)
+Word count: 122 (numbers spoken in full) · Checklist score: 6/7 (Bridge item not applicable, Bridge off)
+- Sound-off hook ✓ ("71.8%" on screen at frame 0) · one idea (sorted by severity, not arrival), one comparison (this
+  year vs last year's wait, not a shop analogy)
 - Twist ✓: a viewer assumes faster wards meant more beds/money → it's the same beds, sorted smarter
-- Numbers: 71.8%, 55.3%, five levels, 91.3% (four, all sourced) · Bridge names a Klang bengkel concretely
+- Numbers: 71.8%, 55.3%, five levels, 91.3% (four, all sourced) · Bridge off — no shop named on screen; general queue
+  behaviour only, "serve the masses" (user, 2026-11-02)
 - End: reframe (EX13 reframe, EX14 callback, EX15 "next time", EX16 reframe — rotates back without repeating EX13's
   wording) · a stranger can retell it ("Malaysian ERs got faster by sorting smarter, not by adding beds")
 - No vague intensifiers (checked against the new Writing rule) · Honesty: 71.8%/55.3%/91.3% are the **ward-bed wait**,
@@ -79,7 +80,8 @@ Last 2 episodes' hero devices: EX14 = a path that draws itself; EX15 = a conveyo
   counter a second episode running); a second, smaller gauge beside it for 55.3% (the Stakes comparison); floating
   severity badges pinned above each patient as they're triaged (new use of `pin()` — on a moving figure, not a static
   world point like EX15's signage); a five-level legend built as a vertical bar diagram; a third small gauge for 91.3%
-  at Payoff; the bengkel Bridge scene, a small queue of cars echoing the hero device's logic.
+  at Payoff. No Bridge scene (Bridge off) — the hospital floor is the only setting, held a few seconds longer at the
+  end instead of cutting away to a shop.
 - **One surprise:** the patient who arrived first and looks calm and fine has a small wait-time counter pinned above
   them that keeps climbing, visibly, through every beat, while more urgent patients keep cutting in front — the
   anomaly is that the "normal-looking" person is the one the frame keeps drawing you back to.
@@ -100,15 +102,18 @@ Last 2 episodes' hero devices: EX14 = a path that draws itself; EX15 = a conveyo
 | 5 | "Health Ministry" | Legend card builds beside the desk: five bars, Resuscitation (tall, red) down to Routine (short, green) | camera drifts along the legend |
 | 6 | "rebuild it" | A ghost line (the old 3-tier version, thinner, grey) dissolves and reforms into the 5-level line | match cut: old legend → new legend |
 | 7 | L05 "91.3 percent" | A third, smaller gauge sweeps in beside the first two, fullest of the three | pulls back to frame all three gauges |
-| 8 | L06 "Klang" | The same isometric language, small: a bengkel bay; a car with hazard lights jumps the queue ahead of a routine service booking | flies to the bengkel |
-| 9 | L07 | Back to shot 2's framing (seamless loop); "you", the first-arrival patient, is finally called — their wait counter stops | pulls back to the waiting line |
-| 10 | L08 | Follow card: Meikigo logo + "Follow Meikigo for more." | — |
+| 8 | L06 | Back to shot 2's framing (seamless loop); "you", the first-arrival patient, is finally called — their wait counter stops | pulls back to the waiting line, holds (no cutaway — Bridge off) |
+| 9 | L07 | Follow card: Meikigo logo + "Follow Meikigo for more." | — |
 
 ## Experiments
 
-Scr L2 (139 w) · Bridge on (Klang bengkel, automotive) · H1 data at frame 0 · E1 one unbroken take · C iso camera ·
-A smooth 60 fps · S1 seamless loop · T caption panel · END-reframe · V3 smooth isometric (3rd episode) · **Analytical
-angle** (breaks EX13–EX15's Anthropological run, § 14) · **B1 Bridge opener** (breaks EX12–EX15's "Now picture" run, § 15)
+Scr L2 (122 w) · **Bridge off** (general audience, no shop named — user 2026-11-02) · H1 data at frame 0 · E1 one
+unbroken take · C iso camera · A smooth 60 fps · S1 seamless loop · T caption panel · END-reframe · V3 smooth isometric
+(3rd episode) · **Analytical angle** (breaks EX13–EX15's Anthropological run, § 14)
+
+**Note for § 9 (Bridge presence):** this is the first episode run Bridge-off since the rule existed as a tested
+variable rather than the default. Compare its retention against EX12–EX15 (all Bridge-on) once posted — specifically
+whether cutting the shop turn costs or helps 3 s retention and % watched full, per § 9's original question.
 
 ## Voice
 
