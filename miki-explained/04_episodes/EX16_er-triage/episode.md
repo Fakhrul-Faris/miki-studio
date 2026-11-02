@@ -1,6 +1,6 @@
 # EX16 — Out of Turn
 
-Status: story ✓ → **script (awaiting approval)** → voice → preview → build → posted
+Status: story ✓ → script ✓ → **voice (with the user)** → preview → build → posted
 Voice: Nathan, narrator, `v4k7NzxipnuJNJtrKxob`
 Calendar: Day 14, Fri 13 Nov 2026, 21:00
 
@@ -117,11 +117,34 @@ whether cutting the shop turn costs or helps 3 s retention and % watched full, p
 
 ## Voice
 
-`how-i-generate.md` after approval.
+`how-i-generate.md` (six lines; L07 reuses an earlier episode).
 
 ## Post
 
-_after the build_
+Caption stays general, matching the video (Bridge off); the shop tie-in lives only in the pinned comment, per
+`series-plan.md`'s "CTA lives in the pinned comment" — user confirmed 2026-11-02.
+
+**Caption:**
+```
+The ER doesn't see you in the order you arrived. It never did. 🏥
+
+Malaysia rebuilt its hospital triage system this year: five levels, from Resuscitation down to Routine, sorting by how sick you are, not when you walked in.
+
+It's working. 71.8% of major government hospitals now get patients a ward bed within eight hours, up from 55.3% last year. Smaller hospitals do even better: 91.3%.
+
+Being called out of turn isn't unfair. It means the system is working.
+
+#malaysia #hospital #emergencyroom #triage #howthingswork
+```
+
+**Pinned comment:**
+```
+Ever wonder if your own queue should sort by urgency instead of arrival order? DM "SORT" and we'll show you how.
+Sources: Malay Mail, 3 Jul 2026 (MOH's Malaysian Triage Scale overhaul — five levels, the "fall through the cracks" quote); Health Minister Dzulkefly Ahmad via The Sun, 2026 (71.8% / 55.26% / 91.3% figures — these measure the wait for a ward bed after admission, not triage speed itself).
+```
+
+- Turn on the AI-generated content label (synthetic voice, code-built graphics).
+- Posted: _date_ · Link: _
 
 ## Before posting
 
@@ -129,6 +152,7 @@ _after the build_
 - [ ] Credit + sources in the pinned comment
 - [ ] AI-generated content label (voice is AI)
 - [ ] No real hospital name or branding in the picture
+- [ ] Caption stays general (Bridge off); shop CTA only in the pinned comment
 - [ ] TikTok safe area checked
 - [ ] Silhouette check logged in `experiments.md` § 13
 - [ ] Watched at full speed with sound
