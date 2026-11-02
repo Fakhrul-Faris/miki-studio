@@ -5,7 +5,9 @@ description: Playbook for making an episode of the Miki Explained series (miki-e
 
 # Miki Explained — episode playbook
 
-Every episode follows the house format set by **EX14 "The Long Path"** (`miki-explained/04_episodes/EX14_long-path`,
+**New base: EX16 v2 "Out of Turn"** (`04_episodes/EX16_er-triage`; user, 2026-11-02: "ex16 is the new base… getting closer
+to Kurzgesagt style… push it to the higher limit"): make the number physical, one dominant hero object, light as
+emotion, the script's metaphor made literal. Start from its `build/episode.py`. The format was set by **EX14 "The Long Path"** (`miki-explained/04_episodes/EX14_long-path`,
 read its `README.md` and `episode.md`). User, 2026-11-01: "i really really love what you did with this. this is what i'm
 looking for." Episodes live in `miki-explained/04_episodes/EXNN_slug/`. Before building, read `00_bible/visual-system.md`
 (the format), `series-plan.md`, `script-formula.md`, `voice.md`, `glossary.md` and `00_bible/effectcraft-notes.md`.
