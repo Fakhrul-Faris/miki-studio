@@ -61,9 +61,28 @@ tightened duration once the voice is in.
 - Sentences under 12 words. One idea per sentence.
 - A new fact, image or number roughly every 5s.
 - At least 3 specific numbers; never "a lot", "many", "significantly" when a number exists.
+- **No vague intensifiers** (huge, massive, crazy, insane, amazing, incredible) — name the number, object or gesture
+  instead. Added 2026-11-02, adapted from an external script-writing workflow the user shared.
 - Delete any line that wouldn't make a viewer keep scrolling if it were cut.
 - No filler, no recap of what was just said, no pitch before Payoff.
 - Don't reveal the Twist before its beat.
+
+## Angle check (added 2026-11-02, before writing the script)
+
+Our beats (Hook → Stakes → Mechanism → Twist → Payoff → Bridge → End → Follow) stay fixed; **angle** is which part of
+that skeleton carries the weight, and it's worth naming on purpose instead of defaulting to whichever framing comes
+first. Two angles fit this series (the other two — ACTIONABLE "here's how" and ASPIRATIONAL "before/after" — don't:
+we report other businesses' systems, we don't teach a personal method or a transformation):
+
+- **ANALYTICAL:** the number leads. Hook opens on the figure itself (H1 data at frame 0), Mechanism explains the
+  breakdown, Payoff adds a second number as the "so what" comparison.
+- **ANTHROPOLOGICAL:** the moment leads. Hook opens on a felt, familiar scene (H2–H4), Mechanism explains why, Twist
+  flips the assumption, numbers land at Payoff.
+
+**Before locking the script, sketch the hook line both ways** (one sentence each is enough) and pick the sharper one.
+"If the first idea feels obvious, it is — reject it, take the next." Log the angle, hook type and setting in
+`03_ideas/experiments.md` § 14 and check it against the last 3 episodes: if they share an angle, that's a reason to
+pick the other one here, not a coincidence to repeat.
 
 ## Topic types
 

@@ -49,7 +49,9 @@ Pick from `03_ideas/content-bank.md` (stories, the How It Makes Money series, se
 a primary source and quote it in `episode.md` § Sources. Unconfirmable details are cut or flagged. Never invent stats.
 
 ### 2. Script + shot list
-Copy `templates/episode.md`. Write to the formula in `00_bible/script-formula.md`: **Hook → Stakes → Mechanism → Twist →
+Copy `templates/episode.md`. **Angle check first** (`00_bible/script-formula.md` § Angle check): sketch the hook both
+Analytical and Anthropological ways, check the last 3 episodes in `03_ideas/experiments.md` § 14, pick whichever angle
+they don't share. Write to the formula: **Hook → Stakes → Mechanism → Twist →
 Payoff → Bridge → Loop**, run its quality checklist, and fix anything scoring below 6/7 before presenting it. Length
 (word count, seconds) is a tested variable (`03_ideas/experiments.md` § 8) — state the target, don't default to a fixed
 count. The named concept (glossary) gets a title card around Twist/Payoff; the Bridge (optional, tested) is "now picture your shop…";

@@ -227,3 +227,18 @@ Next episode (EX16): hero device must not be "path that draws itself" or "convey
 x-ray already used twice, dot grid once, counter roll-up twice (retire for one episode), pull-out-to-many-instances once,
 compared columns once, gate/loop-with-colour-change once. Favor something not yet tried: a fold/reveal (lid off, roof
 lifts), a sort/reflow (items regroup into a new pattern), an erosion/depletion (something visibly runs out).
+
+## 14. Narrative angle log (added 2026-11-02, from the same external workflow as § 13)
+
+**Rule:** before locking a script, check the last 3 episodes' angle below. If they share one, write the hook both ways
+(`00_bible/script-formula.md` § Angle check) and pick the other angle unless the topic genuinely can't carry it.
+
+| Episode | Angle | Hook type | Setting / Bridge |
+|---|---|---|---|
+| EX13 The Hidden Queue | Anthropological (the felt moment: you wait, it's padded on purpose) | H1 data at frame 0 (60→23 split-flap) | theme park / Malaysian nasi kandar counter |
+| EX14 The Long Path | Anthropological (the maze feels accidental, isn't) | H2 answer first | retail store / Klang hardware shop |
+| EX15 The $1.50 Promise | Anthropological (a flat price feels like a mistake, isn't) | H3 surprising claim | warehouse retail / Shah Alam car wash |
+| EX16 Out of Turn | **Analytical** (the number leads: 71.8%, then why) | H1 data at frame 0 | hospital ED / Klang bengkel |
+
+Found on backfill: EX13–EX15 are all Anthropological — three in a row before anyone noticed, because nothing was
+checking. EX16 switches to Analytical specifically to break that run, not because the topic demanded it either way.
