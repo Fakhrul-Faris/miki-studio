@@ -4,17 +4,22 @@
 import subprocess
 FPS = 60
 # name: (file, trim start, trim end, hit time inside the trimmed clip)
-SFX = {'tick': ('sfx/tick.wav', 0.0, 0.05, 0.0), 'pop': ('sfx/pop.wav', 0.0, 0.11, 0.0), 'whoosh': ('sfx/whoosh.wav', 0.0, 0.45, 0.15),
-       'sink': ('sfx/Low End Reverse Whoosh Sound.mp3', 0.0, 3.2, 2.37)}
+# earshot's free code-synthesized bank (archive-ignore/ext/earshot, `earshot sfx render <id> -o sfx/es_<name>.wav`):
+# (file, trim start, trim end, hit time inside the trimmed clip = the sound's reported peak)
+SFX = {'pop': ('sfx/es_pop1.wav', 0.0, 0.15, 0.004), 'blip': ('sfx/es_blip.wav', 0.0, 0.118, 0.017),
+       'swish': ('sfx/es_swish.wav', 0.0, 0.88, 0.110), 'sub': ('sfx/es_sub.wav', 0.0, 0.286, 0.021),
+       'fall': ('sfx/es_fall.wav', 0.0, 1.78, 0.152), 'rise': ('sfx/es_rise.wav', 0.0, 0.95, 0.697)}
 EV = []
-EV += [('pop', 82, 0.24)]                                            # 71.8% lands (hook)
-EV += [('pop', 455, 0.2)]                                            # EVENT_A: a patient jumps the queue
-EV += [('pop', 785, 0.2)]                                            # EVENT_B: another jumps it, close to the desk
-EV += [('sink', 1225, 0.36)]                                         # "rebuild it": the old 3-tier legend fades
-EV += [('tick', f, 0.26) for f in (1079, 1179)]                       # the five levels build in
-EV += [('tick', 1700, 0.3)]                                          # 91.3%: smaller hospitals do even better
-EV += [('whoosh', 1945, 0.2)]                                        # "you" is finally called
-EV += [('whoosh', 2100, 0.18)]                                       # home, the loop
+EV += [('pop', 16, 0.55)]                                            # the first bed lights (frame 0 sits on it)
+EV += [('swish', 118, 0.55)]                                         # the pull-out up the tower
+EV += [('sub', 432, 0.6)]                                            # "55.3": seventeen beds go dark
+EV += [('blip', 640, 0.5)]                                           # "sorted first": they relight
+EV += [('swish', 694, 0.5)]                                          # down to the sorter
+EV += [('blip', 1079, 0.45), ('blip', 1104, 0.45)]                   # "five levels"
+EV += [('fall', 1404, 0.6)]                                          # "fall through the cracks"
+EV += [('rise', 1474, 0.5)]                                          # "the new one catches them" (peak on "new")
+EV += [('blip', 1661, 0.5)]                                          # "91.3": the clinic lights
+EV += [('swish', 1990, 0.5)]                                         # the pull-out over the campus
 DUR = 2264 / FPS
 ins = ['-i', 'audio/voice.wav', '-i', 'sfx/Free Drone Bed Sound Effects.mp3']
 fl = ['[0]aresample=48000,aformat=channel_layouts=stereo,apad[v]',

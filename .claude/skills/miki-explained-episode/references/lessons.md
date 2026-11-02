@@ -61,3 +61,11 @@ Full detail: `miki-explained/00_bible/effectcraft-notes.md`. Read before proposi
   animating its scale or pinning a label to it. (EX14's world.py has the old behaviour; harmless there.)
 - Pinned labels (`isokit.anchor()` → `build/anchors.jsx` → `pin()` in lib.jsx) need `view_layer.update()` after the
   camera is set each frame, and a still check that the anchors land on screen.
+- EX16 v1 rejected ("too simple, similar to previous"): thin gauge rings on an empty floor proved nothing. v2 rule: make the
+  number physical (100 beds, 72 lit), one dominant hero object, light as emotion (night, practicals, bloom), literalise the
+  script's metaphor ("fall through the cracks" = tiles fall away). A cutaway building needs a near-level camera (tilt ~74-76):
+  at iso elevation every slab hides the floor below. Dark tiles on a dark void hide a gap: lift the plaza's value.
+- Check run modes before trusting them: `preview`/`still` never write `out/frames`; EX16 v1 debugged for hours before
+  noticing the real render had never run.
+- We couldn't hear our mixes. earshot (`sheet --cues`) showed EX15's hits mostly buried under the voice; EX16 v2's mix went
+  from 67% -> 100% cues audible within 100 ms.

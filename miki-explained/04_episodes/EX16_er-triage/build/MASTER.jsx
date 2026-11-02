@@ -1,7 +1,7 @@
 // MASTER, 60 fps, one comp over the whole Blender run (build/episode.py -> out/frames; the world already renders in the
-// true accent green, no recolour pass needed). On top: caption blocks (capBlock, caps.jsx), labels pinned to the gauges
-// (pin(), anchors.jsx), the climbing wait counter pinned above "you", and the follow card. No centre cards — Bridge off,
-// no quote/counter/title card this episode (the gauges and legend carry the numbers in-world).
+// true accent green, no recolour pass needed). On top: caption blocks (capBlock, caps.jsx), labels pinned to the
+// v2 world (pin(), anchors.jsx: the tower, the lanes, the crack, the clinic) and the follow card. No centre cards —
+// Bridge off; the tower's 100 beds carry the numbers in-world.
 var TOTAL = 2264, c = freshComp("MASTER", TOTAL); c.bgColor = BGD;
 app.run("file.import", { paths: [DIR + "out/frames/f_0000.png"], sequence: true, addToComp: false });
 var seqIt = app.project.item(app.project.numItems); seqIt.mainSource.conformFrameRate = FPS; seqIt.name = "SEQ_world";
@@ -9,25 +9,15 @@ c.layers.add(seqIt).name = "world";
 
 for (var i = 0; i < CAP.length; i++) capBlock(c, CAP[i], i);
 
-// gauge value labels: pinned where the gauge sits, shown only while the camera actually frames that gauge
-pin(c, "gauge 718:A", "71.8%", "Inter Display", "Black", 46, ACC, 12, 95, 0, -70, "center");
-pin(c, "gauge 718:B", "71.8%", "Inter Display", "Black", 40, ACC, 1661, 1945, 0, -62, "center");
-pin(c, "gauge 553:A", "55.3%", "Inter Display", "Bold", 32, WARM, 1661, 1945, 0, -48, "center");
-pin(c, "gauge 913:A", "91.3%", "Inter Display", "Bold", 32, WARM, 1661, 1945, 0, -46, "center");
-
-// the climbing wait counter above "you": position tracks the pinned world anchor, text climbs (1 "min" per 1.5s),
-// freezes the instant "you" is finally called (YOU_CALL = L06 start, 1945), fades out as they walk to the desk
-var YOU_CALL = 1945;
-app.run("comp.open", { comp: c.name });
-app.run("layer.newText", { text: "0 MIN", name: "you counter", font: "IBM Plex Mono", style: "Bold", size: 34, fill: hex(WARM), position: [0, 0], justify: "center", tracking: 20 });
-var wc = c.layer(1), wa = ANCH["you counter"], wk = [];
-for (var wi = 0; wi < wa.length; wi++) if (wa[wi][0] % 2 == 0) wk.push([wa[wi][0], [wa[wi][1], wa[wi][2] - 50]]);
-keys(P(wc), wk); keys(O(wc), [[30, 0], [60, 100], [YOU_CALL + 60, 100], [YOU_CALL + 85, 0]]);
-wc.property("ADBE Text Properties").property("ADBE Text Document").expression =
-  "var capped = Math.min(time, " + (YOU_CALL * F) + "); Math.floor(capped / 1.5) + ' MIN';";
-var wds = wc.property("ADBE Effect Parade").addProperty("ADBE Drop Shadow");
-wds.property(1).setValue([0.02, 0.02, 0.03]); wds.property(2).setValue(230); wds.property(3).setValue(180); wds.property(4).setValue(0); wds.property(5).setValue(26);
-wc.inPoint = 0; wc.outPoint = (YOU_CALL + 85) * F;
+// labels pinned to the world (episode.py anchors): the tower's count, the lanes, the crack, the clinic
+pin(c, "tower top:a", "71.8%  \u00B7  72 OF 100 BEDS", "Inter Display", "Black", 44, ACC, 150, 428, 0, -10, "center");
+pin(c, "tower top:b", "LAST YEAR  55.3%", "Inter Display", "Black", 44, WARM, 436, 626, 0, -10, "center");
+pin(c, "tower top:c", "71.8%  \u00B7  SAME 100 BEDS", "Inter Display", "Black", 44, ACC, 634, 700, 0, -10, "center");
+pin(c, "lane 1:a", "1  RESUSCITATION", "IBM Plex Mono", "Bold", 30, ACC, 1085, 1290, 0, -40, "center");
+pin(c, "lane 5:a", "5  ROUTINE", "IBM Plex Mono", "Bold", 30, WARM, 1175, 1235, 10, -40, "left");
+pin(c, "crack:a", "OLD SCALE  \u00B7  3 LEVELS", "IBM Plex Mono", "Bold", 30, WARM, 1330, 1470, 0, -80, "center");
+pin(c, "crack:b", "NEW SCALE  \u00B7  5 LEVELS", "IBM Plex Mono", "Bold", 30, ACC, 1480, 1580, 0, -80, "center");
+pin(c, "clinic top:a", "91.3%  \u00B7  UNDER 4 HOURS", "Inter Display", "Black", 42, ACC, 1680, 1950, 0, -10, "center");
 
 // a centre card (follow only, this episode): rises 24px and fades in over 12 frames at f0
 function card(name, str, font, style, size, col, box, f0, f1, just, tracking) {

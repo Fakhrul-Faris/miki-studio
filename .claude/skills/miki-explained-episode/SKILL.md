@@ -112,6 +112,12 @@ Rebuild: `rm EXNN.ecproj; build/run.sh MASTER` (always from scratch: the image s
   caption-panel cleanliness (nothing important hidden behind it). Anything below 4: revise the shot list or the camera
   framing (not the whole build) and re-check with another cheap preview. One revision pass; then ship the best version
   and note the scores honestly in `episode.md`.
+- **Ears (earshot, from EX16):** `archive-ignore/ext/earshot/.venv/bin/earshot sheet sfx/mix.wav --cues cues.json` (cues
+  from `sfx/events.txt`, `{fps: 60, events: [{f, kind, id}]}`): every cue should have an onset within 100 ms and the key
+  ones should land as accents over the voice. It found EX15's "didn't" tick inaudible (no hit) — our hits were mostly
+  buried. `earshot timeline <mp4>` for gaps and loudness. SFX can come from its free 252-sound code bank
+  (`earshot sfx list` / `sfx render <id> -o sfx/es_<name>.wav`; peaks are reported, use them as the hit time). Free, CPU,
+  MIT; never enable its Gemini critique (paid key, sends audio out).
 - Per-frame difference of `out/frames` (ffmpeg tblend + signalstats): no spikes against neighbours, no unintended stalls.
 - `render-frame` full-size stills on every card and caption block; TikTok safe area (x 60–960, y 160–1440).
 - Length, frame count, loudness about −19 LUFS. Copy `EXNN_edit.ecproj` for the user (never rebuild into it), write
