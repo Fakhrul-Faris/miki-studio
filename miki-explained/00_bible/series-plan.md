@@ -13,7 +13,7 @@
 
 ## Script formula
 
-See `00_bible/script-formula.md`: **Hook → Stakes → Mechanism → Twist → Payoff → Bridge ("now picture your shop") → Loop.**
+See `00_bible/script-formula.md`: **Hook → Stakes → Mechanism → Twist → Payoff → Bridge (turn to the viewer's shop, rotate the opener) → Loop.**
 Replaces the Hook/Setup/Guess/Reveal/Turn/Takeaway skeleton above (adopted 2026-10-31). Length is a tested variable
 (`03_ideas/experiments.md` § 8), not fixed at 55s.
 

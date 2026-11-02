@@ -54,7 +54,8 @@ Analytical and Anthropological ways, check the last 3 episodes in `03_ideas/expe
 they don't share. Write to the formula: **Hook → Stakes → Mechanism → Twist →
 Payoff → Bridge → Loop**, run its quality checklist, and fix anything scoring below 6/7 before presenting it. Length
 (word count, seconds) is a tested variable (`03_ideas/experiments.md` § 8) — state the target, don't default to a fixed
-count. The named concept (glossary) gets a title card around Twist/Payoff; the Bridge (optional, tested) is "now picture your shop…";
+count. The named concept (glossary) gets a title card around Twist/Payoff; the Bridge (optional, tested) turns to the viewer's shop with a rotating opener (never "now picture…",
+`00_bible/script-formula.md` § Bridge openers);
 the End rotates (reframe · "next time you…" · callback · question sparingly) and the last line is "Follow Meikigo for more."
 Apply the competitor-informed rules in script-formula.md (everyday viewer-POV topics, contradict early, one physical
 detail + one comparison, "that's why…", escalation). Rotate business types (retail, F&B, clinics…), not barbers by default. Voice direction for Nathan, narrator (ElevenLabs `v4k7NzxipnuJNJtrKxob`, `00_bible/voice.md`).

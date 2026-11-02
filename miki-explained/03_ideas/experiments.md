@@ -242,3 +242,18 @@ lifts), a sort/reflow (items regroup into a new pattern), an erosion/depletion (
 
 Found on backfill: EX13–EX15 are all Anthropological — three in a row before anyone noticed, because nothing was
 checking. EX16 switches to Analytical specifically to break that run, not because the topic demanded it either way.
+
+## 15. Bridge opener log (added 2026-11-02)
+
+The six openers are in `00_bible/script-formula.md` § Bridge openers. Check the last 3 episodes before picking one.
+
+| Episode | Opener used |
+|---|---|
+| EX12 The Button That Does Nothing | "Now picture your bubble tea counter." — the old default, before this log existed |
+| EX13 The Hidden Queue | "Now picture your nasi kandar counter at one o'clock." — same |
+| EX14 The Long Path | "Now picture your hardware shop in Klang." — same |
+| EX15 The $1.50 Promise | "Now picture your car wash in Shah Alam." — same |
+| EX16 Out of Turn | **B1 fragment** — "Your bengkel in Klang." |
+
+Found on backfill: five straight episodes opened the Bridge with "Now picture your…" before this log existed to catch
+it. EX16 switches to B1; the next one shouldn't repeat B1, or match EX13–EX15's "Now picture" default either.

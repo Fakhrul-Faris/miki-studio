@@ -20,7 +20,7 @@ Every fact in the script, with its source. No unverified claims.
 | L03 | Mechanism | |
 | L04 | Twist | |
 | L05 | Payoff | |
-| L06 | Bridge ("now picture your shop…") | |
+| L06 | Bridge (turn to the viewer's shop; rotate the opener, `00_bible/script-formula.md` § Bridge openers) | |
 | L07 | Loop | |
 
 Word count: _ (target: _) · Checklist score: _/7

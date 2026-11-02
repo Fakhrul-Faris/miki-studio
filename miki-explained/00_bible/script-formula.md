@@ -16,15 +16,28 @@ BRIDGE is our brand's addition (the series' "Niche Variant"); it's now optional 
 | Mechanism | How it works, one vivid image or analogy | 3–5 short sentences; a named person/thing beats "researchers" or "a company" |
 | Twist | An assumption the viewer held gets flipped | At about the 60% mark. "It wasn't X, it was Y." Without this it's an explainer, not a story |
 | Payoff | Hard numbers, a clear before/after | At least 3 specific numbers total across the script |
-| Bridge | "Now picture your shop…", one concrete scene | Our named concept gets a title card here or in Twist/Payoff |
+| Bridge | Turn to the viewer's own shop, one concrete scene — the opener rotates (§ Bridge openers, `experiments.md` § 15), never defaults to "now picture your…" | Our named concept gets a title card here or in Twist/Payoff |
 | End | A landing line (rotated: reframe · "next time you…" · callback · question sparingly) | Not a question by default — see the competitor rules below |
 | Follow | "Follow Meikigo for more." | Last line, after the End |
 
 ## The Bridge is optional, and tested
 
-The Bridge ("now picture your shop…") is the series' default, but whether to include it is itself a tested variable
-(`03_ideas/experiments.md` § 9 Bridge presence), since it's also the moment most likely to read as a pitch and cost
-retention. **Default: on** (series-plan's "every story ends inside a shop" rule). When a script tests it **off**: end on
+The Bridge (turning to the viewer's own shop) is the series' default, but whether to include it is itself a tested
+variable (`03_ideas/experiments.md` § 9 Bridge presence), since it's also the moment most likely to read as a pitch and
+cost retention. **Default: on** (series-plan's "every story ends inside a shop" rule).
+
+## Bridge openers (added 2026-11-02: "now picture your X in Y" ran five episodes straight, EX12–EX16, before anyone
+noticed — found the same way the angle repeat was found, by logging it)
+
+Six ways into the Bridge, none of them "now picture…". Check `experiments.md` § 15 before writing one; the last 3
+episodes shouldn't share an opener any more than they should share an angle or a hero device.
+
+1. **B1 Fragment, no verb:** "Your bengkel in Klang." — drop straight into the scene, let the next line carry the action.
+2. **B2 Present-tense claim:** "Your bengkel in Klang does this too." — states it as already true, not a request to imagine.
+3. **B3 Causal carry-over:** "That's how your bengkel in Klang should sort too." — ties directly to the Twist/Payoff mechanism just explained.
+4. **B4 Direct instruction:** "Run your bengkel in Klang the same way." — a command aimed at the action, not at "picturing" it.
+5. **B5 Demonstrative:** "Here's your bengkel in Klang:" — a label on the scene that follows, not a scene-setting verb.
+6. **B6 Comparative ellipsis:** "Same at your bengkel in Klang." — the shortest version, leans on the shot to do the rest. When a script tests it **off**: end on
 Payoff → Loop, move any documentary image earlier (Stakes is a natural spot) so the three-ingredient rule still holds,
 and carry the shop tie-in in the caption and pinned comment instead of the narration.
 

@@ -53,11 +53,11 @@ it's deliberate). Three in a row, so EX16 takes the other angle instead of defau
 | L03 | Mechanism | Hospitals don't queue you by when you arrived. They queue you by how sick you are. This year the Health Ministry rebuilt the whole scale: five levels, Resuscitation down to Routine. |
 | L04 | Twist | Why rebuild it? Officials said the old system let chronic patients fall through the cracks. The new one catches them first. |
 | L05 | Payoff | Smaller hospitals do even better. Ninety-one point three percent now average under four hours. Sharper sorting, not more capacity. |
-| L06 | Bridge | Now picture your bengkel in Klang. The car that won't start goes first. The oil change waits its turn. |
+| L06 | Bridge (B1 fragment, `experiments.md` § 15) | Your bengkel in Klang. The car that won't start goes first. The oil change waits its turn. |
 | L07 | End (reframe) | Being called out of turn isn't unfair. It means the sorting is working. |
 | L08 | Follow | Follow Meikigo for more. (reuse an earlier episode's L08) |
 
-Word count: 141 (numbers spoken in full) · Checklist score: 7/7
+Word count: 139 (numbers spoken in full) · Checklist score: 7/7
 - Sound-off hook ✓ ("71.8%" on screen at frame 0) · one idea (sorted by severity, not arrival), one comparison (urgent
   car repair vs a routine oil change)
 - Twist ✓: a viewer assumes faster wards meant more beds/money → it's the same beds, sorted smarter
@@ -106,9 +106,9 @@ Last 2 episodes' hero devices: EX14 = a path that draws itself; EX15 = a conveyo
 
 ## Experiments
 
-Scr L2 (141 w) · Bridge on (Klang bengkel, automotive) · H1 data at frame 0 · E1 one unbroken take · C iso camera ·
+Scr L2 (139 w) · Bridge on (Klang bengkel, automotive) · H1 data at frame 0 · E1 one unbroken take · C iso camera ·
 A smooth 60 fps · S1 seamless loop · T caption panel · END-reframe · V3 smooth isometric (3rd episode) · **Analytical
-angle** (breaks EX13–EX15's Anthropological run, § 14)
+angle** (breaks EX13–EX15's Anthropological run, § 14) · **B1 Bridge opener** (breaks EX12–EX15's "Now picture" run, § 15)
 
 ## Voice
 
