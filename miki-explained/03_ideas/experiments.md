@@ -225,6 +225,7 @@ more light.
 
 | EX16 Out of Turn (v2) | a 100-bed cutaway tower where the percentage is beds lighting (72 of 100) | a 5-lane triage sorter splitting one queue, a 91/100 clinic, a pulled-back night campus | the old sorter's tiles fall away and a patient drops through the crack on "fall through the cracks" | pass (lit beds and the hole both read at thumbnail size). v1 (reflow queue + gauges) rejected as too simple |
 | EX17 Five Times | a hollow monument: a 5× on a plinth whose ground is cut open into strata (2014 / 1990 / late-1980s memo) that crumble away | ground opening like a cake cut, two roads of customers through year gates, coin stacks lifting the kept, two value bars, walk cycles, bounded haze | the column under the plinth crumbles and the 5× stays in mid-air over the empty slot on "No study behind it" | pass (green 5× over a black slot reads at thumbnail size) |
+| EX18 The Landlord | the fold/reveal: a stand lifts off its plot and the ground glows green ("own the ground") | SimReady tray close-up, two profit piles (5 vs 49 coins), a fall through the void into a warm 1954 world, royalty coin streams, nested zoom to 45,000 plots on a real world map, buildings sinking to leave the ground lit | the company-run kitchen goes dark on "for not cooking" while the franchised tower keeps rising | pass (a cream stand above a green square reads at thumbnail size) |
 
 **EX16 note:** the brief planned 4 reorder events; cut to 2 during the build because the camera never actually held
 still at each look-at point (it continuously drifted toward the next keyframe), so most of the events played off-screen.
@@ -250,6 +251,7 @@ erosion; still unused: a fold/reveal (lid off, roof lifts), a scale zoom through
 | EX15 The $1.50 Promise | Anthropological (a flat price feels like a mistake, isn't) | H3 surprising claim | warehouse retail / Shah Alam car wash |
 | EX16 Out of Turn | **Analytical** (the number leads: 71.8%, then why) | H1 data at frame 0 | hospital ED (Bridge turned off before the final cut — no shop shown) |
 | EX17 Five Times | Analytical (the number leads, contradicted in the same breath) | H3 surprising claim | business folklore (Bridge off) |
+| EX18 The Landlord | Anthropological (the moment at the counter; numbers at the twist) | felt riddle (new) | McDonald's, global (Bridge off); **first long-edu, 72 s; twist straight after the hook (user)** |
 
 Found on backfill: EX13–EX15 are all Anthropological — three in a row before anyone noticed, because nothing was
 checking. EX16 switches to Analytical specifically to break that run, not because the topic demanded it either way.
@@ -266,6 +268,7 @@ The six openers are in `00_bible/script-formula.md` § Bridge openers. Check the
 | EX15 The $1.50 Promise | "Now picture your car wash in Shah Alam." — same |
 | EX16 Out of Turn | n/a — Bridge off, see § 9; the B1 draft is in episode.md history |
 | EX17 Five Times | n/a — Bridge off (2nd run); shop tie-in in the pinned comment only |
+| EX18 The Landlord | n/a — Bridge off (4th run); ending = debate question |
 
 Found on backfill: five straight episodes opened the Bridge with "Now picture your…" before this log existed to catch
 it. EX16 switches to B1; the next one shouldn't repeat B1, or match EX13–EX15's "Now picture" default either.

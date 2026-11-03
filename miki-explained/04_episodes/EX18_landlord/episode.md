@@ -1,6 +1,6 @@
 # EX18 — The Landlord
 
-Status: story ✓ → **script ✓ (2026-11-03: twist after hook, L06 trimmed)** → voice (prompts in how-i-generate.md) → voice → preview → build → final → posted
+Status: story ✓ → **script ✓ (2026-11-03: twist after hook, L06 trimmed)** → voice ✓ → preview ✓ (no reply in 5 min → full render, as instructed) → build ✓ → **final ✓ (2026-11-03)** → posted → voice → preview → build → final → posted
 Voice: Nathan, narrator, `v4k7NzxipnuJNJtrKxob`
 Calendar: Day 12, Sat 07 Nov 2026, 12:30 (may move: first long-edu, 1–3 a week)
 
@@ -115,3 +115,56 @@ One continuous camera, three worlds joined by camera moves (no cuts), EX17 kit a
 
 Long-edu (1st) · Bridge off (3rd run) · Twist on, **right after the Hook** (user) · END-question · Anthropological angle · new: flashback colour grade,
 nested scale zoom, fold/reveal hero, SimReady props (pending test)
+
+## Voice
+
+Nathan, L01–L09; L10 reused. Tightened 72.33 s → 4,340 frames. Caption-only Whisper fixes: "you'd" → "you",
+"restaurant's" → "restaurants", "Crock" → "Kroc", "Somborn" → "Sonneborn", split numbers rejoined ($1.4, $13.9, $2.7,
+45,000, $10.4).
+
+## Build (2026-11-03)
+
+`build/episode.py` from the EX17 base. New techniques, and what broke on the way:
+- **SimReady close-up** (tray, cup; `tools/blender/simready.py`, test EX00V8): the opening frame.
+- **Time travel by falling through the void:** the camera drops under the floating present world into black, teleports
+  (two rig keys one frame apart while nothing is on screen), and rises into the 1954 world; sun, ambient and sky are keyed
+  from night to warm day while the screen is black, then back. Each world's objects are hidden (`hide_render` keys) while
+  the other is on screen.
+- **Fold/reveal hero:** the franchise stand lifts 2.4 units off its plot on "own the ground"; the plot turns green.
+- **Nested zoom:** ortho scale 4 → 16 → 70 → 260 → 760 with the camera pushed back to 1,200 units (clip end 4,000) so the
+  world map fits. **45,000 plots on a real land mask** (Natural Earth ne_110m_land, public domain → `build/land.json`, a
+  720 × 360 cell raster; city at Chicago). The first version (noise "continents") read as leaves.
+- **Bug:** the present plots faded slowly to green from frame 0 (one key at 0, the next at the switch); fixed with a hold
+  key just before the switch.
+- **QA on the final:** labels moved off green-on-green and noisy backgrounds ("OWN THE GROUND", "RENT + MARKUP" into the
+  sky above the stand; "$31B FUTURE RENT" to the mid-Atlantic); the long static 1954 royalty shot was tightened before
+  the render.
+- earshot: 12/12 cues within 100 ms (67% within 1 frame).
+- Render ~0.8 frames/s, ~90 min for 4,340 frames.
+
+## Post
+
+Caption stays general (global; no shop turn). Credits for the photo and the 3D props go in the pinned comment.
+
+**Caption:**
+```
+Almost every time you buy a Big Mac, two businesses get paid. Only one of them sells burgers. 🍔
+
+In 2025, the restaurants McDonald's runs itself earned it $1.4B. The ones it rents out to franchisees earned it $13.9B. Almost 10× more — for not cooking.
+
+The secret goes back to the 1950s: don't just sell the name, own the ground. Today franchisees sell ~$130B of food a year, and McDonald's takes $10.4B of it as rent — more than its royalties. Franchisees already owe at least $31B in future rent.
+
+So: burger company that owns land, or landlord that sells burgers? 👇
+
+#mcdonalds #business #realestate #franchise #howitmakesmoney
+```
+
+**Pinned comment:**
+```
+Burger company or landlord? Tell us below. 👇
+Sources: McDonald's 2025 Form 10-K (franchised margins $13.93B vs company-operated $1.42B; rent $10.44B, royalties $6.02B; franchised sales $129.7B; 45,356 restaurants, ~95% franchised; $31.45B future minimum rent). History: McDonald's corporate history; Britannica; Wikipedia (History of McDonald's, Harry J. Sonneborn).
+Photo: Ray Kroc, 1976 (public domain, Wikimedia Commons). 3D props: NVIDIA SimReady (CC BY 4.0). Map data: Natural Earth.
+```
+
+- Turn on the AI-generated content label (synthetic voice, code-built graphics).
+- Posted: _date_ · Link: _
