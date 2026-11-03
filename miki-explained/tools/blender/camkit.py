@@ -8,7 +8,7 @@ from isokit import pchip, hexc, span, ease
 
 
 # ---------- render engines ----------
-def engine(kind="eevee", samples=64):
+def engine(kind="eevee", samples=64, fast=False):
     """eevee = EEVEE with ray tracing (reflections, refraction, soft shadows); cycles = path traced + denoise (Metal GPU)."""
     sc = bpy.context.scene
     if kind == "cycles":
@@ -23,8 +23,12 @@ def engine(kind="eevee", samples=64):
         for attr, val in (("use_raytracing", True), ("use_shadows", True), ("use_fast_gi", True), ("shadow_ray_count", 2), ("shadow_step_count", 8)):
             try: setattr(e, attr, val)
             except Exception as ex: print("eevee", attr, ex)
-        try: e.ray_tracing_options.resolution_scale = "1"
+        try: e.ray_tracing_options.resolution_scale = "2" if fast else "1"     # half-res ray tracing: reflections stay clean
         except Exception: pass
+        if fast:                                                                  # M5 profile (benchmarked in EX00V9)
+            for attr, val in (("shadow_ray_count", 1), ("shadow_step_count", 6), ("fast_gi_resolution", "4")):
+                try: setattr(e, attr, val)
+                except Exception: pass
     sc.view_settings.view_transform = "AgX"; sc.view_settings.look = "AgX - Medium High Contrast"
 
 
@@ -87,7 +91,7 @@ def studio(floor_col="#1C1F26", line_col="#3A4150", back_top="#2A3140", back_bot
 
 
 # ---------- the ring x-ray wipe ----------
-def xray_material(name, solid, glass_m, ring_col=(1, 1, 1, 1), ring_w=0.06):
+def xray_material(name, solid, glass_m=None, ring_col=(1, 1, 1, 1), ring_w=0.06):
     """A material that is `solid` outside a sphere of radius R around point P (object space) and glass inside, with a
     glowing ring at the boundary. Animate with xray_set(m, f, radius). P is set with xray_origin(m, (x, y, z))."""
     m = bpy.data.materials.new(name); m.use_nodes = True; nt = m.node_tree; nt.nodes.clear()
@@ -99,7 +103,8 @@ def xray_material(name, solid, glass_m, ring_col=(1, 1, 1, 1), ring_w=0.06):
                 try: b.inputs[inp.name].default_value = inp.default_value
                 except Exception: pass
         return b
-    bs, bg = clone(solid), clone(glass_m)
+    bs = clone(solid)                                   # glass_m None = cut away (user, 2026-11-03: real surfaces, no glass everywhere)
+    bg = clone(glass_m) if glass_m else nt.nodes.new("ShaderNodeBsdfTransparent")
     tc = nt.nodes.new("ShaderNodeTexCoord"); po = nt.nodes.new("ShaderNodeCombineXYZ"); po.name = "P"
     dist = nt.nodes.new("ShaderNodeVectorMath"); dist.operation = "DISTANCE"
     nt.links.new(tc.outputs["Object"], dist.inputs[0]); nt.links.new(po.outputs[0], dist.inputs[1])
@@ -108,11 +113,18 @@ def xray_material(name, solid, glass_m, ring_col=(1, 1, 1, 1), ring_w=0.06):
     mix = nt.nodes.new("ShaderNodeMixShader"); nt.links.new(inside.outputs[0], mix.inputs[0]); nt.links.new(bs.outputs[0], mix.inputs[1]); nt.links.new(bg.outputs[0], mix.inputs[2])
     sub = nt.nodes.new("ShaderNodeMath"); sub.operation = "SUBTRACT"; nt.links.new(dist.outputs["Value"], sub.inputs[0]); nt.links.new(rad.outputs[0], sub.inputs[1])
     ab = nt.nodes.new("ShaderNodeMath"); ab.operation = "ABSOLUTE"; nt.links.new(sub.outputs[0], ab.inputs[0])
-    ring = nt.nodes.new("ShaderNodeMath"); ring.operation = "LESS_THAN"; ring.inputs[1].default_value = ring_w; nt.links.new(ab.outputs[0], ring.inputs[0])
+    ring = nt.nodes.new("ShaderNodeMapRange"); ring.interpolation_type = "SMOOTHSTEP"; ring.name = "ringw"   # soft edge, not a hard band
+    ring.inputs["From Min"].default_value = 0.0; ring.inputs["From Max"].default_value = ring_w
+    ring.inputs["To Min"].default_value = 1.0; ring.inputs["To Max"].default_value = 0.0; nt.links.new(ab.outputs[0], ring.inputs["Value"])
     gate = nt.nodes.new("ShaderNodeMath"); gate.operation = "GREATER_THAN"; gate.inputs[1].default_value = 0.001; nt.links.new(rad.outputs[0], gate.inputs[0])
     rg = nt.nodes.new("ShaderNodeMath"); rg.operation = "MULTIPLY"; nt.links.new(ring.outputs[0], rg.inputs[0]); nt.links.new(gate.outputs[0], rg.inputs[1])
-    em = nt.nodes.new("ShaderNodeEmission"); em.inputs[0].default_value = ring_col; em.inputs[1].default_value = 12.0
-    add = nt.nodes.new("ShaderNodeMixShader"); nt.links.new(rg.outputs[0], add.inputs[0]); nt.links.new(mix.outputs[0], add.inputs[1]); nt.links.new(em.outputs[0], add.inputs[2])
+    em = nt.nodes.new("ShaderNodeEmission"); em.inputs[0].default_value = ring_col; em.inputs[1].default_value = 1.0
+    st = nt.nodes.new("ShaderNodeValue"); st.name = "S"; st.outputs[0].default_value = 0.0                    # ring brightness (keyed)
+    rgs = nt.nodes.new("ShaderNodeMath"); rgs.operation = "MULTIPLY"; nt.links.new(rg.outputs[0], rgs.inputs[0]); nt.links.new(st.outputs[0], rgs.inputs[1])
+    rgc = nt.nodes.new("ShaderNodeMath"); rgc.operation = "MINIMUM"; rgc.inputs[1].default_value = 1.0; nt.links.new(rgs.outputs[0], rgc.inputs[0])
+    ems = nt.nodes.new("ShaderNodeMath"); ems.operation = "MULTIPLY"; ems.inputs[1].default_value = 10.0; nt.links.new(st.outputs[0], ems.inputs[0])
+    nt.links.new(ems.outputs[0], em.inputs[1])
+    add = nt.nodes.new("ShaderNodeMixShader"); nt.links.new(rgc.outputs[0], add.inputs[0]); nt.links.new(mix.outputs[0], add.inputs[1]); nt.links.new(em.outputs[0], add.inputs[2])
     nt.links.new(add.outputs[0], out.inputs[0])
     for attr, val in (("surface_render_method", "DITHERED"), ("use_raytrace_refraction", True)):
         try: setattr(m, attr, val)
@@ -121,8 +133,10 @@ def xray_material(name, solid, glass_m, ring_col=(1, 1, 1, 1), ring_w=0.06):
 def xray_origin(m, p):
     n = m.node_tree.nodes["P"]
     for i, v in enumerate(p): n.inputs[i].default_value = v
-def xray_set(m, f, radius):
+def xray_set(m, f, radius, strength=1.0):
+    """radius of the cut; strength 0..1 of the ring's glow (ramp it in so the ring never pops on)."""
     n = m.node_tree.nodes["R"]; n.outputs[0].default_value = radius; n.outputs[0].keyframe_insert("default_value", frame=f)
+    s_ = m.node_tree.nodes["S"]; s_.outputs[0].default_value = strength; s_.outputs[0].keyframe_insert("default_value", frame=f)
 
 
 # ---------- light streaks (money / energy running along a path) ----------
@@ -158,3 +172,12 @@ class PerspRig:
         self.cam.data.lens = self.LENS(f); self.cam.data.dof.aperture_fstop = self.FSTOP(f)
         self.cam.keyframe_insert("location", frame=f); self.aim.keyframe_insert("location", frame=f)
         self.cam.data.keyframe_insert("lens", frame=f); self.cam.data.dof.keyframe_insert("aperture_fstop", frame=f)
+
+
+def render_range(out_pattern, f0, f1):
+    """Render frames f0..f1 as one animation job (shaders and scene data stay loaded between frames: much faster than a
+    per-frame render loop). out_pattern like '/path/f_' -> f_0000.png."""
+    sc = bpy.context.scene; keep = (sc.frame_start, sc.frame_end, sc.render.filepath)
+    sc.frame_start, sc.frame_end = f0, f1; sc.render.filepath = out_pattern; sc.render.image_settings.file_format = "PNG"
+    sc.render.use_file_extension = True; bpy.ops.render.render(animation=True)
+    sc.frame_start, sc.frame_end, sc.render.filepath = keep

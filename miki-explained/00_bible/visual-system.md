@@ -39,8 +39,17 @@ format below (kept for reference). Reference build: `04_episodes/EX14_long-path`
 
 ## Cinematography and look v4 (from 2026-11-03; reference r45, being adopted via the EX00V9 look test)
 
-User, 2026-11-03: approach r45's render look, motion and camera ("approve" on the plan below). Until EX00V9 is picked,
-the smooth-isometric format above stays the build default; the **shot grammar** applies from now on.
+User, 2026-11-03: approach r45's render look, motion and camera. **v4 adopted the same day** ("i approve … i like the
+look", EX00V9 v3: `04_episodes/_tests/EX00V9_look/eevee_shot_v3.mp4`). **Pair it with diagram scenes** (user: "we can pair
+with diagram based video like we did"): v4 realistic shots for real objects and places, the smooth-isometric diagram
+language (above) for numbers, maps and mechanisms, joined by camera moves, never cuts.
+
+**v4 settings (decided):** EEVEE with ray tracing, `camkit.engine("eevee", 32, fast=True)` (half-res ray tracing, 1 shadow
+ray) and `render_range()` (one animation job, not a per-frame loop): 2.4 s a frame at 1080 × 1920 on the M5 vs 7.8 s
+before; **30 fps** (r45 runs at 30; halves the render). **Real surfaces, no glass everywhere** (user: "don't glass
+everything. material surfaces is ok"): paint, metal, wood, a few frosted accents. **The ring wipe cuts away** the front
+wall/roof (a lit cutaway diorama), and grows from nothing with its glow ramped in (`xray_set(m, f, r, strength)`) — a
+ring that starts at full size and brightness pops (user caught it). Cycles was measured at ~45 s a frame: not used.
 
 **Shot grammar (every shot list):** for each beat write shot size (ECU / CU / M / W / EW), angle (low three-quarter hero,
 top-down, along a leading line), lens (mm), move (push, pull, arc, fly-through, hold), **the word that triggers it**, the
