@@ -32,7 +32,7 @@ Hook type: H3 surprising claim about a person (EX19: mechanism claim).
 
 | Line | Beat | Voice |
 |---|---|---|
-| L01 | Hook | This cleaner had almost 8 million dollars. Nobody knew, until he died. |
+| L01 | Hook | This janitor had almost 8 million dollars. Nobody knew, until he died. |
 | L02 | Stakes (the life) | His name was Ronald Read. He pumped gas and cleaned floors his whole life. He drove a used Toyota. He held his jacket together with a safety pin. He gathered fallen branches to heat his house. |
 | L03 | Mechanism | Here's what he did with his pay. He bought small pieces of companies he understood. Railroads, banks, drugstores, phone companies. Ones that paid him a little cash every year, just for owning them. |
 | L04 | Proof | Then he held on, for decades, and kept buying. By the end, he owned at least 95 companies. The paper certificates in his safe-deposit box stood five inches high. |
@@ -41,7 +41,7 @@ Hook type: H3 surprising claim about a person (EX19: mechanism claim).
 | L07 | End (reframe) | Most people spend their lives working for businesses. Ronald Read quietly owned them. |
 | L08 | Follow | Follow Meikigo for more. (reuse) |
 
-Word count: ~165 · sound-off hook ("THIS CLEANER HAD $8 MILLION.") — user 2026-11-03: start with "this cleaner has 8 million dollars" · named person ✓ · physical details (safety pin, fallen
+Word count: ~165 · sound-off hook ("THIS JANITOR HAD $8 MILLION.") — user 2026-11-03: open on the $8M; "janitor" (his job, and what the press called him) rather than "cleaner" · named person ✓ · physical details (safety pin, fallen
 branches, five-inch stack) ✓ · twist (not earned, owned) ✓ · numbers: ~$8M, 95, five inches, $4.8M, $1.2M ✓ · ending
 reframe (EX19 "next time") · no advice, no promise.
 
