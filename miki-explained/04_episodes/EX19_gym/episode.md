@@ -1,6 +1,6 @@
 # EX19 — The Empty Gym
 
-Status: **story ✓ (sources below)** → script (awaiting approval) → animatic → voice → preview → build → final → posted
+Status: **story ✓ (sources below)** → script ✓ (v2, 2026-11-03) → voice prompts ✓ → animatic → voice → preview → build → final → posted
 Voice: Nathan, narrator, `v4k7NzxipnuJNJtrKxob`
 Calendar: Day 13, Sun 08 Nov 2026, 21:00 (replaces "customers a day to break even", which has no primary source; the
 airline-miles draft was dropped as too niche, user 2026-11-03 — kept in `EX19_miles_dropped/`).
