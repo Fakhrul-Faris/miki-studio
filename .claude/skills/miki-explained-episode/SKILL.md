@@ -5,6 +5,14 @@ description: Playbook for making an episode of the Miki Explained series (miki-e
 
 # Miki Explained — episode playbook
 
+**Blender expert skills (added 2026-11-04, scenario-labs/skills, MIT, offline — no Scenario service):** for v4 work load
+`scenario-blender-lighting-rendering` (value separation: check every key frame desaturated, darken the set before
+brightening the subject; EEVEE volume probes so interiors don't leak light), `scenario-blender-animation` (timing,
+spacing, arcs, overlap for the MPFB people), `scenario-blender-previs-storyboard` (180° rule, screen direction, at the
+animatic), `scenario-blender-texturing-shading` (procedural edge wear, grime, colour variation), `scenario-blender-
+geometry-nodes` (instance crowds/icons cheaply), with `scenario-blender-expert` as their base. QA gate before every
+preview: the desaturated value check on each shot's key frame.
+
 **Cinematography (from 2026-11-03, reference `01_references/r45-gopcb-drone-xray`):** every shot list carries shot
 size, angle, lens, move, the trigger word, focus target and foreground element; new term = close-up, "so what" = wide;
 moves motivated by words; three planes for parallax; no hard cuts; a camera-only animatic before detail. Rules in

@@ -72,6 +72,10 @@ a studio set (dark gradient backdrop, reflective grid floor, key + rim). Palette
 r45 gives cyan; warm copper/gold for money and metal. SimReady hero props keep their real shapes up close.
 
 **Process:** a camera-only animatic (grey boxes, real moves, the voice) is approved before materials and detail.
+**Lighting QA (2026-11-04, from the scenario-blender-lighting-rendering skill):** every shot's key frame is checked
+desaturated — the subject must separate from the background by value; fix by darkening the set first, not by adding
+lights. One saturated focus hue (our green), its complement kept desaturated. Interiors get an EEVEE volume probe so
+world light doesn't leak through walls.
 
 ## Previous house format (V3, 2026-10-28 → 2026-11-01): cut-paper mixed media
 
