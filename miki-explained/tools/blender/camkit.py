@@ -57,7 +57,8 @@ COPPER, GOLD = (0.95, 0.52, 0.32, 1), (1.0, 0.76, 0.33, 1)
 
 
 # ---------- studio set ----------
-def studio(floor_col="#1C1F26", line_col="#3A4150", back_top="#2A3140", back_bottom="#0B0D12", size=60, cell=1.0):
+def studio(floor_col="#1C1F26", line_col="#3A4150", back_top="#2A3140", back_bottom="#0B0D12", size=60, cell=1.0, lines=False):
+    # lines=False by default: user, 2026-11-03, "remove the line on the floor" — a plain reflective floor
     """A reflective grid floor and a curved gradient backdrop (the r45 set), plus a key and a rim light."""
     sc = bpy.context.scene
     bpy.ops.mesh.primitive_plane_add(size=size, location=(0, 0, 0)); fl = bpy.context.object; fl.name = "studio floor"
@@ -70,7 +71,7 @@ def studio(floor_col="#1C1F26", line_col="#3A4150", back_top="#2A3140", back_bot
         fr = nt.nodes.new("ShaderNodeMath"); fr.operation = "PINGPONG"; fr.inputs[1].default_value = 0.5; nt.links.new(d.outputs[0], fr.inputs[0])
         lt = nt.nodes.new("ShaderNodeMath"); lt.operation = "LESS_THAN"; lt.inputs[1].default_value = 0.02; nt.links.new(fr.outputs[0], lt.inputs[0]); lines.append(lt)
     mx = nt.nodes.new("ShaderNodeMath"); mx.operation = "MAXIMUM"; nt.links.new(lines[0].outputs[0], mx.inputs[0]); nt.links.new(lines[1].outputs[0], mx.inputs[1])
-    mix = nt.nodes.new("ShaderNodeMix"); mix.data_type = "RGBA"; mix.inputs[6].default_value = hexc(floor_col); mix.inputs[7].default_value = hexc(line_col)
+    mix = nt.nodes.new("ShaderNodeMix"); mix.data_type = "RGBA"; mix.inputs[6].default_value = hexc(floor_col); mix.inputs[7].default_value = hexc(line_col if lines else floor_col)
     nt.links.new(mx.outputs[0], mix.inputs[0]); nt.links.new(mix.outputs[2], b.inputs["Base Color"]); fl.data.materials.append(m)
     # backdrop: a big cylinder segment behind, emission gradient bottom -> top (camera sees it, lights barely do)
     w = sc.world; w.use_nodes = True; wn = w.node_tree; wn.nodes.clear()
