@@ -32,7 +32,7 @@ MAT = {} if ANIM else {                                                 # v4: re
     "canopy": paint("canopy", hexc("#D8D2C4"), 0.4, 0.3), "pump": paint("pump", hexc("#B23A2E"), 0.35, 0.5),
     "car": paint("hatchback", hexc("#7C8A86"), 0.3, 0.8), "glass": paint("car glass", hexc("#1C2228"), 0.1, 0.9),
     "wood": paint("clapboard", hexc("#8E7A62"), 0.7, 0.0), "roof": paint("shingle", hexc("#3C302C"), 0.8, 0.0),
-    "log": paint("log", hexc("#5A4330"), 0.9, 0.0), "denim": paint("denim", hexc("#43506A"), 0.85, 0.0),
+    "log": paint("log", hexc("#5A4330"), 0.9, 0.0), "denim": paint("denim", hexc("#4E6A90"), 0.85, 0.0),
     "steel": metal("steel", hexc("#9A9EA6"), 0.25), "paper": paint("certificate paper", hexc("#EFE7D2"), 0.6, 0.0),
     "person": paint("work clothes", hexc("#4F5A6E"), 0.7, 0.0), "skin": paint("skin", hexc("#C29A80"), 0.5, 0.0),
     "coin": glow("coin", hexc("#E8B23A"), 2.5), "window": glow("window", hexc("#FFD37A"), 0.0), "lamp": glow("lamp", hexc("#FFE2A8"), 3.0),
@@ -106,7 +106,12 @@ HROOF = gbox("house roof", HX - 4.4, HY - 4.4, HX + 4.4, HY + 4.4, 0.4, "roof", 
 gbox("chimney", HX + 2, HY + 1, HX + 2.8, HY + 1.8, 2.0, "brick", z0=3.2)
 gbox("porch", HX - 2, HY + 4, HX + 2, HY + 6, 0.2, "wood", z0=0)
 JACKET = gbox("jacket", HX + 0.3, HY + 4.02, HX + 0.9, HY + 4.1, 0.8, "denim", z0=1.0, bevel=0.04)
-PIN = tube("safety pin", (HX + 0.55, HY + 4.12, 1.55), (HX + 0.65, HY + 4.12, 1.48), 0.006, "steel")
+gbox("collar", HX + 0.36, HY + 4.08, HX + 0.84, HY + 4.14, 0.1, "denim", z0=1.72, bevel=0.03)
+for px in (0.38, 0.66): gbox("pocket", HX + px, HY + 4.095, HX + px + 0.17, HY + 4.12, 0.16, "denim", z0=1.42, bevel=0.015)
+gbox("placket", HX + 0.585, HY + 4.095, HX + 0.615, HY + 4.115, 0.7, "log", z0=1.03, bevel=0.0)
+PIN = tube("safety pin", (HX + 0.52, HY + 4.13, 1.6), (HX + 0.68, HY + 4.13, 1.5), 0.009, "steel")             # big enough to read in the ECU
+tube("pin bar", (HX + 0.52, HY + 4.145, 1.585), (HX + 0.66, HY + 4.145, 1.497), 0.006, "steel")
+col(cyl("pin head", HX + 0.675, HY + 4.14, 0.018, 0.02, bpy.data.materials["g"], z0=1.488, verts=16, bevel=0.004), "steel")
 for k in range(6): gbox("log", HX + 5, HY - 3 + k * 0.35, HX + 6.5, HY - 2.7 + k * 0.35, 0.3, "log", z0=0)
 CARRY = Figure("ron", bpy.data.materials["g"]); CARRY.root.location = (HX + 4.2, HY + 3, 0)
 for p_ in CARRY.parts: col(p_, GREY if ANIM else "person")
@@ -193,6 +198,45 @@ if not ANIM:
         st = span(t_, T_L04 - 0.5, T_L04 - 0.2) * (1 - span(t_, T_L04 + 0.3, T_L04 + 0.6))
         xray_set(CUT, fr_, r, st)
 
+# ---------- v4 people: MPFB Ronald (user: "go with B, MPFB"), the same man in three places ----------
+if not ANIM:
+    from mpfbkit import Person
+    SUIT, SHOE, HAIR = paint("work suit", hexc("#3E4A62"), 0.8, 0.0), paint("boots", hexc("#2A2420"), 0.6, 0.1), paint("grey hair", hexc("#9A958C"), 0.8, 0.0)
+    JANP = Person("s_m50", MAT["skin"], SUIT, SHOE, HAIR, name="Ron mopping")
+    ATTP = Person("s_m50", MAT["skin"], SUIT, SHOE, HAIR, name="Ron at the pump")
+    RONP = Person("s_m50", MAT["skin"], SUIT, SHOE, HAIR, name="Ron with branches")
+    for fg in (JAN, ATTEND, CARRY):                                    # the primitive figures stay in the animatic only
+        show([fg.root], 0, False)
+    WIN = {"jan": (0.0, T_L02 + 1.5), "att": (T_L02 - 0.5, T_TOYOTA + 1.5), "att_end": (T_L07 - 0.5, VT["end"] + 0.1), "ron": (T_TOYOTA, T_L03 + 1.0)}
+    def inwin(t, *keys): return any(WIN[k][0] <= t <= WIN[k][1] for k in keys)
+    show(JANP.objects(), 0, True); show(JANP.objects(), F(WIN["jan"][1]), False)
+    show(ATTP.objects(), 0, False); show(ATTP.objects(), F(WIN["att"][0]), True); show(ATTP.objects(), F(WIN["att"][1]), False)
+    show(ATTP.objects(), F(WIN["att_end"][0]), True)
+    show(RONP.objects(), 0, False); show(RONP.objects(), F(WIN["ron"][0]), True); show(RONP.objects(), F(WIN["ron"][1]), False)
+    JANP.place(0, (-25.4, 6.6), -90); ATTP.place(0, (-21.0, -7.2), 90)
+    MOP_LEN = (Vector((-25.6, 6.6, 1.4)) - Vector((-25.0, 6.3, 0.05))).length
+    BUNDLE = bpy.data.objects.new("branch bundle", None); sc.collection.objects.link(BUNDLE)          # the fallen branches he carries
+    for k in range(5):
+        br = tube("branch", (-0.55, -0.05 + k * 0.03, -0.04 + (k % 2) * 0.05), (0.55, 0.05 - k * 0.025, 0.02 + (k % 3) * 0.03), 0.025 + 0.008 * (k % 2), "log")
+        br.parent = BUNDLE
+    show([BUNDLE], 0, False); show([BUNDLE], F(WIN["ron"][0]), True); show([BUNDLE], F(WIN["ron"][1]), False)
+    MOPHEAD = gbox("mop head", -0.18, -0.12, 0.18, 0.12, 0.06, "log", z0=0.0, bevel=0.02); MOPHEAD.data.transform(Matrix.Translation((0, 0, 0)))
+    for fr_ in range(N):
+        t_ = fr_ / FPS
+        if inwin(t_, "jan") or fr_ == 0:
+            JANP.act(fr_, "mop", t_ * 3.0)
+            hp = JANP.hand("R"); fwd = Vector((-1, 0, 0)); foot = hp + fwd * 0.55; foot.z = 0.03      # handle from the hand to the floor ahead
+            mid = (hp + foot) / 2; dvec = foot - hp; MOP.location = mid; MOP.rotation_euler = dvec.to_track_quat("Z", "Y").to_euler()
+            MOP.scale = (1, 1, dvec.length / MOP_LEN); MOP.keyframe_insert("location", frame=fr_); MOP.keyframe_insert("rotation_euler", frame=fr_); MOP.keyframe_insert("scale", frame=fr_)
+            MOPHEAD.location = foot + Vector((0, 0, 0.03)); MOPHEAD.keyframe_insert("location", frame=fr_)
+        if inwin(t_, "att", "att_end"): ATTP.act(fr_, "pump")
+        if inwin(t_, "ron"):
+            s2 = span(t_, T_PIN, T_BRANCH + 1.2); pos = Vector((HX + 7, HY + 3, 0)).lerp(Vector((HX + 5.2, HY - 1.8, 0)), s2)
+            d = Vector((HX + 5.2, HY - 1.8, 0)) - Vector((HX + 7, HY + 3, 0)); face = math.degrees(math.atan2(d.y, d.x)) + 90
+            RONP.place(fr_, (pos.x, pos.y), face); RONP.walk(fr_, t_ * 6.0, 1.0 if T_PIN < t_ < T_BRANCH + 1.2 else 0.0, arms=False); RONP.act(fr_, "carry")
+            hm = (RONP.hand("L") + RONP.hand("R")) / 2; BUNDLE.location = hm + Vector((0, 0, 0.05)); BUNDLE.rotation_euler.z = math.radians(face)
+            BUNDLE.keyframe_insert("location", frame=fr_); BUNDLE.keyframe_insert("rotation_euler", frame=fr_)
+
 # ---------- motion / timing ----------
 f = F
 for fr in range(N):
@@ -252,7 +296,8 @@ rig.keys([
     (F(T_PIN - 0.6), V((HX - 1.0, HY + 8.5, 1.6)), V((HX + 0.6, HY + 4.1, 1.4)), 40, 4.0),
     (F(T_PIN + 0.2), V((HX + 0.6, HY + 5.6, 1.45)), V((HX + 0.6, HY + 4.1, 1.4)), 45, 2.0),
     (F(T_PIN + 0.75), V((HX + 0.62, HY + 5.55, 1.46)), V((HX + 0.6, HY + 4.1, 1.4)), 45, 2.0),               #   hold on it (two keys, or the camera sweeps past)                     #   ECU the safety pin
-    (F(T_BRANCH), V((HX + 8.5, HY + 6.5, 1.8)), V((HX + 5.2, HY + 0.5, 1.0)), 35, 4.0),                       # 4 branches to the woodpile
+    (F(T_PIN + 1.4), V((HX + 4.0, HY + 10.0, 2.4)), V((HX + 5.5, HY + 0.5, 1.0)), 35, 4.0),                    #   back off the porch first (it slid along the wall)
+    (F(T_BRANCH), V((HX + 11.0, HY + 7.0, 2.2)), V((HX + 5.6, HY + 0.6, 1.0)), 35, 4.0),                      # 4 branches to the woodpile, open view
     (F(T_L03 + 0.9), V((HX + 14, HY + 30, 22)), V((HX, HY, 0.5)), 28, 8.0),                                  # 5 crane up into the diagram (wide: all four companies in frame)
     (F(T_CASH), V((HX + 12, HY + 36, 28)), V((HX, HY, 0.5)), 30, 11.0),
     (F(T_L04 + 0.6), V((HX + 1.2, HY + 1.8, 2.2)), V((HX, HY, 1.0)), 40, 4.0),                                 # 6 down into the house
