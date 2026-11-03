@@ -47,6 +47,24 @@ Word count: ~165 · sound-off hook ("THIS JANITOR HAD $8 MILLION.") — user 202
 branches, five-inch stack) ✓ · twist (not earned, owned) ✓ · numbers: ~$8M, 95, five inches, $4.8M, $1.2M ✓ · ending
 reframe (EX19 "next time") · no advice, no promise.
 
+## Voice
+Nathan L01–L07 (L03 trimmed by the user: no "Here's what he did with his pay"), L08 reused. Tightened 49.8 s → **54.5 s**
+with light breathing holds (user: "leave that" — no extra lines to reach 60 s). 30 fps → 1,634 frames.
+
+## Shot list (v4 + diagrams, one camera, 30 fps; one small town at dusk)
+| # | Time / trigger | Size · angle · lens | Move | What happens | Focus · foreground |
+|---|---|---|---|---|---|
+| 1 | 0.0 L01 · "until he died" 3.68 | CU · low 3/4 · 35→40 mm | slow push | the janitor mopping a store's back corridor; light dims | janitor · mop bucket |
+| 2 | 5.25 L02 · "pumped gas" 6.91 | W→M · eye level · 32–35 mm | out the street door, across the road | the gas station: he fills a car at the pump | pump · canopy post |
+| 3 | "Toyota" 10.13 · "safety pin" 12.33 | M→ECU · 35→45 mm f/2 | follow the car to his house; hold | the hatchback parks; the jacket's safety pin | pin · porch post |
+| 4 | "branches" 13.75 | M · 3/4 · 35 mm | drift | he carries branches to the woodpile | Ron · logs |
+| 5 | 16.13 L03 · "Railroads/banks/drugstores/phone" · "cash" 22.67 | W high · 40–45 mm | crane up into the diagram | company buildings pop around the house; lines; a coin a year down each | the house |
+| 6 | 24.84 L04 · "kept buying" 26.64 · "95" 28.70 · "5 inches" 32.48 | CU→ECU · 40–52 mm f/2 | down through the roof (v4 ring cut) to the table | the safe-deposit box opens; the stack rises; "95 COMPANIES"; a ruler: 5 inches | the stack · the lid |
+| 7 | 34.56 L05 · "owned one" 36.78 | EW · high · 30 mm | pull up over the town | **surprise:** the stack fans out into 95 buildings — a town he owns | the town |
+| 8 | 39.69 L06 · "hospital" 42.20 · "library" 44.27 | EW · high · 30 mm | drift | coins stream to the hospital and the library; their windows light | both |
+| 9 | 47.96 L07 · "quietly owned them" 51.56 | M · eye level · 35–40 mm | back down to the pumps | the pump light clicks off | pump |
+| 10 | 53.06 L08 | M · hold | — | follow card | — |
+
 ## Scene brief (v4 + diagrams; device log — not the empty-gym ghosts, not the lifting stand)
 
 - **Hook (v4):** a small-town gas station at dusk (pumps, a lit price sign), a figure in overalls filling a car; then a
