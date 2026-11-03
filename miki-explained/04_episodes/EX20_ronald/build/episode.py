@@ -266,7 +266,7 @@ for fr in range(N):
     # pulse runs along each, again and again — the lines throb while the gifts flow
     for line, pulse, k in GIFT:
         t0 = (T_HOSP if k % 2 == 0 else T_LIB) - 0.9 + (k // 2) * 0.04
-        on = 1 - span(t, T_L07 - 0.3, T_L07 + 0.4)
+        on = 1 - span(t, T_L07 - 1.2, T_L07 - 0.5)                          # gone before the camera flies down through them
         line.data.bevel_factor_end = ease(span(t, t0, t0 + 0.7)) * on; line.data.keyframe_insert("bevel_factor_end", frame=fr)
         ph = ((t - t0 - 0.7 + (k % 5) * 0.23) % 1.1) / 1.1 if t > t0 + 0.7 and on > 0.01 else -1.0
         streak(pulse, fr, ph * 1.25 if ph >= 0 else 0.0, 0.16)
