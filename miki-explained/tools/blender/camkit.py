@@ -23,6 +23,8 @@ def engine(kind="eevee", samples=64, fast=False):
         for attr, val in (("use_raytracing", True), ("use_shadows", True), ("use_fast_gi", True), ("shadow_ray_count", 2), ("shadow_step_count", 8)):
             try: setattr(e, attr, val)
             except Exception as ex: print("eevee", attr, ex)
+        try: e.shadow_pool_size = "1024"                                      # bigger shadow pool: "Shadow buffer full" otherwise
+        except Exception: pass
         try: e.ray_tracing_options.resolution_scale = "2" if fast else "1"     # half-res ray tracing: reflections stay clean
         except Exception: pass
         if fast:                                                                  # M5 profile (benchmarked in EX00V9)
@@ -92,7 +94,7 @@ def studio(floor_col="#1C1F26", line_col="#3A4150", back_top="#2A3140", back_bot
 
 
 # ---------- the ring x-ray wipe ----------
-def xray_material(name, solid, glass_m=None, ring_col=(1, 1, 1, 1), ring_w=0.06):
+def xray_material(name, solid, glass_m=None, ring_col=(1, 1, 1, 1), ring_w=0.06, world=False):
     """A material that is `solid` outside a sphere of radius R around point P (object space) and glass inside, with a
     glowing ring at the boundary. Animate with xray_set(m, f, radius). P is set with xray_origin(m, (x, y, z))."""
     m = bpy.data.materials.new(name); m.use_nodes = True; nt = m.node_tree; nt.nodes.clear()
@@ -108,7 +110,10 @@ def xray_material(name, solid, glass_m=None, ring_col=(1, 1, 1, 1), ring_w=0.06)
     bg = clone(glass_m) if glass_m else nt.nodes.new("ShaderNodeBsdfTransparent")
     tc = nt.nodes.new("ShaderNodeTexCoord"); po = nt.nodes.new("ShaderNodeCombineXYZ"); po.name = "P"
     dist = nt.nodes.new("ShaderNodeVectorMath"); dist.operation = "DISTANCE"
-    nt.links.new(tc.outputs["Object"], dist.inputs[0]); nt.links.new(po.outputs[0], dist.inputs[1])
+    if world:                                                # world space: one ring across many objects (roof + parapets + walls)
+        geo = nt.nodes.new("ShaderNodeNewGeometry"); nt.links.new(geo.outputs["Position"], dist.inputs[0])
+    else: nt.links.new(tc.outputs["Object"], dist.inputs[0])
+    nt.links.new(po.outputs[0], dist.inputs[1])
     rad = nt.nodes.new("ShaderNodeValue"); rad.name = "R"; rad.outputs[0].default_value = 0.0
     inside = nt.nodes.new("ShaderNodeMath"); inside.operation = "LESS_THAN"; nt.links.new(dist.outputs["Value"], inside.inputs[0]); nt.links.new(rad.outputs[0], inside.inputs[1])
     mix = nt.nodes.new("ShaderNodeMixShader"); nt.links.new(inside.outputs[0], mix.inputs[0]); nt.links.new(bs.outputs[0], mix.inputs[1]); nt.links.new(bg.outputs[0], mix.inputs[2])
@@ -182,3 +187,97 @@ def render_range(out_pattern, f0, f1):
     sc.frame_start, sc.frame_end = f0, f1; sc.render.filepath = out_pattern; sc.render.image_settings.file_format = "PNG"
     sc.render.use_file_extension = True; bpy.ops.render.render(animation=True)
     sc.frame_start, sc.frame_end, sc.render.filepath = keep
+
+
+# ---------- people (v4): a stylised figure with real proportions (1.75 m) and a run/walk cycle ----------
+def _limb(name, r, d, m, loc, parent):
+    bpy.ops.mesh.primitive_cylinder_add(radius=r, depth=d, vertices=16, location=(0, 0, 0)); o = bpy.context.object; o.name = name
+    o.data.transform(__import__("mathutils").Matrix.Translation((0, 0, -d / 2)))
+    bv = o.modifiers.new("b", "BEVEL"); bv.width = r * 0.9; bv.segments = 3
+    o.data.materials.append(m); o.parent = parent; o.location = loc; return o
+class Figure:
+    """Head, torso, legs, arms under a root (move/turn it). pose(f, phase, amp, run=False) swings the limbs; amp 0 = still."""
+    def __init__(self, name, body_m, skin_m=None, h=1.75):
+        sc = bpy.context.scene; k = h / 1.75; skin_m = skin_m or body_m
+        self.root = bpy.data.objects.new(name, None); sc.collection.objects.link(self.root)
+        self.hip = bpy.data.objects.new(name + " hip", None); sc.collection.objects.link(self.hip); self.hip.parent = self.root
+        self.hip.location = (0, 0, 0.92 * k)
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=0.11 * k, location=(0, 0, 0.78 * k), segments=24, ring_count=12)
+        hd = bpy.context.object; hd.data.materials.append(skin_m); hd.parent = self.hip
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.17 * k, depth=0.56 * k, location=(0, 0, 0.34 * k), vertices=24)
+        tb = bpy.context.object; tb.data.materials.append(body_m); tb.parent = self.hip
+        bv = tb.modifiers.new("b", "BEVEL"); bv.width = 0.08 * k; bv.segments = 4
+        sw = tb.modifiers.new("s", "SIMPLE_DEFORM"); sw.deform_method = "TAPER"; sw.factor = -0.25; sw.deform_axis = "Z"
+        self.legs = [_limb("leg", 0.075 * k, 0.9 * k, body_m, (s * 0.1 * k, 0, 0.0), self.hip) for s in (-1, 1)]
+        self.arms = [_limb("arm", 0.055 * k, 0.6 * k, body_m, (s * 0.23 * k, 0, 0.58 * k), self.hip) for s in (-1, 1)]
+        self.parts = [hd, tb] + self.legs + self.arms; self.k = k
+    def pose(self, f, phase, amp, run=False):
+        a = math.sin(phase) * amp * (0.9 if run else 0.5)
+        self.legs[0].rotation_euler.x, self.legs[1].rotation_euler.x = a, -a
+        self.arms[0].rotation_euler.x, self.arms[1].rotation_euler.x = -a * (1.4 if run else 0.8), a * (1.4 if run else 0.8)
+        self.hip.location.z = 0.92 * self.k + (0.05 if run else 0.02) * amp * abs(math.sin(phase))
+        for o in self.legs + self.arms: o.keyframe_insert("rotation_euler", frame=f)
+        self.hip.keyframe_insert("location", frame=f)
+    def material(self, m):
+        for p in self.parts: p.data.materials.clear(); p.data.materials.append(m)
+
+
+def ghost(name, col=(0.35, 0.65, 1.0, 1), alpha=0.28, glow=0.7):
+    """See-through glowing 'ghost' people: Transparent + Emission mixed (a Principled with Alpha came out solid in EEVEE)."""
+    m = bpy.data.materials.new(name); m.use_nodes = True; nt = m.node_tree; nt.nodes.clear()
+    out = nt.nodes.new("ShaderNodeOutputMaterial"); tr = nt.nodes.new("ShaderNodeBsdfTransparent")
+    em = nt.nodes.new("ShaderNodeEmission"); em.inputs[0].default_value = col; em.inputs[1].default_value = glow
+    mx = nt.nodes.new("ShaderNodeMixShader"); mx.inputs[0].default_value = alpha
+    nt.links.new(tr.outputs[0], mx.inputs[1]); nt.links.new(em.outputs[0], mx.inputs[2]); nt.links.new(mx.outputs[0], out.inputs[0])
+    try: m.surface_render_method = "DITHERED"
+    except Exception: pass
+    return m
+
+
+# ---------- entrances and exits (user, 2026-11-04: "every object that will be off camera must fade out … not harsh cut") ----------
+def _s0(o):
+    if "s0" not in o: o["s0"] = list(o.scale) if o.scale.length > 1e-6 else [1.0, 1.0, 1.0]
+    return Vector(o["s0"])
+def appear(objs, f, d=12, f_hidden_from=0):
+    """grow in over d frames ending at f (eased by Blender's default bezier); hidden before."""
+    for o in objs:
+        s = _s0(o)
+        o.hide_render = True; o.keyframe_insert("hide_render", frame=f_hidden_from)
+        o.hide_render = False; o.keyframe_insert("hide_render", frame=max(f_hidden_from + 1, f - d))
+        o.scale = (0, 0, 0); o.keyframe_insert("scale", frame=max(f_hidden_from + 1, f - d))
+        o.scale = s * 1.04; o.keyframe_insert("scale", frame=f); o.scale = s; o.keyframe_insert("scale", frame=f + 4)
+def vanish(objs, f, d=12):
+    """shrink out over d frames ending at f, then hide (a soft exit, never a pop)."""
+    for o in objs:
+        s = _s0(o)
+        o.scale = s; o.keyframe_insert("scale", frame=f - d)
+        o.scale = (0, 0, 0); o.keyframe_insert("scale", frame=f)
+        o.hide_render = True; o.keyframe_insert("hide_render", frame=f + 1)
+
+
+# ---------- Isotype people icons (one icon = N people; EX19 user pick over cubes) ----------
+_ICON = {}
+def isotype_mesh(h=1.0):
+    """a flat-fronted pictogram: round head, shoulders-to-hips body, two legs; one shared mesh for every icon."""
+    if h in _ICON: return _ICON[h]
+    import bmesh
+    me = bpy.data.meshes.new("isotype"); bm = bmesh.new()
+    def capsule(x, z0, z1, r, depth):
+        m = __import__("mathutils").Matrix
+        bmesh.ops.create_cone(bm, cap_ends=True, segments=16, radius1=r, radius2=r * 0.92, depth=z1 - z0, matrix=m.Translation((x, 0, (z0 + z1) / 2)))
+    bmesh.ops.create_uvsphere(bm, u_segments=20, v_segments=12, radius=0.13 * h, matrix=__import__("mathutils").Matrix.Translation((0, 0, 0.86 * h)))
+    capsule(0, 0.42 * h, 0.72 * h, 0.17 * h, 0.12 * h)                          # body
+    capsule(-0.075 * h, 0.0, 0.44 * h, 0.065 * h, 0.1 * h); capsule(0.075 * h, 0.0, 0.44 * h, 0.065 * h, 0.1 * h)   # legs
+    capsule(-0.21 * h, 0.4 * h, 0.7 * h, 0.05 * h, 0.08 * h); capsule(0.21 * h, 0.4 * h, 0.7 * h, 0.05 * h, 0.08 * h)  # arms
+    bm.to_mesh(me); bm.free(); _ICON[h] = me; return me
+def isotype(name, loc, m, h=1.0, face=0.0):
+    """one icon (shared mesh, its own material through an object-linked slot, so grey and green icons share geometry)."""
+    me = isotype_mesh(h)
+    if not me.materials: me.materials.append(m)
+    o = bpy.data.objects.new(name, me); bpy.context.scene.collection.objects.link(o)
+    o.location = loc; o.rotation_euler.z = face
+    o.material_slots[0].link = "OBJECT"; o.material_slots[0].material = m
+    return o
+def recolor(o, m, f, d=6):
+    """switch an icon's material at frame f (keyed via a hidden twin is overkill; a scale blink sells the change)."""
+    o.material_slots[0].material = m

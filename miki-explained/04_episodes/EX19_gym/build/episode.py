@@ -37,7 +37,7 @@ else:                                                                  # v4: rea
            "screen": glow("screen", hexc("#0E1A14"), 1.0), "tile": paint("tile", hexc("#5A5E68"), 0.45, 0.2),
            "dot": paint("member dot", hexc("#8C8C96"), 0.5, 0.1), "column": paint("column", hexc("#8C8C96"), 0.4, 0.3),
            "person": paint("clothes", hexc("#6E7380"), 0.6, 0.0), "skin": paint("skin", hexc("#B89A86"), 0.5, 0.0),
-           "ghost": ghost("ghost"), "rubber": paint("belt", hexc("#101114"), 0.9, 0.0), "panel": glow("ceiling light", hexc("#DDE6EE"), 1.1), "coin": glow("coin", G, 4.0)}
+           "ghost": ghost("ghost"), "rubber": paint("belt", hexc("#101114"), 0.9, 0.0), "panel": glow("ceiling light", hexc("#DDE6EE"), 1.1), "price": glow("price", G, 1.3), "ui": glow("ui", hexc("#E6EEE8"), 0.9), "coin": glow("coin", G, 4.0)}
 def col(o, c):
     o.color = c if isinstance(c, tuple) else GREY
     if not ANIM and c in MAT: o.data.materials.clear(); o.data.materials.append(MAT[c])
@@ -50,9 +50,20 @@ def text(name, s, size, loc, rot=(math.pi / 2, 0, 0), c=WARMC):
     o.data.font = bpy.data.fonts.get("Inter") or bpy.data.fonts.load(os.path.expanduser("~/Library/Fonts/InterDisplay-Black.ttf"))
     return col(o, c)
 def show(objs, f, on):
+    """animatic: hard visibility. v4: grow in / shrink out over 12 frames (user, 2026-11-04: no harsh cuts)."""
     for o in objs:
-        for x in [o] + list(o.children_recursive):                    # a person's head and limbs follow its body
-            x.hide_render = not on; x.keyframe_insert("hide_render", frame=f)
+        if ANIM or f == 0:
+            for x in [o] + list(o.children_recursive):                # a person's head and limbs follow its body
+                x.hide_render = not on; x.keyframe_insert("hide_render", frame=f)
+            if not ANIM and f == 0 and not on: o["s0"] = list(o.scale) if o.scale.length > 1e-6 else [1, 1, 1]; o.scale = (0, 0, 0); o.keyframe_insert("scale", frame=0)
+            continue
+        s0 = Vector(o.get("s0", list(o.scale) if o.scale.length > 1e-6 else [1, 1, 1])); o["s0"] = list(s0)
+        if on:
+            for x in [o] + list(o.children_recursive): x.hide_render = False; x.keyframe_insert("hide_render", frame=max(1, f - 12))
+            o.scale = (0, 0, 0); o.keyframe_insert("scale", frame=max(1, f - 12)); o.scale = s0 * 1.04; o.keyframe_insert("scale", frame=f); o.scale = s0; o.keyframe_insert("scale", frame=f + 4)
+        else:
+            o.scale = s0; o.keyframe_insert("scale", frame=max(1, f - 12)); o.scale = (0, 0, 0); o.keyframe_insert("scale", frame=f)
+            for x in [o] + list(o.children_recursive): x.hide_render = True; x.keyframe_insert("hide_render", frame=f + 1)
 def pop(o, f0, f1=None, d=8):
     """scale in at f0 (and out at f1)."""
     s = o.scale.copy() if o.scale.length > 1e-6 else Vector((1, 1, 1))     # objects parked at 0 pop to full size
@@ -125,24 +136,42 @@ for y in (-4, -1, 2, 5):
 WK = text("console text", "WEEK 1 · DAY 1", 0.075, (-1.5, 5.6, 1.5), rot=(math.pi / 2 - 0.45, 0, 0), c=GREEN); WK.scale = (0, 0, 0)
 TURN = gbox("turnstile", 0.15, -7.7, 0.65, -7.3, 1.0, "chrome", z0=0.17); gbox("arm", -0.9, -7.55, 0.15, -7.45, 0.06, "chrome", z0=0.95)
 READER = gbox("reader", 0.25, -7.72, 0.55, -7.68, 0.22, "screen", z0=1.0)
-PRICE = text("price", "$15 / MONTH", 0.045, (0.4, -7.735, 1.13), c=GREEN); PRICE.scale = (0, 0, 0)
+PRICE = text("price", "$15", 0.075, (0.4, -7.736, 1.15), c="price" if not ANIM else GREEN); PRICE.data.extrude = 0.0; PRICE.scale = (0, 0, 0)
+PRICE2 = text("price unit", "/ MONTH", 0.028, (0.4, -7.736, 1.075), c="ui" if not ANIM else WARMC); PRICE2.data.extrude = 0.0; PRICE2.scale = (0, 0, 0)
+for (bx0, bx1, bz0, bh) in ((0.258, 0.542, 1.007, 0.004), (0.258, 0.542, 1.209, 0.004), (0.258, 0.262, 1.007, 0.206), (0.538, 0.542, 1.007, 0.206)):
+    gbox("screen frame", bx0, -7.734, bx1, -7.732, bh, GREEN, z0=bz0, bevel=0.0)     # a thin frame, not a panel over the screen
 CARD = gbox("member card", 1.25, -7.8, 1.27, -7.55, 0.16, "card", z0=1.05)          # taps in from the side, not across the lens
 CAL = [text("calendar page", m, 0.35, (-3.0, -9.94, 2.2), c=WARMC) for m in ("JAN", "FEB", "MAR", "APR")]
-CHARGE = text("charge", "−$15", 0.06, (0.4, -7.74, 1.06), c=WARMC); CHARGE.scale = (0, 0, 0)
+CHARGE = text("charge", "−$15", 0.035, (0.47, -7.737, 1.035), c="ui" if not ANIM else WARMC); CHARGE.data.extrude = 0.0; CHARGE.scale = (0, 0, 0)
 RUNNERS = [person("member", -1.5, 5.0, 0.47, face=math.pi), person("member", 6.0, 1.4, 0.17)]
 
 # roof stage: the card, 7,000 dots in chunks, the 400 box, the spill
 BIGCARD = gbox("big card", -12, -3, -6, 1, 0.12, "card", z0=ROOF_Z + 0.02); BIGCARD.rotation_euler.x = 0.0
 CAP = Path([(-3, -3), (3, -3), (3, 1.5), (-3, 1.5), (-3, -3)], r=0.01).curve("capacity box", bpy.data.materials.new("cap"), depth=0.06, z=ROOF_Z + 0.06)
-col(CAP, GREEN); CAPLAB = text("cap label", "ROOM FOR ~400", 0.5, (0, -3.6, ROOF_Z + 0.4), c=GREEN)
+col(CAP, GREEN); CAPLAB = text("cap label", "ROOM FOR 400", 0.6, (0, -3.9, ROOF_Z + 0.5), c=GREEN)
 def dot_chunk(name, n, x0, y0, x1, y1, z=ROOF_Z + 0.05, c=GREY, s=0.09):
     me = bpy.data.meshes.new(name); bm = bmesh.new()
     for _ in range(n):
         x, y = rnd.uniform(x0, x1), rnd.uniform(y0, y1)
         bmesh.ops.create_cube(bm, size=s, matrix=Matrix.Translation((x, y, z + s / 2)))
     bm.to_mesh(me); bm.free(); o = bpy.data.objects.new(name, me); sc.collection.objects.link(o); return col(o, c)
-INSIDE = dot_chunk("400 inside", 80, -2.8, -2.8, 2.8, 1.3, c=GREEN, s=0.16)        # user: "many" is enough, nobody counts
-PILES = [dot_chunk("pile %d" % k, 55, -14 + (k % 6) * 4.6, -9.5 + (k // 6) * 4.6, -14 + (k % 6) * 4.6 + 4.2, -9.5 + (k // 6) * 4.6 + 4.2, c="dot", s=0.15) for k in range(22)]
+ICON_G = MAT[GREEN] if not ANIM else bpy.data.materials["g"]; ICON_D = MAT["dot"] if not ANIM else bpy.data.materials["g"]
+CARD_P = Vector((-9.0, -1.0, ROOF_Z + 0.3))
+SPOTS_IN = [Vector((-0.9 + 1.8 * (k % 2), -1.6 + 1.6 * (k // 2), ROOF_Z + 0.02)) for k in range(4)]          # 4 icons = 400 fit the room
+SPOTS_OUT = []
+for gy in (-8.6, -6.6, -4.6, 3.4, 5.4, 7.4):
+    for gx in range(14):
+        x = -12.5 + gx * 1.95; y = gy + (gx % 2) * 0.3
+        if (-12.5 < x < -5.5 and -3.5 < y < 1.5) or (-3.6 < x < 3.6 and -3.6 < y < 2.0): continue
+        SPOTS_OUT.append(Vector((x, y, ROOF_Z + 0.02)))
+SPOTS_OUT = SPOTS_OUT[:66]                                                                               # 66 + 4 = 70 icons = 7,000 members
+ICONS_OUT = [isotype("member", p_.copy(), ICON_D, h=1.3) for p_ in SPOTS_OUT]
+ICONS_IN = [isotype("member in", p_.copy(), ICON_D, h=1.3) for p_ in SPOTS_IN]
+ICONS_ING = [isotype("member in green", p_.copy(), ICON_G, h=1.3) for p_ in SPOTS_IN]                       # the green twins fade in on "400"
+LAB7000 = text("7000 label", "7,000 MEMBERS", 1.1, (0, -9.6, ROOF_Z + 3.4), c=WARMC)
+LABUNIT = text("unit label", "EACH FIGURE = 100 MEMBERS", 0.4, (0, -9.6, ROOF_Z + 2.4), c=WARMC)
+INSIDE = ICONS_ING[0]
+PILES = []                                                             # (the member cubes; replaced by Isotype icons)
 # the queue around the block (representative: ~900 people on a loop around the sidewalk)
 QUEUE = []
 loop = Path([(1.0, -11.0), (22, -11.0), (22, 18.5), (-22, 18.5), (-22, -12.5), (-1.0, -12.5)], r=2.0)
@@ -156,10 +185,16 @@ for k in range(30):
     x, y = -6 + (k % 7) * 1.8, 3 - (k // 7) * 1.8
     CALT.append(gbox("cal day", x - 0.75, y - 0.75, x + 0.75, y + 0.75, 0.1, "tile", z0=ROOF_Z + 0.02))
 VISITS = [CALT[i] for i in (2, 9, 17, 25)]
+CALHEAD = text("cal header", "ONE MONTH", 0.8, (0.3, 4.6, ROOF_Z + 0.6), c=WARMC)
+CALNUM = [text("day %d" % (k + 1), str(k + 1), 0.42, (CALT[k].location.x - 0.35, CALT[k].location.y + 0.35, ROOF_Z + 0.15), rot=(0, 0, 0), c=WARMC) for k in range(30)]
+VISITLIT = [gbox("visit lit", c_.location.x - 0.72, c_.location.y - 0.72, c_.location.x + 0.72, c_.location.y + 0.72, 0.03, GREEN, z0=ROOF_Z + 0.12, bevel=0.01) for c_ in VISITS]
+VISITTXT = [text("visit word", "VISIT", 0.3, (c_.location.x, c_.location.y - 0.2, ROOF_Z + 0.2), rot=(0, 0, 0), c=WARMC) for c_ in VISITS]
+LAB43 = text("4.3 label", "4.3 VISITS", 1.3, (4.0, 2.8, ROOF_Z + 2.6), c=GREEN)
 TAG17 = text("tag 17", "$17 / VISIT", 0.9, (7.5, 0.5, ROOF_Z + 1.5), c=WARMC)
 TAG10 = text("tag 10", "10-VISIT PASS · $10", 0.6, (7.5, -1.4, ROOF_Z + 1.0), c=GREEN)
-STUDY = dot_chunk("7752 members", 1500, -13, -8, 13, 8, c="dot", s=0.2)
-STUDYLAB = text("study label", "7,752 MEMBERS · 3 YEARS", 1.2, (0, -9.2, ROOF_Z + 0.8), c=WARMC)
+STUDY_ICONS = [isotype("study member", Vector((-11.7 + (k % 13) * 1.95, -6.5 + (k // 13) * 2.3, ROOF_Z + 0.02)), ICON_D, h=1.3) for k in range(78)]   # 7,752 ≈ 78 × 100
+STUDY = STUDY_ICONS[0]
+STUDYLAB = text("study label", "7,752 MEMBERS · 3 YEARS", 0.85, (0, -9.2, ROOF_Z + 0.8), c=WARMC)
 # L06 ghosts at every machine, coins into the floor
 GSPOTS = [(TREADS[i].location.x, 5.0, 0.47, math.pi) for i in range(8) if i not in (3, 5)] + [(-9 + i * 3.6, 1.6, 0.17, 0.0) for i in range(6) if i != 4] + \
          [(-12.0, y, 0.17, -math.pi / 2) for y in (-4, -1, 2)]
@@ -233,18 +268,36 @@ if not ANIM:
 # ---------- visibility / timing ----------
 for o in [CAPLAB, INSIDE] + PILES + QUEUE + CALT + [TAG17, TAG10, STUDY, STUDYLAB] + GHOSTS + COINS + [COLB, COLG, COLLAB, CAP]:
     for x in [o] + list(o.children_recursive): x.hide_render = True
-show([CAPLAB, INSIDE, CAP, TAG17, TAG10, STUDY, STUDYLAB, COLB, COLG, COLLAB] + PILES + QUEUE + CALT + GHOSTS + COINS, 0, False)
 f = F
+ALL_ICONS = ICONS_OUT + ICONS_IN + ICONS_ING + STUDY_ICONS
+CALX = [CALHEAD] + CALNUM + VISITLIT + VISITTXT + [LAB43]
+show([CAPLAB, CAP, TAG17, TAG10, STUDYLAB, COLB, COLG, COLLAB, LAB7000, LABUNIT] + ALL_ICONS + QUEUE + CALT + CALX + GHOSTS + COINS, 0, False)
 show([BIGCARD], 0, False); show([BIGCARD], f(T_L02), True); show([BIGCARD], f(T_L03 + 1.5), False)
+# "7,000": 70 icons (one = 100 members) fly out of the card to their places, 4 of them into the room
+for k, (o, spot) in enumerate(zip(ICONS_OUT + ICONS_IN, SPOTS_OUT + SPOTS_IN)):
+    t0 = T_7000 - 0.2 + k * 0.025; f0, f1 = f(t0), f(t0 + 0.6)
+    show([o], f0 + 3, True)
+    o.location = CARD_P; o.keyframe_insert("location", frame=f0 - 9)
+    o.location = (CARD_P + spot) / 2 + Vector((0, 0, 1.6)); o.keyframe_insert("location", frame=(f0 + f1) // 2)
+    o.location = spot; o.keyframe_insert("location", frame=f1)
+show([LAB7000, LABUNIT], f(T_7000 + 0.4), True); show([LAB7000, LABUNIT], f(T_L03 + 1.2), False)
 show([CAP, CAPLAB], f(T_BUT), True); show([CAP, CAPLAB], f(T_L03 + 1.5), False)
-show([INSIDE], f(T_400 - 0.2), True); show([INSIDE], f(T_L03 + 1.5), False)
-for k, p in enumerate(PILES):
-    show([p], f(T_7000 + k * 0.06), True); show([p], f(T_L03 + 1.0 + k * 0.03), False)
+show(ICONS_IN, f(T_400), False); show(ICONS_ING, f(T_400 + 0.1), True); show(ICONS_ING, f(T_L03 + 1.5), False)   # the 4 that fit turn green
+for k, (o, spot) in enumerate(zip(ICONS_OUT, SPOTS_OUT)):                 # the rest don't fit: they slide off the roof's front edge
+    t0 = T_L03 + 0.2 + (k % 22) * 0.04
+    o.keyframe_insert("location", frame=f(t0)); o.location = (spot.x, -10.9, spot.z); o.keyframe_insert("location", frame=f(t0 + 0.8))
+    show([o], f(t0 + 0.8), False)
 for k, q in enumerate(QUEUE):
     t_on = T_L03 + 0.3 + (k / NQ) * 3.6; show([q], f(t_on), True); show([q], f(T_THEY + (k % 41) * 0.03), False)
-show(CALT, f(T_L05 + 0.9), True); show(CALT, f(T_STUDY - 0.1), False)
+# the month: tiles, numbers and a header come in; the 4 visit days light; "4.3 VISITS"
+for k, c_ in enumerate(CALT): show([c_, CALNUM[k]], f(T_L05 + 0.9 + k * 0.02), True)
+show([CALHEAD], f(T_L05 + 1.0), True)
+for k in range(4): show([VISITLIT[k], VISITTXT[k]], f(T_43 - 0.2 + k * 0.12), True)
+show([LAB43], f(T_43 + 0.3), True)
+show(CALT + CALX, f(T_STUDY - 0.1), False)
 show([TAG17], f(T_17 - 0.1), True); show([TAG10], f(T_10 - 0.1), True); show([TAG17, TAG10], f(T_STUDY - 0.1), False)
-show([STUDY, STUDYLAB], f(T_STUDY), True); show([STUDY, STUDYLAB], f(T_L06), False)
+for k, o in enumerate(STUDY_ICONS): show([o], f(T_STUDY + 0.1 + k * 0.012), True); show([o], f(T_L06 - 0.2 + (k % 13) * 0.02), False)
+show([STUDYLAB], f(T_STUDY + 0.3), True); show([STUDYLAB], f(T_L06), False)
 show(GHOSTS, f(T_BIZ), True); show(GHOSTS + COINS, f(T_EMPTY), False); show(COINS, f(T_PAY), True)
 show([COLB, COLLAB], f(T_2M - 0.2), True); show([COLG], f(T_43P - 0.1), True); show([COLB, COLG, COLLAB], f(T_L08), False)
 # the ceiling hole on the way up (animatic: roof hidden while the camera passes; v4: a ring cut), the twist cutaway
@@ -256,7 +309,7 @@ else:
     for k, fg in enumerate(RUN):                                                                   # the second runner leaves before the end
         if k == 1: show([fg.root] + fg.parts, f(T_EMPTY), False)
 for k, c_ in enumerate(VISITS): c_.keyframe_insert("color", frame=f(T_43 - 0.3)); c_.color = GREEN; c_.keyframe_insert("color", frame=f(T_43 - 0.2 + k * 0.12))
-pop(WK, f(T_PLAN)); pop(PRICE, f(T_15)); CARD.keyframe_insert("location", frame=f(T_CHEAP - 0.6)); CARD.location.x -= 0.68; CARD.keyframe_insert("location", frame=f(T_CHEAP))
+pop(WK, f(T_PLAN)); pop(PRICE, f(T_15)); pop(PRICE2, f(T_15) + 4); CARD.keyframe_insert("location", frame=f(T_CHEAP - 0.6)); CARD.location.x -= 0.68; CARD.keyframe_insert("location", frame=f(T_CHEAP))
 pop(CHARGE, f(T_AFTER - 1.4), f(T_AFTER + 0.6), d=4)
 for k, page in enumerate(CAL):
     page.hide_render = k != 0; page.keyframe_insert("hide_render", frame=0)
@@ -280,7 +333,7 @@ rig.keys([
     (F(T_L05 + 0.9), V((1.6, -13.0, 2.0)), V((0.4, -8.0, 1.6)), 40, 4.0),                               # 7 back out, up to the roof
     (F(T_43), V((8, -18, 15)), V((-0.6, -0.6, ROOF_Z)), 70, 8.0), (F(T_17), V((12.5, -14, 11)), V((7.5, -0.3, ROOF_Z + 1.1)), 60, 6.0),
     (F(T_STUDY - 0.4), V((12.0, -13.5, 10.6)), V((7.5, -0.5, ROOF_Z + 1.1)), 62, 6.0),
-    (F(T_STUDY + 1.2), V((0.6, -8, 46)), V((0, -0.5, ROOF_Z)), 85, 11.0), (F(T_L06 - 0.3), V((0.6, -9, 54)), V((0, -0.5, ROOF_Z)), 85, 11.0),  # 8
+    (F(T_STUDY + 1.2), V((0.6, -26, 34)), V((0, -0.5, ROOF_Z)), 70, 11.0), (F(T_L06 - 0.3), V((0.6, -28, 38)), V((0, -0.5, ROOF_Z)), 70, 11.0),  # 8 high oblique: the figures read as people
     (F(T_L06 + 0.8), V((22, -26, 20)), V((0, 0, 2.5)), 35, 8.0), (F(T_PAY), V((8.5, -12.5, 6.5)), V((0, 2.5, 1.0)), 35, 5.6),       # 9 the cutaway
     (F(T_L07 - 0.3), V((7, -10, 5)), V((0, 3, 1.0)), 35, 5.6),
     (F(T_2M), V((17, -15, 3.2)), V((10.5, -6.5, ROOF_Z + 3)), 50, 5.6), (F(T_43P + 0.8), V((24, -22, 13)), V((10.5, -6.5, ROOF_Z + 7)), 45, 8.0),  # 10

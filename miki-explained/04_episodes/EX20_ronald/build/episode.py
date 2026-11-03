@@ -49,9 +49,20 @@ def text(name, s, size, loc, rot=(math.pi / 2, 0, 0), c=WARMC):
     o.data.font = bpy.data.fonts.get("InterDisplay-Black") or bpy.data.fonts.load(os.path.expanduser("~/Library/Fonts/InterDisplay-Black.ttf"))
     return col(o, c)
 def show(objs, f, on):
+    """animatic: hard visibility. v4: grow in / shrink out over 12 frames (user, 2026-11-04: no harsh cuts)."""
     for o in objs:
-        for x in [o] + list(o.children_recursive):
-            x.hide_render = not on; x.keyframe_insert("hide_render", frame=f)
+        if ANIM or f == 0:
+            for x in [o] + list(o.children_recursive):
+                x.hide_render = not on; x.keyframe_insert("hide_render", frame=f)
+            if not ANIM and f == 0 and not on: o["s0"] = list(o.scale) if o.scale.length > 1e-6 else [1, 1, 1]; o.scale = (0, 0, 0); o.keyframe_insert("scale", frame=0)
+            continue
+        s0 = Vector(o.get("s0", list(o.scale) if o.scale.length > 1e-6 else [1, 1, 1])); o["s0"] = list(s0)
+        if on:
+            for x in [o] + list(o.children_recursive): x.hide_render = False; x.keyframe_insert("hide_render", frame=max(1, f - 12))
+            o.scale = (0, 0, 0); o.keyframe_insert("scale", frame=max(1, f - 12)); o.scale = s0 * 1.04; o.keyframe_insert("scale", frame=f); o.scale = s0; o.keyframe_insert("scale", frame=f + 4)
+        else:
+            o.scale = s0; o.keyframe_insert("scale", frame=max(1, f - 12)); o.scale = (0, 0, 0); o.keyframe_insert("scale", frame=f)
+            for x in [o] + list(o.children_recursive): x.hide_render = True; x.keyframe_insert("hide_render", frame=f + 1)
 def pop(o, f0, f1=None, d=8):
     s = o.scale.copy() if o.scale.length > 1e-6 else Vector((1, 1, 1))
     o.scale = (0, 0, 0); o.keyframe_insert("scale", frame=f0)
