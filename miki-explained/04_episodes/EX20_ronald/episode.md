@@ -48,7 +48,7 @@ branches, five-inch stack) ✓ · twist (not earned, owned) ✓ · numbers: ~$8M
 reframe (EX19 "next time") · no advice, no promise.
 
 ## Voice
-Nathan L01–L07 (L03 trimmed by the user: no "Here's what he did with his pay"), L08 reused. Tightened 49.8 s → **54.5 s**
+Nathan L01–L07 (L03 trimmed by the user: no "Here's what he did with his pay"), L08 reused. Tightened gently (user: "why script are cutting?" — the 0.45 s pause rule chopped his pauses): `--long 0.9 --keep 0.55 --gap 0.45`, 49.8 s → **56.2 s**
 with light breathing holds (user: "leave that" — no extra lines to reach 60 s). 30 fps → 1,634 frames.
 
 ## Shot list (v4 + diagrams, one camera, 30 fps; one small town at dusk)

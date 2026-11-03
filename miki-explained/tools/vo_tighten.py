@@ -5,7 +5,8 @@ Usage (from the repo root, after tools/words.py has written audio/words.json):
   python3 miki-explained/tools/vo_tighten.py <episode_dir> [--hold L01@2.12:1.0] [--hold L06@5.29:1.0] ... [--fps 60]
 
 - Lines L01…L0n play back to back with GAP s between them.
-- Any pause inside a line longer than LONG s (between two words) is cut down to about 0.3 s.
+- Any pause inside a line longer than LONG s (between two words) is cut down to KEEP s (default 0.45 → 0.3 for shorts;
+  long-edu reads with gentle pauses: --long 0.9 --keep 0.55, user 2026-11-04: "why script are cutting?").
 - --hold inserts deliberate silence at a file time inside a line (pick a point inside a real pause);
   --hold L01@end:1.0 adds it after the line instead.
 Writes audio/voice.wav and audio/vo_timeline.json (every word's start in the tightened track) and prints each word
@@ -16,11 +17,15 @@ import json, math, subprocess, sys
 from pathlib import Path
 
 LEAD, GAP, LONG, FPS = 0.2, 0.25, 0.45, 24
+KEEP = 0.30                                  # a long pause is cut down to this (shorts); long-edu: --long 0.9 --keep 0.55
 ep = Path(sys.argv[1]); args = sys.argv[2:]
 holds = {}
 while args:
     flag, spec = args[0], args[1]; args = args[2:]
     if flag == "--fps": FPS = int(spec)
+    if flag == "--long": LONG = float(spec); continue
+    if flag == "--gap": GAP = float(spec); continue                  # silence between lines (shorts 0.25; long-edu 0.45)
+    if flag == "--keep": KEEP = float(spec); continue
     if flag == "--hold":
         L, rest = spec.split("@"); t, d = rest.split(":"); holds[(L, 1e9 if t == "end" else float(t))] = float(d)
 W = json.loads((ep / "audio/words.json").read_text())
@@ -34,7 +39,7 @@ def audio_end(f):   # start of the trailing silence (whisper's last-word end cli
 segs, newW, lineEnd, t = [], {}, {}, LEAD
 for L in sorted(W):
     ws = W[L]; end = audio_end(ep / "audio" / f"{L}.mp3") + 0.05
-    cuts = [(e0 + 0.12, s1 - 0.18) for (_, s0, e0), (_, s1, _) in zip(ws, ws[1:]) if s1 - e0 > LONG]
+    cuts = [(e0 + KEEP * 0.4, s1 - KEEP * 0.6) for (_, s0, e0), (_, s1, _) in zip(ws, ws[1:]) if s1 - e0 > LONG]   # keep KEEP s of each long pause
     for (l, ft) in holds:
         if l == L and ft < 1e8 and not any(a - 0.01 <= ft <= b + 0.01 for a, b in cuts): cuts.append((ft, ft))
     cuts.sort(); pts = [0.0] + [x for c in cuts for x in c] + [end]
