@@ -16,6 +16,7 @@ Editing, camera and animation tests (one per episode): `03_ideas/experiments.md`
 2. Series: How It Makes Money
 3. Series pitches
 4. Next focus: story types, global (shorts and long-edu)
+5. Series: Everyday Owners (ordinary people who quietly owned a piece of business)
 
 ## 1. Stories (single episodes, by lane)
 
@@ -131,6 +132,30 @@ structure. Every lead is unverified (🔍) until checked against a primary sourc
 
 **Kept careful:** scandals (documented, court-backed facts only, no accusations) and local politics or economics (sourced
 numbers, no side-taking). **Weakest fit:** plain how-to (crowded, talking-head led), so it isn't in the menu.
+
+## 5. Series: Everyday Owners (added 2026-11-03)
+
+User, 2026-11-03: "how user can participate in business such as story of investing, how cleaner can save million
+dollars". The genre is usually called **everyday millionaires** / **ordinary people, extraordinary wealth**; our angle is
+**ownership**: a janitor, a secretary, a delivery worker who stopped only working *for* businesses and quietly started
+*owning* them (shares held for decades, dividends reinvested, employee stock, options). It turns the series' "how a
+business makes money" lens around: how a regular person gets a cut.
+
+**Honesty rules for this series:** these are outliers (survivorship bias: say so once, lightly, or let the ending carry
+it); no stock picks, no "do this and get rich", no performance promises (not financial advice; TikTok treats finance
+claims strictly); dates and amounts from major outlets or primary records; flag the ethically messy ones.
+
+| Story | The hook | What it shows | Verified facts (source) | Length | Status |
+|---|---|---|---|---|---|
+| **Ronald Read**, Vermont gas-station attendant and janitor | "A janitor died with $8 million. His neighbours had no idea." | own boring companies you understand, hold, reinvest dividends | died 2014 at 92; ~$8M estate; $4.8M to Brattleboro Memorial Hospital, $1.2M to Brooks Memorial Library; 95+ stocks incl. AT&T, CVS, Deere, GE ([CNBC](https://www.cnbc.com/2015/02/09/heres-how-a-janitor-amassed-an-8m-fortune.html), [Washington Post](https://www.washingtonpost.com/business/get-there/the-remarkable-life-and-lessons-of-ronald-read/2015/04/24/7c12a26a-e944-11e4-9a6a-c1ab95a0600b_story.html), [NBC](https://www.nbcnews.com/news/us-news/vermont-ex-janitor-bequeaths-secret-millions-library-hospital-n301396)) | long-edu | ☐ verify dividend detail |
+| **Grace Groner**, secretary at Abbott | "She spent $180 in 1935. Her college got $7 million." | buy a few shares, never sell, reinvest | 3 Abbott shares for $180 in 1935; ~$7M at her death in 2010; left to Lake Forest College ([CS Monitor](https://www.csmonitor.com/Business/new-economy/2010/0305/Secret-millionaire-donates-her-fortune-to-Lake-Forest-College.-Here-s-how-she-did-it), [Groner Foundation](https://www.gronerfoundation.com/grace-s-story)) | short | ☐ |
+| **Anne Scheiber**, retired IRS auditor | "She retired with $5,000. She died with $22 million." | late start still compounds; she studied what she owned | retired at 51 with $5,000; ~$22M to Yeshiva University at 101 (1995) ([Money, 1996](https://money.cnn.com/magazines/moneymag/moneymag_archive/1996/01/01/207651/index.htm), [Time](https://time.com/archive/6728312/death-and-the-maven/)) | long-edu | ☐ |
+| **Theodore Johnson**, UPS | "He never earned more than $14,000 a year. He gave away $36 million." | employee stock + saving a fixed share of pay | retired 1952; ~$70M by 1991, half given to education; saved 20% of pay into UPS stock (widely reported; ⚠ find a 1991 primary, e.g. NYT/AP) ([Parade](https://parade.com/news/theodore-johnson-ups-executive-36-million-scholarships-1991)) | long-edu | 🔍 |
+| **Bonnie Brown**, Google's first masseuse | "She took a $450-a-week job at a tiny startup. It made her a millionaire." | asking for equity | joined 1999 when Google had ~40 staff; part-time, stock options; "multi-multi-millionaire" (NYT 2007) ([NPR](https://www.npr.org/2007/11/12/16210944/google-masseuse-makes-millions), [Deseret](https://www.deseret.com/2007/11/12/20053011/google-job-turned-into-gold/)) | short | ☐ |
+| **Microsoft's 1986 IPO** | "One IPO made 12,000 millionaires. Most were ordinary staff." | options instead of salary | "3 billionaires and 12,000 millionaires" (⚠ figure is folklore-ish; find Microsoft/Seattle Times source) ([Seattle Times 1995](https://archive.seattletimes.com/archive/19950815/2136536/stock-options-are-microsofts-golden-handcuffs)) | short | 🔍 |
+| **Publix**, the employee-owned supermarket | "The cashier might own part of the supermarket." | employee ownership (ESOP) at scale | largest employee-owned company in the US; staff can buy stock after a year ([Publix facts](https://corporate.publix.com/about-publix/company-overview/facts-figures)) | long-edu | ☐ |
+| **Sylvia Bloom**, legal secretary (⚠ ethics) | "She copied her bosses' trades for 67 years. Then gave away $8.2 million." | mirroring, and its ethical line | ~$8.2M; $6.24M to Henry Street Settlement; bought the same stocks as her bosses, in smaller amounts ([CNBC](https://www.cnbc.com/2018/05/08/how-a-96-year-old-secretary-amassed-a-secret-8-million-fortune.html)) — ⚠ debated as possible misuse of client information: tell it as a cautionary tale or skip | long-edu | ⚠ |
+| Comparison piece | "Same salary. One died broke, one died with millions." | compounding made visible (two roads of years) | build from the stories above + a plain compound-interest diagram | long-edu | idea |
 
 ## Adding ideas
 
