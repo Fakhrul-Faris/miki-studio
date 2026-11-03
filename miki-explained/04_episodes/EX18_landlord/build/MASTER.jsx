@@ -13,16 +13,20 @@ var MONO = ["IBM Plex Mono", "Bold", 30];
 pin(c, "pile r1:a", "$1.4B  \u00B7  RUNS IT ITSELF", MONO[0], MONO[1], MONO[2], WARM, 506, 880, 0, -30, "center");
 pin(c, "pile r2:a", "$13.9B  \u00B7  RENTS IT OUT", "Inter Display", "Black", 40, ACC, 666, 880, 0, -30, "center");
 pin(c, "brothers:a", "THE McDONALD BROTHERS", MONO[0], MONO[1], MONO[2], WARM, 1310, 1500, 0, -30, "center");
-pin(c, "office:a", "KROC'S THIN SLICE", MONO[0], MONO[1], MONO[2], WARM, 1770, 2000, 0, -30, "center");
+pin(c, "office:a", "ROYALTIES  \u00B7  KROC'S THIN SLICE", MONO[0], MONO[1], MONO[2], WARM, 1700, 2000, 0, -30, "center");
 pin(c, "brothers:b", "0.5% TO THE BROTHERS", MONO[0], MONO[1], MONO[2], WARM, 1899, 2050, 0, -30, "center");
 pin(c, "stand1:c", "HARRY SONNEBORN'S IDEA", MONO[0], MONO[1], MONO[2], WARM, 2073, 2300, 0, -330, "center");
 pin(c, "stand1:a", "OWN THE GROUND", "Inter Display", "Black", 44, ACC, 2331, 2510, 0, -330, "center");
 pin(c, "stand1:b", "RENT + MARKUP", MONO[0], MONO[1], MONO[2], ACC, 2518, 2640, 0, -300, "center");
 pin(c, "brothers:c", "BOUGHT OUT  \u00B7  $2.7M", MONO[0], MONO[1], MONO[2], WARM, 2792, 2880, 0, -30, "center");
-pin(c, "city:a", "95% RUN BY FRANCHISEES", MONO[0], MONO[1], MONO[2], ACC, 3029, 3200, 0, -40, "center");
+pin(c, "city:a", "95% RUN BY FRANCHISEES", "Inter Display", "Black", 42, ACC, 3029, 3200, 0, -140, "center");
 pin(c, "world:a", "45,000 RESTAURANTS  \u00B7  100+ COUNTRIES", MONO[0], MONO[1], MONO[2], ACC, 3210, 3450, 0, 0, "center");
 pin(c, "world:b", "$10.4B IN RENT  \u00B7  2025", "Inter Display", "Black", 44, ACC, 3453, 3690, 0, 0, "center");
 pin(c, "ribbon:a", "$31B FUTURE RENT, ALREADY OWED", MONO[0], MONO[1], MONO[2], WARM, 3821, 3960, 0, 0, "center");
+
+// the hook on screen for viewers on mute (user, 2026-11-03): the name + the riddle, frame 0 until the twist
+card("hook name", "McDONALD'S", "Inter Display", "Black", 64, [1.0, 0.78, 0.17], [60, 250, 960, 90], -12, 330, "center", 20);
+card("hook line", "2 businesses get paid.\rOnly 1 sells burgers.", "Inter Display", "Black", 84, WARM, [60, 340, 960, 220], -12, 330, "center", -10);
 
 // Ray Kroc photo card: rises in on "Ray Kroc", out before "Two brothers"
 var kr = img(c, "kroc.png", "Ray Kroc 1976 (public domain)"); S(kr).setValue([62, 62]);

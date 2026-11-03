@@ -37,6 +37,33 @@ format below (kept for reference). Reference build: `04_episodes/EX14_long-path`
   with a silhouette check (does the hero object read as one shape at small size, stripped of colour) before the full
   render. Added 2026-11-02, adapted from an external Blender stat-viz workflow the user shared.
 
+## Cinematography and look v4 (from 2026-11-03; reference r45, being adopted via the EX00V9 look test)
+
+User, 2026-11-03: approach r45's render look, motion and camera ("approve" on the plan below). Until EX00V9 is picked,
+the smooth-isometric format above stays the build default; the **shot grammar** applies from now on.
+
+**Shot grammar (every shot list):** for each beat write shot size (ECU / CU / M / W / EW), angle (low three-quarter hero,
+top-down, along a leading line), lens (mm), move (push, pull, arc, fly-through, hold), **the word that triggers it**, the
+focus target, the foreground element.
+- A new term gets a close-up; every "so what" gets a wide. Never two consecutive beats at the same size.
+- Every move is motivated by a word: the camera goes where the sentence goes. No moving just to move.
+- Rhythm: held push or arc 1–3 s with a long easing tail → at most one fast swoop (0.3–1.5 s) per turn → hold.
+  Target per-frame motion like r45: median ~1.2 on the difference scale, spikes only at turns.
+- Three planes in every frame: a foreground element passing or framing (glass edge, counter lip, a passing customer),
+  the subject, a soft background. Moves are designed for parallax between them.
+- Angles: low three-quarter on hero objects, looking down leading lines in diagrams; no flat front-on, no dutch.
+- 9:16: subject in the middle band; top for the glowing label, bottom for captions.
+- Light directs the eye: rim light separates the subject; a glowing outline ring marks what to look at; a light change
+  marks a different world (analogy, flashback).
+- No hard cuts: transitions are camera moves, the ring x-ray wipe, a fly-through, or a match move into an analogy set.
+
+**Look v4 (under test):** perspective camera with lens and depth-of-field keys; ray-traced EEVEE (or Cycles, pick by the
+measured cost); materials: brushed metal, clear glass for x-ray, frosted glowing "ice", copper/gold, emissive outlines;
+a studio set (dark gradient backdrop, reflective grid floor, key + rim). Palette stays ours: dark + **green** in the role
+r45 gives cyan; warm copper/gold for money and metal. SimReady hero props keep their real shapes up close.
+
+**Process:** a camera-only animatic (grey boxes, real moves, the voice) is approved before materials and detail.
+
 ## Previous house format (V3, 2026-10-28 → 2026-11-01): cut-paper mixed media
 
 Every Miki Explained episode is built like **EX02V3 "The Doorway"** (`04_episodes/EX02V3_doorway`, see its README).

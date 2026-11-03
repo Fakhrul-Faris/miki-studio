@@ -5,6 +5,11 @@ description: Playbook for making an episode of the Miki Explained series (miki-e
 
 # Miki Explained — episode playbook
 
+**Cinematography (from 2026-11-03, reference `01_references/r45-gopcb-drone-xray`):** every shot list carries shot
+size, angle, lens, move, the trigger word, focus target and foreground element; new term = close-up, "so what" = wide;
+moves motivated by words; three planes for parallax; no hard cuts; a camera-only animatic before detail. Rules in
+`00_bible/visual-system.md` § Cinematography and look v4; the look itself is under test (EX00V9).
+
 **New height: EX17 "Five Times"** (`04_episodes/EX17_five-times`; user, 2026-11-03: "ex17 is the new height… keep
 climbing"): a scale journey (crowd → cutaway → systems → back), a physical surprise on the Twist, walk cycles (`Fig`),
 bounded haze for light cones (never a world volume: it blacks out the sun), in-world value bars. Start from its
