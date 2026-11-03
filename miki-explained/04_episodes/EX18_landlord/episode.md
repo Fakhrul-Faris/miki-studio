@@ -1,6 +1,6 @@
 # EX18 — The Landlord
 
-Status: story ✓ → **script ✓ (2026-11-03: twist after hook, L06 trimmed)** → voice ✓ → preview ✓ (no reply in 5 min → full render, as instructed) → build ✓ → **final ✓ (2026-11-03)** → posted → voice → preview → build → final → posted
+Status: story ✓ → **script ✓ (2026-11-03: twist after hook, L06 trimmed)** → voice ✓ → preview ✓ (no reply in 5 min → full render, as instructed) → build ✓ → final v1 → **user review → v2 final ✓ (2026-11-03)** → posted → voice → preview → build → final → posted
 Voice: Nathan, narrator, `v4k7NzxipnuJNJtrKxob`
 Calendar: Day 12, Sat 07 Nov 2026, 12:30 (may move: first long-edu, 1–3 a week)
 
@@ -141,6 +141,25 @@ Nathan, L01–L09; L10 reused. Tightened 72.33 s → 4,340 frames. Caption-only 
   the render.
 - earshot: 12/12 cues within 100 ms (67% within 1 frame).
 - Render ~0.8 frames/s, ~90 min for 4,340 frames.
+
+## v2 (user review, 2026-11-03)
+
+User found: no McDonald's identity on mute; a grey, slow opening with the piles growing off-frame; royalty coins popping
+like artifacts; the flat world map reading as a sheet, with a janky way back. Plus my own QA. Fixed (scene kept as
+`build/episode_v1.py`):
+- **Name + colours, no logo file** (user's pick): red/yellow restaurants with "McDONALD'S" on the wall, red city
+  buildings with yellow signs, "McDONALD'S / FAMOUS HAMBURGERS" on the 1954 stands; a hook card from frame 0 (red name,
+  dark "2 businesses get paid. Only 1 sells burgers." on the cream table).
+- Opening: cream table, warm floor and lights; camera wide before "$1.4"; the guest moved off the camera line.
+- The two coins: rimmed, "$" faces, facing the camera; rise side by side on "two businesses", split on "Only one" (cream
+  to the till, green into the floor). The first fix (4× bigger blank discs) read as plates: user caught it.
+- Royalties: arcs draw first, coins ride them and fade in/out; "ROYALTIES · KROC'S THIN SLICE".
+- **Globe** (user OK): 45,000 plots on a 300-unit sphere, Chicago on top under the flat city; green rent arcs into
+  Chicago, warm future-rent arcs; the camera orbits; arcs hidden before the straight dive back.
+- Empty plots pop with their stands; Kroc's office behind the road; the way up from the void stays wide; every building
+  sinks and vanishes (and the tray with it), only the green ground stays.
+- Render ~0.35–0.9 frames/s (globe + area lights), ~2.5 h; frames 3945–4019 re-rendered for the arc fix.
+- earshot re-checked on the v2 export.
 
 ## Post
 

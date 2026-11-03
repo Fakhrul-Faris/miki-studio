@@ -268,7 +268,7 @@ def show(objs, f, on):
     for o in objs:
         o.hide_render = not on; o.keyframe_insert("hide_render", frame=f)
 for o in PRESENT_FAR: o.hide_render = True
-show(PRESENT_FAR, 0, False); show(PRESENT_FAR, T2, True); show(ARC_ALL, L09 + 50, False)
+show(PRESENT_FAR, 0, False); show(PRESENT_FAR, T2, True); show(ARC_ALL, L09 - 10, False)       # gone before the dive back to Chicago (they filled the frame)
 show(OBJ54, 0, False); show(OBJ54, T1, True); show(OBJ54, T2, False)
 show(TRAY_SET, 0, True); show(TRAY_SET, L09_LANDLORD + 30, False)       # the tray would float on after its building sinks
 
