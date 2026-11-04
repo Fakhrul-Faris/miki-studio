@@ -99,3 +99,29 @@ New term = close-up (1, 6), "so what" = wide (3, 8, 10); no two neighbours at th
 
 ## Experiments
 Long-edu #2 · v4 look (1st episode) + diagram pairing · Bridge off · Twist on · END-next-time · Analytical · 30 fps
+
+## Post
+
+Caption stays general (global, no shop turn); sources go in the pinned comment.
+
+**Caption:**
+```
+A gym doesn't really sell workouts. It sells the plan to work out. 🏋️
+
+A big budget gym can have about 7,000 members — but safety rules only let about 400 people inside at once. If everyone showed up, most couldn't get through the door. They don't. And the gym counts on it.
+
+In one study, people paying over $70 a month went just 4.3 times a month: more than $17 a visit, when a 10-visit pass cost $10 each.
+
+The members who never come aren't the problem. They're the business.
+
+#gym #business #fitness #howitmakesmoney #psychology
+```
+
+**Pinned comment:**
+```
+Be honest: when did you last go? 👇
+Sources: Planet Fitness 2025 Form 10-K (20.8M members, 2,896 clubs, typical club 20,000 sq ft, $15/month Classic, ~$2.0M average club sales, 42.7% four-wall margin); International Building Code Table 1004.5 (exercise rooms, 50 sq ft per person); DellaVigna & Malmendier, "Paying Not to Go to the Gym", American Economic Review, 2006.
+```
+
+- Turn on the AI-generated content label (synthetic voice, code-built 3D).
+- Posted: _date_ · Link: _

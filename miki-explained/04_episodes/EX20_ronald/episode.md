@@ -82,3 +82,31 @@ years (a road of years under it, EX17's road language), to five inches — the c
 ## Experiments
 
 Everyday Owners #1 · Long-edu · v4 + diagrams (3rd) · Bridge off · Twist on · END-reframe · Anthropological · 30 fps
+
+## Post
+
+Caption tells the story plainly; no stock picks, no "get rich" promise (Everyday Owners honesty rules).
+
+**Caption:**
+```
+This janitor had almost $8 million. Nobody knew, until he died. 🧹
+
+Ronald Read pumped gas and cleaned floors his whole life in a small Vermont town. He drove a used Toyota and held his jacket together with a safety pin.
+
+What he did with his pay: he bought small pieces of companies he understood — railroads, banks, drugstores, phone companies — and held on for decades. He owned at least 95. The certificates in his safe-deposit box stood five inches high.
+
+He left $4.8 million to his town's hospital and $1.2 million to its library — the biggest gifts either had ever received.
+
+Most people spend their lives working for businesses. Ronald Read quietly owned them.
+
+#investing #money #business #story #everydaymillionaire
+```
+
+**Pinned comment:**
+```
+Not financial advice — just a remarkable true story. 💚
+Sources: NBC News, CNBC and The Washington Post (2015) on Ronald Read's $8M estate and bequests to Brattleboro Memorial Hospital and Brooks Memorial Library; The Wall Street Journal via Wikipedia (95+ stocks, the five-inch stack of certificates).
+```
+
+- Turn on the AI-generated content label (synthetic voice, code-built 3D).
+- Posted: _date_ · Link: _
