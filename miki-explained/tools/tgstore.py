@@ -10,6 +10,7 @@ final export back. Standard library only. Run from anywhere:
   python3 miki-explained/tools/tgstore.py pull EX06 [--to DIR] [--postiz]   # the final export only
   python3 miki-explained/tools/tgstore.py push-all              # every episode in 04_episodes (not _archive)
   python3 miki-explained/tools/tgstore.py commands              # the bot's / menu: one command per stored episode, with its title
+  python3 miki-explained/tools/tgstore.py rm-episode EX20       # delete an episode's messages (bot can only delete within 48 h) and its index entries
   python3 miki-explained/tools/tgstore.py serve                 # answers those commands in your chat (run by launchd at login)
   python3 miki-explained/tools/tgstore.py posted                # which episodes are posted (also /posted in the bot)
   python3 miki-explained/tools/tgstore.py mark-posted EX04 [2026-11-01]   # also: /posted ex04 in the bot; updates calendar.md
@@ -581,7 +582,29 @@ def cmd_logout_cloud(args):
     conn.request("POST", f"/bot{TOKEN}/logOut"); print(scrub(conn.getresponse().read().decode()))
 
 
-CMDS = {"check": cmd_check, "find-chat": cmd_find_chat, "push-episode": cmd_push_episode, "push": cmd_push,
+def cmd_rm_episode(args):
+    """Delete an episode from storage: the bot deletes its messages (header + files) and they leave the index.
+    Telegram lets a bot delete its own messages only within 48 hours of sending; older ones are reported, not deleted."""
+    if not args: sys.exit("usage: rm-episode EXNN")
+    ep = args[0].upper(); ix = load_index(); gone, kept = 0, []
+    keys = [k for k, v in files(ix).items() if v.get("episode") == ep]
+    msgs = [(k, ix[k]["message_id"], ix[k].get("chat_id") or channel()) for k in keys]
+    hd = ix.get("_headers", {})
+    if ep in hd: msgs.append(("_header", hd[ep], channel()))
+    for k, mid, chat in msgs:
+        try:
+            call("deleteMessage", {"chat_id": chat, "message_id": mid}); gone += 1
+            if k == "_header": hd.pop(ep, None)
+            else: ix.pop(k, None)
+        except TgError as e:
+            kept.append((k, mid, str(e)))
+        time.sleep(0.4)
+    save_index(ix)
+    print(f"{ep}: deleted {gone} message(s)" + (f"; could not delete {len(kept)} (older than 48 h?): " + ", ".join(str(m) for _, m, _ in kept) if kept else ""))
+    cmd_commands([])
+
+
+CMDS = {"rm-episode": cmd_rm_episode, "check": cmd_check, "find-chat": cmd_find_chat, "push-episode": cmd_push_episode, "push": cmd_push,
         "ls": cmd_ls, "pull": cmd_pull, "logout-cloud": cmd_logout_cloud, "push-all": cmd_push_all, "commands": cmd_commands,
         "serve": cmd_serve, "recaption": cmd_recaption, "posted": cmd_posted, "mark-posted": cmd_mark_posted}
 if __name__ == "__main__":
