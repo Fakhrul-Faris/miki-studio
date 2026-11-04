@@ -1,343 +1,477 @@
-# EX20 "The Janitor Who Owned Everything" — v4 + diagrams, 30 fps, one small town at dusk, one continuous camera.
-# ANIM mode (now): a grey-box Workbench animatic for the cinematography; v4 detail after approval.
-#   blender -b --python build/episode.py -- <out_dir> animatic | preview | still f,f,… [half] | (full render)
-# Units: metres. Layout along one road (x): the store (back corridor) north of the road, the gas station south, his
-# house further east; the diagram plays on the dark fields around the house.
-import sys, os, math, json, random, bpy, bmesh
+# EX20 "The Janitor Who Owned Everything" — v2 rebuild, round 2 (user review 2026-11-04): a still janitor with a slow
+# push; no drive (the car is parked at home); he faces the camera and it orbits to the jacket pin; a real-speed walk with
+# turns, a planted crouch and branches that stay on the ground until picked up; a doorway into the bank; a neat stack
+# in an open drawer; complete buildings only; a nozzle and hose at the pump, a relaxed stand at night; Poly Haven
+# textures + dusk HDRI. Real library models (02_kit/models, credits via lib3d), MPFB Ronald in a field jacket.
+#   blender -b --python build/episode.py -- <out_dir> check | still f,f,… [half] | preview | (full render)
+#   check = bake and save EX20_check.blend (open it, camera view, press play — no render)
+# Earlier versions: build/episode_v1_primitive.py, build/episode_v2a.py.
+import sys, os, math, json, random, bpy
 from mathutils import Vector, Matrix
 EP = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "/"
 sys.path.insert(0, EP + "../../tools/blender")
-from isokit import setup, box, cyl, hexc, ease, span, back_out, Path
+from isokit import setup, box, cyl, hexc, ease, span, back_out
 from camkit import *
-A = sys.argv[sys.argv.index("--") + 1:]; OUT = A[0]; ANIM = "animatic" in A
-sc = setup(half=ANIM); FPS = 30; sc.render.fps = FPS
+from lib3d import model, part, credits_for
+from mpfbkit import Person
+A = sys.argv[sys.argv.index("--") + 1:]; OUT = A[0]; CHECK = "check" in A
+sc = setup(half="half" in A); FPS = 30; sc.render.fps = FPS
 for o in [o for o in bpy.data.objects if o.type == "LIGHT"]: bpy.data.objects.remove(o)
+engine("eevee", 32, fast=True)
 VT = json.load(open(EP + "audio/vo_timeline.json")); VW = VT["words"]
 def w(L, i): return VW[L][i][1]
 def F(t): return int(round(t * FPS))
 N = int(math.ceil(VT["end"] * FPS)); sc.frame_start, sc.frame_end = 0, N - 1
 rnd = random.Random(20)
-if ANIM:
-    sc.render.engine = "BLENDER_WORKBENCH"; sh = sc.display.shading
-    sh.light = "STUDIO"; sh.color_type = "OBJECT"; sh.show_shadows = True; sh.show_cavity = True; sc.render.use_motion_blur = False
-else:
-    engine("eevee", 32, fast=True)
-GREY, DARK, GREEN, WARMC, YEL = (0.55, 0.56, 0.6, 1), (0.25, 0.26, 0.29, 1), (0.34, 0.82, 0.0, 1), (0.93, 0.9, 0.86, 1), (0.95, 0.75, 0.3, 1)
+V = Vector
+
+# ---------- materials (Poly Haven textures on the big surfaces) ----------
 G = hexc("#57D100")
-MAT = {} if ANIM else {                                                 # v4: real surfaces, no glass, plain ground
-    GREY: paint("wall", hexc("#5A5650"), 0.65, 0.0), DARK: paint("asphalt", hexc("#1A1B1F"), 0.85, 0.0),
-    GREEN: glow("green glow", G, 2.4), WARMC: paint("cream", hexc("#E6DDCB"), 0.5, 0.2), YEL: paint("yellow", hexc("#E2B23A"), 0.4, 0.3),
-    "road": paint("road", hexc("#232428"), 0.8, 0.0), "field": paint("field", hexc("#24272B"), 0.9, 0.0),
-    "brick": paint("store brick", hexc("#6A4E42"), 0.8, 0.0), "lino": paint("corridor floor", hexc("#8E8A80"), 0.25, 0.6),
-    "canopy": paint("canopy", hexc("#D8D2C4"), 0.4, 0.3), "pump": paint("pump", hexc("#B23A2E"), 0.35, 0.5),
-    "car": paint("hatchback", hexc("#7C8A86"), 0.3, 0.8), "glass": paint("car glass", hexc("#1C2228"), 0.1, 0.9),
-    "wood": paint("clapboard", hexc("#8E7A62"), 0.7, 0.0), "roof": paint("shingle", hexc("#3C302C"), 0.8, 0.0),
-    "log": paint("log", hexc("#5A4330"), 0.9, 0.0), "denim": paint("denim", hexc("#4E6A90"), 0.85, 0.0),
-    "steel": metal("steel", hexc("#9A9EA6"), 0.25), "paper": paint("certificate paper", hexc("#EFE7D2"), 0.6, 0.0),
-    "person": paint("work clothes", hexc("#4F5A6E"), 0.7, 0.0), "skin": paint("skin", hexc("#C29A80"), 0.5, 0.0),
-    "coin": glow("coin", hexc("#E8B23A"), 2.5), "window": glow("window", hexc("#FFD37A"), 0.0), "lamp": glow("lamp", hexc("#FFE2A8"), 3.0),
-    "owned": glow("owned", G, 1.6), "civic": paint("civic", hexc("#D8D0BE"), 0.5, 0.1), "pulse": glow("pulse", hexc("#E9FFC8"), 9.0)}
-def col(o, c):
-    o.color = c if isinstance(c, tuple) else GREY
-    if not ANIM and c in MAT: o.data.materials.clear(); o.data.materials.append(MAT[c])
-    return o
-def gbox(name, x0, y0, x1, y1, h, c=GREY, z0=0.0, bevel=0.02):
-    return col(box(name, x0, y0, x1, y1, h, bpy.data.materials.get("g") or bpy.data.materials.new("g"), z0=z0, bevel=bevel), c)
-def text(name, s, size, loc, rot=(math.pi / 2, 0, 0), c=WARMC):
+M = dict(ground=pbr("ground", "grass", 0.05, tint=(0.35, 0.38, 0.33, 1)), road=pbr("road", "asphalt", 0.25, tint=(0.55, 0.55, 0.58, 1)),
+         line=paint("road line", hexc("#B8B2A2"), 0.6, 0.0), lino=pbr("lino", "lino", 0.6, tint=(0.85, 0.84, 0.8, 1)),
+         wall=pbr("corridor wall", "plaster", 0.5, tint=(0.72, 0.7, 0.66, 1)), shelf=pbr("shelf", "wood", 1.0, tint=(0.6, 0.5, 0.42, 1)),
+         box=paint("stock box", hexc("#9A7A52"), 0.8, 0.0), jacket=paint("field jacket", hexc("#4E5E6E"), 0.85, 0.0),
+         skin=paint("skin", hexc("#C29A80"), 0.55, 0.0), hair=paint("grey hair", hexc("#A8A39A"), 0.8, 0.0),
+         boots=paint("boots", hexc("#2A2420"), 0.6, 0.1), steel=metal("steel", hexc("#B4B8BE"), 0.2),
+         brass=metal("brass", hexc("#C9A24A"), 0.3), paper=paint("certificate", hexc("#EFE7D2"), 0.65, 0.0),
+         ink=paint("ink", hexc("#2E5E2A"), 0.6, 0.0), drawer=pbr("drawer metal", "metal", 1.5, tint=(0.62, 0.52, 0.36, 1)),
+         vault=pbr("vault wall", "concrete", 0.4, tint=(0.6, 0.58, 0.54, 1)), tape=paint("tape", hexc("#E2B23A"), 0.5, 0.2),
+         coin=metal("gold coin", hexc("#D9A93A"), 0.25), white=glow("label", hexc("#F4F1EA"), 1.4),
+         plate=paint("label plate", hexc("#121418"), 0.6, 0.0), green=glow("own mark", G, 2.6), lines=glow("light line", G, 2.2),
+         pulse=glow("pulse", hexc("#E9FFC8"), 9.0), smoke=paint("smoke", hexc("#8A8680"), 0.9, 0.0),
+         black=paint("doorway dark", hexc("#050506"), 1.0, 0.0), hose=paint("hose", hexc("#1C1C1E"), 0.6, 0.2),
+         nozzle=paint("nozzle", hexc("#2E8A3A"), 0.4, 0.3))
+
+def gbox(name, x0, y0, x1, y1, h, m, z0=0.0, bevel=0.02): return box(name, x0, y0, x1, y1, h, m, z0=z0, bevel=bevel)
+FONT = bpy.data.fonts.load(os.path.expanduser("~/Library/Fonts/InterDisplay-Black.ttf"))
+def text(name, s, size, loc, m, rot=(math.pi / 2, 0, 0), extrude=0.0, align="CENTER"):
     bpy.ops.object.text_add(location=loc); o = bpy.context.object; o.name = name; o.data.body = s; o.data.size = size
-    o.data.align_x = "CENTER"; o.data.align_y = "CENTER"; o.data.extrude = 0.01; o.rotation_euler = rot
-    o.data.font = bpy.data.fonts.get("InterDisplay-Black") or bpy.data.fonts.load(os.path.expanduser("~/Library/Fonts/InterDisplay-Black.ttf"))
-    return col(o, c)
-def show(objs, f, on):
-    """animatic: hard visibility. v4: grow in / shrink out over 12 frames (user, 2026-11-04: no harsh cuts)."""
+    o.data.align_x = align; o.data.align_y = "CENTER"; o.data.extrude = extrude; o.rotation_euler = rot; o.data.font = FONT
+    o.data.materials.append(m); return o
+def _vis(o, f, hidden):
+    for x in [o] + list(o.children_recursive):
+        x.hide_render = hidden; x.keyframe_insert("hide_render", frame=f)
+        x.hide_viewport = hidden; x.keyframe_insert("hide_viewport", frame=f)     # the check file plays in the viewport
+def show(objs, f, on, d=12):
+    """grow in / shrink out over d frames (user: no harsh cuts). f=0 sets the start state."""
     for o in objs:
-        if ANIM or f == 0:
-            for x in [o] + list(o.children_recursive):
-                x.hide_render = not on; x.keyframe_insert("hide_render", frame=f)
-            if not ANIM and f == 0 and not on: o["s0"] = list(o.scale) if o.scale.length > 1e-6 else [1, 1, 1]; o.scale = (0, 0, 0); o.keyframe_insert("scale", frame=0)
-            continue
-        s0 = Vector(o.get("s0", list(o.scale) if o.scale.length > 1e-6 else [1, 1, 1])); o["s0"] = list(s0)
+        s0 = V(o.get("s0", list(o.scale) if o.scale.length > 1e-6 else [1, 1, 1])); o["s0"] = list(s0)
+        if f == 0:
+            o.scale = s0 if on else (0, 0, 0); o.keyframe_insert("scale", frame=0); _vis(o, 0, not on); continue
         if on:
-            for x in [o] + list(o.children_recursive): x.hide_render = False; x.keyframe_insert("hide_render", frame=max(1, f - 12))
-            o.scale = (0, 0, 0); o.keyframe_insert("scale", frame=max(1, f - 12)); o.scale = s0 * 1.04; o.keyframe_insert("scale", frame=f); o.scale = s0; o.keyframe_insert("scale", frame=f + 4)
+            _vis(o, max(1, f - d), False)
+            o.scale = (0, 0, 0); o.keyframe_insert("scale", frame=max(1, f - d)); o.scale = s0 * 1.03; o.keyframe_insert("scale", frame=f); o.scale = s0; o.keyframe_insert("scale", frame=f + 4)
         else:
-            o.scale = s0; o.keyframe_insert("scale", frame=max(1, f - 12)); o.scale = (0, 0, 0); o.keyframe_insert("scale", frame=f)
-            for x in [o] + list(o.children_recursive): x.hide_render = True; x.keyframe_insert("hide_render", frame=f + 1)
-def pop(o, f0, f1=None, d=8):
-    s = o.scale.copy() if o.scale.length > 1e-6 else Vector((1, 1, 1))
-    o.scale = (0, 0, 0); o.keyframe_insert("scale", frame=f0)
-    o.scale = s * 1.08; o.keyframe_insert("scale", frame=f0 + d); o.scale = s; o.keyframe_insert("scale", frame=f0 + d + 4)
-    if f1 is not None:
-        o.keyframe_insert("scale", frame=f1); o.scale = (0, 0, 0); o.keyframe_insert("scale", frame=f1 + d)
-def tube(name, a, b, r, c):
-    a, b = Vector(a), Vector(b); d = b - a
+            o.scale = s0; o.keyframe_insert("scale", frame=max(1, f - d)); o.scale = (0, 0, 0); o.keyframe_insert("scale", frame=f); _vis(o, f + 1, True)
+def offcam(objs, f, on):
+    """visibility switch for objects that are off camera at frame f."""
+    for o in objs: _vis(o, f, not on)
+def tube(name, a, b, r, m):
+    a, b = V(a), V(b); d = b - a
     bpy.ops.mesh.primitive_cylinder_add(radius=r, depth=d.length, location=(a + b) / 2, vertices=16)
-    o = bpy.context.object; o.name = name; o.rotation_euler = d.to_track_quat("Z", "Y").to_euler(); return col(o, c)
+    o = bpy.context.object; o.name = name; o.rotation_euler = d.to_track_quat("Z", "Y").to_euler(); o.data.materials.append(m); return o
+def wbox(objs):
+    bpy.context.view_layer.update(); pts = []
+    for o in objs:
+        for x in [o] + list(o.children_recursive):
+            if x.type == "MESH": pts += [x.matrix_world @ V(c) for c in x.bound_box]
+    return V([min(p[i] for p in pts) for i in range(3)]), V([max(p[i] for p in pts) for i in range(3)])
+def face_to(a, b): return math.degrees(math.atan2(b.x - a.x, -(b.y - a.y)))     # MPFB facing: 0 = looking toward -y
+def lerp_ang(a, b, k): d = (b - a + 180) % 360 - 180; return a + d * k
 
 # ---------- word times ----------
-T_8M = w("L01", 4); T_NOBODY = w("L01", 6); T_DIED = w("L01", 10)
-T_L02 = w("L02", 0); T_PUMPED = w("L02", 6); T_FLOORS = w("L02", 10); T_TOYOTA = w("L02", 18); T_PIN = w("L02", 26); T_BRANCH = w("L02", 31)
+T_DIED = w("L01", 10); T_L02 = w("L02", 0); T_PUMPED = w("L02", 6); T_LIFE = w("L02", 13); T_DROVE = w("L02", 15); T_TOYOTA = w("L02", 18)
+T_HELD = w("L02", 19); T_PIN = w("L02", 26); T_GATHER = w("L02", 28); T_BRANCH = w("L02", 31); T_HOUSE = w("L02", 35)
 T_L03 = w("L03", 0); T_RAIL = w("L03", 8); T_BANK = w("L03", 9); T_DRUG = w("L03", 10); T_PHONE = w("L03", 11); T_CASH = w("L03", 19)
-T_L04 = w("L04", 0); T_KEPT = w("L04", 7); T_95 = w("L04", 16); T_PAPER = w("L04", 19); T_5 = w("L04", 27)
+T_L04 = w("L04", 0); T_95 = w("L04", 16); T_PAPER = w("L04", 19); T_5 = w("L04", 27)
 T_L05 = w("L05", 0); T_OWNED = w("L05", 6); T_PIECE = w("L05", 10)
 T_L06 = w("L06", 0); T_HOSP = w("L06", 8); T_LIB = w("L06", 15); T_BIGGEST = w("L06", 17)
 T_L07 = w("L07", 0); T_QUIETLY = w("L07", 10); T_L08 = w("L08", 0)
+# his moves at home (real speed: ~1.3 m/s; turns animated over 0.4 s)
+T_TURN1 = T_PIN + 0.55; T_WALK1 = T_TURN1 + 0.4; T_AT_TREE = T_WALK1 + 1.9
+T_BEND = T_AT_TREE + 0.05; T_PICK = T_BEND + 0.65; T_UP = T_PICK + 0.25; T_STOOD = T_UP + 0.55
+T_TURN2 = T_STOOD; T_WALK2 = T_TURN2 + 0.4; T_AT_PILE = T_WALK2 + 1.6
 
-# ---------- the town ----------
-gbox("ground", -80, -80, 120, 80, 0.1, "field", z0=-0.1, bevel=0.0)
-gbox("road", -60, -2, 100, 2, 0.02, "road", z0=0.0, bevel=0.0)
-# the store (north of the road) with its back corridor; the street door faces the road at x -22
-STORE = [gbox("store back", -30, 15.8, -14, 16, 5, "brick", z0=0), gbox("store L", -30, 4, -29.8, 16, 5, "brick", z0=0), gbox("store R", -14.2, 4, -14, 16, 5, "brick", z0=0),
-         gbox("store front L", -30, 4, -23, 4.2, 5, "brick", z0=0), gbox("store front R", -21, 4, -14, 4.2, 5, "brick", z0=0), gbox("store front top", -23, 4, -21, 4.2, 2.2, "brick", z0=2.8)]
-STORE_ROOF = gbox("store roof", -30.2, 3.8, -13.8, 16.2, 0.3, z0=5.0)
-gbox("corridor wall", -30, 8.2, -14, 8.4, 3.2, z0=0)                       # the back corridor between y 4.2 and 8.2
-gbox("corridor floor", -29.8, 4.2, -14.2, 8.2, 0.02, "lino", z0=0.0, bevel=0.0)
-text("store sign", "DEPARTMENT STORE", 0.6, (-22, 3.9, 4.0), c=WARMC)
-BUCKET = col(cyl("mop bucket", -24.6, 6.2, 0.25, 0.4, bpy.data.materials["g"], z0=0.0, verts=24), YEL)
-JAN = Figure("janitor", bpy.data.materials["g"]); JAN.root.location = (-25.4, 6.5, 0); JAN.root.rotation_euler.z = 0.6
-for p_ in JAN.parts: col(p_, GREY if ANIM else "person")
-if not ANIM: JAN.parts[0].data.materials.clear(); JAN.parts[0].data.materials.append(MAT["skin"])
-MOP = tube("mop", (-25.0, 6.3, 0.05), (-25.6, 6.6, 1.4), 0.025, WARMC)
-# the gas station (south of the road)
-for x in (-24, -16):
-    for y in (-11, -5): gbox("canopy post", x - 0.15, y - 0.15, x + 0.15, y + 0.15, 4.5, z0=0)
-CANOPY = gbox("canopy", -25, -12, -15, -4, 0.5, "canopy", z0=4.5)
-PUMPS = [gbox("pump", x - 0.4, -8.4, x + 0.4, -7.6, 1.6, "pump", z0=0) for x in (-22, -18)]
-PUMPLIGHT = [gbox("pump light", x - 0.3, -8.42, x + 0.3, -8.4, 0.35, GREEN, z0=1.15) for x in (-22, -18)]
-gbox("kiosk", -26, -16, -20, -12.5, 3.0, z0=0); text("price sign", "GAS", 1.0, (-14, -3.0, 5.2), c=GREEN)
-gbox("price pole", -14.1, -3.1, -13.9, -2.9, 4.6, z0=0)
-ATTEND = Figure("attendant", bpy.data.materials["g"]); ATTEND.root.location = (-21.0, -7.0, 0); ATTEND.root.rotation_euler.z = math.pi * 0.5
-for p_ in ATTEND.parts: col(p_, GREY if ANIM else "person")
-if not ANIM: ATTEND.parts[0].data.materials.clear(); ATTEND.parts[0].data.materials.append(MAT["skin"])
-CAR = gbox("hatchback", -20.8, -7.0, -17.2, -5.4, 1.0, "car", z0=0.3, bevel=0.22)
-# his house (east), porch facing the road, jacket on the hook, woodpile, chimney
-HX, HY = 8.0, -10.0                                    # close to the gas station: the drive is a calm follow, not a whip
-gbox("house", HX - 4, HY - 4, HX + 4, HY + 4, 3.2, "wood", z0=0)
-HROOF = gbox("house roof", HX - 4.4, HY - 4.4, HX + 4.4, HY + 4.4, 0.4, "roof", z0=3.2)
-gbox("chimney", HX + 2, HY + 1, HX + 2.8, HY + 1.8, 2.0, "brick", z0=3.2)
-gbox("porch", HX - 2, HY + 4, HX + 2, HY + 6, 0.2, "wood", z0=0)
-JACKET = gbox("jacket", HX + 0.3, HY + 4.02, HX + 0.9, HY + 4.1, 0.8, "denim", z0=1.0, bevel=0.04)
-gbox("collar", HX + 0.36, HY + 4.08, HX + 0.84, HY + 4.14, 0.1, "denim", z0=1.72, bevel=0.03)
-for px in (0.38, 0.66): gbox("pocket", HX + px, HY + 4.095, HX + px + 0.17, HY + 4.12, 0.16, "denim", z0=1.42, bevel=0.015)
-gbox("placket", HX + 0.585, HY + 4.095, HX + 0.615, HY + 4.115, 0.7, "log", z0=1.03, bevel=0.0)
-PIN = tube("safety pin", (HX + 0.52, HY + 4.13, 1.6), (HX + 0.68, HY + 4.13, 1.5), 0.009, "steel")             # big enough to read in the ECU
-tube("pin bar", (HX + 0.52, HY + 4.145, 1.585), (HX + 0.66, HY + 4.145, 1.497), 0.006, "steel")
-col(cyl("pin head", HX + 0.675, HY + 4.14, 0.018, 0.02, bpy.data.materials["g"], z0=1.488, verts=16, bevel=0.004), "steel")
-for k in range(6): gbox("log", HX + 5, HY - 3 + k * 0.35, HX + 6.5, HY - 2.7 + k * 0.35, 0.3, "log", z0=0)
-CARRY = Figure("ron", bpy.data.materials["g"]); CARRY.root.location = (HX + 4.2, HY + 3, 0)
-for p_ in CARRY.parts: col(p_, GREY if ANIM else "person")
-if not ANIM: CARRY.parts[0].data.materials.clear(); CARRY.parts[0].data.materials.append(MAT["skin"])
-# the safe-deposit box and the stack (inside, on a table), the ruler
-gbox("table", HX - 1, HY - 1, HX + 1, HY + 1, 0.85, "log", z0=0)
-SBOX = gbox("safe box", HX - 0.3, HY - 0.15, HX + 0.3, HY + 0.15, 0.12, "steel", z0=0.85)
-LID = gbox("safe lid", HX - 0.3, HY - 0.15, HX + 0.3, HY + 0.15, 0.02, "steel", z0=0.97)
-STACK = gbox("certificates", HX - 0.2, HY - 0.12, HX + 0.2, HY + 0.12, 0.127, "paper", z0=0.98, bevel=0.003)   # 5 inches = 12.7 cm
-STACK.scale.z = 0.0
-RULER = gbox("ruler", HX + 0.26, HY - 0.02, HX + 0.3, HY + 0.02, 0.127, YEL, z0=0.98, bevel=0.0)
-LAB95 = text("95 label", "95 COMPANIES", 0.06, (HX, HY + 0.2, 1.25), rot=(math.pi / 2, 0, math.pi), c=GREEN)        # faces the camera (+y)
-LAB5 = text("5in label", "5 INCHES", 0.03, (HX + 0.42, HY + 0.05, 1.05), rot=(math.pi / 2, 0, math.pi), c=YEL)
-# the diagram around the house: four company types, lines to the house, coins once a year
-COMP = []
-for name, (dx, dy), label in (("railroad", (-14, 8), "RAILROAD"), ("bank", (14, 10), "BANK"), ("drugstore", (-12, -12), "DRUGSTORE"), ("phone", (15, -12), "PHONE")):
-    x, y = HX + dx, HY + dy
-    b = gbox(name, x - 1.5, y - 1.5, x + 1.5, y + 1.5, 2.0 if name != "phone" else 0.4, GREEN, z0=0)
-    if name == "phone": tube("tower", (x, y, 0.4), (x, y, 5), 0.15, GREEN)
-    t = text(name + " label", label, 0.7, (x, y - 1.8, 2.6), c=WARMC)
-    ln = Path([(x, y), (HX, HY)], r=0.1).curve(name + " line", bpy.data.materials["g"], depth=0.06, z=0.05, drawn=0.0); col(ln, GREEN)
-    COMP.append((b, t, ln, Vector((x, y, 0.4))))
-COINS = [col(cyl("coin", 0, 0, 0.35, 0.08, bpy.data.materials["g"], z0=0, verts=20), YEL) for _ in COMP]
-# the fan-out: 95 small buildings across the town ("a town he owns")
-OWN = []
-while len(OWN) < 95:
-    x, y = rnd.uniform(-50, 95), rnd.uniform(-45, 45)
-    if abs(y) < 4 or (-31 < x < -13 and -17 < y < 17) or (HX - 7 < x < HX + 8 and HY - 6 < y < HY + 8) or (abs(x + 10) < 6 and abs(y - 22) < 6) or (abs(x - 26) < 6 and abs(y - 20) < 6):
-        continue
-    hgt = rnd.uniform(1.0, 3.5); OWN.append(gbox("owned", x - 1, y - 1, x + 1, y + 1, hgt, "owned", z0=0))
-HOSP = gbox("hospital", -15, 17, -5, 27, 6, "civic", z0=0); text("hosp label", "HOSPITAL", 1.4, (-10, 27.4, 7.5), rot=(math.pi / 2, 0, math.pi), c=WARMC)
-LIBR = gbox("library", 21, 15, 31, 25, 5, "civic", z0=0); text("lib label", "LIBRARY", 1.4, (26, 25.4, 6.5), rot=(math.pi / 2, 0, math.pi), c=WARMC)
-HWIN = [gbox("hosp window", -14 + (k % 4) * 2.3, 27.0, -12.8 + (k % 4) * 2.3, 27.05, 0.8, DARK, z0=1 + (k // 4) * 1.6) for k in range(12)]   # on the side the camera sees
-LWIN = [gbox("lib window", 22 + (k % 4) * 2.3, 25.0, 23.2 + (k % 4) * 2.3, 25.05, 0.9, DARK, z0=1 + (k // 4) * 1.5) for k in range(8)]
-STREAM = []                                                            # (L06 used flying coins; user: "throbbing light lines" instead)
-def arc(name, a, b, h, depth):
+# ---------- the town: ground, main road (along x), lamps, trees ----------
+gbox("ground", -120, -120, 160, 120, 0.1, M["ground"], z0=-0.1, bevel=0.0)
+gbox("main road", -120, -4, 160, 4, 0.02, M["road"], z0=0.0, bevel=0.0)
+for x in range(-110, 160, 6): gbox("road line", x, -0.08, x + 3, 0.08, 0.005, M["line"], z0=0.02, bevel=0.0)
+LAMPS = [model("street_light", height=6.5, at=(x, 5.2, 0)) for x in (-40, -8, 12, 52, 72)]
+for x, y in ((-45, 16), (-6, 22), (60, 20), (75, -20), (-48, -22), (24, -32), (66, 34), (-30, 34), (84, 8), (-60, 6)):
+    model("tree", height=rnd.uniform(5, 7.5), at=(x, y, 0), face=rnd.uniform(0, 360))
+
+# ---------- 1. the department store: a back corridor (interior set) inside a real storefront ----------
+STORE = model("pharmacy", height=9.0, at=(-22, 9.8, 0), face=90)          # "The Corner Store" (CC-BY)
+C0, C1 = V((-30, 6.6, 0)), V((-14, 10.2, 0))
+gbox("corridor floor", C0.x, C0.y, C1.x, C1.y, 0.02, M["lino"], z0=0.0, bevel=0.0)
+for args in ((C0.x, C1.y, C1.x, C1.y + 0.2, 3.2), (C0.x - 0.2, C0.y, C0.x, C1.y, 3.2), (C1.x, C0.y, C1.x + 0.2, C1.y, 3.2),
+             (C0.x, C0.y - 0.2, -23.0, C0.y, 3.2), (-21.0, C0.y - 0.2, C1.x, C0.y, 3.2)):
+    gbox("corridor wall", *args, M["wall"])
+gbox("corridor lintel", -23.0, C0.y - 0.2, -21.0, C0.y, 0.8, M["wall"], z0=2.4); gbox("corridor ceiling", C0.x, C0.y, C1.x, C1.y, 0.1, M["wall"], z0=3.2)
+for x in (-29.4, -27.0, -18.6, -16.2):
+    gbox("shelf", x, C1.y - 0.7, x + 2.0, C1.y - 0.05, 2.2, M["shelf"], bevel=0.01)
+    for k in range(6): gbox("stock box", x + 0.1 + (k % 3) * 0.62, C1.y - 0.6, x + 0.6 + (k % 3) * 0.62, C1.y - 0.15, 0.4, M["box"], z0=0.45 + (k // 3) * 0.85)
+gbox("corridor tube", -27, 8.2, -17, 8.5, 0.05, glow("tube", hexc("#E8F0F2"), 2.0), z0=3.12, bevel=0.0)
+MOPKIT = model("mop_bucket", height=1.4, at=(-24.4, 8.8, 0), face=120)      # "Mop & Bucket" (CC-BY): bucket stays, the mop goes to his hands
+MOP = part(MOPKIT, "Broom"); bpy.context.view_layer.update()
+mw = MOP.matrix_world.copy(); MOP.parent = None; MOP.matrix_world = Matrix.Identity(4); MOP.data.transform(mw)
+vz = [v.co.z for v in MOP.data.vertices]; z0_, z1_ = min(vz), max(vz)
+low = [v.co for v in MOP.data.vertices if v.co.z < z0_ + 0.1]; foot = sum(low, V()) / len(low)
+MOP.data.transform(Matrix.Translation(-V((foot.x, foot.y, z0_)))); MOP_LEN = z1_ - z0_      # origin at the mop head, axis = +z
+
+# ---------- 2. the gas station across the road (one real model), the car at the pump ----------
+GS = model("gas_station", height=8.2, at=(-20, -17, 0), face=0)            # "Gas Station" (CC-BY)
+grass = [o for o in GS.children if o.name.startswith("Cube.001")][0]; GLO, GHI = wbox([grass]); GS.location.z -= GHI.z
+PUMP = [o for o in GS.children if o.name.startswith("Cube.009")][0]; PLO, PHI = wbox([PUMP]); PUMP_P = (PLO + PHI) / 2; PUMP_P.z = 0
+CAR = model("car_b", length=4.3, at=(PUMP_P.x + 2.6, PUMP_P.y + 0.6, 0), face=0)   # "Car" (Quaternius, CC0)
+FILLER = V((CAR.location.x - 0.92, CAR.location.y + 1.25, 0.82))
+ATT_P = V((PUMP_P.x + 1.1, PUMP_P.y - 0.2, 0))
+NOZ = gbox("nozzle", -0.04, -0.12, 0.04, 0.12, 0.06, M["nozzle"], z0=-0.03, bevel=0.015)                     # a real-looking nozzle
+SPOUT = tube("spout", (0, -0.12, 0), (0, -0.26, -0.04), 0.012, M["steel"]); SPOUT.parent = NOZ
+GRIP = tube("grip", (0, 0.1, -0.02), (0, 0.04, -0.11), 0.016, M["hose"]); GRIP.parent = NOZ
+bpy.ops.object.light_add(type="AREA", location=(PUMP_P.x + 1.5, PUMP_P.y, 5.8)); CANLIGHT = bpy.context.object
+CANLIGHT.data.energy = 1500; CANLIGHT.data.size = 9; CANLIGHT.data.color = (0.95, 1.0, 1.0)
+GASSIGN = text("gas sign", "GAS", 1.4, (PUMP_P.x - 1.0, PUMP_P.y - 6.5, 6.0), M["white"], extrude=0.05)
+
+# ---------- 3–4. his house, the car parked in the drive, the tree with fallen branches, the wood pile ----------
+HX, HY = 14.0, -18.0
+HOUSE = model("farm_house", height=9.0, at=(HX, HY, 0), face=180)           # "Farm house" (CC-BY)
+HLO, HHI = wbox([HOUSE])
+DRIVE = V((HLO.x - 3.2, HHI.y + 2.0, 0))
+CARH = model("car_b", length=4.3, at=(DRIVE.x, DRIVE.y, 0), face=0)
+P0 = DRIVE + V((1.7, -0.6, 0))                                                 # he stands beside the parked car, facing the camera
+PT = P0 + V((-2.2, -1.3, 0))                                                   # the fallen branches (2.5 m away)
+PP = V((HLO.x - 0.9, HLO.y + 3.0, 0))                                          # the wood pile against the house side
+TREE = model("tree", height=7.5, at=(PT.x - 1.4, PT.y - 1.6, 0), face=40)
+BR = model("branches", length=1.6, at=(PT.x - 0.3, PT.y - 0.2, 0), face=15)  # "Tree branches" (CC-BY)
+BRANCHES = list(BR.children); BLO, _ = wbox([BR]); BR.location.z -= BLO.z     # lying on the ground
+PILE = model("wood_pile", height=1.1, at=(PP.x - 0.8, PP.y, 0), face=90)     # "Wood Pile" (CC-BY)
+
+# ---------- 5. the companies: real buildings in a row across the road, labels facing the camera ----------
+ROWY = 10.0
+COMP = [("RAILROAD", model("train_station", height=6.5, at=(22, ROWY + 2, 0), face=180), 4.0),
+        ("BANK", model("bank", height=10.0, at=(33, ROWY + 4, 0), face=180), 7.5),
+        ("DRUGSTORE", model("store_bldg", height=8.0, at=(45, ROWY + 3, 0), face=180), 4.5),
+        ("PHONE CO.", model("radio_tower", height=20.0, at=(55, ROWY + 4, 0), face=0), 14.0)]
+model("rails", length=24, at=(22, ROWY - 1.8, 0.01), face=90)
+def facing_label(name, s, loc, size=1.3):
+    t = text(name, s, size, loc, M["white"], extrude=0.02)
+    bpy.ops.mesh.primitive_plane_add(size=1, location=(0, 0, 0)); pl = bpy.context.object; pl.name = name + " plate"
+    pl.data.materials.append(M["plate"]); pl.parent = t; pl.matrix_parent_inverse = Matrix.Identity(4)
+    pl.location = (0, 0, -0.03); pl.scale = (len(s) * size * 0.66 + size * 0.8, size * 1.6, 1)
+    return t
+LABELS = [facing_label(name + " label", name, (mdl.location.x, mdl.location.y - 1.0, h + 2.4)) for name, mdl, h in COMP]
+def arc(name, a, b, h, depth, m):
     cu = bpy.data.curves.new(name, "CURVE"); cu.dimensions = "3D"; sp = cu.splines.new("POLY"); n = 32; sp.points.add(n - 1)
     for i, pt in enumerate(sp.points):
         t = i / (n - 1); q = a.lerp(b, t); q.z += h * math.sin(math.pi * t); pt.co = (q.x, q.y, q.z, 1)
     cu.bevel_depth = depth; cu.bevel_factor_mapping_start = "SPLINE"; cu.bevel_factor_mapping_end = "SPLINE"; cu.bevel_factor_end = 0.0
-    o = bpy.data.objects.new(name, cu); sc.collection.objects.link(o); o.data.materials.append(bpy.data.materials["g"]); return o
-GIFT = []                                                              # (dim line, bright pulse) from 36 owned buildings
+    o = bpy.data.objects.new(name, cu); sc.collection.objects.link(o); o.data.materials.append(m); return o
+HOUSE_TOP = V((HX, HY, HHI.z + 0.6))
+ARCS, COINS = [], []
+for name, mdl, h in COMP:
+    a = V((mdl.location.x, mdl.location.y - 1.5, h * 0.6)); ARCS.append(arc(name + " line", a, HOUSE_TOP, 5.0, 0.09, M["lines"]))
+    cs = []
+    for k in range(3):
+        c = cyl("coin", 0, 0, 0.5, 0.12, M["coin"], z0=-0.06, verts=32, bevel=0.03); c.rotation_euler.x = math.pi / 2; cs.append(c)
+    COINS.append((a, cs))
+
+# ---------- 6. into the bank through its doorway; the vault: numbered boxes, an open drawer, a neat stack ----------
+BANK = COMP[1][1]; BLO_, BHI_ = wbox([BANK]); BX = BANK.location.x; BFRONT = BLO_.y
+VX, VY = BX, BFRONT + 5.8
+TUN = [gbox("doorway L", BX - 1.3, BFRONT - 0.15, BX - 1.1, VY - 2.5, 3.0, M["black"], bevel=0.0),
+       gbox("doorway R", BX + 1.1, BFRONT - 0.15, BX + 1.3, VY - 2.5, 3.0, M["black"], bevel=0.0),
+       gbox("doorway top", BX - 1.3, BFRONT - 0.15, BX + 1.3, VY - 2.5, 0.2, M["black"], z0=3.0, bevel=0.0),
+       gbox("doorway floor", BX - 1.3, BFRONT - 0.15, BX + 1.3, VY - 2.5, 0.02, M["black"], z0=0.0, bevel=0.0)]
+VR = [gbox("vault floor", VX - 3, VY - 2.5, VX + 3, VY + 2.5, 0.02, M["vault"], z0=0.0, bevel=0.0),
+      gbox("vault back", VX - 3, VY + 2.5, VX + 3, VY + 2.7, 3.2, M["vault"]),
+      gbox("vault L", VX - 3.2, VY - 2.5, VX - 3, VY + 2.7, 3.2, M["vault"]), gbox("vault R", VX + 3, VY - 2.5, VX + 3.2, VY + 2.7, 3.2, M["vault"]),
+      gbox("vault ceiling", VX - 3.2, VY - 2.7, VX + 3.2, VY + 2.7, 0.1, M["vault"], z0=3.2),
+      gbox("vault front L", VX - 3.2, VY - 2.7, VX - 1.1, VY - 2.5, 3.2, M["vault"]), gbox("vault front R", VX + 1.1, VY - 2.7, VX + 3.2, VY - 2.5, 3.2, M["vault"]),
+      gbox("vault lintel", VX - 1.1, VY - 2.7, VX + 1.1, VY - 2.5, 0.2, M["vault"], z0=3.0)]
+DOORS = []
+for r in range(6):
+    for c in range(8):
+        if (r, c) == (2, 3): continue                                         # this one is the drawer that slides out
+        x = VX - 2.4 + c * 0.6; z = 0.55 + r * 0.42
+        DOORS.append(gbox("box door", x, VY + 2.38, x + 0.56, VY + 2.5, 0.38, M["drawer"], z0=z, bevel=0.01))
+        kn = cyl("keyhole", x + 0.28, VY + 2.37, 0.02, 0.02, M["brass"], z0=z + 0.17, verts=12, bevel=0.0); kn.rotation_euler.x = math.pi / 2; DOORS.append(kn)
+        DOORS.append(text("box no", str(100 + r * 8 + c), 0.06, (x + 0.28, VY + 2.369, z + 0.3), M["brass"]))
+DX, DZ = VX - 2.4 + 3 * 0.6 + 0.28, 0.55 + 2 * 0.42
+DRAWER = bpy.data.objects.new("drawer", None); sc.collection.objects.link(DRAWER)    # an open tray: floor, sides, front face
+TRAYP = [gbox("tray floor", DX - 0.26, VY + 0.9, DX + 0.26, VY + 2.4, 0.012, M["drawer"], z0=DZ, bevel=0.0),
+         gbox("tray side", DX - 0.27, VY + 0.9, DX - 0.25, VY + 2.4, 0.16, M["drawer"], z0=DZ, bevel=0.0),
+         gbox("tray side", DX + 0.25, VY + 0.9, DX + 0.27, VY + 2.4, 0.16, M["drawer"], z0=DZ, bevel=0.0),
+         gbox("tray back", DX - 0.27, VY + 2.38, DX + 0.27, VY + 2.4, 0.16, M["drawer"], z0=DZ, bevel=0.0),
+         gbox("tray front", DX - 0.28, VY + 0.88, DX + 0.28, VY + 0.92, 0.38, M["drawer"], z0=DZ - 0.1, bevel=0.01)]
+kn = cyl("tray handle", DX, VY + 0.86, 0.03, 0.03, M["brass"], z0=DZ + 0.1, verts=16, bevel=0.005); kn.rotation_euler.x = math.pi / 2; TRAYP.append(kn)
+TRAYP.append(text("tray no", "119", 0.06, (DX, VY + 0.875, DZ + 0.2), M["brass"]))
+for o in TRAYP: o.parent = DRAWER
+TABLE = gbox("vault table", DX - 0.7, VY - 1.1, DX + 0.7, VY + 0.3, DZ - 0.02, M["shelf"], z0=0.0, bevel=0.02)
+LIDP = bpy.data.objects.new("lid hinge", None); sc.collection.objects.link(LIDP); LIDP.location = (DX, VY + 2.4, DZ + 0.16); LIDP.parent = DRAWER
+LID = gbox("box lid", DX - 0.27, VY + 0.88, DX + 0.27, VY + 2.4, 0.012, M["drawer"], z0=DZ + 0.16, bevel=0.005)
+bpy.context.view_layer.update(); LID.parent = LIDP; LID.matrix_parent_inverse = LIDP.matrix_world.inverted()
+SY = VY - 0.15                                                                  # the stack's centre once the drawer is out
+STACK0 = DZ + 0.012
+CERTS = [gbox("certificate", DX - 0.22, SY - 0.15, DX + 0.22, SY + 0.15, 0.0033, M["paper"], z0=0.0, bevel=0.0) for k in range(38)]   # 38 × 3.35 mm ≈ 5 in
+for k, c in enumerate(CERTS): c["z"] = STACK0 + k * 0.00335; c["rz"] = rnd.uniform(-0.025, 0.025)
+CNAMES = ("RAILROAD CO.", "FIRST BANK", "DRUGSTORE INC.", "TELEPHONE CO.")
+TOPCERTS = []
+for k, nm in enumerate(CNAMES):
+    sheet = gbox("cert top", -0.22, -0.15, 0.22, 0.15, 0.003, M["paper"], z0=0.0, bevel=0.0)
+    for (bx0, by0, bx1, by1) in ((-0.2, -0.135, 0.2, -0.125), (-0.2, 0.125, 0.2, 0.135), (-0.205, -0.135, -0.195, 0.135), (0.195, -0.135, 0.205, 0.135)):
+        b = gbox("cert border", bx0, by0, bx1, by1, 0.001, M["ink"], z0=0.003, bevel=0.0); b.parent = sheet
+    t1 = text("cert title", "SHARE CERTIFICATE", 0.028, (0, 0.06, 0.0045), M["ink"], rot=(0, 0, 0)); t1.parent = sheet
+    t2 = text("cert name", nm, 0.042, (0, -0.005, 0.0045), M["ink"], rot=(0, 0, 0)); t2.parent = sheet
+    TOPCERTS.append(sheet)
+TAPE = gbox("measuring tape", DX + 0.235, SY - 0.02, DX + 0.245, SY + 0.02, 0.127, M["tape"], z0=STACK0, bevel=0.0)
+for k in range(6): gbox("tape tick", DX + 0.226, SY - 0.021, DX + 0.235, SY - 0.019, 0.0015, M["ink"], z0=STACK0 + k * 0.0254, bevel=0.0)
+LAB95 = facing_label("95 label", "95 COMPANIES", (DX, SY, DZ + 0.62), size=0.085)
+LAB5 = facing_label("5in label", "5 INCHES", (DX + 0.42, SY, DZ + 0.08), size=0.035)
+VAULTSET = VR + DOORS + [DRAWER, TABLE, LID, TAPE] + CERTS
+
+# ---------- 7. the town he owns: complete buildings only (instanced), a green mark on each roof ----------
+KINDS = ("store_bldg", "kenney_big", "kenney_big2", "brown_bldg", "apartment")          # (the roofless cutaway "Shop"/"Store" are out)
+PROTO = {}
+for k in KINDS:
+    col = bpy.data.collections.new("proto " + k)
+    r = model(k, height={"apartment": 14}.get(k, 9), at=(0, 0, 0))
+    for o in [r] + list(r.children):
+        for uc in list(o.users_collection): uc.objects.unlink(o)
+        col.objects.link(o)
+    PROTO[k] = (col, r["dims"])
+OWN, MARKS = [], []
+while len(OWN) < 95:
+    x, y = rnd.uniform(-90, 120), rnd.uniform(-80, 80)
+    if abs(y) < 8: continue
+    if (-36 < x < -6 and 3 < y < 18) or (-38 < x < -2 and -34 < y < -2) or (HLO.x - 8 < x < HHI.x + 4 and HLO.y - 4 < y < HHI.y + 6) or (14 < x < 62 and 4 < y < 22): continue
+    if (-17 < x < 7 and 24 < y < 42) or (49 < x < 74 and 24 < y < 42): continue
+    if any((x - o.location.x) ** 2 + (y - o.location.y) ** 2 < 80 for o in OWN): continue
+    k = rnd.choice(KINDS); col, dims = PROTO[k]
+    e = bpy.data.objects.new("owned " + k, None); e.instance_type = "COLLECTION"; e.instance_collection = col
+    sc.collection.objects.link(e); e.location = (x, y, 0); e.rotation_euler.z = math.atan2(-y, -x) + math.pi / 2; OWN.append(e)
+    MARKS.append(cyl("own mark", x, y, 1.3, 0.12, M["green"], z0=dims[2] + 0.8, verts=32, bevel=0.04))
+HOSP = model("hospital", height=12, at=(-6, 32, 0), face=180)                 # "Hospital" (CC-BY)
+LIBR = model("library", height=8, at=(61, 31, 0), face=180)                    # "Hall" (CC-BY) as the town library
+HLAB = facing_label("hosp label", "HOSPITAL  $4.8M", (-6, 26, 16), size=1.6)
+LLAB = facing_label("lib label", "LIBRARY  $1.2M", (61, 25, 12), size=1.6)
+GIFT = []
 for k in range(36):
-    src = OWN[(k * 7) % 95].location.copy(); src.z = 2.0
-    dst = Vector((-10, 22, 6.2)) if k % 2 == 0 else Vector((26, 20, 5.2)); h = 4 + (src - dst).length * 0.15
-    line = col(arc("gift line", src, dst, h, 0.06), GREEN); pulse = col(arc("gift pulse", src, dst, h, 0.14), WARMC if ANIM else "pulse")
-    GIFT.append((line, pulse, k))
+    s = OWN[(k * 7) % 95].location.copy(); s.z = 6.0
+    dst = V((-6, 30, 10)) if k % 2 == 0 else V((61, 29, 7)); h = 6 + (s - dst).length * 0.12
+    GIFT.append((arc("gift line", s, dst, h, 0.08, M["lines"]), arc("gift pulse", s, dst, h, 0.18, M["pulse"]), k))
+HLIGHT = []
+for p_ in ((-6, 24, 6), (61, 24, 5)):
+    bpy.ops.object.light_add(type="AREA", location=p_); L = bpy.context.object; L.data.size = 12; L.data.energy = 0.0
+    L.data.color = (1.0, 0.85, 0.6); L.rotation_euler = (math.radians(-70), 0, 0); HLIGHT.append(L)
 
-# ---------- v4: dusk to night, practical lights, the roof ring, glowing windows ----------
-if not ANIM:
-    from isokit import colmat
-    LIT = colmat("lit glass", emit=2.5)                              # object colour drives it: the animatic's colour keys light it
-    for o in HWIN + LWIN + PUMPLIGHT: o.data.materials.clear(); o.data.materials.append(LIT)
-    for o in COINS: col(o, "coin")
-    sc.view_settings.exposure = 0.5
-    wd = sc.world; wd.use_nodes = True; wn = wd.node_tree; wn.nodes.clear()
-    out = wn.nodes.new("ShaderNodeOutputWorld"); bg = wn.nodes.new("ShaderNodeBackground"); grad = wn.nodes.new("ShaderNodeValToRGB")
-    tc = wn.nodes.new("ShaderNodeTexCoord"); sep = wn.nodes.new("ShaderNodeSeparateXYZ"); mr = wn.nodes.new("ShaderNodeMapRange")
-    mr.inputs["From Min"].default_value = -0.05; mr.inputs["From Max"].default_value = 0.5
-    wn.links.new(tc.outputs["Normal"], sep.inputs[0]); wn.links.new(sep.outputs["Z"], mr.inputs["Value"]); wn.links.new(mr.outputs[0], grad.inputs[0])
-    grad.color_ramp.elements[0].color = hexc("#8C6A5E"); grad.color_ramp.elements[1].color = hexc("#1A2440")      # dusk: a soft warm horizon, cool blue up (orange flooded everything)
-    grad.color_ramp.elements[0].position = 0.0; grad.color_ramp.elements[1].position = 0.35
-    wn.links.new(grad.outputs[0], bg.inputs[0]); wn.links.new(bg.outputs[0], out.inputs[0]); SKY = bg.inputs[1]
-    def light(kind, loc, energy, color, size=1.0, aim=None, shadow=True, name="light"):
-        bpy.ops.object.light_add(type=kind, location=loc); L = bpy.context.object; L.name = name; L.data.energy = energy; L.data.color = color
-        if kind == "AREA": L.data.size = size
-        if kind == "SPOT": L.data.spot_size = math.radians(size); L.data.spot_blend = 0.6
-        if aim is not None: L.rotation_euler = (Vector(aim) - Vector(loc)).to_track_quat("-Z", "Y").to_euler()
-        L.data.use_shadow = shadow; return L
-    SUN = light("SUN", (0, 0, 50), 2.0, (1.0, 0.84, 0.7), name="low sun"); SUN.rotation_euler = (math.radians(78), 0, math.radians(-60))
-    light("AREA", (-22, 6.2, 3.0), 300, (0.9, 0.97, 1.0), size=6, aim=(-22, 6.2, 0), name="corridor tube")
-    light("AREA", (-20, -8, 4.4), 900, (0.95, 1.0, 1.0), size=8, aim=(-20, -8, 0), name="canopy light")
-    light("POINT", (HX + 1.6, HY + 4.6, 2.3), 120, (1.0, 0.8, 0.5), shadow=False, name="porch lamp")
-    light("SPOT", (HX + 0.4, HY + 0.6, 2.6), 250, (1.0, 0.85, 0.6), size=55, aim=(HX, HY, 0.9), name="table lamp")
-    for x in (-8, 22, 50): light("SPOT", (x, 3.2, 6), 1200, (1.0, 0.75, 0.45), size=75, aim=(x, 0, 0), shadow=False, name="street lamp")
-    gbox("ceiling tube", -26, 6.0, -18, 6.4, 0.06, "lamp", z0=3.05, bevel=0.0)
-    for fr_, e_, sk_ in ((0, 2.0, 0.55), (F(T_L06), 1.4, 0.45), (F(T_L07), 0.25, 0.18), (N - 1, 0.25, 0.18)):     # dusk → night by L07
-        SUN.data.energy = e_; SUN.data.keyframe_insert("energy", frame=fr_); SKY.default_value = sk_; SKY.keyframe_insert("default_value", frame=fr_)
-    CUT = xray_material("roof cut", MAT["roof"], ring_w=0.12, world=True); xray_origin(CUT, (HX, HY, 3.4))
-    HROOF.data.materials.clear(); HROOF.data.materials.append(CUT)
-    for fr_ in range(N):
-        t_ = fr_ / FPS
-        r = 9.5 * ease(span(t_, T_L04 - 0.5, T_L04 + 0.5)) * (1 - ease(span(t_, T_L06, T_L06 + 0.8)))   # closes once the camera is well above (it met the roof at 37 s)
-        st = span(t_, T_L04 - 0.5, T_L04 - 0.2) * (1 - span(t_, T_L04 + 0.3, T_L04 + 0.6))
-        xray_set(CUT, fr_, r, st)
+# ---------- people: Ronald (MPFB, field jacket), the same man in four places ----------
+def ron(name): return Person("ron_05", M["skin"], M["jacket"], M["boots"], M["hair"], name=name)
+JAN, ATT, HOME, END = ron("Ron in the corridor"), ron("Ron at the pump"), ron("Ron at home"), ron("Ron at the pump, night")
+JAN_P = V((-25.5, 8.3, 0)); JAN_FACE = face_to(JAN_P, V((-23.2, 7.0, 0))) + 35      # three-quarter to the camera
+JAN.place(0, (JAN_P.x, JAN_P.y), JAN_FACE); JAN.act(0, "mop", 0.0)               # a still pose (user: no mopping motion)
+ATT.place(0, (ATT_P.x, ATT_P.y), face_to(ATT_P, FILLER)); ATT.act(0, "pump")
+END_P = ATT_P + V((0.2, 0.5, 0)); END.place(0, (END_P.x, END_P.y), face_to(END_P, PUMP_P)); END.stand(0); END.arms("DOWN", 0)
+PINSET = bpy.data.objects.new("pin", None); sc.collection.objects.link(PINSET)
+for o in (tube("safety pin", (-0.06, 0, 0.05), (0.06, 0, -0.03), 0.006, M["steel"]), tube("pin bar", (-0.055, 0.004, 0.04), (0.05, 0.004, -0.032), 0.004, M["steel"]),
+          cyl("pin head", 0.06, 0.004, 0.013, 0.012, M["steel"], z0=-0.04, verts=16, bevel=0.003)):
+    o.parent = PINSET
+bpy.context.view_layer.update()
+# the still janitor's mop: from the floor ahead of him up through both hands
+hm = (JAN.hand("L") + JAN.hand("R")) / 2; fwd = (JAN.rig.matrix_world.to_3x3() @ V((0, -1, 0))).normalized()
+head = V((hm.x, hm.y, 0)) + V((fwd.x, fwd.y, 0)) * 0.45; dv = (hm - head).normalized() * 1.45
+MOP.matrix_world = Matrix.Translation(head) @ dv.to_track_quat("Z", "Y").to_matrix().to_4x4() @ Matrix.Scale(1.45 / MOP_LEN, 4)
+# the nozzle: in his right hand, spout into the car's filler; the hose sags from the pump
+hr = ATT.hand("R"); NOZ.location = hr; NOZ.rotation_euler = (FILLER - hr).to_track_quat("-Y", "Z").to_euler()
+cu = bpy.data.curves.new("hose", "CURVE"); cu.dimensions = "3D"; sp = cu.splines.new("BEZIER"); sp.bezier_points.add(2)
+for bp, p_ in zip(sp.bezier_points, (V((PUMP_P.x + 0.35, PUMP_P.y, 1.2)), (V((PUMP_P.x + 0.7, PUMP_P.y - 0.1, 0.45))), hr + V((0, 0, -0.08)))):
+    bp.co = p_; bp.handle_left_type = bp.handle_right_type = "AUTO"
+cu.bevel_depth = 0.018; HOSE = bpy.data.objects.new("hose", cu); sc.collection.objects.link(HOSE); HOSE.data.materials.append(M["hose"])
 
-# ---------- v4 people: MPFB Ronald (user: "go with B, MPFB"), the same man in three places ----------
-if not ANIM:
-    from mpfbkit import Person
-    SUIT, SHOE, HAIR = paint("work suit", hexc("#3E4A62"), 0.8, 0.0), paint("boots", hexc("#2A2420"), 0.6, 0.1), paint("grey hair", hexc("#9A958C"), 0.8, 0.0)
-    JANP = Person("s_m50", MAT["skin"], SUIT, SHOE, HAIR, name="Ron mopping")
-    ATTP = Person("s_m50", MAT["skin"], SUIT, SHOE, HAIR, name="Ron at the pump")
-    RONP = Person("s_m50", MAT["skin"], SUIT, SHOE, HAIR, name="Ron with branches")
-    for fg in (JAN, ATTEND, CARRY):                                    # the primitive figures stay in the animatic only
-        show([fg.root], 0, False)
-    WIN = {"jan": (0.0, T_L02 + 1.5), "att": (T_L02 - 0.5, T_TOYOTA + 1.5), "att_end": (T_L07 - 0.5, VT["end"] + 0.1), "ron": (T_TOYOTA, T_L03 + 1.0)}
-    def inwin(t, *keys): return any(WIN[k][0] <= t <= WIN[k][1] for k in keys)
-    show(JANP.objects(), 0, True); show(JANP.objects(), F(WIN["jan"][1]), False)
-    show(ATTP.objects(), 0, False); show(ATTP.objects(), F(WIN["att"][0]), True); show(ATTP.objects(), F(WIN["att"][1]), False)
-    show(ATTP.objects(), F(WIN["att_end"][0]), True)
-    show(RONP.objects(), 0, False); show(RONP.objects(), F(WIN["ron"][0]), True); show(RONP.objects(), F(WIN["ron"][1]), False)
-    JANP.place(0, (-25.4, 6.6), -90); ATTP.place(0, (-21.0, -7.2), 90)
-    MOP_LEN = (Vector((-25.6, 6.6, 1.4)) - Vector((-25.0, 6.3, 0.05))).length
-    BUNDLE = bpy.data.objects.new("branch bundle", None); sc.collection.objects.link(BUNDLE)          # the fallen branches he carries
-    for k in range(5):
-        br = tube("branch", (-0.55, -0.05 + k * 0.03, -0.04 + (k % 2) * 0.05), (0.55, 0.05 - k * 0.025, 0.02 + (k % 3) * 0.03), 0.025 + 0.008 * (k % 2), "log")
-        br.parent = BUNDLE
-    show([BUNDLE], 0, False); show([BUNDLE], F(WIN["ron"][0]), True); show([BUNDLE], F(WIN["ron"][1]), False)
-    MOPHEAD = gbox("mop head", -0.18, -0.12, 0.18, 0.12, 0.06, "log", z0=0.0, bevel=0.02); MOPHEAD.data.transform(Matrix.Translation((0, 0, 0)))
-    for fr_ in range(N):
-        t_ = fr_ / FPS
-        if inwin(t_, "jan") or fr_ == 0:
-            JANP.act(fr_, "mop", t_ * 3.0)
-            hp = JANP.hand("R"); fwd = Vector((-1, 0, 0)); foot = hp + fwd * 0.55; foot.z = 0.03      # handle from the hand to the floor ahead
-            mid = (hp + foot) / 2; dvec = foot - hp; MOP.location = mid; MOP.rotation_euler = dvec.to_track_quat("Z", "Y").to_euler()
-            MOP.scale = (1, 1, dvec.length / MOP_LEN); MOP.keyframe_insert("location", frame=fr_); MOP.keyframe_insert("rotation_euler", frame=fr_); MOP.keyframe_insert("scale", frame=fr_)
-            MOPHEAD.location = foot + Vector((0, 0, 0.03)); MOPHEAD.keyframe_insert("location", frame=fr_)
-        if inwin(t_, "att", "att_end"): ATTP.act(fr_, "pump")
-        if inwin(t_, "ron"):
-            s2 = span(t_, T_PIN, T_BRANCH + 1.2); pos = Vector((HX + 7, HY + 3, 0)).lerp(Vector((HX + 5.2, HY - 1.8, 0)), s2)
-            d = Vector((HX + 5.2, HY - 1.8, 0)) - Vector((HX + 7, HY + 3, 0)); face = math.degrees(math.atan2(d.y, d.x)) + 90
-            RONP.place(fr_, (pos.x, pos.y), face); RONP.walk(fr_, t_ * 6.0, 1.0 if T_PIN < t_ < T_BRANCH + 1.2 else 0.0, arms=False); RONP.act(fr_, "carry")
-            hm = (RONP.hand("L") + RONP.hand("R")) / 2; BUNDLE.location = hm + Vector((0, 0, 0.05)); BUNDLE.rotation_euler.z = math.radians(face)
-            BUNDLE.keyframe_insert("location", frame=fr_); BUNDLE.keyframe_insert("rotation_euler", frame=fr_)
+# ---------- smoke from the chimney ----------
+SMOKE = []
+for k in range(8):
+    bpy.ops.mesh.primitive_uv_sphere_add(radius=0.4, location=(HX, HY, HHI.z)); s_ = bpy.context.object; s_.data.materials.append(M["smoke"]); SMOKE.append(s_)
 
-# ---------- motion / timing ----------
-f = F
+# ---------- light: Poly Haven dusk HDRI for light, our gradient for the sky the camera sees; dusk → night ----------
+HDRI, SKY = world_hdri(0.6)
+bpy.ops.object.light_add(type="SUN"); SUN = bpy.context.object; SUN.data.color = (1.0, 0.85, 0.7); SUN.rotation_euler = (math.radians(74), 0, math.radians(-55)); SUN.data.angle = math.radians(6)
+bpy.ops.object.light_add(type="AREA", location=(-22, 8.4, 3.0)); CT = bpy.context.object; CT.data.energy = 260; CT.data.size = 8; CT.data.color = (0.92, 0.98, 1.0)
+for lp in LAMPS:
+    bpy.ops.object.light_add(type="SPOT", location=lp.location + V((0, -0.6, 6.0))); L = bpy.context.object; L.data.energy = 900; L.data.spot_size = math.radians(80)
+    L.data.color = (1.0, 0.75, 0.45); L.data.use_shadow = False
+bpy.ops.object.light_add(type="POINT", location=(DRIVE.x + 2, DRIVE.y + 1, 2.4)); PORCH = bpy.context.object; PORCH.data.energy = 220; PORCH.data.color = (1.0, 0.8, 0.5); PORCH.data.use_shadow = False
+bpy.ops.object.light_add(type="SPOT", location=(DX, SY - 0.3, DZ + 1.6)); VL = bpy.context.object; VL.data.energy = 180; VL.data.spot_size = math.radians(55); VL.data.color = (1.0, 0.86, 0.66)
+sc.view_settings.exposure = 0.4
+for fr_, e_, sk_, hd_ in ((0, 2.4, 0.7, 0.6), (F(T_L05), 1.6, 0.55, 0.45), (F(T_L06), 0.5, 0.3, 0.25), (F(T_L07), 0.12, 0.16, 0.12), (N - 1, 0.12, 0.16, 0.12)):
+    SUN.data.energy = e_; SUN.data.keyframe_insert("energy", frame=fr_); SKY.default_value = sk_; SKY.keyframe_insert("default_value", frame=fr_)
+    HDRI.default_value = hd_; HDRI.keyframe_insert("default_value", frame=fr_)
+
+# ---------- motion ----------
+WSPD = 1.3
+FACE0 = face_to(P0, P0 + V((0, -1, 0)))                                         # facing the camera side (−y)
 for fr in range(N):
     t = fr / FPS
-    # the janitor mops (L01); the attendant pumps; Ron carries branches
-    JAN.pose(fr, t * 3.0, 0.25); JAN.arms[0].rotation_euler.x += 0.5 * math.sin(t * 3); JAN.arms[0].keyframe_insert("rotation_euler", frame=fr)
-    # the car leaves the pump on "Toyota" and drives to the house
-    g = ease(span(t, T_TOYOTA - 0.8, T_PIN - 0.3)); CAR.location = Vector((-19.0, -6.2, 0.9)).lerp(Vector((HX - 7.5, -3.2, 0.9)), g)       # parks in the drive, clear of the camera
-    CAR.keyframe_insert("location", frame=fr)
-    walking = T_PIN < t < T_BRANCH + 1.2; s_ = span(t, T_PIN, T_BRANCH + 1.2)
-    CARRY.root.location = Vector((HX + 7, HY + 3, 0)).lerp(Vector((HX + 5.2, HY - 1.8, 0)), s_); CARRY.root.rotation_euler.z = math.pi * 1.1
-    CARRY.root.keyframe_insert("location", frame=fr); CARRY.pose(fr, t * 6, 1.0 if walking else 0.0)
-    # L03: company lines draw; a coin travels each line once a "year" (every 1.2 s)
-    for k, (b, tl, ln, p) in enumerate(COMP):
-        ln.data.bevel_factor_end = span(t, (T_RAIL, T_BANK, T_DRUG, T_PHONE)[k] + 0.2, (T_RAIL, T_BANK, T_DRUG, T_PHONE)[k] + 0.9) * (1 - span(t, T_L05, T_L05 + 0.6))
-        ln.data.keyframe_insert("bevel_factor_end", frame=fr)
-        ph = ((t - T_CASH + k * 0.3) % 1.2) / 1.2 if T_CASH <= t < T_L04 + 1 else 0.0
-        c_ = COINS[k]; c_.location = p.lerp(Vector((HX, HY, 0.4)), ph) + Vector((0, 0, 1.5 * math.sin(math.pi * ph)))
-        c_.scale = (1.0 if 0.03 < ph < 0.97 else 0.0,) * 3; c_.keyframe_insert("location", frame=fr); c_.keyframe_insert("scale", frame=fr)
-    # L04: the box opens, the stack rises (5 inches)
-    LID.rotation_euler.x = -1.9 * ease(span(t, T_KEPT - 0.4, T_KEPT + 0.2)); LID.keyframe_insert("rotation_euler", frame=fr)
-    STACK.scale.z = max(0.001, ease(span(t, T_KEPT, T_5))); STACK.keyframe_insert("scale", frame=fr)
-    # L05: the stack fans out into the town
-    for k, o in enumerate(OWN):
-        on = span(t, T_OWNED + k * 0.022, T_OWNED + k * 0.022 + 0.4); o.scale = (on, on, on); o.keyframe_insert("scale", frame=fr)
-    # L06: light lines from the owned buildings to the hospital (on "hospital") and the library (on "library"); a bright
-    # pulse runs along each, again and again — the lines throb while the gifts flow
-    for line, pulse, k in GIFT:
-        t0 = (T_HOSP if k % 2 == 0 else T_LIB) - 0.9 + (k // 2) * 0.04
-        on = 1 - span(t, T_L07 - 1.2, T_L07 - 0.5)                          # gone before the camera flies down through them
+    # 4. home: stands facing us (the orbit + pin), turns, walks at real speed, crouches with planted feet, picks up, turns, walks
+    if T_HELD - 0.8 <= t <= T_AT_PILE + 0.6 or fr == 0:
+        h1, h2 = face_to(P0, PT), face_to(PT, PP)
+        if t < T_TURN1: pos, face, walk = P0, FACE0, 0.0
+        elif t < T_WALK1: pos, face, walk = P0, lerp_ang(FACE0, h1, ease(span(t, T_TURN1, T_WALK1))), 0.0
+        elif t < T_AT_TREE: pos, face, walk = P0.lerp(PT, span(t, T_WALK1, T_AT_TREE)), h1, 1.0
+        elif t < T_TURN2: pos, face, walk = PT, h1, 0.0
+        elif t < T_WALK2: pos, face, walk = PT, lerp_ang(h1, h2, ease(span(t, T_TURN2, T_WALK2))), 0.0
+        elif t < T_AT_PILE: pos, face, walk = PT.lerp(PP, span(t, T_WALK2, T_AT_PILE)), h2, 1.0
+        else: pos, face, walk = PP, h2, 0.0
+        amp = walk * min(1.0, span(t, T_WALK1, T_WALK1 + 0.25) + span(t, T_WALK2, T_WALK2 + 0.25)) * (1 - span(t, T_AT_TREE - 0.2, T_AT_TREE)) if walk else 0.0
+        bend = ease(span(t, T_BEND, T_PICK)) * (1 - ease(span(t, T_UP, T_STOOD)))
+        HOME.place(fr, (pos.x, pos.y), face, z=-0.32 * bend)                       # hips lower; feet stay on the ground (knees bend below)
+        if walk and amp > 0.01: HOME.walk(fr, t * WSPD / 0.65 * math.pi, amp, arms=t < T_PICK)
+        else: HOME.stand(fr)
+        P = HOME.rig.pose.bones
+        for side in ("L", "R"):                                                  # a crouch: thighs forward, shins back, so the feet stay put
+            bu = HOME.base["upperleg01." + side]; P["upperleg01." + side].rotation_euler = (P["upperleg01." + side].rotation_euler.x - math.radians(70) * bend, bu.y, bu.z)
+            bl = HOME.base["lowerleg01." + side]; P["lowerleg01." + side].rotation_euler = (P["lowerleg01." + side].rotation_euler.x + math.radians(100) * bend, bl.y, bl.z)
+            for bn in ("upperleg01." + side, "lowerleg01." + side): P[bn].keyframe_insert("rotation_euler", frame=fr)
+        b = HOME.base["spine03"]; P["spine03"].rotation_euler = (b.x + math.radians(30) * bend, b.y, b.z); P["spine03"].keyframe_insert("rotation_euler", frame=fr)
+        if t >= T_PICK: HOME.act(fr, "carry")
+        elif bend > 0.01:
+            HOME.arms("DOWN", fr)
+        else: HOME.arms("DOWN", fr)
+        bpy.context.view_layer.update()
+        hmid = (HOME.hand("L") + HOME.hand("R")) / 2
+        for k_, br in enumerate(BRANCHES):                                       # on the ground until his hands reach them
+            if fr == 0 or t < T_PICK:
+                br.keyframe_insert("location", frame=fr); br.keyframe_insert("rotation_euler", frame=fr)
+            else:
+                if br.parent: mw_ = br.matrix_world.copy(); br.parent = None; br.matrix_world = mw_
+                br.location = hmid + V((0, 0, 0.04 + k_ * 0.025)); br.rotation_euler = (0, 0, math.radians(face + 90))
+                br.keyframe_insert("location", frame=fr); br.keyframe_insert("rotation_euler", frame=fr)
+        chest = HOME.rig.matrix_world @ HOME.rig.pose.bones["spine02"].tail                     # (MPFB numbers the spine top-down)
+        fwd_ = (HOME.rig.matrix_world.to_3x3() @ V((0, -1, 0))).normalized()
+        side_ = (HOME.rig.matrix_world.to_3x3() @ V((1, 0, 0))).normalized()
+        PINSET.location = chest + fwd_ * 0.2 + side_ * 0.07 + V((0, 0, 0.05)); PINSET.rotation_euler.z = HOME.rig.rotation_euler.z
+        PINSET.keyframe_insert("location", frame=fr); PINSET.keyframe_insert("rotation_euler", frame=fr)
+    # smoke from the chimney
+    for k_, s_ in enumerate(SMOKE):
+        ph = ((t * 0.18 + k_ / len(SMOKE)) % 1.0)
+        s_.location = (HX + 2.5 + 1.6 * ph, HY + 0.4 * ph, HHI.z + 4.0 * ph); s_.scale = ((0.5 + 1.6 * ph) * (1 - ph),) * 3
+        s_.keyframe_insert("location", frame=fr); s_.keyframe_insert("scale", frame=fr)
+    # 5. company lines draw on each word; coins travel each line once a "year"
+    for i, ((name, mdl, h), ln, (a, cs)) in enumerate(zip(COMP, ARCS, COINS)):
+        t0 = (T_RAIL, T_BANK, T_DRUG, T_PHONE)[i]
+        ln.data.bevel_factor_end = ease(span(t, t0 + 0.2, t0 + 0.9)) * (1 - span(t, T_L04 + 2.0, T_L04 + 2.6)); ln.data.keyframe_insert("bevel_factor_end", frame=fr)
+        for k_, c in enumerate(cs):
+            on = T_CASH <= t < T_L04 + 2.0; ph = ((t - T_CASH + k_ * 0.6 + i * 0.25) % 1.8) / 1.8 if on else 0.0
+            p_ = a.lerp(HOUSE_TOP, ph); p_.z += 5.0 * math.sin(math.pi * ph); c.location = p_
+            c.rotation_euler.z = t * 3.0; c.scale = ((1.0 if 0.04 < ph < 0.96 else 0.0) if on else 0.0,) * 3
+            c.keyframe_insert("location", frame=fr); c.keyframe_insert("scale", frame=fr); c.keyframe_insert("rotation_euler", frame=fr)
+    # 6. the drawer slides out toward us, its lid swings open; the sheets land one by one, flat, into a neat 5-inch stack
+    k = ease(span(t, T_95 - 0.8, T_95 + 0.2)); DRAWER.location.y = -1.5 * k; DRAWER.keyframe_insert("location", frame=fr)
+    LIDP.rotation_euler.x = math.radians(105) * ease(span(t, T_95 + 0.3, T_95 + 1.0)); LIDP.keyframe_insert("rotation_euler", frame=fr)
+    t_s0, t_s1 = T_PAPER - 0.4, T_5 + 0.3
+    for i, c in enumerate(CERTS):
+        tl = t_s0 + (t_s1 - t_s0) * i / len(CERTS)                               # the landing time of sheet i
+        drop = 1 - ease(span(t, tl - 0.15, tl)); vis = 1.0 if t >= tl - 0.15 else 0.0
+        c.location = (DX, SY, c["z"] + 0.0017 + 0.06 * drop); c.rotation_euler.z = c["rz"]; c.scale = (vis, vis, vis)
+        c.keyframe_insert("location", frame=fr); c.keyframe_insert("scale", frame=fr)
+    top_z = STACK0 + 0.00335 * len(CERTS)
+    for i, sh_ in enumerate(TOPCERTS):
+        tl = t_s1 + 0.05 + i * 0.12; fan = ease(span(t, tl, tl + 0.5)); fly = ease(span(t, T_OWNED - 0.2 + i * 0.1, T_OWNED + 1.0 + i * 0.1))
+        vis = 1.0 if t >= tl - 0.1 else 0.0
+        sh_.location = V((DX + (i - 1.5) * 0.04 * fan, SY - 0.03 * i * fan, top_z + 0.004 * i + 0.03 * fan)).lerp(V((DX + (i - 1.5) * 2, VY - 9, 6 + i)), fly)
+        sh_.rotation_euler = (math.radians(-28) * fan, 0, math.radians(7 * (i - 1.5)) * fan); sh_.scale = (vis, vis, vis)
+        sh_.keyframe_insert("location", frame=fr); sh_.keyframe_insert("rotation_euler", frame=fr); sh_.keyframe_insert("scale", frame=fr)
+    # 7. the town he owns: green marks pop on
+    for i, m_ in enumerate(MARKS):
+        g = back_out(span(t, T_OWNED + 0.7 + i * 0.02, T_OWNED + 1.1 + i * 0.02)); m_.scale = (g, g, g); m_.keyframe_insert("scale", frame=fr)
+    # 8. gifts: throbbing light lines to the hospital and the library
+    for line, pulse, k_ in GIFT:
+        t0 = (T_HOSP if k_ % 2 == 0 else T_LIB) - 0.9 + (k_ // 2) * 0.04; on = 1 - span(t, T_L07 - 1.2, T_L07 - 0.5)
         line.data.bevel_factor_end = ease(span(t, t0, t0 + 0.7)) * on; line.data.keyframe_insert("bevel_factor_end", frame=fr)
-        ph = ((t - t0 - 0.7 + (k % 5) * 0.23) % 1.1) / 1.1 if t > t0 + 0.7 and on > 0.01 else -1.0
+        ph = ((t - t0 - 0.7 + (k_ % 5) * 0.23) % 1.1) / 1.1 if t > t0 + 0.7 and on > 0.01 else -1.0
         streak(pulse, fr, ph * 1.25 if ph >= 0 else 0.0, 0.16)
-for k, wn in enumerate(HWIN): wn.keyframe_insert("color", frame=f(T_HOSP - 0.2)); wn.color = YEL; wn.keyframe_insert("color", frame=f(T_HOSP + k * 0.05))
-for k, wn in enumerate(LWIN): wn.keyframe_insert("color", frame=f(T_LIB - 0.2)); wn.color = YEL; wn.keyframe_insert("color", frame=f(T_LIB + k * 0.05))
-for pl in PUMPLIGHT: pl.keyframe_insert("color", frame=f(T_QUIETLY - 0.1)); pl.color = DARK; pl.keyframe_insert("color", frame=f(T_QUIETLY + 0.1))
-for o in [b for b, _, _, _ in COMP] + [t_ for _, t_, _, _ in COMP] + [LAB95, LAB5, HOSP, LIBR] + COINS:
-    o.hide_render = True
-show([b for b, _, _, _ in COMP] + [t_ for _, t_, _, _ in COMP] + [LAB95, LAB5] + COINS, 0, False)
-for k, (b, tl, _, _) in enumerate(COMP): show([b, tl], f((T_RAIL, T_BANK, T_DRUG, T_PHONE)[k] - 0.1), True)
-show([b for b, _, _, _ in COMP] + [t_ for _, t_, _, _ in COMP], f(T_L05 + 0.3), False)
-show([LAB95], f(T_95 - 0.1), True); show([LAB5], f(T_5 - 0.1), True); show([LAB95, LAB5], f(T_L05 + 0.2), False)
-if ANIM: show([HROOF], f(T_L04 - 0.4), False); show([HROOF], f(T_L05 + 0.6), True)   # animatic: roof hidden; v4: the ring cut
-show([HOSP, LIBR], 0, False); show([HOSP, LIBR], f(T_L06 - 0.3), True)
+for L, t0 in zip(HLIGHT, (T_HOSP, T_LIB)):
+    L.data.energy = 0; L.data.keyframe_insert("energy", frame=0); L.data.keyframe_insert("energy", frame=F(t0) - 3)
+    L.data.energy = 9000; L.data.keyframe_insert("energy", frame=F(t0) + 6)
+CANLIGHT.data.keyframe_insert("energy", frame=F(T_QUIETLY) - 2); CANLIGHT.data.energy = 0; CANLIGHT.data.keyframe_insert("energy", frame=F(T_QUIETLY) + 4)
+CT.data.keyframe_insert("energy", frame=F(T_DIED) - 6); CT.data.energy = 90; CT.data.keyframe_insert("energy", frame=F(T_DIED) + 10)
+
+# ---------- visibility (offcam = only while off camera; show = animated in/out) ----------
+offcam([STORE], 0, False); offcam([STORE], F(T_L02 + 0.9), True)
+offcam([JAN.rig] + JAN.objects() + [MOP], 0, True); offcam([JAN.rig] + JAN.objects() + [MOP], F(T_L02 + 1.6), False)
+offcam([ATT.rig] + ATT.objects() + [NOZ, HOSE, CAR], 0, True); offcam([ATT.rig] + ATT.objects() + [NOZ, HOSE, CAR], F(T_HELD + 0.5), False)
+offcam([CARH], 0, False); offcam([CARH], F(T_DROVE), True)                       # (the camera is still at the pump, looking away)
+offcam([END.rig] + END.objects(), 0, False); offcam([END.rig] + END.objects(), F(T_L07 - 1.0), True)
+offcam([HOME.rig] + HOME.objects() + [PINSET], 0, False); offcam([HOME.rig] + HOME.objects() + [PINSET], F(T_DROVE), True)
+offcam([HOME.rig] + HOME.objects() + [PINSET] + BRANCHES, F(T_L03 + 3.0), False)
+for ln in ARCS: offcam([ln], 0, False); offcam([ln], F(T_RAIL) + 4, True); offcam([ln], F(T_L04 + 2.7), False)
+for line, pulse, k_ in GIFT: offcam([line, pulse], 0, False); offcam([line, pulse], F(T_HOSP - 1.0), True); offcam([line, pulse], F(T_L07 - 0.4), False)
+for i, e in enumerate(OWN): show([e], 0, False); show([e], F(T_OWNED + 0.3 + i * 0.02) + 10, True, d=10)
+show(LABELS + [c for _, cs in COINS for c in cs], 0, False)
+for i in range(4): show([LABELS[i]], F((T_RAIL, T_BANK, T_DRUG, T_PHONE)[i]) + 2, True); show([LABELS[i]], F(T_L04 + 2.0), False)
+T_IN = T_L04 + 2.9                                                               # the camera is in the dark doorway
+offcam(TUN, 0, True); offcam([BANK], 0, True); offcam([BANK], F(T_IN), False); offcam([BANK], F(T_OWNED + 1.3), True)
+offcam(VAULTSET, 0, False); offcam(VAULTSET, F(T_IN - 1.0), True); offcam(VAULTSET + TUN, F(T_OWNED + 1.4), False)
+show([LAB95, LAB5, HLAB, LLAB], 0, False)
+show([LAB95], F(T_95) + 4, True); show([LAB95], F(T_L05), False); show([LAB5], F(T_5) + 6, True); show([LAB5], F(T_L05), False)
+show([HLAB], F(T_HOSP) + 4, True); show([LLAB], F(T_LIB) + 4, True); show([HLAB, LLAB], F(T_L07), False)
 
 # ---------- camera ----------
 rig = PerspRig()
-V = Vector
-rig.keys([
-    (F(-1), V((-23.0, 5.0, 0.6)), V((-25.2, 6.5, 0.8)), 35, 2.8), (0, V((-23.0, 5.0, 0.6)), V((-25.2, 6.5, 0.8)), 35, 2.8),
-    (F(T_DIED), V((-23.8, 5.4, 0.75)), V((-25.3, 6.5, 0.9)), 40, 2.4),                                      # 1 slow push on the janitor
-    (F(T_DIED + 0.6), V((-22.0, 4.9, 1.5)), V((-22.0, -2.0, 1.4)), 32, 4.0),                                  # 2 to the street door from inside
-    (F(T_L02 + 0.2), V((-22.0, 3.0, 1.6)), V((-21.5, -6.0, 1.2)), 32, 4.0),                                  #   out through it
-    (F(T_PUMPED + 0.4), V((-15.5, -1.0, 1.4)), V((-20.5, -7.0, 1.1)), 35, 4.0),                              #   the gas station
-    (F(T_TOYOTA - 0.4), V((-14.5, -1.4, 1.3)), V((-19.0, -6.2, 1.0)), 35, 4.0),
-    (F(T_TOYOTA + 0.8), V((HX - 18, 3.5, 2.2)), V((HX - 9, -3.5, 1.0)), 35, 4.0),                              # 3 follow the car (from behind and aside)
-    (F(T_PIN - 0.6), V((HX - 1.0, HY + 8.5, 1.6)), V((HX + 0.6, HY + 4.1, 1.4)), 40, 4.0),
-    (F(T_PIN + 0.2), V((HX + 0.6, HY + 5.6, 1.45)), V((HX + 0.6, HY + 4.1, 1.4)), 45, 2.0),
-    (F(T_PIN + 0.75), V((HX + 0.62, HY + 5.55, 1.46)), V((HX + 0.6, HY + 4.1, 1.4)), 45, 2.0),               #   hold on it (two keys, or the camera sweeps past)                     #   ECU the safety pin
-    (F(T_PIN + 1.4), V((HX + 4.0, HY + 10.0, 2.4)), V((HX + 5.5, HY + 0.5, 1.0)), 35, 4.0),                    #   back off the porch first (it slid along the wall)
-    (F(T_BRANCH), V((HX + 11.0, HY + 7.0, 2.2)), V((HX + 5.6, HY + 0.6, 1.0)), 35, 4.0),                      # 4 branches to the woodpile, open view
-    (F(T_L03 + 0.9), V((HX + 14, HY + 30, 22)), V((HX, HY, 0.5)), 28, 8.0),                                  # 5 crane up into the diagram (wide: all four companies in frame)
-    (F(T_CASH), V((HX + 12, HY + 36, 28)), V((HX, HY, 0.5)), 30, 11.0),
-    (F(T_L04 + 0.6), V((HX + 1.2, HY + 1.8, 2.2)), V((HX, HY, 1.0)), 40, 4.0),                                 # 6 down into the house
-    (F(T_KEPT + 0.3), V((HX + 0.55, HY + 0.75, 1.35)), V((HX, HY, 1.02)), 50, 2.0), (F(T_5 + 0.6), V((HX + 0.5, HY + 0.7, 1.4)), V((HX, HY, 1.08)), 52, 2.2),
-    (F(T_PIECE + 0.4), V((HX + 30, HY + 60, 55)), V((HX - 10, 0, 0)), 30, 11.0),                               # 7 pull up over the town
-    (F(T_BIGGEST), V((8, 70, 48)), V((8, 18, 2)), 30, 11.0),                                        # 8 hospital + library
-    (F(T_L07 + 0.6), V((-12.0, 4.0, 2.2)), V((-20.0, -7.5, 1.3)), 35, 4.0), (F(T_QUIETLY + 0.4), V((-13.5, 1.5, 1.6)), V((-20.0, -7.8, 1.2)), 40, 4.0),  # 9 back to the pumps
-    (F(T_L08 + 2), V((-13.8, 1.0, 1.55)), V((-20.0, -7.8, 1.2)), 40, 4.0)], drift=0.03)
+jan = JAN_P + V((0, 0, 1.15)); pump = ATT_P + V((0, 0, 1.3)); chest = P0 + V((0, 0, 1.38))
+def orbit(a_deg, r, z=1.5):
+    a = math.radians(a_deg); return P0 + V((math.sin(a) * r, -math.cos(a) * r, z))
+ck = [(F(-1), V((-23.2, 7.0, 1.25)), jan, 35, 2.8), (0, V((-23.2, 7.0, 1.25)), jan, 35, 2.8),
+      (F(T_DIED), V((-23.9, 7.4, 1.25)), jan, 42, 2.4),                                                  # 1 a slow push on the still janitor
+      (F(T_L02 + 0.3), V((-22.0, 7.6, 1.5)), V((-22.0, 4.0, 1.3)), 32, 4.0),                             # 2 out through the door
+      (F(T_L02 + 1.2), V((-22.0, 4.2, 1.6)), pump, 32, 4.0),
+      (F(T_PUMPED + 0.4), V((ATT_P.x + 2.4, ATT_P.y - 4.4, 1.6)), pump + V((0.6, 0, 0)), 35, 4.0),       #   him at the pump in profile, nozzle in the car
+      (F(T_LIFE + 0.2), V((ATT_P.x + 2.2, ATT_P.y - 4.0, 1.55)), pump + V((0.6, 0, 0)), 38, 4.0),
+      (F(T_TOYOTA - 0.1), orbit(80, 4.5, 1.9), chest, 32, 4.0),                                         # 3 glide to the house: the car in the drive, him beside it
+      (F(T_HELD), orbit(62, 3.0, 1.6), chest, 35, 3.2),                                                 #   orbit him to the front: the jacket
+      (F(T_PIN - 0.4), orbit(18, 1.6, 1.5), chest, 42, 2.4),
+      (F(T_PIN + 0.2), P0 + V((0.09, -0.8, 1.34)), P0 + V((0.07, -0.2, 1.32)), 55, 2.0),               #   ECU: the safety pin on his chest
+      (F(T_TURN1 + 0.1), P0 + V((0.09, -0.84, 1.34)), P0 + V((0.07, -0.2, 1.32)), 55, 2.0),
+      (F(T_WALK1 + 0.6), (P0 + PT) / 2 + V((1.6, -4.6, 1.8)), (P0 + PT) / 2 + V((0, 0, 1.0)), 35, 4.0),  # 4 follow him to the branches
+      (F(T_BEND + 0.2), PT + V((1.4, -3.4, 1.5)), PT + V((0, 0, 0.7)), 38, 3.2),
+      (F(T_STOOD + 0.2), PT + V((1.6, -3.6, 1.6)), PT + V((0, 0, 0.9)), 38, 3.2),
+      (F(T_AT_PILE - 0.2), (PT + PP) / 2 + V((1.8, -4.2, 1.8)), (PT + PP) / 2 + V((0, 0, 1.0)), 35, 4.0),
+      (F(T_CASH - 1.5), V((HX + 10, HY - 34, 26)), V((HX + 20, ROWY - 2, 4)), 26, 8.0),                 # 5 crane up: house + the companies
+      (F(T_L04 + 1.0), V((HX + 11, HY - 36, 27)), V((HX + 20, ROWY - 2, 4)), 26, 8.0),
+      (F(T_L04 + 2.2), V((BX, BFRONT - 7, 2.2)), V((BX, BFRONT, 1.9)), 28, 5.6),                        # 6 to the bank's doorway
+      (F(T_IN), V((BX, BFRONT + 0.6, 1.8)), V((BX, VY, 1.6)), 28, 4.0),                                  #   through it (dark)
+      (F(T_95 - 0.4), V((DX + 0.3, VY - 2.0, DZ + 0.5)), V((DX, VY + 0.6, DZ + 0.3)), 32, 2.8),          #   the drawer slides out
+      (F(T_PAPER - 0.4), V((DX + 0.42, SY - 1.05, DZ + 0.55)), V((DX, SY, DZ + 0.08)), 45, 2.4),          #   the stack
+      (F(T_5 + 0.6), V((DX + 0.46, SY - 0.9, DZ + 0.42)), V((DX, SY, DZ + 0.09)), 50, 2.2),
+      (F(T_OWNED), V((DX + 0.42, SY - 1.05, DZ + 0.5)), V((DX, SY, DZ + 0.12)), 45, 2.4),
+      (F(T_PIECE + 0.6), V((BX - 10, BFRONT - 60, 70)), V((20, 0, 0)), 24, 11.0),                        # 7 out and up: the town he owns
+      (F(T_BIGGEST), V((27, -70, 62)), V((27, 22, 2)), 24, 11.0),                                         # 8 hospital + library
+      (F(T_L07 + 0.9), V((END_P.x + 4.6, END_P.y + 5.6, 1.8)), END_P + V((0, 0, 1.3)), 35, 4.0),         # 9 back to the pumps, night
+      (F(T_QUIETLY + 0.5), V((END_P.x + 4.1, END_P.y + 5.0, 1.7)), END_P + V((0, 0, 1.3)), 38, 4.0),
+      (F(T_L08 + 2), V((END_P.x + 4.0, END_P.y + 4.9, 1.7)), END_P + V((0, 0, 1.3)), 38, 4.0)]
+ck.sort(key=lambda k_: k_[0])
+rig.keys(ck, drift=0.02)
+for label in LABELS + [LAB95, LAB5, HLAB, LLAB, GASSIGN]:
+    cns = label.constraints.new("TRACK_TO"); cns.target = rig.cam; cns.track_axis = "TRACK_Z"; cns.up_axis = "UP_Y"
 for fr in range(N): rig.set(fr)
+open(EP + "build/model_credits.txt", "w").write("3D models: " + "; ".join(credits_for()) + " — via Poly Pizza (CC BY 3.0); others CC0. Textures and sky: Poly Haven (CC0).\n")
 
-if not ANIM and "preview" in A:
-    sys.path.insert(0, EP + "../../tools/blender"); from preview import preview
-    preview(EP + "out/preview.mp4", range(N), audio=EP + "audio/voice.wav"); raise SystemExit
-if not ANIM and "still" in A:
+# ---------- outputs ----------
+if "debug" in A: exec(open("/private/tmp/claude-501/-Users-user-Private-miki-studio/e9841400-eb08-490d-93d9-b93fa86e76d7/scratchpad/dbg2.py").read()); raise SystemExit
+if CHECK:                                                                         # the user scrubs this in Blender (no render)
+    for scr in bpy.data.screens:
+        for area in scr.areas:
+            if area.type == "VIEW_3D":
+                for sp_ in area.spaces:
+                    if sp_.type == "VIEW_3D":
+                        sp_.shading.type = "SOLID"; sp_.shading.color_type = "MATERIAL"; sp_.region_3d.view_perspective = "CAMERA"
+                        sp_.overlay.show_overlays = False
+    sc.frame_set(0); bpy.ops.wm.save_as_mainfile(filepath=EP + "EX20_check.blend", compress=True)
+    print("check file:", EP + "EX20_check.blend"); raise SystemExit
+if "preview" in A:
+    from preview import preview; preview(EP + "out/preview.mp4", range(N), audio=EP + "audio/voice.wav"); raise SystemExit
+if "still" in A:
     for fr in [int(x) for x in A[A.index("still") + 1].split(",")]:
         sc.frame_set(fr); sc.render.filepath = f"{OUT}/f_{fr:04d}.png"; bpy.ops.render.render(write_still=True)
     raise SystemExit
-if not ANIM:
-    render_range(f"{OUT}/f_", 0, N - 1); raise SystemExit
-if ANIM and "still" in A:                                               # inspect single animatic frames
-    sh.use_dof = True
-    for fr in [int(x) for x in A[A.index("still") + 1].split(",")]:
-        sc.frame_set(fr); print("CAM", fr, tuple(round(v, 2) for v in rig.cam.location), "JACKET", tuple(round(v, 2) for v in JACKET.location), JACKET.hide_render)
-        sc.render.filepath = f"{OUT}/s_{fr:04d}.png"; bpy.ops.render.render(write_still=True)
-    raise SystemExit
-if ANIM:
-    sh.use_dof = True
-    render_range(f"{OUT}/a_", 0, N - 1)
-    import subprocess
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-framerate", str(FPS), "-i", f"{OUT}/a_%04d.png", "-i", EP + "audio/voice.wav",
-                    "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "24", "-c:a", "aac", "-shortest", EP + "out/animatic.mp4"], check=True)
-    print("animatic:", EP + "out/animatic.mp4")
+render_range(f"{OUT}/f_", 0, N - 1)

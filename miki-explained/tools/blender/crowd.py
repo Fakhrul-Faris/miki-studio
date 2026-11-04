@@ -40,6 +40,9 @@ STANDING = [
 # sitting: legs and spine as local rotations (X = the bone's bend, Y = its twist, i.e. a head turn) …
 SIT = {"upperleg01.L": (-90, 0, 0), "upperleg01.R": (-90, 0, 0), "lowerleg01.L": (90, 0, 0), "lowerleg01.R": (90, 0, 0),
        "spine03": (8, 0, 0), "spine02": (6, 0, 0), "neck01": (8, 0, 0), "head": (6, 0, 0)}
+# Ronald Read (EX20 rebuild): one older man, standing, in four candidate outfits (pick the work jacket)
+RONALD = [dict(name="ron_%s" % c[-2:], stand=True, gender=1.0, age=0.88, weight=0.6, race=(0.15, 0.8, 0.05), clothes=c, hair="short01",
+               pose="s_pockets", clay=(0.30, 0.18, 0.07)) for c in ("male_casualsuit03", "male_casualsuit04", "male_casualsuit05", "male_casualsuit06")]
 # … per pose: extra rotations, and per side (upper arm, forearm) aimed at a rig-space direction (x = the figure's left, −y = forward, z = up)
 def _both(up, low): return {"L": (up, low), "R": ((-up[0], up[1], up[2]), (-low[0], low[1], low[2]))}
 _KNEES, _LAP = ((0.12, -0.3, -1), (-0.05, -1, -0.5)), ((0.08, -0.35, -1), (-0.45, -0.85, -0.3))
@@ -176,7 +179,7 @@ def _check(p):
 if __name__ == "__main__" and "--" in sys.argv and "build" in sys.argv[sys.argv.index("--") + 1:]:
     import os; os.makedirs(KIT, exist_ok=True)
     which = sys.argv[sys.argv.index("--") + 1:]
-    for p in (STANDING if "stand" in which else PEOPLE if "sit" in which else PEOPLE + STANDING):
+    for p in (RONALD if "ronald" in which else STANDING if "stand" in which else PEOPLE if "sit" in which else PEOPLE + STANDING):
         build(p)
         if "check" in sys.argv: _check(p)
         else: bpy.ops.wm.save_as_mainfile(filepath=KIT + p["name"] + ".blend")

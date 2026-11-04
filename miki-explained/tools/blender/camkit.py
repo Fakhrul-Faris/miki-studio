@@ -38,9 +38,9 @@ def engine(kind="eevee", samples=64, fast=False):
 def _bsdf(name):
     m = bpy.data.materials.new(name); m.use_nodes = True; return m, m.node_tree.nodes["Principled BSDF"]
 def metal(name, col, rough=0.35):
-    m, b = _bsdf(name); b.inputs["Base Color"].default_value = col; b.inputs["Metallic"].default_value = 1.0; b.inputs["Roughness"].default_value = rough; return m
+    m, b = _bsdf(name); m.diffuse_color = col; b.inputs["Base Color"].default_value = col; b.inputs["Metallic"].default_value = 1.0; b.inputs["Roughness"].default_value = rough; return m
 def paint(name, col, rough=0.45, coat=0.4):
-    m, b = _bsdf(name); b.inputs["Base Color"].default_value = col; b.inputs["Roughness"].default_value = rough
+    m, b = _bsdf(name); m.diffuse_color = col; b.inputs["Base Color"].default_value = col; b.inputs["Roughness"].default_value = rough
     b.inputs["Coat Weight"].default_value = coat; return m
 def glass(name, tint=(0.85, 0.95, 1.0, 1), rough=0.04):
     m, b = _bsdf(name); b.inputs["Base Color"].default_value = tint; b.inputs["Transmission Weight"].default_value = 1.0
@@ -53,7 +53,7 @@ def frosted(name, col, glow=0.6):
     m = glass(name, col, rough=0.45); b = m.node_tree.nodes["Principled BSDF"]
     b.inputs["Emission Color"].default_value = col; b.inputs["Emission Strength"].default_value = glow; return m
 def glow(name, col, strength=6.0):
-    m, b = _bsdf(name); b.inputs["Base Color"].default_value = col; b.inputs["Emission Color"].default_value = col
+    m, b = _bsdf(name); m.diffuse_color = col; b.inputs["Base Color"].default_value = col; b.inputs["Emission Color"].default_value = col
     b.inputs["Emission Strength"].default_value = strength; return m
 COPPER, GOLD = (0.95, 0.52, 0.32, 1), (1.0, 0.76, 0.33, 1)
 
@@ -281,3 +281,52 @@ def isotype(name, loc, m, h=1.0, face=0.0):
 def recolor(o, m, f, d=6):
     """switch an icon's material at frame f (keyed via a hidden twin is overkill; a scale blink sells the change)."""
     o.material_slots[0].material = m
+
+
+# ---------- Poly Haven (CC0) textures and sky (user, 2026-11-04: "you can add poly haven") ----------
+PH = __import__("os").path.join(__import__("os").path.dirname(__import__("os").path.dirname(__import__("os").path.dirname(__import__("os").path.abspath(__file__)))), "02_kit", "polyhaven")
+def pbr(name, role, scale=1.0, tint=None, rough_mul=1.0):
+    """A textured material from 02_kit/polyhaven/<role>_{diff,rough,nor}.jpg, box-projected in object space (no UVs needed).
+    scale = texture repeats per metre; tint multiplies the colour (keeps the palette)."""
+    import os
+    m = bpy.data.materials.new(name); m.use_nodes = True; nt = m.node_tree; b = nt.nodes["Principled BSDF"]
+    tc = nt.nodes.new("ShaderNodeTexCoord"); mp = nt.nodes.new("ShaderNodeMapping"); mp.inputs["Scale"].default_value = (scale, scale, scale)
+    nt.links.new(tc.outputs["Object"], mp.inputs["Vector"])
+    def img(kind, non_color):
+        p = os.path.join(PH, f"{role}_{kind}.jpg")
+        if not os.path.exists(p): return None
+        n = nt.nodes.new("ShaderNodeTexImage"); n.image = bpy.data.images.load(p, check_existing=True); n.projection = "BOX"; n.projection_blend = 0.25
+        if non_color: n.image.colorspace_settings.name = "Non-Color"
+        nt.links.new(mp.outputs["Vector"], n.inputs["Vector"]); return n
+    d = img("diff", False); r = img("rough", True); nn = img("nor", True)
+    if d:
+        if tint:
+            mx = nt.nodes.new("ShaderNodeMix"); mx.data_type = "RGBA"; mx.blend_type = "MULTIPLY"; mx.inputs[0].default_value = 1.0
+            nt.links.new(d.outputs["Color"], mx.inputs[6]); mx.inputs[7].default_value = tint; nt.links.new(mx.outputs[2], b.inputs["Base Color"])
+        else: nt.links.new(d.outputs["Color"], b.inputs["Base Color"])
+    if r:
+        mu = nt.nodes.new("ShaderNodeMath"); mu.operation = "MULTIPLY"; mu.inputs[1].default_value = rough_mul
+        nt.links.new(r.outputs["Color"], mu.inputs[0]); nt.links.new(mu.outputs[0], b.inputs["Roughness"])
+    if nn:
+        nm = nt.nodes.new("ShaderNodeNormalMap"); nm.inputs["Strength"].default_value = 0.6
+        nt.links.new(nn.outputs["Color"], nm.inputs["Color"]); nt.links.new(nm.outputs["Normal"], b.inputs["Normal"])
+    m.diffuse_color = tint or (0.5, 0.5, 0.5, 1); return m
+
+
+def world_hdri(strength=0.6, camera_top="#2A3A60", camera_bottom="#C89A82"):
+    """Light the scene with the Poly Haven dusk HDRI; the camera still sees our own gradient sky (keeps the look)."""
+    import os
+    from isokit import hexc
+    sc = bpy.context.scene; w = sc.world or bpy.data.worlds.new("w"); sc.world = w; w.use_nodes = True; wn = w.node_tree; wn.nodes.clear()
+    out = wn.nodes.new("ShaderNodeOutputWorld"); env = wn.nodes.new("ShaderNodeTexEnvironment")
+    env.image = bpy.data.images.load(os.path.join(PH, "sky.hdr"), check_existing=True)
+    light = wn.nodes.new("ShaderNodeBackground"); nt_links = wn.links; nt_links.new(env.outputs["Color"], light.inputs["Color"]); light.inputs["Strength"].default_value = strength
+    grad = wn.nodes.new("ShaderNodeValToRGB"); tc = wn.nodes.new("ShaderNodeTexCoord"); sep = wn.nodes.new("ShaderNodeSeparateXYZ"); mr = wn.nodes.new("ShaderNodeMapRange")
+    mr.inputs["From Min"].default_value = -0.05; mr.inputs["From Max"].default_value = 0.5
+    nt_links.new(tc.outputs["Normal"], sep.inputs[0]); nt_links.new(sep.outputs["Z"], mr.inputs["Value"]); nt_links.new(mr.outputs[0], grad.inputs[0])
+    grad.color_ramp.elements[0].color = hexc(camera_bottom); grad.color_ramp.elements[1].color = hexc(camera_top); grad.color_ramp.elements[1].position = 0.45
+    seen = wn.nodes.new("ShaderNodeBackground"); nt_links.new(grad.outputs[0], seen.inputs["Color"])
+    lp = wn.nodes.new("ShaderNodeLightPath"); mix = wn.nodes.new("ShaderNodeMixShader")
+    nt_links.new(lp.outputs["Is Camera Ray"], mix.inputs[0]); nt_links.new(light.outputs[0], mix.inputs[1]); nt_links.new(seen.outputs[0], mix.inputs[2])
+    nt_links.new(mix.outputs[0], out.inputs[0])
+    return light.inputs["Strength"], seen.inputs["Strength"]

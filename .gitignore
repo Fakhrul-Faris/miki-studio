@@ -83,3 +83,4 @@ miki-explained/04_episodes/_tests/*/*.ecproj
 miki-explained/04_episodes/_tests/*/audio/*.wav
 miki-explained/04_episodes/*/footage/*.mp4
 miki-explained/04_episodes/_tests/*/footage/*.mp4
+miki-explained/04_episodes/*/*_check.blend
