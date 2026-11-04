@@ -54,3 +54,32 @@ def credits_for(names=None):
     cr = json.load(open(os.path.join(KIT, "credits.json")))
     names = set(names or USED)
     return sorted({f"{t} by {a} ({l})" for role, t, a, l, _ in cr if role in names and l.startswith("CC-BY")})
+
+
+# ---------- Google Scanned Objects (1,033 photo-scanned household items, CC BY 4.0; user approved 2026-11-05) ----------
+# The web-ready copies at huggingface.co/datasets/codepawl/scanned-objects-glb (real size in metres; meshopt geometry,
+# which Blender 5.2 imports). Downloaded on first use into 02_kit/models/gso_<Name>.glb and credited in credits.json.
+#   from lib3d import scanned, scanned_names
+#   box = scanned("Clue_Board_Game_Classic_Edition", length=0.5, at=(x, y, 0))   # then clay_all(box, CLAY)
+# The scans come from Gazebo (Z up): some import standing on a side (the Clue box: 0.26 m tall). Check dims; rotate if so.
+GSO = "https://huggingface.co/datasets/codepawl/scanned-objects-glb/resolve/main/objects/{0}/{0}.glb"
+
+
+def scanned_names():
+    """every object name in the pack (needs the network once)."""
+    import urllib.request
+    d = json.load(urllib.request.urlopen("https://huggingface.co/api/datasets/codepawl/scanned-objects-glb"))
+    return sorted({s["rfilename"].split("/")[1] for s in d["siblings"] if s["rfilename"].startswith("objects/")})
+
+
+def scanned(name, **kw):
+    """a scanned object as a library model (see model()); downloads it and adds its credit the first time."""
+    import urllib.request
+    key = "gso_" + name; path = os.path.join(KIT, key + ".glb")
+    if not os.path.exists(path):
+        urllib.request.urlretrieve(GSO.format(name), path)
+        cp = os.path.join(KIT, "credits.json"); cr = json.load(open(cp))
+        if not any(r[0] == key for r in cr):
+            cr.append([key, name.replace("_", " "), "Google Research (Google Scanned Objects)", "CC-BY 4.0", GSO.format(name)])
+            json.dump(cr, open(cp, "w"), indent=1)
+    return model(key, **kw)

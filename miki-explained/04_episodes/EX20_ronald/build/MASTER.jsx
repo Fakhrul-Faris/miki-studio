@@ -1,10 +1,11 @@
-// MASTER, 30 fps (v4), one comp over the Blender run (build/episode.py -> out/frames). On top: caption blocks (capBlock,
-// caps.jsx) and the follow card. Labels live in the world (3D type on the roof stage and screens), so no pins here.
-var TOTAL = 1686, c = freshComp("MASTER", TOTAL); c.bgColor = BGD;
+// MASTER, 30 fps (v4 clay), one comp over the Blender run (build/episode.py -> out/frames). On top: Bebas caption phrases
+// (capBebas, caps.jsx) and the follow card; the logo has no sound.
+// Labels live in the world (3D type on the map), so no pins here.
+var TOTAL = 1758, c = freshComp("MASTER", TOTAL); c.bgColor = BGD;
 app.run("file.import", { paths: [DIR + "out/frames/f_0000.png"], sequence: true, addToComp: false });
 var seqIt = app.project.item(app.project.numItems); seqIt.mainSource.conformFrameRate = FPS; seqIt.name = "SEQ_world";
 c.layers.add(seqIt).name = "world";
-for (var i = 0; i < CAP.length; i++) capBlock(c, CAP[i], i);
+for (var i = 0; i < CAP.length; i++) capBebas(c, CAP[i], i);            // v4 clay captions
 function card(name, str, font, style, size, col, box, f0, f1, just, tracking) {
   app.run("comp.open", { comp: c.name });
   app.run("layer.newText", { text: str, name: name, font: font, style: style, size: size, fill: hex(col), box: box,
@@ -17,9 +18,9 @@ function card(name, str, font, style, size, col, box, f0, f1, just, tracking) {
   l.inPoint = f0 * F; l.outPoint = f1 * F; return l;
 }
 var lg = img(c, "logo.png", "logo"); S(lg).setValue([42, 42]);
-smooth(keys(P(lg), [[1643, [540, 834]], [1649, [540, 810]]]), 85); keys(O(lg), [[1643, 0], [1648, 100]]);
-lg.inPoint = 1643 * F; lg.outPoint = (TOTAL + 5) * F;
-card("follow", "Follow Meikigo\rfor more.", "Inter Display", "Bold", 66, WARM, [60, 985, 960, 170], 1646, TOTAL + 5, "center", -10);
+smooth(keys(P(lg), [[1714, [540, 834]], [1720, [540, 810]]]), 85); keys(O(lg), [[1714, 0], [1719, 100]]);
+lg.inPoint = 1714 * F; lg.outPoint = (TOTAL + 5) * F;
+card("follow", "FOLLOW MEIKIGO\rFOR MORE.", "Bebas Neue", "Regular", 92, WARM, [60, 975, 960, 200], 1717, TOTAL + 5, "center", 10);
 app.run("comp.open", { comp: "MASTER" });
 app.run("file.import", { paths: [DIR + "sfx/mix.wav"], addToComp: true, time: 0 });
 c.layer(1).name = "voice + bed + hits (sfx/mix.wav)";

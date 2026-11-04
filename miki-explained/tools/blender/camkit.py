@@ -67,14 +67,16 @@ def studio(floor_col="#1C1F26", line_col="#3A4150", back_top="#2A3140", back_bot
     m = bpy.data.materials.new("grid floor"); m.use_nodes = True; nt = m.node_tree; b = nt.nodes["Principled BSDF"]
     b.inputs["Roughness"].default_value = 0.28; b.inputs["Specular IOR Level"].default_value = 0.4
     tc = nt.nodes.new("ShaderNodeTexCoord"); sep = nt.nodes.new("ShaderNodeSeparateXYZ"); nt.links.new(tc.outputs["Object"], sep.inputs[0])
-    lines = []
+    grid = []
     for axis in ("X", "Y"):
         d = nt.nodes.new("ShaderNodeMath"); d.operation = "DIVIDE"; d.inputs[1].default_value = cell; nt.links.new(sep.outputs[axis], d.inputs[0])
         fr = nt.nodes.new("ShaderNodeMath"); fr.operation = "PINGPONG"; fr.inputs[1].default_value = 0.5; nt.links.new(d.outputs[0], fr.inputs[0])
-        lt = nt.nodes.new("ShaderNodeMath"); lt.operation = "LESS_THAN"; lt.inputs[1].default_value = 0.02; nt.links.new(fr.outputs[0], lt.inputs[0]); lines.append(lt)
-    mx = nt.nodes.new("ShaderNodeMath"); mx.operation = "MAXIMUM"; nt.links.new(lines[0].outputs[0], mx.inputs[0]); nt.links.new(lines[1].outputs[0], mx.inputs[1])
+        lt = nt.nodes.new("ShaderNodeMath"); lt.operation = "LESS_THAN"; lt.inputs[1].default_value = 0.02; nt.links.new(fr.outputs[0], lt.inputs[0]); grid.append(lt)
+    mx = nt.nodes.new("ShaderNodeMath"); mx.operation = "MAXIMUM"; nt.links.new(grid[0].outputs[0], mx.inputs[0]); nt.links.new(grid[1].outputs[0], mx.inputs[1])
     mix = nt.nodes.new("ShaderNodeMix"); mix.data_type = "RGBA"; mix.inputs[6].default_value = hexc(floor_col); mix.inputs[7].default_value = hexc(line_col if lines else floor_col)
-    nt.links.new(mx.outputs[0], mix.inputs[0]); nt.links.new(mix.outputs[2], b.inputs["Base Color"]); fl.data.materials.append(m)
+    if lines: nt.links.new(mx.outputs[0], mix.inputs[0]); nt.links.new(mix.outputs[2], b.inputs["Base Color"])
+    else: b.inputs["Base Color"].default_value = hexc(floor_col)                  # plain floor: no grid node in the chain at all
+    m.diffuse_color = hexc(floor_col); fl.data.materials.append(m)
     # backdrop: a big cylinder segment behind, emission gradient bottom -> top (camera sees it, lights barely do)
     w = sc.world; w.use_nodes = True; wn = w.node_tree; wn.nodes.clear()
     out = wn.nodes.new("ShaderNodeOutputWorld"); bg = wn.nodes.new("ShaderNodeBackground"); grad = wn.nodes.new("ShaderNodeValToRGB")
@@ -330,3 +332,63 @@ def world_hdri(strength=0.6, camera_top="#2A3A60", camera_bottom="#C89A82"):
     nt_links.new(lp.outputs["Is Camera Ray"], mix.inputs[0]); nt_links.new(light.outputs[0], mix.inputs[1]); nt_links.new(seen.outputs[0], mix.inputs[2])
     nt_links.new(mix.outputs[0], out.inputs[0])
     return light.inputs["Strength"], seen.inputs["Strength"]
+
+
+# ---------- clay maquette look (2026-11-04, reference 04_episodes/Main Edit.mp4; accent green) ----------
+def clay(name="clay", col=(0.82, 0.81, 0.79, 1), rough=0.62):
+    """matte white architectural-model clay."""
+    m, b = _bsdf(name); m.diffuse_color = col; b.inputs["Base Color"].default_value = col; b.inputs["Roughness"].default_value = rough
+    b.inputs["Specular IOR Level"].default_value = 0.25; return m
+def clay_all(root, m, skip=()):
+    """paint every mesh under a library model with one clay material (unifies mismatched model styles)."""
+    for o in [root] + list(root.children_recursive):
+        if o.type == "MESH" and not any(k.lower() in o.name.lower() for k in skip):
+            o.data.materials.clear(); o.data.materials.append(m)
+def xray_shell(name="x-ray", col=(0.86, 0.88, 0.9, 1), alpha=0.18, edge=0.9):
+    """a frosted, see-through building shell: faint fill, brighter at grazing angles (reads as glass walls)."""
+    m = bpy.data.materials.new(name); m.use_nodes = True; nt = m.node_tree; nt.nodes.clear()
+    out = nt.nodes.new("ShaderNodeOutputMaterial"); tr = nt.nodes.new("ShaderNodeBsdfTransparent")
+    df = nt.nodes.new("ShaderNodeBsdfDiffuse"); df.inputs[0].default_value = col
+    lw = nt.nodes.new("ShaderNodeLayerWeight"); lw.inputs[0].default_value = 0.35
+    mr = nt.nodes.new("ShaderNodeMapRange"); mr.inputs["To Min"].default_value = alpha; mr.inputs["To Max"].default_value = edge
+    nt.links.new(lw.outputs["Facing"], mr.inputs["Value"])
+    mx = nt.nodes.new("ShaderNodeMixShader"); nt.links.new(mr.outputs[0], mx.inputs[0]); nt.links.new(tr.outputs[0], mx.inputs[1]); nt.links.new(df.outputs[0], mx.inputs[2])
+    nt.links.new(mx.outputs[0], out.inputs[0]); m.diffuse_color = col
+    try: m.surface_render_method = "BLENDED"; m.use_backface_culling = False
+    except Exception: pass
+    return m
+def dashed(name, pts, m, dash=0.35, gap=0.22, r=0.035, z=0.03):
+    """a dashed path on the ground (list of (x, y) or (x, y, z)): returns the dash objects in order (animate their
+    scale to 'draw' the path)."""
+    from mathutils import Vector
+    P = [Vector((p[0], p[1], p[2] if len(p) > 2 else z)) for p in pts]
+    segs, acc = [], 0.0
+    L = [(P[i + 1] - P[i]).length for i in range(len(P) - 1)]; total = sum(L)
+    s = 0.0; out = []
+    def at(d):
+        for i, l in enumerate(L):
+            if d <= l or i == len(L) - 1: return P[i].lerp(P[i + 1], min(1.0, d / max(l, 1e-6))), (P[i + 1] - P[i]).normalized()
+            d -= l
+    while s < total:
+        a, da = at(s); b, _ = at(min(total, s + dash))
+        bpy.ops.mesh.primitive_cylinder_add(radius=r, depth=max(0.02, (b - a).length), location=(a + b) / 2, vertices=12)
+        o = bpy.context.object; o.name = name; o.rotation_euler = (b - a).to_track_quat("Z", "Y").to_euler(); o.data.materials.append(m)
+        out.append(o); s += dash + gap
+    return out
+
+
+# ---------- hard cuts (EX20, 2026-11-05: follow the reference's cuts) ----------
+def hard_cuts(ids, cuts):
+    """make hard cuts clean under motion blur: the shutter opens on the frame, and every key on the frame before a cut
+    holds (constant), so nothing interpolates across the cut. ids = the camera, its aim, cam.data, and anything that
+    jumps at a cut (a car re-parked, a figure in a new pose). cuts = the first frame of each new shot."""
+    bpy.context.scene.render.motion_blur_position = "START"
+    before = {c - 1 for c in cuts}
+    for id_ in ids:
+        ad = getattr(id_, "animation_data", None)
+        if not ad or not ad.action: continue
+        try: fcs = list(ad.action.fcurves)
+        except Exception: fcs = [fc for L in ad.action.layers for st in L.strips for cb in st.channelbags for fc in cb.fcurves]
+        for fc in fcs:
+            for kp in fc.keyframe_points:
+                if int(round(kp.co.x)) in before: kp.interpolation = "CONSTANT"

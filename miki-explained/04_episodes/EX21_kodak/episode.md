@@ -1,8 +1,8 @@
-# EX20 — The Click Kodak Couldn't Sell
+# EX21 — The Click Kodak Couldn't Sell
 
 Status: **story ✓ (sources below; two flags)** → script (awaiting approval) → animatic → voice → preview → build → final → posted
 Voice: Nathan, narrator, `v4k7NzxipnuJNJtrKxob`
-Calendar: Day 16, Mon 09 Nov 2026, 12:30 ("Before It Broke", P15). Long-edu, v4 + diagrams, 30 fps. Global.
+Calendar: after EX20 Ronald Read (user 2026-11-03: "keep kodak first. go with ronald first") — "Before It Broke", P15. Long-edu, v4 + diagrams, 30 fps. Global.
 
 **The angle that makes it fresh:** everyone "knows" Kodak invented the digital camera and buried it. The fuller story
 flips it: Kodak *did* go digital, and in 2005 it sold more digital cameras in the US than anyone. Winning the camera

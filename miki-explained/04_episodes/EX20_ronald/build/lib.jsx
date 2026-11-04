@@ -533,3 +533,24 @@ function pin(c, name, str, font, style, size, col, f0, f1, dx, dy, just) {
   ds.property(1).setValue([0.02, 0.02, 0.03]); ds.property(2).setValue(230); ds.property(3).setValue(180); ds.property(4).setValue(0); ds.property(5).setValue(size > 60 ? 50 : 26);
   l.inPoint = f0 * F; l.outPoint = f1 * F; return l;
 }
+// v4 clay captions (reference Main Edit.mp4): one short uppercase phrase, Bebas Neue, centred low, no panel; each word
+// rises in on its spoken frame; the key word (flag 1) in the accent green. cap = [in, out, [[WORD, frame, key], …]]
+var CAPB_SIZE = 84, CAPB_BASE = 1330, CAPB_GREEN = [0x57 / 255, 0xD1 / 255, 0x00 / 255];
+function capBebas(c, cap, idx) {
+  app.run("comp.open", { comp: c.name });
+  var f1 = cap[1], words = cap[2], sp = CAPB_SIZE * 0.24, ls = [], tot = 0, i;
+  for (i = 0; i < words.length; i++) {
+    app.run("layer.newText", { text: words[i][0], name: "cap " + idx + "." + i + " " + words[i][0], font: "Bebas Neue", style: "Regular",
+      size: CAPB_SIZE, fill: words[i][2] ? CAPB_GREEN : hex(WARM), position: [0, 0], justify: "left", tracking: 10 });
+    var l = c.layer(1), rc = l.sourceRectAtTime(0, false); ls.push([l, rc]); tot += rc.width + (i ? sp : 0);
+    var ds = l.property("ADBE Effect Parade").addProperty("ADBE Drop Shadow");
+    ds.property(1).setValue([0.02, 0.02, 0.03]); ds.property(2).setValue(200); ds.property(3).setValue(180); ds.property(4).setValue(0); ds.property(5).setValue(22);
+  }
+  var x = W / 2 - tot / 2;
+  for (i = 0; i < ls.length; i++) {
+    var L = ls[i][0], r = ls[i][1], f0 = words[i][1], p = [x - r.left, CAPB_BASE];
+    smooth(keys(P(L), [[f0, [p[0], p[1] + 14]], [f0 + 6, p]]), 80);
+    smooth(keys(O(L), [[f0, 0], [f0 + 5, 100]]), 60); keys(O(L), [[f1 - 4, 100], [f1, 0]]);
+    L.inPoint = f0 * F; L.outPoint = f1 * F; x += r.width + sp;
+  }
+}

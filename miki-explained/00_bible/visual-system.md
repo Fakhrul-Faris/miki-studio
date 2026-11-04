@@ -37,6 +37,29 @@ format below (kept for reference). Reference build: `04_episodes/EX14_long-path`
   with a silhouette check (does the hero object read as one shape at small size, stripped of colour) before the full
   render. Added 2026-11-02, adapted from an external Blender stat-viz workflow the user shared.
 
+## House look v5: clay maquette (from 2026-11-04; reference `04_episodes/Main Edit.mp4`, first episode EX20)
+
+Full study: `01_references/main-edit-study.md`. Approved look test: `04_episodes/_tests/EX00V11_clay/test.py`.
+
+- **Look:** every model in one cool clay `(0.30, 0.32, 0.36)` (`camkit.clay` / `clay_all`), the EX00V9 dark floor (no
+  lines), key + rim + shadowless fill suns, world ambient, bloom only. One accent, **green #57D100**: the protagonist, his
+  dashed routes, his pieces / markers. Frosted x-ray shells (`xray_shell`) for buildings you see into; roof-off dollhouse
+  cutaways for rooms; a grey map mode for scale.
+- **Figures pose only** (user, 2026-11-05): no walk cycles, no gestures. Progress = a new pose across a cut, a dashed
+  path drawn to it, or white ghost copies of earlier poses. mpfbkit for posing (`act`, `arms`, `stand`), not `walk`.
+- **Cut like the reference** (user, 2026-11-05: "follow the reference cuts"): a hard cut on the spoken word every
+  ~3–6 s, one idea and one slow move per shot. No long camera journeys between sets. Under motion blur, set
+  `motion_blur_position = "START"` and constant keys on the frame before each cut, so a cut never smears.
+- **Shot types to use on purpose:** a real photo → the same view as a clay model (opener); a telephoto frontal elevation
+  of an x-ray tower; a dollhouse high 3/4; a vertical shaft / stairwell using the full 9:16 height; a shallow-focus macro
+  insert; the map with a route and one marker; an exploded view; light pools as narration.
+- **Captions stay EX15** (`capBlock`, `EX15_hot-dog/build/caps.py`), never the reference's style.
+- **Props:** library models (`lib3d.model`) plus Google Scanned Objects (`lib3d.scanned`, CC BY 4.0, credit Google
+  Research). Probe a model's dimensions before scaling (EX20's rails came out 25 m wide).
+- **Workflow:** shot-first gates — reference study → shot list (with a motion-language spec and at least one camera idea
+  beyond the brief) → grey-box blocking board → world → check .blend → camera-clip scan → render. Lay maps along the
+  frame's long axis. Postmortem: `04_episodes/EX20_ronald/postmortem.md`.
+
 ## Cinematography and look v4 (from 2026-11-03; reference r45, being adopted via the EX00V9 look test)
 
 User, 2026-11-03: approach r45's render look, motion and camera. **v4 adopted the same day** ("i approve … i like the

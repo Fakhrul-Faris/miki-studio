@@ -1,19 +1,14 @@
 #!/usr/bin/env python3
-"""EX20 captions from audio/vo_timeline.json → build/caps.jsx (60 fps frames). The reference (user's screen recording,
-2026-11-01): a sentence builds as a small paragraph of one or two lines, sentence case, each word fading in and rising into
-place on its spoken frame. Blocks end at a sentence or clause end once they are long enough, on a long pause, at MAXC
-characters, or before a centre card. Words under a card (the quote, the counter, the follow card) are skipped.
-Run from the episode folder."""
+"""EX20 captions from audio/vo_timeline.json → build/caps.jsx (30 fps frames). v4 (clay look, reference Main Edit.mp4):
+short uppercase phrases of up to three words in Bebas Neue, centred low, each word rising in on its spoken frame; one key
+word per phrase at most in the accent green (KEY). Words under the follow card are skipped. Run from the episode folder."""
 import json
-FPS, HOLD = 30, 35
+FPS, HOLD = 30, 30
 W = json.load(open("audio/vo_timeline.json"))["words"]
-# no centre cards this episode (no quote/title/counter card — the gauges and legend carry the numbers in-world);
-# only the follow card needs skipping
 SKIP = {("L08", i) for i in range(4)}
-BLOCKS = [1643]                                        # follow card only
+BLOCKS = [1714]                                        # follow card only
 FIX = {("L02", 4): "Read.", ("L07", 9): "Read", ("L04", 21): "in", ("L04", 23): "safe-deposit", ("L04", 24): None, ("L04", 27): "five",
        ("L06", 2): "$4.8", ("L06", 3): None, ("L06", 10): "$1.2", ("L06", 11): None}   # Whisper: "Reed", "and his", split numbers
-GAP, MINC, MAXC = 50, 18, 90
 out = []
 for L in sorted(W):
     ws, i = W[L], 0
@@ -28,19 +23,33 @@ for L in sorted(W):
             i += 1; t += ws[i][0]                       # Whisper splits "71.8%." into "71" "." "8%." — rejoin numbers
         if (L, i) not in SKIP: out.append((f, t))
         i += 1
-blk, cur = [], []
-for f, t in out:
-    n = sum(len(x[1]) + 1 for x in cur)
-    if cur and not t.startswith(("billion", "Bernardino", "million", "gym", "of", "it")) and (n + len(t) > MAXC or (cur[-1][1][-1] in ".?" ) or (cur[-1][1][-1] in ",:" and n >= MINC) or
-                f - cur[-1][0] > GAP or any(cur[0][0] < b <= f for b in BLOCKS)):
-        blk.append(cur); cur = []
-    cur.append((f, t))
-blk.append(cur)
+# the phrases, written by hand (a mechanical split broke "HE DROVE A / USED TOYOTA"); * = the green key word
+PHRASES = """THIS JANITOR | HAD ALMOST | *$8 MILLION. | NOBODY KNEW | UNTIL HE *DIED.
+HIS NAME WAS | RONALD *READ. | HE PUMPED GAS | AND CLEANED FLOORS | HIS WHOLE LIFE. | HE DROVE | A USED *TOYOTA. | HE HELD HIS JACKET |
+TOGETHER WITH | A SAFETY *PIN. | HE GATHERED | FALLEN *BRANCHES | TO HEAT HIS HOUSE.
+HE BOUGHT | SMALL PIECES | OF COMPANIES | HE UNDERSTOOD. | *RAILROADS, | *BANKS, | *DRUGSTORES, | *PHONE COMPANIES, | ONES THAT PAID HIM |
+A LITTLE *CASH | EVERY YEAR | JUST FOR OWNING THEM.
+THEN HE HELD ON | FOR *DECADES | AND KEPT BUYING. | BY THE END, | HE OWNED AT LEAST | *95 COMPANIES. | THE PAPER CERTIFICATES |
+IN HIS SAFE-DEPOSIT BOX | STOOD *FIVE INCHES | HIGH.
+HE DIDN'T EARN | A *FORTUNE. | HE *OWNED ONE. | ONE SMALL *PIECE | AT A TIME.
+HE LEFT | *$4.8 MILLION | TO HIS TOWN'S | *HOSPITAL | AND *$1.2 MILLION | TO ITS *LIBRARY. | THE *BIGGEST GIFTS | EITHER HAD | EVER RECEIVED.
+MOST PEOPLE | SPEND THEIR LIVES | WORKING FOR | BUSINESSES. | RONALD READ | QUIETLY *OWNED THEM."""
+norm = lambda x: "".join(ch for ch in x.lower() if ch.isalnum() or ch in "$.'-").strip(".")
+blk, k = [], 0
+for ph in [p_.strip() for p_ in PHRASES.replace("|\n", "|").replace("\n", "|").split("|") if p_.strip()]:
+    b = []
+    for tok in ph.split():
+        f, t = out[k]; k += 1
+        assert norm(tok.lstrip("*")) == norm(t), (tok, t)
+        b.append((f, t, tok.startswith("*")))
+    blk.append(b)
+assert k == len(out), (k, len(out))
 caps = []
 for k, b in enumerate(blk):
     f_out = blk[k + 1][0][0] if k + 1 < len(blk) else b[-1][0] + HOLD
     f_out = min([f_out, b[-1][0] + HOLD] + [x - 2 for x in BLOCKS if x > b[-1][0] + 4])
-    caps.append([b[0][0], f_out, [[t, f] for f, t in b]])
-open("build/caps.jsx", "w").write("// caption blocks (build/caps.py): [in, out, [[word, frame], …]]\nvar CAP = " + json.dumps(caps) + ";\n")
+    ws = [[t.upper(), f, 1 if key else 0] for f, t, key in b]
+    caps.append([b[0][0], f_out, ws])
+open("build/caps.jsx", "w").write("// caption blocks (build/caps.py): [in, out, [[WORD, frame, key], …]]\nvar CAP = " + json.dumps(caps) + ";\n")
 print(len(caps), "blocks")
-for c in caps: print(c[0], c[1], " ".join(w[0] for w in c[2]))
+for c in caps: print(c[0], c[1], " ".join(("*" + w[0]) if w[2] else w[0] for w in c[2]))

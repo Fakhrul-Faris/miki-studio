@@ -1,6 +1,6 @@
 ---
 name: miki-explained-episode
-description: Playbook for making an episode of the Miki Explained series (miki-explained/ in this repo): 40–50s 9:16 explainers for TikTok/Instagram that take a business, psychology or economics story and turn to "your shop", in the house smooth-isometric format of EX14 "The Long Path" (a Blender orthographic isometric world, one continuous camera, 60 fps, dark greys + one green accent, caption panel at the bottom; no generated images). Covers story choice and fact-checking, the script and Nathan narrator voice direction, tightening the voice to 60 fps word frames, building the world and camera in Blender, the cheap preview before rendering, the EffectCraft master (captions, cards, sound), frame-by-frame QA, render and post copy. Use this whenever the user wants a new explainer, "the next episode", "EX15", a script, hook or storyboard for miki-explained, to build/render/fix an episode, or asks about the series' look, captions or sound — even if they don't say "episode" or "skill".
+description: Playbook for making an episode of the Miki Explained series (miki-explained/ in this repo): 40–50s 9:16 explainers for TikTok/Instagram that take a business, psychology or economics story and turn to "your shop", in the current house look v5 clay maquette (EX20; reference Main Edit.mp4: clay models + one green accent, figures pose only, a hard cut on the word every ~3–6 s, EX15 caption panel; earlier: the EX14 smooth-isometric format). Covers story choice and fact-checking, the script and Nathan narrator voice direction, tightening the voice to 60 fps word frames, building the world and camera in Blender, the cheap preview before rendering, the EffectCraft master (captions, cards, sound), frame-by-frame QA, render and post copy. Use this whenever the user wants a new explainer, "the next episode", "EX15", a script, hook or storyboard for miki-explained, to build/render/fix an episode, or asks about the series' look, captions or sound — even if they don't say "episode" or "skill".
 ---
 
 # Miki Explained — episode playbook
@@ -37,6 +37,17 @@ Isotype pictogram people) with **one accent, green `#57D100`**, filmed by **one 
 dark panel at the bottom (each word fades in and rises on its spoken frame), centre cards for quotes, counters and the
 named concept, and the **follow card** (Meikigo logo above "Follow Meikigo for more.", silent). Inter Display + IBM Plex
 Mono. **The voice sets the tempo.** About 10 soft sound hits on a low drone.
+
+## Current house look (v5 clay maquette, from EX20) — read first
+
+`00_bible/visual-system.md` § House look v5 overrides the older formats below where they differ: clay + green accent,
+**figures pose only**, **a hard cut on the word every ~3–6 s**, the reference's shot types, **EX15 captions**, shot-first
+gates (study → shot list → blocking board → world → check .blend + camera-clip scan → render). For direction and craft,
+use the project skills `iart-motion-art-direction` (motion-language spec, restraint, one wow moment), `iart-shot-composition`,
+`iart-short-form-video` (retention: hook text on frame 1, a visual change every 2–4 s, loop to frame 0),
+`iart-beat-sync-editing`, `iart-animation-principles`, `iart-after-effects` (expressions work in EffectCraft), and
+`scenario-blender-blockout` / `-hard-surface` / `-grease-pencil` with the earlier scenario-blender skills. Sound hits can be
+synthesized offline with `tools/sfxsynth` (`python3 -m sfxsynth --list`); keep them sparse.
 
 ## How to work with this user
 

@@ -1,6 +1,6 @@
 # EX20 — The Janitor Who Owned Everything
 
-Status: **story ✓ (sources below)** → script ✓ (2026-11-03) → voice prompts ✓ → animatic → voice → preview → build → final → posted
+Status: story ✓ → script ✓ → voice ✓ → v4 clay rebuild (shot list v3, gates 1–3 ✓) → full render ✓ → final ✓ (export/EX20.mp4, 58.6 s, −18.9 LUFS; Telegram msg 349, 2026-11-05) → posted
 Voice: Nathan, narrator, `v4k7NzxipnuJNJtrKxob`
 Series: **Everyday Owners** #1 (content bank § 5; user 2026-11-03: "go with ronald first"). Long-edu, v4 + diagrams,
 30 fps. Global. EX21 Kodak stays drafted behind it.
@@ -51,33 +51,43 @@ reframe (EX19 "next time") · no advice, no promise.
 Nathan L01–L07 (L03 trimmed by the user: no "Here's what he did with his pay"), L08 reused. Tightened gently (user: "why script are cutting?" — the 0.45 s pause rule chopped his pauses): `--long 0.9 --keep 0.55 --gap 0.45`, 49.8 s → **56.2 s**
 with light breathing holds (user: "leave that" — no extra lines to reach 60 s). 30 fps → 1,634 frames.
 
-## Shot list (v4 + diagrams, one camera, 30 fps; one small town at dusk)
-| # | Time / trigger | Size · angle · lens | Move | What happens | Focus · foreground |
+## Reference study (Main Edit.mp4, 32 frames, 2026-11-04)
+
+- **One hero object per shot**, isolated on the dark floor: a single building, one cutaway room, one stairwell. Nothing else in frame competes.
+- **Dollhouse cutaways**: roof off, a front wall cut away, seen from high 3/4 (30–60° down) so the room reads like a plan.
+- **The 9:16 frame is used vertically**: tall buildings, a stairwell, a lift shaft running top to bottom.
+- **Grey map mode**: top-down town, footprints, a dark route line, one accent marker, tiny place labels.
+- **Accent only on the person and their route** (dashed line); past positions as white ghost figures.
+- **Macro inserts** on one physical detail (the scooter), shallow focus.
+- Soft overhead light, white-grey clay, dark falloff at the frame edges; captions centred low, one key word in the accent.
+
+## Shot list v3 (clay maquette; one continuous camera, no cuts planned; 30 fps, 58.6 s)
+
+Rules for every frame: 9:16, focal point inside x 60–960 / y 160–1440; **only Ronald, his route and his pieces are green**;
+lots of dark space; one clay foreground element for depth; one camera move per shot, slow. Hand-offs are camera moves
+(rise, dive, glide), never cuts.
+
+| # | Time · words | Hero · angle · lens | Move | What happens | Hand-off |
 |---|---|---|---|---|---|
-| 1 | 0.0 L01 · "until he died" 3.68 | CU · low 3/4 · 35→40 mm | slow push | the janitor mopping a store's back corridor; light dims | janitor · mop bucket |
-| 2 | 5.25 L02 · "pumped gas" 6.91 | W→M · eye level · 32–35 mm | out the street door, across the road | the gas station: he fills a car at the pump | pump · canopy post |
-| 3 | "Toyota" 10.13 · "safety pin" 12.33 | M→ECU · 35→45 mm f/2 | follow the car to his house; hold | the hatchback parks; the jacket's safety pin | pin · porch post |
-| 4 | "branches" 13.75 | M · 3/4 · 35 mm | drift | he carries branches to the woodpile | Ron · logs |
-| 5 | 16.13 L03 · "Railroads/banks/drugstores/phone" · "cash" 22.67 | W high · 40–45 mm | crane up into the diagram | company buildings pop around the house; lines; a coin a year down each | the house |
-| 6 | 24.84 L04 · "kept buying" 26.64 · "95" 28.70 · "5 inches" 32.48 | CU→ECU · 40–52 mm f/2 | down through the roof (v4 ring cut) to the table | the safe-deposit box opens; the stack rises; "95 COMPANIES"; a ruler: 5 inches | the stack · the lid |
-| 7 | 34.56 L05 · "owned one" 36.78 | EW · high · 30 mm | pull up over the town | **surprise:** the stack fans out into 95 buildings — a town he owns | the town |
-| 8 | 39.69 L06 · "hospital" 42.20 · "library" 44.27 | EW · high · 30 mm | drift | coins stream to the hospital and the library; their windows light | both |
-| 9 | 47.96 L07 · "quietly owned them" 51.56 | M · eye level · 35–40 mm | back down to the pumps | the pump light clicks off | pump |
-| 10 | 53.06 L08 | M · hold | — | follow card | — |
+| 1 | 0.0–5.6 · "$8 million" 1.40 · "died" 4.24 | a cutaway corner store (roof off, front wall cut) · high 3/4, 45° down · 50 mm | slow descend toward him | green Ronald mops the aisle; the mop leaves a green dashed zigzag. On "died" he fades to a white ghost; the store light dims | rise straight up |
+| 2 | 5.7–9.6 · "Ronald Read" 6.25 · "pumped gas" 7.59 · "cleaned floors" 8.45 · "whole life" 9.39 | grey town map · top-down · 35 mm | rise, then drift | small labels: GAS STATION, STORE, HOME. A green dot runs his route home → pump → store → home; on "whole life" the loop repeats faster and the dashes wear into a solid track | drop down to the road |
+| 3 | 9.6–11.9 · "used Toyota" 10.83 | a small clay hatchback on the map road · low 3/4 · 35 mm | follow alongside | the car drives his route, the green dashed trail behind it; it pulls up beside his house | glide to the driver's door |
+| 4 | 11.9–14.3 · "safety pin" 13.25 | Ronald standing by the car · eye level → ECU chest · 35→60 mm, f/2 | push in to macro | the jacket in green clay; the safety pin in light grey, one soft highlight pulse on "pin" | pull back and up |
+| 5 | 14.3–17.8 · "fallen branches" 14.77 · "heat his house" 15.91 | his house as a dollhouse cutaway (roof off) · high 3/4 · 40 mm | slow crane up | he carries branches from the yard tree to the stove inside; green dashed path tree → stove; stove glows soft white, chimney puffs | keep rising into map mode |
+| 6 | 18.5–28.0 · "Railroads" 21.65 · "banks" 22.35 · "drugstores" 22.85 · "phone" 23.57 · "cash" 26.03 · "every year" 26.35 | the map around his house · high, 60° down · 35 mm | slow orbit 20° | four company models rise on their words; **each has one small green block, his piece**. On "cash" a green coin travels a dashed line from each to his house; "every year" pulses twice more | pull higher |
+| 7 | 28.4–34.9 · "decades" 29.46 · "kept buying" 30.20 · "95" 32.56 | the whole town map · top-down → 50° · 30 mm | rise and widen | buildings keep rising across the map, each gaining a green piece, the lines to his house multiplying; "95 COMPANIES" set into the map on "95" | dive into the bank |
+| 8 | 35.0–39.0 · "certificates" 35.28 · "safe deposit box" 36.26 · "5 inches" 37.52 | the bank as an x-ray shell → a vertical shaft down to the basement vault (the reference lift-shaft frame) · 45 mm | dive down the shaft, settle high 3/4 on the box | a deposit drawer slides out; certificates stack up one by one; a slim ruler beside them; "5 IN" mark on "5 inches" | rise up the shaft |
+| 9 | 39.1–43.4 · "earn a fortune" 39.50 · "owned one" 40.52 · "one small piece" 41.28 | stack → the town from above · 30 mm | rise out through the bank roof | **surprise:** the certificates lift off the stack one by one and fly out over the town, each landing as a green piece on a building, piece after piece | drift across the map |
+| 10 | 43.6–51.0 · "hospital" 46.15 · "library" 48.20 · "biggest gifts" 49.34 | map → the hospital and library models · high 3/4 · 35 mm | drift, then lower to 3/4 | from his house (now a white ghost house) a green dashed line runs to the hospital, then the library; their windows fill green; small "$4.8M" / "$1.2M" labels; on "biggest gifts" the camera lowers to the two buildings | rise to the town |
+| 11 | 51.8–58.6 · "working for businesses" 53.02 · "quietly owned them" 55.14 | the whole town, then the store from shot 1 · high → 3/4 · 30→50 mm | pull up, then settle on the store | white ghost commuters walk into the buildings; on "quietly owned them" every green piece in town glows once; the camera settles on the corner store, green Ronald mopping again, small (loops to the hook). L08 holds | — |
 
-## Scene brief (v4 + diagrams; device log — not the empty-gym ghosts, not the lifting stand)
-
-- **Hook (v4):** a small-town gas station at dusk (pumps, a lit price sign), a figure in overalls filling a car; then a
-mop and bucket in a shop's back corridor.
-- **L02 (v4 macro):** the safety pin on a worn jacket; a second-hand hatchback; branches stacked by a wood stove.
-- **L03 (diagram):** around his small house, tiny company buildings appear (a railroad, a bank, a drugstore, a phone
-tower); a thin line from each to his house; a coin drops along each line once a year.
-- **Hero device — the five-inch stack:** a safe-deposit box opens; certificates rise in a stack that grows with the
-years (a road of years under it, EX17's road language), to five inches — the camera rises with it.
-- **L05 twist:** the stack fans out into the 95 company buildings, a whole small city he owns, seen from above.
-- **L06:** the coins stream out to two lit buildings, a hospital and a library; their windows light up.
-- **End:** back at the gas station, the pump light clicks off (loop).
-- One surprise: the stack fanning into a city.
+Cuts (gate 3, user 2026-11-04: hard cuts allowed on the parts that broke): six, each on a spoken word —
+"drove" 10.4 (map → the car; the dive swooped and clipped a lamp), "He held" 11.9 (car → him by the parked car; the follow
+passed through the house walls), "He gathered" 14.3 (pin → the tree; he slid away inside the close-up), "The paper
+certificates" 35.0 (town → inside the bank's shaft; a 100 m swoop), "Most people" 51.8 (hospital → the main street with
+commuters), 56.3 (the town → the store, the loop). Under motion blur every key before a cut holds and the shutter opens
+on the frame, so no cut smears.
+Visual devices: ghost figures (death, the past, commuters), green pieces (ownership), the dashed route (his life), map mode (scale).
 
 ## Experiments
 
@@ -106,6 +116,7 @@ Most people spend their lives working for businesses. Ronald Read quietly owned 
 ```
 Not financial advice — just a remarkable true story. 💚
 Sources: NBC News, CNBC and The Washington Post (2015) on Ronald Read's $8M estate and bequests to Brattleboro Memorial Hospital and Brooks Memorial Library; The Wall Street Journal via Wikipedia (95+ stocks, the five-inch stack of certificates).
+3D models (CC-BY 3.0, via Poly Pizza): Apartment building by Poly by Google; Brown Building by J-Toastie; Gas Station by Alex Safayan; Hall by Patrick Down; Hospital by Poly by Google; Japanese Train Station by Andrew-John Hickman; Lamp post by Poly by Google; Mop & Bucket by J-Toastie; Radio tower by Poly by Google; Telephone pole by Poly by Google; The Corner Store by VR XRTIST; Tree branches by Poly by Google; Tree by Marc Solà; Wood Pile by K H (Kash).
 ```
 
 - Turn on the AI-generated content label (synthetic voice, code-built 3D).
