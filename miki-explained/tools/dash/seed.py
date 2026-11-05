@@ -20,26 +20,37 @@ def block(doc, label):
     m = re.search(rf"\*\*{label}:\*\*\s*```\n(.*?)```", doc, re.S); return m.group(1).strip() if m else None
 
 
+def section(text, title):
+    """The table rows under the '## <title>…' heading, up to the next '## '."""
+    m = re.search(rf"^## {re.escape(title)}.*?$(.*?)(?=^## |\Z)", text, re.M | re.S)
+    return [[c.strip() for c in l.strip().strip("|").split("|")] for l in (m.group(1) if m else "").splitlines() if l.startswith("| ")]
+
+
 def stacks():
-    """experiments.md § Running: episode id → {group: option}."""
+    """experiments.md § Running (+ § 14 angle log for later episodes): episode id → {group: option}."""
     p = ME / "03_ideas" / "experiments.md"
     if not p.exists(): return {}
-    lines = [l for l in p.read_text().splitlines() if l.startswith("| ")]
-    head = next((l for l in lines if "| Day | Episode |" in l), None)
-    if not head: return {}
-    cols = [c.strip() for c in head.strip("|").split("|")]
-    out = {}
-    for l in lines:
-        cells = [c.strip() for c in l.strip("|").split("|")]
-        m = re.search(r"\b(EX\d+V?\d*)\b", l)
-        if not m or len(cells) < 4: continue
-        row = dict(zip(cols, cells)); ep = m.group(1)
-        st = {k: v for k, v in row.items() if k not in ("Day", "Episode", "Verdict") and v and v != "_"}
-        for g in ("Scr length", "Bridge"):                         # some rows keep these inside the Episode cell
-            if g not in st:
-                mm = re.search(r"\b(L[123])\b", row.get("Episode", "")) if g == "Scr length" else re.search(r"Bridge (on|off)", row.get("Episode", ""))
-                if mm: st[g] = mm.group(0)
-        out[ep] = st
+    text, out = p.read_text(), {}
+    rows = section(text, "Running")
+    if not rows: return {}
+    cols = rows[0]                                                 # Day | Episode | Scr length | Bridge | H … T | Verdict
+    for cells in rows[1:]:
+        m = re.search(r"\b(EX\d+V?\d*)\b", cells[1] if len(cells) > 1 else "")
+        if not m: continue
+        if len(cells) == len(cols): st = dict(zip(cols[2:-1], cells[2:-1]))
+        else:                                                      # short rows: no Scr/Bridge cells; H … T, then any V style beats
+            st = dict(zip(cols[4:-1], cells[2:9]))
+            if len(cells) > 10: st["V style"] = " + ".join(cells[9:-1])
+        for g in ("Scr length", "Bridge"):                         # short rows keep these inside the Episode cell
+            if not st.get(g):
+                mm = re.search(r"\b(L[123])\b", cells[1]) if g == "Scr length" else re.search(r"Bridge (on|off)", cells[1])
+                if mm: st[g] = mm.group(1) if g == "Bridge" else mm.group(0)
+        out[m.group(1)] = {k: v.replace("**", "") for k, v in st.items() if v and v != "_"}
+    for cells in section(text, "14. Narrative angle log")[1:]:    # Episode | Angle | Hook type | Setting / Bridge
+        m = re.search(r"\b(EX\d+V?\d*)\b", cells[0])
+        if not m or len(cells) < 3: continue
+        st = out.setdefault(m.group(1), {})
+        st.setdefault("H hook", cells[2].replace("**", "")); st["Angle"] = cells[1].replace("**", "")
     return out
 
 
