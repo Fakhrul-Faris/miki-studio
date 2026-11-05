@@ -25,7 +25,7 @@ case $1 in
   log) ssh air 'tail -40 ~/Library/Logs/tgstore.log' ;;
   thumbs)                                            # a poster frame per episode (ffmpeg on the Pro) → the Air's thumbs/
     T=$(mktemp -d); have=$(ssh air 'ls ~/miki-ops/thumbs 2>/dev/null')
-    for id in $(curl -s http://100.107.126.69:8787/api/state | python3 -c "import json,sys;[print(e['id']) for e in json.load(sys.stdin)['episodes'] if e['status']!='draft']"); do
+    for id in $(curl -s http://100.107.126.69:8787/api/state | python3 -c "import json,sys;[print(e['id']) for e in json.load(sys.stdin)['episodes'] if e['status'] not in ('draft','retired')]"); do
       [[ "$have" == *"$id.png"* && "$2" != "--force" ]] && continue
       curl -s -o $T/$id.mp4 http://100.107.126.69:8787/media/video/$id || continue
       for s in 2 5 9 14; do ffmpeg -v error -y -ss $s -i $T/$id.mp4 -frames:v 1 -vf scale=540:-2 $T/$id.$s.png; done

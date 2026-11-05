@@ -106,15 +106,17 @@ def add_inbox(ep, checkpoint, path, suggest=None, origin="bot"):
 
 def due(c=None):
     """Stats checkpoints that have come due for posted posts: [{post_id, episode, platform, checkpoint, due_at, state}]
-    state: done (numbers in), sent (screenshot waiting in the inbox), due (now), upcoming."""
+    state: done (numbers in), sent (screenshot waiting in the inbox), due (now), upcoming, missed (a later checkpoint has
+    numbers or has come due itself: TikTok's totals only grow, so the earlier one can't be read any more)."""
     own = c is None; c = c or conn(); out = []; t = datetime.datetime.now(); auto_post(c)
     have = {(r[0], r[1]) for r in c.execute("select post_id, checkpoint from metrics where views is not null")}
     sent = {(r[0], r[1]) for r in c.execute("select episode, checkpoint from inbox where processed = 0")}
     for p in c.execute("select id, episode, platform, posted_at from posts where posted_at is not null and length(posted_at) > 10"):
         at = datetime.datetime.fromisoformat(p["posted_at"])
-        for cp in CHECKPOINTS:
-            d = at + datetime.timedelta(hours=HOURS[cp])
-            st = "done" if (p["id"], cp) in have else "sent" if (p["episode"], cp) in sent else "due" if d <= t else "upcoming"
+        for i, cp in enumerate(CHECKPOINTS):
+            d = at + datetime.timedelta(hours=HOURS[cp]); later = CHECKPOINTS[i + 1:]
+            gone = any((p["id"], x) in have or at + datetime.timedelta(hours=HOURS[x]) <= t for x in later)
+            st = "done" if (p["id"], cp) in have else "sent" if (p["episode"], cp) in sent else "missed" if gone else "due" if d <= t else "upcoming"
             out.append({"post_id": p["id"], "episode": p["episode"], "platform": p["platform"], "checkpoint": cp,
                         "due_at": d.isoformat(timespec="minutes"), "state": st})
     if own: c.close()

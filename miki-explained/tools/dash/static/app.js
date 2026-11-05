@@ -41,6 +41,9 @@ const thumb = id => `/media/thumb/${id}`;
 const due = () => S.due.filter(d => d.state === "due" || d.state === "sent").sort((a, b) => a.due_at.localeCompare(b.due_at));
 const inboxOpen = () => S.inbox.filter(i => !i.processed);
 const median = a => { a = a.filter(x => x != null).sort((x, y) => x - y); return a.length ? (a.length % 2 ? a[(a.length - 1) / 2] : (a[a.length / 2 - 1] + a[a.length / 2]) / 2) : null; };
+const capBox = (e, k) => { const t = k === "pinned" ? e.pinned : e.caption;
+  return `<div class="cap-wrap"><div class="cap">${esc(t || "No caption yet")}</div>${t ? `<button class="btn btn-soft btn-sm cap-copy" data-copy="${k}" data-ep="${e.id}">Copy</button>` : ""}</div>`; };
+const late = d => d.state === "due" && Date.now() - D(d.due_at) > 12 * 3600e3;
 function copy(text) {
   if (navigator.clipboard && isSecureContext) navigator.clipboard.writeText(text); else {
     const t = document.createElement("textarea"); t.value = text; t.style.position = "fixed"; t.style.opacity = 0; document.body.append(t); t.select(); document.execCommand("copy"); t.remove(); }
@@ -82,14 +85,14 @@ function today() {
         <div class="actions"><a class="btn btn-soft" href="/media/video/${e.id}?dl=1" download="${e.id}.mp4">⬇ Video</a>
           <button class="btn btn-soft" data-copy="caption" data-ep="${e.id}">Copy caption</button>${e.pinned ? `<button class="btn btn-soft" data-copy="pinned" data-ep="${e.id}">Copy pinned</button>` : ""}
           ${sch ? `<button class="btn btn-soft" data-posted="${e.id}">✓ Went live early</button>` : `<button class="btn btn-primary" data-sched="${e.id}">📅 Scheduled in Studio</button><button class="btn btn-soft" data-posted="${e.id}">✓ Posted now</button>`}</div>
-        <details ${innerWidth > 860 ? "open" : ""}><summary class="muted small">Caption</summary><div class="cap mt-2">${esc(e.caption || "No caption yet")}</div></details></div></div>`;
+        <details ${innerWidth > 860 ? "open" : ""}><summary class="muted small">Caption</summary><div class="mt-2">${capBox(e, "caption")}</div></details></div></div>`;
   } else {
     html += `<div class="card mb-3"><div class="empty-note"><div class="fw-bold mb-1">Nothing scheduled</div>${ready ? `${ready} episodes are ready.` : "No finished episodes waiting."}
       ${ready ? `<div class="mt-3"><button class="btn btn-primary" data-replan>Plan the queue</button></div>` : ""}</div></div>`;
   }
   html += `<div class="section-title">Stats to collect</div><div class="card mb-3">${dl.length ? dl.map(d => { const e = ep(d.episode);
     return `<div class="rowx"><img class="thumb-sm" src="${thumb(e.id)}" alt="" onerror="this.style.visibility='hidden'"><div class="grow"><div class="fw-bold ell">${esc(e.id)} · ${esc(e.title)}</div>
-      <div class="small muted">${PLAT[d.platform]} · ${d.state === "sent" ? "screenshot waiting in Inbox" : "due " + rel(d.due_at)}</div></div><span class="chip ${d.state === "sent" ? "ok" : "warn"}">${d.checkpoint}</span>
+      <div class="small muted">${PLAT[d.platform]} · ${d.state === "sent" ? "screenshot waiting in Inbox" : "due " + rel(d.due_at)}</div></div>${late(d) ? `<span class="chip bad">overdue</span>` : ""}<span class="chip ${d.state === "sent" ? "ok" : "warn"}">${d.checkpoint}</span>
       ${d.state === "sent" ? `<a class="btn btn-soft btn-sm" href="#inbox">Review</a>` : `<button class="btn btn-primary btn-sm" data-upload="${e.id}|${d.checkpoint}">Upload</button><button class="btn btn-soft btn-sm" data-num="${d.post_id}|${d.checkpoint}">Type</button>`}</div>`; }).join("")
     : `<div class="empty-note">All caught up. Numbers come due 24 h, 72 h and 7 days after each post.</div>`}</div>`;
   const wk = S.posts.filter(p => p.posted_at && D(p.posted_at) > Date.now() - 7 * 864e5);
@@ -125,12 +128,12 @@ function calendar() {
 
 // ---------- Library + drawer ----------
 function library() {
-  const st = { all: () => true, ready: e => e.status === "ready", posted: e => e.status === "posted", draft: e => e.status === "draft" };
+  const st = { all: () => true, ready: e => e.status === "ready", posted: e => e.status === "posted", draft: e => e.status === "draft", retired: e => e.status === "retired" };
   const list = S.episodes.filter(st[libFilter]).filter(e => !libQ || (e.id + " " + e.title + " " + (e.concept || "")).toLowerCase().includes(libQ.toLowerCase())).reverse();
   const count = k => S.episodes.filter(st[k]).length;
   $("#p-library").innerHTML = `<div class="page-head"><div><h1 class="h-page">Library</h1><div class="sub">${S.episodes.length} episodes</div></div>
     <input class="form-control" style="max-width:260px" placeholder="Search episodes" value="${esc(libQ)}" id="lib-q"></div>
-    <div class="d-flex gap-2 mb-3 flex-wrap">${["all", "ready", "posted", "draft"].map(k => `<button class="chip ${libFilter === k ? "ochre" : ""}" data-filter="${k}">${k[0].toUpperCase() + k.slice(1)} · ${count(k)}</button>`).join("")}</div>
+    <div class="d-flex gap-2 mb-3 flex-wrap">${["all", "ready", "posted", "draft", "retired"].filter(k => k !== "retired" || count(k)).map(k => `<button class="chip ${libFilter === k ? "ochre" : ""}" data-filter="${k}">${k[0].toUpperCase() + k.slice(1)} · ${count(k)}</button>`).join("")}</div>
     <div class="lib">${list.map(e => { const p = postOf(e.id), L = latest(p);
       return `<button class="lib-card" data-open="${e.id}"><img src="${thumb(e.id)}" alt="" loading="lazy" onerror="this.style.opacity=.15"><div class="lib-meta">
         <div class="d-flex gap-1 flex-wrap"><span class="chip">${esc(e.id)}</span><span class="chip ${e.status === "posted" ? "ok" : e.status === "ready" ? "ochre" : ""}">${e.status}</span></div>
@@ -157,8 +160,8 @@ function openDrawer(id) {
     <div class="section-title mt-0">Platforms</div>${plats}
     ${mrows ? `<div class="section-title">Numbers</div><div class="table-responsive"><table class="table table-sm"><thead><tr><th></th><th class="num">Views</th><th class="num">Avg</th><th class="num">Full</th><th class="num">Likes</th><th class="num">Shares</th><th class="num">Saves</th><th class="num">Follows</th><th></th></tr></thead><tbody>${mrows}</tbody></table></div>` : ""}
     <div class="section-title">What it tested</div><div class="stack-chips">${Object.entries(e.stack || {}).map(([k, v]) => `<span class="chip" title="${esc(v)}">${esc(k)}: ${esc(String(v).split(/[ (]/)[0])}</span>`).join("") || `<span class="muted small">No test stack logged</span>`}</div>
-    <div class="section-title">Caption</div><div class="cap">${esc(e.caption || "No caption yet")}</div>
-    ${e.pinned ? `<div class="section-title">Pinned comment</div><div class="cap">${esc(e.pinned)}</div>` : ""}
+    <div class="section-title">Caption</div>${capBox(e, "caption")}
+    ${e.pinned ? `<div class="section-title">Pinned comment</div>${capBox(e, "pinned")}` : ""}
     <div class="section-title">Notes</div><textarea class="form-control" rows="3" placeholder="Anything you noticed: comments, a dip, an idea…" data-note="${id}">${esc(e.notes || "")}</textarea>`;
   bootstrap.Offcanvas.getOrCreateInstance("#drawer").show();
 }
@@ -238,14 +241,24 @@ function chart(id, opt) {
 
 // ---------- Inbox ----------
 function inbox() {
-  const open = inboxOpen(), done = S.inbox.filter(i => i.processed).slice(0, 12), eps = S.episodes.filter(e => posted(postOf(e.id)));
+  const open = inboxOpen(), done = S.inbox.filter(i => i.processed).slice(0, 12), wait = due().filter(d => d.state === "due");
+  const eps = [...new Set(wait.map(d => d.episode))].map(ep), over = wait.filter(late);
   $("#p-inbox").innerHTML = `<div class="page-head"><div><h1 class="h-page">Inbox</h1><div class="sub">Analytics screenshots: drop them here or send them to the bot with <code>/stats ex13 72h</code>. The Air reads the numbers; you confirm.</div></div></div>
-    <div class="card mb-3"><div class="card-body"><div class="row g-2 align-items-end">
-      <div class="col-6 col-md-4"><label class="form-label">Episode</label><select class="form-select" id="up-ep">${eps.map(e => `<option value="${e.id}">${e.id} · ${esc(e.title)}</option>`).join("") || `<option value="">Nothing posted yet</option>`}</select></div>
-      <div class="col-6 col-md-3"><label class="form-label">Checkpoint</label><select class="form-select" id="up-cp"><option>24h</option><option selected>72h</option><option>7d</option></select></div>
-      <div class="col-12 col-md-5"><div class="drop" id="drop" role="button">Drop a screenshot here, or <b>tap to choose</b></div></div></div></div></div>
+    ${over.length ? `<div class="card mb-3" style="border-left:3px solid var(--bad)"><div class="card-body py-2"><b>⏰ ${over.length} overdue</b> <span class="muted small">· more than 12 h past due: ${over.map(d => `${d.episode} ${d.checkpoint}`).join(", ")}. The bot reminds you every 12 h until they're in.</span></div></div>` : ""}
+    <div class="section-title">Waiting for numbers</div><div class="card mb-3">${wait.length ? wait.map(d => { const e = ep(d.episode);
+      return `<div class="rowx"><img class="thumb-sm" src="${thumb(e.id)}" alt="" onerror="this.style.visibility='hidden'"><div class="grow"><div class="fw-bold ell">${esc(e.id)} · ${esc(e.title)}</div>
+        <div class="small muted">${PLAT[d.platform]} · due ${rel(d.due_at)} · views, avg watch, full %, likes, comments, shares, saves, follows</div></div>${late(d) ? `<span class="chip bad">overdue</span>` : ""}<span class="chip warn">${d.checkpoint}</span>
+        <button class="btn btn-primary btn-sm" data-upload="${e.id}|${d.checkpoint}">Upload</button><button class="btn btn-soft btn-sm" data-num="${d.post_id}|${d.checkpoint}">Type</button></div>`; }).join("")
+      : `<div class="empty-note">All numbers are in. New ones come due 24 h, 72 h and 7 days after each post.</div>`}</div>
+    ${wait.length ? `<div class="card mb-3"><div class="card-body"><div class="row g-2 align-items-end">
+      <div class="col-6 col-md-4"><label class="form-label">Episode</label><select class="form-select" id="up-ep">${eps.map(e => `<option value="${e.id}">${e.id} · ${esc(e.title)}</option>`).join("")}</select></div>
+      <div class="col-6 col-md-3"><label class="form-label">Checkpoint</label><select class="form-select" id="up-cp"></select></div>
+      <div class="col-12 col-md-5"><div class="drop" id="drop" role="button">Drop a screenshot here, or <b>tap to choose</b></div></div></div></div></div>` : ""}
     ${open.length ? `<div class="section-title">To review</div><div class="row g-3 mb-3">${open.map(i => shotCard(i, true)).join("")}</div>` : `<div class="card mb-3"><div class="empty-note">Nothing to review.</div></div>`}
     ${done.length ? `<div class="section-title">Saved</div><div class="row g-3">${done.map(i => shotCard(i, false)).join("")}</div>` : ""}`;
+  if (!wait.length) return;
+  const cps = () => { $("#up-cp").innerHTML = wait.filter(d => d.episode === $("#up-ep").value).map(d => `<option>${d.checkpoint}</option>`).join(""); };
+  cps(); $("#up-ep").onchange = cps;
   const dz = $("#drop"); dz.onclick = () => { pendingUpload = [$("#up-ep").value, $("#up-cp").value]; if (pendingUpload[0]) $("#file").click(); };
   dz.ondragover = e => { e.preventDefault(); dz.classList.add("over"); }; dz.ondragleave = () => dz.classList.remove("over");
   dz.ondrop = e => { e.preventDefault(); dz.classList.remove("over"); const f = e.dataTransfer.files[0]; if (f && $("#up-ep").value) upload($("#up-ep").value, $("#up-cp").value, f); };

@@ -1,6 +1,6 @@
 # EX18 — The Landlord
 
-Status: story ✓ → **script ✓ (2026-11-03: twist after hook, L06 trimmed)** → voice ✓ → preview ✓ (no reply in 5 min → full render, as instructed) → build ✓ → final v1 → **user review → v2 final ✓ (2026-11-03)** → posted → voice → preview → build → final → posted
+Status: **RETIRED 2026-11-06 (didn't pass the user's review; never posted, not in Telegram)** · was: story ✓ → **script ✓ (2026-11-03: twist after hook, L06 trimmed)** → voice ✓ → preview ✓ (no reply in 5 min → full render, as instructed) → build ✓ → final v1 → **user review → v2 final ✓ (2026-11-03)** → posted → voice → preview → build → final → posted
 Voice: Nathan, narrator, `v4k7NzxipnuJNJtrKxob`
 Calendar: Day 12, Sat 07 Nov 2026, 12:30 (may move: first long-edu, 1–3 a week)
 

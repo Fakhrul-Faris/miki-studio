@@ -84,6 +84,9 @@ body { background: var(--tblr-body-bg); -webkit-tap-highlight-color: transparent
 .count-big { font-size: 2.1rem; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--ochre-hi); line-height: 1; }
 .actions { display: flex; flex-wrap: wrap; gap: 8px; }
 @media (max-width: 860px) { .hero { grid-template-columns: 1fr; } .hero-media { aspect-ratio: auto; height: 220px; } .hero-media img { object-position: center 35%; } .hero-body { padding: 16px; gap: 12px; } .count-big { font-size: 1.8rem; } .page-head .btn { width: 100%; } }
+.cap-wrap { position: relative; }
+.cap-wrap .cap { padding-right: 76px; }
+.cap-copy { position: absolute; top: 8px; right: 8px; }
 .cap { white-space: pre-wrap; font-size: .84rem; line-height: 1.45; background: var(--tblr-bg-surface-secondary); border: 1px solid var(--tblr-border-color); border-radius: 12px; padding: 12px 14px; max-height: 168px; overflow: auto; }
 
 /* lists */

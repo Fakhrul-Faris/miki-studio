@@ -48,14 +48,15 @@ def main():
     ix = json.loads((ME / "storage" / "telegram-index.json").read_text()) if (ME / "storage" / "telegram-index.json").exists() else {}
     finals = {v["episode"] for k, v in ix.items() if isinstance(v, dict) and v.get("role") == "final"}
     st = stacks()
+    seen = set()
     with db.conn() as c:
         for d in sorted((ME / "04_episodes").glob("EX*")):
             f = next((d / n for n in ("episode.md", "README.md") if (d / n).exists()), None)
-            if not f: continue
-            doc = f.read_text(); ep = d.name.split("_")[0]
+            if not f or d.name.split("_")[0] in seen: continue      # EX19_gym before EX19_miles_dropped: the first folder wins
+            doc = f.read_text(); ep = d.name.split("_")[0]; seen.add(ep)
             t = re.search(r'^#\s*EX\S*\s*(?:[—:-]\s*)?[“"]?(.+?)[”"]?(?:\s+[—(].*)?$', doc, re.M)
             dur = re.search(r"\(([\d.]+) s", field(doc, "Status") or "")
-            status = "posted" if ep in posted else "ready" if ep in finals else "draft"
+            status = "posted" if ep in posted else "retired" if "RETIRED" in (field(doc, "Status") or "") else "ready" if ep in finals else "draft"
             c.execute("""insert into episodes(id, title, lane, setting, concept, stack, duration, status, caption, pinned, added)
                          values(?,?,?,?,?,?,?,?,?,?,?) on conflict(id) do update set title=excluded.title, lane=excluded.lane,
                          setting=excluded.setting, concept=excluded.concept, stack=excluded.stack, duration=excluded.duration,

@@ -502,12 +502,13 @@ def tick(chat):
         if quiet(s, t): return
         for d in D.due(c):
             if d["state"] != "due": continue
-            if c.execute("select 1 from nudges where post_id=? and checkpoint=?", (d["post_id"], d["checkpoint"])).fetchone(): continue
+            n = c.execute("select sent_at from nudges where post_id=? and checkpoint=?", (d["post_id"], d["checkpoint"])).fetchone()
+            if n and dt.datetime.fromisoformat(n["sent_at"]) > t - dt.timedelta(hours=12): continue   # then again every 12 h until it's in
             ep, cp = d["episode"], d["checkpoint"]
             call("sendMessage", {"chat_id": chat, "parse_mode": "HTML", "text":
-                 f"📊 <b>{ep}</b> {cp} numbers are due ({d['platform']}). Screenshot the post's analytics in TikTok Studio and send it here "
+                 f"📊 {'⏳ Still waiting: ' if n else ''}<b>{ep}</b> {cp} numbers are due ({d['platform']}). Screenshot the post's analytics in TikTok Studio and send it here "
                  f"with the caption <code>/stats {ep.lower()} {cp}</code>, or upload it on the dashboard."})
-            c.execute("insert into nudges values(?, ?, ?)", (d["post_id"], cp, D.now()))
+            c.execute("insert into nudges values(?, ?, ?) on conflict(post_id, checkpoint) do update set sent_at=excluded.sent_at", (d["post_id"], cp, D.now()))
 
 
 def cmd_serve(_):
