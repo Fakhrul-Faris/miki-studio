@@ -91,9 +91,9 @@ function today() {
       ${ready ? `<div class="mt-3"><button class="btn btn-primary" data-replan>Plan the queue</button></div>` : ""}</div></div>`;
   }
   html += `<div class="section-title">Stats to collect</div><div class="card mb-3">${dl.length ? dl.map(d => { const e = ep(d.episode);
-    return `<div class="rowx"><img class="thumb-sm" src="${thumb(e.id)}" alt="" onerror="this.style.visibility='hidden'"><div class="grow"><div class="fw-bold ell">${esc(e.id)} · ${esc(e.title)}</div>
-      <div class="small muted">${PLAT[d.platform]} · ${d.state === "sent" ? "screenshot waiting in Inbox" : "due " + rel(d.due_at)}</div></div>${late(d) ? `<span class="chip bad">overdue</span>` : ""}<span class="chip ${d.state === "sent" ? "ok" : "warn"}">${d.checkpoint}</span>
-      ${d.state === "sent" ? `<a class="btn btn-soft btn-sm" href="#inbox">Review</a>` : `<button class="btn btn-primary btn-sm" data-upload="${e.id}|${d.checkpoint}">Upload</button><button class="btn btn-soft btn-sm" data-num="${d.post_id}|${d.checkpoint}">Type</button>`}</div>`; }).join("")
+    return `<div class="rowx stat"><img class="thumb-sm" src="${thumb(e.id)}" alt="" onerror="this.style.visibility='hidden'"><div class="grow"><div class="fw-bold ell">${esc(e.id)} · ${esc(e.title)}</div>
+      <div class="small muted">${PLAT[d.platform]} · ${d.state === "sent" ? "screenshot waiting in Inbox" : "due " + rel(d.due_at)}</div></div><div class="row-act">${late(d) ? `<span class="chip bad">overdue</span>` : ""}<span class="chip ${d.state === "sent" ? "ok" : "warn"}">${d.checkpoint}</span>
+      ${d.state === "sent" ? `<a class="btn btn-soft btn-sm" href="#inbox">Review</a>` : `<button class="btn btn-primary btn-sm" data-upload="${e.id}|${d.checkpoint}">Upload</button><button class="btn btn-soft btn-sm" data-num="${d.post_id}|${d.checkpoint}">Type</button>`}</div></div>`; }).join("")
     : `<div class="empty-note">All caught up. Numbers come due 24 h, 72 h and 7 days after each post.</div>`}</div>`;
   const wk = S.posts.filter(p => p.posted_at && D(p.posted_at) > Date.now() - 7 * 864e5);
   const views = wk.reduce((a, p) => a + ((latest(p) || {}).views || 0), 0), fol = wk.reduce((a, p) => a + ((latest(p) || {}).follows || 0), 0);
@@ -246,9 +246,9 @@ function inbox() {
   $("#p-inbox").innerHTML = `<div class="page-head"><div><h1 class="h-page">Inbox</h1><div class="sub">Analytics screenshots: drop them here or send them to the bot with <code>/stats ex13 72h</code>. The Air reads the numbers; you confirm.</div></div></div>
     ${over.length ? `<div class="card mb-3" style="border-left:3px solid var(--bad)"><div class="card-body py-2"><b>⏰ ${over.length} overdue</b> <span class="muted small">· more than 12 h past due: ${over.map(d => `${d.episode} ${d.checkpoint}`).join(", ")}. The bot reminds you every 12 h until they're in.</span></div></div>` : ""}
     <div class="section-title">Waiting for numbers</div><div class="card mb-3">${wait.length ? wait.map(d => { const e = ep(d.episode);
-      return `<div class="rowx"><img class="thumb-sm" src="${thumb(e.id)}" alt="" onerror="this.style.visibility='hidden'"><div class="grow"><div class="fw-bold ell">${esc(e.id)} · ${esc(e.title)}</div>
-        <div class="small muted">${PLAT[d.platform]} · due ${rel(d.due_at)} · views, avg watch, full %, likes, comments, shares, saves, follows</div></div>${late(d) ? `<span class="chip bad">overdue</span>` : ""}<span class="chip warn">${d.checkpoint}</span>
-        <button class="btn btn-primary btn-sm" data-upload="${e.id}|${d.checkpoint}">Upload</button><button class="btn btn-soft btn-sm" data-num="${d.post_id}|${d.checkpoint}">Type</button></div>`; }).join("")
+      return `<div class="rowx stat"><img class="thumb-sm" src="${thumb(e.id)}" alt="" onerror="this.style.visibility='hidden'"><div class="grow"><div class="fw-bold ell">${esc(e.id)} · ${esc(e.title)}</div>
+        <div class="small muted">${PLAT[d.platform]} · due ${rel(d.due_at)}</div></div><div class="row-act">${late(d) ? `<span class="chip bad">overdue</span>` : ""}<span class="chip warn">${d.checkpoint}</span>
+        <button class="btn btn-primary btn-sm" data-upload="${e.id}|${d.checkpoint}">Upload</button><button class="btn btn-soft btn-sm" data-num="${d.post_id}|${d.checkpoint}">Type</button></div></div>`; }).join("")
       : `<div class="empty-note">All numbers are in. New ones come due 24 h, 72 h and 7 days after each post.</div>`}</div>
     ${wait.length ? `<div class="card mb-3"><div class="card-body"><div class="row g-2 align-items-end">
       <div class="col-6 col-md-4"><label class="form-label">Episode</label><select class="form-select" id="up-ep">${eps.map(e => `<option value="${e.id}">${e.id} · ${esc(e.title)}</option>`).join("")}</select></div>

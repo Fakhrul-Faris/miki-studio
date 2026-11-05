@@ -94,6 +94,13 @@ body { background: var(--tblr-body-bg); -webkit-tap-highlight-color: transparent
 .rowx:first-child { border-top: 0; }
 .thumb-sm { width: 40px; height: 64px; border-radius: 8px; object-fit: cover; background: #000; flex: none; }
 .grow { flex: 1; min-width: 0; }
+.row-act { display: flex; align-items: center; gap: 8px; flex: none; }
+@media (max-width: 860px) {               /* stats rows: chips + buttons drop to their own line so the text keeps the width */
+  .rowx.stat { flex-wrap: wrap; row-gap: 8px; }
+  .rowx.stat .grow { flex-basis: calc(100% - 52px); }
+  .rowx.stat .row-act { width: 100%; padding-left: 52px; }
+  .rowx.stat .row-act .btn:first-of-type { margin-left: auto; }
+}
 .ell { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .empty-note { padding: 26px 18px; text-align: center; color: var(--tblr-secondary); }
 
