@@ -9,6 +9,12 @@ the mix allows (How It Makes Money is 12 of 43 posts, so it returns about every 
 4's pre-assigned test stack; "the decoy" (#10) moved to Day 35 to fill the gap. Both still hold their lane-spacing.
 
 **2026-11-01:** synced to the dashboard (the source of truth for dates and times: http://100.107.126.69:8787). EX05–EX13
+
+**2026-11-07:** the user deleted the old scheduled TikTok posts EX11 (Sun 8 Nov 12:30), EX12 (Mon 9 Nov, scheduled 18:00 in TikTok)
+and EX13 (Tue 10 Nov, scheduled 21:00 in TikTok); none was posted. The slots go to the smooth-iso v2 episodes in
+`05_calendar/posting-plan.md` (EX24–EX27 first). EX24 (Sun 8 Nov 12:30) and EX25 (Sun 8 Nov 21:00) scheduled in TikTok Studio by
+the user on 2026-11-07.
+
 are scheduled in TikTok Studio (12:30 / 18:00 / 21:00 rotation). From Day 12 every new episode is built in the **smooth
 isometric** house format (EX14); the first nine cut-paper episodes vs the isometric ones is the format test (compare 3 s
 retention, average watch time and % watched full in Results). IKEA (EX14) and Disney (EX13) left the idea list; the rest
@@ -40,11 +46,11 @@ Isometric format: about one episode a day (script → voice → preview → rend
 | 11 | Fri 06 Nov 21:00 | Myth or Math | "5× cheaper to keep a customer" (EX17, P9) · isometric  **[NEW]** | "Everyone quotes this number. Where did it come from?" |  | final ✓ (export/EX17.mp4), to schedule |  |  |
 | 12 | Sat 07 Nov 12:30 | How It Makes Money | McDonald's (EX18, #23) · isometric · **long-edu 72 s** **[NEW]** | "Almost every time you buy a Big Mac, two businesses get paid." |  | final ✓ (export/EX18.mp4), to schedule |  |  |
 | 13 | Sat 07 Nov 21:00 | How It Makes Money | The Popcorn Business (EX10, #18; cinema)  [OLD] | "Cinemas barely make money on the movie." | H1 · E6 · C1 · A7 · S2 · U2 · T1 · L2 · Bridge:off · CTA-end · END-reframe | scheduled |  |  |
-| 14 | Sun 08 Nov 12:30 | The Number | The Price of a No-Show (EX11, clinic)  [OLD] | "A reminder text stops no-shows? Barely." | H4 · E5 · C3 · A1 · S6 · U4 · L1 · Bridge:off · CTA-end · END-callback (T2 dropped: subtitles) | scheduled |  |  |
+| 14 | Sun 08 Nov 12:30 | The Number | The Price of a No-Show (EX11, clinic)  [OLD] **CANCELLED 2026-11-07: scheduled post deleted by the user, never posted** | "A reminder text stops no-shows? Barely." | H4 · E5 · C3 · A1 · S6 · U4 · L1 · Bridge:off · CTA-end · END-callback (T2 dropped: subtitles) | scheduled |  |  |
 | 15 | Sun 08 Nov 21:00 | The Number | Customers a day to break even (P6) (EX19) · isometric  **[NEW]** | "How many haircuts before your shop makes a cent?" |  | to build (due Sun 08 Nov) |  |  |
 | 16 | Mon 09 Nov 12:30 | Before It Broke | Kodak and the digital camera (P15) (EX20) · isometric  **[NEW]** | "Kodak invented the digital camera. Then buried it." |  | to build (due Mon 09 Nov) |  |  |
-| 17 | Mon 09 Nov 21:00 | Designed on Purpose | The Button That Does Nothing (EX12, bubble tea)  [OLD] | "You jab the close-door button. Does it do anything? Guess." | H6 · E13 · C4 · A8 · S3 · U2 · T1 · L3 · Bridge:on · CTA-end · END-next | ready — reschedule in TikTok to 21:00 |  |  |
-| 18 | Tue 10 Nov 12:30 | Psychology of Waiting | The Hidden Queue (EX13, #5; nasi kandar)  [OLD] | "Disney lies about your wait. On purpose." | H1 · E12 · C2 · A4 · S1 · L2 · Bridge:on · CTA-end · END-reframe · V1+V2 Opuscar beats | ready — reschedule in TikTok to 12:30 |  |  |
+| 17 | Mon 09 Nov 21:00 | Designed on Purpose | The Button That Does Nothing (EX12, bubble tea)  [OLD] **CANCELLED 2026-11-07: scheduled post deleted by the user, never posted** | "You jab the close-door button. Does it do anything? Guess." | H6 · E13 · C4 · A8 · S3 · U2 · T1 · L3 · Bridge:on · CTA-end · END-next | ready — reschedule in TikTok to 21:00 |  |  |
+| 18 | Tue 10 Nov 12:30 | Psychology of Waiting | The Hidden Queue (EX13, #5; nasi kandar)  [OLD] **CANCELLED 2026-11-07: scheduled post deleted by the user, never posted** | "Disney lies about your wait. On purpose." | H1 · E12 · C2 · A4 · S1 · L2 · Bridge:on · CTA-end · END-reframe · V1+V2 Opuscar beats | ready — reschedule in TikTok to 12:30 |  |  |
 | 19 | Tue 10 Nov 21:00 | How It Makes Money | Petrol stations (#25) (EX21) · isometric  **[NEW]** | "The petrol pays for the lights. The snacks pay the bills." |  | to build (due Tue 10 Nov) |  |  |
 | 20 | Wed 11 Nov 12:30 | Myth or Math | "The customer is always right" (P8) | "The man who said it didn't mean what you think." |  | ☐ |  |  |
 | 21 | Wed 11 Nov 21:00 | The Invisible Queue | Theme-park virtual queues (P14) | "The queue you don't stand in." |  | ☐ |  |  |

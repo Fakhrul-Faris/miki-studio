@@ -57,10 +57,11 @@ export function IsoStage({ cam, children }: { cam: Cam; children?: any }) {
 
 // ---------- parts ----------
 const cache: Record<string, Solid> = {};
-export const rbox = (w: number, h: number, d: number, r = 0.1) =>       // clay: soft rounded edges (cache[`b${w}|${h}|${d}|${r}`] ??= manifold.roundedBox(w, h, d, Math.min(r, w / 2.2, h / 2.2, d / 2.2)));
+// clay: soft rounded edges (r 0.1)
+export const rbox = (w: number, h: number, d: number, r = 0.1) => (cache[`b${w}|${h}|${d}|${r}`] ??= manifold.roundedBox(w, h, d, Math.min(r, w / 2.2, h / 2.2, d / 2.2)));
 /** a bevelled box standing on y0 at (x, z) */
 export function Box({ name, x, z, w, h, d, y0 = 0, col = G.body, ry = 0, glow, rough = 0.9 }:
-  { name: string; x: number; z: number; w: number; h: number; d: number; y0?: number; col?: string; ry?: number; glow?: number; rough?: number }) {   // rough 0.9 default: matte clay
+  { name: string; x: number; z: number; w: number; h: number; d: number; y0?: number; col?: string; ry?: number; glow?: number; rough?: number }) {
   return <Mesh3d name={name} transform={Transform.fromXyz(x, y0 + h / 2, z).withRotation(Quat.fromEuler("XYZ", 0, ry, 0))} shape={rbox(w, h, d)}>
     <StandardMaterial base_color={col} perceptual_roughness={rough} emissive={glow ? glowG(glow) : undefined} />
   </Mesh3d>;
