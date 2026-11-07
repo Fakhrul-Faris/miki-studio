@@ -16,17 +16,23 @@ Strategy: Nov growth plan · series **You got played** · Malaysian, timely (11.
   [Lexology version](https://www.lexology.com/library/detail.aspx?g=20ffd633-3f23-4e3e-b710-b13f2e62ea4e).
 - The example is illustrative (the law firm's), not a named seller's case. Not claimed: how common it is.
 
-## Script v1 (~82 words, ~29 s)
+## Script v2 (~86 words, ~31 s; Shopee 11.11 named, user 2026-11-07: "be more specific with 11.11 … mention shopee")
 
 | Line | Beat | Voice | On screen (keyword) |
 |---|---|---|---|
-| L01 | Hook | This 11.11, that ten percent off could cost you more than the normal price. | 10% off = more? |
-| L02 | Mechanism | A vacuum usually sells for 500 ringgit. Right before the sale, the seller lifts it to 600. | RM500 → RM600 |
-| L03 | Twist | Then ten percent off. You pay 540, and it feels like a deal. | You pay RM540 |
-| L04 | Stakes | In Malaysia, that's illegal. Misleading prices break the Consumer Protection Act, and Shopee suspends listings that do it. | Illegal under CPA 1999 |
-| L05 | End | So before you pay, check last week's price. What's the worst fake deal you've seen? Follow for more hidden business models. | Check last week's price |
+| L01 | Hook | Shopee's 11.11 Big Sale has eleven million ringgit in vouchers. But some sellers' ten percent off costs more than the normal price. | Shopee 11.11: 10% off = more? |
+| L02 | Mechanism | Here's how. A vacuum usually sells for 500 ringgit. Right before 11.11, the seller lifts it to 600. | RM500 → RM600 |
+| L03 | Twist | Then ten percent off. You pay 540, and it still feels like a deal. | You pay RM540 |
+| L04 | Stakes | In Malaysia, that's illegal under the Consumer Protection Act. And Shopee suspends listings that fake a discount. | Illegal · Shopee suspends it |
+| L05 | End | So before you use your vouchers, check last week's price. Seen a fake deal? Drop it below. Follow for more hidden business models. | Check last week's price |
 
-Voice (Nathan): a touch quicker; say "eleven eleven", "ringgit" (RING-git), "Shopee" (SHOP-ee). English only. L01–L05.
+Framing: the fake discount is **some sellers'** doing (the law firm's illustrative example); Shopee is named for its sale
+and its own rule against it, never accused. Sale facts: "Shopee's 11.11 Big Sale in Malaysia runs until 12 November …
+RM11 million up for grabs" — [ProductNation, 3 Nov 2026](https://productnation.co/my/32245/shopee-11-11-malaysia-rm11-million-vouchers-NLQe/);
+Shopee press release via [Malay Mail, 2 Nov 2026](https://www.malaymail.com/news/money/mediaoutreach/2026/11/02/shopee-1111-big-sale-turns-up-the-excitement-on-shopee-live-with-daily-livestreams-rm11-million-in-vouchers-and-mega-savings/498528).
+Logo: the real Shopee logo file (Wikimedia) flat over the opening, as EX24/EX25, if a usable file exists.
+
+Voice (Nathan): a touch quicker; "eleven eleven", "ringgit" (RING-git), "Shopee" (SHOP-ee). English only. L01–L05.
 
 ## Shot outline (smooth iso v2, EX16 palette)
 
@@ -44,9 +50,9 @@ Voice (Nathan): a touch quicker; say "eleven eleven", "ringgit" (RING-git), "Sho
 
 **Caption:**
 ```
-That 11.11 "10% off" can cost more than the normal price 🛒 RM500 → raised to RM600 right before the sale → 10% off = you pay RM540. In Malaysia, misleading discounts are illegal under the Consumer Protection Act 1999.
+Shopee 11.11 tip: some "10% off" deals cost more than the normal price 🛒 RM500 → raised to RM600 right before the sale → 10% off = you pay RM540. In Malaysia, misleading discounts are illegal under the Consumer Protection Act 1999.
 
-Save this for checkout. What's the worst fake deal you've seen? 👇
+Save this before you use your vouchers. Seen a fake deal? Drop it below 👇
 
 #1111 #shopee #lazada #malaysia #duit
 ```
