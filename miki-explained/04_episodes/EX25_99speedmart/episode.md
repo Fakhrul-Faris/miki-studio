@@ -54,5 +54,6 @@ Part 2: how Mr DIY does it (this week, follow so you don't miss it). What should
 ```
 Part 3: Mixue, Daiso or ZUS? Vote 👇
 Sources: The Edge (9 Sep 2024: supplier fees ≈ half of 2Q 2024 operating profit), NST & Bernama (2Q 2026: 3,151 outlets, 5.3% net margin).
+Logo: "99LogoM.jpg" by 99speedmart, Wikimedia Commons, CC BY-SA 4.0.
 ```
 - AI-generated content label on. Post Sun 8 Nov 21:00 MYT.
