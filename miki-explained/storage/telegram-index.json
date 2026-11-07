@@ -3731,6 +3731,126 @@
   "size": 370895,
   "stored": "2026-11-06 00:07:41"
  },
+ "EX22/audio/L01.mp3": {
+  "chat_id": 8165127397,
+  "episode": "EX22",
+  "file_id": "BQACAgUAAxkDAAIBc2rsuGsQ9TYcaef4CPVbCf9PePUZAAJUJAACUsBoV6zvwu88SRtbPQQ",
+  "file_unique_id": "AgADVCQAAlLAaFc",
+  "message_id": 371,
+  "path": "audio/L01.mp3",
+  "role": "source",
+  "sha256": "307835cc95e4bb14f567f9ea0dee3ee52191b2ed846f4459d6bd174ea053cace",
+  "size": 131875,
+  "stored": "2026-11-06 01:10:04"
+ },
+ "EX22/audio/L02.mp3": {
+  "chat_id": 8165127397,
+  "episode": "EX22",
+  "file_id": "BQACAgUAAxkDAAIBdGrsuGzgD1CRJ01afOjq6_on4yQZAAJVJAACUsBoV5KPY4s95nr8PQQ",
+  "file_unique_id": "AgADVSQAAlLAaFc",
+  "message_id": 372,
+  "path": "audio/L02.mp3",
+  "role": "source",
+  "sha256": "4dff77a78e09e90d308d2a30c7e72609f1dc7e1a5ca12bdee91445be6db883ba",
+  "size": 77123,
+  "stored": "2026-11-06 01:10:06"
+ },
+ "EX22/audio/L03.mp3": {
+  "chat_id": 8165127397,
+  "episode": "EX22",
+  "file_id": "BQACAgUAAxkDAAIBdWrsuG4LARhS8CFL21DPF9coAAEgTQACViQAAlLAaFc-sLq8HZLP3z0E",
+  "file_unique_id": "AgADViQAAlLAaFc",
+  "message_id": 373,
+  "path": "audio/L03.mp3",
+  "role": "source",
+  "sha256": "98f9757f89a8f3ed0190bbee6474e77617e3fcc25de054e76b94424d4085d618",
+  "size": 194987,
+  "stored": "2026-11-06 01:10:07"
+ },
+ "EX22/audio/L04.mp3": {
+  "chat_id": 8165127397,
+  "episode": "EX22",
+  "file_id": "BQACAgUAAxkDAAIBdmrsuG-2mEZI6YOc_Afj5_yoNqsSAAJXJAACUsBoV6y7QeH9C5HPPQQ",
+  "file_unique_id": "AgADVyQAAlLAaFc",
+  "message_id": 374,
+  "path": "audio/L04.mp3",
+  "role": "source",
+  "sha256": "99aa18545afeae8e087d2b3356efed4e68b41f6703d463bc220fc1a9f9d45085",
+  "size": 59150,
+  "stored": "2026-11-06 01:10:09"
+ },
+ "EX22/audio/L05.mp3": {
+  "chat_id": 8165127397,
+  "episode": "EX22",
+  "file_id": "BQACAgUAAxkDAAIBd2rsuHG10-nY2KwVn_5dH2x0yc67AAJYJAACUsBoVwf_BSGOrh2ZPQQ",
+  "file_unique_id": "AgADWCQAAlLAaFc",
+  "message_id": 375,
+  "path": "audio/L05.mp3",
+  "role": "source",
+  "sha256": "7c2a76160750e05ee99d6d03f68a302e81a01ef4eda9f9b0deeb3f9f0120623c",
+  "size": 110977,
+  "stored": "2026-11-06 01:10:10"
+ },
+ "EX22/audio/L06.mp3": {
+  "chat_id": 8165127397,
+  "episode": "EX22",
+  "file_id": "BQACAgUAAxkDAAIBeGrsuHKVRPv0-FYiBHSRK-6fyAkvAAJZJAACUsBoVx9tWjd-p_1ZPQQ",
+  "file_unique_id": "AgADWSQAAlLAaFc",
+  "message_id": 376,
+  "path": "audio/L06.mp3",
+  "role": "source",
+  "sha256": "6725eae755d346d284fd0afb4d1f2ab509cff52992e248ad85b57791d687af0f",
+  "size": 42014,
+  "stored": "2026-11-06 01:10:12"
+ },
+ "EX22/audio/vo_timeline.json": {
+  "chat_id": 8165127397,
+  "episode": "EX22",
+  "file_id": "BQACAgUAAxkDAAIBeWrsuHOf26KOu2h6MI5ZpqwRzTalAAJaJAACUsBoVwKj52YrtffoPQQ",
+  "file_unique_id": "AgADWiQAAlLAaFc",
+  "message_id": 377,
+  "path": "audio/vo_timeline.json",
+  "role": "source",
+  "sha256": "4700d3993b017a0b54e90cd4215b28a2c7520eef26943f88879faf1296b33c37",
+  "size": 4163,
+  "stored": "2026-11-06 01:10:13"
+ },
+ "EX22/audio/voice.wav": {
+  "chat_id": 8165127397,
+  "episode": "EX22",
+  "file_id": "BQACAgUAAxkDAAIBemrsuHbmbAspnLSFx5ZL5KHZ-tLTAAJbJAACUsBoV1tAtVRmY6JJPQQ",
+  "file_unique_id": "AgADWyQAAlLAaFc",
+  "message_id": 378,
+  "path": "audio/voice.wav",
+  "role": "source",
+  "sha256": "177a4d3df79dcae38beb5260073ba5427cfc8623b3f0b988f6c1abb786e1b7ac",
+  "size": 5460250,
+  "stored": "2026-11-06 01:10:15"
+ },
+ "EX22/audio/words.json": {
+  "chat_id": 8165127397,
+  "episode": "EX22",
+  "file_id": "BQACAgUAAxkDAAIBe2rsuHcX-MET_oiDW0HPwbMLkkJRAAJcJAACUsBoV8m_4LZTHVnhPQQ",
+  "file_unique_id": "AgADXCQAAlLAaFc",
+  "message_id": 379,
+  "path": "audio/words.json",
+  "role": "source",
+  "sha256": "8ceed2db50dfd5cee2d2e30f6628f92b23a8c99f87e45d04047e5f4dc39c7ba5",
+  "size": 3525,
+  "stored": "2026-11-06 01:10:17"
+ },
+ "EX22/export/EX22.mp4": {
+  "chat_id": 8165127397,
+  "episode": "EX22",
+  "file_id": "BQACAgUAAxkDAAIBfGrsuIW9_KyGYRouY3cd20cqqk6VAAJdJAACUsBoV5KNqvqsOlLPPQQ",
+  "file_unique_id": "AgADXSQAAlLAaFc",
+  "message_id": 380,
+  "path": "export/EX22.mp4",
+  "role": "final",
+  "sha256": "67306141f180a401c1f789f9dd3e8f22d77b36f3810f53cb89d485d32419648f",
+  "size": 58708198,
+  "stored": "2026-11-06 01:10:30"
+ },
  "_headers": {
   "EX01V3": 4,
   "EX02V3": 31,
@@ -3750,6 +3870,7 @@
   "EX17": 294,
   "EX19": 307,
   "EX20": 337,
-  "EX21": 352
+  "EX21": 352,
+  "EX22": 370
  }
 }

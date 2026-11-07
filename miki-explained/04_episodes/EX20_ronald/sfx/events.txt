@@ -1,0 +1,11 @@
+162	swish	0.4
+407	blip	0.4
+656	pop	0.4
+692	pop	0.4
+781	blip	0.4
+977	rise	0.45
+1132	blip	0.4
+1215	swish	0.5
+1384	blip	0.45
+1446	blip	0.45
+1668	sub	0.45

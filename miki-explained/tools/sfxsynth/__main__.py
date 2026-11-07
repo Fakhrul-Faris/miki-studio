@@ -52,7 +52,7 @@ def main():
     stats = mix.master(target_lufs=getattr(cues, "TARGET_LUFS", -14.0))
     mix.write(out)
     print(
-        f"wrote {out}: {tl['duration']}s, {mix.count} sounds, "
+        f"wrote {out}: {tl.get('duration', tl.get('end'))}s, {mix.count} sounds, "
         f"{stats['lufs']:.1f} LUFS, true peak {stats['peak_db']:.1f} dBFS, drive {stats['drive']}"
     )
 

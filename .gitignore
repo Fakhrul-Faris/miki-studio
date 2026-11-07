@@ -84,3 +84,18 @@ miki-explained/04_episodes/_tests/*/audio/*.wav
 miki-explained/04_episodes/*/footage/*.mp4
 miki-explained/04_episodes/_tests/*/footage/*.mp4
 miki-explained/04_episodes/*/*_check.blend
+
+# raea era (2026-11-07): renders, test stills, voice/mix WAVs, downloaded photos and models stay local (Telegram is storage)
+miki-explained/04_episodes/*.mp4
+miki-explained/04_episodes/*/out/
+miki-explained/04_episodes/*/*.blend
+miki-explained/04_episodes/*/media/*.jpg
+miki-explained/04_episodes/*/sfx/*.mp3
+miki-explained/04_episodes/*/raea/*.png
+miki-explained/04_episodes/*/raea/media/
+miki-explained/04_episodes/_tests/**/*.mp4
+miki-explained/04_episodes/_tests/**/*.mov
+miki-explained/04_episodes/_tests/**/*.png
+miki-explained/04_episodes/_tests/**/*.glb
+miki-explained/04_episodes/_tests/**/*.blend
+miki-explained/04_episodes/_tests/**/media/

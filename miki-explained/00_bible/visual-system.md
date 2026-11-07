@@ -1,5 +1,18 @@
 # Visual system
 
+## The styles at a glance (stills in `00_bible/img/`)
+
+| Style | Status | Episodes | Look | Example |
+|---|---|---|---|---|
+| **Clay maquette** | **house look (current)** | EX20, EX21 | clay models, one green accent, x-ray buildings, roof-off rooms, grey map, dashed routes; hard cut on the word every ~3–6 s | ![clay world](img/clay_ex21_world.jpg) ![clay EX20](img/clay_ex20.jpg) |
+| Clay + real hero props | house look (variant) | EX21 | real photo opener, photo-real camera / phone inside the clay world | ![real props](img/clay_ex21_props.jpg) |
+| Reference: *Main Edit.mp4* | the target for clay | — | white-grey clay, red accent figures (ours: green), poses only, cutaways and shafts | ![reference](img/reference_main_edit.jpg) |
+| Smooth isometric | live (older) | EX14–EX16, EX22 | dark isometric world, greys + one green, Isotype people, one continuous camera, 60 fps | ![iso EX14](img/iso_ex14.jpg) ![iso EX16](img/iso_ex16.jpg) |
+| v4 realistic + diagrams | live (older) | EX17–EX19 | perspective 3D, real surfaces, cutaway ring, paired with isometric diagram scenes | ![v4 EX18](img/v4_ex18.jpg) ![v4 EX19](img/v4_ex19.jpg) |
+| Cut-paper collage | **retired** 2026-11-05 | EX02V3–EX08 | paper, ink, ochre; torn documentary prints; 12 fps stepping | ![collage](img/collage_ex06.jpg) |
+| Paper diorama (paperkit v2) | **retired** 2026-11-05 | EX09–EX12 | generated stills as depth layers in Blender, torn edges | ![diorama](img/diorama_ex09.jpg) |
+| Printed 3D (halftone + ink) | **retired** 2026-11-05 | EX13 | MPFB crowds, screen halftone, ink outline, dark lit room | ![printed 3D](img/printed3d_ex13.jpg) |
+
 ## House format (from 2026-11-01): smooth isometric — EX14 "The Long Path"
 
 User, on EX14: "i really really love what you did with this. this is what i'm looking for." It supersedes the cut-paper
@@ -37,12 +50,17 @@ format below (kept for reference). Reference build: `04_episodes/EX14_long-path`
   with a silhouette check (does the hero object read as one shape at small size, stripped of colour) before the full
   render. Added 2026-11-02, adapted from an external Blender stat-viz workflow the user shared.
 
+**Retired 2026-11-05 (user): cut-paper collage, the Blender paper diorama (paperkit v2) and printed 3D (halftone + ink).** Their sections below are history only.
+
 ## House look v5: clay maquette (from 2026-11-04; reference `04_episodes/Main Edit.mp4`, first episode EX20)
 
 Full study: `01_references/main-edit-study.md`. Approved look test: `04_episodes/_tests/EX00V11_clay/test.py`.
 
-- **Look:** every model in one cool clay `(0.30, 0.32, 0.36)` (`camkit.clay` / `clay_all`), the EX00V9 dark floor (no
-  lines), key + rim + shadowless fill suns, world ambient, bloom only. One accent, **green #57D100**: the protagonist, his
+- **Look (V4, user 2026-11-06, `_tests/EX00V12_clay-bright`):** every model in one clay `(0.30, 0.32, 0.36)` lit by the
+  test's **studio area lights** (key 9000 cool white, rim 2000, fill 1600; world ambient 0.9), a soft grey ground `#3E424A`
+  under a backdrop gradient `#4A4F58` → `#101216`, AgX Medium High Contrast, bloom only. Measured against Main Edit.mp4:
+  median luma 114 (ref 99), 23% bright (26%), 23% near-black (18%). EX20/EX21 came out at median 25–30 because their sets
+  were lit by low suns: **light every clay set with the area key, not suns.** One accent, **green #57D100**: the protagonist, his
   dashed routes, his pieces / markers. Frosted x-ray shells (`xray_shell`) for buildings you see into; roof-off dollhouse
   cutaways for rooms; a grey map mode for scale.
 - **Figures pose only** (user, 2026-11-05): no walk cycles, no gestures. Progress = a new pose across a cut, a dashed

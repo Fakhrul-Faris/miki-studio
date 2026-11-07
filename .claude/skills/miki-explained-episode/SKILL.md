@@ -48,6 +48,11 @@ use the project skills `iart-motion-art-direction` (motion-language spec, restra
 `iart-beat-sync-editing`, `iart-animation-principles`, `iart-after-effects` (expressions work in EffectCraft), and
 `scenario-blender-blockout` / `-hard-surface` / `-grease-pencil` with the earlier scenario-blender skills. Sound hits can be
 synthesized offline with `tools/sfxsynth` (`python3 -m sfxsynth --list`); keep them sparse.
+For growth (§ Post and beyond), use the social skills from blacktwist/social-media-skills (MIT, offline unless their MCP is
+connected): `hook-writer-sms`, `caption-writer-sms`, `content-strategy-sms`, `platform-strategy-sms`, `content-calendar-sms`,
+`content-repurposer-sms` (TikTok → Shorts / Reels), `content-pattern-analyzer-sms`, `performance-analyzer-sms`,
+`audience-growth-tracker-sms`, `optimization-advisor-sms` (the last four work from numbers the user pastes from TikTok
+Studio), with `social-media-context-sms` holding the Meikigo brand context.
 
 ## How to work with this user
 
@@ -157,7 +162,7 @@ Caption, hashtags, pinned comment with the source and a DM keyword, the before-p
 the **AI-generated content label**. Update the calendar, the glossary, and `03_ideas/experiments.md` § 13 (the device
 log row for this episode: hero device, supporting devices, the one surprise, the silhouette check result).
 
-## Legacy: the cut-paper format (EX02V3–EX13)
+## Legacy (RETIRED 2026-11-05): the cut-paper format (EX02V3–EX13) — history only, never use for new episodes
 
 Kept for reference and for reuse of single techniques (real footage, PhotoCraft). Don't build new episodes this way.
 
@@ -210,7 +215,8 @@ When a technique is new or in doubt, test it in `04_episodes/EX00Vn_<name>-test/
 measure the property per frame with `valueAtTime`, check full-size stills, render only the window, show a side-by-side.
 The user picks; only then move it into the kit, the docs and this skill.
 
-### Blender sets (paperkit v2, from EX11)
+### RETIRED — Blender sets (paperkit v2, from EX11)
+_Retired 2026-11-05: history only._
 
 Stage generated stills as a paper diorama in Blender (`tools/blender/paperkit.py`), never as a procedural 3D world:
 1. Environment plate → `tools-venv/depth/bin/python miki-explained/tools/depth.py <plate> <box_dir> 4` → `shadowbox(box_dir)`:
@@ -222,7 +228,8 @@ Stage generated stills as a paper diorama in Blender (`tools/blender/paperkit.py
 Reference: `04_episodes/_tests/EX00V5_paperkit2/` (kit_test.py, compare_flat_vs_v2.mp4). Ask for environment plates in
 how-i-generate.md (backdrop, set dressing) — see the memory note on Blender environments.
 
-### Printed 3D (crowd, halftone, ink; from EX00V6)
+### RETIRED — Printed 3D (crowd, halftone, ink; from EX00V6)
+_Retired 2026-11-05: history only._
 
 When a beat needs real depth (a camera that orbits, a crowd seen from every side), build it in 3D and print it: the
 user's picks r33–r42 (`01_references/v3-pro3d-study.md`) read "pro" as art direction, not realism.
