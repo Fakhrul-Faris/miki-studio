@@ -106,3 +106,4 @@ miki-explained/04_episodes/*/hf/.hyperframes/
 # EX26+ plate builds: rendered camera moves and depth maps (regenerate with build/plates.py)
 miki-explained/04_episodes/*/plates/
 miki-explained/04_episodes/*/hf/assets/plates/
+miki-explained/00_bible/series-bible/work/

@@ -1,7 +1,13 @@
 # Miki Explained — status (handoff, 2026-11-08)
 
 Read this first in a new session. Then: `00_bible/flat-v3-playbook.md` (the new look), `05_calendar/calendar.md`
-(schedule + Style A/B test), and the episode's `README.md` / `episode.md`.
+(schedule + Style A/B/C test), and the episode's `README.md` / `episode.md`.
+
+## ▶ NEXT SESSION: run `00_bible/series-bible/RUNBOOK-A.md` step by step (user, 2026-11-08)
+The user collected references for all three styles in `~/Desktop/Collecting/` (Style A 458 images + 37 clips, B and C
+too). Style A first. Prep is done (`tools/refs_prep.py` → `00_bible/series-bible/work/A/`). The runbook is rigid:
+follow it exactly, keep to its token caps, stop at step 8 and wait for the user's answers.
+Phone guide used for collecting: https://claude.ai/artifact/NdKUpoz5qsjk9sf6QD3rhF
 
 ## Goal and strategy (unchanged)
 1,000 followers + one organic 100k video by 30 Nov 2026. Malaysia-first, 2 posts/day (12:30, 21:00 MYT), 20–30 s.
@@ -33,7 +39,9 @@ Checkpoints: 14 Nov ≥150 followers, 21 Nov ≥450, 30 Nov 1,000.
 ## Pending (waiting on the user)
 1. **EX26 approved (2026-11-08)** as **Style C — illustrated plates** (`00_bible/plates-playbook.md`), now competing with
    A and B. Final `04_episodes/EX26_starbucks-float/export/EX26-Final.mp4` (depth version), posts Mon 9 Nov 12:30 MYT.
-2. **Telegram push** of EX24–EX27 finals when the Air is back: `tools/air.sh sync && tools/air.sh push-episode EXNN`.
+2. **EX28 Apple charger + EX29 Mr DIY Pt 2 scripts drafted** (`04_episodes/EX28_apple-charger/`, `EX29_mrdiy-margin/`),
+   waiting for approval; the user wants the bibles first. Slot: Tue 10 Nov.
+3. **Telegram push** of EX24–EX27 finals when the Air is back: `tools/air.sh sync && tools/air.sh push-episode EXNN`.
    (Decided 2026-11-08: EX26 screen/caption number = **US$220M**, matching the voice.)
 
 ## Next
