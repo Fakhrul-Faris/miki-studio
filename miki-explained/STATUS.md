@@ -3,7 +3,8 @@
 Read this first in a new session. Then: `00_bible/flat-v3-playbook.md` (the new look), `05_calendar/calendar.md`
 (schedule + Style A/B/C test), and the episode's `README.md` / `episode.md`.
 
-## ▶ NEXT SESSION: Style B reference review (write RUNBOOK-B with the same method, then run it)
+## ▶ NEXT SESSION: open `00_bible/series-bible/PROGRESS-B.md`, run the next unticked session of `RUNBOOK-B.md`
+Style B review prepped 2026-11-08 (240 files renamed, 214 images in 4 chunks, 33 clips; 4 sessions).
 BIBLE-A questions answered 2026-11-08 (§12). Test stills deliberately postponed: A, B, C share techniques, so test after
 the B and C bibles exist.
 **BIBLE-A.md drafted 2026-11-08** (Style A review done: 458 images + 41 clips judged one by one; notes in
