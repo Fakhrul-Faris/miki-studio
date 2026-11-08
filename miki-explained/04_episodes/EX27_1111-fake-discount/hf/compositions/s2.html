@@ -159,53 +159,53 @@ gsap.set("#s2-base", { svgOrigin: "540 1500" });
 gsap.set("#s2-tile", { svgOrigin: "860 -400" });
 // the shelf rises to meet the price line; the vacuum drops onto it
 gsap.set("#s2-extra", { scaleY: 0, svgOrigin: "540 800" });
-tl.fromTo("#s2-base", { scaleY: 0 }, { scaleY: 1, duration: 0.9, ease: spring(0.9) }, 1.0450000000000002);
-tl.fromTo("#s2-pshadow", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "io" }, 1.195);
-tl.fromTo("#s2-vac", { y: -520, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: spring(0.8) }, 1.375);
-tl.fromTo("#s2-w .pk1", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4, ease: "io" }, 1.475);
-tl.fromTo("#s2-n", { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "io" }, 2.4650000000000003);
+tl.fromTo("#s2-base", { scaleY: 0 }, { scaleY: 1, duration: 0.9, ease: spring(0.9) }, 1.105);
+tl.fromTo("#s2-pshadow", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "io" }, 1.255);
+tl.fromTo("#s2-vac", { y: -520, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: spring(0.8) }, 1.4349999999999998);
+tl.fromTo("#s2-w .pk1", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4, ease: "io" }, 1.535);
+tl.fromTo("#s2-n", { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "io" }, 2.4450000000000003);
 gsap.set("#s2-n", { transformOrigin: "50% 50%" });
-count("#s2-n", 0, 500, 2.515);
+count("#s2-n", 0, 500, 2.495);
 rise("#s2-w .a1", 0.035);
 // 11.11: the camera tilts up into the sky; the calendar tile swings down on its strings
 tl.fromTo("#s2-cam", { y: 0 }, { y: 170, duration: 0.8, ease: "io" }, 3.9549999999999996);
-tl.fromTo("#s2-tile", { y: -620, rotation: -24 }, { y: 0, rotation: 0, duration: 1.1, ease: spring(1.1) }, 4.115);
+tl.fromTo("#s2-tile", { y: -620, rotation: -24 }, { y: 0, rotation: 0, duration: 1.1, ease: spring(1.1) }, 4.055000000000001);
 wipe(3.6849999999999996, "#s2-w .a1", "#s2-w .b1", "ab");
-rise("#s2-w .b2", 6.175000000000001, 0.1);
-rise("#s2-w .b3", 6.555, 0.12);
+rise("#s2-w .b2", 5.195, 0.1);
+rise("#s2-w .b3", 5.535, 0.12);
 // the raise: a block grows under the vacuum, the price line rides up with it
-tl.fromTo("#s2-extra", { scaleY: 0 }, { scaleY: 1, duration: 0.8, ease: spring(0.8), immediateRender: false }, 6.555);
-tl.fromTo("#s2-vac", { y: 0 }, { y: -140, duration: 0.8, ease: spring(0.8), immediateRender: false }, 6.635);
-tl.fromTo("#s2-line", { attr: { d: "M-600 800 H364 V800 H1700" } }, { attr: { d: "M-600 660 H364 V660 H1700" }, duration: 0.8, ease: spring(0.8), immediateRender: false }, 6.595);
-count("#s2-n", 500, 600, 7.015);
-tl.fromTo("#s2-tile", { y: 0 }, { y: -700, duration: 0.6, ease: "io", immediateRender: false }, 7.784000000000001);
-tl.fromTo("#s2-cam", { y: 170 }, { y: 0, duration: 0.8, ease: "io", immediateRender: false }, 7.784000000000001);
+tl.fromTo("#s2-extra", { scaleY: 0 }, { scaleY: 1, duration: 0.8, ease: spring(0.8), immediateRender: false }, 5.535);
+tl.fromTo("#s2-vac", { y: 0 }, { y: -140, duration: 0.8, ease: spring(0.8), immediateRender: false }, 5.615);
+tl.fromTo("#s2-line", { attr: { d: "M-600 800 H364 V800 H1700" } }, { attr: { d: "M-600 660 H364 V660 H1700" }, duration: 0.8, ease: spring(0.8), immediateRender: false }, 5.575);
+count("#s2-n", 500, 600, 6.015);
+tl.fromTo("#s2-tile", { y: 0 }, { y: -700, duration: 0.6, ease: "io", immediateRender: false }, 6.851);
+tl.fromTo("#s2-cam", { y: 170 }, { y: 0, duration: 0.8, ease: "io", immediateRender: false }, 6.851);
 // the twist: the camera trucks left to reveal the real price; the line drops back to RM500 on the left...
-tl.fromTo("#s2-world", { x: 0 }, { x: 210, duration: 0.9, ease: "io" }, 8.384);
-tl.fromTo("#s2-ghost", { opacity: 0, strokeDashoffset: 216 }, { opacity: 1, strokeDashoffset: 0, duration: 1.0, ease: "io" }, 8.584);
-tl.fromTo("#s2-w .gl", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "io" }, 8.884);
-tl.fromTo("#s2-line", { attr: { d: "M-600 660 H364 V660 H1700" } }, { attr: { d: "M-600 800 H364 V660 H1700" }, duration: 0.5, ease: "io", immediateRender: false }, 8.534);
+tl.fromTo("#s2-world", { x: 0 }, { x: 210, duration: 0.9, ease: "io" }, 7.451);
+tl.fromTo("#s2-ghost", { opacity: 0, strokeDashoffset: 216 }, { opacity: 1, strokeDashoffset: 0, duration: 1.0, ease: "io" }, 7.651);
+tl.fromTo("#s2-w .gl", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "io" }, 7.951);
+tl.fromTo("#s2-line", { attr: { d: "M-600 660 H364 V660 H1700" } }, { attr: { d: "M-600 800 H364 V660 H1700" }, duration: 0.5, ease: "io", immediateRender: false }, 7.601);
 // ...and 10% off brings the deal down to RM540: still RM40 above it, now orange
-tl.fromTo("#s2-extra", { scaleY: 1 }, { scaleY: 0.4, duration: 0.7, ease: "io", immediateRender: false }, 8.764);
-tl.fromTo("#s2-vac", { y: -140 }, { y: -56, duration: 0.7, ease: "io", immediateRender: false }, 8.783999999999999);
-tl.fromTo("#s2-line", { attr: { d: "M-600 800 H364 V660 H1700" } }, { attr: { d: "M-600 800 H364 V744 H1700" }, duration: 0.7, ease: "io", immediateRender: false }, 8.764);
-tl.fromTo("#s2-red", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "io" }, 9.264);
-tl.fromTo("#s2-w .pk1", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "io", immediateRender: false }, 8.664);
-tl.fromTo("#s2-w .pk2", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "io" }, 8.964);
-count("#s2-n", 600, 540, 8.764, 0.7);
-wipe(8.284, "#s2-w .b1, #s2-w .b2, #s2-w .b3", "#s2-w .c1", "bc");
-rise("#s2-w .c2", 10.004, 0.1);
-rise("#s2-w .c3", 10.324);
-tl.fromTo("#s2-measure", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "io" }, 10.404);
-tl.fromTo("#s2-measure text", { scale: 1.2, transformOrigin: "100% 100%" }, { scale: 1, duration: 0.6, ease: spring(0.6) }, 10.404);
+tl.fromTo("#s2-extra", { scaleY: 1 }, { scaleY: 0.4, duration: 0.7, ease: "io", immediateRender: false }, 7.8309999999999995);
+tl.fromTo("#s2-vac", { y: -140 }, { y: -56, duration: 0.7, ease: "io", immediateRender: false }, 7.851);
+tl.fromTo("#s2-line", { attr: { d: "M-600 800 H364 V660 H1700" } }, { attr: { d: "M-600 800 H364 V744 H1700" }, duration: 0.7, ease: "io", immediateRender: false }, 7.8309999999999995);
+tl.fromTo("#s2-red", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "io" }, 8.331);
+tl.fromTo("#s2-w .pk1", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "io", immediateRender: false }, 7.731);
+tl.fromTo("#s2-w .pk2", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "io" }, 8.031);
+count("#s2-n", 600, 540, 7.8309999999999995, 0.7);
+wipe(7.351, "#s2-w .b1, #s2-w .b2, #s2-w .b3", "#s2-w .c1", "bc");
+rise("#s2-w .c2", 9.071, 0.1);
+rise("#s2-w .c3", 9.391);
+tl.fromTo("#s2-measure", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "io" }, 9.471);
+tl.fromTo("#s2-measure text", { scale: 1.2, transformOrigin: "100% 100%" }, { scale: 1, duration: 0.6, ease: spring(0.6) }, 9.471);
 // push in on the slice; then "still feels like a deal": a sticker slaps onto the shelf
-tl.fromTo("#s2-cam", { scale: 1 }, { scale: 1.1, duration: 1.6, ease: "io", immediateRender: false }, 10.104);
-tl.fromTo("#s2-deal", { x: 540, y: 1270, scale: 0, rotation: -30 }, { x: 540, y: 1270, scale: 1, rotation: -8, duration: 0.6, ease: spring(0.6) }, 12.164);
+tl.fromTo("#s2-cam", { scale: 1 }, { scale: 1.1, duration: 1.6, ease: "io", immediateRender: false }, 9.171);
+tl.fromTo("#s2-deal", { x: 540, y: 1270, scale: 0, rotation: -30 }, { x: 540, y: 1270, scale: 1, rotation: -8, duration: 0.6, ease: spring(0.6) }, 11.231);
 // hand-off: tilt down to the floor (the next map's ground)
 // HAND-OFF 2 · the blue floor rises as a sea with a moving crest (back band darker and ahead); the shelf world sinks a
 // little as it goes under — the next scene is drawn on that water
-sink("#s2-w .c1, #s2-w .c2, #s2-w .c3", 12.604999999999999, 0.03);
-const wv = 12.774999999999999;
+sink("#s2-w .c1, #s2-w .c2, #s2-w .c3", 11.673, 0.03);
+const wv = 11.843;
 tl.fromTo("#s2-wave", { y: 2200 }, { y: -470, duration: 0.85, ease: "power2.inOut" }, wv);
 tl.fromTo("#s2-wave-f", { x: 0 }, { x: -540, duration: 0.85, ease: "sine.inOut" }, wv);
 tl.fromTo("#s2-wave-b", { x: -540 }, { x: 0, duration: 0.85, ease: "sine.inOut" }, wv);

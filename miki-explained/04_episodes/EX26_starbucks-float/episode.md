@@ -9,6 +9,7 @@ Strategy: Nov growth plan · series **Brand secrets** · global brand Malaysians
   earlier) — 10-K, deferred revenue note. [SEC 10-K](https://www.sec.gov/Archives/edgar/data/829224/000082922425000114/sbux-20250928.htm)
 - **Breakage** (balances expected never to be redeemed) recognised in FY2025: **US$200.4 m** (company-operated stores) +
   **US$22.0 m** (licensed stores) = **US$222.4 m** — 10-K.
+- **On screen and in the caption: US$220M**, matching the voice ("two hundred and twenty million", rounded; user 2026-11-08). The exact US$222.4 m stays in the pinned comment.
 - "Our stored value cards do not have an expiration date, nor do we charge service fees" — 10-K.
 - The balance includes Stars (loyalty) as well as card/app money; the script says "customers' balances".
 - Not claimed: anything about Starbucks Malaysia's own balances (not disclosed; Berjaya Food runs it). The ending is a
@@ -21,7 +22,7 @@ Strategy: Nov growth plan · series **Brand secrets** · global brand Malaysians
 | L01 | Hook | Starbucks is holding one point seven five billion dollars of its customers' money. | Starbucks holds $1.75B of yours |
 | L02 | Mechanism | Every time you top up the app, you pay for coffee you haven't ordered yet. | Paid before you order |
 | L03 | Twist | Until you spend it, that money works for Starbucks. No interest. No due date. | A loan with no interest |
-| L04 | Proof | And some of it is never spent. In 2025, forgotten balances earned Starbucks two hundred and twenty million dollars. | $222M never spent |
+| L04 | Proof | And some of it is never spent. In 2025, forgotten balances earned Starbucks two hundred and twenty million dollars. | $220M never spent |
 | L05 | End | So next time the app asks you to top up, ask who's lending to whom. Follow for more hidden business models. | Who's lending to whom? |
 
 Voice (Nathan `v4k7NzxipnuJNJtrKxob`): a touch quicker than usual; small beat before "No interest. No due date." English
@@ -41,7 +42,7 @@ money — present in every scene; every hand-off is made from coins (not EX27's 
 | L01 0–4.9 s | Starbucks holds US$1.75B of customers' money | Phones lying on a table, each showing its own app balance; amber coins run along dotted lines from every phone into one Starbucks account disc that counts up to **US$1.75 BILLION** | top-down; starts on one phone and **pulls back** to reveal hundreds |
 | L02 4.9–8.9 s | top up the app = pay for coffee not ordered yet | One phone, flat front-on: **TOP UP** button presses, balance +RM50, a coin leaves; beside it an **empty dashed cup** tagged "PAID · NOT ORDERED" | flat front; **camera trucks right** from the phone to the cup |
 | L03 8.9–13.4 s | until spent, the money works for Starbucks; no interest, no due date | The coin drops into the Starbucks account; money flows out of it into Starbucks' business (stores built, beans bought, shown as labelled items); a loan slip reads **INTEREST 0% · DUE DATE —** | **worm's-eye tilt up** a growing column of coins, then top-down on the slip |
-| L04 13.4–20.6 s | some is never spent; in 2025 forgotten balances earned US$222M | A **2025 timeline** (Jan–Dec) as the horizon; phones standing on it with balances that never go down ("not spent"); at December their coins slide off into Starbucks' stack: **+US$222M · FY2025** | flat side elevation; **camera travels along the year** |
+| L04 13.4–20.6 s | some is never spent; in 2025 forgotten balances earned US$220M | A **2025 timeline** (Jan–Dec) as the horizon; phones standing on it with balances that never go down ("not spent"); at December their coins slide off into Starbucks' stack: **+US$220M · FY2025** | flat side elevation; **camera travels along the year** |
 | L05 20.6–26.8 s | next time the app asks to top up, ask who's lending to whom | The phone again: "Top up?" prompt; two arrows **YOU → STARBUCKS** (lending) with the question; end card (coin → Meikigo logo, silent) | front-on push-in; end card |
 
 Hand-offs (asset-built): coin pull-back (L01 → L02: one coin fills the frame and becomes the phone's button) · coin drop
@@ -52,7 +53,7 @@ rolls in (L04 → L05). Two style stills first: L01 (hook) and L04 (signature).
 
 **Caption:**
 ```
-Starbucks is holding US$1.75 billion of its customers' money ☕ Every app top-up is coffee you paid for before you ordered it. And in 2025, balances nobody spent earned Starbucks US$222 million.
+Starbucks is holding US$1.75 billion of its customers' money ☕ Every app top-up is coffee you paid for before you ordered it. And in 2025, balances nobody spent earned Starbucks US$220 million.
 
 Do you keep money in a coffee app? 👇
 

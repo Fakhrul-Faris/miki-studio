@@ -108,21 +108,21 @@ tl.fromTo(pf, { x: 0, y: 0, scale: 1 }, { x: (i, el) => +el.dataset.x, y: (i, el
 tl.fromTo(pf, { opacity: 1 }, { opacity: 0, duration: 0.2, ease: "power1.in", stagger: (i, el) => +el.dataset.o, immediateRender: false }, 1.12);
 gsap.set("#s4-cam", { svgOrigin: "540 1100" });
 tl.fromTo("#s4-cam", { scale: 1.08 }, { scale: 1, duration: 3.5, ease: "io" }, 0.5);
-drift([["#s4-sun", 0.6]], 8.09, T0);
+drift([["#s4-sun", 0.6]], 7.16, T0);
 // the hills are the price history: they draw left to right on "check"
-tl.fromTo("#s4-hills", { clipPath: "inset(0px 100% 0px 0px)" }, { clipPath: "inset(0px 0% 0px 0px)", duration: 1.6, ease: "io" }, 1.968);
+tl.fromTo("#s4-hills", { clipPath: "inset(0px 100% 0px 0px)" }, { clipPath: "inset(0px 0% 0px 0px)", duration: 1.6, ease: "io" }, 1.0359999999999998);
 rise("#s4-w .a1", 1.05, 0.06);
-rise("#s4-w .a2", 2.068, 0.14);
-rise("#s4-w .a3", 2.448, 0.3);
-wipe(3.078, "#s4-w .a1, #s4-w .a2, #s4-w .a3", "#s4-w .b1", "ab");
-rise("#s4-w .b2", 4.548, 0.1);
-sink("#s4-w .b1, #s4-w .b2", 5.028, 0.03);
+rise("#s4-w .a2", 1.136, 0.14);
+rise("#s4-w .a3", 1.516, 0.3);
+wipe(2.146, "#s4-w .a1, #s4-w .a2, #s4-w .a3", "#s4-w .b1", "ab");
+rise("#s4-w .b2", 3.616, 0.1);
+sink("#s4-w .b1, #s4-w .b2", 4.096, 0.03);
 // the end card (silent): the sun rolls to the middle, the world gives way to paper, the sun becomes the logo
-tl.fromTo("#s4-sun", { attr: { cx: 760, cy: 760 } }, { attr: { cx: 540, cy: 800 }, duration: 0.7, ease: "io" }, 5.228);
-tl.fromTo("#s4-end", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "io" }, 5.627999999999999);
-tl.fromTo("#s4-sun", { attr: { r: 120 } }, { attr: { r: 0 }, duration: 0.5, ease: "io", immediateRender: false }, 5.978);
-tl.fromTo("#s4-logo", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.9, ease: spring(0.9) }, 6.077999999999999);
-rise("#s4-w .f1", 6.327999999999999);
+tl.fromTo("#s4-sun", { attr: { cx: 760, cy: 760 } }, { attr: { cx: 540, cy: 800 }, duration: 0.7, ease: "io" }, 4.296);
+tl.fromTo("#s4-end", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "io" }, 4.696);
+tl.fromTo("#s4-sun", { attr: { r: 120 } }, { attr: { r: 0 }, duration: 0.5, ease: "io", immediateRender: false }, 5.046);
+tl.fromTo("#s4-logo", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.9, ease: spring(0.9) }, 5.146);
+rise("#s4-w .f1", 5.396);
 
       window.__timelines["s4"] = tl;
     })();

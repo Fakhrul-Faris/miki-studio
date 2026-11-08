@@ -1,6 +1,6 @@
 # EX27 — The 10% Off That Costs More (Shopee 11.11) · Style B baseline
 
-Final: `export/EX27-Final.mp4` (1080×1920, 60 fps, 37.1 s, −18.5 LUFS). Approved 2026-11-08. Method and rules:
+Final: `export/EX27-Final.mp4` (1080×1920, 60 fps, 36.2 s, −18.5 LUFS). Approved 2026-11-08. Method and rules:
 `../../00_bible/flat-v3-playbook.md`. Style B (flat geometry v3) vs Style A (smooth iso, EX25) — performance test.
 
 ## How it got here (2026-11-07 → 11-08)
@@ -20,8 +20,10 @@ Final: `export/EX27-Final.mp4` (1080×1920, 60 fps, 37.1 s, −18.5 LUFS). Appro
 ~/.local/bin/uv run --with pillow python build/hf_v3.py
 cd hf && npx hyperframes check --json && npx hyperframes render --quality delivery --fps 60 -o ../export/EX27-Final.mp4
 ```
-Voice: `audio/voice.wav` + `audio/vo_timeline.json`; sound `hf/assets/mix.wav` (from `build/sfx.py`, the raea-era mix).
-If the L02 line is re-recorded: rebuild the timeline and `raea/captions60.json`, then rerun the two commands above —
+Voice: `audio/voice.wav` + `audio/vo_timeline.json` (`tools/vo_tighten.py . --gap 0.45 --long 9 --fps 60`; captions:
+`tools/raea/caps_from_timeline.py . raea/captions60.json --fps 60 --stop L05:follow --fix '1111=11.11' --fix '1111,=11.11,'
+--fix "sellers=sellers'" --fix '10=10%' --fix '%=' --fix '540,=540'`); sound `hf/assets/mix.wav` (from `build/sfx.py`, the raea-era mix).
+If the L02 line is re-recorded: rebuild the timeline and `raea/captions60.json`, then rerun `python3 build/sfx.py && cp raea/media/mix.wav hf/assets/` and the two commands above —
 every time in the film is read from the timeline.
 
 ## Files
@@ -35,5 +37,4 @@ every time in the film is read from the timeline.
 
 ## Open
 
-- L02 transcript fix from the user (Whisper heard "comma" after "11.11").
 - Telegram push when the Air is back: `tools/air.sh sync && tools/air.sh push-episode EX27`.
