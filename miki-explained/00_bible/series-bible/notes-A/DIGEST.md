@@ -78,3 +78,29 @@ Chunk digests in order; full notes in notes-A/C0N.md.
 - **Everyday proof in a toy street** (aircon, scooters, boxes): cam-010 (and C03's To Binh Binh).
 **Tensions:** Several camera refs are AI-generated anime/stock (cam-013–015, 018, 027) — saturated everywhere, no hierarchy; they show camera angles only. Palette cards are utilities, not pictures; their value is rules (ratio, jobs, one accent).
 **Couldn't read:** none.
+
+## C07 digest
+**★5 (3):** people-033 (the clay street turned into the coloured street with the camera locked, brand as a shopfront) · places-012 (a Japanese shop street at golden hour, every sign and wire true, tilt-shift) · props-003 (Braun pedal: warm-white matte, one orange button where your foot goes).
+Strong ★4s: people-014 (the grey clay street as a look), people-012 (linen figure with crossed arms), places-006 (empty chairs tell "waiting").
+**Convictions forming:**
+- **Clay first, colour on the beat** (locked camera): people-014 → 033. A ready-made transition for our clay house look.
+- **Faceless people that work**: smooth head + real fabric (people-001, 006, 012); identity by silhouette props (cap, beard, hard hat: people-003, 030); shot from behind or 3/4 back (people-008).
+- **True local clutter makes a toy street real**: places-012, C06 cam-010, C03 To Binh Binh.
+- **Props: matte, warm white, one accent on the part you touch**: props-003, 002; unseen angles (props-005).
+- **Empty furniture tells the beat without figures**: places-006.
+- **Brand inside the world** (shopfront, wall band, building sign): people-033, places-003, 011.
+**Tensions:** the Sony film is full character acting (faces, dance) — we can't use the acting, only its light (golden low sun, raking shadows) and its clay → colour street. Most iso street/room refs are AI-generic with colour everywhere; they show the format, not the taste.
+**Couldn't read:** none.
+
+## C08 digest
+**★5 (6):** light-032 (The Coffee House as an all-white cutaway, roof letters, a giant cup in the courtyard) · light-035 (wifi as soft blue domes in a white house: the service is the only colour) · light-042 (one orange ball on a white grid is the hero) · light-052 (one white house sharp, the city fading in haze behind) · cam-036 (all detail, nature and people spent on one block; the city stays blank white) · type-002 (one red bar among grey bars).
+**Convictions forming:**
+- **White clay world + one accent is the house look's backbone**: light-032, 035, 042, 043, 052, cam-036 (plus C02's 078/080/089). The accent can be paint, light, a volume (wifi dome), a ball, or detail itself.
+- **Detail is attention**: cam-036 (life only on the subject block), light-044 (one cat on a clay façade).
+- **White worlds need strong low key light, fog and real-lens focus**: light-051, 034, cam-035.
+- **The invisible as translucent accent volumes**: light-035 (echoes C04 light-009, C03 162).
+- **Brand as architecture** (3D roof letters): light-032, 038.
+- **Data in greys, one hero value in the accent**: type-002, 006, 016, 005 (value for past/present); charts can become extruded 3D slabs (type-009).
+- **Metaphors built from the subject's own objects**: type-014, light-032 (giant cup).
+**Tensions:** many white masterplan renders (046–050) are AI stock with no subject — whiteness alone is not the look; it only works with one subject. Type refs are editorial/print; our captions stay EX15, so type lessons apply to in-world numbers and charts, not caption style.
+**Couldn't read:** none.
