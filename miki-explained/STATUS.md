@@ -31,11 +31,8 @@ Checkpoints: 14 Nov ≥150 followers, 21 Nov ≥450, 30 Nov 1,000.
   (generator `styleframes/make.py`).
 
 ## Pending (waiting on the user)
-1. **EX26 plates final for the user's review** — `04_episodes/EX26_starbucks-float/export/EX26-Final.mp4` (27.8 s,
-   60 fps, −18.5 LUFS): the user's five generated plates (`media/P1–P5.png`, prompts `image-prompts.md`) used whole, camera
-   moves rendered with 2.5D depth parallax (`build/plates.py`, `build/cams.py`), vector overlays + EX15 captions in
-   HyperFrames (`build/hf_ex26.py`). Depth vs plain side by side: `export/EX26-depth-test.mp4` — user to pick; plain is
-   `python3 build/hf_ex26.py plain` + render. raea fallback: `export/EX26-Final-raea.mp4`. Posts Mon 9 Nov 12:30 MYT.
+1. **EX26 approved (2026-11-08)** as **Style C — illustrated plates** (`00_bible/plates-playbook.md`), now competing with
+   A and B. Final `04_episodes/EX26_starbucks-float/export/EX26-Final.mp4` (depth version), posts Mon 9 Nov 12:30 MYT.
 2. **Telegram push** of EX24–EX27 finals when the Air is back: `tools/air.sh sync && tools/air.sh push-episode EXNN`.
    (Decided 2026-11-08: EX26 screen/caption number = **US$220M**, matching the voice.)
 

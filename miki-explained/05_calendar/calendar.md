@@ -36,14 +36,15 @@ Two posts a day, 12:30 and 21:00 MYT (memory `tiktok-goal-nov-2026`). Captions, 
 |---|---|---|---|
 | Sun 08 Nov | 12:30 | EX24 McDonald's machine (`EX24-Final.mp4`) · Style A | scheduled in TikTok Studio (2026-11-07) |
 | Sun 08 Nov | 21:00 | EX25 99 Speedmart Pt 1 (`EX25-Final.mp4`) · Style A | scheduled in TikTok Studio (2026-11-07) |
-| Mon 09 Nov | 12:30 | EX26 Starbucks float · Style B revamp (user 2026-11-08) | revamp in progress (raea version kept as fallback) |
+| Mon 09 Nov | 12:30 | EX26 Starbucks float (`EX26-Final.mp4`) · Style C | final approved 2026-11-08 (raea `EX26-Final-raea.mp4` kept) |
 | Mon 09 Nov | 21:00 | EX27 Shopee 11.11 fake discount (`EX27-Final.mp4`) · Style B | final v3 ready (L02 transcript fix from the user pending) |
 | Tue 10 Nov | 12:30 / 21:00 | next two (slate: Apple charger / Mr DIY Pt 2) | to script |
 
 Telegram push pending (the Air is off): EX24–EX27 finals, when it's back.
 
 **Style test (2026-11-08):** Style A = smooth iso v2 (EX25 99 Speedmart look, raea) vs Style B = flat geometry v3 (EX27,
-HyperFrames, `00_bible/flat-v3-playbook.md`). Compare views, 2-s and full-watch rate, follows per video in TikTok Studio.
+HyperFrames, `00_bible/flat-v3-playbook.md`) vs Style C = illustrated plates (EX26 Starbucks, user-generated plates +
+depth camera + overlays, `00_bible/plates-playbook.md`). Compare views, 2-s and full-watch rate, follows per video in TikTok Studio.
 
 Status: scheduled = in TikTok Studio · ready = exported · queued = next to script · ☐ = idea (verify → script → build).
 Production: one finished episode a day is more than the pipeline makes today (about one per working day once media is in).
