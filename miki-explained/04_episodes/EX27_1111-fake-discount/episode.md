@@ -1,6 +1,6 @@
 # EX27 — The 10% Off That Costs More
 
-Status: story + script v1 **for approval** → voice (user) → raea build (smooth iso v2, EX16 palette) → post **Mon 9 Nov, 21:00 MYT** (main slot, two days before 11.11)
+Status: **Style B (flat v3) — final approved 2026-11-08** (`export/EX27-Final.mp4`, HyperFrames flat-geometry build `build/hf_v3.py`; the earlier raea v2 kept as `export/EX27-Final-raea-v2.mp4`) → post **Mon 9 Nov, 21:00 MYT** (main slot, two days before 11.11)
 Strategy: Nov growth plan · series **You got played** · Malaysian, timely (11.11) · 25–30 s · a practical save
 
 ## Sources

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920"><defs><filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="11"/><feColorMatrix type="saturate" values="0"/>
+  <feComponentTransfer><feFuncA type="linear" slope="0.07"/></feComponentTransfer></filter></defs><rect width="1080" height="1920" fill="#E4E1D9"/><g transform="translate(-60,560) scale(1.1)" fill="#D8D5CC"><rect x="0" y="40" width="360" height="56" rx="28"/><circle cx="110" cy="44" r="52"/><circle cx="200" cy="30" r="64"/><circle cx="280" cy="52" r="40"/></g><g transform="translate(700,470) scale(0.9)" fill="#D8D5CC"><rect x="0" y="40" width="360" height="56" rx="28"/><circle cx="110" cy="44" r="52"/><circle cx="200" cy="30" r="64"/><circle cx="280" cy="52" r="40"/></g><rect x="0" y="1400" width="110" height="100" fill="#D9D6CE"/><rect x="122" y="1370" width="60" height="130" fill="#D9D6CE"/><rect x="182" y="1430" width="60" height="70" fill="#D9D6CE"/><rect x="242" y="1370" width="110" height="130" fill="#D9D6CE"/><rect x="352" y="1460" width="140" height="40" fill="#D9D6CE"/><rect x="504" y="1460" width="80" height="40" fill="#D9D6CE"/><rect x="596" y="1370" width="80" height="130" fill="#D9D6CE"/><rect x="676" y="1370" width="80" height="130" fill="#D9D6CE"/><rect x="756" y="1430" width="60" height="70" fill="#D9D6CE"/><rect x="828" y="1430" width="140" height="70" fill="#D9D6CE"/><rect x="968" y="1460" width="60" height="40" fill="#D9D6CE"/><rect x="1028" y="1430" width="80" height="70" fill="#D9D6CE"/><rect x="0" y="1500" width="1080" height="420" fill="#2E54C6"/><rect x="0" y="1500" width="1080" height="10" fill="#21409C"/><path d="M600 1500 L900 1500 L1010 1610 L710 1610 Z" fill="#21409C"/><rect x="600" y="800" width="300" height="700" fill="#F8F7F3"/><rect x="600" y="744" width="300" height="56" fill="#F05A28"/><g transform="translate(615.7,393.8) scale(0.34)"><g >
+      <!-- hose: a ribbed navy tube that hooks over into the spine -->
+      <path d="M232 806 L232 258 Q232 196 292 192" fill="none" stroke="#21409C" stroke-width="66" stroke-linecap="round"/>
+      <g fill="none" stroke="#A79BF2" stroke-width="7" stroke-linecap="round">
+        <path d="M204 224 Q218 212 246 206 M202 246 Q220 236 248 232 M202 268 Q220 258 248 254 M202 290 Q220 280 248 276 M202 312 Q220 302 248 298
+                 M202 334 Q220 324 248 320 M202 356 Q220 346 248 342 M202 378 Q220 368 248 364 M202 400 Q220 390 248 386 M202 422 Q220 412 248 408
+                 M202 444 Q220 434 248 430 M202 466 Q220 456 248 452 M202 488 Q220 478 248 474 M202 510 Q220 500 248 496 M202 532 Q220 522 248 518
+                 M202 554 Q220 544 248 540 M202 576 Q220 566 248 562 M202 598 Q220 588 248 584 M202 620 Q220 610 248 606 M202 642 Q220 632 248 628
+                 M202 664 Q220 654 248 650 M202 686 Q220 676 248 672 M202 708 Q220 698 248 694 M202 730 Q220 720 248 716 M202 752 Q220 742 248 738
+                 M202 774 Q220 764 248 760"/>
+      </g>
+      <path d="M216 792 L330 792 L330 866 L232 866 Q216 866 216 850 Z" fill="#21409C"/>
+
+      <path d="M258 330 L296 330 L296 800 L258 800 Z" fill="#21409C"/>
+      <!-- spine: one navy column from the grip to the foot -->
+      <path d="M282 64 Q282 26 308 26 Q334 26 336 64 L340 300 L334 884 L290 884 L290 300 Z" fill="#21409C"/>
+      <!-- grip + upper handle, lit on the right -->
+      <path d="M318 34 Q340 30 350 58 L360 168 L330 170 L322 64 Z" fill="#A79BF2"/>
+      <path d="M322 168 Q344 160 362 176" fill="none" stroke="#21409C" stroke-width="7" stroke-linecap="round"/>
+      <path d="M330 180 L366 180 L380 292 L334 296 Z" fill="#A79BF2"/>
+      <path d="M366 180 L374 180 L390 292 L380 292 Z" fill="#21409C"/>
+
+      <!-- body: rounded shoulder, widening to the foot -->
+      <path d="M292 336 Q296 294 342 292 L418 294 Q452 298 460 342 L480 824 L300 834 Z" fill="#21409C"/>
+      <path d="M332 300 L414 302 Q434 308 438 342 L456 806 L334 814 Z" fill="#A79BF2"/>
+      <path d="M326 316 L326 808 Q328 830 352 832 L464 842" fill="none" stroke="#A79BF2" stroke-width="8" stroke-linecap="round"/>
+      <path d="M326 808 Q330 830 352 832" fill="none" stroke="#21409C" stroke-width="3"/>
+
+      <!-- neck with its seam -->
+      <path d="M228 846 L470 852 L474 902 L228 904 Z" fill="#21409C"/>
+      <path d="M346 846 L346 900" stroke="#A79BF2" stroke-width="6" stroke-linecap="round"/>
+
+      <!-- head: the nozzle roll slopes down to the front -->
+      <path d="M175 940 Q180 884 240 882 L382 886 L444 906 Q526 932 600 974 Q620 990 616 1014 L610 1028 L222 1024 Q178 1012 175 960 Z" fill="#21409C"/>
+      <path d="M252 890 L372 892 L396 914 L292 918 Z" fill="#A79BF2"/>
+      <path d="M296 924 L468 930 Q556 952 596 984 L594 996 Q520 966 440 954 L300 948 Z" fill="#A79BF2"/>
+      <path d="M302 972 L446 980 Q530 994 590 1010" fill="none" stroke="#A79BF2" stroke-width="10" stroke-linecap="round"/>
+      <!-- wheel, seen three-quarter -->
+      <ellipse cx="208" cy="958" rx="48" ry="64" fill="#21409C"/>
+      <ellipse cx="214" cy="956" rx="26" ry="46" fill="#A79BF2"/>
+      <path d="M262 906 Q292 940 288 1000" fill="none" stroke="#A79BF2" stroke-width="9" stroke-linecap="round"/>
+    </g></g><rect x="140" y="800" width="300" height="700" fill="none" stroke="#2E54C6" stroke-width="5" stroke-dasharray="22 14"/><text x="290" y="1010" font-family="Inter Display" font-weight="700" font-size="30" letter-spacing="3" fill="#2E54C6" text-anchor="middle">NORMAL PRICE</text><text x="290" y="1090" font-family="Inter Display" font-weight="900" font-size="76" fill="#2E54C6" text-anchor="middle">RM500</text><text x="750" y="1010" font-family="Inter Display" font-weight="700" font-size="30" letter-spacing="3" fill="#1C2554" text-anchor="middle">AFTER 10% OFF</text><text x="750" y="1090" font-family="Inter Display" font-weight="900" font-size="76" fill="#1C2554" text-anchor="middle">RM540</text><path d="M0 800 H560 Q580 800 584 780 Q588 744 610 744 H1080" fill="none" stroke="#F05A28" stroke-width="14" stroke-linejoin="round"/><line x1="440" y1="800" x2="1080" y2="800" stroke="#1C2554" stroke-width="3" stroke-dasharray="8 8"/><path d="M540 740 L540 804" stroke="#1C2554" stroke-width="3"/><path d="M530 740 H550 M530 804 H550" stroke="#1C2554" stroke-width="3"/><text x="520" y="796" font-family="Inter Display" font-weight="900" font-size="66" fill="#F05A28" text-anchor="end">+RM40</text><text x="80" y="250" font-family="Inter Display" font-weight="700" font-size="40" letter-spacing="3" fill="#2E54C6">THEN 10% OFF</text><text x="76" y="350" font-family="Inter Display" font-weight="900" font-size="96" fill="#1C2554">YOU STILL PAY</text><text x="76" y="452" font-family="Inter Display" font-weight="900" font-size="96" fill="#F05A28">MORE</text><rect width="1080" height="1920" filter="url(#grain)"/></svg>

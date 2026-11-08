@@ -1,0 +1,217 @@
+<template>
+  <style>
+    @font-face { font-family: "Inter Display"; font-weight: 500; src: url("assets/fonts/InterDisplay-Medium.ttf"); }
+@font-face { font-family: "Inter Display"; font-weight: 700; src: url("assets/fonts/InterDisplay-Bold.ttf"); }
+@font-face { font-family: "Inter Display"; font-weight: 900; src: url("assets/fonts/InterDisplay-Black.ttf"); }
+
+    
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    #s2-w { position: absolute; inset: 0; overflow: hidden; }
+    #s2-w svg.art { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: visible; }
+    #s2-w .head { position: absolute; left: 76px; width: 940px; font-family: "Inter Display"; line-height: 1.04; }
+    #s2-w .kick { font-weight: 700; font-size: 40px; letter-spacing: 3px; }
+    #s2-w .big { font-weight: 900; font-size: 96px; letter-spacing: -0.5px; }
+    #s2-w .m { display: inline-block; overflow: hidden; vertical-align: top; padding: 0 0.03em 0.08em; margin-bottom: -0.08em; }
+    #s2-w .m > span { display: inline-block; }
+    #s2-w .stripe { position: absolute; z-index: 5; }
+
+    
+  </style>
+  <div id="root" data-composition-id="s2" data-width="1080" data-height="1920" data-layout-allow-overflow data-layout-allow-overlap>
+    <div id="s2-w">
+      <svg class="art" viewBox="0 0 1080 1920"><g id="s2-cam"><g id="s2-drift"><g id="s2-world">
+          <rect x="-600" y="-900" width="2400" height="2400" fill="#E4E1D9"/>
+          <g id="s2-clouds"><g data-x="-700"><g transform="translate(-80,520) scale(1.1)" fill="#D8D5CC"><rect x="0" y="40" width="360" height="56" rx="28"/><circle cx="110" cy="44" r="52"/><circle cx="200" cy="30" r="64"/><circle cx="280" cy="52" r="40"/></g></g><g data-x="700"><g transform="translate(760,430) scale(0.9)" fill="#D8D5CC"><rect x="0" y="40" width="360" height="56" rx="28"/><circle cx="110" cy="44" r="52"/><circle cx="200" cy="30" r="64"/><circle cx="280" cy="52" r="40"/></g></g><g data-x="-600"><g transform="translate(260,120) scale(0.7)" fill="#D8D5CC"><rect x="0" y="40" width="360" height="56" rx="28"/><circle cx="110" cy="44" r="52"/><circle cx="200" cy="30" r="64"/><circle cx="280" cy="52" r="40"/></g></g></g><g id="s2-sky"><rect x="-400" y="1400" width="110" height="100" fill="#D9D6CE"/><rect x="-278" y="1370" width="60" height="130" fill="#D9D6CE"/><rect x="-218" y="1430" width="60" height="70" fill="#D9D6CE"/><rect x="-158" y="1370" width="110" height="130" fill="#D9D6CE"/><rect x="-48" y="1460" width="140" height="40" fill="#D9D6CE"/><rect x="104" y="1460" width="80" height="40" fill="#D9D6CE"/><rect x="196" y="1370" width="80" height="130" fill="#D9D6CE"/><rect x="276" y="1370" width="80" height="130" fill="#D9D6CE"/><rect x="356" y="1430" width="60" height="70" fill="#D9D6CE"/><rect x="428" y="1430" width="140" height="70" fill="#D9D6CE"/><rect x="568" y="1460" width="60" height="40" fill="#D9D6CE"/><rect x="628" y="1430" width="80" height="70" fill="#D9D6CE"/><rect x="708" y="1400" width="110" height="100" fill="#D9D6CE"/><rect x="818" y="1430" width="80" height="70" fill="#D9D6CE"/><rect x="910" y="1370" width="80" height="130" fill="#D9D6CE"/><rect x="990" y="1400" width="60" height="100" fill="#D9D6CE"/><rect x="1050" y="1430" width="80" height="70" fill="#D9D6CE"/><rect x="1130" y="1400" width="60" height="100" fill="#D9D6CE"/><rect x="1190" y="1400" width="60" height="100" fill="#D9D6CE"/><rect x="1250" y="1400" width="110" height="100" fill="#D9D6CE"/><rect x="1360" y="1400" width="140" height="100" fill="#D9D6CE"/></g>
+          <g id="s2-floor"><rect x="-600" y="1500" width="2400" height="3000" fill="#2E54C6"/><rect x="-600" y="1500" width="2400" height="10" fill="#21409C"/></g>
+          <g id="s2-tile"><line x1="800" y1="-400" x2="800" y2="190" stroke="#1C2554" stroke-width="3"/><line x1="920" y1="-400" x2="920" y2="190" stroke="#1C2554" stroke-width="3"/><rect x="770" y="190" width="200" height="230" rx="14" fill="#F8F7F3" stroke="#2E54C6" stroke-width="5"/><rect x="770" y="190" width="200" height="62" rx="14" fill="#2E54C6"/><rect x="770" y="230" width="200" height="22" fill="#2E54C6"/><text x="870" y="236" font-family="Inter Display" font-weight="700" font-size="34" letter-spacing="4" fill="#F8F7F3" text-anchor="middle">NOV</text><text x="870" y="360" font-family="Inter Display" font-weight="900" font-size="78" fill="#1C2554" text-anchor="middle">11.11</text></g>
+          <rect id="s2-ghost" x="-70" y="800" width="300" height="700" fill="none" stroke="#2E54C6" stroke-width="5" stroke-dasharray="22 14"/>
+          <text class="gl" x="80" y="1030" font-family="Inter Display" font-weight="700" font-size="30" letter-spacing="3" fill="#2E54C6" text-anchor="middle">NORMAL PRICE</text>
+          <text class="gl" x="80" y="1112" font-family="Inter Display" font-weight="900" font-size="76" fill="#2E54C6" text-anchor="middle">RM500</text>
+          <g id="s2-ped">
+            <path id="s2-pshadow" d="M390 1500 L690 1500 L800 1610 L500 1610 Z" fill="#21409C"/>
+            <rect id="s2-base" x="390" y="800" width="300" height="700" fill="#F8F7F3"/>
+            <g id="s2-extra"><rect x="390" y="660" width="300" height="140" fill="#F8F7F3"/><rect id="s2-red" x="390" y="660" width="300" height="140" fill="#F05A28" opacity="0"/>
+              <line x1="390" y1="800" x2="690" y2="800" stroke="#D3D0C7" stroke-width="4"/></g>
+            <text class="pk1" x="540" y="1030" font-family="Inter Display" font-weight="700" font-size="30" letter-spacing="3" fill="#1C2554" text-anchor="middle">USUALLY</text>
+            <text class="pk2" x="540" y="1030" font-family="Inter Display" font-weight="700" font-size="30" letter-spacing="3" fill="#1C2554" text-anchor="middle" opacity="0">AFTER 10% OFF</text>
+            <text id="s2-n" x="540" y="1112" font-family="Inter Display" font-weight="900" font-size="76" fill="#1C2554" text-anchor="middle">RM0</text>
+            <g id="s2-vac"><g transform="translate(405.7,449.8) scale(0.34)"><g >
+      <!-- hose: a ribbed navy tube that hooks over into the spine -->
+      <path d="M232 806 L232 258 Q232 196 292 192" fill="none" stroke="#21409C" stroke-width="66" stroke-linecap="round"/>
+      <g fill="none" stroke="#A79BF2" stroke-width="7" stroke-linecap="round">
+        <path d="M204 224 Q218 212 246 206 M202 246 Q220 236 248 232 M202 268 Q220 258 248 254 M202 290 Q220 280 248 276 M202 312 Q220 302 248 298
+                 M202 334 Q220 324 248 320 M202 356 Q220 346 248 342 M202 378 Q220 368 248 364 M202 400 Q220 390 248 386 M202 422 Q220 412 248 408
+                 M202 444 Q220 434 248 430 M202 466 Q220 456 248 452 M202 488 Q220 478 248 474 M202 510 Q220 500 248 496 M202 532 Q220 522 248 518
+                 M202 554 Q220 544 248 540 M202 576 Q220 566 248 562 M202 598 Q220 588 248 584 M202 620 Q220 610 248 606 M202 642 Q220 632 248 628
+                 M202 664 Q220 654 248 650 M202 686 Q220 676 248 672 M202 708 Q220 698 248 694 M202 730 Q220 720 248 716 M202 752 Q220 742 248 738
+                 M202 774 Q220 764 248 760"/>
+      </g>
+      <path d="M216 792 L330 792 L330 866 L232 866 Q216 866 216 850 Z" fill="#21409C"/>
+
+      <path d="M258 330 L296 330 L296 800 L258 800 Z" fill="#21409C"/>
+      <!-- spine: one navy column from the grip to the foot -->
+      <path d="M282 64 Q282 26 308 26 Q334 26 336 64 L340 300 L334 884 L290 884 L290 300 Z" fill="#21409C"/>
+      <!-- grip + upper handle, lit on the right -->
+      <path d="M318 34 Q340 30 350 58 L360 168 L330 170 L322 64 Z" fill="#A79BF2"/>
+      <path d="M322 168 Q344 160 362 176" fill="none" stroke="#21409C" stroke-width="7" stroke-linecap="round"/>
+      <path d="M330 180 L366 180 L380 292 L334 296 Z" fill="#A79BF2"/>
+      <path d="M366 180 L374 180 L390 292 L380 292 Z" fill="#21409C"/>
+
+      <!-- body: rounded shoulder, widening to the foot -->
+      <path d="M292 336 Q296 294 342 292 L418 294 Q452 298 460 342 L480 824 L300 834 Z" fill="#21409C"/>
+      <path d="M332 300 L414 302 Q434 308 438 342 L456 806 L334 814 Z" fill="#A79BF2"/>
+      <path d="M326 316 L326 808 Q328 830 352 832 L464 842" fill="none" stroke="#A79BF2" stroke-width="8" stroke-linecap="round"/>
+      <path d="M326 808 Q330 830 352 832" fill="none" stroke="#21409C" stroke-width="3"/>
+
+      <!-- neck with its seam -->
+      <path d="M228 846 L470 852 L474 902 L228 904 Z" fill="#21409C"/>
+      <path d="M346 846 L346 900" stroke="#A79BF2" stroke-width="6" stroke-linecap="round"/>
+
+      <!-- head: the nozzle roll slopes down to the front -->
+      <path d="M175 940 Q180 884 240 882 L382 886 L444 906 Q526 932 600 974 Q620 990 616 1014 L610 1028 L222 1024 Q178 1012 175 960 Z" fill="#21409C"/>
+      <path d="M252 890 L372 892 L396 914 L292 918 Z" fill="#A79BF2"/>
+      <path d="M296 924 L468 930 Q556 952 596 984 L594 996 Q520 966 440 954 L300 948 Z" fill="#A79BF2"/>
+      <path d="M302 972 L446 980 Q530 994 590 1010" fill="none" stroke="#A79BF2" stroke-width="10" stroke-linecap="round"/>
+      <!-- wheel, seen three-quarter -->
+      <ellipse cx="208" cy="958" rx="48" ry="64" fill="#21409C"/>
+      <ellipse cx="214" cy="956" rx="26" ry="46" fill="#A79BF2"/>
+      <path d="M262 906 Q292 940 288 1000" fill="none" stroke="#A79BF2" stroke-width="9" stroke-linecap="round"/>
+    </g></g></g>
+            <g id="s2-deal"><rect x="-80" y="-34" width="160" height="68" rx="34" fill="#A79BF2"/><text x="0" y="13" font-family="Inter Display" font-weight="900" font-size="36" fill="#1C2554" text-anchor="middle">DEAL!</text></g>
+          </g>
+          <path id="s2-line" d="M-600 800 H364 V800 H1700" fill="none" stroke="#F05A28" stroke-width="14" stroke-linejoin="round"/>
+          <g id="s2-measure" opacity="0"><line x1="230" y1="800" x2="1300" y2="800" stroke="#1C2554" stroke-width="3" stroke-dasharray="8 8"/>
+            <path d="M330 740 V804 M320 740 H340 M320 804 H340" stroke="#1C2554" stroke-width="3"/>
+            <text x="310" y="792" font-family="Inter Display" font-weight="900" font-size="66" fill="#F05A28" text-anchor="end">+RM40</text></g>
+        </g></g></g>
+        <g id="s2-wave"><g id="s2-wave-b"><path d="M-540 2700 L-540 -33.4 L-520 -32.0 L-500 -32.7 L-480 -35.4 L-460 -40.0 L-440 -46.2 L-420 -53.6 L-400 -62.0 L-380 -70.8 L-360 -79.5 L-340 -87.7 L-320 -95.0 L-300 -100.9 L-280 -105.2 L-260 -107.5 L-240 -107.9 L-220 -106.2 L-200 -102.5 L-180 -97.1 L-160 -90.2 L-140 -82.3 L-120 -73.7 L-100 -64.8 L-80 -56.3 L-60 -48.5 L-40 -41.8 L-20 -36.7 L0 -33.4 L20 -32.0 L40 -32.7 L60 -35.4 L80 -40.0 L100 -46.2 L120 -53.6 L140 -62.0 L160 -70.8 L180 -79.5 L200 -87.7 L220 -95.0 L240 -100.9 L260 -105.2 L280 -107.5 L300 -107.9 L320 -106.2 L340 -102.5 L360 -97.1 L380 -90.2 L400 -82.3 L420 -73.7 L440 -64.8 L460 -56.3 L480 -48.5 L500 -41.8 L520 -36.7 L540 -33.4 L560 -32.0 L580 -32.7 L600 -35.4 L620 -40.0 L640 -46.2 L660 -53.6 L680 -62.0 L700 -70.8 L720 -79.5 L740 -87.7 L760 -95.0 L780 -100.9 L800 -105.2 L820 -107.5 L840 -107.9 L860 -106.2 L880 -102.5 L900 -97.1 L920 -90.2 L940 -82.3 L960 -73.7 L980 -64.8 L1000 -56.3 L1020 -48.5 L1040 -41.8 L1060 -36.7 L1080 -33.4 L1100 -32.0 L1120 -32.7 L1140 -35.4 L1160 -40.0 L1180 -46.2 L1200 -53.6 L1220 -62.0 L1240 -70.8 L1260 -79.5 L1280 -87.7 L1300 -95.0 L1320 -100.9 L1340 -105.2 L1360 -107.5 L1380 -107.9 L1400 -106.2 L1420 -102.5 L1440 -97.1 L1460 -90.2 L1480 -82.3 L1500 -73.7 L1520 -64.8 L1540 -56.3 L1560 -48.5 L1580 -41.8 L1600 -36.7 L1620 -33.4 L1640 -32.0 L1660 -32.7 L1680 -35.4 L1700 -40.0 L1720 -46.2 L1740 -53.6 L1760 -62.0 L1780 -70.8 L1800 -79.5 L1820 -87.7 L1840 -95.0 L1860 -100.9 L1880 -105.2 L1900 -107.5 L1920 -107.9 L1940 -106.2 L1960 -102.5 L1980 -97.1 L2000 -90.2 L2020 -82.3 L2040 -73.7 L2060 -64.8 L2080 -56.3 L2100 -48.5 L2120 -41.8 L2140 -36.7 L2160 -33.4 L2160 2700 Z" fill="#21409C"/></g><g id="s2-wave-f"><path d="M-540 2700 L-540 0.0 L-520 8.8 L-500 17.1 L-480 24.4 L-460 30.5 L-440 34.9 L-420 37.4 L-400 37.9 L-380 36.4 L-360 32.9 L-340 27.6 L-320 20.9 L-300 13.0 L-280 4.4 L-260 -4.4 L-240 -13.0 L-220 -20.9 L-200 -27.6 L-180 -32.9 L-160 -36.4 L-140 -37.9 L-120 -37.4 L-100 -34.9 L-80 -30.5 L-60 -24.4 L-40 -17.1 L-20 -8.8 L0 0.0 L20 8.8 L40 17.1 L60 24.4 L80 30.5 L100 34.9 L120 37.4 L140 37.9 L160 36.4 L180 32.9 L200 27.6 L220 20.9 L240 13.0 L260 4.4 L280 -4.4 L300 -13.0 L320 -20.9 L340 -27.6 L360 -32.9 L380 -36.4 L400 -37.9 L420 -37.4 L440 -34.9 L460 -30.5 L480 -24.4 L500 -17.1 L520 -8.8 L540 -0.0 L560 8.8 L580 17.1 L600 24.4 L620 30.5 L640 34.9 L660 37.4 L680 37.9 L700 36.4 L720 32.9 L740 27.6 L760 20.9 L780 13.0 L800 4.4 L820 -4.4 L840 -13.0 L860 -20.9 L880 -27.6 L900 -32.9 L920 -36.4 L940 -37.9 L960 -37.4 L980 -34.9 L1000 -30.5 L1020 -24.4 L1040 -17.1 L1060 -8.8 L1080 -0.0 L1100 8.8 L1120 17.1 L1140 24.4 L1160 30.5 L1180 34.9 L1200 37.4 L1220 37.9 L1240 36.4 L1260 32.9 L1280 27.6 L1300 20.9 L1320 13.0 L1340 4.4 L1360 -4.4 L1380 -13.0 L1400 -20.9 L1420 -27.6 L1440 -32.9 L1460 -36.4 L1480 -37.9 L1500 -37.4 L1520 -34.9 L1540 -30.5 L1560 -24.4 L1580 -17.1 L1600 -8.8 L1620 -0.0 L1640 8.8 L1660 17.1 L1680 24.4 L1700 30.5 L1720 34.9 L1740 37.4 L1760 37.9 L1780 36.4 L1800 32.9 L1820 27.6 L1840 20.9 L1860 13.0 L1880 4.4 L1900 -4.4 L1920 -13.0 L1940 -20.9 L1960 -27.6 L1980 -32.9 L2000 -36.4 L2020 -37.9 L2040 -37.4 L2060 -34.9 L2080 -30.5 L2100 -24.4 L2120 -17.1 L2140 -8.8 L2160 -0.0 L2160 2700 Z" fill="#2E54C6"/></g></g></svg>
+      <div class="stripe st-ab" style="left:62px; top:188px; height:47px; width:446px; background:#F05A28;"></div>
+      <div class="stripe st-bc" style="left:62px; top:188px; height:47px; width:446px; background:#F05A28;"></div><div class="stripe st-bc" style="left:62px; top:230px; height:110px; width:597px; background:#F05A28;"></div><div class="stripe st-bc" style="left:62px; top:329px; height:110px; width:401px; background:#F05A28;"></div>
+      <div class="head" style="top:190px;"><div class="kick" style="color:#2E54C6"><span class="m"><span class="w a1">HERE'S</span></span> <span class="m"><span class="w a1">HOW</span></span></div></div>
+      <div class="head" style="top:190px;"><div class="kick" style="color:#2E54C6"><span class="m"><span class="w b1">RIGHT</span></span> <span class="m"><span class="w b1">BEFORE</span></span> <span class="m"><span class="w b1">11.11</span></span></div><div class="big" style="color:#1C2554; font-size:96px"><span class="m"><span class="w b2">THE</span></span> <span class="m"><span class="w b2">SELLER</span></span></div><div class="big" style="color:#1C2554; font-size:96px"><span class="m"><span class="w b3">LIFTS</span></span> <span class="m"><span class="w b3">IT</span></span></div></div>
+      <div class="head" style="top:190px;"><div class="kick" style="color:#2E54C6"><span class="m"><span class="w c1">THEN</span></span> <span class="m"><span class="w c1">10%</span></span> <span class="m"><span class="w c1">OFF</span></span></div><div class="big" style="color:#1C2554; font-size:96px"><span class="m"><span class="w c2">YOU</span></span> <span class="m"><span class="w c2">PAY</span></span></div><div class="big" style="color:#1C2554; font-size:120px"><span class="m"><span class="w c3">RM540</span></span></div></div>
+    </div>
+  </div>
+  <script>
+    (() => {
+
+const tl = gsap.timeline({ paused: true });
+CustomEase.create("io", "0.65,0,0.35,1");
+CustomEase.create("fall", "0.55,0,1,0.45");
+// critically damped spring (stiffness 170, damping 26, mass 1): arrives with weight, no bounce
+const spring = (d = 0.8, w = 13.04) => { const e = 1 - (1 + w * d) * Math.exp(-w * d); return (p) => (1 - (1 + w * p * d) * Math.exp(-w * p * d)) / e; };
+// organic camera: each layer drifts on two offset sines (7.3 s, 11.9 s); k = depth (0 far .. 1 near)
+function drift(layers, dur, t0) {
+  const o = { t: 0 }, P = Math.PI * 2;
+  layers.forEach(([sel]) => gsap.set(sel, { transformOrigin: "50% 50%" }));
+  tl.fromTo(o, { t: 0 }, { t: dur, duration: dur, ease: "none", onUpdate() {
+    const s = o.t + t0;
+    layers.forEach(([sel, k]) => gsap.set(sel, {
+      x: k * (8 * Math.sin(P * s / 7.3) + 6 * Math.sin(P * s / 11.9 + 1.3)),
+      y: k * (6 * Math.cos(P * s / 7.3 + 0.7) + 5 * Math.sin(P * s / 11.9)),
+      rotation: k * 0.4 * Math.sin(P * s / 11.9 + 0.4) }));
+  } }, 0);
+}
+// iris: opens to the Ring first (the contents swap inside it), then to the whole frame
+function iris(sel, cx, cy, r) {
+  tl.fromTo(sel, { clipPath: `circle(0px at ${cx}px ${cy}px)` }, { clipPath: `circle(${r}px at ${cx}px ${cy}px)`, duration: 0.35, ease: "io" }, 0)
+    .fromTo(sel, { clipPath: `circle(${r}px at ${cx}px ${cy}px)` }, { clipPath: `circle(2300px at ${cx}px ${cy}px)`, duration: 0.5, ease: "io", immediateRender: false }, 0.45);
+}
+// kinetic type: a word rises out of its mask, tracking tightens +4% -> 0
+function rise(sel, at, stagger = 0.1) {
+  tl.fromTo(sel, { yPercent: 115, scaleX: 1.04 }, { yPercent: 0, scaleX: 1, duration: 0.5, ease: "io", stagger }, at);
+}
+function sink(sel, at, stagger = 0.06) {
+  tl.fromTo(sel, { yPercent: 0 }, { yPercent: -115, duration: 0.45, ease: "io", stagger, immediateRender: false }, at);
+}
+// a key number counts, then settles 1.08 -> 1.00
+function count(sel, a, b, at, d = 0.6, pre = "RM") {
+  const o = { v: a }, el = document.querySelector(sel);
+  tl.fromTo(o, { v: a }, { v: b, duration: d, ease: "io", immediateRender: false, onUpdate() { el.textContent = pre + Math.round(o.v); } }, at);
+  tl.fromTo(sel, { scale: 1.08 }, { scale: 1, duration: 0.5, ease: "io", immediateRender: false }, at + d - 0.1);
+}
+
+      const T0 = 8.4;
+      gsap.set("#s2-w .w", { yPercent: 115 });
+      gsap.set("#s2-w .stripe", { scaleX: 0 });
+      // headline swap: coloured stripes sweep in from the left over the old lines, the lines change under them,
+      // and the stripes leave to the right revealing the new first line
+      function wipe(at, outSel, inSel, key) {
+        const st = gsap.utils.toArray("#s2-w .st-" + key);
+        tl.fromTo(st, { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 1, duration: 0.26, ease: "power2.in", stagger: 0.05 }, at);
+        tl.set(outSel, { yPercent: 115 }, at + 0.37);
+        if (inSel) tl.set(inSel, { yPercent: 0, scaleX: 1 }, at + 0.37);
+        tl.fromTo(st, { scaleX: 1, transformOrigin: "100% 50%" }, { scaleX: 0, duration: 0.34, ease: "power2.out", stagger: 0.05, immediateRender: false }, at + 0.37);
+      }
+
+const P5 = 800, P6 = 660, P54 = 744;
+// hand-off: the lane that filled the frame collapses into the price line (RM500 level)
+// HAND-OFF 1 (arrival) · the price line is already here (it was the lane); the world assembles around it:
+// the floor rises into place, the skyline grows up from the horizon, the clouds drift in from both sides
+tl.fromTo("#s2-floor", { y: 760 }, { y: 0, duration: 0.9, ease: "io" }, 0.0);
+tl.fromTo("#s2-sky rect", { scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, duration: 0.7, ease: spring(0.7), stagger: { each: 0.018, from: "center" } }, 0.2);
+tl.fromTo(gsap.utils.toArray("#s2-clouds > g"), { x: (i, el) => +el.dataset.x }, { x: 0, duration: 1.1, ease: "power3.out", stagger: 0.08 }, 0.05);
+gsap.set("#s2-wave", { y: 2200 });
+// slow organic camera breathing on top of the moves
+drift([["#s2-drift", 0.7]], 13.700000000000001, T0);
+gsap.set("#s2-cam", { svgOrigin: "750 744" });
+gsap.set("#s2-base", { svgOrigin: "540 1500" });
+gsap.set("#s2-tile", { svgOrigin: "860 -400" });
+// the shelf rises to meet the price line; the vacuum drops onto it
+gsap.set("#s2-extra", { scaleY: 0, svgOrigin: "540 800" });
+tl.fromTo("#s2-base", { scaleY: 0 }, { scaleY: 1, duration: 0.9, ease: spring(0.9) }, 1.0450000000000002);
+tl.fromTo("#s2-pshadow", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "io" }, 1.195);
+tl.fromTo("#s2-vac", { y: -520, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: spring(0.8) }, 1.375);
+tl.fromTo("#s2-w .pk1", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4, ease: "io" }, 1.475);
+tl.fromTo("#s2-n", { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "io" }, 2.4650000000000003);
+gsap.set("#s2-n", { transformOrigin: "50% 50%" });
+count("#s2-n", 0, 500, 2.515);
+rise("#s2-w .a1", 0.035);
+// 11.11: the camera tilts up into the sky; the calendar tile swings down on its strings
+tl.fromTo("#s2-cam", { y: 0 }, { y: 170, duration: 0.8, ease: "io" }, 3.9549999999999996);
+tl.fromTo("#s2-tile", { y: -620, rotation: -24 }, { y: 0, rotation: 0, duration: 1.1, ease: spring(1.1) }, 4.115);
+wipe(3.6849999999999996, "#s2-w .a1", "#s2-w .b1", "ab");
+rise("#s2-w .b2", 6.175000000000001, 0.1);
+rise("#s2-w .b3", 6.555, 0.12);
+// the raise: a block grows under the vacuum, the price line rides up with it
+tl.fromTo("#s2-extra", { scaleY: 0 }, { scaleY: 1, duration: 0.8, ease: spring(0.8), immediateRender: false }, 6.555);
+tl.fromTo("#s2-vac", { y: 0 }, { y: -140, duration: 0.8, ease: spring(0.8), immediateRender: false }, 6.635);
+tl.fromTo("#s2-line", { attr: { d: "M-600 800 H364 V800 H1700" } }, { attr: { d: "M-600 660 H364 V660 H1700" }, duration: 0.8, ease: spring(0.8), immediateRender: false }, 6.595);
+count("#s2-n", 500, 600, 7.015);
+tl.fromTo("#s2-tile", { y: 0 }, { y: -700, duration: 0.6, ease: "io", immediateRender: false }, 7.784000000000001);
+tl.fromTo("#s2-cam", { y: 170 }, { y: 0, duration: 0.8, ease: "io", immediateRender: false }, 7.784000000000001);
+// the twist: the camera trucks left to reveal the real price; the line drops back to RM500 on the left...
+tl.fromTo("#s2-world", { x: 0 }, { x: 210, duration: 0.9, ease: "io" }, 8.384);
+tl.fromTo("#s2-ghost", { opacity: 0, strokeDashoffset: 216 }, { opacity: 1, strokeDashoffset: 0, duration: 1.0, ease: "io" }, 8.584);
+tl.fromTo("#s2-w .gl", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "io" }, 8.884);
+tl.fromTo("#s2-line", { attr: { d: "M-600 660 H364 V660 H1700" } }, { attr: { d: "M-600 800 H364 V660 H1700" }, duration: 0.5, ease: "io", immediateRender: false }, 8.534);
+// ...and 10% off brings the deal down to RM540: still RM40 above it, now orange
+tl.fromTo("#s2-extra", { scaleY: 1 }, { scaleY: 0.4, duration: 0.7, ease: "io", immediateRender: false }, 8.764);
+tl.fromTo("#s2-vac", { y: -140 }, { y: -56, duration: 0.7, ease: "io", immediateRender: false }, 8.783999999999999);
+tl.fromTo("#s2-line", { attr: { d: "M-600 800 H364 V660 H1700" } }, { attr: { d: "M-600 800 H364 V744 H1700" }, duration: 0.7, ease: "io", immediateRender: false }, 8.764);
+tl.fromTo("#s2-red", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "io" }, 9.264);
+tl.fromTo("#s2-w .pk1", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "io", immediateRender: false }, 8.664);
+tl.fromTo("#s2-w .pk2", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "io" }, 8.964);
+count("#s2-n", 600, 540, 8.764, 0.7);
+wipe(8.284, "#s2-w .b1, #s2-w .b2, #s2-w .b3", "#s2-w .c1", "bc");
+rise("#s2-w .c2", 10.004, 0.1);
+rise("#s2-w .c3", 10.324);
+tl.fromTo("#s2-measure", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "io" }, 10.404);
+tl.fromTo("#s2-measure text", { scale: 1.2, transformOrigin: "100% 100%" }, { scale: 1, duration: 0.6, ease: spring(0.6) }, 10.404);
+// push in on the slice; then "still feels like a deal": a sticker slaps onto the shelf
+tl.fromTo("#s2-cam", { scale: 1 }, { scale: 1.1, duration: 1.6, ease: "io", immediateRender: false }, 10.104);
+tl.fromTo("#s2-deal", { x: 540, y: 1270, scale: 0, rotation: -30 }, { x: 540, y: 1270, scale: 1, rotation: -8, duration: 0.6, ease: spring(0.6) }, 12.164);
+// hand-off: tilt down to the floor (the next map's ground)
+// HAND-OFF 2 · the blue floor rises as a sea with a moving crest (back band darker and ahead); the shelf world sinks a
+// little as it goes under — the next scene is drawn on that water
+sink("#s2-w .c1, #s2-w .c2, #s2-w .c3", 12.604999999999999, 0.03);
+const wv = 12.774999999999999;
+tl.fromTo("#s2-wave", { y: 2200 }, { y: -470, duration: 0.85, ease: "power2.inOut" }, wv);
+tl.fromTo("#s2-wave-f", { x: 0 }, { x: -540, duration: 0.85, ease: "sine.inOut" }, wv);
+tl.fromTo("#s2-wave-b", { x: -540 }, { x: 0, duration: 0.85, ease: "sine.inOut" }, wv);
+tl.fromTo("#s2-world", { y: 0 }, { y: -260, duration: 0.85, ease: "power2.in", immediateRender: false }, wv);
+
+      window.__timelines["s2"] = tl;
+    })();
+  </script>
+</template>

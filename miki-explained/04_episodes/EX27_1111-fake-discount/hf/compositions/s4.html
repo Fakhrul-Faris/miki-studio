@@ -1,0 +1,130 @@
+<template>
+  <style>
+    @font-face { font-family: "Inter Display"; font-weight: 500; src: url("assets/fonts/InterDisplay-Medium.ttf"); }
+@font-face { font-family: "Inter Display"; font-weight: 700; src: url("assets/fonts/InterDisplay-Bold.ttf"); }
+@font-face { font-family: "Inter Display"; font-weight: 900; src: url("assets/fonts/InterDisplay-Black.ttf"); }
+
+    
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    #s4-w { position: absolute; inset: 0; overflow: hidden; }
+    #s4-w svg.art { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: visible; }
+    #s4-w .head { position: absolute; left: 76px; width: 940px; font-family: "Inter Display"; line-height: 1.04; }
+    #s4-w .kick { font-weight: 700; font-size: 40px; letter-spacing: 3px; }
+    #s4-w .big { font-weight: 900; font-size: 96px; letter-spacing: -0.5px; }
+    #s4-w .m { display: inline-block; overflow: hidden; vertical-align: top; padding: 0 0.03em 0.08em; margin-bottom: -0.08em; }
+    #s4-w .m > span { display: inline-block; }
+    #s4-w .stripe { position: absolute; z-index: 5; }
+
+    #s4-end { } #s4-w #s4-logo { opacity: 0; }
+  </style>
+  <div id="root" data-composition-id="s4" data-width="1080" data-height="1920" data-layout-allow-overflow data-layout-allow-overlap>
+    <div id="s4-w">
+      <svg class="art" viewBox="0 0 1080 1920"><g id="s4-cam"><g id="s4-world">
+          <rect x="-200" y="-200" width="1480" height="2400" fill="#E4E1D9"/>
+          <g transform="translate(-60,300) scale(1.0)" fill="#D8D5CC"><rect x="0" y="40" width="360" height="56" rx="28"/><circle cx="110" cy="44" r="52"/><circle cx="200" cy="30" r="64"/><circle cx="280" cy="52" r="40"/></g><g transform="translate(700,220) scale(0.8)" fill="#D8D5CC"><rect x="0" y="40" width="360" height="56" rx="28"/><circle cx="110" cy="44" r="52"/><circle cx="200" cy="30" r="64"/><circle cx="280" cy="52" r="40"/></g>
+          <g id="s4-hills"><path d="M-100 1100 V1010 H300 C330 1010 350 830 392 830 H560 C600 830 612 938 650 938 H1180 V1100 Z" fill="#21409C" transform="translate(10,10)"/><path d="M-100 1100 V1010 H300 C330 1010 350 830 392 830 H560 C600 830 612 938 650 938 H1180 V1100 Z" fill="#A79BF2"/>
+            <text x="150" y="980" font-family="Inter Display" font-weight="700" font-size="28" letter-spacing="2" fill="#1C2554" text-anchor="middle">LAST WEEK 500</text>
+            <text x="476" y="800" font-family="Inter Display" font-weight="700" font-size="28" letter-spacing="2" fill="#1C2554" text-anchor="middle">11.11 EVE 600</text>
+            <text x="880" y="908" font-family="Inter Display" font-weight="900" font-size="34" letter-spacing="2" fill="#F05A28" text-anchor="middle">"DEAL" 540</text></g>
+          <rect x="-200" y="1100" width="1480" height="1200" fill="#2E54C6"/>
+          <path d="M-200 1160 C200 1140 300 1220 540 1190 C780 1160 900 1240 1280 1200 V1100 H-200 Z" fill="#21409C"/>
+          <path id="s4-road" d="M532 1100 L548 1100 L820 2000 L260 2000 Z" fill="#F05A28"/>
+          <path d="M532 1100 L250 2000 M548 1100 L830 2000" stroke="#F8F7F3" stroke-width="6"/>
+          <path d="M540 1140 L540 2000" stroke="#F8F7F3" stroke-width="6" stroke-dasharray="40 50"/>
+        </g></g>
+        <rect id="s4-end" width="1080" height="1920" fill="#E4E1D9" opacity="0"/>
+        <circle id="s4-sun" cx="760" cy="760" r="120" fill="#F05A28"/>
+        <g id="s4-clouds"><g transform="translate(-60,-40)"><g class="pf" data-i="0.284" data-o="0.346" data-x="-1260" data-y="-700"><circle r="226" fill="#D8D5CC"/><circle cx="-158" cy="50" r="163" fill="#D8D5CC"/><circle cx="163" cy="41" r="158" fill="#D8D5CC"/><circle cx="-27" cy="-36" r="181" fill="#ECEAE4"/></g></g><g transform="translate(240,-40)"><g class="pf" data-i="0.2" data-o="0.294" data-x="-750" data-y="-700"><circle r="207" fill="#D8D5CC"/><circle cx="-145" cy="46" r="149" fill="#D8D5CC"/><circle cx="149" cy="37" r="145" fill="#D8D5CC"/><circle cx="-25" cy="-33" r="166" fill="#ECEAE4"/></g></g><g transform="translate(540,-40)"><g class="pf" data-i="0.14" data-o="0.295" data-x="240" data-y="-700"><circle r="201" fill="#D8D5CC"/><circle cx="-141" cy="44" r="145" fill="#D8D5CC"/><circle cx="145" cy="36" r="141" fill="#D8D5CC"/><circle cx="-24" cy="-32" r="161" fill="#ECEAE4"/></g></g><g transform="translate(840,-40)"><g class="pf" data-i="0.073" data-o="0.305" data-x="750" data-y="-700"><circle r="206" fill="#D8D5CC"/><circle cx="-144" cy="45" r="148" fill="#D8D5CC"/><circle cx="148" cy="37" r="144" fill="#D8D5CC"/><circle cx="-25" cy="-33" r="165" fill="#ECEAE4"/></g></g><g transform="translate(1140,-40)"><g class="pf" data-i="0.042" data-o="0.333" data-x="1260" data-y="-700"><circle r="219" fill="#D8D5CC"/><circle cx="-153" cy="48" r="158" fill="#D8D5CC"/><circle cx="158" cy="39" r="153" fill="#D8D5CC"/><circle cx="-26" cy="-35" r="175" fill="#ECEAE4"/></g></g><g transform="translate(90,230)"><g class="pf" data-i="0.267" data-o="0.261" data-x="-1005" data-y="-511"><circle r="225" fill="#D8D5CC"/><circle cx="-158" cy="50" r="162" fill="#D8D5CC"/><circle cx="162" cy="40" r="158" fill="#D8D5CC"/><circle cx="-27" cy="-36" r="180" fill="#ECEAE4"/></g></g><g transform="translate(390,230)"><g class="pf" data-i="0.162" data-o="0.237" data-x="-495" data-y="-511"><circle r="222" fill="#D8D5CC"/><circle cx="-155" cy="49" r="160" fill="#D8D5CC"/><circle cx="160" cy="40" r="155" fill="#D8D5CC"/><circle cx="-27" cy="-36" r="178" fill="#ECEAE4"/></g></g><g transform="translate(690,230)"><g class="pf" data-i="0.104" data-o="0.224" data-x="495" data-y="-511"><circle r="239" fill="#D8D5CC"/><circle cx="-167" cy="53" r="172" fill="#D8D5CC"/><circle cx="172" cy="43" r="167" fill="#D8D5CC"/><circle cx="-29" cy="-38" r="191" fill="#ECEAE4"/></g></g><g transform="translate(990,230)"><g class="pf" data-i="0.037" data-o="0.272" data-x="1005" data-y="-511"><circle r="237" fill="#D8D5CC"/><circle cx="-166" cy="52" r="171" fill="#D8D5CC"/><circle cx="171" cy="43" r="166" fill="#D8D5CC"/><circle cx="-28" cy="-38" r="190" fill="#ECEAE4"/></g></g><g transform="translate(-60,500)"><g class="pf" data-i="0.309" data-o="0.239" data-x="-1260" data-y="-322"><circle r="206" fill="#D8D5CC"/><circle cx="-144" cy="45" r="148" fill="#D8D5CC"/><circle cx="148" cy="37" r="144" fill="#D8D5CC"/><circle cx="-25" cy="-33" r="165" fill="#ECEAE4"/></g></g><g transform="translate(240,500)"><g class="pf" data-i="0.192" data-o="0.165" data-x="-750" data-y="-322"><circle r="218" fill="#D8D5CC"/><circle cx="-153" cy="48" r="157" fill="#D8D5CC"/><circle cx="157" cy="39" r="153" fill="#D8D5CC"/><circle cx="-26" cy="-35" r="174" fill="#ECEAE4"/></g></g><g transform="translate(540,500)"><g class="pf" data-i="0.155" data-o="0.133" data-x="240" data-y="-322"><circle r="230" fill="#D8D5CC"/><circle cx="-161" cy="51" r="166" fill="#D8D5CC"/><circle cx="166" cy="41" r="161" fill="#D8D5CC"/><circle cx="-28" cy="-37" r="184" fill="#ECEAE4"/></g></g><g transform="translate(840,500)"><g class="pf" data-i="0.079" data-o="0.16" data-x="750" data-y="-322"><circle r="208" fill="#D8D5CC"/><circle cx="-146" cy="46" r="150" fill="#D8D5CC"/><circle cx="150" cy="37" r="146" fill="#D8D5CC"/><circle cx="-25" cy="-33" r="166" fill="#ECEAE4"/></g></g><g transform="translate(1140,500)"><g class="pf" data-i="0.003" data-o="0.245" data-x="1260" data-y="-322"><circle r="203" fill="#D8D5CC"/><circle cx="-142" cy="45" r="146" fill="#D8D5CC"/><circle cx="146" cy="37" r="142" fill="#D8D5CC"/><circle cx="-24" cy="-32" r="162" fill="#ECEAE4"/></g></g><g transform="translate(90,770)"><g class="pf" data-i="0.247" data-o="0.135" data-x="-1005" data-y="-133"><circle r="243" fill="#D8D5CC"/><circle cx="-170" cy="53" r="175" fill="#D8D5CC"/><circle cx="175" cy="44" r="170" fill="#D8D5CC"/><circle cx="-29" cy="-39" r="194" fill="#ECEAE4"/></g></g><g transform="translate(390,770)"><g class="pf" data-i="0.2" data-o="0.1" data-x="-495" data-y="-133"><circle r="245" fill="#D8D5CC"/><circle cx="-172" cy="54" r="176" fill="#D8D5CC"/><circle cx="176" cy="44" r="172" fill="#D8D5CC"/><circle cx="-29" cy="-39" r="196" fill="#ECEAE4"/></g></g><g transform="translate(690,770)"><g class="pf" data-i="0.117" data-o="0.085" data-x="495" data-y="-133"><circle r="221" fill="#D8D5CC"/><circle cx="-155" cy="49" r="159" fill="#D8D5CC"/><circle cx="159" cy="40" r="155" fill="#D8D5CC"/><circle cx="-27" cy="-35" r="177" fill="#ECEAE4"/></g></g><g transform="translate(990,770)"><g class="pf" data-i="0.067" data-o="0.155" data-x="1005" data-y="-133"><circle r="229" fill="#D8D5CC"/><circle cx="-160" cy="50" r="165" fill="#D8D5CC"/><circle cx="165" cy="41" r="160" fill="#D8D5CC"/><circle cx="-27" cy="-37" r="183" fill="#ECEAE4"/></g></g><g transform="translate(-60,1040)"><g class="pf" data-i="0.282" data-o="0.205" data-x="-1260" data-y="56"><circle r="214" fill="#D8D5CC"/><circle cx="-150" cy="47" r="154" fill="#D8D5CC"/><circle cx="154" cy="39" r="150" fill="#D8D5CC"/><circle cx="-26" cy="-34" r="171" fill="#ECEAE4"/></g></g><g transform="translate(240,1040)"><g class="pf" data-i="0.23" data-o="0.099" data-x="-750" data-y="56"><circle r="247" fill="#D8D5CC"/><circle cx="-173" cy="54" r="178" fill="#D8D5CC"/><circle cx="178" cy="44" r="173" fill="#D8D5CC"/><circle cx="-30" cy="-40" r="198" fill="#ECEAE4"/></g></g><g transform="translate(540,1040)"><g class="pf" data-i="0.129" data-o="0.028" data-x="240" data-y="56"><circle r="247" fill="#D8D5CC"/><circle cx="-173" cy="54" r="178" fill="#D8D5CC"/><circle cx="178" cy="44" r="173" fill="#D8D5CC"/><circle cx="-30" cy="-40" r="198" fill="#ECEAE4"/></g></g><g transform="translate(840,1040)"><g class="pf" data-i="0.116" data-o="0.108" data-x="750" data-y="56"><circle r="214" fill="#D8D5CC"/><circle cx="-150" cy="47" r="154" fill="#D8D5CC"/><circle cx="154" cy="39" r="150" fill="#D8D5CC"/><circle cx="-26" cy="-34" r="171" fill="#ECEAE4"/></g></g><g transform="translate(1140,1040)"><g class="pf" data-i="0.039" data-o="0.187" data-x="1260" data-y="56"><circle r="238" fill="#D8D5CC"/><circle cx="-167" cy="52" r="171" fill="#D8D5CC"/><circle cx="171" cy="43" r="167" fill="#D8D5CC"/><circle cx="-29" cy="-38" r="190" fill="#ECEAE4"/></g></g><g transform="translate(90,1310)"><g class="pf" data-i="0.255" data-o="0.172" data-x="-1005" data-y="245"><circle r="222" fill="#D8D5CC"/><circle cx="-155" cy="49" r="160" fill="#D8D5CC"/><circle cx="160" cy="40" r="155" fill="#D8D5CC"/><circle cx="-27" cy="-36" r="178" fill="#ECEAE4"/></g></g><g transform="translate(390,1310)"><g class="pf" data-i="0.178" data-o="0.137" data-x="-495" data-y="245"><circle r="223" fill="#D8D5CC"/><circle cx="-156" cy="49" r="161" fill="#D8D5CC"/><circle cx="161" cy="40" r="156" fill="#D8D5CC"/><circle cx="-27" cy="-36" r="178" fill="#ECEAE4"/></g></g><g transform="translate(690,1310)"><g class="pf" data-i="0.138" data-o="0.144" data-x="495" data-y="245"><circle r="238" fill="#D8D5CC"/><circle cx="-167" cy="52" r="171" fill="#D8D5CC"/><circle cx="171" cy="43" r="167" fill="#D8D5CC"/><circle cx="-29" cy="-38" r="190" fill="#ECEAE4"/></g></g><g transform="translate(990,1310)"><g class="pf" data-i="0.034" data-o="0.18" data-x="1005" data-y="245"><circle r="248" fill="#D8D5CC"/><circle cx="-174" cy="55" r="179" fill="#D8D5CC"/><circle cx="179" cy="45" r="174" fill="#D8D5CC"/><circle cx="-30" cy="-40" r="198" fill="#ECEAE4"/></g></g><g transform="translate(-60,1580)"><g class="pf" data-i="0.261" data-o="0.273" data-x="-1260" data-y="434"><circle r="207" fill="#D8D5CC"/><circle cx="-145" cy="46" r="149" fill="#D8D5CC"/><circle cx="149" cy="37" r="145" fill="#D8D5CC"/><circle cx="-25" cy="-33" r="166" fill="#ECEAE4"/></g></g><g transform="translate(240,1580)"><g class="pf" data-i="0.24" data-o="0.213" data-x="-750" data-y="434"><circle r="247" fill="#D8D5CC"/><circle cx="-173" cy="54" r="178" fill="#D8D5CC"/><circle cx="178" cy="44" r="173" fill="#D8D5CC"/><circle cx="-30" cy="-40" r="198" fill="#ECEAE4"/></g></g><g transform="translate(540,1580)"><g class="pf" data-i="0.182" data-o="0.172" data-x="240" data-y="434"><circle r="218" fill="#D8D5CC"/><circle cx="-153" cy="48" r="157" fill="#D8D5CC"/><circle cx="157" cy="39" r="153" fill="#D8D5CC"/><circle cx="-26" cy="-35" r="174" fill="#ECEAE4"/></g></g><g transform="translate(840,1580)"><g class="pf" data-i="0.064" data-o="0.199" data-x="750" data-y="434"><circle r="204" fill="#D8D5CC"/><circle cx="-143" cy="45" r="147" fill="#D8D5CC"/><circle cx="147" cy="37" r="143" fill="#D8D5CC"/><circle cx="-24" cy="-33" r="163" fill="#ECEAE4"/></g></g><g transform="translate(1140,1580)"><g class="pf" data-i="0.031" data-o="0.262" data-x="1260" data-y="434"><circle r="244" fill="#D8D5CC"/><circle cx="-171" cy="54" r="176" fill="#D8D5CC"/><circle cx="176" cy="44" r="171" fill="#D8D5CC"/><circle cx="-29" cy="-39" r="195" fill="#ECEAE4"/></g></g><g transform="translate(90,1850)"><g class="pf" data-i="0.238" data-o="0.31" data-x="-1005" data-y="623"><circle r="203" fill="#D8D5CC"/><circle cx="-142" cy="45" r="146" fill="#D8D5CC"/><circle cx="146" cy="37" r="142" fill="#D8D5CC"/><circle cx="-24" cy="-32" r="162" fill="#ECEAE4"/></g></g><g transform="translate(390,1850)"><g class="pf" data-i="0.216" data-o="0.286" data-x="-495" data-y="623"><circle r="216" fill="#D8D5CC"/><circle cx="-151" cy="48" r="156" fill="#D8D5CC"/><circle cx="156" cy="39" r="151" fill="#D8D5CC"/><circle cx="-26" cy="-35" r="173" fill="#ECEAE4"/></g></g><g transform="translate(690,1850)"><g class="pf" data-i="0.147" data-o="0.27" data-x="495" data-y="623"><circle r="248" fill="#D8D5CC"/><circle cx="-174" cy="55" r="179" fill="#D8D5CC"/><circle cx="179" cy="45" r="174" fill="#D8D5CC"/><circle cx="-30" cy="-40" r="198" fill="#ECEAE4"/></g></g><g transform="translate(990,1850)"><g class="pf" data-i="0.079" data-o="0.275" data-x="1005" data-y="623"><circle r="234" fill="#D8D5CC"/><circle cx="-164" cy="51" r="168" fill="#D8D5CC"/><circle cx="168" cy="42" r="164" fill="#D8D5CC"/><circle cx="-28" cy="-37" r="187" fill="#ECEAE4"/></g></g></g></svg>
+      <img id="s4-logo" src="assets/logo.png" style="position:absolute; left:399px; top:620px; height:360px;">
+      <div class="head" style="top:1130px; text-align:center; left:0; width:1080px;"><div class="big" style="color:#1C2554; font-size:60px"><span class="m"><span class="w f1">FOLLOW</span></span> <span class="m"><span class="w f1">FOR</span></span> <span class="m"><span class="w f1">MORE</span></span></div></div>
+      <div class="stripe st-ab" style="left:62px; top:188px; height:47px; width:860px; background:#F05A28;"></div><div class="stripe st-ab" style="left:62px; top:230px; height:110px; width:639px; background:#F05A28;"></div><div class="stripe st-ab" style="left:62px; top:329px; height:110px; width:709px; background:#F05A28;"></div>
+      <div class="head" style="top:190px;"><div class="kick" style="color:#2E54C6"><span class="m"><span class="w a1">BEFORE</span></span> <span class="m"><span class="w a1">YOU</span></span> <span class="m"><span class="w a1">USE</span></span> <span class="m"><span class="w a1">YOUR</span></span> <span class="m"><span class="w a1">VOUCHERS</span></span></div><div class="big" style="color:#1C2554; font-size:96px"><span class="m"><span class="w a2">CHECK</span></span> <span class="m"><span class="w a2">LAST</span></span></div><div class="big" style="color:#1C2554; font-size:96px"><span class="m"><span class="w a3">WEEK'S</span></span> <span class="m"><span class="w a3">PRICE</span></span></div></div>
+      <div class="head" style="top:190px;"><div class="big" style="color:#1C2554; font-size:84px"><span class="m"><span class="w b1">SEEN</span></span> <span class="m"><span class="w b1">A</span></span> <span class="m"><span class="w b1">FAKE</span></span> <span class="m"><span class="w b1">DEAL?</span></span></div><div class="kick" style="color:#2E54C6"><span class="m"><span class="w b2">DROP</span></span> <span class="m"><span class="w b2">IT</span></span> <span class="m"><span class="w b2">BELOW</span></span></div></div>
+    </div>
+  </div>
+  <script>
+    (() => {
+
+const tl = gsap.timeline({ paused: true });
+CustomEase.create("io", "0.65,0,0.35,1");
+CustomEase.create("fall", "0.55,0,1,0.45");
+// critically damped spring (stiffness 170, damping 26, mass 1): arrives with weight, no bounce
+const spring = (d = 0.8, w = 13.04) => { const e = 1 - (1 + w * d) * Math.exp(-w * d); return (p) => (1 - (1 + w * p * d) * Math.exp(-w * p * d)) / e; };
+// organic camera: each layer drifts on two offset sines (7.3 s, 11.9 s); k = depth (0 far .. 1 near)
+function drift(layers, dur, t0) {
+  const o = { t: 0 }, P = Math.PI * 2;
+  layers.forEach(([sel]) => gsap.set(sel, { transformOrigin: "50% 50%" }));
+  tl.fromTo(o, { t: 0 }, { t: dur, duration: dur, ease: "none", onUpdate() {
+    const s = o.t + t0;
+    layers.forEach(([sel, k]) => gsap.set(sel, {
+      x: k * (8 * Math.sin(P * s / 7.3) + 6 * Math.sin(P * s / 11.9 + 1.3)),
+      y: k * (6 * Math.cos(P * s / 7.3 + 0.7) + 5 * Math.sin(P * s / 11.9)),
+      rotation: k * 0.4 * Math.sin(P * s / 11.9 + 0.4) }));
+  } }, 0);
+}
+// iris: opens to the Ring first (the contents swap inside it), then to the whole frame
+function iris(sel, cx, cy, r) {
+  tl.fromTo(sel, { clipPath: `circle(0px at ${cx}px ${cy}px)` }, { clipPath: `circle(${r}px at ${cx}px ${cy}px)`, duration: 0.35, ease: "io" }, 0)
+    .fromTo(sel, { clipPath: `circle(${r}px at ${cx}px ${cy}px)` }, { clipPath: `circle(2300px at ${cx}px ${cy}px)`, duration: 0.5, ease: "io", immediateRender: false }, 0.45);
+}
+// kinetic type: a word rises out of its mask, tracking tightens +4% -> 0
+function rise(sel, at, stagger = 0.1) {
+  tl.fromTo(sel, { yPercent: 115, scaleX: 1.04 }, { yPercent: 0, scaleX: 1, duration: 0.5, ease: "io", stagger }, at);
+}
+function sink(sel, at, stagger = 0.06) {
+  tl.fromTo(sel, { yPercent: 0 }, { yPercent: -115, duration: 0.45, ease: "io", stagger, immediateRender: false }, at);
+}
+// a key number counts, then settles 1.08 -> 1.00
+function count(sel, a, b, at, d = 0.6, pre = "RM") {
+  const o = { v: a }, el = document.querySelector(sel);
+  tl.fromTo(o, { v: a }, { v: b, duration: d, ease: "io", immediateRender: false, onUpdate() { el.textContent = pre + Math.round(o.v); } }, at);
+  tl.fromTo(sel, { scale: 1.08 }, { scale: 1, duration: 0.5, ease: "io", immediateRender: false }, at + d - 0.1);
+}
+
+      const T0 = 29.0;
+      gsap.set("#s4-w .w", { yPercent: 115 });
+      gsap.set("#s4-w .stripe", { scaleX: 0 });
+      // headline swap: coloured stripes sweep in from the left over the old lines, the lines change under them,
+      // and the stripes leave to the right revealing the new first line
+      function wipe(at, outSel, inSel, key) {
+        const st = gsap.utils.toArray("#s4-w .st-" + key);
+        tl.fromTo(st, { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 1, duration: 0.26, ease: "power2.in", stagger: 0.05 }, at);
+        tl.set(outSel, { yPercent: 115 }, at + 0.37);
+        if (inSel) tl.set(inSel, { yPercent: 0, scaleX: 1 }, at + 0.37);
+        tl.fromTo(st, { scaleX: 1, transformOrigin: "100% 50%" }, { scaleX: 0, duration: 0.34, ease: "power2.out", stagger: 0.05, immediateRender: false }, at + 0.37);
+      }
+
+// hand-off: a bank of clouds sweeps across, the horizon is behind it
+// HAND-OFF 3 · a cloud front grows over the city from the right, puff by puff; when it has closed, it parts from the
+// middle outward and the horizon is behind it (the clouds are the transition, not a slab over it)
+const pf = gsap.utils.toArray("#s4-clouds .pf");
+tl.fromTo(pf, { scale: 0 }, { scale: 1, duration: 0.36, ease: "power2.out", stagger: (i, el) => +el.dataset.i }, 0.0);
+tl.fromTo("#s4-world", { opacity: 0 }, { opacity: 1, duration: 0.02, ease: "none" }, 0.62);
+tl.fromTo("#s4-sun", { opacity: 0 }, { opacity: 1, duration: 0.02, ease: "none" }, 0.62);
+// the front stays solid while it parts: puffs are pushed out from the middle (outer ones go furthest) and only thin
+// out in their last moments, so the horizon opens like a gap in cloud, not a dissolve
+tl.fromTo(pf, { x: 0, y: 0, scale: 1 }, { x: (i, el) => +el.dataset.x, y: (i, el) => +el.dataset.y, scale: 0.7,
+  duration: 0.75, ease: "power2.inOut", stagger: (i, el) => +el.dataset.o, immediateRender: false }, 0.62);
+tl.fromTo(pf, { opacity: 1 }, { opacity: 0, duration: 0.2, ease: "power1.in", stagger: (i, el) => +el.dataset.o, immediateRender: false }, 1.12);
+gsap.set("#s4-cam", { svgOrigin: "540 1100" });
+tl.fromTo("#s4-cam", { scale: 1.08 }, { scale: 1, duration: 3.5, ease: "io" }, 0.5);
+drift([["#s4-sun", 0.6]], 8.09, T0);
+// the hills are the price history: they draw left to right on "check"
+tl.fromTo("#s4-hills", { clipPath: "inset(0px 100% 0px 0px)" }, { clipPath: "inset(0px 0% 0px 0px)", duration: 1.6, ease: "io" }, 1.968);
+rise("#s4-w .a1", 1.05, 0.06);
+rise("#s4-w .a2", 2.068, 0.14);
+rise("#s4-w .a3", 2.448, 0.3);
+wipe(3.078, "#s4-w .a1, #s4-w .a2, #s4-w .a3", "#s4-w .b1", "ab");
+rise("#s4-w .b2", 4.548, 0.1);
+sink("#s4-w .b1, #s4-w .b2", 5.028, 0.03);
+// the end card (silent): the sun rolls to the middle, the world gives way to paper, the sun becomes the logo
+tl.fromTo("#s4-sun", { attr: { cx: 760, cy: 760 } }, { attr: { cx: 540, cy: 800 }, duration: 0.7, ease: "io" }, 5.228);
+tl.fromTo("#s4-end", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "io" }, 5.627999999999999);
+tl.fromTo("#s4-sun", { attr: { r: 120 } }, { attr: { r: 0 }, duration: 0.5, ease: "io", immediateRender: false }, 5.978);
+tl.fromTo("#s4-logo", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.9, ease: spring(0.9) }, 6.077999999999999);
+rise("#s4-w .f1", 6.327999999999999);
+
+      window.__timelines["s4"] = tl;
+    })();
+  </script>
+</template>

@@ -1,6 +1,6 @@
 # EX26 — The Bank That Sells Coffee
 
-Status: story + script v1 **for approval** → voice (user) → raea build (smooth iso v2, EX16 palette) → post **Mon 9 Nov, 12:30 MYT** (quick slot)
+Status: **Style B revamp in progress (2026-11-08)** — raea version `export/EX26-Final.mp4` kept as fallback → post **Mon 9 Nov, 12:30 MYT** (quick slot)
 Strategy: Nov growth plan · series **Brand secrets** · global brand Malaysians use · 20–30 s
 
 ## Sources (primary: Starbucks FY2025 Form 10-K, fiscal year ended 28 Sep 2025)
@@ -27,17 +27,26 @@ Strategy: Nov growth plan · series **Brand secrets** · global brand Malaysians
 Voice (Nathan `v4k7NzxipnuJNJtrKxob`): a touch quicker than usual; small beat before "No interest. No due date." English
 only. Separate files L01–L05 in `audio/`.
 
-## Shot outline (smooth iso v2, EX16 palette)
+## Style B revamp (user 2026-11-08: "starbucks also need a revamp with the new look … new camera movement, new color, new
+asset design, new composition, but still same style"; "the visual shouldn't support the metaphor, but should visualize the
+script"). Method: `00_bible/flat-v3-playbook.md`. The raea version stays as `export/EX26-Final.mp4` until this is approved.
 
-1. **L01** frame 0 mid-swoop onto a cut-away café (counter, espresso bar, queue, tables); the real Starbucks logo flat
-   over the opening (Wikimedia, if a usable file exists; otherwise name only); a vault door in the back room glows green
-   with a counter rolling to **US$1.75 billion** (pinned label).
-2. **L02** a phone in a customer's hand tops up; a green coin travels from the phone **into the vault, not the till**;
-   the cup isn't made yet (an empty cup outline waits on the counter).
-3. **L03** inside the vault the coins work: they flow out to new stores being built (iso stores rising on the street);
-   label "0% interest · no due date".
-4. **L04** a pile of coins at the back stays put and turns gold-green: "never spent" → counter **$222M (FY2025)**.
-5. **L05** back to the phone: the top-up button pulses; question card; end card.
+**Palette (new):** cream `#F1EADC` ground · deep green `#1F5D4C` · coffee ink `#3B2A22` · amber `#E9A23B` (money, the
+through-line) · coral `#E2553F` (alarm: never spent) · sage `#A9C7B6`. **Through-line:** one amber coin — the customer's
+money — present in every scene; every hand-off is made from coins (not EX27's line). **Logo:** the real Starbucks sign
+(circle-masked crop, CC BY 4.0, Mathieu Brossais) on screen from frame 1.
+
+| Line | What it literally says | What we draw | View / camera |
+|---|---|---|---|
+| L01 0–4.9 s | Starbucks holds US$1.75B of customers' money | Phones lying on a table, each showing its own app balance; amber coins run along dotted lines from every phone into one Starbucks account disc that counts up to **US$1.75 BILLION** | top-down; starts on one phone and **pulls back** to reveal hundreds |
+| L02 4.9–8.9 s | top up the app = pay for coffee not ordered yet | One phone, flat front-on: **TOP UP** button presses, balance +RM50, a coin leaves; beside it an **empty dashed cup** tagged "PAID · NOT ORDERED" | flat front; **camera trucks right** from the phone to the cup |
+| L03 8.9–13.4 s | until spent, the money works for Starbucks; no interest, no due date | The coin drops into the Starbucks account; money flows out of it into Starbucks' business (stores built, beans bought, shown as labelled items); a loan slip reads **INTEREST 0% · DUE DATE —** | **worm's-eye tilt up** a growing column of coins, then top-down on the slip |
+| L04 13.4–20.6 s | some is never spent; in 2025 forgotten balances earned US$222M | A **2025 timeline** (Jan–Dec) as the horizon; phones standing on it with balances that never go down ("not spent"); at December their coins slide off into Starbucks' stack: **+US$222M · FY2025** | flat side elevation; **camera travels along the year** |
+| L05 20.6–26.8 s | next time the app asks to top up, ask who's lending to whom | The phone again: "Top up?" prompt; two arrows **YOU → STARBUCKS** (lending) with the question; end card (coin → Meikigo logo, silent) | front-on push-in; end card |
+
+Hand-offs (asset-built): coin pull-back (L01 → L02: one coin fills the frame and becomes the phone's button) · coin drop
+into the slot (L02 → L03) · coin column collapse into the timeline (L03 → L04) · coins roll out of frame and the phone
+rolls in (L04 → L05). Two style stills first: L01 (hook) and L04 (signature).
 
 ## Post
 
