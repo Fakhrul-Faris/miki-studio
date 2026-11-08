@@ -38,7 +38,7 @@ Two posts a day, 12:30 and 21:00 MYT (memory `tiktok-goal-nov-2026`). Captions, 
 | Sun 08 Nov | 21:00 | EX25 99 Speedmart Pt 1 (`EX25-Final.mp4`) · Style A | scheduled in TikTok Studio (2026-11-07) |
 | Mon 09 Nov | 12:30 | EX26 Starbucks float (`EX26-Final.mp4`) · Style C | scheduled in TikTok Studio (2026-11-08) |
 | Mon 09 Nov | 21:00 | EX27 Shopee 11.11 fake discount (`EX27-Final.mp4`) · Style B | scheduled in TikTok Studio (2026-11-08) |
-| Tue 10 Nov | 12:30 / 21:00 | next two (slate: Apple charger / Mr DIY Pt 2) | to script |
+| Tue 10 Nov | 12:30 / 21:00 | EX28 Apple charger · Style C (proposed) / EX29 Mr DIY Pt 2 · Style A (proposed) | scripts drafted 2026-11-08, waiting for approval |
 
 **Views snapshot 2026-11-08 (TikTok Studio, views · likes · comments):** EX21 Kodak (6 Nov 12:30) 693 · 19 · 0 ·
 EX09 Other Line (6 Nov) 647 · 30 · 0 · EX10 Popcorn (7 Nov 21:00) 629 · 20 · 0 · EX24 McDonald's (8 Nov 12:30, hours old) 431 · 18 · 1.
