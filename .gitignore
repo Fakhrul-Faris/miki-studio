@@ -103,3 +103,6 @@ miki-explained/04_episodes/_tests/**/media/
 # HyperFrames copies of the episode mix (regenerated from build/sfx.py)
 miki-explained/04_episodes/*/hf/assets/*.wav
 miki-explained/04_episodes/*/hf/.hyperframes/
+# EX26+ plate builds: rendered camera moves and depth maps (regenerate with build/plates.py)
+miki-explained/04_episodes/*/plates/
+miki-explained/04_episodes/*/hf/assets/plates/

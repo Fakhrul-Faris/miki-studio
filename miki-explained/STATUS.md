@@ -31,14 +31,16 @@ Checkpoints: 14 Nov ≥150 followers, 21 Nov ≥450, 30 Nov 1,000.
   (generator `styleframes/make.py`).
 
 ## Pending (waiting on the user)
-1. **EX26 look:** the user called the Style B stills "generic" and will supply image-generation assets. Agree how the
-   assets are used (see the session's question), write the image prompts, then build. Due **Mon 9 Nov 12:30 MYT**;
-   raea final `export/EX26-Final.mp4` is the fallback.
+1. **EX26 plates final for the user's review** — `04_episodes/EX26_starbucks-float/export/EX26-Final.mp4` (27.8 s,
+   60 fps, −18.5 LUFS): the user's five generated plates (`media/P1–P5.png`, prompts `image-prompts.md`) used whole, camera
+   moves rendered with 2.5D depth parallax (`build/plates.py`, `build/cams.py`), vector overlays + EX15 captions in
+   HyperFrames (`build/hf_ex26.py`). Depth vs plain side by side: `export/EX26-depth-test.mp4` — user to pick; plain is
+   `python3 build/hf_ex26.py plain` + render. raea fallback: `export/EX26-Final-raea.mp4`. Posts Mon 9 Nov 12:30 MYT.
 2. **Telegram push** of EX24–EX27 finals when the Air is back: `tools/air.sh sync && tools/air.sh push-episode EXNN`.
    (Decided 2026-11-08: EX26 screen/caption number = **US$220M**, matching the voice.)
 
 ## Next
-1. EX26 full build in Style B, following the playbook (new builder `EX26_starbucks-float/build/`, reuse
+1. ~~EX26 full build in Style B~~ superseded by the plates build above. Old plan kept for reference: EX26 full build in Style B, following the playbook (new builder `EX26_starbucks-float/build/`, reuse
    `EX27…/build/hf_build.py` helpers + captions; new pieces: phone, coin, account disc, timeline, coin stack, loan slip,
    dashed cup). Logo: `raea/media/starbucks_sign_crop.png` (CC BY 4.0, Mathieu Brossais), circle-masked.
    Hand-offs from coins (pull-back → button, drop into slot, column collapse into the timeline, roll-out/roll-in).

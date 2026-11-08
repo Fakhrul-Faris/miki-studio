@@ -1,6 +1,6 @@
 # EX26 — The Bank That Sells Coffee
 
-Status: **Style B revamp in progress (2026-11-08)** — raea version `export/EX26-Final.mp4` kept as fallback → post **Mon 9 Nov, 12:30 MYT** (quick slot)
+Status: **plates build rendered (2026-11-08)** `export/EX26-Final.mp4` — the user's illustrated plates + depth camera + overlays (`build/hf_ex26.py`); raea version `export/EX26-Final-raea.mp4` is the fallback → post **Mon 9 Nov, 12:30 MYT** (quick slot)
 Strategy: Nov growth plan · series **Brand secrets** · global brand Malaysians use · 20–30 s
 
 ## Sources (primary: Starbucks FY2025 Form 10-K, fiscal year ended 28 Sep 2025)

@@ -1,0 +1,22 @@
+<template>
+  <style> #root { position: absolute; inset: 0; pointer-events: none; } #grain-in svg { position: absolute; inset: 0; width: 1080px; height: 1920px; mix-blend-mode: overlay; opacity: 0; } </style>
+  <div id="root" data-composition-id="grain" data-width="1080" data-height="1920" data-layout-ignore><div id="grain-in">
+    <svg viewBox="0 0 1080 1920"><filter id="g0"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="26"/><feColorMatrix type="saturate" values="0"/></filter>
+      <rect width="1080" height="1920" filter="url(#g0)" opacity=".22"/></svg>
+    <svg viewBox="0 0 1080 1920"><filter id="g1"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="33"/><feColorMatrix type="saturate" values="0"/></filter>
+      <rect width="1080" height="1920" filter="url(#g1)" opacity=".22"/></svg>
+    <svg viewBox="0 0 1080 1920"><filter id="g2"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="40"/><feColorMatrix type="saturate" values="0"/></filter>
+      <rect width="1080" height="1920" filter="url(#g2)" opacity=".22"/></svg>
+    <svg viewBox="0 0 1080 1920"><filter id="g3"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="47"/><feColorMatrix type="saturate" values="0"/></filter>
+      <rect width="1080" height="1920" filter="url(#g3)" opacity=".22"/></svg>
+  </div></div>
+  <script>
+    (() => {
+      const tl = gsap.timeline({ paused: true }), g = document.querySelectorAll("#grain-in svg"), o = { t: 0 };
+      const put = () => { const k = Math.floor(o.t * 12) % 4; g.forEach((s, i) => s.style.opacity = i === k ? .5 : 0); };
+      put();
+      tl.fromTo(o, { t: 0 }, { t: 27.8, duration: 27.8, ease: "none", onUpdate: put }, 0);   // grain at 12 fps, like film
+      window.__timelines["grain"] = tl;
+    })();
+  </script>
+</template>
