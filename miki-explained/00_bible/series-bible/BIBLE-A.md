@@ -4,7 +4,9 @@ Built 2026-11-08 from one-by-one art-director notes on 458 handpicked images and
 (`notes-A/C01–C08.md`, `M01–M02.md`, `DIGEST.md`). Built from **convictions, not averages**: every rule below comes
 from decisions in the ★5 pieces, never from measurements. Written in plain words.
 
-Status: **draft, not yet tested.** The test plan (section 13) proves or breaks it before any episode uses it.
+Status: **draft, questions answered 2026-11-08, not yet tested.** No rush on the test (user, 2026-11-08): Styles A, B and C
+share traits, advantages and techniques with each other, so quality stays on par across styles; test once the B and C
+bibles exist.
 
 ---
 
@@ -127,7 +129,7 @@ house rule "real logo from frame 1".
 
 - **The rule:** grey, black and white **plus one bright colour** (color-036 states it outright).
 - **World:** warm-white clay (not blue-white), with soft grey shadows and AO. A neutral grey ramp keeps values steady.
-- **Accent:** one per episode, chosen for its meaning in that story (and the brand). It goes only on: the subject, the
+- **Accent:** one per episode, chosen from the brand and the story's meaning (§12.4). It goes only on: the subject, the
   travelling token, and the one key number. Never on decoration.
 - **Real materials as a second channel:** the subject may keep its true material (brick, wood, copper, the shop's real
   colours) instead of flat paint (core-089, 080, 028). Treat "real material" and "accent" as the same tier — one subject
@@ -197,7 +199,7 @@ house rule "real logo from frame 1".
 | **Pull-back to context** | the detail shrinks into the wider world, which holds the next beat | core-159, light-020 |
 | **Dive into a tile** | from an overview of tiles, dive into one tile until it is the full set | core-054 |
 | **Pass through a ring/door** | the token passes through a frame and changes colour/state | motion-025, motion-013 |
-| **Match on silhouette** | same framing, x-ray → real (see question 2) | light-017 |
+| **Match on silhouette** | same framing, x-ray → real (allowed, §12.2) | light-017 |
 | **Light wash** | a soft light flare fills the frame and clears to the next shot | light-027 |
 
 Every handover must use an object already in the scene (memory `no-cheap-defaults`). Nothing pops on or off; every
@@ -241,19 +243,18 @@ object travels, grows, fades or settles over ~0.4 s (memory `no-harsh-cuts`).
 | Dark HUD tech look, fast title-sequence cutting | **Drop** | genre default / wrong pace for 20–30 s explainers. |
 | Hand-drawn 2D, paper textures | **Drop** | retired or not our medium; graphic-match *timing* is kept. |
 
-## 12. Questions for the user (where the north stars disagree)
+## 12. Decisions (user, 2026-11-08)
 
-1. **How much colour on the shop itself?** core-129 and cam-010 colour the whole shop with all its clutter; core-078 and
-   light-032 keep almost everything white. Proposal: the subject shop in full real colour and detail, everything around it
-   white. Or should even the shop be white with only the brand colour?
-2. **Is a match cut allowed?** light-017 cuts hard from x-ray to the real object in identical framing. Our no-harsh-cuts
-   rule is about objects popping; nothing pops here. Allow it for "what's really inside" beats only?
-3. **Day or dusk as the default light?** The white models are daylight (080, 089, 036); the shops that pull you in are dusk
-   with warm windows (129, places-012). Proposal: daylight for explaining, dusk for the payoff.
-4. **Is the old "clay + green" look (Main Edit.mp4) the accent for every episode, or does each episode pick its accent
-   from the brand?** The north stars choose the accent by meaning (red, terracotta, blue, orange).
+1. **Colour on the shop:** the subject shop in full real colour and detail; everything around it white. (Overrides any
+   "white shop + brand colour only" reading of C1.)
+2. **Match cut allowed:** a hard cut in identical framing (x-ray → real, clay → real) is allowed for "what's really
+   inside" beats. Objects still never pop on/off.
+3. **Light:** daylight while explaining; dusk with warm windows for the payoff.
+4. **Accent colour:** chosen per episode from the brand and the story's meaning — not a fixed house green.
+5. **Cross-style sharing:** A, B and C borrow each other's traits and techniques; the bibles are not walls. Keep quality
+   on the same par across styles.
 
-## 13. Test plan (not built yet)
+## 13. Test plan (not built yet; not urgent — run after the B and C bibles)
 
 Pick one real Malaysian business from the EX28/EX29 slate.
 

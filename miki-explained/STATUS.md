@@ -3,11 +3,12 @@
 Read this first in a new session. Then: `00_bible/flat-v3-playbook.md` (the new look), `05_calendar/calendar.md`
 (schedule + Style A/B/C test), and the episode's `README.md` / `episode.md`.
 
-## ▶ NEXT SESSION: user answers the 4 questions in `00_bible/series-bible/BIBLE-A.md` §12, then the §13 test stills
+## ▶ NEXT SESSION: Style B reference review (write RUNBOOK-B with the same method, then run it)
+BIBLE-A questions answered 2026-11-08 (§12). Test stills deliberately postponed: A, B, C share techniques, so test after
+the B and C bibles exist.
 **BIBLE-A.md drafted 2026-11-08** (Style A review done: 458 images + 41 clips judged one by one; notes in
 `00_bible/series-bible/notes-A/`, summary in `DIGEST.md`). Point of view: a white model world where only the subject is
-real, one physical token carries the story. After the user's answers: 3 test stills + a check .blend, then a 10-s preview.
-Then Style B: write RUNBOOK-B (same method) and prep with
+real, one physical token carries the story. Style B: write RUNBOOK-B (same method) and prep with
 `tools/refs_view.py "~/Desktop/Collecting/Style B" B 00_bible/series-bible/work/B`; then Style C.
 Open issue: `~/Desktop/Collecting/Style A/Motion/match-cut/A-motion-018.mp4` is a partial download (not reviewed).
 Phone guide used for collecting: https://claude.ai/artifact/NdKUpoz5qsjk9sf6QD3rhF
