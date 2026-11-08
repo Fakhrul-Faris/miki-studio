@@ -1,0 +1,14 @@
+# PROGRESS-C — Style C reference review
+
+Method: `RUNBOOK-C.md`.
+
+- [x] Session 1 — C01 + C02 (108) — done 2026-11-09
+- [ ] Session 2 — C03 + C04 (108)
+- [ ] Session 3 — C05 + C06 (108)
+- [ ] Session 4 — C07 + C08 (107) + M01 (4 GIFs)
+- [ ] Session 5 — Synthesis → BIBLE-C.md
+
+Prep done 2026-11-09: 431 files renamed in place; work dir `work/C/`.
+
+Tokens:
+- Session 1: ~95k
