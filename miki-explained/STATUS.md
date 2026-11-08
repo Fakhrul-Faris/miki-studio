@@ -3,11 +3,13 @@
 Read this first in a new session. Then: `00_bible/flat-v3-playbook.md` (the new look), `05_calendar/calendar.md`
 (schedule + Style A/B/C test), and the episode's `README.md` / `episode.md`.
 
-## ▶ NEXT SESSION: open `00_bible/series-bible/PROGRESS-A.md`, run the next unticked session of `RUNBOOK-A.md`
-Style A reference review, **one image at a time as an art director** (user, 2026-11-08: handpicked, no group
-averages, no comparison with EX25; the point is sharpening art direction). 6 sessions: 4 image sessions (2 chunks of
-58 each), 1 motion session, 1 synthesis → BIBLE-A.md. Prep done (`tools/refs_view.py`: files renamed in place, 768 px view
-copies, key-moment strips, 5 YouTube films downloaded). Then Styles B and C in `~/Desktop/Collecting/` the same way.
+## ▶ NEXT SESSION: user answers the 4 questions in `00_bible/series-bible/BIBLE-A.md` §12, then the §13 test stills
+**BIBLE-A.md drafted 2026-11-08** (Style A review done: 458 images + 41 clips judged one by one; notes in
+`00_bible/series-bible/notes-A/`, summary in `DIGEST.md`). Point of view: a white model world where only the subject is
+real, one physical token carries the story. After the user's answers: 3 test stills + a check .blend, then a 10-s preview.
+Then Style B: write RUNBOOK-B (same method) and prep with
+`tools/refs_view.py "~/Desktop/Collecting/Style B" B 00_bible/series-bible/work/B`; then Style C.
+Open issue: `~/Desktop/Collecting/Style A/Motion/match-cut/A-motion-018.mp4` is a partial download (not reviewed).
 Phone guide used for collecting: https://claude.ai/artifact/NdKUpoz5qsjk9sf6QD3rhF
 
 ## Goal and strategy (unchanged)
