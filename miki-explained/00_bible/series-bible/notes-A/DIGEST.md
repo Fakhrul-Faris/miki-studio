@@ -51,3 +51,30 @@ Chunk digests in order; full notes in notes-A/C0N.md.
 - **Timeline/data placed in the world**: 187 (arc over the site), 186 (depth ruler under the site).
 **Tensions:** Nothing's white-studio product language (crop, macro, one accent, x-ray) vs Vorontzov's cartography; both are "Style A", but one is intimate, the other god's-eye. They meet in synaos (a white model world seen from above with one accent).
 **Couldn't read:** light-017 first frame is near-black (needs motion); GIF ids (light-006/007/011/012/014–017/020/023/027/029, core 159–161) judged on first frame only.
+
+## C05 digest
+**★5 (3):** light-071 (the camera as a pure black silhouette; the reveal is a light switching on, see 072) · color-001 (colour follows emotion: pastels in control, saturation at the turn) · color-039 (one pink accent is the story's heart, growing inside a cold green world).
+**Convictions forming:**
+- **Reveal by light, not by camera**: light-071→072, 077 (raking light), C04 light-029.
+- **Colour is planned across time, per beat, for emotion**: color-001, 003, 008, 040, 042. One dominant key per section; the twist gets its own block.
+- **The accent colour carries meaning, and its area tracks the story**: color-039, 003 (hero's colour constant), C04 071.
+- **Test palettes across the whole sequence on locked frames**: color-004, 041.
+- **Palette with proportions and jobs**: color-012, 009.
+- **One ordinary human prop gives a figure a role without acting**: light-079, 095 (name badge) — fits our "figures pose only".
+- **Change of material along one object = transformation**: light-055, 062, 064 (wood → glass).
+**Tensions:** Endress is lush iridescent fantasy (rich materials everywhere) — the opposite of the restraint the earlier ★5s reward; its storytelling (material change, seam between worlds) transfers, its surfaces don't. Kriket is a strong character sheet but mostly coverage (many ★3).
+**Couldn't read:** color-007 is too dense at 768 px; colour boards were judged as boards (the decision is the colour plan, not a frame).
+
+## C06 digest
+**★5 (8):** color-025 (light splits a sofa: one woman in warm pink, one in cold blue; a thread joins them) · cam-001 (straight-down fields: one red roof and one white van are the story) · cam-005 (a tiny boat beside a giant whale under the surface: hidden scale) · cam-009 (trade as parallel lanes on one diagonal, clouds over it) · cam-010 (an ordinary street of small shops with true everyday clutter, soft dusk) · cam-024 (a grey city, one pink road, numbered magnifier circles for the details) · cam-026 (three-level surface code: gold subject, hatched neighbour, white rest) · cam-038 (looking up from under her chin to a warm sky strip between cold walls).
+**Convictions forming:**
+- **Neutrals + one bright colour** (stated outright in color-036, used in 018, 022, 017): the house rule most ★5s follow.
+- **Light splits the frame into emotional zones**: color-025, 028, 022; the warm opening as the goal: cam-038, 041.
+- **Wardrobe/subject in the complementary colour, world in one family**: color-019, 020, 027.
+- **One series palette, each episode a subset**: color-021, 029.
+- **Straight-down and impossible camera positions as hooks**: cam-001, 005, 043.
+- **Wide + numbered close-ups in one frame** (magnifier bubbles, numbered stops): cam-024, 019.
+- **Hierarchy by surface** (accent / hatched / white): cam-026, 022 (cool building, warm life), C02's 078/089.
+- **Everyday proof in a toy street** (aircon, scooters, boxes): cam-010 (and C03's To Binh Binh).
+**Tensions:** Several camera refs are AI-generated anime/stock (cam-013–015, 018, 027) — saturated everywhere, no hierarchy; they show camera angles only. Palette cards are utilities, not pictures; their value is rules (ratio, jobs, one accent).
+**Couldn't read:** none.
