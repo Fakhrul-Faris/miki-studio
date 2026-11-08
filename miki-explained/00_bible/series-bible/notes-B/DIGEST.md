@@ -26,3 +26,27 @@ Chunk digests in order; full notes in notes-B/.
 - **Cross-section to show the hidden system**: cam-005 (matches A-C3).
 **Tensions:** many flat-light pieces rely on human figures (Malika Favre) — we can only use tiny silhouettes; objects must carry the light idea. Long-shadow 2014 flat icons (light-004, 010, 015) and cut-paper (color-006) are explicitly out.
 **Couldn't read:** none.
+
+## C03 digest
+**★5 (2):** cam-006 (a small brand's 3-floor cutaway: shop, workroom, office) · cam-022 (a landmark in two colours: lit side = the sky colour, shadow draws the building). 2 of 54 (4 %) — stricter rating, and the People folder is mostly not transferable.
+**Convictions forming:**
+- **Cutaway building, one stage per floor** (cam-006, cam-010; C02 cam-005): the business's process stacked vertically.
+- **Two-colour light, lit side melts into the ground** (cam-022, confirms C02 light-016).
+- **Reuse the ground colour inside the subject** (cam-012, people-010) — figure and ground tie together.
+- **People, if ever: primitive shapes, no faces, no hands, back views, one held posture, identity by one item** (people-007, 018, 019, 026, 030). This is the buildable answer to the people rule.
+- **The accent goes on the topic/goods, not the people** (people-008, 027, 031).
+- **A token's motion as a translucent trail** (people-015).
+**Tensions:** the People folder is mostly character illustration (faceted sports stars, Jun Takahashi, stock "Humaaans") — style admired, technique off-limits. Several Camera images are stock/AI (cam-002/009/013/014/021/023/025).
+**Couldn't read:** none. (cam-023 is visually the same as cam-002.)
+
+## C04 digest
+**★5 (3):** places-007 (a façade split by a horizontal light line: red family above, blue below) · places-010 (a high street where a new coffee sign hangs over an old jeweller's lettering: business history in signs) · type-004 (a product's hidden cost printed on its own swing tag, one orange bar). 3 of 51 (6 %).
+**Convictions forming:**
+- **Words and numbers live on the world's own objects** (signs, tags, bus boards, shop names): type-004, places-009, 010, 016, 024 — the strongest B idea of this chunk, same as A-C8.
+- **Flat front elevations of shop rows** as the "street" beat; the subject is the only saturated façade: places-010, 011, 021, 001.
+- **Light changes the colour family, not just the value** (red in sun, blue in shade): places-007, 022.
+- **True local clutter** (signboards, wires, bikes) on South/East Asian streets: places-003, 006, 012.
+- **Prop kits in the episode's 2–3 colours**, black as shadow, accent on one part: props-001, 003, 016, 009.
+- **Lists as filled-vs-outlined words or sign rows**: type-002, type-009.
+**Tensions:** much of Props is generic icon packs (Streamline, fintech 3D, holographic) — stock; only the system rules transfer. Several Places are AI or painterly-traced (places-004, 018, 023).
+**Couldn't read:** GIFs (props-001, 007, type-002) judged on the first frame.
