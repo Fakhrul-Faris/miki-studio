@@ -3,10 +3,11 @@
 Read this first in a new session. Then: `00_bible/flat-v3-playbook.md` (the new look), `05_calendar/calendar.md`
 (schedule + Style A/B/C test), and the episode's `README.md` / `episode.md`.
 
-## ▶ NEXT SESSION: run `00_bible/series-bible/RUNBOOK-A.md` step by step (user, 2026-11-08)
-The user collected references for all three styles in `~/Desktop/Collecting/` (Style A 458 images + 37 clips, B and C
-too). Style A first. Prep is done (`tools/refs_prep.py` → `00_bible/series-bible/work/A/`). The runbook is rigid:
-follow it exactly, keep to its token caps, stop at step 8 and wait for the user's answers.
+## ▶ NEXT SESSION: open `00_bible/series-bible/PROGRESS-A.md`, run the next unticked session of `RUNBOOK-A.md`
+Style A reference review, **one image at a time as an art director** (user, 2026-11-08: handpicked, no group
+averages, no comparison with EX25; the point is sharpening art direction). 6 sessions: 4 image sessions (2 chunks of
+58 each), 1 motion session, 1 synthesis → BIBLE-A.md. Prep done (`tools/refs_view.py`: files renamed in place, 768 px view
+copies, key-moment strips, 5 YouTube films downloaded). Then Styles B and C in `~/Desktop/Collecting/` the same way.
 Phone guide used for collecting: https://claude.ai/artifact/NdKUpoz5qsjk9sf6QD3rhF
 
 ## Goal and strategy (unchanged)

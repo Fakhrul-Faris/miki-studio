@@ -1,171 +1,155 @@
-# RUNBOOK-A — turn the Style A references into BIBLE-A.md
+# RUNBOOK-A — one-by-one art-direction review of the Style A references → BIBLE-A.md
 
-**For a fresh session.** The user cleared the conversation on purpose. Follow these steps in order, exactly. Don't improvise
-a different method, don't load the episode skill, and don't start EX28/EX29 work in this session.
+**For a fresh session.** Follow it exactly. Open `PROGRESS-A.md` first; it says which session is next. Run that session
+only, then stop. Don't improvise another method, don't load the episode skill, don't touch EX28/EX29.
 
-## Context (read once)
-- **Goal.** One look that holds for a whole series. This file covers **Style A, smooth iso** (3D clay world; current
-  reference EX25 99 Speedmart, built in Blender → raea). Styles B and C follow later with their own runbooks.
-- **Why it matters.** Without references I default to the "average" look, which the user calls generic. The bible turns
-  the user's taste into rules I apply every episode. See memory `anti-slop-design`, `style-ab-test`, `editorial-art-direction`.
-- **The user is a filmmaking novice.** Explain in plain words, no jargon without a gloss.
-- **The collection.** `~/Desktop/Collecting/Style A/` (1 GB): Core Look, Lighting, Color, Camera, People, Places, Props,
-  Type, Motion. **There are no per-image notes**, so the user's reasons are unknown. Infer carefully and ask at step 7.
-- **Prep is already done** (`miki-explained/tools/refs_prep.py`, run 2026-11-08). Output is in
-  `miki-explained/00_bible/series-bible/work/A/` (git-ignored):
-  - `summary.txt`: per-folder measurements; read first, text only
-  - `inventory.csv`: one row per image (id, folder, file, size, brightness, contrast, saturation, colourfulness, grain, edges, palette, accent, dup_of)
-  - `sheets/<folder>_NN.jpg`: 4×4 contact sheets, each tile labelled with its id (e.g. `core-look-017`)
-  - `motion/*.jpg`: 8 frames per clip/GIF; `motion/motion.csv`: duration, cuts per second, motion energy
-  - `links.txt`: text from the link files (YouTube, Ordinary Folk, Oddfellows)
-  - If `work/A/` is missing, rebuild it (about 3 min):
-    `~/.local/bin/uv run --with pillow --with numpy --with opencv-python python miki-explained/tools/refs_prep.py "/Users/user/Desktop/Collecting/Style A" miki-explained/00_bible/series-bible/work/A`
+## Why we're doing this (user, 2026-11-08)
+- **The point is to sharpen my art direction**, not to match any episode. Don't compare with EX25 or any existing look.
+- **Every image was handpicked.** Judge each one on its own, one by one, never as a group or an average.
+- **Look as an art director, not an analyst.** Measurements and averages produce "the same generic, only in a different
+  colour and shape". Ask what decision makes the picture work, then judge it.
+- **There are no notes from the user** (too many images to annotate). I infer what drew them to each piece.
+- **The user is a filmmaking novice.** Write anything they will read in plain words.
 
-## Token rules (the user asked to keep usage down)
-- **Never open a raw reference image.** Only sheets, motion sheets and the crops from step 4.
-- **Read each sheet once.** Write findings to `work/A/findings.md` straight after each folder. That file is the memory;
-  never re-read a sheet to remember it.
-- **Budget:** about 140–170k tokens for the whole run. The sheets are about 1.6k tokens each.
-- **Hard caps:** 15 crops in step 4, 12 motion sheets in step 5.
-- **If the session gets long,** the findings file lets a new session resume from the next unfinished step. Note the step
-  number at the top of `findings.md`.
+## The material (prep done 2026-11-08 with `miki-explained/tools/refs_view.py`)
+- **Collection:** `~/Desktop/Collecting/Style A/`. Files renamed in place to ids (`A-core-001.jpg` …).
+  `_rename_map.csv` there keeps the original names.
+  - Core Look sits in **artist/project subfolders** (Bizone, Davines, Dzimitry…). Use the subfolder and the old file
+    name as the source: it tells you the artist or brand.
+- **Work dir** (git-ignored): `miki-explained/00_bible/series-bible/work/A/`:
+  - `view/<id>.jpg`: 768 px copies. **The only images to open** (about 550 tokens each).
+  - `chunks/C01–C08.txt`: 58 image ids each (C08: 52). `chunks/M01–M02.txt`: 21 clips each. Clips are videos,
+    the 5 downloaded YouTube films (Oddfellows ×4, Ordinary Folk ×1) and animated GIFs.
+  - `strips/<id>.jpg`: one key-moment strip per clip: frames at shot changes, 8–12 tiles, time-labelled.
+  - `rename_map.csv` (copy) and `dups.txt`.
+- **Duplicates:**
+  - `A-places-009` is a byte-for-byte copy of `A-cam-010`. Skip it with a one-line pointer.
+  - The 10 look-alike pairs in `dups.txt` are different images. Review both, and say how they differ in the second note.
+- **Notes** (tracked in git): `miki-explained/00_bible/series-bible/notes-A/C01.md` … `M02.md`, `DIGEST.md`.
 
-## Step 1 — Text first (about 5k tokens)
-1. Read `work/A/summary.txt`, `work/A/links.txt` and `work/A/motion/motion.csv`.
-2. Start `work/A/findings.md` with:
-   - a **Numbers** section: what the measurements already say. For example: overall brightness 0.53 (light, not dark like
-     EX25), contrast, saturation, grain near zero (clean renders), and the accent hue counts (2026-11-08 run: blue 71, red 42,
-     cyan 39, orange 20, green only 4). Flag every clash with the current EX25 look (dark ground, one green accent).
-   - a **Questions to check by eye** list.
-
-## Step 2 — Folder passes, one at a time (about 50k tokens)
-Order: **Core Look → Lighting → Color → Camera → People → Places → Props → Type.** For each folder:
-1. List its sheets: `ls work/A/sheets/<folder>_*.jpg`.
-2. Read them one by one with the Read tool.
-3. Append one section to `findings.md` before moving on, using this template:
-
+## The art director's questions (every image, about 100 words, fixed format)
 ```
-## <Folder> (<n> images, <k> sheets)
-Repeats (with counts, e.g. "matte clay, no texture: ~60 of 199"):
-- light: … · palette/accent: … · materials/surfaces: … · camera/angle/lens: … · composition/negative space: …
-- scale/people: … · world type (rooms, cities, objects, diagrams): … · type/UI: …
-Clusters (sub-looks inside the folder, with 3 example ids each): A1 …, A2 …, A3 …
-Best exemplars (ids, max 6): …
-Outliers / one-offs (ids): …
-Rule candidates (one line each, with how many images support it): …
+### A-core-017 · ★4 · Bizone — "BIZONE technology-10"
+Idea: what the picture is about, in one line (the concept, not the content).
+Decision: the specific choice that makes it work (an unexpected angle, a bold crop, scale, light doing the storytelling,
+  a material, a restraint).
+Eye: 1 … → 2 … → 3 …  (and what the artist did to force that order)
+Feeling: … because …
+Not generic: what the average version would have done, and what this one did instead.
+Steal: the transferable principle, phrased as a rule I could apply to a new frame.
+Moves: how this would come alive in animation (camera, build, loop), for Style A's 3D world.
 ```
+- **★ is conviction:** how strongly the piece shows a point of view (5 = a north star I'd build a series on, 1 = weak or
+  off-style). Be strict: about 10–15 % should get ★5.
+- **Banned words** (they mean nothing): clean, modern, sleek, vibrant, stunning, minimal (unless you say what is left
+  out), aesthetic, eye-catching, dynamic. Name the concrete decision instead.
+- If a piece belongs to a series (same project as the previous id), say how this frame adds to the series in one line.
+  Don't repeat the series note.
 
-**What to look for, per folder:**
-- **Core Look:** the clusters matter most. 199 images will hold 2–4 different sub-looks. Name each (e.g. "soft pastel
-  clay rooms", "dark product renders", "white isometric cities"). Count them and pick the dominant one. The bible picks
-  ONE main look; the user's own rule is "one main source per style".
-- **Lighting:** key-light direction, softness, rim light, bounce colour, emissive/glow use, shadow density, background
-  falloff. Ask whether it lights a set (rooms, streets) or an object on a sweep.
-- **Color:** palette families. How many hues, how the accent is used (what it marks), light vs dark ground. Cross-check
-  with the accent hue counts.
-- **Camera:** isometric/orthographic vs perspective, lens feel (wide/tele), camera height, top-down vs ¾, depth of
-  field, crop tightness.
-- **People:** level of abstraction (pictogram, capsule, clay figurine, stylised human), face or no face, proportions,
-  how they pose. House rule: **figures hold poses only, never walk or gesture** (memory `figures-pose-only`).
-- **Places:** which locations, how much detail, cutaways (walls removed), Malaysian specifics.
-- **Props:** material treatment of single objects (matte, glossy, bevels, edge wear), icon-like vs realistic.
-- **Type:** typefaces, weights, label/callout layouts, how text sits in 3D (on surfaces vs overlay).
+## Token rules
+- **Open only `view/<id>.jpg` and `strips/<id>.jpg`. Never open originals**, except up to **5 detail crops per chunk**,
+  and only when the decision lives in fine detail (material, a face, texture). Make the crop like this:
+  `~/.local/bin/uv run --with pillow python -c "from PIL import Image; Image.MAX_IMAGE_PIXELS=None; import sys; im=Image.open(sys.argv[1]).convert('RGB'); im.thumbnail((1400,1400)); im.save(sys.argv[2], quality=85)" "<original path>" miki-explained/00_bible/series-bible/work/A/crop_<id>.jpg`
+- **Open 8 images per message** (8 parallel Read calls), then write their 8 notes to the chunk file straight away,
+  then the next 8. **Never reopen an image**; the note is the record.
+- **Two chunks per session, then stop.** The next session continues from `PROGRESS-A.md`.
+- **Expected spend:** about 80–100k tokens per image session, about 80k for the motion session, about 40k for synthesis.
+  **About 500k for Style A in total**, over 6 sessions.
 
-## Step 3 — Synthesis (no images)
-1. From `findings.md`, write **"The thread"**: 5–8 sentences on what repeats across all folders, i.e. the user's taste
-   for Style A.
-2. List the **clashes with the current A look** (EX25: near-black ground, flat grey clay, green `#57D100` accent,
-   orthographic iso, Isotype/clay figures, Inter Display + IBM Plex Mono, callouts with leader lines).
-3. Decide the **dominant cluster**. If two are close, carry both into step 7 as a question for the user.
+## Sessions
 
-## Step 4 — Zoom on detail (max 15 crops, about 24k tokens)
-Small tiles can't show materials. Pick up to 15 exemplar ids where surface or light detail decides a rule (bevel size,
-roughness, subsurface/clay softness, edge wear, emissive bloom, figure faces). Make crops from the originals at 1200 px
-long edge, at most 3 per call:
-
-```
-~/.local/bin/uv run --with pillow python - <<'EOF'
-from PIL import Image; Image.MAX_IMAGE_PIXELS = None
-import csv
-ids = ["core-look-017"]          # fill in
-inv = {r["id"]: r for r in csv.DictReader(open("miki-explained/00_bible/series-bible/work/A/inventory.csv"))}
-for i in ids:
-    im = Image.open("/Users/user/Desktop/Collecting/Style A/" + inv[i]["file"]).convert("RGB"); im.thumbnail((1200, 1200))
-    im.save(f"miki-explained/00_bible/series-bible/work/A/crop_{i}.jpg", quality=85)
-EOF
-```
-
-Read each crop once. Add a **Detail** section to `findings.md` (material recipe guesses: roughness, bevel, subsurface,
-colour of shadows, light size).
-
-## Step 5 — Motion (max 12 motion sheets, about 20k tokens)
-1. From `motion.csv`, pick up to 12 clips: prefer the Ordinary Folk / Oddfellows folders, then the longest clips, then
-   the rest. Skip the GIFs from Core Look/Lighting unless they look central.
-2. Read their motion sheets. Use the numbers for pace (cuts per second, motion energy).
-3. Write a **Motion** section: camera moves (orbit, push, crane, isometric slide), how scenes hand over, timing feel
-   (snappy vs floaty), how objects enter/exit (scale-in, drop, build-up), loops.
-4. YouTube links in `links.txt` can't be watched. List them for the user and note what they likely show (from titles).
-
-## Step 6 — Adopt / Adapt / Drop (no images)
-Judge every rule candidate and cluster against what I can produce for Style A:
-
-| I can do reliably (Adopt) | Possible with work (Adapt) | Not reliable yet (Drop, with reason) |
+| Session | Work | Output |
 |---|---|---|
-| Blender worlds, iso/ortho or perspective cameras, smooth eased camera moves (raea renders) | Detailed procedural cities (slow; library CC0 models help — memory `use-library-3d-models`) | Hand-keyed character acting, gestures, lip sync |
-| Matte clay / PBR materials, bevels, colour palettes, one-accent rules | Hero materials from MaterialCraft/TextureCraft (free, untested — memory `tools-radar-2026-11`) | Photoreal humans |
-| Area/rim/emissive light, soft shadows, DOF, bloom, fog | Moving people via raea motion capture + IK, rendered toon/clay (needs a test first) | Hero fluid/cloth simulations |
-| Posed figures (raea Anny bodies, held poses + goals) | Walk cycles only from mocap, never hand-keyed | Hand-drawn 2D frame-by-frame animation |
-| Callouts, type, captions (EX15), counters, UI cards | Glass/translucent looks (render cost) | |
+| 1 | C01 + C02 | notes-A/C01.md, C02.md |
+| 2 | C03 + C04 | notes-A/C03.md, C04.md |
+| 3 | C05 + C06 | notes-A/C05.md, C06.md |
+| 4 | C07 + C08 | notes-A/C07.md, C08.md |
+| 5 | M01 + M02 (motion) | notes-A/M01.md, M02.md |
+| 6 | Synthesis | BIBLE-A.md |
 
-**House rules that win over references:**
-- figures hold poses only
-- the real brand logo is on screen from frame 1
-- EX15 captions, never restyled
-- visualise the script literally
-- no cheap transitions: build them from the scene's assets
-- no floor grid lines
-- the retired styles never come back (cut-paper, paper diorama, printed 3D)
+### Image sessions (1–4), step by step
+1. Read `PROGRESS-A.md` and this runbook. Nothing else.
+2. For each of the session's two chunks:
+   1. `cat work/A/chunks/C0N.txt`. Look up each id's source with
+      `grep -F "/<id>." "/Users/user/Desktop/Collecting/Style A/_rename_map.csv"`. One grep for the whole chunk is fine:
+      `grep -F -f <(sed 's/$/./' work/A/chunks/C0N.txt) …`.
+   2. Work through the ids 8 at a time: open, judge, append 8 notes to `notes-A/C0N.md`.
+   3. Close the chunk with a **digest** (max 250 words) at the end of `notes-A/C0N.md`:
+      - the chunk's ★5 ids, each with a one-line reason
+      - the convictions that keep appearing, each with ids
+      - the tensions: pieces that pull in different directions
+      - any image you couldn't read and why
+3. Append the two chunk digests to `notes-A/DIGEST.md`. Tick the session in `PROGRESS-A.md`.
+4. Commit `notes-A/` and `PROGRESS-A.md` and push to `miki-explained-series`.
+5. Tell the user, in about 5 lines: how many images were judged, the ★5s with a short why, the convictions forming so
+   far, and the tokens spent. Then stop.
 
-Write an **Adopt / Adapt / Drop** table into `findings.md`. Every row needs the reason and the reference ids.
+### Motion session (5)
+1. Read `PROGRESS-A.md`, this runbook and `notes-A/DIGEST.md`. The digest gives context; still judge each clip fresh.
+2. For each id in M01, then M02: open `strips/<id>.jpg`. For the 5 YouTube films you may make **one extra strip** each,
+   for a stretch that needs it:
+   `ffmpeg -ss <t0> -to <t1> -i "<original>" -vf "fps=2,scale=384:-2,tile=4x3" -frames:v 1 work/A/strips/<id>_b.jpg`
+3. Note per clip (about 120 words). Use the same fields as the image notes, but replace **Moves** with:
+   - **Camera:** projection, moves, speed
+   - **Handover:** how one shot becomes the next; name the trick, e.g. match cut, object-led transition, camera
+     fly-through, build/unbuild
+   - **Timing:** snappy or floaty; holds; easing
+   - **Entrances/exits:** how things appear and leave
+   - **Steal for Style A**
+4. Write the digest, tick progress, commit, report. Then stop.
 
-## Step 7 — Write BIBLE-A.md (about 15k output)
-Create `miki-explained/00_bible/series-bible/BIBLE-A.md`:
-1. **The look in one paragraph** + 6 exemplar ids (the dominant cluster).
-2. **Fixed for the whole series:**
-   - ground/background
-   - palette with hex values and what the accent means
-   - materials (clay recipe)
-   - light setup (key/fill/rim, colours, softness)
-   - camera grammar (projection, angles, lens, moves allowed, shot sizes)
-   - composition rules
-   - figure rules
-   - prop/icon rules
-   - type and callouts
-   - transitions
-   - motion timing (easing, durations)
-   - sound feel
-3. **Changes per episode:** places, props, story palette within the family, hero device.
-4. **Never** list: from Drop, from clashes the user rejects, and from anti-slop.
-5. **Adopt / Adapt / Drop** summary for the user, in plain words.
-6. **Questions for the user** (max 5), e.g. "light ground or keep the dark ground?", "blue accent instead of green?",
-   "cluster A1 or A2?". The references disagree with EX25 here, so the user decides.
-7. **Test plan:** 3 stills in Blender (re-light one EX25 shot to the bible + one new shot + one figure shot) and one
-   10-second raea test. **Do not build them yet.**
+### Synthesis session (6)
+1. Read `PROGRESS-A.md`, this runbook and `notes-A/DIGEST.md`. Then grep all ★5 notes and ★4 notes:
+   `grep -A8 "★5" notes-A/*.md` and `grep -A8 "★4" notes-A/*.md`.
+2. Pick the **north stars**: 10–15 ★5 pieces that best share one point of view. Reopen only those, at 768 px, to
+   confirm. That's the one allowed re-look, about 8k tokens.
+3. Write `miki-explained/00_bible/series-bible/BIBLE-A.md`, built from **convictions, not averages**:
+   1. **Point of view:** what Style A believes, in 3 sentences, plus the north-star ids.
+   2. **Convictions** (5–8): each one is a rule, why it works, 2–3 ids, and how it shows on screen.
+   3. **The eye:** how we lead it (hierarchy, scale, crop, negative space) as decisions.
+   4. **Light as storytelling:** what light means in this style.
+   5. **Colour as meaning:** what each colour is allowed to say, and the accent rule.
+   6. **Surface and material:** the clay/material recipe in words that can become Blender settings.
+   7. **Scale and people:** how humans appear. House rule: figures hold poses, never walk or gesture, unless a raea
+      motion-capture test is approved.
+   8. **Camera and motion language:** moves, timing and easing, from the motion notes.
+   9. **Handovers:** the transition vocabulary, built from scene assets.
+   10. **Never:** what breaks the point of view, plus anti-slop (memory `anti-slop-design`).
+   11. **Adopt / Adapt / Drop:** every conviction against what I can build (Blender, raea, HyperFrames). Plain words:
+       why, and what the adapted version is.
+   12. **Questions for the user** (max 5): only where the north stars disagree.
+   13. **Test plan:** 3 stills + one 10-second test that prove the bible. **Not built yet.**
+4. Update STATUS.md (BIBLE-A drafted; next: RUNBOOK-B on `~/Desktop/Collecting/Style B` with the same method, starting
+   with `refs_view.py "…/Style B" B …/work/B`). Point memory `style-ab-test` to BIBLE-A.md. Commit and push.
+5. Report to the user:
+   - the point of view
+   - the convictions
+   - 5 north stars with a short why
+   - the questions
+   - tokens spent
 
-## Step 8 — Hand-off (stop here)
-1. Update `miki-explained/STATUS.md`: BIBLE-A drafted, questions pending; B and C collections are in
-   `~/Desktop/Collecting/` and need their own runbooks (same method: run `refs_prep.py` on "Style B" / "Style C").
-2. Update memory `style-ab-test` with one line pointing to BIBLE-A.md.
-3. Commit `BIBLE-A.md`, `RUNBOOK-A.md` and STATUS. The `work/` folder is git-ignored. Push to `miki-explained-series`.
-4. **Report to the user:**
-   - the thread in 3–4 sentences
-   - the dominant look with 3 exemplar ids
-   - the clashes with EX25
-   - the 5 questions
-   - the token use actually spent
-   - Then stop and wait. No test builds until the user answers.
+   Then stop and wait.
 
-## Pending elsewhere (don't do in this session)
-- EX28 Apple charger / EX29 Mr DIY Pt 2 scripts await approval (`04_episodes/EX28_apple-charger/`,
-  `EX29_mrdiy-margin/`). The user said the bibles come first; Apple is planned as Style C, Mr DIY as Style A.
-- Mr DIY 3Q 2026 results are due 10 Nov. Update EX29 numbers if they're out.
+## What I can build for Style A (for Adopt / Adapt / Drop)
+- **Reliable:**
+  - Blender worlds; iso, orthographic or perspective cameras with smooth eased moves; raea renders
+  - matte clay and PBR materials, bevels, palettes, area/rim/emissive light, depth of field, bloom, fog
+  - posed figures (raea bodies with held poses and goals)
+  - type, callouts, EX15 captions, counters, UI cards
+  - library CC0 models (memory `use-library-3d-models`)
+- **With work:**
+  - detailed procedural cities
+  - MaterialCraft/TextureCraft hero materials (untested)
+  - moving people via raea motion capture + IK (needs a test)
+  - glass and translucency (render cost)
+- **Not reliable yet:**
+  - hand-keyed character acting and gestures, lip sync
+  - photoreal humans
+  - hero fluid and cloth simulations
+  - hand-drawn frame-by-frame animation
+- **House rules that win:**
+  - the real brand logo from frame 1
+  - EX15 captions
+  - visualise the script literally
+  - transitions built from scene assets
+  - the retired styles (cut-paper, paper diorama, printed 3D) never return
