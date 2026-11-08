@@ -80,8 +80,8 @@ Chunk digests in order; full notes in notes-A/C0N.md.
 **Couldn't read:** none.
 
 ## C07 digest
-**★5 (3):** people-033 (the clay street turned into the coloured street with the camera locked, brand as a shopfront) · places-012 (a Japanese shop street at golden hour, every sign and wire true, tilt-shift) · props-003 (Braun pedal: warm-white matte, one orange button where your foot goes).
-Strong ★4s: people-014 (the grey clay street as a look), people-012 (linen figure with crossed arms), places-006 (empty chairs tell "waiting").
+**★5 (4):** people-014 (the grey clay street is a look in itself: form and light, no colour) · people-033 (the clay street turned into the coloured street with the camera locked, brand as a shopfront) · places-012 (a Japanese shop street at golden hour, every sign and wire true, tilt-shift) · props-003 (Braun pedal: warm-white matte, one orange button where your foot goes).
+Strong ★4s: people-012 (linen figure with crossed arms), places-006 (empty chairs tell "waiting").
 **Convictions forming:**
 - **Clay first, colour on the beat** (locked camera): people-014 → 033. A ready-made transition for our clay house look.
 - **Faceless people that work**: smooth head + real fabric (people-001, 006, 012); identity by silhouette props (cap, beard, hard hat: people-003, 030); shot from behind or 3/4 back (people-008).
