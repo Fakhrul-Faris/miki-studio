@@ -60,3 +60,41 @@
 - **Presence by reflection and shadow** (035, 008, 044).
 - **Signs warm, people cool, wet reflections** (color-012).
 **Tensions:** many camera refs are real photos or film stills (not plates); shot-type cheat sheets (006, 033, 037) are planning tools.
+
+## C07 digest
+**★5 (4):** cam-062 (two figures walking only inside the window light) · cam-066 (a tiny man inside his giant shadow) · people-005 (sunlit queues of silhouettes from above, one figure in red) · people-021 (top-down: hard sun carves the stage of the incident, the police car arrives from shadow). 4 of 54 (7 %).
+**Convictions forming:**
+- **Faceless by design**: void faces, brim shadows, egg heads, silhouettes, white cut-outs (people-001, 003, 008, 025, 026) — plates can show people without faces.
+- **The silhouette as a window into another scene** (people-019, 031).
+- **Shadows larger than people** (cam-066, people-033).
+- **Light carves the stage from above** (cam-062, people-021, people-005).
+- **One-among-many in crowds** (people-022, 005).
+**Tensions:** many camera refs are film stills and photo cheat sheets; character sheets (people-010–016, 020, 027–029, 035) are reference for casting, not plates.
+
+## C08 digest
+**★5 (4):** people-048 (the worker's cubicle with a giant robot shadow spreading around it) · places-001 (open-front eatery: red stools, scooters, a faded brand sign) · places-013 (friends at a tea stall, the only warm light in a cool night) · places-016 (the mamak: the teh tarik pour arcs over friends on red stools) · places-033 (the KOPI TIAM sign, the uncle pouring tea). 5 of 53 (9 %).
+**Convictions forming:**
+- **The Malaysian place told truthfully** (places-001, 002, 013, 016, 018, 019, 024, 027, 031, 032, 033): red/white plastic stools, zinc tables, the pour, roti, fluorescent tubes, the shop's painted or neon sign, scooters, crescent moon. The user collected these deliberately: this is the home key for C (and for A/B).
+- **The shop's own sign = the brand from frame 1** (024, 027, 033, 011).
+- **Faceless cast by one item: tudung, hard hat, songkok** (people-045, 052).
+- **Giant shadow = ambition/threat** (people-048, C07 cam-066).
+**Couldn't read:** none.
+
+---
+
+# M01 — Style C motion (4 GIFs)
+
+### C-light-065 · ★3 · rain portrait with glowing red glasses (GIF, 1 s loop)
+The red lenses flicker on and off with scanlines while rain streaks. Steal: a flickering accent light (sign, LED, glasses) on a still plate as the loop — cheap and alive.
+
+### C-light-089 · ★4 · Night Ride (GIF, 2.5 s loop)
+The detective's cigarette smoke curls; the torch beam holds steady on the crashed red car. Only smoke moves. Steal: in a plate, animate one tiny element (smoke, steam, a flicker) and hold everything else — EX26's "light breathing" confirmed.
+
+### C-light-116 · ★4 · Sandro Tatinashvili red sofa (GIF, 9.2 s)
+The red-tinted group on the sofa holds still; grey ghost figures fade in and out around them (one reads a phone, others walk). Steal: subject held in the accent colour while time/others pass as grey ghosts — the "everything changes except this" beat (A motion-023 again).
+
+### C-people-040 · ★4 · subway, one man in red (GIF, 9.2 s)
+Grey passengers' faces shift and dissolve around a still man in a red jacket; glints flash on sunglasses. Steal: the same — accent subject still, the crowd changes around him.
+
+## M01 digest
+Plates move by tiny loops: smoke, steam, flicker, ghosts passing. The subject in the accent colour stays still while the grey world changes (light-116, people-040). Confirms EX26's method (depth camera + light breathing).
