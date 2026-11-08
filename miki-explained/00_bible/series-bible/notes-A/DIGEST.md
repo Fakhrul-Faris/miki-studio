@@ -104,3 +104,27 @@ Strong ★4s: people-012 (linen figure with crossed arms), places-006 (empty cha
 - **Metaphors built from the subject's own objects**: type-014, light-032 (giant cup).
 **Tensions:** many white masterplan renders (046–050) are AI stock with no subject — whiteness alone is not the look; it only works with one subject. Type refs are editorial/print; our captions stay EX15, so type lessons apply to in-world numbers and charts, not caption style.
 **Couldn't read:** none.
+
+## M01 digest
+**★5 (4):** core-160 (one shot, the plan builds layer by layer on the words; seeds → trees) · light-007 (object A slides past the lens while focus pulls to object B, then B turns to reveal its face) · light-016 (a list built item by item, whip-in with blur, loudest last, no bounce) · light-017 (x-ray flashes then a hard match cut to the real object on a locked silhouette).
+**Motion convictions forming:**
+- **Lock the camera while the layer acts; move the camera only between beats** (core-159, 160, 161, motion-003, 007). Never draw graphics during a fast move.
+- **One continuous world instead of cuts**: glide across one floor/map (motion-001, core-160, motion-003).
+- **The hero holds still; the energy moves** (light-006, 014, 015, 020, 023) — fits "figures/objects pose, camera and world move".
+- **Object-led handovers**: foreground wipe + rack focus (light-007), match cut on an identical silhouette (light-017), wash-to-light (light-027), pull-back reveal (core-159, light-020).
+- **Timing pairs**: snappy entrances (~0.3–0.4 s, motion blur, no bounce) then calm holds; floaty loops for ambient energy.
+- **Entrances that mean something**: seeds then trees (core-160), many patches merging into one (motion-007), start + goal first, then the path (motion-003).
+**Tensions:** several explainers are dark HUD/game-engine (004, 006) — fast cuts and genre look; only their devices transfer (exploded layers, cut-open terrain). The match-cut in light-017 is a hard cut; our "no harsh cuts" rule is about objects popping, but this needs the user's ruling.
+**Couldn't read:** GIF strips with 0 cuts but tiny change (light-011, 012) — motion is a subtle loop.
+
+## M02 digest
+**★5 (3):** motion-008 (a street that builds itself from tiles, parts dropping in and settling, then unbuilding) · motion-015 (a case laid out as objects on a dark floor, the camera gliding along white tape lines, ending on the full connected map) · motion-025 (passwords as marbles travelling through an all-white world; the object carries every handover).
+**Motion convictions:**
+- **One physical token travels through the whole episode** and carries the handovers: motion-025 (marbles), 028 (sphere), C08 light-042 (orange ball). The strongest motion idea in Style A.
+- **Build / unbuild as entrance and exit**: motion-008 (parts drop in, then flatten), C04 synaos, model → real (motion-009).
+- **Line-led camera**: the camera follows a line on the floor (tape, track, route) from subject to subject, then pulls up to the whole map (motion-015, M01 motion-003).
+- **Graphic match handovers**: shape → shape across scenes (motion-016, 027 recurring shape), fly-through nested frames (013, 020).
+- **Colour key shifts with the arc**: cool → warm (motion-019), bookend day → dusk (024).
+- **Calm physical timing**: things roll, drop and settle with weight; no bounce; holds of 3–8 s (025, 008, 015). Fast-cut title sequences (012, 021, 144 cuts) are the opposite pace — not for us.
+**Tensions:** most of M02 is 2D character animation (Oddfellows, Ordinary Folk, Buck) — its handover devices transfer, its acting does not. Several pieces are retired-adjacent (paper looks: 014, 016) — techniques only.
+**Couldn't read:** motion-018 (partial download; only the opening logo decodes) — re-download needed.
