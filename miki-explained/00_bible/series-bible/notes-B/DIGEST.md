@@ -50,3 +50,21 @@ Chunk digests in order; full notes in notes-B/.
 - **Lists as filled-vs-outlined words or sign rows**: type-002, type-009.
 **Tensions:** much of Props is generic icon packs (Streamline, fintech 3D, holographic) — stock; only the system rules transfer. Several Places are AI or painterly-traced (places-004, 018, 023).
 **Couldn't read:** GIFs (props-001, 007, type-002) judged on the first frame.
+
+## M01 digest
+**★5 (1):** core-052 (the invented machine looping: product slides out of the arch, opens, exits — one per spoken item).
+**Motion convictions:** grow from the base (motion-004) · object morph in place (motion-010) · slot-reel list (type-002) · idle micro-motion on a static grid (props-001/007) · push into the product's own ornamental world and back out (motion-007) · move the world, not the figure (motion-005).
+**Tensions:** most videos are character-led explainers or reels; motion-003 is the corporate slide look to avoid.
+**Couldn't read:** none.
+
+## M02 digest
+**★5 (1):** motion-017 (black/cream/red, the red shape carries every handover, bookended on the same phone message).
+**Motion convictions (with M01):**
+- **One colour shape carries every handover** (motion-017, 011): B's through-line rule.
+- **Object/scale grows into the next background** (motion-012, 022).
+- **Bookend on the same object** (motion-017, 007).
+- **Brand fills frame 1, then the camera pulls back** (motion-019).
+- **Shape kit replaces letters and carries transitions** (motion-022).
+- **Morph in place, grow from base** (M01 010, 004).
+**Tensions:** fast title/reel pacing (011, 015, 019, 23 at 0.3 s cuts) is too fast for 20–30 s explainers; character-led pieces are off-limits.
+**Couldn't read:** none.
