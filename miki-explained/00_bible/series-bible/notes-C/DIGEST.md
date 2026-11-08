@@ -40,3 +40,23 @@
 - **Back-of-house and absence** (064, 060–061 ghost figures).
 - **Faces hidden; screens light the eyes** (074, 064).
 **Tensions:** film-still strips (Her, Fight Club, Drive, Mad Max) are for colour keys only; AI wallpapers (091, 077, 086) are generic.
+
+## C05 digest
+**★5 (6):** light-105 (a diamond of light lays out the hierarchy: boss at the top, newcomer at the narrow end) · light-115 (Café Noir: the business's neon name is the only warmth in a foggy empty lot) · light-124 (a child indoors, the red window light shape, kids small and bright outside) · light-126 (the TV throws one big coral wedge; the subject sits in it) · color-007 (a blue crowd, real store signs in true colour, two yellow figures) · color-008 (a light path through a teal crowd carrying the delivery van). 6 of 54 (11 %).
+**Convictions forming:**
+- **The business's sign/neon as the only warm light in a cool empty space** (115, 098, 136, C04 083).
+- **A flat wedge/shape of light is the set** (126, 105, 124, 123).
+- **Real brand signage kept in true colour while the crowd/world is monochrome** (color-007) — the logo-from-frame-1 rule in plate form.
+- **Light paths through crowds = flow of commerce** (color-008).
+- **Lock the plate, change the light = time passing** (light-117).
+**Tensions:** AI "animated feature" stills keep appearing (096, 097, 100, 102, 121, 122) — strong light, generic drawing. Palette cards are photo-based and mostly agree: navy + one warm.
+
+## C06 digest
+**★5 (5):** color-012 (Soho in the rain: every sign warm, people cool) · cam-021 (a white zig-zag path through red and black to a glowing door) · cam-025 (one man in a stadium of empty green seats) · cam-035 (a woman seen only in a mirror and her shadow) · cam-046 (one lit window in a blue grid of dark windows). 5 of 54 (9 %).
+**Convictions forming:**
+- **One among many** (046, 025, 049, color-011): the subject as the single exception in a full-frame pattern.
+- **Frames within frames** (005, 016, 018, 022, 023, 029, 035, 042): windows, mirrors, arches, stairwells.
+- **The path to the goal** (021, 013, 007): one road/path leads a tiny figure to a lit door/target.
+- **Presence by reflection and shadow** (035, 008, 044).
+- **Signs warm, people cool, wet reflections** (color-012).
+**Tensions:** many camera refs are real photos or film stills (not plates); shot-type cheat sheets (006, 033, 037) are planning tools.
