@@ -20,3 +20,23 @@
 - **Giant everyday objects as landscapes for tiny people** (058 turntable, 065 pens, 085 element blocks).
 - **One-hue world + a tiny accent figure/object** (069, 081, 088, 106, 108).
 **Tensions:** many AI "animated movie" frames (088–091) — strong light ideas, generic drawing; decorative grain characters (098, 100, 102, 103) — skip.
+
+## C03 digest
+**★5 (4):** core-113 (top-down café doorway light, customers' long shadows across a crossing) · core-122 (surfing a wave of to-do lists) · light-001 (a warm lamp pool on wet pavement, a man at its edge) · light-011 (the diner at night, three empty red stools outside). 4 of 54 (7 %).
+**Convictions forming:**
+- **The business's own light pours onto the street** (113, light-001, 011, 035): doorway, lamp, window glow as the stage.
+- **Paperwork/screens as terrain** (122, C01 051).
+- **Absence tells the story** (light-011 empty stools, core-112 lamp over an empty chair).
+- **Two-tone light** (light-018, 021, 027, 035): one colour room, one colour light.
+- **Hide faces; light only hands and money** (light-028, 020).
+**Tensions:** a big share of the Light folder is film stills (Blade Runner, Drive, Her, John Wick) — references for light colour per scene, not plates; and AI fisheye rooms (light-010, 022) are noise.
+
+## C04 digest
+**★5 (4):** light-048 (Taipei 101 past real road signs and a footbridge) · light-063 (a door's light beam links a parent's shadow to a tiny toy) · light-064 (the cook on a break at the back door, phone glow, pink dusk) · light-082 (a Taipei shophouse lane in hot sun: grilles, aircon, scooters) · light-083 (a motel's sign and orange door light reflected in rain). 5 of 54 (9 %).
+**Convictions forming:**
+- **Asian streets told honestly** (048, 082, 064, C03 light-009, 016): signs, wires, aircon units, scooters — the strongest local fit for Malaysia.
+- **Light connects two things** (063 shaft links parent and toy; 076 pool holds man and puppy).
+- **The business's sign and light reflected on wet ground** (083, 085, C03 light-001).
+- **Back-of-house and absence** (064, 060–061 ghost figures).
+- **Faces hidden; screens light the eyes** (074, 064).
+**Tensions:** film-still strips (Her, Fight Club, Drive, Mad Max) are for colour keys only; AI wallpapers (091, 077, 086) are generic.
