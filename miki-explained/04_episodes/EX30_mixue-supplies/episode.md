@@ -1,6 +1,6 @@
 # EX30 — Mixue's Real Customer
 
-Status: **script + stills approved 2026-11-09; built** (`build/ex30.tsx`, raea painted look) → `export/EX30-Final.mp4` · slot Wed 11 Nov
+Status: **final 2026-11-09** `export/EX30-Final.mp4` (28.8 s, 30 fps, −14 LUFS, Style C built locally in raea) · pushed to Telegram /ex30 · slot Wed 11 Nov
 Strategy: series **How is it so cheap?** (standalone, not "Part 3": EX29's vote stays open — change EX29's pinned comment
 to "Daiso, ZUS or KK Mart?") · Malaysian-present global brand · 25–30 s · **Style C** (BIBLE-C: Malaysia, night, the
 business is the light, painterly grain, faceless people holding poses).
@@ -44,5 +44,11 @@ Teal-navy night; Mixue's red the only warm paint. Real logo and words in a skipp
 Sound: rain bed, sparse hits (crane, dive, four carton landings, lorry, push, shutter), −14 LUFS. `build/sfx.py`.
 
 ## Post (draft)
-**Caption:** `Mixue sells ice cream for RM2 🍦 but 97% of its money comes from its own franchisees, who must buy milk, syrup, cups and machines from Mixue. Almost 60,000 shops, more than McDonald's. Did you know? 👇  #mixue #malaysia #franchise #businessmodel #bisnes`
-**Pinned comment:** `Sources: MIXUE Group HKEX prospectus (2024: goods & equipment RMB24.2bn of RMB24.8bn revenue); store counts from the prospectus and 2025 reports.`
+**Caption:**
+```
+Mixue sells ice cream for RM2 🍦 but 97% of its money comes from its own franchisees, who must buy milk, syrup, cups and machines from Mixue. Almost 60,000 shops, more than McDonald's. Did you know? 👇  #mixue #malaysia #franchise #businessmodel #bisnes
+```
+**Pinned comment:**
+```
+Sources: MIXUE Group HKEX prospectus (2024: goods & equipment RMB24.2bn of RMB24.8bn revenue); store counts from the prospectus and 2025 reports.
+```

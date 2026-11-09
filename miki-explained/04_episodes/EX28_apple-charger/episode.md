@@ -55,5 +55,11 @@ only pure white, amber = the price tag only; Brazil green/yellow in L04 only. St
 | L05 | Back to the box (callback), now beside a charger in its own box; pull back |
 
 ## Post (draft)
-**Caption:** `Apple took the charger out of the iPhone box "for the planet" 🌍 It also fit 70% more boxes on every pallet, and the charger became its own RM99 sale. Brazil fined Apple for it. Do you still use the old charger? 👇  #apple #iphone #malaysia #businessmodel #duit`
-**Pinned comment:** `Old charger or new one? 👇 Sources: Apple iPhone 12 event (Oct 2020: 70% more boxes per pallet); Apple MY RRP RM99 (20W adapter); Brazil Justice Ministry & São Paulo court fines (2022).`
+**Caption:**
+```
+Apple took the charger out of the iPhone box "for the planet" 🌍 It also fit 70% more boxes on every pallet, and the charger became its own RM99 sale. Brazil fined Apple for it. Do you still use the old charger? 👇  #apple #iphone #malaysia #businessmodel #duit
+```
+**Pinned comment:**
+```
+Old charger or new one? 👇 Sources: Apple iPhone 12 event (Oct 2020: 70% more boxes per pallet); Apple MY RRP RM99 (20W adapter); Brazil Justice Ministry & São Paulo court fines (2022).
+```

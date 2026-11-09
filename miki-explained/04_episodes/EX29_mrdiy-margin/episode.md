@@ -1,6 +1,6 @@
 # EX29 — How Is Mr DIY So Cheap? (Part 2)
 
-Status: **draft script for approval (2026-11-08)** → post Tue 10 Nov (12:30 or 21:00 MYT)
+Status: **final 2026-11-09** `export/EX29-Final.mp4` (39.4 s, 30 fps, −14 LUFS, Style A baseline) · pushed to Telegram /ex29 · posts Tue 10 Nov
 Strategy: Nov growth plan · series **How is it so cheap?** Part 2 (promised in EX25) · Malaysian brand · 20–30 s ·
 proposed **Style A** (same look as Part 1, EX25: a series keeps its look)
 
@@ -43,5 +43,11 @@ the small things you've never priced; comparison: 11 sen vs 5 sen.
 | L05 | Back to the two shops; end card "Part 3: you pick" (silent) |
 
 ## Post (draft)
-**Caption:** `How is Mr DIY so cheap? 🔧 It buys straight from factories and half of what it sells is its own brand. After costs it keeps about 11 sen of every ringgit, twice 99 Speedmart's 5 sen. Part 3: Mixue, Daiso or ZUS? 👇  #mrdiy #99speedmart #malaysia #bisnes #businessmodel`
-**Pinned comment:** `Part 3: Mixue, Daiso or ZUS? Vote 👇 Sources: MR DIY 2Q 2026 results (The Star, Aug 2026); 99 Speedmart 2Q 2026 (NST); MR DIY IPO prospectus; MIDF Research (Dec 2025).`
+**Caption:**
+```
+How is Mr DIY so cheap? 🔧 It buys straight from factories and half of what it sells is its own brand. After costs it keeps about 11 sen of every ringgit, twice 99 Speedmart's 5 sen. Part 3: Daiso, ZUS or KK Mart? 👇  #mrdiy #99speedmart #malaysia #bisnes #businessmodel
+```
+**Pinned comment:**
+```
+Part 3: Daiso, ZUS or KK Mart? Vote 👇 Sources: MR DIY 2Q 2026 results (The Star, Aug 2026); 99 Speedmart 2Q 2026 (NST); MR DIY IPO prospectus; MIDF Research (Dec 2025).
+```

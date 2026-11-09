@@ -38,13 +38,15 @@ Two posts a day, 12:30 and 21:00 MYT (memory `tiktok-goal-nov-2026`). Captions, 
 | Sun 08 Nov | 21:00 | EX25 99 Speedmart Pt 1 (`EX25-Final.mp4`) · Style A | scheduled in TikTok Studio (2026-11-07) |
 | Mon 09 Nov | 12:30 | EX26 Starbucks float (`EX26-Final.mp4`) · Style C | scheduled in TikTok Studio (2026-11-08) |
 | Mon 09 Nov | 21:00 | EX27 Shopee 11.11 fake discount (`EX27-Final.mp4`) · Style B | scheduled in TikTok Studio (2026-11-08) |
-| Tue 10 Nov | 12:30 / 21:00 | EX28 Apple charger · Style C (proposed) / EX29 Mr DIY Pt 2 · Style A (proposed) | scripts drafted 2026-11-08, waiting for approval |
+| Tue 10 Nov | 12:30 | EX28 Apple charger (`EX28-Final.mp4`) · Style B | ready (Telegram /ex28); schedule in TikTok Studio |
+| Tue 10 Nov | 21:00 | EX29 Mr DIY Pt 2 (`EX29-Final.mp4`) · Style A baseline | ready (Telegram /ex29); schedule in TikTok Studio |
+| Wed 11 Nov | 12:30 | EX30 Mixue's real customer (`EX30-Final.mp4`) · Style C (raea painted) | ready (Telegram /ex30); schedule in TikTok Studio |
 
 **Views snapshot 2026-11-08 (TikTok Studio, views · likes · comments):** EX21 Kodak (6 Nov 12:30) 693 · 19 · 0 ·
 EX09 Other Line (6 Nov) 647 · 30 · 0 · EX10 Popcorn (7 Nov 21:00) 629 · 20 · 0 · EX24 McDonald's (8 Nov 12:30, hours old) 431 · 18 · 1.
 All sit in the first-pool band (400–700); none has broken out yet. Need followers gained + average watch time per video.
 
-Telegram push pending (the Air is off): EX24–EX27 finals, when it's back.
+Telegram: EX24–EX30 finals pushed 2026-11-09; dashboard updated (EX24–EX27 posted, EX28–EX30 planned).
 
 **Style test (2026-11-08):** Style A = smooth iso v2 (EX25 99 Speedmart look, raea) vs Style B = flat geometry v3 (EX27,
 HyperFrames, `00_bible/flat-v3-playbook.md`) vs Style C = illustrated plates (EX26 Starbucks, user-generated plates +
