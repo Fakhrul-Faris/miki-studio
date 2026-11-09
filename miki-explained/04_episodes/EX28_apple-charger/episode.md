@@ -1,7 +1,7 @@
 # EX28 — The Missing Charger (Apple)
 
-Status: **draft script for approval (2026-11-08)** → post Tue 10 Nov (12:30 or 21:00 MYT)
-Strategy: Nov growth plan · series **Brand secrets** · global brand Malaysians use · 20–30 s · proposed **Style C** (plates)
+Status: **script v1 approved + Style B plan approved (2026-11-09, "go")** · stills for approval: `styleframes/contact_sheet.jpg` · voice: waiting (record from how-i-generate.md) → post Tue 10 Nov (12:30 or 21:00 MYT)
+Strategy: Nov growth plan · series **Brand secrets** · global brand Malaysians use · 20–30 s · **Style B** (user 2026-11-09; was proposed as C)
 
 ## Sources
 - iPhone 12 (Oct 2020): Apple removed the power adapter and EarPods from the box; smaller, lighter box, **"70 percent more
@@ -33,7 +33,19 @@ Strategy: Nov growth plan · series **Brand secrets** · global brand Malaysians
 Ending type: **reframe** (EX26 was "next time…", EX27 "before you…"). One physical detail (the thin box on a pallet), one
 comparison (same truck, more phones), contradiction in the first breath (planet → business).
 
-## Visual (Style C proposal: plates you generate, one per line)
+## Visual — Style B (approved plan, 2026-11-09)
+Through-line: the white 20W charger (Malaysian 3-pin). Palette: night ink-navy ground, cream light shapes, the charger the
+only pure white, amber = the price tag only; Brazil green/yellow in L04 only. Stills: `styleframes/` (make.py).
+
+| Line | Viewpoint | Drawn | Hand-off |
+|---|---|---|---|
+| L01 | top-down tabletop, window patch | open iPhone box (Apple logo on the lid), cable coil, the empty charger recess; recycle mark on "planet"; the charger's shadow leaves on "business" | charger lifts out |
+| L02 | side cutaway → pallet → lorry (one pull-back) | thick 2019 box presses to the thin 2020 box; pallet label counts to +70%; the lorry cut open, load sheet +70% | charger rolls out of the lorry |
+| L03 | frontal elevation, accessories shop | the charger boxed on a pegboard, spotlight shape, amber swing tag RM99 | spotlight narrows onto the tag |
+| L04 | low angle | Ministério da Justiça notice: MULTA R$12,3 MI, stamp CARREGADOR NA CAIXA; the charger drops back into the box | lid closes |
+| L05 | top-down tabletop (bookend) | thin box + the charger's own box (RM99); the light patch slides off | — |
+
+## Old Visual (Style C proposal: plates you generate, one per line)
 | Line | Plate idea (literal) |
 |---|---|
 | L01 | Close, low angle: an open white phone box on a table, the empty charger slot a hard shadow; window light. Apple logo overlay from frame 1 |
