@@ -153,19 +153,32 @@ function Lane({ t }: { t: number }) {
   return <>{P}</>;
 }
 
-// ---------- L04: the factory (set at x = 160): a giant lit gate, lorries streaming out; a tiny cone on a wall in front
+// ---------- L04: Mixue's supply warehouse (set at x = 160), seen from a raised three-quarter angle: the real logo and 97% on
+// its wall, lit loading docks with lorries backed in side-on (their logos show), cartons on the dock; one lorry pulls out
+// toward the town; in the near foreground, alone on a low wall, the customer's warm cone ("not from you").
 const FX = 160;
 function Factory({ t }: { t: number }) {
   const P: any[] = [];
-  P.push(<B key="fb" p={[FX, 9, -14]} s={[60, 18, 4]} c={N2} />);
-  P.push(<Mesh3d key="fg" pass="ui" transform={Transform.fromXyz(FX, 4, -11.9)}><Cuboid half_size={[6, 4, 0.1]} /><StandardMaterial base_color="#ffe8cf" unlit /></Mesh3d>);   // the lit gate
-  P.push(<Mesh3d key="f97" pass="ui" transform={Transform.fromXyz(FX, 12.2, -11.85)}><Text3D size={3.6} depth={0.1}>97%</Text3D><StandardMaterial base_color={RED} unlit /></Mesh3d>);
-  P.push(<B key="fr" p={[FX, -0.02, 10]} s={[80, 0.04, 50]} c={N1} />);
-  for (let n = 0; n < 7; n++) { const z = -9 + ((n * 4.6 + t * 6) % 30);                             // the stream of lorries toward us
-    P.push(<Lorry key={`fl${n}`} k={`fl${n}`} x={FX + (n % 2 ? 2.2 : -2.2)} z={z} r={-Math.PI / 2} logo={false} />); }
-  P.push(<B key="fw" p={[FX - 1.0, 0.5, 31]} s={[3, 1, 0.5]} c={N3} />);                              // the low wall, near camera
-  P.push(<Mesh3d key="fcn" transform={Transform.fromXyz(FX - 1.0, 1.28, 31).withScale([0.22, 0.22, 0.22])} shape={so().cone} pass="ui"><StandardMaterial base_color={GOLD} unlit /></Mesh3d>);   // the customer's cone: the one warm thing here (matches the kiosk's sign)
-  P.push(<Mesh3d key="fsw" pass="ui" transform={Transform.fromXyz(FX - 1.0, 1.38, 31).withScale([0.22, 0.22, 0.22])} shape={so().swirl}><StandardMaterial base_color={CREAM} unlit /></Mesh3d>);
+  P.push(<B key="fb" p={[FX, 5, -8]} s={[30, 10, 12]} c={N3} />);                                       // the warehouse
+  P.push(<B key="fr" p={[FX, 10.2, -8]} s={[30.4, 0.4, 12.4]} c={N2} />);                                 // roof edge
+  P.push(<Mesh3d key="flg" pass="ui" transform={Transform.fromXyz(FX - 2, 7.2, -1.96)}><Cuboid half_size={[5.4, 1.78, 0.02]} /><StandardMaterial base_color="#ffffff" base_color_texture={S("mixue_box.png")} unlit /></Mesh3d>);
+  P.push(<B key="f97b" p={[FX - 2, 12.4, -3]} s={[9.6, 3.6, 0.3]} c={N1} />);                                   // a rooftop sign frame
+  for (const dx of [-3.6, 3.6]) P.push(<B key={`f97p${dx}`} p={[FX - 2 + dx, 10.9, -3]} s={[0.25, 1.4, 0.25]} c={N1} />);
+  P.push(<Mesh3d key="f97" pass="ui" transform={Transform.fromXyz(FX - 2, 12.35, -2.8)}><Text3D size={3.0} depth={0.05}>97%</Text3D><StandardMaterial base_color={RED} unlit /></Mesh3d>);
+  P.push(<B key="fdk" p={[FX, 0.6, -0.8]} s={[30, 1.2, 2.4]} c={N2} />);                                 // the loading dock
+  for (let d = 0; d < 4; d++) {                                                                          // four lit dock doors
+    P.push(<Mesh3d key={`fd${d}`} pass="ui" transform={Transform.fromXyz(FX - 10.5 + d * 7, 2.6, -1.97)}><Cuboid half_size={[1.5, 1.3, 0.02]} /><StandardMaterial base_color="#ffe8cf" unlit /></Mesh3d>);
+    for (let c = 0; c < 3; c++) P.push(<Model key={`fc${d}${c}`} src={S("cardboard_box_01/cardboard_box_01.gltf")} position={[FX - 12.3 + d * 7 + (c % 2) * 0.6, 1.2 + Math.floor(c / 2) * 0.5, -0.6]} scale={[1.2, 1.2, 1.2]}><StandardMaterial base_color="#c99a62" /></Model>);
+  }
+  // lorries backed into docks 1–3 (side-on to the camera, tails at the dock); the one at dock 0 pulls out toward the town
+  for (let d = 1; d < 4; d++) P.push(<Lorry key={`fl${d}`} k={`fl${d}`} x={FX - 10.5 + d * 7} z={2.8} r={Math.PI / 2} />);
+  const go = k(t, 21.3, 23.0, Easing.in(Easing.quad));
+  P.push(<Lorry key="fl0" k="fl0" x={FX - 10.5 + go * 3} z={2.8 + go * 16} r={Math.PI / 2} />);
+  P.push(<B key="fy" p={[FX, -0.02, 14]} s={[70, 0.04, 34]} c={N1} />);                                  // the yard
+  for (let n = 0; n < 6; n++) P.push(<B key={`fm${n}`} p={[FX - 14 + n * 5.6, 0.005, 6.5]} s={[2.4, 0.01, 0.16]} c={N4} />);   // yard markings
+  P.push(<B key="fw" p={[FX + 7.6, 0.55, 19]} s={[3.4, 1.1, 0.5]} c={N3} />);                             // the low wall, near camera
+  P.push(<Mesh3d key="fcn" transform={Transform.fromXyz(FX + 7.6, 1.55, 19).withScale([0.5, 0.5, 0.5])} shape={so().cone} pass="ui"><StandardMaterial base_color={GOLD} unlit /></Mesh3d>);   // the customer's cone: the one warm thing (matches the kiosk's sign)
+  P.push(<Mesh3d key="fsw" pass="ui" transform={Transform.fromXyz(FX + 7.6, 1.73, 19).withScale([0.5, 0.5, 0.5])} shape={so().swirl}><StandardMaterial base_color={CREAM} unlit /></Mesh3d>);
   return <>{P}</>;
 }
 
@@ -176,7 +189,7 @@ const BEATS: Beat[] = [
   { cam: [CX - 1.6, 2.1, AR + 12], look: [CX + 0.2, 1.7, 1.0], fov: 0.85 },                // L01 the kiosk across the wet road
   { cam: [CX + 4, 78, 38], look: [CX, 0, -52], fov: 0.8 },                                 // L02 the town from above
   { cam: [LX - 6.5, 1.6, 4.6], look: [LX + 2.2, 1.3, 2.0], fov: 0.8 },                   // L03 the back lane
-  { cam: [FX - 1.6, 0.9, 34.5], look: [FX - 0.3, 4.2, -10], fov: 0.9 },                        // L04 worm's-eye at the factory gate
+  { cam: [FX + 15, 10, 30], look: [FX - 1, 4, -4], fov: 0.85 },                        // L04 worm's-eye at the factory gate
   { cam: [CX - 1.2, 2.0, AR + 11], look: [CX + 0.2, 1.6, 1.0], fov: 0.85 },                // L05 the kiosk closing
 ];
 
@@ -201,8 +214,8 @@ function Shot({ st }: { st: State }) {
       <PointLight name="k4" transform={Transform.fromXyz(CX + 1.75, 1.6, 2.3)} intensity={300000} color="#ffd59a" range={3} paint />
       <PointLight name="l1" transform={Transform.fromXyz(LX, 2.7, -0.3)} intensity={900000} color="#d8f4ff" range={9} paint shadow_maps_enabled />
       <PointLight name="l2" transform={Transform.fromXyz(LX, 1.3, -1.6)} intensity={500000} color="#ff8a7a" range={4} paint />
-      <SpotLight name="f1" transform={Transform.fromXyz(FX, 6, -11.5).lookingAt([FX, 0, 10])} intensity={60000000} outer_angle={0.6} inner_angle={0.35} color="#ffd2b0" range={60} paint />
-      <PointLight name="f2" transform={Transform.fromXyz(FX, 9, -10)} intensity={9000000} color="#ff5a4a" range={14} paint />
+      <SpotLight name="f1" transform={Transform.fromXyz(FX, 12, 10).lookingAt([FX, 0, -2])} intensity={40000000} outer_angle={0.9} inner_angle={0.6} color="#d8eef6" range={40} paint />
+      <PointLight name="f2" transform={Transform.fromXyz(FX - 3, 3, 1.5)} intensity={6000000} color="#ffd2b0" range={14} paint />
       <Row closing={closing} />
       <Kiosk />
       <Street />
@@ -236,10 +249,11 @@ function Film() {
     const tail: [number, number, number] = [LX + 2.794, 1.85, 3.45];   // the wordmark half of the tail logo (camera right = +z)
     cam = L3(L3([tail[0] - 0.42, 1.85, 3.45], [LX - 6.5, 1.6, 4.6], out), [LX - 5.6, 1.5, 4.3], drift); look = L3(L3(tail, [LX + 2.2, 1.3, 2.0], out), [LX + 1.6, 1.2, 2.0], drift); fov = lerp(0.6, 0.8, out);
   } else if (T < 23.05) { // L04 the factory: "97%" overhead; tilt down to the tiny cone on "not from you"; push into it
-    const tilt = K(19.9, 20.8), back = K(21.1, 21.9), into = K(22.35, 23.05);
-    const c = [FX - 1.6, 0.9, 34.5], lUp = [FX - 0.3, 4.2, -10], lCone = [FX - 1.0, 1.3, 31];
-    look = L3(L3(lUp, lCone, tilt), lUp, back); cam = c as [number, number, number];
-    cam = L3(cam, [FX - 1.0, 1.36, 31.75], into); look = L3(look, lCone, into); fov = lerp(0.9, 0.6, into);
+    const drift = K(16.7, 19.9), down = K(19.9, 20.8), back = K(21.1, 21.9), into = K(22.35, 23.05);
+    const cHi = L3([FX + 15, 10, 30], [FX + 13, 9, 27], drift), lHi = L3([FX - 1, 4, -4], [FX - 1, 4.5, -4], drift);
+    const cLo: [number, number, number] = [FX + 8.6, 1.95, 21.9], lLo: [number, number, number] = [FX + 5.0, 2.1, 12];   /* the cone sits above the caption band */   // the cone, low left, the warehouse behind
+    cam = L3(L3(cHi, cLo, down), cHi, back); look = L3(L3(lHi, lLo, down), lHi, back);
+    cam = L3(cam, [FX + 7.6, 1.72, 20.05], into); look = L3(look, [FX + 7.6, 1.7, 19], into); fov = lerp(0.85, 0.6, into);
   } else {               // L05 out of the kiosk's own cone sign, back to the kiosk as its shutter comes down
     const out = K(23.05, 24.3);
     cam = L3([CX + 1.75, 1.7, 2.45], [CX - 1.2, 2.0, AR + 11], out); look = L3([CX + 1.75, 1.6, 1.6], [CX + 0.2, 1.6, 1.0], out); fov = lerp(0.6, 0.85, out);
