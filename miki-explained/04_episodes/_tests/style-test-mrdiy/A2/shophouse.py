@@ -49,9 +49,6 @@ def window(cx, z0, w, h, arched, louvre=True):
         a = cyl("win_arch", cx, y-0.01, z0+h, w/2+0.12, 0.14, TRIM, "Y", 32); inner = cyl("c", cx, y-0.01, z0+h, w/2-0.02, 0.4, TRIM, "Y", 32); cut(a, inner)
         lo = box("c2", cx-w, y-0.3, z0+h-w, cx+w, y+0.3, z0+h, TRIM, 0); cut(a, lo)
         f = cyl("fanlight", cx, y+0.06, z0+h, w/2-0.02, 0.06, DARK, "Y", 32); lo = box("c3", cx-w, y-0.3, z0+h-w, cx+w, y+0.3, z0+h, DARK, 0); cut(f, lo)
-        for k in range(5):
-            ang = math.pi * (k + 1) / 6; bpy.ops.mesh.primitive_cube_add(location=(cx + math.cos(ang)*w*0.22, y+0.02, z0+h+math.sin(ang)*w*0.22))
-            o = bpy.context.object; o.scale = (0.015, 0.02, w*0.22); o.rotation_euler = (0, math.pi/2 - ang, 0); bpy.ops.object.transform_apply(scale=True); finish(o, TRIM, 0)
         box("keystone", cx-0.09, y-0.1, z0+h+w/2-0.05, cx+0.09, y+0.02, z0+h+w/2+0.22, TRIM)
     else:
         box("win_hood", cx-w/2-0.2, y-0.16, z0+h, cx+w/2+0.2, y+0.04, z0+h+0.12, TRIM)
