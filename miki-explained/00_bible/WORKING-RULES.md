@@ -71,6 +71,7 @@ Change a locked trait only when the user says so by name. "Make it better" never
 
 | Date | What I showed | Verdict (user's words) | Lesson |
 |---|---|---|---|
+| 2026-11-09 | A video preview v1 (26 s, voice-timed) | "flickering … at the shops curb … on 0:18 … some object pass through other object. that defeat realism … the coin can receive more detail … the stamp should be stamp glb" | Physics bake, flicker causes (§6), reeded coin, real stamp model. |
 | 2026-11-09 | A v3 lighting test: white / dark / dusk | "i actually like dark better" | Style A world = dark, the business is the light. |
 | 2026-11-09 | A v2: eye-level realistic street in raea | "should it be isometric with white building and world… this is completely opposite" | Fix the named dimension; never swap the style. |
 | 2026-11-09 | C v1: EX26 pipeline (camera push over plates, amber flash) | "exactly the same before we did the analysis… you learned nothing… this is simple camera movement" | Design from the bibles' motion rules; plates are references to recreate. |
@@ -100,6 +101,7 @@ Change a locked trait only when the user says so by name. "Make it better" never
 | Flat motion (Style B) | HyperFrames | `flat-v3-playbook.md`. |
 | Plates and video (Style C) | Seedream / Seedance (the user generates from my prompts) | Prompts short (memory `short-generation-prompts`). |
 | Captions | raea `tools/raea/kit/Captions.tsx` (EX15) | — |
+| Physics (drops, bounces, settling) | **Blender rigid body (Bullet) baked** → JSON → raea plays it back (`_tests/style-test-mrdiy/A2/phys_bake.py`, `phys_check.py`) | User 2026-11-09: objects must never pass through each other. Pick a seed that passes the check (every body in place, still once settled). |
 
 ## 7. The shot loop (adopted 2026-11-09 from the user's multi-engine brief)
 
@@ -123,6 +125,7 @@ Every shot, every style, in this order. No step skipped, no "final quality" clai
 | MaterialCraft / TextureCraft | Procedural PBR materials / painted texture sets, exported as map sets | Rendering scenes |
 | EffectCraft | Effects/compositing for what raea can't do (ask first) | Default part of the pipeline |
 | Seedream / Seedance (user runs) | Plates; image-to-video between keyframes | Exact numbers, exact object paths |
+| raea + avian physics | Real physics in a render | A body spawned mid-shot arrives already settled; switching body type panics → can't time a drop to a word. Bake in Blender instead |
 | Style C hybrid (to test) | raea renders depth / outline / colour-ID passes → Seedance stylises with exact layout and motion | Unverified until a test shows Seedance accepts those passes |
 
 ## 6. My known failure patterns (check myself against these)
@@ -133,3 +136,9 @@ Every shot, every style, in this order. No step skipped, no "final quality" clai
 - **Showing work without checking it against the user's named feedback** and the image they referred to.
 - **Over-claiming quality** ("final quality") before the gates pass.
 - **Judging my own renders**: always run the independent critic (§7.5).
+- **Objects passing through each other** (coin through kerb, floor, man, stock through the shutter): check every path
+  against every prop's footprint; use baked physics for anything that falls.
+- **Flicker** (user 2026-11-09): (1) a part count that changes between frames makes raea re-match parts in tree order,
+  so models swap every other frame: keep every part on every frame (hide by tiny scale), name moving parts;
+  (2) coplanar faces z-fight (two kerbs); (3) a physics body that never settles; (4) rare all-black GPU frames in long
+  renders: render to PNGs, find black frames, re-render them with `--at`. Run the flicker check before showing.

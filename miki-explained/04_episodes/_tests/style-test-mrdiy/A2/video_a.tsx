@@ -10,6 +10,7 @@ import { Quat, Transform } from "raea/transform";
 import { Camera3d } from "raea/camera";
 import { Affine2 } from "raea/math";
 import { LinearRgba, Srgba } from "raea/color";
+import PHYS from "./media/phys_s3.json";
 
 const S = (p: string) => staticFile(p);
 const FPS = 30;
@@ -31,7 +32,20 @@ const so = () => (SO ??= {
   cap: manifold.roundedBox(0.5, 0.18, 0.5, 0.03),
   gableRound: manifold.cylinder(1.1, 0.25).move(0, 0, -0.125).intersect(manifold.box(2.4, 1.2, 0.4).move(-1.2, 0, -0.2)),
   gableStep: manifold.union(manifold.box(2.2, 0.4, 0.25).move(-1.1, 0, -0.125), manifold.box(1.3, 0.8, 0.25).move(-0.65, 0, -0.125)),
-  coin: manifold.cylinder(0.42, 0.13).move(0, 0, -0.065).minus(manifold.cylinder(0.34, 0.05).move(0, 0, 0.04)).minus(manifold.cylinder(0.34, 0.05).move(0, 0, -0.09)).union(manifold.cylinder(0.2, 0.11).move(0, 0, -0.055)).union(manifold.torus(0.27, 0.018).move(0, 0, 0.03)).union(manifold.torus(0.27, 0.018).move(0, 0, -0.03)),
+  // the token: reeded edge (120 ridges), raised rim, raised flower + ring of dots on both faces; axis along z
+  coin: (() => {
+    const R = 0.42, T = 0.13, cut: Solid[] = [];
+    for (let i = 0; i < 120; i++) cut.push(manifold.box(0.009, 0.03, T + 0.02).move(-0.0045, R - 0.012, -T / 2 - 0.01).rotate(0, 0, i * 3));
+    const P: Solid[] = [manifold.difference(manifold.cylinder(R, T).move(0, 0, -T / 2), ...cut)];   // reeded edge: 120 grooves
+    for (const s of [1, -1]) {
+      const z = s > 0 ? T / 2 : -T / 2 - 0.022, zl = s > 0 ? T / 2 : -T / 2 - 0.016;
+      P.push(manifold.cylinder(R - 0.016, 0.022).minus(manifold.cylinder(R - 0.06, 0.06).move(0, 0, -0.02)).move(0, 0, z));      // raised rim
+      for (let k = 0; k < 5; k++) P.push(manifold.cylinder(0.05, 0.016).scale(2, 1, 1).move(0.12, 0, 0).rotate(0, 0, 90 + k * 72).move(0, 0, zl));   // petals
+      P.push(manifold.cylinder(0.045, 0.024).move(0, 0, s > 0 ? T / 2 : -T / 2 - 0.024));                                            // centre boss
+      for (let k = 0; k < 28; k++) P.push(manifold.cylinder(0.017, 0.016).move(0.3, 0, zl).rotate(0, 0, k * 360 / 28));  // ring of beads
+    }
+    return manifold.union(...P);
+  })(),
   tank: manifold.cylinder(0.45, 1.1).rotate(-90, 0, 0),
   umbrella: manifold.cone(1.3, 0.02, 0.6).rotate(-90, 0, 0),
 });
@@ -47,9 +61,9 @@ const WhiteModel = ({ src, p, r = 0, s = 1, c = WHITE }: { src: string; p: [numb
 
 // roller shutter from slats (parts/shutter.glb doesn't draw in raea): h = how much is rolled down from the lintel at y 2.95
 function Shutter({ id, x, w, h, z, c }: { id: string; x: number; w: number; h: number; z: number; c: string }) {
-  if (h < 0.02) return null;
+  h = Math.max(h, 0.01);   // every part exists on every frame: raea matches parts in tree order, so a count that changes makes models swap (flicker)
   const P = [<B key={`${id}p`} p={[x, 2.95 - h / 2, z]} s={[w, h, 0.04]}><Flat c={c} r={0.5} /></B>];
-  for (let r = 0; r < 20; r++) { const y = 2.95 - h + 0.07 + r * 0.14; if (y < 2.92) P.push(<B key={`${id}s${r}`} p={[x, y, z + 0.03]} s={[w, 0.03, 0.03]}><Flat c={c} r={0.35} /></B>); }
+  for (let r = 0; r < 20; r++) { const y = 2.95 - h + 0.07 + r * 0.14; P.push(<B key={`${id}s${r}`} p={[x, Math.min(y, 2.9), z + 0.03]} s={[w, 0.03, 0.03]}><Flat c={c} r={0.35} /></B>); }
   return <>{P}</>;
 }
 
@@ -85,21 +99,21 @@ function Unit({ i, t: TNOW }: { i: number; t: number }) {
     const up = k(TNOW, 0.5, 1.5);
     // stock is wheeled out onto the five-foot way once the shutter is up (on "cheap")
     const out = (a: number) => -1.7 * (1 - k(TNOW, a, a + 0.7, Easing.out(Easing.cubic)));
-    const oR = out(1.4), oH = out(1.6), oC = out(1.8);
+    const oR = out(1.4), oH = out(1.6) - 0.2 * (1 - k(TNOW, 1.6, 2.3, Easing.out(Easing.cubic))), oC = out(1.8);   // hardware starts deeper (behind the shutter)
     const GC = ["#e3262b", "#ffd400", "#2f6fd6", "#3bb273", "#f28c28", "#ffffff", "#7a4fd1"];
     for (const sx of [x0 + 1.0, x0 + 2.3, x0 + 3.6]) P.push(<Model key={`shv${sx}`} src={S("parts/shelves.glb")} position={[sx, 0.15, -2.6]} scale={[0.75, 0.9, 0.75]} />);
     for (let r = 0; r < 4; r++) for (let j = 0; j < 12; j++) P.push(<B key={`bw${r}${j}`} p={[x0 + 0.55 + j * 0.32, 0.45 + r * 0.7, -4.1]} s={[0.25, 0.42, 0.28]}><Flat c={GC[(r * 5 + j) % GC.length]} r={0.5} /></B>);
-    for (const [rx] of [[x0 + 1.2], [x0 + 3.4]] as [number][]) {
+    for (const [rx] of [[x0 + 1.05], [x0 + 3.4]] as [number][]) {
       P.push(<B key={`rk${rx}`} p={[rx, 0.95, 0.75 + oR]} s={[1.1, 1.6, 0.4]}><Flat c="#2a2c31" r={0.5} /></B>);
       for (let lv = 0; lv < 4; lv++) for (let j = 0; j < 5; j++) P.push(<B key={`rg${rx}${lv}${j}`} p={[rx - 0.44 + j * 0.22, 0.35 + lv * 0.38, 0.98 + oR]} s={[0.18, 0.28, 0.1]}><Flat c={GC[(lv * 3 + j + (rx > x0 + 2 ? 2 : 0)) % GC.length]} r={0.45} /></B>);
     }
     for (const [m, x, z, r, sc] of [["watering_can_metal_01", x0 + 1.0, 1.75, 0.4, 1.6], ["metal_toolbox", x0 + 1.7, 1.8, -0.3, 1.4], ["plastic_container", x0 + 2.4, 1.85, 0.2, 0.7], ["spray_paint_bottles", x0 + 3.1, 1.85, 0.6, 1.5], ["Drill_01", x0 + 3.8, 1.8, 1.2, 1.6], ["cardboard_box_01", x0 + 4.1, 1.3, 0.3, 1.2]] as [string, number, number, number, number][])
       P.push(<Model key={`hw${m}`} src={S(`${m}/${m}.gltf`)} position={[x, 0.15, z + oH]} rotation={[0, r, 0]} scale={[sc, sc, sc]} />);
-    for (let c = 0; c < 6; c++) P.push(<Model key={`pc${c}`} src={S("plastic_crate_01/plastic_crate_01.gltf")} position={[x0 + 4.0 - (c % 2) * 0.5, 0.15 + Math.floor(c / 2) * 0.29, 0.5 + oC]} rotation={[0, 0.1 * c, 0]}><StandardMaterial base_color={["#2f6fd6", "#e3262b", "#3bb273"][c % 3]} /></Model>);
+    for (let c = 0; c < 6; c++) P.push(<Model key={`pc${c}`} src={S("plastic_crate_01/plastic_crate_01.gltf")} position={[x0 + 3.9 - (c % 2) * 0.5, 0.15 + Math.floor(c / 2) * 0.29, 0.5 + oC]} rotation={[0, 0.1 * c, 0]}><StandardMaterial base_color={["#2f6fd6", "#e3262b", "#3bb273"][c % 3]} /></Model>);
     P.push(<Shutter key="dshut" id="dsh" x={cx} w={W - 0.9} h={2.8 * (1 - up)} z={0.3} c="#5a5d66" />);
     for (let t = 0; t < 3; t++) { const on = k(TNOW, 1.2 + t * 0.15, 1.3 + t * 0.15, Easing.linear);
       P.push(<B key={`tube${t}`} p={[cx, 3.4, -0.6 - t * 1.3]} s={[2.6, 0.05, 0.1]}><Flat c="#ffffff" e={glow("#f2f8ff", 0.2 + 9 * on)} /></B>); }
-    for (let b = 0; b < 5; b++) P.push(<B key={`bk${b}`} p={[x0 + 0.75, 0.21 + b * 0.12, 1.2 + oC]} s={[0.45, 0.11, 0.32]}><Flat c="#e3262b" r={0.45} /></B>);
+    for (let b = 0; b < 5; b++) P.push(<B key={`bk${b}`} p={[x0 + 3.0, 0.21 + b * 0.12, 1.25 + oC]} s={[0.45, 0.11, 0.32]}><Flat c="#e3262b" r={0.45} /></B>);
   } else {
     P.push(<Shutter key="shut" id={`sh${i}`} x={cx} w={W - 0.9} h={spd ? 1.55 : 2.8} z={0.3} c={spd ? "#4e5058" : "#3e4047"} />);
     if (spd) P.push(<B key="sin" p={[cx, 1.5, -0.6]} s={[W - 0.9, 2.8, 0.1]}><Flat c="#1a1c22" e={glow("#7f9cff", 0.1)} /></B>);
@@ -112,7 +126,8 @@ const x1 = (x0: number) => x0 + W;
 function Street() {
   const L = UNITS.length * W, xm = UNITS[0] * W + L / 2;
   const P: any[] = [];
-  P.push(<B key="kerb" p={[xm, 0.08, AR + 0.15]} s={[L + 30, 0.16, 0.3]}><Flat c={WHITE2} /></B>);
+  P.push(<B key="kerb" p={[xm, 0.07, AR + 0.15]} s={[L + 30, 0.14, 0.28]}>   {/* inside the shophouse kerbs (y 0–0.15, z 2.2–2.5): coplanar faces z-fought */}
+    <Flat c={WHITE2} /></B>);
   P.push(<B key="road" p={[xm, -0.02, AR + 4.6]} s={[L + 60, 0.04, 8.6]}><Tiles n="asphalt_02" u={30} v={4} tint="#34363d" /></B>);
   for (let k = -10; k < 12; k++) P.push(<B key={`ln${k}`} p={[k * 4, 0.005, AR + 4.6]} s={[2, 0.01, 0.14]}><Flat c="#ffffff" /></B>);
   P.push(<B key="pv" p={[xm, 0.08, AR + 10]} s={[L + 60, 0.16, 2.2]}><Tiles n="concrete_tiles" u={40} v={2} /></B>);
@@ -126,10 +141,10 @@ function Street() {
   P.push(<Mesh3d key="umb" transform={Transform.fromXyz(-9.5, 2.5, AR + 9.6)} shape={so().umbrella}><Flat c={WHITE} /></Mesh3d>);
   P.push(<B key="stall" p={[-9.5, 0.6, AR + 9.6]} s={[1.8, 0.9, 1.0]}><Flat c={WHITE} /></B>);
   P.push(<Mesh3d key="pole" transform={Transform.fromXyz(-9.5, 1.4, AR + 9.6)}><Cylinder radius={0.03} half_height={1.2} /><Flat c={WHITE2} /></Mesh3d>);
-  for (const [x, z, r] of [[-3.6, 0.8, 0.5], [-3.0, 1.2, -0.3], [-12.4, 0.9, 0.2], [9.8, 0.7, 0.8]] as [number, number, number][])
+  for (const [x, z, r] of [[-3.6, 0.8, 0.5], [-3.0, 0.85, -0.3], [-12.4, 0.9, 0.2], [9.8, 0.7, 0.8]] as [number, number, number][])
     P.push(<WhiteModel key={`ch${x}`} src="plastic_monobloc_chair_01/plastic_monobloc_chair_01.gltf" p={[x, 0.12, z]} r={r} />);
   for (let c = 0; c < 3; c++) P.push(<WhiteModel key={`cr${c}`} src="plastic_crate_01/plastic_crate_01.gltf" p={[-6.6, 0.12 + c * 0.29, 0.6]} r={c * 0.2} />);
-  for (const x of [-14.6, -5.1, 9.4]) P.push(<WhiteModel key={`pp${x}`} src="potted_plant_02/potted_plant_02.gltf" p={[x, 0.12, AR - 0.55]} s={1.3} c={WHITE2} />);
+  for (const x of [-14.6, -5.1, 9.4]) P.push(<WhiteModel key={`pp${x}`} src="potted_plant_02/potted_plant_02.gltf" p={[x, 0.12, x === -5.1 ? 0.55 : AR - 0.55]} s={1.3} c={WHITE2} />);
   // the white city behind: real library buildings, repainted white, fading into the haze
   for (const [src, x, z, sc, r] of [["skyscraper_k.glb", -16, -75, 11, 0.3], ["skyscraper_k.glb", 22, -82, 12.5, 0], ["skyscraper_k.glb", -4, -95, 15, 0.6]] as [string, number, number, number, number][])
     P.push(<WhiteModel key={`bg${x}`} src={src} p={[x, 0, z]} r={r} s={sc} />);
@@ -146,35 +161,43 @@ function Street() {
     const wx = bx - 4 + ((k * 37) % 9), wy = 2 + ((k * 53) % 26), on = (k * 7) % 3 !== 0;
     if (on) P.push(<B key={`lw${k}`} p={[wx, wy, bz + 5.6]} s={[0.9, 0.6, 0.05]}><Flat c="#ffcf8a" e={glow("#ffb867", 1.4)} /></B>);
   }
-  for (let c = 0; c < 4; c++) P.push(<WhiteModel key={`cr2${c}`} src="plastic_crate_01/plastic_crate_01.gltf" p={[-2.6 + (c % 2) * 0.45, 0.12 + Math.floor(c / 2) * 0.29, 1.2]} r={c * 0.3} />);
+  for (let c = 0; c < 4; c++) P.push(<WhiteModel key={`cr2${c}`} src="plastic_crate_01/plastic_crate_01.gltf" p={[-2.6 + (c % 2) * 0.45, 0.12 + Math.floor(c / 2) * 0.29, 0.85]} r={c * 0.3} />);
   P.push(<WhiteModel key="ht2" src="hand_truck/hand_truck.gltf" p={[4.2, 0.12, 1.4]} r={-0.6} />);
   P.push(<Model key="vs" src={S("parts/vespa.glb")} position={[-6.5, 0.12, 1.4]} rotation={[0, 1.2, 0]}><StandardMaterial base_color={WHITE2} /></Model>);
   P.push(<Model key="vsp" src={S("parts/vespa.glb")} position={[-1.6, 0.0, AR + 1.3]} rotation={[0, 1.3, 0]}><StandardMaterial base_color={WHITE2} /></Model>);
   // people hold poses (house rule): MPFB figures, faceless, charcoal clay
-  for (const [src, x, z, r] of [["s_m30", 0.7, 2.6, 2.4], ["s_f25", 3.9, 1.6, -2.6], ["s_m50", -9.0, AR + 9.0, 0.3], ["s_f35", -8.3, AR + 9.4, -2.4], ["s_m30", -4.2, 1.1, 0.9], ["s_f25", 10.8, AR + 9.6, -0.4]] as [string, number, number, number][])
+  for (const [src, x, z, r] of [["s_m30", 0.7, 2.6, 2.4], ["s_f25", 3.9, 1.6, -2.6], ["s_m50", -9.0, AR + 9.0, 0.3], ["s_f35", -8.3, AR + 9.4, -2.4], ["s_m30", -4.2, 0.75, 0.9], ["s_f25", 10.8, AR + 9.6, -0.4]] as [string, number, number, number][])
     P.push(<Model key={`pp${src}${x}`} src={S(`people/${src}.glb`)} position={[x, 0.12, z]} rotation={[0, r, 0]}><StandardMaterial base_color="#55585f" perceptual_roughness={0.7} /></Model>);
   return <>{P}</>;
 }
 
 // ---------- S3 set: the till drawers, away from the street (x = 60; at x = 200 frames rendered black) ----------
 const DX = 60;
-function Drawers({ t }: { t: number }) {
+// coin drops baked with Blender's rigid-body engine (phys_bake.py → media/phys_s3.json): real falls, bounces and settling
+const PH = PHYS as { f0: number; coins: Record<string, { release: number; r: number; frames: number[][] }> };
+const phys = (n: string, f: number) => { const c = PH.coins[n]; const v = c.frames[Math.max(0, Math.min(c.frames.length - 1, f - PH.f0))];
+  return { p: [DX + v[0], v[1], v[2]] as [number, number, number], q: [v[3], v[4], v[5], v[6]] as [number, number, number, number], s: c.r / 0.42, grow: k(f, c.release, c.release + 4, Easing.out(Easing.quad)) }; };
+function Drawers({ t, f }: { t: number; f: number }) {
   const P: any[] = [];
   P.push(<B key="ctr" p={[DX + 0.9, 0.9, -0.7]} s={[4.6, 0.1, 3.8]}><Tiles n="concrete_tiles" u={3} v={2} tint="#3a3c43" /></B>);
-  const drawer = (x: number, zz: number, warm: boolean, n: number, t0: number, label: string, name: string) => {
-    const g: any[] = [];
-    g.push(<B key={`${name}b`} p={[x, 1.05, zz]} s={[1.5, 0.22, 1.1]}><Flat c={warm ? "#2a2c31" : "#24262c"} /></B>);
+  // a till drawer: tray, two dividers, side and end walls (the same boxes phys_bake.py collides with)
+  const drawer = (x: number, zz: number, warm: boolean, label: string, name: string) => {
+    const g: any[] = [], wall = warm ? "#2a2c31" : "#24262c";
+    g.push(<B key={`${name}b`} p={[x, 1.05, zz]} s={[1.5, 0.22, 1.1]}><Flat c={wall} /></B>);
     g.push(<B key={`${name}in`} p={[x, 1.165, zz]} s={[1.36, 0.02, 0.96]}><Flat c={warm ? "#ffd9a0" : "#3a4258"} e={warm ? glow("#ffbf6a", 1.1) : glow("#7f9cff", 0.12)} /></B>);
-    for (const dx of [-0.34, 0.34]) g.push(<B key={`${name}d${dx}`} p={[x + dx, 1.2, zz]} s={[0.03, 0.08, 0.96]}><Flat c="#1b1c20" /></B>);
+    for (const dx of [-0.34, 0.34]) g.push(<B key={`${name}d${dx}`} p={[x + dx, 1.235, zz]} s={[0.03, 0.15, 0.96]}><Flat c="#1b1c20" /></B>);
+    for (const sx of [-0.695, 0.695]) g.push(<B key={`${name}wl${sx}`} p={[x + sx, 1.235, zz]} s={[0.03, 0.17, 0.96]}><Flat c={wall} /></B>);
+    for (const sz of [-0.495, 0.495]) g.push(<B key={`${name}wb${sz}`} p={[x, 1.235, zz + sz]} s={[1.42, 0.17, 0.03]}><Flat c={wall} /></B>);
     g.push(<B key={`${name}fr`} p={[x, 1.05, zz + 0.58]} s={[1.5, 0.26, 0.06]}><Flat c={warm ? "#d92128" : "#3c3f47"} e={warm ? glow("#ff3a2a", 0.6) : undefined} /></B>);
     g.push(<Mesh3d key={`${name}lb`} transform={Transform.fromXyz(x, 1.05, zz + 0.62)}><Text3D size={0.11} depth={0.01}>{label}</Text3D><Flat c={warm ? "#ffe600" : "#b9bcc4"} e={warm ? glow("#ffe600", 1.4) : undefined} /></Mesh3d>);
-    for (let i = 0; i < n; i++) { const u = k(t, t0 + i * 0.09, t0 + i * 0.09 + 0.18, Easing.out(Easing.quad));
-      if (u > 0) g.push(<Mesh3d key={`${name}c${i}`} transform={Transform.fromXyz(x + 0.2, lerp(2.2, 1.2 + i * 0.035, u), zz - 0.05).withRotation(Quat.fromEuler("XYZ", 0, i, 0))}><Cylinder radius={0.11} half_height={0.016} /><StandardMaterial base_color="#c9cbd1" metallic={1} perceptual_roughness={0.3} /></Mesh3d>); }
     return g;
   };
-  P.push(...drawer(DX, 0, true, 11, 20.6, "MR DIY  11 SEN", "a"));
+  P.push(...drawer(DX, 0, true, "MR DIY  11 SEN", "a"));
   const sl = k(t, 22.45, 22.95, Easing.out(Easing.cubic));
-  P.push(...drawer(DX + lerp(4.5, 0, sl), -1.45, false, 5, 24.05, "99 SPEEDMART  5 SEN", "b"));
+  P.push(...drawer(DX + lerp(4.5, 0, sl), -1.45, false, "99 SPEEDMART  5 SEN", "b"));
+  // the sen coins: always present (hidden until released), each grows in over its first frames of fall
+  for (const n of Object.keys(PH.coins)) { if (n === "token") continue; const c = phys(n, f), sc = c.s * Math.max(0.001, c.grow);
+    P.push(<Mesh3d key={n} name={`sen_${n}`} transform={Transform.fromXyz(...c.p).withRotation(c.q).withScale([sc, sc, sc])} shape={so().coin}><StandardMaterial base_color="#c9cbd1" metallic={1} perceptual_roughness={0.45} /></Mesh3d>); }
   return <>{P}</>;
 }
 
@@ -186,15 +209,21 @@ function Shot() {
   const doorX = DIY * W + W / 2;
   // the coin: S1 rolls along the five-foot way to the door and through it; S2 rolls down the aisle and drops; S3 falls into the drawer
   let coin: [number, number, number] = [0, 0, 0], roll = 0, yaw = -Math.PI / 2, tilt = 0;
-  if (s1) { const u = k(t, 0, 6.6, Easing.inOut(Easing.quad)); const x = lerp(-9.5, doorX, Math.min(1, u * 1.25)); const z = u < 0.8 ? AR + 0.75 : lerp(AR + 0.75, 0.6, (u - 0.8) / 0.2);
-    coin = [x, 0.57, z]; roll = -x / 0.48; yaw = u < 0.8 ? 0 : -Math.PI / 2 * ((u - 0.8) / 0.2); }
-  if (s2) { const u = k(t, 7.05, 16.4, Easing.inOut(Easing.quad)); coin = [doorX - 0.35, 0.72, lerp(0.6, -1.5, u)]; roll = lerp(0, 9, u); yaw = -Math.PI / 2;
-    const d = k(t, 16.4, 16.9, Easing.in(Easing.quad)); coin = [doorX - 0.35, lerp(0.72, -0.8, d), -1.5]; tilt = d * 1.2; }
-  if (s3) { const d = k(t, 17.01, 17.5, Easing.out(Easing.cubic)); coin = [DX - 0.5, lerp(2.4, 1.2, d), -0.05]; yaw = 0; roll = 0; tilt = Math.PI / 2 * d; }
+  if (s1) { // the path by distance: straight along the five-foot way, then a quarter arc (r 0.8) into the door
+    const CR = 0.483, CY = 0.15 + CR, xa = doorX - 0.35 - 0.8, L1 = xa + 9.5, L = L1 + Math.PI / 2 * 0.8;
+    const d = L * k(t, 0, 6.6, Easing.inOut(Easing.quad));
+    if (d < L1) { coin = [-9.5 + d, CY, 1.4]; yaw = 0; }
+    else { const ph = (d - L1) / 0.8; coin = [xa + 0.8 * Math.sin(ph), CY, 0.6 + 0.8 * Math.cos(ph)]; yaw = -ph; }
+    roll = -d / CR; }
+  if (s2) { const u = k(t, 7.05, 16.4, Easing.inOut(Easing.quad)); const z = lerp(0.6, -0.95, u); roll = -(0.6 - z) / 0.483; yaw = -Math.PI / 2;   // rolls without slipping
+    const a = Math.PI / 2 * k(t, 16.4, 16.9, Easing.in(Easing.quad));   // topples about its bottom edge
+    coin = [doorX - 0.35 + 0.483 * Math.sin(a) - 0.1 * Math.cos(a) + 0.1, 0.15 + 0.483 * Math.cos(a) + 0.1 * Math.sin(a), z]; tilt = -a; }   // falls toward the carton, stops short of it
+  let q: [number, number, number, number] | null = null;
+  if (s3) { const c = phys("token", f); coin = c.p; q = c.q; }
   // camera per shot
   let cam: [number, number, number], look: [number, number, number], focus = 20;
   if (s1) { const u = k(t, 0, 7.05); cam = L3([-8.6, 15.5, 16.5], [doorX - 2.5, 4.2, 8.5], u); look = L3([1.0, 2.2, 1.6], [doorX, 1.3, 0.0], u); focus = lerp(21, 9, u); }
-  else if (s2) { const u = k(t, 7.05, 17.01); cam = L3([doorX + 2.0, 3.4, 1.6], [doorX + 1.5, 2.8, 0.4], u); look = L3([doorX + 0.2, 0.5, -1.6], [doorX + 0.1, 0.3, -2.6], u); focus = lerp(4.1, 3.6, u);
+  else if (s2) { const u = k(t, 7.05, 17.01); cam = L3([doorX + 0.15, 2.8, 1.9], [doorX + 0.1, 2.5, 1.2], u); look = L3([doorX, 0.4, -0.9], [doorX + 0.05, 0.3, -1.4], u);   /* in the doorway, under the lintel (y 2.95) */   /* coin lane and carton both in frame */ focus = lerp(4.1, 3.6, u);
     }
   else { const u = k(t, 17.01, 22.2), v = k(t, 22.3, 23.2); cam = L3(L3([DX - 0.25, 3.5, 3.25], [DX - 0.1, 3.2, 3.1], u), [DX + 0.3, 5.0, 3.2], v); /* stay > 3 m from the drawer light: inside its range the frame renders black */ look = L3([DX, 1.1, 0.05], [DX, 1.0, -0.65], v); focus = lerp(2.9, 4.6, v); }
   // the carton and the own-brand stamp (S2)
@@ -218,7 +247,7 @@ function Shot() {
       <PointLight transform={Transform.fromXyz(DX, 2.0, 0.2)} intensity={300000} color="#ffcf8a" range={3} />
       <SpotLight transform={Transform.fromXyz(DX + 0.8, 4.5, 1.5).lookingAt([DX + 0.8, 1, 0])} intensity={900000} outer_angle={0.6} inner_angle={0.2} color="#b9c9ff" range={8} shadow_maps_enabled />
       <VolumetricFog ambient={0.02} ambientColor="#2a3550" />
-      <FogVolume name="haze" position={[2, 2.5, AR + 2]} scale={[30, 5, 12]} density={0.035} color="#c9d4ff" scattering={0.6} anisotropy={0.6} falloff={0.6} />
+      <FogVolume name="haze" position={[2, 2.5, AR + 2]} scale={[30, 5, 12]} density={s2 ? 0.008 : 0.035} color="#c9d4ff" scattering={0.6} anisotropy={0.6} falloff={0.6} />
       <Fog color="#14161c" near={40} far={120} />
       <Bloom intensity={0.9} threshold={0.9} />
       <AmbientOcclusion quality="high" />
@@ -227,11 +256,11 @@ function Shot() {
       <Street />
       {UNITS.map((i) => <Unit key={i} i={i} t={t} />)}
       {/* S2: carton slides in on the hand truck line, the stamp drops OWN BRAND on it */}
-      <B p={[lerp(doorX + 2.6, doorX + 0.5, cartonIn), 0.45, -1.8]} s={[0.6, 0.5, 0.5]}><StandardMaterial base_color="#c9a26a" perceptual_roughness={0.8} /></B>
-      <B p={[doorX + 0.5, lerp(2.4, 0.86, Math.max(0, stamp)), -1.8]} s={[0.3, 0.2, 0.3]}><Flat c="#d92128" r={0.4} /></B>
-      <Mesh3d transform={Transform.fromXyz(doorX + 0.5, 0.705, -1.8).withRotation(Quat.fromEuler("XYZ", -Math.PI / 2, 0, 0)).withScale([label, label, label])}><Text3D size={0.09} depth={0.004}>OWN BRAND</Text3D><Flat c="#d92128" e={glow("#ff3a2a", 0.4)} /></Mesh3d>
-      <Drawers t={t} />
-      <Mesh3d name="coin" transform={Transform.fromXyz(...coin).withRotation(Quat.fromEuler("YXZ", yaw, tilt, roll)).withScale([s3 ? 0.55 : 1.15, s3 ? 0.55 : 1.15, s3 ? 0.55 : 1.15])} shape={so().coin}>
+      <Model src={S("cardboard_box_01/cardboard_box_01.gltf")} position={[lerp(doorX + 2.6, doorX + 0.5, cartonIn), 0.21, -1.85]} scale={[1.5, 1.5, 1.5]} />   {/* Poly Haven carton, top at y 0.70 */}
+      <Model src={S("parts/stamp.glb")} position={[doorX + 0.5, lerp(2.4, 0.708, Math.max(0, stamp)), -1.8]} scale={[0.8, 0.8, 0.8]} />   {/* Rubber Stamp, Poly by Google (CC-BY), stamp.py */}
+      <Mesh3d castShadow={false} transform={Transform.fromXyz(doorX + 0.5, 0.705, -1.8).withRotation(Quat.fromEuler("XYZ", -Math.PI / 2, 0, 0)).withScale([label, label, label])}><Text3D size={0.09} depth={0.004}>OWN BRAND</Text3D><Flat c="#d92128" e={glow("#ff3a2a", 0.4)} /></Mesh3d>
+      <Drawers t={t} f={f} />
+      <Mesh3d name="coin" transform={Transform.fromXyz(...coin).withRotation(q ?? Quat.fromEuler("YXZ", yaw, tilt, roll)).withScale([s3 ? 0.14 / 0.42 : 1.15, s3 ? 0.14 / 0.42 : 1.15, s3 ? 0.14 / 0.42 : 1.15])} shape={so().coin}>
         <StandardMaterial base_color="#e3b04a" metallic={1} perceptual_roughness={0.22} emissive={glow("#ffb347", 0.25)} /></Mesh3d>
     </AbsoluteFill>
   );
