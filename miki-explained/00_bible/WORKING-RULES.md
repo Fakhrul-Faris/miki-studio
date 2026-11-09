@@ -91,6 +91,7 @@ Change a locked trait only when the user says so by name. "Make it better" never
 
 | Date | What I showed | Verdict (user's words) | Lesson |
 |---|---|---|---|
+| 2026-11-09 | EX30 v1 L04 (worm's-eye factory, 97% in the sky) | "i'm not sure what being shown on this scene" | Name the place on the place (logo on the building); side-on objects read, head-on silhouettes don't; never let the key prop overlap the scenery. Ask of every frame: would a muted viewer know what this is in 1 s? |
 | 2026-11-09 | EX29 full v1 (39 s, silent) | "this is the new baseline for style A … take note on what's failing. we can't repeat the same on next episode … where's the sound effect … why i took so long" | Baseline + failure list in §1; sound in every render; render budget in §5. |
 | 2026-11-09 | A video v2 | "everything looks good. but some of the scene do look washed out" | Volumetric cone/fog washout (failure 6). |
 | 2026-11-09 | A video preview v1 (26 s, voice-timed) | "flickering … at the shops curb … on 0:18 … some object pass through other object. that defeat realism … the coin can receive more detail … the stamp should be stamp glb" | Physics bake, flicker causes (§6), reeded coin, real stamp model. |
