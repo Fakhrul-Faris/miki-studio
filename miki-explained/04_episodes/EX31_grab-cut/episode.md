@@ -1,6 +1,6 @@
 # EX31 — Grab's Cut
 
-Status: **draft script + Style A plan for approval (2026-11-10)**
+Status: **final 2026-11-10** `export/EX31-Final.mp4` (32.6 s, 30 fps, −14 LUFS, Style A from the EX29 baseline) · Telegram /ex31 · slot Wed 11 Nov 21:00
 Strategy: Malaysian everyday business · timely (Parliament reply 5 Nov 2026) · 25–30 s · **Style A** (WORKING-RULES §1;
 starts from the EX29 baseline and must not repeat its 9 listed failures).
 
