@@ -149,16 +149,12 @@ rows. Ids: places-003, 006, 010, cam-006, core-035. On screen: a Malaysian shop 
 | Character acting, faceted portrait figures, painterly scenes | **Drop** | off-limits / not buildable by hand-coded SVG |
 | Fast title-sequence pacing | **Drop** | wrong pace for 20–30 s explainers |
 
-## 12. Decisions carried over and questions
-Carried over from BIBLE-A (user, 2026-11-08): accent from brand + meaning; match cut allowed in identical framing;
-daylight to explain, dusk for payoff; styles share techniques.
-Questions for the user (max 3):
-1. **Which line family is B's default:** Burford-style thin black line + hard black shadow (invented machines read
-   instantly), or no-line Favre/Patterson shapes (warmer, more cinematic)? Proposal: no-line for places and light,
-   line family only for the "machine" beats inside the same episode.
-2. **Grain on or off by default?** Nearly every north star has grain; EX27 used a light grain. Proposal: on, subtle.
-3. **Is a cross-section/cutaway building acceptable as a recurring B set** even though A also uses cutaways? Proposal:
-   yes, but drawn flat (B) vs modelled (A) so the A/B test still compares looks.
+## 12. Decisions (user, 2026-11-09)
+Carried over (2026-11-08): accent from brand + meaning; match cut allowed in identical framing; day to explain, dusk
+for payoff; styles share techniques.
+1. **No line** is the default drawing family (Favre/Patterson shapes). The thin-line family is not used.
+2. **Grain on, kept subtle.**
+3. **Cut-open buildings are allowed** as a recurring set, drawn flat (so they still differ from A's modelled cutaways).
 
 ## 13. Test plan (not built)
 Same business as the A test.

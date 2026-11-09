@@ -135,16 +135,12 @@ or its problem is big; the person small; negative space leaves room for captions
 | Painterly character close-ups | **Drop** | faces off-limits |
 | Fast montage | **Drop** | plates need 3–6 s each |
 
-## 12. Decisions carried over and questions
-Carried over (user, 2026-11-08): accent from brand + meaning; match cut allowed in identical framing; day to explain,
-dusk for payoff; styles share techniques.
-Questions (max 3):
-1. **Malaysia as the default setting for C?** The user's own places folder is mostly mamak/kopitiam/KL. Proposal: yes,
-   C is the "home" style — local places, night light.
-2. **Night by default?** Most north stars are night/dusk. Proposal: night for F&B and street businesses, day for
-   heritage/morning ones.
-3. **Texture family:** painterly grain (Guy Shield/Katherine Lam) vs watercolour (places-033). Proposal: painterly
-   grain default; watercolour for heritage episodes.
+## 12. Decisions (user, 2026-11-09)
+Carried over (2026-11-08): accent from brand + meaning; match cut allowed in identical framing; day to explain, dusk
+for payoff; styles share techniques.
+1. **Malaysia is the default setting** for Style C (local places, true detail).
+2. **Night by default** for F&B and street businesses; day for heritage/morning ones.
+3. **Painterly grain** is the default texture; watercolour for heritage episodes.
 
 ## 13. Test plan (not built)
 Same business as the A/B tests.
