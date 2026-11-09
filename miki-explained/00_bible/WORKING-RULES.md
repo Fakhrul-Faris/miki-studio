@@ -34,6 +34,26 @@ Change a locked trait only when the user says so by name. "Make it better" never
 | Motion | A token (coin) travels and carries every handover; objects move inside the scene (shutters, lights, cartons); figures hold poses. |
 | Renderer | **raea** (build and animate). Blender only to model or split assets that raea can't, exported as GLB. |
 
+**Baseline (user 2026-11-09): EX29 full v1** (`04_episodes/EX29_mrdiy-margin/export/EX29_full_v1_sfx.mp4`, source
+`_tests/style-test-mrdiy/A2/video_a.tsx`). Every new Style A episode starts from this file and must be at least this good.
+
+**Style A — known failures in the baseline. The next episode must not repeat them** (user: "we can't repeat the same"):
+1. **A line shown only in the voice.** L03 "factories, China, no middleman" had nothing on screen. Every claim in a line gets
+   a visual (house rule "visualise the script"); check line by line before building.
+2. **Plain stand-in sets.** The S3 drawers were boxes on a grey counter while a library cash-register model sat unused.
+   No primitive-box set where a real model exists; search `A2/media/` and the libraries first.
+3. **The dark world only on the street.** Interiors and inserts went bright beige/grey. Every set keeps the dark world:
+   dark surroundings, the subject as the warm light.
+4. **Token scale.** The coin was ~1 m across next to people. Keep the token believable next to figures (or make the
+   giant scale a deliberate, stated idea).
+5. **Small key reads in the final wide.** The "?" signs were tiny. A payoff object must read at phone size.
+6. **Washout.** A camera inside a volumetric light cone or fog volume hazes the frame: dim the cone and fog when the
+   camera is near (`near` in video_a.tsx), check contrast on every shot.
+7. **Sound forgotten.** v1 was delivered silent. Sound (sparse SFX + bed) is part of every render, not an extra.
+8. **Pass-through and flicker** (fixed in v1, keep the checks): baked physics for falls; every path against every
+   prop; stable part counts; no coplanar faces; chunked renders + `frames_check.py`.
+9. **Speed** (3 h for one episode): see §5 "Render budget".
+
 ### Style B — the flat world of objects and light (BIBLE-B)
 | Trait | Locked value |
 |---|---|
@@ -71,6 +91,8 @@ Change a locked trait only when the user says so by name. "Make it better" never
 
 | Date | What I showed | Verdict (user's words) | Lesson |
 |---|---|---|---|
+| 2026-11-09 | EX29 full v1 (39 s, silent) | "this is the new baseline for style A … take note on what's failing. we can't repeat the same on next episode … where's the sound effect … why i took so long" | Baseline + failure list in §1; sound in every render; render budget in §5. |
+| 2026-11-09 | A video v2 | "everything looks good. but some of the scene do look washed out" | Volumetric cone/fog washout (failure 6). |
 | 2026-11-09 | A video preview v1 (26 s, voice-timed) | "flickering … at the shops curb … on 0:18 … some object pass through other object. that defeat realism … the coin can receive more detail … the stamp should be stamp glb" | Physics bake, flicker causes (§6), reeded coin, real stamp model. |
 | 2026-11-09 | A v3 lighting test: white / dark / dusk | "i actually like dark better" | Style A world = dark, the business is the light. |
 | 2026-11-09 | A v2: eye-level realistic street in raea | "should it be isometric with white building and world… this is completely opposite" | Fix the named dimension; never swap the style. |
@@ -100,7 +122,9 @@ Change a locked trait only when the user says so by name. "Make it better" never
 | Materials and textures | **MaterialCraft** (`materialcraft-cli new pbr / export / render`), **TextureCraft** (`texturecraft-cli`), Poly Haven textures | Installed 2026-11-09 (apps in /Applications, CLIs in ~/.local/bin). Export PBR maps (basecolor, normal, roughness, AO, height) for raea. |
 | Flat motion (Style B) | HyperFrames | `flat-v3-playbook.md`. |
 | Plates and video (Style C) | Seedream / Seedance (the user generates from my prompts) | Prompts short (memory `short-generation-prompts`). |
-| Captions | raea `tools/raea/kit/Captions.tsx` (EX15) | — |
+| Captions | raea `tools/raea/kit/Captions.tsx` (EX15) | Built from `audio/vo_timeline.json` (`EX29_mrdiy-margin/build_vo.py`, `fix_caps.py`). |
+| SFX | `EX29_mrdiy-margin/sfx_ex29.py` pattern: library samples + synthesised shutter / coin clinks timed from the physics bake, drone bed, loudnorm −14 | Part of every render. Sparse; silent ending. |
+| **Render budget** | Preview frames at `--w 540` via `--at` batches (≤ 30 frames); full render only once per approval, in 300-frame chunks | Each full 39 s render is ~10 min + checks. Batch fixes before re-rendering; never re-render for one change. |
 | Physics (drops, bounces, settling) | **Blender rigid body (Bullet) baked** → JSON → raea plays it back (`_tests/style-test-mrdiy/A2/phys_bake.py`, `phys_check.py`) | User 2026-11-09: objects must never pass through each other. Pick a seed that passes the check (every body in place, still once settled). |
 
 ## 7. The shot loop (adopted 2026-11-09 from the user's multi-engine brief)
