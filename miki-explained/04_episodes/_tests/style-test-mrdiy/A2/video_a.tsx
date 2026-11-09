@@ -184,7 +184,7 @@ function Drawers({ t, f }: { t: number; f: number }) {
   const drawer = (x: number, zz: number, warm: boolean, label: string, name: string) => {
     const g: any[] = [], wall = warm ? "#2a2c31" : "#24262c";
     g.push(<B key={`${name}b`} p={[x, 1.05, zz]} s={[1.5, 0.22, 1.1]}><Flat c={wall} /></B>);
-    g.push(<B key={`${name}in`} p={[x, 1.165, zz]} s={[1.36, 0.02, 0.96]}><Flat c={warm ? "#ffd9a0" : "#3a4258"} e={warm ? glow("#ffbf6a", 1.1) : glow("#7f9cff", 0.12)} /></B>);
+    g.push(<B key={`${name}in`} p={[x, 1.165, zz]} s={[1.36, 0.02, 0.96]}><Flat c={warm ? "#d9a86a" : "#3a4258"} e={warm ? glow("#ffb055", 0.35) : glow("#7f9cff", 0.12)} /></B>);
     for (const dx of [-0.34, 0.34]) g.push(<B key={`${name}d${dx}`} p={[x + dx, 1.235, zz]} s={[0.03, 0.15, 0.96]}><Flat c="#1b1c20" /></B>);
     for (const sx of [-0.695, 0.695]) g.push(<B key={`${name}wl${sx}`} p={[x + sx, 1.235, zz]} s={[0.03, 0.17, 0.96]}><Flat c={wall} /></B>);
     for (const sz of [-0.495, 0.495]) g.push(<B key={`${name}wb${sz}`} p={[x, 1.235, zz + sz]} s={[1.42, 0.17, 0.03]}><Flat c={wall} /></B>);
@@ -237,17 +237,17 @@ function Shot() {
       <AmbientLight brightness={14} color="#8ea4dc" />
       <DirectionalLight color="#a7bdff" transform={Transform.fromXyz(-22, 18, 6).lookingAt([0, 0, 0])} illuminance={3000} shadow_maps_enabled soft_shadow_size={1.2} />
       <Shadows distance={45} firstCascade={14} mapSize={4096} bias={0.04} normalBias={1.5} />
-      <RectLight transform={Transform.fromXyz(doorX, 3.3, -1.6).lookingAt([doorX, 0, -1.2])} intensity={260000 * lit * (s2 ? 0.4 : 1)} width={3.4} height={3.0} color="#ffe9cc" range={8} />
-      <PointLight transform={Transform.fromXyz(doorX, 2.6, -2.4)} intensity={900000 * lit * (s2 ? 0.4 : 1)} color="#ffe3bd" range={8} shadow_maps_enabled soft_shadows_enabled radius={0.6} />
-      <SpotLight transform={Transform.fromXyz(doorX, 3.0, -0.4).lookingAt([doorX, 0, AR + 3.5])} intensity={3200000 * lit} outer_angle={1.3} inner_angle={0.02} color="#ffcf92" range={18} shadow_maps_enabled soft_shadows_enabled radius={1.2} volumetric />
+      <RectLight transform={Transform.fromXyz(doorX, 3.3, -1.6).lookingAt([doorX, 0, -1.2])} intensity={260000 * lit * (s2 ? 0.25 : 1)} width={3.4} height={3.0} color="#ffe9cc" range={8} />
+      <PointLight transform={Transform.fromXyz(doorX, 2.6, -2.4)} intensity={900000 * lit * (s2 ? 0.3 : 1)} color="#ffe3bd" range={8} shadow_maps_enabled soft_shadows_enabled radius={0.6} />
+      <SpotLight transform={Transform.fromXyz(doorX, 3.0, -0.4).lookingAt([doorX, 0, AR + 3.5])} intensity={3200000 * lit * (s2 ? 0.08 : 1)} outer_angle={1.3} inner_angle={0.02} color="#ffcf92" range={18} shadow_maps_enabled soft_shadows_enabled radius={1.2} volumetric />
       <PointLight transform={Transform.fromXyz(doorX, 4.0, AR + 0.9)} intensity={420000} color="#ff4a3a" range={4.5} />
       <PointLight transform={Transform.fromXyz(SPD * W + W / 2, 1.2, -0.8)} intensity={260000} color="#8fb0ff" range={6} />
       <PointLight transform={Transform.fromXyz(13, 6.5, AR + 9.4)} intensity={700000} color="#cfe0ff" range={14} />
       {/* S3 drawer light: warm from Mr DIY's drawer, cool key over the counter */}
       <PointLight transform={Transform.fromXyz(DX, 2.0, 0.2)} intensity={300000} color="#ffcf8a" range={3} />
-      <SpotLight transform={Transform.fromXyz(DX + 0.8, 4.5, 1.5).lookingAt([DX + 0.8, 1, 0])} intensity={900000} outer_angle={0.6} inner_angle={0.2} color="#b9c9ff" range={8} shadow_maps_enabled />
+      <SpotLight transform={Transform.fromXyz(DX + 0.8, 4.5, 1.5).lookingAt([DX + 0.8, 1, 0])} intensity={600000} outer_angle={0.6} inner_angle={0.2} color="#b9c9ff" range={8} shadow_maps_enabled />
       <VolumetricFog ambient={0.02} ambientColor="#2a3550" />
-      <FogVolume name="haze" position={[2, 2.5, AR + 2]} scale={[30, 5, 12]} density={s2 ? 0.008 : 0.035} color="#c9d4ff" scattering={0.6} anisotropy={0.6} falloff={0.6} />
+      <FogVolume name="haze" position={[2, 2.5, AR + 2]} scale={[30, 5, 12]} density={s2 ? 0 : 0.035} color="#c9d4ff" scattering={0.6} anisotropy={0.6} falloff={0.6} />
       <Fog color="#14161c" near={40} far={120} />
       <Bloom intensity={0.9} threshold={0.9} />
       <AmbientOcclusion quality="high" />
