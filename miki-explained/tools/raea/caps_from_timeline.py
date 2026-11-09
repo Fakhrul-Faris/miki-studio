@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """EX15 caption blocks straight from audio/vo_timeline.json (raea episodes; the EffectCraft-era caps.py did the same into
 caps.jsx): a block ends at a sentence end once it is long enough, or at MAXC characters; words from STOP on (the end card)
-are skipped; FIX maps Whisper's spelling back to the script's (an empty right side drops the fragment). Word widths are measured in Inter Display Medium 46 px.
+are skipped; FIX maps Whisper's spelling back to the script's (an empty right side drops the fragment). Word widths are measured in Inter Display Medium 36 px.
    python3 tools/raea/caps_from_timeline.py EPISODE_DIR OUT.json [--stop L05:follow] [--fix 'sixty-six=66'] ..."""
 import argparse, json, os
 from PIL import ImageFont
@@ -12,7 +12,7 @@ FPS, HOLD, MINC, MAXC = a.fps, 18, 9, 64
 tl = json.load(open(os.path.join(a.ep, "audio", "vo_timeline.json")))
 fix = dict(x.split("=", 1) for x in a.fix)
 stop_line, stop_word = (a.stop.split(":") + [""])[:2] if a.stop else ("", "")
-font = ImageFont.truetype(os.path.expanduser("~/Library/Fonts/InterDisplay-Medium.ttf"), 46)
+font = ImageFont.truetype(os.path.expanduser("~/Library/Fonts/InterDisplay-Medium.ttf"), 36)
 seq = []
 for line, ws in tl["words"].items():
     for i, (w, t) in enumerate(ws):

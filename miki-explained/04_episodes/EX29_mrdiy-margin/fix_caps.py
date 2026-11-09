@@ -2,7 +2,7 @@
 import json
 from PIL import ImageFont
 import os
-font = ImageFont.truetype(os.path.expanduser("~/Library/Fonts/InterDisplay-Medium.ttf"), 46)
+font = ImageFont.truetype(os.path.expanduser("~/Library/Fonts/InterDisplay-Medium.ttf"), 36)
 B = json.load(open("build/caps.json")); words = [w for b in B for w in b["words"]]
 REN = {"cheap,": "cheap.", "but": "But", "part": "Part"}
 for i, w in enumerate(words):

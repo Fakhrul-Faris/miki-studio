@@ -2,12 +2,13 @@
 // 2026-11-07 fixes: lines are CENTRED (each on its own width; never justified, words never move once placed), and the
 // dark panel grows outward from the centre WITH the words — its edges follow each word's own fade-in, so it can't lag.
 // Each word fades in and rises 10 px on its spoken frame. Durations are in seconds (fps-independent).
-// Data: tools/raea/caps_from_timeline.py (word widths measured in Inter Display Medium 46 px).
+// Data: tools/raea/caps_from_timeline.py (word widths measured in Inter Display Medium 36 px).
 //   <Captions blocks={caps} frame={useCurrentFrame()} fps={60} />
 import { Easing, interpolate } from "raea";
 
 export type CapBlock = { in: number; out: number; words: { w: string; f: number; width: number }[] };
-const W = 1080, SIZE = 46, MAXW = 820, BOTTOM = 1430, PADX = 30, PADY = 20;
+const W = 1080, SIZE = 36, MAXW = 820, BOTTOM = 1420,   // 36 px since 2026-11-08 (STATUS, WORKING-RULES §2)
+      PADX = 30, PADY = 20;
 const LINE_H = Math.round(SIZE * 1.34), SP = SIZE * 0.27, INK = "#EDE7DC", PANEL = "rgba(14,14,16,0.82)";
 const ease = Easing.bezier(0.33, 0, 0.2, 1);
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;

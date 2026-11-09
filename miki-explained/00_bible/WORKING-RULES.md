@@ -50,7 +50,7 @@ Change a locked trait only when the user says so by name. "Make it better" never
 6. **Washout.** A camera inside a volumetric light cone or fog volume hazes the frame: dim the cone and fog when the
    camera is near (`near` in video_a.tsx), check contrast on every shot.
 7. **Sound forgotten.** v1 was delivered silent. Sound (sparse SFX + bed) is part of every render, not an extra.
-8. **Pass-through and flicker** (fixed in v1, keep the checks): baked physics for falls; every path against every
+8. **Pass-through and flicker** (fixed in v1 except the coin grazing the rack at 10.4 s, which raea's clipping log reported — read that log): baked physics for falls; every path against every
    prop; stable part counts; no coplanar faces; chunked renders + `frames_check.py`.
 9. **Speed** (3 h for one episode): see §5 "Render budget".
 
@@ -124,7 +124,7 @@ Change a locked trait only when the user says so by name. "Make it better" never
 | Plates and video (Style C) | Seedream / Seedance (the user generates from my prompts) | Prompts short (memory `short-generation-prompts`). |
 | Captions | raea `tools/raea/kit/Captions.tsx` (EX15) | Built from `audio/vo_timeline.json` (`EX29_mrdiy-margin/build_vo.py`, `fix_caps.py`). |
 | SFX | `EX29_mrdiy-margin/sfx_ex29.py` pattern: library samples + synthesised shutter / coin clinks timed from the physics bake, drone bed, loudnorm −14 | Part of every render. Sparse; silent ending. |
-| **Render budget** | Preview frames at `--w 540` via `--at` batches (≤ 30 frames); full render only once per approval, in 300-frame chunks | Each full 39 s render is ~10 min + checks. Batch fixes before re-rendering; never re-render for one change. |
+| **Render budget** (user 2026-11-09: "apply things to make it faster from now on") | Looks: `tools/raea/preview.sh EDIT.tsx f1,f2,… sheet.jpg` (540 px, one batch). Final: `tools/raea/render_ep.sh EDIT.tsx FRAMES OUT.mp4 AUDIO.wav [cuts]` (300-frame chunks, every frame checked, bad frames auto-repaired) — once per approval | Collect all fixes, then one render. Never a full render to check a single change; never wait on a render without working on the next step. Physics: bake once, pick the seed with `phys_check.py`. |
 | Physics (drops, bounces, settling) | **Blender rigid body (Bullet) baked** → JSON → raea plays it back (`_tests/style-test-mrdiy/A2/phys_bake.py`, `phys_check.py`) | User 2026-11-09: objects must never pass through each other. Pick a seed that passes the check (every body in place, still once settled). |
 
 ## 7. The shot loop (adopted 2026-11-09 from the user's multi-engine brief)
