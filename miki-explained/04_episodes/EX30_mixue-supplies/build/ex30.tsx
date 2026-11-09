@@ -11,6 +11,8 @@ import { StandardMaterial } from "raea/pbr";
 import { DirectionalLight, PointLight, Shadows, SpotLight } from "raea/light";
 import { Quat, Transform } from "raea/transform";
 import { Camera3d } from "raea/camera";
+import CAPS from "./caps.json";
+import { Captions, type CapBlock } from "../../../tools/raea/kit/Captions";
 
 const S = (p: string) => staticFile(p);
 const FPS = 30;
@@ -100,13 +102,14 @@ function Lorry({ x, z, r = 0, logo = true, k: key }: { x: number; z: number; r?:
     {box("c", [2.75, 1.25, 0], [1.4, 1.9, 2.0], "#e4e6ea")}
     {box("w", [3.42, 1.7, 0], [0.06, 0.7, 1.7], N1)}
     {[-1.4, 1.2, 2.75].flatMap((dx) => [-1, 1].map((sz) => <Mesh3d key={`${key}wh${dx}${sz}`} transform={Transform.fromXyz(...at(dx, 0.42, sz * 1.0)).withRotation(Quat.mul(q, Quat.fromRotationX(Math.PI / 2)))}><Cylinder radius={0.42} half_height={0.15} /><StandardMaterial base_color={N0} /></Mesh3d>))}
+    {logo && <Mesh3d key={key + "lt"} pass="ui" transform={Transform.fromXyz(...at(-2.106, 1.85, 0)).withRotation(Quat.mul(q, Quat.fromRotationY(-Math.PI / 2)))}><Cuboid half_size={[0.95, 0.31, 0.004]} /><StandardMaterial base_color="#ffffff" base_color_texture={S("mixue_box.png")} unlit /></Mesh3d>}
     {logo && <Mesh3d key={key + "lg"} pass="ui" transform={Transform.fromXyz(...at(0, 1.85, 1.06)).withRotation(q)}><Cuboid half_size={[1.5, 0.5, 0.004]} /><StandardMaterial base_color="#ffffff" base_color_texture={S("mixue_box.png")} unlit /></Mesh3d>}
   </>;
 }
 
 // ---------- L02: the town from above — rows of shoplots; Mixue fronts glow red one by one (unlit "ui" boxes: they stay pure red)
 const TOWN = (() => { const out: [number, number, number][] = []; let n = 0;           // [x, z, order]
-  for (let r = 0; r < 5; r++) for (let i = -6; i <= 6; i++) { const h = (i * 7 + r * 13 + 5) % 11; if (h < 3 || (r === 2 && i === 0)) out.push([i * W + W / 2, -r * 26, n++]); }
+  for (let r = 1; r < 5; r++) for (let i = -6; i <= 6; i++) { const h = (((i * 7 + r * 13 + 5) % 11) + 11) % 11; if (h < 4) out.push([i * W + W / 2, -r * 26, n++]); }
   return out; })();
 function Town({ on }: { on: number }) {
   const P: any[] = [];
@@ -134,12 +137,19 @@ function Lane({ t }: { t: number }) {
   P.push(<B key="lg" p={[LX, -0.02, 4]} s={[20, 0.04, 10]} c={N2} />);                               // lane floor
   P.push(<B key="ldr" p={[LX, 0.01, 1.4]} s={[20, 0.02, 0.4]} c={N0} />);                            // drain
   for (let n = 0; n < 3; n++) P.push(<B key={`lp${n}`} p={[LX - 7 + n * 0.3, 3.5 + n * 0.5, -0.6]} s={[0.12, 7, 0.12]} c={N1} />);   // pipes
+  for (let n = 0; n < 10; n++) P.push(<B key={`lgr${n}`} p={[LX - 4 + n * 0.5, 0.012, 1.4]} s={[0.06, 0.02, 0.36]} c={N3} />);         // drain grate
+  P.push(<Model key="lac" src={S("exterior_aircon_unit/exterior_aircon_unit.gltf")} position={[LX - 3.2, 3.6, -0.6]}><StandardMaterial base_color={N3} /></Model>);
+  for (let c = 0; c < 4; c++) P.push(<Model key={`lcr${c}`} src={S("plastic_crate_01/plastic_crate_01.gltf")} position={[LX - 4.6 + (c % 2) * 0.45, Math.floor(c / 2) * 0.29, 0.1]} rotation={[0, c * 0.3, 0]}><StandardMaterial base_color={c % 2 ? RED2 : N4} /></Model>);
+  for (const [x, z, w, d] of [[LX - 2.5, 3.2, 1.8, 0.7], [LX + 0.5, 4.4, 1.2, 0.5]]) P.push(<Mesh3d key={`lpd${x}`} transform={Transform.fromXyz(x, 0.005, z).withScale([w / 2, 1, d / 2])}><Cylinder radius={1} half_height={0.005} /><StandardMaterial base_color={N4} /></Mesh3d>);
   // cartons: on the tailgate at first, they slide down onto the trolley (L03 motion)
-  for (let n = 0; n < 4; n++) { const u = k(t, n * 0.25, n * 0.25 + 0.6);
+  const WORD = [13.15, 13.71, 14.23, 14.79], LABEL = ["SUSU", "SIRAP", "CAWAN", "MESIN"];      // "milk, syrup, cups, machines" (film time)
+  for (let n = 0; n < 4; n++) { const u = k(t, WORD[n] - 0.45, WORD[n] + 0.05, Easing.in(Easing.quad));
+    const pos = L3([LX + 2.7 + (n % 2) * 0.4, 0.95 + Math.floor(n / 2) * 0.5, 2.8 + (n % 2) * 0.3], [LX + 0.9, 0.2 + n * 0.5, 1.9], u);
+    P.push(<Mesh3d key={`ll${n}`} name={`ll${n}`} pass="ui" transform={Transform.fromXyz(pos[0] - 0.34, pos[1] + 0.25, pos[2]).withRotation(Quat.fromRotationY(-Math.PI / 2))}><Text3D size={0.12} depth={0.005}>{LABEL[n]}</Text3D><StandardMaterial base_color={RED} unlit /></Mesh3d>);
     P.push(<Model key={`lc${n}`} src={S("cardboard_box_01/cardboard_box_01.gltf")} position={L3([LX + 2.7 + (n % 2) * 0.4, 0.95 + Math.floor(n / 2) * 0.5, 2.8 + (n % 2) * 0.3], [LX + 0.9, 0.2 + n * 0.5, 1.9], u)} scale={[1.2, 1.2, 1.2]}><StandardMaterial base_color="#c99a62" /></Model>); }
   P.push(<Model key="ltr" src={S("hand_truck/hand_truck.gltf")} position={[LX + 0.9, 0, 1.6]} rotation={[0, -1.4, 0]}><StandardMaterial base_color={N4} /></Model>);
   P.push(<Model key="low" src={S("people/s_m30.glb")} position={[LX - 0.2, 0, 2.6]} rotation={[0, Math.PI / 2, 0]}><StandardMaterial base_color={N0} /></Model>);
-  P.push(<Lorry key="lry" k="lry" x={LX + 4.9} z={3.0} r={0} />);
+  P.push(<Lorry key="lry" k="lry" x={LX + 4.9 + 14 * k(t, 15.6, 16.7, Easing.in(Easing.quad))} z={3.0} r={0} />);   // "…from Mixue": it drives off
   return <>{P}</>;
 }
 
@@ -154,8 +164,8 @@ function Factory({ t }: { t: number }) {
   for (let n = 0; n < 7; n++) { const z = -9 + ((n * 4.6 + t * 6) % 30);                             // the stream of lorries toward us
     P.push(<Lorry key={`fl${n}`} k={`fl${n}`} x={FX + (n % 2 ? 2.2 : -2.2)} z={z} r={-Math.PI / 2} logo={false} />); }
   P.push(<B key="fw" p={[FX - 1.0, 0.5, 31]} s={[3, 1, 0.5]} c={N3} />);                              // the low wall, near camera
-  P.push(<Mesh3d key="fcn" transform={Transform.fromXyz(FX - 1.0, 1.28, 31).withScale([0.22, 0.22, 0.22])} shape={so().cone}><StandardMaterial base_color={GOLD} /></Mesh3d>);
-  P.push(<Mesh3d key="fsw" transform={Transform.fromXyz(FX - 1.0, 1.38, 31).withScale([0.22, 0.22, 0.22])} shape={so().swirl}><StandardMaterial base_color={CREAM} /></Mesh3d>);
+  P.push(<Mesh3d key="fcn" transform={Transform.fromXyz(FX - 1.0, 1.28, 31).withScale([0.22, 0.22, 0.22])} shape={so().cone} pass="ui"><StandardMaterial base_color={GOLD} unlit /></Mesh3d>);   // the customer's cone: the one warm thing here (matches the kiosk's sign)
+  P.push(<Mesh3d key="fsw" pass="ui" transform={Transform.fromXyz(FX - 1.0, 1.38, 31).withScale([0.22, 0.22, 0.22])} shape={so().swirl}><StandardMaterial base_color={CREAM} unlit /></Mesh3d>);
   return <>{P}</>;
 }
 
@@ -170,14 +180,20 @@ const BEATS: Beat[] = [
   { cam: [CX - 1.2, 2.0, AR + 11], look: [CX + 0.2, 1.6, 1.0], fov: 0.85 },                // L05 the kiosk closing
 ];
 
-function Shot({ beat, t }: { beat: number; t: number }) {
-  const b = BEATS[beat], closing = beat === 4 ? 0.55 : 0;
+function Rain({ t }: { t: number }) {
+  return <>{Array.from({ length: 70 }, (_, n) => { const x = CX - 6 + ((n * 37) % 120) / 10, z = 1.5 + ((n * 53) % 110) / 10, y = 8 - ((t * 9 + (n * 0.61)) % 8);
+    return <B key={`rn${n}`} p={[x, y, z]} s={[0.012, 0.42, 0.012]} c={N5} />; })}</>;
+}
+
+type State = { cam: [number, number, number]; look: [number, number, number]; fov: number; T: number; closing: number; townOn: number; customer: boolean; cartons: boolean; caps?: number };
+function Shot({ st }: { st: State }) {
+  const b = st, closing = st.closing, t = st.T, beat = -1;
   return (
     <AbsoluteFill style={{ background: N0 }}>
       <Camera3d transform={Transform.fromXyz(...b.cam).lookingAt(b.look)} projection={{ Perspective: { fov: b.fov } }} />
       <Look mode="paint" bands={3} shadow="#33475e" mid="#5d7488" grain={0.4} rag={1.6} sky={[N0, N2]} palette={PALETTE} skip={["ui"]} />
       <DirectionalLight transform={Transform.fromXyz(-8, 9, -6).lookingAt([0, 0, 2])} illuminance={2400} color="#9fc3d0" shadow_maps_enabled />
-      <Shadows distance={beat === 1 ? 160 : 45} firstCascade={beat === 1 ? 150 : 35} cascades={1} mapSize={4096} />
+      <Shadows distance={160} firstCascade={150} cascades={1} mapSize={4096} />
       {/* the 8 paint lights (raea's limit), always present: Mixue's four at the kiosk, the lane's two, the factory's two */}
       <PointLight name="k1" transform={Transform.fromXyz(CX, 2.0, -1.4)} intensity={1500000 * (1 - closing)} color="#ff8a7a" range={4.6} paint shadow_maps_enabled />
       <SpotLight name="k2" transform={Transform.fromXyz(CX, 2.6, 0.4).lookingAt([CX + 0.4, 0, 7])} intensity={5200000 * (1 - closing * 0.8)} outer_angle={0.75} inner_angle={0.4} color="#ff5a4a" range={16} paint />
@@ -190,13 +206,49 @@ function Shot({ beat, t }: { beat: number; t: number }) {
       <Row closing={closing} />
       <Kiosk />
       <Street />
-      {beat === 0 && <Model src={S("people/s_f25.glb")} position={[CX - 0.5, 0.15, 1.15]} rotation={[0, Math.PI, 0]}><StandardMaterial base_color={N1} /></Model>}
-      {[0, 1, 2].map((n) => <Model key={`dc${n}`} src={S("cardboard_box_01/cardboard_box_01.gltf")} position={[CX - 1.4 + (n % 2) * 0.55, 0.15 + Math.floor(n / 2) * 0.5, 1.2]} scale={beat === 4 ? [1.2, 1.2, 1.2] : [0.001, 0.001, 0.001]}><StandardMaterial base_color="#c99a62" /></Model>)}
-      <Town on={beat === 1 ? 3 : 0} />
-      <Lane t={beat === 2 ? 0.6 : 0} />
+      <Model src={S("people/s_f25.glb")} position={[CX - 0.5, 0.15, 1.15]} rotation={[0, Math.PI, 0]} scale={st.customer ? [1, 1, 1] : [0.001, 0.001, 0.001]}><StandardMaterial base_color={N1} /></Model>
+      <Rain t={t} />
+      {[0, 1, 2].map((n) => <Model key={`dc${n}`} src={S("cardboard_box_01/cardboard_box_01.gltf")} position={[CX - 1.4 + (n % 2) * 0.55, 0.15 + Math.floor(n / 2) * 0.5, 1.2]} scale={st.cartons ? [1.2, 1.2, 1.2] : [0.001, 0.001, 0.001]}><StandardMaterial base_color="#c99a62" /></Model>)}
+      <Town on={st.townOn} />
+      <Lane t={t} />
       <Factory t={t} />
+      {st.caps !== undefined && <Captions blocks={CAPS as CapBlock[]} frame={st.caps} fps={FPS} />}
     </AbsoluteFill>
   );
 }
-const Stills = () => { const f = useCurrentFrame(); return <Shot beat={Math.min(4, f)} t={1} />; };
-registerRoot(() => <Composition id="ex30stills" component={Stills} width={1080} height={1920} fps={FPS} durationInFrames={5} />);
+const Stills = () => { const f = Math.min(4, useCurrentFrame()), b = BEATS[f];
+  return <Shot st={{ ...b, T: [0, 7, 14.4, 18, 25][f], closing: f === 4 ? 0.55 : 0, townOn: f === 1 ? 3 : 0, customer: f === 0, cartons: f === 4 }} />; };
+
+// ---------- the film, on the voice (audio/vo_timeline.json): L01 0.3 · L02 5.1 · L03 8.75 · L04 16.75 · L05 23.2 · end 28.8
+const io = Easing.inOut(Easing.cubic);
+function Film() {
+  const F = useCurrentFrame(), T = F / FPS;
+  let cam: [number, number, number], look: [number, number, number], fov = 0.85;
+  const K = (a: number, b: number) => k(T, a, b, io);
+  const KITE = { cam: [CX + 0.9, 4.05, 2.85] as [number, number, number], look: [CX + 0.9, 4.05, 2.39] as [number, number, number] };   // the MIXUE wordmark fills the frame
+  if (T < 8.6) {        // L01 the street → one crane up over the town (L02) → the dive into the kiosk's signboard
+    const push = K(0, 4.4), crane = K(4.3, 6.3), dive = K(7.75, 8.6);
+    const c0 = L3([CX - 1.6, 2.1, AR + 12], [CX - 1.2, 2.0, AR + 10.2], push), l0 = L3([CX + 0.2, 1.7, 1.0], [CX + 0.2, 1.8, 1.0], push);
+    const c1 = L3(c0, [CX + 4, 78, 38], crane), l1 = L3(l0, [CX, 0, -52], crane);
+    cam = L3(c1, KITE.cam, dive); look = L3(l1, KITE.look, dive); fov = lerp(0.85, 0.6, dive);
+  } else if (T < 16.7) { // L03 the back lane: out of the logo on the lorry's tail, back to the lane
+    const out = K(8.6, 9.9), drift = K(9.9, 16.7);
+    const tail: [number, number, number] = [LX + 2.794, 1.85, 3.45];   // the wordmark half of the tail logo (camera right = +z)
+    cam = L3(L3([tail[0] - 0.42, 1.85, 3.45], [LX - 6.5, 1.6, 4.6], out), [LX - 5.6, 1.5, 4.3], drift); look = L3(L3(tail, [LX + 2.2, 1.3, 2.0], out), [LX + 1.6, 1.2, 2.0], drift); fov = lerp(0.6, 0.8, out);
+  } else if (T < 23.05) { // L04 the factory: "97%" overhead; tilt down to the tiny cone on "not from you"; push into it
+    const tilt = K(19.9, 20.8), back = K(21.1, 21.9), into = K(22.35, 23.05);
+    const c = [FX - 1.6, 0.9, 34.5], lUp = [FX - 0.3, 4.2, -10], lCone = [FX - 1.0, 1.3, 31];
+    look = L3(L3(lUp, lCone, tilt), lUp, back); cam = c as [number, number, number];
+    cam = L3(cam, [FX - 1.0, 1.36, 31.75], into); look = L3(look, lCone, into); fov = lerp(0.9, 0.6, into);
+  } else {               // L05 out of the kiosk's own cone sign, back to the kiosk as its shutter comes down
+    const out = K(23.05, 24.3);
+    cam = L3([CX + 1.75, 1.7, 2.45], [CX - 1.2, 2.0, AR + 11], out); look = L3([CX + 1.75, 1.6, 1.6], [CX + 0.2, 1.6, 1.0], out); fov = lerp(0.6, 0.85, out);
+  }
+  const closing = T >= 23 ? k(T, 23.3, 25.4, Easing.inOut(Easing.quad)) : 0;
+  return <Shot st={{ cam, look, fov, T, closing, townOn: (T - 5.55) * 1.6, customer: T < 23, cartons: T >= 23, caps: F }} />;
+}
+
+registerRoot(() => <>
+  <Composition id="ex30" component={Film} width={1080} height={1920} fps={FPS} durationInFrames={864} />
+  <Composition id="ex30stills" component={Stills} width={1080} height={1920} fps={FPS} durationInFrames={5} />
+</>);

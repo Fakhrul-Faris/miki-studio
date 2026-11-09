@@ -1,6 +1,6 @@
 # EX30 — Mixue's Real Customer
 
-Status: **draft script + Style C plan for approval (2026-11-09)** → slot Wed 11 Nov
+Status: **script + stills approved 2026-11-09; built** (`build/ex30.tsx`, raea painted look) → `export/EX30-Final.mp4` · slot Wed 11 Nov
 Strategy: series **How is it so cheap?** (standalone, not "Part 3": EX29's vote stays open — change EX29's pinned comment
 to "Daiso, ZUS or KK Mart?") · Malaysian-present global brand · 25–30 s · **Style C** (BIBLE-C: Malaysia, night, the
 business is the light, painterly grain, faceless people holding poses).
@@ -30,19 +30,18 @@ business is the light, painterly grain, faceless people holding poses).
 
 Ending: reframe (two-phrase contrast, like EX28/EX29).
 
-## Visual — Style C (plan; plates by the user, motion by Seedance from start/end keyframes, overlays + captions + sound by me)
-Palette: one cool night hue (deep teal-navy), the only warm light is Mixue's red-white glow. Rain-wet streets double the light.
+## Visual — Style C, built locally (raea `<Look mode="paint">`; no generated plates: no Seedream/Dreamina subscription)
+Teal-navy night; Mixue's red the only warm paint. Real logo and words in a skipped pass (exact). Figures hold poses.
 
-| Line | Plate (literal) | Motion inside the plate (Seedance, start → end keyframe) | Hand-off out |
+| Line | Shot | Motion | Hand-off |
 |---|---|---|---|
-| L01 | P1: a wet Malaysian shoplot street at night; the Mixue kiosk the only warm light, doubled on the road; one customer from behind at the counter holding a cone | light breathes, rain ripples, a scooter's headlight passes; people hold still | the camera rises into the kiosk's red glow |
-| L02 | P2: high aerial over a town of terraced shoplots at night; START one red shopfront lit; END dozens lit across the grid | the red lights come on one by one across the town | dive into one red light |
-| L03 | P3: the back lane behind the shop under one fluorescent tube; a supply lorry, tailgate down; the owner from behind with a trolley; stacked cartons | cartons slide down the tailgate onto the trolley; the tube flickers | a carton fills the frame |
-| L04 | P4: a giant lit factory gate at night, a river of supply lorries flowing out into the dark; in the foreground, tiny, one soft-serve cone on a wall | lorries stream out; the cone stays still (3% vs 97% as scale) | match on shape: the cone → the kiosk's cone sign |
-| L05 | P5: the P1 kiosk closing: shutter half down, light spilling from under it onto the wet road, supply cartons by the door | the shutter rolls down; the light on the road narrows; dark | — |
+| L01 | the kiosk across a rain-wet road; customer from behind; logo + RM2 on the shop | rain, slow push | one continuous crane up |
+| L02 | the town from above | Mixue signboards and their red pools light across the grid on "60,000" | dive into the kiosk's sign until the wordmark fills the frame |
+| L03 | the back lane | match cut out of the same wordmark on the lorry's tail; a carton lands on each of "milk, syrup, cups, machines" (SUSU · SIRAP · CAWAN · MESIN); the lorry drives off on "Mixue" | lorry → lorries |
+| L04 | worm's-eye at the factory | 97% over the glowing gate, lorries stream out; the tiny warm cone in front ("not from you") | push into the cone |
+| L05 | the kiosk again | out of its cone sign; the shutter rolls down, the light narrows; silent end | — |
 
-Overlays (mine, on the plates' own surfaces): the official Mixue logo on the signboard and the lorry, RM2 on the menu board,
-the carton labels, 97% on the factory wall. Captions EX15 36 px. Sound: rain bed + sparse hits, silent end.
+Sound: rain bed, sparse hits (crane, dive, four carton landings, lorry, push, shutter), −14 LUFS. `build/sfx.py`.
 
 ## Post (draft)
 **Caption:** `Mixue sells ice cream for RM2 🍦 but 97% of its money comes from its own franchisees, who must buy milk, syrup, cups and machines from Mixue. Almost 60,000 shops, more than McDonald's. Did you know? 👇  #mixue #malaysia #franchise #businessmodel #bisnes`
