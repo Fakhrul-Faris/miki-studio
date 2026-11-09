@@ -1,0 +1,8 @@
+<template>
+  <style> #root { position: absolute; inset: 0; pointer-events: none; } #grain svg { position: absolute; inset: 0; width: 1080px; height: 1920px; mix-blend-mode: overlay; opacity: .5; } </style>
+  <div id="root" data-composition-id="grain" data-width="1080" data-height="1920" data-layout-ignore>
+    <svg viewBox="0 0 1080 1920"><filter id="grain-f"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="27"/><feColorMatrix type="saturate" values="0"/></filter>
+      <rect width="1080" height="1920" filter="url(#grain-f)" opacity=".24"/></svg>
+  </div>
+  <script> window.__timelines["grain"] = gsap.timeline({ paused: true }); </script>
+</template>
