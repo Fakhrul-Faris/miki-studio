@@ -73,7 +73,7 @@ Change a locked trait only when the user says so by name. "Make it better" never
 | Texture | **Painterly grain** default; watercolour for heritage. |
 | People | Faceless (back views, silhouettes, shadows); hold poses. |
 | Motion | **Not a camera move over a still.** Plates are the look reference: real motion comes from Seedance (start and end keyframes per shot) and/or a raea rebuild; my overlays (logo, numbers, captions) go on the plates' own surfaces. |
-| Renderer | Seedream (plates, by the user) → Seedance (motion, by the user from my prompts) → HyperFrames/raea overlays and assembly. |
+| Renderer | ~~Seedream → Seedance~~ — **the user has no Seedream/Dreamina subscription** (2026-11-09). Build C locally: raea painted look (`<Look mode="paint">`) on a modelled night world, or ask what generator the user does have. |
 
 ## 2. Rules for every style (house rules)
 
