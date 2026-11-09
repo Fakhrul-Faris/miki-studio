@@ -26,11 +26,11 @@ Change a locked trait only when the user says so by name. "Make it better" never
 | Trait | Locked value |
 |---|---|
 | Camera | **High three-quarter / near-isometric**, looking down at a whole street block (like `_tests/style-test-mrdiy/A/stills/A2_preview.png`'s angle, but fuller). Low or impossible angles only for a hook beat, never as the default. |
-| World | **White/warm-white model world** (clay). Not realistic colour, not eye-level realism. |
+| World | **Dark model world** (charcoal clay, cool moonlight) — user 2026-11-09 chose dark over white and dusk (`_tests/style-test-mrdiy/A2/stills/A1_white_dark_dusk.jpg`). Not realistic colour, not eye-level realism. |
 | Subject | **One real subject** in full real colour and detail (the business's shop), everything else white. |
 | Detail | **Full and dense**: detailed shophouses (mouldings, louvred windows, aircon units, signboards, pillars, arches, roofs, rooftop clutter, wires), a populated street (scooters, cars, trees, stalls, chairs, crates, posed figures). Never plain boxes. |
 | Texture | White materials **with real surface texture** (plaster grain, tile and roof relief, normal maps, AO). Library models repainted white but keeping their normal maps. Materials from MaterialCraft / Poly Haven. |
-| Light | Designed light: low sun with long shadows across the white world, the subject glowing warm, haze in the distance, AO, bloom on signs. Never flat even light. |
+| Light | Designed light: cool moonlight and soft shadows over the dark world; the subject is the warm light source (lit interior, glowing sign, light spilling onto the street); a few neighbour windows glow amber; haze; AO; bloom. Never flat even light. |
 | Motion | A token (coin) travels and carries every handover; objects move inside the scene (shutters, lights, cartons); figures hold poses. |
 | Renderer | **raea** (build and animate). Blender only to model or split assets that raea can't, exported as GLB. |
 
@@ -71,6 +71,7 @@ Change a locked trait only when the user says so by name. "Make it better" never
 
 | Date | What I showed | Verdict (user's words) | Lesson |
 |---|---|---|---|
+| 2026-11-09 | A v3 lighting test: white / dark / dusk | "i actually like dark better" | Style A world = dark, the business is the light. |
 | 2026-11-09 | A v2: eye-level realistic street in raea | "should it be isometric with white building and world… this is completely opposite" | Fix the named dimension; never swap the style. |
 | 2026-11-09 | C v1: EX26 pipeline (camera push over plates, amber flash) | "exactly the same before we did the analysis… you learned nothing… this is simple camera movement" | Design from the bibles' motion rules; plates are references to recreate. |
 | 2026-11-09 | B v1: flat SVG stills | "geometry too basic… is it a receipt or a stair? renders generic" | Reference-level detail; every object readable without a caption. |

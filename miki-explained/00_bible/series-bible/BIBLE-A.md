@@ -254,6 +254,8 @@ object travels, grows, fades or settles over ~0.4 s (memory `no-harsh-cuts`).
 5. **Cross-style sharing:** A, B and C borrow each other's traits and techniques; the bibles are not walls. Keep quality
    on the same par across styles.
 
+6. **World colour (user, 2026-11-09):** the model world is **dark** (charcoal clay, cool moonlight); the business is the warm light. Replaces the white world of §1–§6 for colour only; everything else stands.
+
 ## 13. Test plan (not built yet; not urgent — run after the B and C bibles)
 
 Pick one real Malaysian business from the EX28/EX29 slate.
