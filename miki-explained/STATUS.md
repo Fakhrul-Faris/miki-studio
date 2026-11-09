@@ -1,6 +1,6 @@
 # Miki Explained — status (handoff, 2026-11-08)
 
-Read this first in a new session. Then: `00_bible/flat-v3-playbook.md` (the new look), `05_calendar/calendar.md`
+Read this first in a new session — **after `00_bible/WORKING-RULES.md`** (the contract: locked style traits, rejections, tools, gates). Then: `00_bible/flat-v3-playbook.md` (the new look), `05_calendar/calendar.md`
 (schedule + Style A/B/C test), and the episode's `README.md` / `episode.md`.
 
 ## ▶ NEXT SESSION: user reads the three bibles and answers BIBLE-B §12 and BIBLE-C §12; then the shared test

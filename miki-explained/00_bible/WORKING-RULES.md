@@ -1,0 +1,109 @@
+# WORKING RULES — read this before every task in miki-explained
+
+The user's instruction (2026-11-09): "create a document so you can refer every time you want to work so you don't
+hallucinate. memory alone doesn't suffice." This file is the contract. If memory or a habit disagrees with it, this
+file wins. Update it the same day a decision or a rejection happens.
+
+---
+
+## 0. Before any work (every time, no exceptions)
+
+1. Read this file, then `STATUS.md`, then the bible of the style involved (`series-bible/BIBLE-A.md`, `-B.md`, `-C.md`).
+2. **Restate the target in 3 lines** to the user before building anything new:
+   camera · what the world looks like (what stays as it is) · what changes and why.
+   The 3 lines must keep the style's **locked traits** (§1) unless the user unlocked one by name.
+3. **Fix only what the feedback names.** A note about detail is not a note about style. Never swap the style, the
+   camera family or the world colour to answer a quality note.
+4. New direction (new pipeline, new style, new episode format): plan first, wait for "yes".
+5. Before showing anything, run the gates in §4 and say what still fails. Never call a test "final quality" unless it
+   passes them.
+
+## 1. The three styles — locked traits
+
+Change a locked trait only when the user says so by name. "Make it better" never unlocks anything.
+
+### Style A — the white model world (BIBLE-A)
+| Trait | Locked value |
+|---|---|
+| Camera | **High three-quarter / near-isometric**, looking down at a whole street block (like `_tests/style-test-mrdiy/A/stills/A2_preview.png`'s angle, but fuller). Low or impossible angles only for a hook beat, never as the default. |
+| World | **White/warm-white model world** (clay). Not realistic colour, not eye-level realism. |
+| Subject | **One real subject** in full real colour and detail (the business's shop), everything else white. |
+| Detail | **Full and dense**: detailed shophouses (mouldings, louvred windows, aircon units, signboards, pillars, arches, roofs, rooftop clutter, wires), a populated street (scooters, cars, trees, stalls, chairs, crates, posed figures). Never plain boxes. |
+| Texture | White materials **with real surface texture** (plaster grain, tile and roof relief, normal maps, AO). Library models repainted white but keeping their normal maps. Materials from MaterialCraft / Poly Haven. |
+| Light | Designed light: low sun with long shadows across the white world, the subject glowing warm, haze in the distance, AO, bloom on signs. Never flat even light. |
+| Motion | A token (coin) travels and carries every handover; objects move inside the scene (shutters, lights, cartons); figures hold poses. |
+| Renderer | **raea** (build and animate). Blender only to model or split assets that raea can't, exported as GLB. |
+
+### Style B — the flat world of objects and light (BIBLE-B)
+| Trait | Locked value |
+|---|---|
+| Drawing | **No outlines**; flat shapes; **subtle grain**. |
+| Detail | Reference level (Josh Patterson, Malika Favre, Julian Burford's objects): considered silhouettes, inner detail (arches, slatted shutters, wires, tiles, texture inside shapes). **Never plain rectangles.** |
+| Light | Light is a hard flat shape and it is the composition; two colours per scene (light, shadow). |
+| Ideas | One invented everyday object per mechanism. **Every object must read without a caption** (rejected: the "MARGIN 2×" receipt, read as a stair). |
+| Words | Numbers and the brand live on the world's own objects (tags, screens, signs). |
+| Cutaways | Allowed, drawn flat. |
+| Renderer | HyperFrames (SVG/HTML). |
+
+### Style C — the lit plate (BIBLE-C)
+| Trait | Locked value |
+|---|---|
+| Place | **Malaysia** by default (true detail: red stools, the teh tarik pour, signs, scooters, wires). |
+| Light | **Night/dusk** by default for F&B and street businesses; day for heritage. The business is the light source. |
+| Texture | **Painterly grain** default; watercolour for heritage. |
+| People | Faceless (back views, silhouettes, shadows); hold poses. |
+| Motion | **Not a camera move over a still.** Plates are the look reference: real motion comes from Seedance (start and end keyframes per shot) and/or a raea rebuild; my overlays (logo, numbers, captions) go on the plates' own surfaces. |
+| Renderer | Seedream (plates, by the user) → Seedance (motion, by the user from my prompts) → HyperFrames/raea overlays and assembly. |
+
+## 2. Rules for every style (house rules)
+
+- The **real business logo is on screen from frame 1**. Use official files only (`02_kit/brand/logos/`; sources noted).
+- **Visualise what the line literally says**; a metaphor only when the line is one.
+- **Captions:** EX15 panel at 36 px, bottom at y 1420. Never restyle.
+- **Figures hold poses**; no hand-coded hands or faces; no tracing or cutting out generated images.
+- **No harsh pops:** objects grow, fade or slide (about 0.4 s). Match cuts in identical framing are allowed.
+- **Transitions are built from the scene's own objects.** No generic flashes, wipes or dissolves.
+- **Accent colour comes from the brand and the story's meaning.**
+- **Retired, never propose:** cut-paper collage, paper diorama, printed 3D. **After Effects is prohibited.**
+- **Styles share techniques** (A, B and C borrow from each other), but each keeps its locked traits.
+
+## 3. Feedback log — what was rejected and why (newest first)
+
+| Date | What I showed | Verdict (user's words) | Lesson |
+|---|---|---|---|
+| 2026-11-09 | A v2: eye-level realistic street in raea | "should it be isometric with white building and world… this is completely opposite" | Fix the named dimension; never swap the style. |
+| 2026-11-09 | C v1: EX26 pipeline (camera push over plates, amber flash) | "exactly the same before we did the analysis… you learned nothing… this is simple camera movement" | Design from the bibles' motion rules; plates are references to recreate. |
+| 2026-11-09 | B v1: flat SVG stills | "geometry too basic… is it a receipt or a stair? renders generic" | Reference-level detail; every object readable without a caption. |
+| 2026-11-09 | A v1: Blender clay boxes | "world too empty, building too plain, no texture, shape too basic, lighting too cheap" | Look tests need final-level detail. |
+| 2026-11-09 | Blender suggested as renderer | "justify why blender when we have raea?" | raea renders; Blender only builds. |
+| 2026-11-08 | Style A–C bibles drafted | decisions in BIBLE-A/B/C §12 | — |
+
+## 4. Gates before showing anything
+
+1. **Locked traits:** does it match §1 for its style, trait by trait? Name any that differ.
+2. **The named feedback:** for each point in the latest verdict, show where it's fixed. Compare with the image the user
+   pointed at.
+3. **Readable without a caption:** every object, number and metaphor.
+4. **Not a slide:** an angle, a light decision, one meaningful accent, real detail.
+5. **Motion test:** something moves inside the scene in every shot; handovers use scene objects.
+6. Say plainly what still fails. Don't over-claim.
+
+## 5. Tools — who does what
+
+| Job | Tool | Notes |
+|---|---|---|
+| 3D render and animation (Style A, C rebuilds) | **raea** (`raea render EDIT.tsx --frame N -o F.png`) | Load the `raea-bevy` skill first. Portrait frames are narrow; RectLight needs `range`. |
+| Model / split / rescale assets | Blender (`blender -b -P script.py`) | Export GLB for raea. Never the renderer. |
+| Library models | Poly Haven (CC0, API with a User-Agent header), Poly Pizza (CC-BY; GLB link on the model page) | Credit CC-BY in the episode. |
+| Materials and textures | **MaterialCraft** (`materialcraft-cli new pbr / export / render`), **TextureCraft** (`texturecraft-cli`), Poly Haven textures | Installed 2026-11-09 (apps in /Applications, CLIs in ~/.local/bin). Export PBR maps (basecolor, normal, roughness, AO, height) for raea. |
+| Flat motion (Style B) | HyperFrames | `flat-v3-playbook.md`. |
+| Plates and video (Style C) | Seedream / Seedance (the user generates from my prompts) | Prompts short (memory `short-generation-prompts`). |
+| Captions | raea `tools/raea/kit/Captions.tsx` (EX15) | — |
+
+## 6. My known failure patterns (check myself against these)
+
+- **Overcorrecting:** answering a quality note by changing the whole style.
+- **Reaching for the old pipeline** (EX26 plates.py, isokit boxes, plain SVG) instead of designing from the bible.
+- **Not re-reading the bible** before rebuilding.
+- **Showing work without checking it against the user's named feedback** and the image they referred to.
+- **Over-claiming quality** ("final quality") before the gates pass.

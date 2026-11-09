@@ -1,5 +1,7 @@
-
 # CLAUDE.md
+
+**Before any work in `miki-explained/`, read `miki-explained/00_bible/WORKING-RULES.md` (locked style traits, rejections, tools, gates). It overrides memory and habit.**
+
 
 Behavioral guidelines to reduce common LLM coding mistakes. Merge with project-specific instructions as needed.
 
