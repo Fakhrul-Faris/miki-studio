@@ -46,69 +46,43 @@ function B({ p, s, children, rot }: { p: [number, number, number]; s: [number, n
   return <Mesh3d transform={t}><Cuboid half_size={[s[0] / 2, s[1] / 2, s[2] / 2]} />{children}</Mesh3d>;
 }
 
-// louvred window: frame, two shutter leaves of slats, a hood moulding, a sill
-function Window({ x, y, z, diy }: { x: number; y: number; z: number; diy: boolean }) {
-  const frame = diy ? "#f7f2e4" : WHITE2, leaf = diy ? "#3f8f5a" : ["#4a4d55", "#3a3d45", "#55515a", "#3f4650"][Math.abs(Math.round(x * 3)) % 4];
-  const warm = diy;
-  const out: any[] = [<B key="fr" p={[x, y, z]} s={[0.95, 1.55, 0.12]}><Flat c={frame} e={warm ? glow("#ffb867", 0.9) : undefined} /></B>,
-    <B key="hd" p={[x, y + 0.9, z + 0.08]} s={[1.2, 0.14, 0.28]}><Flat c={frame} /></B>,
-    <B key="sl" p={[x, y - 0.84, z + 0.08]} s={[1.1, 0.08, 0.24]}><Flat c={frame} /></B>];
-  for (const side of [-1, 1]) for (let k = 0; k < 9; k++)
-    out.push(<B key={`s${side}${k}`} p={[x + side * 0.22, y - 0.62 + k * 0.155, z + 0.09]} s={[0.4, 0.1, 0.03]} rot={[-0.5, 0, 0]}><Flat c={leaf} r={0.6} /></B>);
-  return <>{out}</>;
-}
-
+// one shophouse = a modelled unit (shophouse.py: A arched / B two wide windows / C pediment), its materials re-covered
+// here: charcoal clay with plaster relief; Mr DIY's in brand colours. Signboard, shutters, stock and lights stay in raea.
+const VAR = (i: number) => ["A", "B", "C", "B", "A", "C", "A", "B", "C", "A"][((i % 10) + 10) % 10];
 function Unit({ i }: { i: number }) {
   const x0 = i * W, cx = x0 + W / 2, diy = i === DIY, spd = i === SPD;
-  const wall = diy ? "#e8b100" : WHITE;
+  const src = diy ? "parts/shophouse_A_open.glb" : `parts/shophouse_${VAR(i)}.glb`;
+  const tint = ["#3b3d44", "#36383f", "#40414a", "#393b43"][((i % 4) + 4) % 4];
   const P: any[] = [];
-  P.push(<B key="body" p={[cx, 5.6, -5]} s={[W, 3.2, 14.4]}><Plaster u={2} v={1} tint={wall} /></B>);           // upper floor (overhangs the way)
-  P.push(diy ? <B key="gw" p={[cx, 2.0, -7.95]} s={[W, 4.0, 7.9]}><Plaster u={2} v={1} tint={WHITE2} /></B> : <B key="gw" p={[cx, 2.0, -5.9]} s={[W, 4.0, 12]}><Plaster u={2} v={1} tint={WHITE2} /></B>);           // ground floor behind the way
-  P.push(<B key="cor" p={[cx, 7.3, AR + 0.08]} s={[W, 0.22, 0.4]}><Flat c={diy ? "#fbf3dc" : WHITE} /></B>);   // cornice
-  P.push(<B key="par" p={[cx, 7.8, AR - 0.05]} s={[W, 0.8, 0.25]}><Plaster u={2} v={0.4} tint={wall} /></B>);  // parapet
-  P.push(<Mesh3d key="gab" transform={Transform.fromXyz(cx, 8.2, AR - 0.05)} shape={(i % 2 ? so().gableRound : so().gableStep)}><Plaster u={1} v={0.5} tint={wall} /></Mesh3d>);
-  // pitched roof behind the parapet (two slopes, white roof tiles)
-  P.push(<B key="r1" p={[cx, 8.4, -1.4]} s={[W, 0.12, 7.2]} rot={[0.38, 0, 0]}><Roof u={2} v={3} /></B>);
-  P.push(<B key="r2" p={[cx, 8.4, -8.4]} s={[W, 0.12, 7.2]} rot={[-0.38, 0, 0]}><Roof u={2} v={3} /></B>);
-  // signboard band above the five-foot way
-  P.push(<B key="sg" p={[cx, 4.45, AR + 0.12]} s={[W - 0.3, 0.8, 0.12]}>
-    <Flat c={diy ? "#d92128" : spd ? "#4a4c53" : ["#2f3138", "#3a332f", "#2b3340"][((i % 3) + 3) % 3]} r={0.45} e={diy ? glow("#ff2a2a", 3.2) : undefined} /></B>);
-  if (diy) P.push(<ImagePlane key="lg" src={S("mrdiy_logo.png")} width={W - 0.6} position={[cx, 4.45, AR + 0.19]} />);
-  if (spd) P.push(<ImagePlane key="lg" src={S("99_grey.png")} width={2.6} position={[cx, 4.45, AR + 0.19]} />);
-  // windows and pilasters on the upper façade
-  for (let k = 0; k < 3; k++) P.push(<Window key={`w${k}`} x={x0 + 0.85 + k * 1.45} y={5.85} z={AR + 0.02} diy={diy} />);
-  for (let k = 0; k < 4; k++) P.push(<B key={`pi${k}`} p={[x0 + 0.12 + k * 1.45, 5.85, AR + 0.05]} s={[0.16, 2.6, 0.12]}><Flat c={diy ? "#fbf3dc" : WHITE2} /></B>);
-  // arcade: pillar at the unit's left edge, arch to the next, the five-foot way floor
-  P.push(<Mesh3d key="pl" transform={Transform.fromXyz(x0, 1.6, AR - 0.2)} shape={so().pillar}><Plaster u={0.3} v={1.4} tint={diy || i === DIY + 1 ? "#ffd400" : WHITE} /></Mesh3d>);
-  P.push(<Mesh3d key="pc" transform={Transform.fromXyz(x0, 3.25, AR - 0.2)} shape={so().cap}><Flat c={diy || i === DIY + 1 ? "#ffd400" : WHITE} /></Mesh3d>);
-  P.push(<Mesh3d key="ar" transform={Transform.fromXyz(cx, 3.6, AR - 0.2)} shape={so().arch}><Plaster u={2} v={0.4} tint={wall} /></Mesh3d>);
-  P.push(<B key="fl" p={[cx, 0.06, AR / 2]} s={[W, 0.12, AR]}><Tiles n={diy ? "brown_floor_tiles" : "concrete_tiles"} u={W / 0.9} v={AR / 0.9} tint={diy ? "#ffffff" : WHITE} real={diy} /></B>);
-  // shopfront: Mr DIY open and lit; the others behind white roller shutters
+  P.push(<Model key="sh" src={S(src)} position={[cx, 0, 0]}>
+    <StandardMaterial material="wall" base_color={diy ? "#e3a800" : tint} normal_map_texture={S("tex/grey_plaster_nor_gl_1k.jpg")} metallic_roughness_texture={S("tex/grey_plaster_rough_1k.jpg")} perceptual_roughness={1} uv_transform={Affine2.fromScale([0.6, 0.6])} />
+    <StandardMaterial material="trim" base_color={diy ? "#fff3cf" : "#4a4c54"} perceptual_roughness={0.75} />
+    <StandardMaterial material="shutter" base_color={diy ? "#2f7a4a" : "#2c2e34"} perceptual_roughness={0.6} />
+    <StandardMaterial material="tile" base_color={tint} normal_map_texture={S("tex/clay_roof_tiles_02_nor_gl_1k.jpg")} perceptual_roughness={0.85} />
+    <StandardMaterial material="floor" base_color={diy ? "#c9a77a" : "#45474e"} normal_map_texture={S("tex/concrete_tiles_nor_gl_1k.jpg")} perceptual_roughness={0.8} />
+    <StandardMaterial material="party" base_color="#2b2d33" perceptual_roughness={0.8} />
+    <StandardMaterial material="dark" base_color={diy ? "#ffd9a0" : "#15161a"} emissive={diy ? glow("#ffc070", 1.2) : undefined} />
+  </Model>);
+  // signboard on the façade over the arcade
+  P.push(<B key="sg" p={[cx, 4.05, 2.32]} s={[W - 0.5, 0.62, 0.1]}>
+    <Flat c={diy ? "#d92128" : spd ? "#4a4c53" : ["#2a2c33", "#33302d", "#2a313c"][((i % 3) + 3) % 3]} r={0.45} e={diy ? glow("#ff2a2a", 2.6) : undefined} /></B>);
+  if (diy) P.push(<ImagePlane key="lg" src={S("mrdiy_logo.png")} width={W - 0.8} position={[cx, 4.05, 2.38]} />);
+  if (spd) P.push(<ImagePlane key="lg" src={S("99_grey.png")} width={2.8} position={[cx, 4.05, 2.38]} />);
   if (diy) {
-    P.push(<B key="in" p={[cx, 1.8, -3.95]} s={[W - 0.2, 3.6, 0.2]}><Flat c="#fff2d6" e={glow("#ffe7bf", 0.35)} /></B>);
-    for (const sx of [x0 + 1.2, x0 + 3.4]) {
-      P.push(<Model key={`shv${sx}`} src={S("parts/shelves.glb")} position={[sx, 0.12, -2.7]} scale={[0.9, 0.9, 0.9]} />);
-      for (let lv = 0; lv < 3; lv++) for (let j = 0; j < 4; j++) P.push(<B key={`pk${sx}${lv}${j}`} p={[sx - 0.45 + j * 0.3, 0.42 + lv * 0.68, -2.55]} s={[0.24, 0.3, 0.3]}><Flat c={["#e3262b", "#ffd400", "#2f6fd6", "#3bb273", "#f28c28", "#ffffff"][(lv * 4 + j + (sx > x0 + 2 ? 3 : 0)) % 6]} r={0.5} /></B>);
-    }
-    P.push(<B key="ifl" p={[cx, 0.14, -2.0]} s={[W - 0.2, 0.04, 4.0]}><Tiles n="brown_floor_tiles" u={5} v={4} real /></B>);
-    for (let r = 0; r < 5; r++) for (let j = 0; j < 12; j++) P.push(<B key={`bw${r}${j}`} p={[x0 + 0.5 + j * 0.33, 0.4 + r * 0.62, -3.75]} s={[0.26, 0.42, 0.3]}><Flat c={["#e3262b", "#ffd400", "#2f6fd6", "#3bb273", "#f28c28", "#ffffff"][(r * 5 + j) % 6]} r={0.5} /></B>);
-    // racks and bins out on the five-foot way (as real branches do): goods where the camera can see them
     const GC = ["#e3262b", "#ffd400", "#2f6fd6", "#3bb273", "#f28c28", "#ffffff", "#7a4fd1"];
-    for (const [rx, rot] of [[x0 + 1.3, 0], [x0 + 3.3, 0]] as [number, number][]) {
-      P.push(<B key={`rk${rx}`} p={[rx, 0.95, 0.75]} s={[1.2, 1.7, 0.45]}><Flat c="#2a2c31" r={0.5} /></B>);
-      for (let lv = 0; lv < 4; lv++) for (let j = 0; j < 5; j++) P.push(<B key={`rg${rx}${lv}${j}`} p={[rx - 0.48 + j * 0.24, 0.32 + lv * 0.4, 1.02]} s={[0.2, 0.3, 0.12]}><Flat c={GC[(lv * 3 + j + (rx > x0 + 2 ? 2 : 0)) % GC.length]} r={0.45} /></B>);
+    for (const sx of [x0 + 1.0, x0 + 2.3, x0 + 3.6]) P.push(<Model key={`shv${sx}`} src={S("parts/shelves.glb")} position={[sx, 0.15, -2.6]} scale={[0.75, 0.9, 0.75]} />);
+    for (let r = 0; r < 4; r++) for (let j = 0; j < 12; j++) P.push(<B key={`bw${r}${j}`} p={[x0 + 0.55 + j * 0.32, 0.45 + r * 0.7, -4.1]} s={[0.25, 0.42, 0.28]}><Flat c={GC[(r * 5 + j) % GC.length]} r={0.5} /></B>);
+    for (const [rx] of [[x0 + 1.2], [x0 + 3.4]] as [number][]) {
+      P.push(<B key={`rk${rx}`} p={[rx, 0.95, 0.75]} s={[1.1, 1.6, 0.4]}><Flat c="#2a2c31" r={0.5} /></B>);
+      for (let lv = 0; lv < 4; lv++) for (let j = 0; j < 5; j++) P.push(<B key={`rg${rx}${lv}${j}`} p={[rx - 0.44 + j * 0.22, 0.35 + lv * 0.38, 0.98]} s={[0.18, 0.28, 0.1]}><Flat c={GC[(lv * 3 + j + (rx > x0 + 2 ? 2 : 0)) % GC.length]} r={0.45} /></B>);
     }
-    for (let k = 0; k < 4; k++) P.push(<Mesh3d key={`bin${k}`} transform={Transform.fromXyz(x0 + 0.9 + k * 0.95, 0.42, 1.75)}><Cylinder radius={0.3} half_height={0.28} /><Flat c={["#2f6fd6", "#e3262b", "#3bb273", "#ffd400"][k]} r={0.5} /></Mesh3d>);
-    for (let b = 0; b < 5; b++) P.push(<B key={`bk${b}`} p={[x0 + 0.7, 0.2 + b * 0.12, 0.9]} s={[0.45, 0.11, 0.32]}><Flat c="#e3262b" r={0.45} /></B>);
-  } else if (spd) {
-    P.push(<B key="sin" p={[cx, 1.6, -1.2]} s={[W - 0.4, 3.0, 0.2]}><Flat c="#1a1c22" e={glow("#7f9cff", 0.08)} /></B>);
-    P.push(<WhiteModel key="sh" src="parts/shutter.glb" p={[cx, 1.5, -0.1]} s={[(W - 0.6) / 1.08, 1.3, 0.6]} />);
+    for (let k = 0; k < 4; k++) P.push(<Mesh3d key={`bin${k}`} transform={Transform.fromXyz(x0 + 0.9 + k * 0.95, 0.43, 1.7)}><Cylinder radius={0.28} half_height={0.27} /><Flat c={["#2f6fd6", "#e3262b", "#3bb273", "#ffd400"][k]} r={0.5} /></Mesh3d>);
+    for (let b = 0; b < 5; b++) P.push(<B key={`bk${b}`} p={[x0 + 0.75, 0.21 + b * 0.12, 1.2]} s={[0.45, 0.11, 0.32]}><Flat c="#e3262b" r={0.45} /></B>);
   } else {
-    P.push(<WhiteModel key="sh" src="parts/shutter.glb" p={[cx, 0.12, -0.1]} s={[(W - 0.6) / 1.08, 1.3, 0.6]} />);
+    P.push(<WhiteModel key="shut" src="parts/shutter.glb" p={[cx, spd ? 1.4 : 0.15, 0.02]} s={[(W - 0.9) / 1.08, 1.17, 0.5]} c={spd ? "#4e5058" : "#3e4047"} />);
+    if (spd) P.push(<B key="sin" p={[cx, 1.5, -0.6]} s={[W - 0.9, 2.8, 0.1]}><Flat c="#1a1c22" e={glow("#7f9cff", 0.1)} /></B>);
   }
-  // aircon units on some façades, a water tank on some roofs
-  if ((i + 7) % 3 === 0) P.push(<WhiteModel key="ac" src="exterior_aircon_unit/exterior_aircon_unit.gltf" p={[x1(x0) - 0.55, 6.3, AR + 0.25]} s={1.0} />);
-  if ((i + 9) % 4 === 0) { P.push(<Mesh3d key="tk" transform={Transform.fromXyz(cx + 1, 9.6, -6)} shape={so().tank}><Flat c={WHITE} /></Mesh3d>); }
+  if ((i + 7) % 3 === 0 && !diy) P.push(<WhiteModel key="ac" src="exterior_aircon_unit/exterior_aircon_unit.gltf" p={[cx - 0.4, 5.3, 2.35]} s={1.0} c="#4a4c53" />);
   return <>{P}</>;
 }
 const x1 = (x0: number) => x0 + W;
@@ -185,7 +159,7 @@ function Shot() {
       <Grade temperature={0.02} vignette={0.22} midtones={{ saturation: 1.05, contrast: 1.18, gamma: 1, gain: 1, lift: 0 }} />
       <Street />
       {UNITS.map((i) => <Unit key={i} i={i} />)}
-      <Mesh3d name="coin" transform={Transform.fromXyz(coinX, 0.52, coinZ).withRotation(Quat.fromEuler("YXZ", -0.75, -0.1, 0))} shape={so().coin}>
+      <Mesh3d name="coin" transform={Transform.fromXyz(coinX, 0.41, coinZ).withRotation(Quat.fromEuler("YXZ", -0.75, -0.1, 0))} shape={so().coin}>
         <StandardMaterial base_color="#d9a63a" metallic={1} perceptual_roughness={0.25} emissive={glow("#ffb347", 0.6)} /></Mesh3d>
     </AbsoluteFill>
   );
