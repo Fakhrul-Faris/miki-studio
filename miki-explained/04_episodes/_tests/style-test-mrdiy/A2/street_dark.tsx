@@ -125,6 +125,14 @@ function Street() {
   // the white city behind: real library buildings, repainted white, fading into the haze
   for (const [src, x, z, sc, r] of [["apartment.glb", -34, -60, 1.3, 0], ["skyscraper_k.glb", -16, -75, 11, 0.3], ["apartment.glb", 4, -66, 1.2, Math.PI], ["skyscraper_k.glb", 22, -82, 12.5, 0], ["brown_bldg.glb", 36, -58, 2.0, 0], ["kenney_big.glb", -52, -70, 2.2, 0], ["apartment.glb", 50, -72, 1.4, 0.4], ["skyscraper_k.glb", -4, -95, 15, 0.6]] as [string, number, number, number, number][])
     P.push(<WhiteModel key={`bg${x}`} src={src} p={[x, 0, z]} r={r} s={sc} />);
+  for (let k = 0; k < 140; k++) {
+    const bx = [-34, -16, 4, 22, 36, -52, 50, -4][k % 8], bz = [-60, -75, -66, -82, -58, -70, -72, -95][k % 8];
+    const wx = bx - 4 + ((k * 37) % 9), wy = 2 + ((k * 53) % 26), on = (k * 7) % 3 !== 0;
+    if (on) P.push(<B key={`lw${k}`} p={[wx, wy, bz + 5.6]} s={[0.9, 0.6, 0.05]}><Flat c="#ffcf8a" e={glow("#ffb867", 1.4)} /></B>);
+  }
+  // people hold poses (house rule): MPFB figures, faceless, charcoal clay
+  for (const [src, x, z, r] of [["s_m30", 1.6, 1.3, Math.PI], ["s_f25", 3.0, 1.0, 2.6], ["s_m50", -9.0, AR + 9.0, 0.3], ["s_f35", -8.3, AR + 9.4, -2.4], ["s_m30", -4.2, 1.1, 0.9], ["s_f25", 10.8, AR + 9.6, -0.4]] as [string, number, number, number][])
+    P.push(<Model key={`pp${src}${x}`} src={S(`people/${src}.glb`)} position={[x, 0.12, z]} rotation={[0, r, 0]}><StandardMaterial base_color="#55585f" perceptual_roughness={0.7} /></Model>);
   return <>{P}</>;
 }
 

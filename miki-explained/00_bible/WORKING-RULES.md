@@ -101,6 +101,30 @@ Change a locked trait only when the user says so by name. "Make it better" never
 | Plates and video (Style C) | Seedream / Seedance (the user generates from my prompts) | Prompts short (memory `short-generation-prompts`). |
 | Captions | raea `tools/raea/kit/Captions.tsx` (EX15) | — |
 
+## 7. The shot loop (adopted 2026-11-09 from the user's multi-engine brief)
+
+Every shot, every style, in this order. No step skipped, no "final quality" claim without step 6.
+1. **Reference image** for the shot: a bible north star, a frame the user pointed at, or a plate the user generates.
+   Saved next to the build as `ref_<shot>.png`. The render is judged against it.
+2. **Grey box**: camera path, subject positions, the token's route and timing with plain shapes. User approves it.
+3. **Build** detail on the approved grey box (locked traits §1).
+4. **Render** preview frames (raea `--w 540 --h 960` for speed).
+5. **Independent critic**: a separate review agent that sees only the render, the reference and the brief (never my
+   code or reasoning). It scores 1–10: light, composition, materials/texture, colour, detail density, readability,
+   artifacts, match to locked traits; and lists the top 5 fixes. Fix and re-run until every score is ≥ 7 or progress stalls.
+6. **Evidence to the user**: reference vs render, the critic's scores before/after, what still fails.
+
+## 8. Engine capability registry (what each one really does — don't invent)
+
+| Engine | Really does | Does not |
+|---|---|---|
+| raea | Real-time Bevy 3D: models, PBR + textures, lights, shadows, fog/volumetrics, bloom, AO, DoF, grade, tone map, paint/cartoon looks, posed bodies (Character), animation per frame, captions, 2D over 3D | Path tracing, neural denoise/refine, generative imagery |
+| Blender | Modelling, splitting, rescaling, UV, baking; exports GLB | Our final renders (user ruling) |
+| MaterialCraft / TextureCraft | Procedural PBR materials / painted texture sets, exported as map sets | Rendering scenes |
+| EffectCraft | Effects/compositing for what raea can't do (ask first) | Default part of the pipeline |
+| Seedream / Seedance (user runs) | Plates; image-to-video between keyframes | Exact numbers, exact object paths |
+| Style C hybrid (to test) | raea renders depth / outline / colour-ID passes → Seedance stylises with exact layout and motion | Unverified until a test shows Seedance accepts those passes |
+
 ## 6. My known failure patterns (check myself against these)
 
 - **Overcorrecting:** answering a quality note by changing the whole style.
@@ -108,3 +132,4 @@ Change a locked trait only when the user says so by name. "Make it better" never
 - **Not re-reading the bible** before rebuilding.
 - **Showing work without checking it against the user's named feedback** and the image they referred to.
 - **Over-claiming quality** ("final quality") before the gates pass.
+- **Judging my own renders**: always run the independent critic (§7.5).
