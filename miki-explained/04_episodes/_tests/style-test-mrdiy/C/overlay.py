@@ -1,6 +1,6 @@
 """Style C test stills: the user's plates + my overlays on the plates' own surfaces (logo on the blank sign, own-brand
 stickers on the cartons, RM1 on the note, 11 SEN at the coin stack).  ~/.local/bin/uv run --with pillow --with numpy python overlay.py"""
-import os, numpy as np
+import os, math, numpy as np
 from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageChops
 H = os.path.dirname(os.path.abspath(__file__)); OUT = os.path.join(H, "stills"); os.makedirs(OUT, exist_ok=True)
 LOGO = Image.open("/Users/user/Private/miki-studio/miki-explained/02_kit/brand/logos/mrdiy_logo.png").convert("RGBA")
@@ -34,7 +34,15 @@ p = Image.open(f"{H}/P1.png").convert("RGB")
 tex = Image.new("RGBA", (2000, 600), (205, 34, 38, 255)); lg = LOGO.resize((1840, int(1840 * LOGO.size[1] / LOGO.size[0])))
 tex.alpha_composite(lg, (80, (600 - lg.size[1]) // 2))
 quad = [(436, 735), (1020, 870), (1022, 1022), (435, 922)]
-p = blend(p, warp(tex, quad, p.size), 0.8); grain(p).save(f"{OUT}/C1.png")
+sign = warp(tex, quad, p.size); p = blend(p, sign, 0.8)
+# the wet road mirrors the real sign: flip, squash, ripple, blur, then add it over the plate's blank reflection
+ref = sign.crop((420, 720, 1040, 1030)).transpose(Image.FLIP_TOP_BOTTOM).resize((620, 230))
+arr = np.asarray(ref).copy(); rows = arr.shape[0]
+for y in range(rows): arr[y] = np.roll(arr[y], int(9 * math.sin(y / 5.0)), axis=0)
+ref = Image.fromarray(arr).filter(ImageFilter.GaussianBlur(4)); a = ref.split()[-1].point(lambda v: v * 0.55); ref.putalpha(a)
+lay = Image.new("RGBA", p.size, (0, 0, 0, 0)); lay.alpha_composite(ref, (410, 2150))
+base = np.asarray(p, float); rl = np.asarray(lay.convert("RGB"), float); al = np.asarray(lay.split()[-1], float)[..., None] / 255
+p = Image.fromarray((base * (1 - al) + np.maximum(base, rl) * al).clip(0, 255).astype("uint8")); grain(p).save(f"{OUT}/C1.png")
 
 # P2: own-brand stickers on the truck's cartons
 p = Image.open(f"{H}/P2.png").convert("RGB"); lay = Image.new("RGBA", p.size, (0, 0, 0, 0))
