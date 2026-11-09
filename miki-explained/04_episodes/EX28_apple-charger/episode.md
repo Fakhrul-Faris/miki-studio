@@ -1,6 +1,6 @@
 # EX28 — The Missing Charger (Apple)
 
-Status: **script v1 approved + Style B plan approved (2026-11-09, "go")** · stills for approval: `styleframes/contact_sheet.jpg` · voice: waiting (record from how-i-generate.md) → post Tue 10 Nov (12:30 or 21:00 MYT)
+Status: **final 2026-11-09** `export/EX28-Final.mp4` (31.3 s, 60 fps, −14 LUFS, Style B) · pushed to Telegram /ex28 · posts Tue 10 Nov
 Strategy: Nov growth plan · series **Brand secrets** · global brand Malaysians use · 20–30 s · **Style B** (user 2026-11-09; was proposed as C)
 
 ## Sources

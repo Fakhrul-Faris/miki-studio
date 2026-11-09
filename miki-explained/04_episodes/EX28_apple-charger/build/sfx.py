@@ -40,6 +40,20 @@ put(bed * e, 0, 0.12)
 mix.astype(np.float32).tofile("build/_sfx.f32")
 subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", "build/_sfx.f32", "-i", "audio/voice_full.wav",
                 "-filter_complex", "[0]volume=0.9[s];[1]volume=1.0[v];[v][s]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[a]",
-                "-map", "[a]", "-ac", "2", "hf/assets/mix.wav"], check=True)
+                "-map", "[a]", "-ac", "2", "build/_mix.wav"], check=True)
+# loudnorm's single pass lands short (−16.3 measured): measure, then trim the gain to exactly −14 LUFS (house standard, user 2026-11-09)
+import re
+m = subprocess.run(["ffmpeg", "-i", "build/_mix.wav", "-af", "ebur128", "-f", "null", "-"], capture_output=True, text=True).stderr
+def lufs(f):
+    e = subprocess.run(["ffmpeg", "-i", f, "-af", "ebur128", "-f", "null", "-"], capture_output=True, text=True).stderr
+    return float(re.search(r"Summary:.*?I:\s+(-?[\d.]+) LUFS", e, re.S).group(1))
+src = "build/_mix.wav"
+for k in range(3):                                   # the limiter moves the loudness a little: correct until within 0.3 LU
+    d = -14 - lufs(src)
+    if abs(d) < 0.3: break
+    subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", src, "-af", f"volume={d:.2f}dB,alimiter=limit=0.84:level=false", f"build/_mix{k}.wav"], check=True)
+    src = f"build/_mix{k}.wav"
+subprocess.run(["cp", src, "hf/assets/mix.wav"]); subprocess.run("rm -f build/_mix*.wav", shell=True)
+print("mix loudness", lufs("hf/assets/mix.wav"), "LUFS")
 subprocess.run(["rm", "build/_sfx.f32"])
 print("wrote hf/assets/mix.wav")

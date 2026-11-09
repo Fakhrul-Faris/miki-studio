@@ -98,7 +98,10 @@ def s2():
         b = rr(-3000, -3000, 7080, 7920, 0, p["ground"]) + rr(-3000, 1386, 7080, 3000, 0, p["ground2"]) + rr(-3000, 1382, 7080, 8, 0, p["s"])
         # lorry: cargo box (dark inside), cab, wheels — it assembles in the last beat
         lorry = rr(40, 700, 760, 640, 14, p["w"]) + rr(60, 720, 720, 600, 8, p["deep"])
-        cab = rr(820, 980, 220, 360, 30, p["w"]) + rr(860, 1010, 150, 130, 18, p["s"]) + rr(1010, 1230, 40, 50, 8, p["warm"])
+        cab = (rr(820, 980, 220, 360, 30, p["w"]) + rr(860, 1010, 150, 130, 18, p["s"]) + rr(1010, 1230, 40, 50, 8, p["warm"]) +
+               rr(1040, 1030, 14, 70, 5, p["deep"]) + rr(860, 1180, 120, 14, 6, p["s"]) + rr(845, 1290, 60, 14, 5, p["deep"]) +
+               rr(880, 1250, 130, 38, 6, "#111318") + f'<text x="945" y="1278" {F} font-weight="800" font-size="26" fill="#F2F2F2" text-anchor="middle" letter-spacing="2">WVA 2028</text>')
+        lorry += rr(70, 1320, 50, 40, 4, p["deep"])   # mud flap (no side livery: this side is cut open)
         wheels = "".join(f'<circle cx="{wx}" cy="1350" r="70" fill="{p["deep"]}"/><circle cx="{wx}" cy="1350" r="30" fill="{p["s"]}"/>' for wx in (180, 640, 930))
         b += f'<g class="lorry" opacity="0">{lorry}</g><g class="cab" opacity="0">{cab}{wheels}</g>'
         sheet = (rr(0, 0, 260, 150, 8, p["label"]) + f'<text x="130" y="44" {F} font-weight="800" font-size="24" fill="{p["ink"]}" text-anchor="middle" letter-spacing="2">LOAD</text>'
@@ -165,7 +168,7 @@ def s2():
       tl.to(Q(".lorry, .cab"), {{ opacity: 1, duration: 0.5, ease: "io" }}, at({t("L02", "Same")} - 0.1));
       tl.to(Q(".pal0, .pal2, .pal3"), {{ opacity: 1, duration: 0.3 }}, at({t("L02", "truck")} - 0.2));
       tl.fromTo(Q(".bx0, .bx2, .bx3"), {{ y: -120, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.3, ease: "fall", stagger: (i, el) => +el.dataset.r * 0.06 }}, at({t("L02", "truck")}));
-      tl.to(Q(".lab, .old"), {{ opacity: 0, duration: 0.3 }}, at({t("L02", "far")}));
+      tl.to(Q(".lab, .old"), {{ opacity: 0, duration: 0.3 }}, at({t("L02", "Same")} - 0.3));
       tl.to(Q(".sheet"), {{ opacity: 1, duration: 0.4, ease: "io" }}, at({t("L02", "far")} - 0.1));
       // hand-off: the charger rolls out along the floor and off to the right
       tl.to(Q(".chg"), {{ x: 1060, y: 1325, duration: 0.5, ease: "fall" }}, at({t("L02", "iPhones")} + 0.25));      // off the back of the roof, onto the road
