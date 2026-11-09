@@ -4,7 +4,7 @@ import os
 from PIL import Image, ImageDraw, ImageFont
 H = os.path.dirname(os.path.abspath(__file__)); W, T = 432, 768
 rows = [("A", [f"{H}/A/stills/A{i}.png" for i in (1, 2, 3)]), ("B", [f"{H}/B/stills/B{i}.png" for i in (1, 2, 3)]),
-        ("C", [f"{H}/C/P{i}.png" for i in (1, 2, 3)])]
+        ("C", [f"{H}/C/stills/C{i}.png" for i in (1, 2, 3)])]
 sheet = Image.new("RGB", (80 + 3 * (W + 16), 60 + 3 * (T + 16)), "#1A1A1E"); d = ImageDraw.Draw(sheet)
 try: f = ImageFont.truetype("/Library/Fonts/InterDisplay-Bold.ttf", 28)
 except Exception: f = ImageFont.load_default()
