@@ -11,6 +11,8 @@ import { Camera3d } from "raea/camera";
 import { Affine2 } from "raea/math";
 import { LinearRgba, Srgba } from "raea/color";
 import PHYS from "./media/phys_s3.json";
+import CAPS from "../../../EX29_mrdiy-margin/build/caps.json";
+import { Captions, type CapBlock } from "../../../../tools/raea/kit/Captions";
 
 const S = (p: string) => staticFile(p);
 const FPS = 30;
@@ -93,6 +95,9 @@ function Unit({ i, t: TNOW }: { i: number; t: number }) {
   // signboard on the façade over the arcade
   P.push(<B key="sg" p={[cx, 4.05, 2.32]} s={[W - 0.5, 0.62, 0.1]}>
     <Flat c={diy ? "#d92128" : spd ? "#2c2e34" : ["#2a2c33", "#33302d", "#2a313c"][((i % 3) + 3) % 3]} r={0.45} e={diy ? glow("#ff2a2a", 2.6) : undefined} /></B>);
+  // L05 "Part three: you pick": three shops to the right light a "?" on their signboards, one by one
+  if (i >= 1 && i <= 3) { const on = k(TNOW, [33.45, 34.35, 34.5][i - 1], [33.75, 34.65, 34.8][i - 1]);
+    P.push(<Mesh3d key="qm" castShadow={false} transform={Transform.fromXyz(cx, 3.8, 2.38)}><Text3D size={0.72} depth={0.04}>?</Text3D><Flat c="#3a3c44" e={glow("#ffd27a", 4 * on)} /></Mesh3d>); }
   if (diy) P.push(<ImagePlane key="lg" src={S("mrdiy_logo.png")} width={W - 0.8} position={[cx, 4.05, 2.38]} />);
   if (spd) P.push(<ImagePlane key="lg" src={S("99_grey.png")} width={2.4} position={[cx, 4.05, 2.38]} />);
   if (diy) {
@@ -102,18 +107,30 @@ function Unit({ i, t: TNOW }: { i: number; t: number }) {
     const oR = out(1.4), oH = out(1.6) - 0.2 * (1 - k(TNOW, 1.6, 2.3, Easing.out(Easing.cubic))), oC = out(1.8);   // hardware starts deeper (behind the shutter)
     const GC = ["#e3262b", "#ffd400", "#2f6fd6", "#3bb273", "#f28c28", "#ffffff", "#7a4fd1"];
     for (const sx of [x0 + 1.0, x0 + 2.3, x0 + 3.6]) P.push(<Model key={`shv${sx}`} src={S("parts/shelves.glb")} position={[sx, 0.15, -2.6]} scale={[0.75, 0.9, 0.75]} />);
-    for (let r = 0; r < 4; r++) for (let j = 0; j < 12; j++) P.push(<B key={`bw${r}${j}`} p={[x0 + 0.55 + j * 0.32, 0.45 + r * 0.7, -4.1]} s={[0.25, 0.42, 0.28]}><Flat c={GC[(r * 5 + j) % GC.length]} r={0.5} /></B>);
+    for (let r = 0; r < 4; r++) for (let j = 0; j < 12; j++) P.push(<B key={`bw${r}${j}`} p={[x0 + 0.55 + j * 0.32, 0.45 + r * 0.7, -3.95]} s={[0.25, 0.42, 0.28]}><Flat c={GC[(r * 5 + j) % GC.length]} r={0.5} /></B>);
     for (const [rx] of [[x0 + 1.05], [x0 + 3.4]] as [number][]) {
       P.push(<B key={`rk${rx}`} p={[rx, 0.95, 0.75 + oR]} s={[1.1, 1.6, 0.4]}><Flat c="#2a2c31" r={0.5} /></B>);
-      for (let lv = 0; lv < 4; lv++) for (let j = 0; j < 5; j++) P.push(<B key={`rg${rx}${lv}${j}`} p={[rx - 0.44 + j * 0.22, 0.35 + lv * 0.38, 0.98 + oR]} s={[0.18, 0.28, 0.1]}><Flat c={GC[(lv * 3 + j + (rx > x0 + 2 ? 2 : 0)) % GC.length]} r={0.45} /></B>);
+      for (let lv = 0; lv < 4; lv++) for (let j = 0; j < 5; j++) P.push(<B key={`rg${rx}${lv}${j}`} p={[rx - 0.44 + j * 0.22, 0.35 + lv * 0.38, 1.0 + oR]} s={[0.18, 0.28, 0.1]}><Flat c={GC[(lv * 3 + j + (rx > x0 + 2 ? 2 : 0)) % GC.length]} r={0.45} /></B>);
+      // price tags hang under each pack: blank, they swing up to show "?" on "never checked the price" (L02);
+      // on "Cheap for you" (L05) the middle one swings on round again to RM2. Pivot = the tag's top edge; it swings outward.
+      if (rx < x0 + 2) for (let lv = 1; lv < 4; lv++) for (let j = 0; j < 5; j++) {   // not the bottom shelf: its tags would touch the floor
+        const n = (lv - 1) * 5 + j, mid = lv === 2 && j === 2;
+        const a = Math.PI * k(TNOW, 10.75 + n * 0.035, 11.05 + n * 0.035, Easing.inOut(Easing.cubic)) + (mid ? Math.PI * k(TNOW, 31.05, 31.4, Easing.inOut(Easing.cubic)) : 0);
+        const pv: [number, number, number] = [rx - 0.44 + j * 0.22, 0.35 + lv * 0.38 - 0.145, 1.0 + oR + 0.065], pq = Quat.fromRotationX(-a);
+        const q = (dx: number, dy: number, dz: number, r: [number, number, number, number], sc = 1) => { const o = Quat.mulVec3(pq, [dx, dy, dz]);
+          return Transform.fromXyz(pv[0] + o[0], pv[1] + o[1], pv[2] + o[2]).withRotation(Quat.mul(pq, r)).withScale([sc, sc, sc]); };
+        P.push(<Mesh3d key={`tg${n}`} name={`tag${n}`} transform={q(0, -0.065, 0, Quat.IDENTITY)}><Cuboid half_size={[0.085, 0.06, 0.003]} /><Flat c="#f2efe6" r={0.8} /></Mesh3d>);
+        P.push(<Mesh3d key={`tq${n}`} name={`tagq${n}`} castShadow={false} transform={q(0, -0.1, -0.0035, Quat.fromRotationX(Math.PI))}><Text3D size={0.1} depth={0.002}>?</Text3D><Flat c="#d92128" /></Mesh3d>);
+        if (mid) P.push(<Mesh3d key="trm" name="tagrm" castShadow={false} transform={q(0, -0.09, 0.0035, Quat.IDENTITY, TNOW > 30 ? 1 : 0.001)}><Text3D size={0.06} depth={0.002}>RM2</Text3D><Flat c="#d92128" /></Mesh3d>);
+      }
     }
-    for (const [m, x, z, r, sc] of [["watering_can_metal_01", x0 + 1.0, 1.75, 0.4, 1.6], ["metal_toolbox", x0 + 1.7, 1.8, -0.3, 1.4], ["plastic_container", x0 + 2.4, 1.85, 0.2, 0.7], ["spray_paint_bottles", x0 + 3.1, 1.85, 0.6, 1.5], ["Drill_01", x0 + 3.8, 1.8, 1.2, 1.6], ["cardboard_box_01", x0 + 4.1, 1.3, 0.3, 1.2]] as [string, number, number, number, number][])
+    for (const [m, x, z, r, sc] of [["watering_can_metal_01", x0 + 1.0, 1.75, 0.4, 1.6], ["metal_toolbox", x0 + 1.7, 1.8, -0.3, 1.4], ["plastic_container", x0 + 2.4, 1.85, 0.2, 0.7], ["spray_paint_bottles", x0 + 3.1, 1.85, 0.6, 1.5], ["Drill_01", x0 + 3.8, 1.8, 1.2, 1.6], ["cardboard_box_01", x0 + 4.0, 1.55, 0.3, 1.2]] as [string, number, number, number, number][])
       P.push(<Model key={`hw${m}`} src={S(`${m}/${m}.gltf`)} position={[x, 0.15, z + oH]} rotation={[0, r, 0]} scale={[sc, sc, sc]} />);
     for (let c = 0; c < 6; c++) P.push(<Model key={`pc${c}`} src={S("plastic_crate_01/plastic_crate_01.gltf")} position={[x0 + 3.9 - (c % 2) * 0.5, 0.15 + Math.floor(c / 2) * 0.29, 0.5 + oC]} rotation={[0, 0.1 * c, 0]}><StandardMaterial base_color={["#2f6fd6", "#e3262b", "#3bb273"][c % 3]} /></Model>);
     P.push(<Shutter key="dshut" id="dsh" x={cx} w={W - 0.9} h={2.8 * (1 - up)} z={0.3} c="#5a5d66" />);
     for (let t = 0; t < 3; t++) { const on = k(TNOW, 1.2 + t * 0.15, 1.3 + t * 0.15, Easing.linear);
       P.push(<B key={`tube${t}`} p={[cx, 3.4, -0.6 - t * 1.3]} s={[2.6, 0.05, 0.1]}><Flat c="#ffffff" e={glow("#f2f8ff", 0.2 + 9 * on)} /></B>); }
-    for (let b = 0; b < 5; b++) P.push(<B key={`bk${b}`} p={[x0 + 3.0, 0.21 + b * 0.12, 1.25 + oC]} s={[0.45, 0.11, 0.32]}><Flat c="#e3262b" r={0.45} /></B>);
+    for (let b = 0; b < 5; b++) P.push(<B key={`bk${b}`} p={[x0 + 3.0, 0.21 + b * 0.12, 1.25 + oR]} s={[0.45, 0.11, 0.32]}><Flat c="#e3262b" r={0.45} /></B>);
   } else {
     P.push(<Shutter key="shut" id={`sh${i}`} x={cx} w={W - 0.9} h={spd ? 1.55 : 2.8} z={0.3} c={spd ? "#4e5058" : "#3e4047"} />);
     if (spd) P.push(<B key="sin" p={[cx, 1.5, -0.6]} s={[W - 0.9, 2.8, 0.1]}><Flat c="#1a1c22" e={glow("#7f9cff", 0.1)} /></B>);
@@ -171,6 +188,40 @@ function Street() {
   return <>{P}</>;
 }
 
+// ---------- L02 "over 1,600 stores": the row across the back street (z -30, facing us) where Mr DIY signs light up ----------
+const BACK = Array.from({ length: 14 }, (_, n) => n - 7), BACK_DIY = [-6, -4, -3, -1, 0, 2, 3, 5];
+function BackRow({ T }: { T: number }) {
+  const P: any[] = [], z0 = -30;
+  for (const i of BACK) {
+    const cx = i * W + W / 2, tint = ["#3b3d44", "#36383f", "#40414a", "#393b43"][((i % 4) + 4) % 4], d = BACK_DIY.indexOf(i);
+    const on = d < 0 ? 0 : k(T, 7.3 + d * 0.15, 7.55 + d * 0.15);   // one after another from "1,600"
+    P.push(<Model key={`bh${i}`} src={S(`parts/shophouse_${VAR(i + 3)}.glb`)} position={[cx, 0, z0]}>
+      <StandardMaterial material="wall" base_color={tint} normal_map_texture={S("tex/grey_plaster_nor_gl_1k.jpg")} perceptual_roughness={1} />
+      <StandardMaterial material="trim" base_color="#4a4c54" perceptual_roughness={0.75} />
+      <StandardMaterial material="shutter" base_color="#2c2e34" perceptual_roughness={0.6} />
+      <StandardMaterial material="tile" base_color={tint} perceptual_roughness={0.85} />
+      <StandardMaterial material="floor" base_color="#45474e" perceptual_roughness={0.8} />
+      <StandardMaterial material="party" base_color="#2b2d33" perceptual_roughness={0.8} />
+      <StandardMaterial material="dark" base_color="#15161a" />
+    </Model>);
+    P.push(<B key={`bs${i}`} p={[cx, 4.05, z0 + 2.32]} s={[W - 0.5, 0.62, 0.1]}><Flat c={d < 0 ? "#2a2c33" : "#d92128"} r={0.45} e={glow("#ff2a2a", 2.6 * on)} /></B>);
+    // the logo waits inside the board and slides out to its face as the sign lights
+    if (d >= 0) P.push(<ImagePlane key={`bl${i}`} src={S("mrdiy_logo.png")} width={W - 0.8} position={[cx, 4.05, z0 + 2.3 + 0.08 * on]} />);
+    P.push(<Shutter key={`bsh${i}`} id={`bsh${i}`} x={cx} w={W - 0.9} h={2.8} z={z0 + 0.3} c="#3e4047" />);
+  }
+  P.push(<PointLight key="bglow" transform={Transform.fromXyz(-2, 5, z0 + 6)} intensity={2600000 * k(T, 7.3, 8.6)} color="#ff4a3a" range={22} />);
+  return <>{P}</>;
+}
+// "1,610 STORES" on a billboard standing on Mr DIY's roof ridge (ridge z -5.4, y 9.05); lights on "1,600"
+function Billboard({ T }: { T: number }) {
+  const x = DIY * W + W / 2, z = -5.4, on = k(T, 7.25, 7.6);
+  return <>
+    {[-1.6, 1.6].map((dx) => <B key={`bp${dx}`} p={[x + dx, 9.35, z]} s={[0.12, 0.7, 0.12]}><Flat c="#2a2c31" /></B>)}
+    <B p={[x, 10.3, z]} s={[4.4, 1.3, 0.14]}><Flat c="#1d1f25" r={0.6} /></B>
+    <Mesh3d castShadow={false} transform={Transform.fromXyz(x, 10.12, z + 0.08)}><Text3D size={0.62} depth={0.04}>1,610 STORES</Text3D><Flat c="#5a5420" e={glow("#ffe14a", 0.05 + 2.4 * on)} /></Mesh3d>
+  </>;
+}
+
 // ---------- S3 set: the till drawers, away from the street (x = 60; at x = 200 frames rendered black) ----------
 const DX = 60;
 // coin drops baked with Blender's rigid-body engine (phys_bake.py → media/phys_s3.json): real falls, bounces and settling
@@ -202,16 +253,20 @@ function Drawers({ t, f }: { t: number; f: number }) {
 }
 
 function Shot() {
-  const f = useCurrentFrame(), t = f / FPS;
-  const lit = Math.max(0.04, k(t, 1.1, 1.9));
-  // timed to the voice (EX29 audio, words.json): L01 0.3 s · L03 7.05 s · L04 17.01 s
-  const s1 = t < 7.05, s2 = t >= 7.05 && t < 17.01, s3 = t >= 17.01;
+  const F = useCurrentFrame(), T = F / FPS;
+  // the episode on the voice (EX29 audio/vo_timeline.json): L01 0.3 · L02 7.05 · L03 12.78 · L04 22.74 · L05 31.03 · end 39.4
+  // S2 and S3 were timed on the 26 s test; they keep that clock (t), shifted by L02's 5.73 s
+  const SH = 5.73, t = T >= 12.78 && T < 31.03 ? T - SH : T, f = Math.round(t * FPS);
+  const lit = Math.max(0.04, k(T, 1.1, 1.9));
+  const s1 = T < 7.05, sL2 = T >= 7.05 && T < 12.78, s2 = T >= 12.78 && T < 22.74, s3 = T >= 22.74 && T < 31.03, sL5 = T >= 31.03;
+  const street = s1 || sL2 || sL5;
+  const near = sL2 ? k(T, 9.3, 10.65) : sL5 ? 1 - k(T, 31.7, 33.9) : 0;   // how close the camera is to the rack
   const doorX = DIY * W + W / 2;
   // the coin: S1 rolls along the five-foot way to the door and through it; S2 rolls down the aisle and drops; S3 falls into the drawer
   let coin: [number, number, number] = [0, 0, 0], roll = 0, yaw = -Math.PI / 2, tilt = 0;
-  if (s1) { // the path by distance: straight along the five-foot way, then a quarter arc (r 0.8) into the door
+  if (s1 || sL2 || sL5) { // the path by distance: straight along the five-foot way, then a quarter arc (r 0.8) into the door
     const CR = 0.483, CY = 0.15 + CR, xa = doorX - 0.35 - 0.8, L1 = xa + 9.5, L = L1 + Math.PI / 2 * 0.8;
-    const d = L * k(t, 0, 6.6, Easing.inOut(Easing.quad));
+    const d = L * k(T, 0, 12.6, Easing.inOut(Easing.quad));
     if (d < L1) { coin = [-9.5 + d, CY, 1.4]; yaw = 0; }
     else { const ph = (d - L1) / 0.8; coin = [xa + 0.8 * Math.sin(ph), CY, 0.6 + 0.8 * Math.cos(ph)]; yaw = -ph; }
     roll = -d / CR; }
@@ -222,16 +277,22 @@ function Shot() {
   if (s3) { const c = phys("token", f); coin = c.p; q = c.q; }
   // camera per shot
   let cam: [number, number, number], look: [number, number, number], focus = 20;
+  const RACK_CAM: [number, number, number] = [1.6, 1.35, 3.3], RACK_LOOK: [number, number, number] = [1.05, 0.95, 1.0];   // clear of the man at (0.7, 2.6)
   if (s1) { const u = k(t, 0, 7.05); cam = L3([-8.6, 15.5, 16.5], [doorX - 2.5, 4.2, 8.5], u); look = L3([1.0, 2.2, 1.6], [doorX, 1.3, 0.0], u); focus = lerp(21, 9, u); }
+  else if (sL2) { const u = k(T, 7.05, 8.9), v = k(T, 9.3, 10.65);
+    cam = L3(L3([doorX - 2.5, 4.2, 8.5], [doorX - 3, 30, 27], u), RACK_CAM, v); look = L3(L3([doorX, 1.3, 0.0], [doorX, 1.0, -22], u), RACK_LOOK, v);
+    focus = lerp(lerp(9, 46, u), 2.4, v); }
+  else if (sL5) { const v = k(T, 31.7, 33.9);
+    cam = L3(RACK_CAM, [5, 30, 38], v); look = L3(RACK_LOOK, [8.5, 0.5, -4], v); focus = lerp(2.4, 52, v); }
   else if (s2) { const u = k(t, 7.05, 17.01); cam = L3([doorX + 0.15, 2.8, 1.9], [doorX + 0.1, 2.5, 1.2], u); look = L3([doorX, 0.4, -0.9], [doorX + 0.05, 0.3, -1.4], u);   /* in the doorway, under the lintel (y 2.95) */   /* coin lane and carton both in frame */ focus = lerp(4.1, 3.6, u);
     }
-  else { const u = k(t, 17.01, 22.2), v = k(t, 22.3, 23.2); cam = L3(L3([DX - 0.25, 3.5, 3.25], [DX - 0.1, 3.2, 3.1], u), [DX + 0.3, 5.0, 3.2], v); /* stay > 3 m from the drawer light: inside its range the frame renders black */ look = L3([DX, 1.1, 0.05], [DX, 1.0, -0.65], v); focus = lerp(2.9, 4.6, v); }
+  else if (s3) { const u = k(t, 17.01, 22.2), v = k(t, 22.3, 23.2); cam = L3(L3([DX - 0.25, 3.5, 3.25], [DX - 0.1, 3.2, 3.1], u), [DX + 0.3, 5.0, 3.2], v); /* stay > 3 m from the drawer light: inside its range the frame renders black */ look = L3([DX, 1.1, 0.05], [DX, 1.0, -0.65], v); focus = lerp(2.9, 4.6, v); }
   // the carton and the own-brand stamp (S2)
   const cartonIn = k(t, 7.3, 7.9, Easing.out(Easing.cubic)), stamp = k(t, 13.75, 14.0, Easing.in(Easing.quad)) - k(t, 14.1, 14.45), label = k(t, 13.95, 14.05, Easing.linear);
   return (
     <AbsoluteFill style={{ background: "#14161c" }}>
-      <Camera3d transform={Transform.fromXyz(...cam).lookingAt(look)} projection={{ Perspective: { fov: s1 ? 0.62 : 0.75 } }}>
-        <DepthOfField focal_distance={focus} aperture_f_stops={s1 ? 7 : 4} />
+      <Camera3d transform={Transform.fromXyz(...cam).lookingAt(look)} projection={{ Perspective: { fov: street ? 0.62 : 0.75 } }}>
+        <DepthOfField focal_distance={focus} aperture_f_stops={street ? 7 : 4} />
       </Camera3d>
       <Environment src={S("sky.hdr")} intensity={0.12} rotation={2.6} />
       <AmbientLight brightness={14} color="#8ea4dc" />
@@ -239,7 +300,7 @@ function Shot() {
       <Shadows distance={45} firstCascade={14} mapSize={4096} bias={0.04} normalBias={1.5} />
       <RectLight transform={Transform.fromXyz(doorX, 3.3, -1.6).lookingAt([doorX, 0, -1.2])} intensity={260000 * lit * (s2 ? 0.25 : 1)} width={3.4} height={3.0} color="#ffe9cc" range={8} />
       <PointLight transform={Transform.fromXyz(doorX, 2.6, -2.4)} intensity={900000 * lit * (s2 ? 0.3 : 1)} color="#ffe3bd" range={8} shadow_maps_enabled soft_shadows_enabled radius={0.6} />
-      <SpotLight transform={Transform.fromXyz(doorX, 3.0, -0.4).lookingAt([doorX, 0, AR + 3.5])} intensity={3200000 * lit * (s2 ? 0.08 : 1)} outer_angle={1.3} inner_angle={0.02} color="#ffcf92" range={18} shadow_maps_enabled soft_shadows_enabled radius={1.2} volumetric />
+      <SpotLight transform={Transform.fromXyz(doorX, 3.0, -0.4).lookingAt([doorX, 0, AR + 3.5])} intensity={3200000 * lit * (s2 ? 0.08 : 1 - 0.8 * near)} outer_angle={1.3} inner_angle={0.02} color="#ffcf92" range={18} shadow_maps_enabled soft_shadows_enabled radius={1.2} volumetric />
       <PointLight transform={Transform.fromXyz(doorX, 4.0, AR + 0.9)} intensity={420000} color="#ff4a3a" range={4.5} />
       <PointLight transform={Transform.fromXyz(SPD * W + W / 2, 1.2, -0.8)} intensity={260000} color="#8fb0ff" range={6} />
       <PointLight transform={Transform.fromXyz(13, 6.5, AR + 9.4)} intensity={700000} color="#cfe0ff" range={14} />
@@ -247,22 +308,25 @@ function Shot() {
       <PointLight transform={Transform.fromXyz(DX, 2.0, 0.2)} intensity={300000} color="#ffcf8a" range={3} />
       <SpotLight transform={Transform.fromXyz(DX + 0.8, 4.5, 1.5).lookingAt([DX + 0.8, 1, 0])} intensity={600000} outer_angle={0.6} inner_angle={0.2} color="#b9c9ff" range={8} shadow_maps_enabled />
       <VolumetricFog ambient={0.02} ambientColor="#2a3550" />
-      <FogVolume name="haze" position={[2, 2.5, AR + 2]} scale={[30, 5, 12]} density={s2 ? 0 : 0.035} color="#c9d4ff" scattering={0.6} anisotropy={0.6} falloff={0.6} />
+      <FogVolume name="haze" position={[2, 2.5, AR + 2]} scale={[30, 5, 12]} density={s2 ? 0 : 0.035 * (1 - 0.9 * near)} color="#c9d4ff" scattering={0.6} anisotropy={0.6} falloff={0.6} />
       <Fog color="#14161c" near={40} far={120} />
       <Bloom intensity={0.9} threshold={0.9} />
       <AmbientOcclusion quality="high" />
       <ToneMapping mode="agx" exposure={0.55} />
       <Grade temperature={0.0} vignette={0.3} midtones={{ saturation: 1.05, contrast: 1.12, gamma: 1, gain: 1, lift: 0 }} />
       <Street />
-      {UNITS.map((i) => <Unit key={i} i={i} t={t} />)}
+      {UNITS.map((i) => <Unit key={i} i={i} t={T} />)}
+      <BackRow T={T} />
+      <Billboard T={T} />
       {/* S2: carton slides in on the hand truck line, the stamp drops OWN BRAND on it */}
       <Model src={S("cardboard_box_01/cardboard_box_01.gltf")} position={[lerp(doorX + 2.6, doorX + 0.5, cartonIn), 0.21, -1.85]} scale={[1.5, 1.5, 1.5]} />   {/* Poly Haven carton, top at y 0.70 */}
       <Model src={S("parts/stamp.glb")} position={[doorX + 0.5, lerp(2.4, 0.708, Math.max(0, stamp)), -1.8]} scale={[0.8, 0.8, 0.8]} />   {/* Rubber Stamp, Poly by Google (CC-BY), stamp.py */}
       <Mesh3d castShadow={false} transform={Transform.fromXyz(doorX + 0.5, 0.705, -1.8).withRotation(Quat.fromEuler("XYZ", -Math.PI / 2, 0, 0)).withScale([label, label, label])}><Text3D size={0.09} depth={0.004}>OWN BRAND</Text3D><Flat c="#d92128" e={glow("#ff3a2a", 0.4)} /></Mesh3d>
       <Drawers t={t} f={f} />
-      <Mesh3d name="coin" transform={Transform.fromXyz(...coin).withRotation(q ?? Quat.fromEuler("YXZ", yaw, tilt, roll)).withScale([s3 ? 0.14 / 0.42 : 1.15, s3 ? 0.14 / 0.42 : 1.15, s3 ? 0.14 / 0.42 : 1.15])} shape={so().coin}>
+      <Mesh3d name="coin" transform={Transform.fromXyz(...coin).withRotation(q ?? Quat.fromEuler("YXZ", yaw, tilt, roll)).withScale([s3 ? 0.14 / 0.42 : 1.15, s3 ? 0.14 / 0.42 : 1.15, s3 ? 0.14 / 0.42 : 1.15].map((v) => (sL5 ? 0.001 : v)) as [number, number, number])} shape={so().coin}>
         <StandardMaterial base_color="#e3b04a" metallic={1} perceptual_roughness={0.22} emissive={glow("#ffb347", 0.25)} /></Mesh3d>
+      <Captions blocks={CAPS as CapBlock[]} frame={F} fps={FPS} />
     </AbsoluteFill>
   );
 }
-registerRoot(() => <Composition id="ex29a" component={Shot} width={1080} height={1920} fps={FPS} durationInFrames={780} />);
+registerRoot(() => <Composition id="ex29" component={Shot} width={1080} height={1920} fps={FPS} durationInFrames={1182} />);

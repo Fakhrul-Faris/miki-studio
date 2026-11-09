@@ -141,4 +141,6 @@ Every shot, every style, in this order. No step skipped, no "final quality" clai
 - **Flicker** (user 2026-11-09): (1) a part count that changes between frames makes raea re-match parts in tree order,
   so models swap every other frame: keep every part on every frame (hide by tiny scale), name moving parts;
   (2) coplanar faces z-fight (two kerbs); (3) a physics body that never settles; (4) rare all-black GPU frames in long
-  renders: render to PNGs, find black frames, re-render them with `--at`. Run the flicker check before showing.
+  renders: render to PNGs, find black frames, re-render them with `--at`; (5) single runs past ~700 frames put the
+  camera wrong on alternate frames (EX29, 1,182 frames): render in fresh 300-frame chunks (`A2/render_chunks.sh`).
+  Run `frames_check.py` on the joined frames before showing.
