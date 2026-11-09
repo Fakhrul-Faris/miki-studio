@@ -27,7 +27,7 @@ const so = () => (SO ??= {
   cap: manifold.roundedBox(0.5, 0.18, 0.5, 0.03),
   gableRound: manifold.cylinder(1.1, 0.25).move(0, 0, -0.125).intersect(manifold.box(2.4, 1.2, 0.4).move(-1.2, 0, -0.2)),
   gableStep: manifold.union(manifold.box(2.2, 0.4, 0.25).move(-1.1, 0, -0.125), manifold.box(1.3, 0.8, 0.25).move(-0.65, 0, -0.125)),
-  coin: manifold.cylinder(0.4, 0.1).move(0, 0, -0.05).minus(manifold.cylinder(0.31, 0.04).move(0, 0, 0.03)).minus(manifold.cylinder(0.31, 0.04).move(0, 0, -0.07)).union(manifold.cylinder(0.18, 0.09).move(0, 0, -0.045)),
+  coin: manifold.cylinder(0.42, 0.13).move(0, 0, -0.065).minus(manifold.cylinder(0.34, 0.05).move(0, 0, 0.04)).minus(manifold.cylinder(0.34, 0.05).move(0, 0, -0.09)).union(manifold.cylinder(0.2, 0.11).move(0, 0, -0.055)).union(manifold.torus(0.27, 0.018).move(0, 0, 0.03)).union(manifold.torus(0.27, 0.018).move(0, 0, -0.03)),
   tank: manifold.cylinder(0.45, 1.1).rotate(-90, 0, 0),
   umbrella: manifold.cone(1.3, 0.02, 0.6).rotate(-90, 0, 0),
 });
@@ -52,10 +52,11 @@ const VAR = (i: number) => ["A", "B", "C", "B", "A", "C", "A", "B", "C", "A"][((
 function Unit({ i }: { i: number }) {
   const x0 = i * W, cx = x0 + W / 2, diy = i === DIY, spd = i === SPD;
   const src = diy ? "parts/shophouse_A_open.glb" : `parts/shophouse_${VAR(i)}.glb`;
+  const right = i === DIY + 1;
   const tint = ["#3b3d44", "#36383f", "#40414a", "#393b43"][((i % 4) + 4) % 4];
   const P: any[] = [];
   P.push(<Model key="sh" src={S(src)} position={[cx, 0, 0]}>
-    <StandardMaterial material="wall" base_color={diy ? "#e3a800" : tint} normal_map_texture={S("tex/grey_plaster_nor_gl_1k.jpg")} metallic_roughness_texture={S("tex/grey_plaster_rough_1k.jpg")} perceptual_roughness={1} uv_transform={Affine2.fromScale([0.6, 0.6])} />
+    <StandardMaterial material="wall" base_color={diy ? "#e3a800" : tint} normal_map_texture={S("tex/grey_plaster_nor_gl_1k.jpg")} metallic_roughness_texture={S("tex/grey_plaster_rough_1k.jpg")} perceptual_roughness={1} uv_transform={Affine2.fromScale([2.4, 2.4])} />
     <StandardMaterial material="trim" base_color={diy ? "#fff3cf" : "#4a4c54"} perceptual_roughness={0.75} />
     <StandardMaterial material="shutter" base_color={diy ? "#2f7a4a" : "#2c2e34"} perceptual_roughness={0.6} />
     <StandardMaterial material="tile" base_color={tint} normal_map_texture={S("tex/clay_roof_tiles_02_nor_gl_1k.jpg")} perceptual_roughness={0.85} />
@@ -76,7 +77,9 @@ function Unit({ i }: { i: number }) {
       P.push(<B key={`rk${rx}`} p={[rx, 0.95, 0.75]} s={[1.1, 1.6, 0.4]}><Flat c="#2a2c31" r={0.5} /></B>);
       for (let lv = 0; lv < 4; lv++) for (let j = 0; j < 5; j++) P.push(<B key={`rg${rx}${lv}${j}`} p={[rx - 0.44 + j * 0.22, 0.35 + lv * 0.38, 0.98]} s={[0.18, 0.28, 0.1]}><Flat c={GC[(lv * 3 + j + (rx > x0 + 2 ? 2 : 0)) % GC.length]} r={0.45} /></B>);
     }
-    for (let k = 0; k < 4; k++) P.push(<Mesh3d key={`bin${k}`} transform={Transform.fromXyz(x0 + 0.9 + k * 0.95, 0.43, 1.7)}><Cylinder radius={0.28} half_height={0.27} /><Flat c={["#2f6fd6", "#e3262b", "#3bb273", "#ffd400"][k]} r={0.5} /></Mesh3d>);
+    for (const [m, x, z, r, sc] of [["watering_can_metal_01", x0 + 1.0, 1.75, 0.4, 1.6], ["metal_toolbox", x0 + 1.7, 1.8, -0.3, 1.4], ["plastic_container", x0 + 2.4, 1.85, 0.2, 0.7], ["spray_paint_bottles", x0 + 3.1, 1.85, 0.6, 1.5], ["Drill_01", x0 + 3.8, 1.8, 1.2, 1.6], ["cardboard_box_01", x0 + 4.1, 1.3, 0.3, 1.2]] as [string, number, number, number, number][])
+      P.push(<Model key={`hw${m}`} src={S(`${m}/${m}.gltf`)} position={[x, 0.15, z]} rotation={[0, r, 0]} scale={[sc, sc, sc]} />);
+    for (let c = 0; c < 6; c++) P.push(<Model key={`pc${c}`} src={S("plastic_crate_01/plastic_crate_01.gltf")} position={[x0 + 4.0 - (c % 2) * 0.5, 0.15 + Math.floor(c / 2) * 0.29, 0.5]} rotation={[0, 0.1 * c, 0]}><StandardMaterial base_color={["#2f6fd6", "#e3262b", "#3bb273"][c % 3]} /></Model>);
     for (let b = 0; b < 5; b++) P.push(<B key={`bk${b}`} p={[x0 + 0.75, 0.21 + b * 0.12, 1.2]} s={[0.45, 0.11, 0.32]}><Flat c="#e3262b" r={0.45} /></B>);
   } else {
     P.push(<WhiteModel key="shut" src="parts/shutter.glb" p={[cx, spd ? 1.4 : 0.15, 0.02]} s={[(W - 0.9) / 1.08, 1.17, 0.5]} c={spd ? "#4e5058" : "#3e4047"} />);
@@ -116,7 +119,7 @@ function Street() {
     for (let r = 0; r < Math.floor(h / 2.6); r++) {
       P.push(<B key={`bal${bx}${r}`} p={[bx, 1.6 + r * 2.6, bz + 5.15]} s={[w - 0.4, 0.14, 0.4]}><Flat c={WHITE2} /></B>);
       for (let c = 0; c < Math.floor(w / 1.6); c++) { const lit = ((r * 7 + c * 3 + bx) % 5) === 0;
-        P.push(<B key={`cw${bx}${r}${c}`} p={[bx - w / 2 + 0.9 + c * 1.6, 2.6 + r * 2.6, bz + 5.02]} s={[0.8, 1.0, 0.05]}><Flat c={lit ? "#9fb7e8" : "#20222a"} e={lit ? glow("#8fb0ff", 0.5) : undefined} /></B>); }
+        P.push(<B key={`cw${bx}${r}${c}`} p={[bx - w / 2 + 0.9 + c * 1.6, 2.6 + r * 2.6, bz + 5.02]} s={[0.8, 1.0, 0.05]}><Flat c={lit ? "#6f82aa" : "#20222a"} e={lit ? glow("#8fb0ff", 0.18) : undefined} /></B>); }
     }
   }
   for (let k = 0; k < 0; k++) {
@@ -128,28 +131,29 @@ function Street() {
   P.push(<WhiteModel key="ht2" src="hand_truck/hand_truck.gltf" p={[4.2, 0.12, 1.4]} r={-0.6} />);
   P.push(<Model key="vs" src={S("parts/vespa.glb")} position={[-6.5, 0.12, 1.4]} rotation={[0, 1.2, 0]}><StandardMaterial base_color={WHITE2} /></Model>);
   // people hold poses (house rule): MPFB figures, faceless, charcoal clay
-  for (const [src, x, z, r] of [["s_m30", 1.6, 1.3, Math.PI], ["s_f25", 3.0, 1.0, 2.6], ["s_m50", -9.0, AR + 9.0, 0.3], ["s_f35", -8.3, AR + 9.4, -2.4], ["s_m30", -4.2, 1.1, 0.9], ["s_f25", 10.8, AR + 9.6, -0.4]] as [string, number, number, number][])
+  for (const [src, x, z, r] of [["s_m30", 1.4, 1.4, Math.PI], ["s_f25", 3.3, 2.8, 2.2], ["s_m50", -9.0, AR + 9.0, 0.3], ["s_f35", -8.3, AR + 9.4, -2.4], ["s_m30", -4.2, 1.1, 0.9], ["s_f25", 10.8, AR + 9.6, -0.4]] as [string, number, number, number][])
     P.push(<Model key={`pp${src}${x}`} src={S(`people/${src}.glb`)} position={[x, 0.12, z]} rotation={[0, r, 0]}><StandardMaterial base_color="#55585f" perceptual_roughness={0.7} /></Model>);
   return <>{P}</>;
 }
 
 function Shot() {
   const f = useCurrentFrame();
-  const coinX = DIY * W + W / 2 - 0.4, coinZ = AR + 0.9;
+  const coinX = DIY * W + W / 2 + 0.9, coinZ = AR + 0.55;
   return (
     <AbsoluteFill style={{ background: "#15171c" }}>
-      <Camera3d transform={Transform.fromXyz(-17, 14, 23).lookingAt([0.4, 3.0, 0.4])} projection={{ Perspective: { fov: 0.6 } }}>
-        <DepthOfField focal_distance={30} aperture_f_stops={9} />
+      <Camera3d transform={Transform.fromXyz(-18, 19, 27).lookingAt([1.2, 3.6, 0.8])} projection={{ Perspective: { fov: 0.62 } }}>
+        <DepthOfField focal_distance={38} aperture_f_stops={10} />
       </Camera3d>
       <Environment src={S("sky.hdr")} intensity={0.25} rotation={2.6} />
-      <AmbientLight brightness={22} color="#9fb4ff" />
+      <AmbientLight brightness={26} color="#93a9e8" />
+      <DirectionalLight color="#c4d4ff" transform={Transform.fromXyz(24, 10, -10).lookingAt([0, 3, 2])} illuminance={1600} />
       {/* low dusk sun from the west: long shadows of every pillar, car and tree across the white street */}
-      <DirectionalLight color="#a9c0ff" transform={Transform.fromXyz(26, 16, -6).lookingAt([0, 0, 2])} illuminance={3800} shadow_maps_enabled soft_shadow_size={0.5} />
+      <DirectionalLight color="#9fb8ff" transform={Transform.fromXyz(-18, 22, 14).lookingAt([0, 0, 0])} illuminance={3400} shadow_maps_enabled soft_shadow_size={0.5} />
       <Shadows distance={70} firstCascade={25} mapSize={4096} bias={0.04} normalBias={1.5} />
       {/* Mr DIY's own light spills onto its five-foot way and the kerb */}
       <RectLight transform={Transform.fromXyz(DIY * W + W / 2, 2.6, 0.2).lookingAt([DIY * W + W / 2, 0, AR + 1])} intensity={140000} width={W - 0.8} height={2.4} color="#ffe2b8" range={16} />
       <PointLight transform={Transform.fromXyz(DIY * W + W / 2, 4.45, AR + 1.6)} intensity={160000} color="#ff7a5a" range={6} />
-      <PointLight transform={Transform.fromXyz(DIY * W + W / 2, 3.4, -1.8)} intensity={1500000} color="#ffe2b8" range={10} shadow_maps_enabled />
+      <PointLight transform={Transform.fromXyz(DIY * W + W / 2, 3.4, -1.8)} intensity={2400000} color="#ffe2b8" range={10} shadow_maps_enabled />
       <PointLight transform={Transform.fromXyz(DIY * W + 1.0, 2.2, -3.2)} intensity={700000} color="#fff1dc" range={6} />
       <SpotLight transform={Transform.fromXyz(DIY * W + W / 2, 3.2, -1.0).lookingAt([DIY * W + W / 2, 0, AR + 5])} intensity={3000000} outer_angle={0.95} inner_angle={0.05} color="#ffd29a" range={22} shadow_maps_enabled />
       <Fog color="#15171c" near={50} far={150} />
@@ -159,8 +163,8 @@ function Shot() {
       <Grade temperature={0.02} vignette={0.22} midtones={{ saturation: 1.05, contrast: 1.18, gamma: 1, gain: 1, lift: 0 }} />
       <Street />
       {UNITS.map((i) => <Unit key={i} i={i} />)}
-      <Mesh3d name="coin" transform={Transform.fromXyz(coinX, 0.41, coinZ).withRotation(Quat.fromEuler("YXZ", -0.75, -0.1, 0))} shape={so().coin}>
-        <StandardMaterial base_color="#d9a63a" metallic={1} perceptual_roughness={0.25} emissive={glow("#ffb347", 0.6)} /></Mesh3d>
+      <Mesh3d name="coin" transform={Transform.fromXyz(coinX, 0.57, coinZ).withRotation(Quat.fromEuler("YXZ", -0.6, -0.12, 0))} shape={so().coin}>
+        <StandardMaterial base_color="#e3b04a" metallic={1} perceptual_roughness={0.22} emissive={glow("#ffb347", 0.25)} /></Mesh3d>
     </AbsoluteFill>
   );
 }
