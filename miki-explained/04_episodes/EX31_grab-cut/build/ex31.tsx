@@ -11,6 +11,7 @@ import { Camera3d } from "raea/camera";
 import { Affine2 } from "raea/math";
 import { LinearRgba, Srgba } from "raea/color";
 import CAPS from "./caps.json";
+import PATHS from "./paths.json";   // vehicle paths, written and collision-checked by paths.py (never edit by hand)
 import { Captions, type CapBlock } from "../../../tools/raea/kit/Captions";
 
 const S = (p: string) => staticFile(p);
@@ -149,9 +150,9 @@ function Street() {
   P.push(<B key="pv" p={[xm, 0.08, AR + 10]} s={[L + 60, 0.16, 2.2]}><Tiles n="concrete_tiles" u={40} v={2} /></B>);
   P.push(<B key="gr" p={[xm, -0.06, -10]} s={[L + 80, 0.1, 60]}><Flat c={WHITE2} /></B>);
   // parked cars, trees, lamps, poles and wires, a stall, chairs and crates — all white model
-  for (const [x, f] of [[-15, 0], [-7.5, 0], [6, 0], [13, 0]] as [number, number][]) P.push(<WhiteModel key={`car${x}`} src="car_b.glb" p={[x, 0, AR + 1.6]} r={Math.PI / 2 + f} s={1.0} />);
-  for (const x of [-22, -13, 11, 20]) P.push(<WhiteModel key={`tr${x}`} src="island_tree_02/island_tree_02.gltf" p={[x, 0.16, AR + 10]} s={1.6} c={WHITE2} />);
-  for (const x of [13]) P.push(<WhiteModel key={`lp${x}`} src="street_light.glb" p={[x, 0.16, AR + 9.4]} r={Math.PI} s={1.1} />);
+  for (const [x, f] of [[-15, 0], [-11.5, 0], [6, 0], [13, 0]] as [number, number][]) P.push(<WhiteModel key={`car${x}`} src="car_b.glb" p={[x, 0, AR + 1.75]} r={Math.PI / 2 + f} s={1.0} />);
+  for (const x of [-22, -13, 32, 38]) P.push(<WhiteModel key={`tr${x}`}   /* clear of L03's tracking camera */ src="island_tree_02/island_tree_02.gltf" p={[x, 0.16, AR + 10]} s={1.6} c={WHITE2} />);
+  for (const x of [34]) P.push(<WhiteModel key={`lp${x}`} src="street_light.glb" p={[x, 0.16, AR + 9.4]} r={Math.PI} s={1.1} />);
   for (const x of [-26, 20]) P.push(<WhiteModel key={`tp${x}`} src="tele_pole.glb" p={[x, 0.16, AR + 0.5]} s={1.2} />);
   for (let w = 0; w < 0; w++) P.push(<Mesh3d key={`wi${w}`} transform={Transform.fromXyz(-3, 8.4 - w * 0.25, AR + 0.5).withRotation(Quat.fromEuler("XYZ", 0, 0, Math.PI / 2))}><Cylinder radius={0.018} half_height={30} /><Flat c="#8e877c" /></Mesh3d>);
   P.push(<Mesh3d key="umb" transform={Transform.fromXyz(-9.5, 2.5, AR + 9.6)} shape={so().umbrella}><Flat c={WHITE} /></Mesh3d>);
@@ -180,7 +181,7 @@ function Street() {
   for (let c = 0; c < 4; c++) P.push(<WhiteModel key={`cr2${c}`} src="plastic_crate_01/plastic_crate_01.gltf" p={[-2.6 + (c % 2) * 0.45, 0.12 + Math.floor(c / 2) * 0.29, 0.85]} r={c * 0.3} />);
   P.push(<WhiteModel key="ht2" src="hand_truck/hand_truck.gltf" p={[4.2, 0.12, 1.4]} r={-0.6} />);
   P.push(<Model key="vs" src={S("parts/vespa.glb")} position={[-6.5, 0.12, 1.4]} rotation={[0, 1.2, 0]}><StandardMaterial base_color={WHITE2} /></Model>);
-  P.push(<Model key="vsp" src={S("parts/vespa.glb")} position={[-1.6, 0.0, AR + 1.3]} rotation={[0, 1.3, 0]}><StandardMaterial base_color={WHITE2} /></Model>);
+  P.push(<Model key="vsp" src={S("parts/vespa.glb")} position={[-1.6, 0.15, 1.0]} rotation={[0, 1.3, 0]}>   {/* on the five-foot way, out of the Grab car's path */}<StandardMaterial base_color={WHITE2} /></Model>);
   // people hold poses (house rule): MPFB figures, faceless, charcoal clay
   for (const [src, x, z, r] of [["s_m30", 0.7, 2.6, 2.4], ["s_f25", 3.9, 1.6, -2.6], ["s_m50", -9.0, AR + 9.0, 0.3], ["s_f35", -8.3, AR + 9.4, -2.4], ["s_m30", -4.2, 0.75, 0.9], ["s_f25", 10.8, AR + 9.6, -0.4]] as [string, number, number, number][])
     P.push(<Model key={`pp${src}${x}`} src={S(`people/${src}.glb`)} position={[x, 0.12, z]} rotation={[0, r, 0]}><StandardMaterial base_color="#55585f" perceptual_roughness={0.7} /></Model>);
@@ -251,7 +252,7 @@ function WeekBoard({ t }: { t: number }) {
 }
 
 // "over 170,000 drivers": a fleet along both lanes; each car's green roof light comes on in turn
-const FLEET = Array.from({ length: 22 }, (_, n) => [-26 + Math.floor(n / 2) * 5.3 + (n % 2) * 2.6, n % 2 ? AR + 3.4 : AR + 6.6, n % 2 ? 0 : Math.PI] as [number, number, number]);   // one car per spot (two in one spot doubled the logos)
+const FLEET = (PATHS.fleet as [number, number][]).map(([x, z], n) => [x, z, n % 2 ? 0 : Math.PI] as [number, number, number]);   // lanes checked clear by paths.py
 function Fleet({ t }: { t: number }) {
   return <>{FLEET.map(([x, z, yaw], n) => <GrabCar key={`fl${n}`} id={`fl${n}`} p={[x, 0, z]} yaw={yaw} on={k(t, 19.9 + n * 0.07, 20.1 + n * 0.07)} sc={k(t, 19.3 + n * 0.03, 19.8 + n * 0.03) * (1 - k(t, 25.9, 26.3))} />)}</>;
 }
@@ -265,7 +266,7 @@ function Parliament({ t }: { t: number }) {
   P.push(<B key="pt" p={[PX + 6, 26, -30]} s={[13, 52, 9]}><Flat c="#d8d6cf" /></B>);
   for (let r = 0; r < 24; r++) for (let c = 0; c < 6; c++) P.push(<B key={`pl${r}${c}`} p={[PX + 6 - 5.2 + c * 2.08, 3 + r * 2.1, -25.45]} s={[1.3, 1.3, 0.12]} rot={[0, 0, Math.PI / 4]}><Flat c="#8d8f96" /></B>);
   P.push(<B key="ph" p={[PX - 8, 4, -20]} s={[30, 8, 16]}><Flat c="#cfccc4" /></B>);
-  for (let n = 0; n < 8; n++) P.push(<Mesh3d key={`pr${n}`} transform={Transform.fromXyz(PX - 21 + n * 3.7, 8.9, -20).withRotation(Quat.fromRotationY(Math.PI / 4))}><Cylinder radius={2.2} half_height={0.9} /><Flat c="#9a8f7c" /></Mesh3d>);
+  for (let n = 0; n < 8; n++) P.push(<Mesh3d key={`pr${n}`} transform={Transform.fromXyz(PX - 21 + n * 3.7, 8.9, -20).withRotation(Quat.fromRotationY(Math.PI / 4))}><Cylinder radius={1.75} half_height={0.9} />   {/* spaced: 2.2 overlapped its neighbours */}<Flat c="#9a8f7c" /></Mesh3d>);
   // the desk and the document (words on the object); the stamp lands on "reviewing"
   P.push(<B key="dk" p={[PX, 0.75, 10]} s={[3.6, 0.1, 2.2]}><Flat c="#3a2f28" /></B>);
   P.push(<B key="dkl" p={[PX, 0.36, 10]} s={[3.2, 0.72, 1.8]}><Flat c="#2a221d" /></B>);
@@ -283,18 +284,13 @@ function Parliament({ t }: { t: number }) {
 // ---------------------------------------------------------------------------------------------------------------------
 // the film, on the voice: L01 0.3 · L02 4.78 · L03 9.21 · L04 19.43 · L05 26.55 · end 32.6
 const STOP = -3;                         // where the car meets the rider (kerb lane)
-const RIDER: [number, number, number] = [STOP - 0.4, 0.12, AR + 0.35];
+const RIDER: [number, number, number] = [STOP - 0.4, 0.15, AR + 0.2];   // on the kerb
 function carAt(T: number): { p: [number, number, number]; yaw: number } {
-  // L01: glides in along the kerb lane and stops by the rider (0.3–2.4)
-  if (T < 9.4) { const u = k(T, 0.3, 2.4, Easing.out(Easing.cubic)); return { p: [lerp(-22, STOP, u), 0, AR + 1.6], yaw: 0 }; }
-  // L03: pulls out to the far lane; "distance" runs it far; "traffic" holds it behind the jam; on to the next rider
-  const out = k(T, 9.4, 10.4), far = k(T, 12.7, 13.6, Easing.inOut(Easing.quad)), go = k(T, 14.5, 15.6);
-  const x = lerp(STOP, 2, out) + 15 * far + 9 * go, z = lerp(AR + 1.6, AR + 5.2, out) - lerp(0, 3.6, k(T, 15.0, 15.6));
-  if (T < 26.4) return { p: [x, 0, z], yaw: 0 };
-  // L05: back at the first rider; then drives off
-  return { p: [lerp(STOP, 30, k(T, 28.6, 31.0, Easing.in(Easing.quad))), 0, AR + 1.6], yaw: 0 };
+  const fr = PATHS.frames as number[][], v = fr[Math.max(0, Math.min(fr.length - 1, Math.round(T * FPS)))];
+  return { p: [v[0], 0, v[1]], yaw: v[2] };
 }
-const NEXT_RIDER: [number, number, number] = [26.5, 0.12, AR + 0.35];
+const jamAt = (T: number, n: number) => { const fr = PATHS.frames as number[][]; return fr[Math.max(0, Math.min(fr.length - 1, Math.round(T * FPS)))][3 + n]; };
+const NEXT_RIDER: [number, number, number] = [26.5, 0.15, AR + 0.2];
 function cutAt(T: number) {             // Grab's share of the note, trip by trip (L03), settling to 20% on "weekly average"
   return interpolate(T, [0, 11.2, 11.6, 13.0, 13.4, 13.7, 14.1, 14.9, 15.3, 16.6, 17.2, 26.5, 27.8, 28.2],
                         [0.2, 0.2, 0.27, 0.27, 0.13, 0.13, 0.23, 0.23, 0.17, 0.17, 0.2, 0.2, 0.2, 0.15], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
@@ -348,7 +344,7 @@ function Film() {
       <SpotLight name="hl" transform={Transform.fromXyz(...place(car.p, car.yaw, [2.2, 0.7, 0])).lookingAt(place(car.p, car.yaw, [12, 0, 0]))} intensity={2600000} outer_angle={0.45} inner_angle={0.2} color="#fff1d6" range={22} shadow_maps_enabled />
       <PointLight name="cg" transform={Transform.fromXyz(cx, 2.6, car.p[2])} intensity={180000} color="#7dffb4" range={5} />
       <PointLight name="tg" transform={Transform.fromXyz(TW[0], 44, TW[2] + 9)} intensity={9000000} color="#5dff9a" range={20} />
-      <PointLight transform={Transform.fromXyz(13, 6.5, AR + 9.4)} intensity={700000} color="#cfe0ff" range={14} />
+      <PointLight transform={Transform.fromXyz(34, 6.5, AR + 9.4)} intensity={700000} color="#cfe0ff" range={14} />
       <SpotLight name="pk" transform={Transform.fromXyz(PX - 4, 6, 16).lookingAt([PX, 0.8, 10])} intensity={1600000} outer_angle={0.5} inner_angle={0.3} color="#ffe4c4" range={14} shadow_maps_enabled />
       <SpotLight name="pf" transform={Transform.fromXyz(PX - 6, 1, 0).lookingAt([PX + 6, 30, -26])} intensity={30000000} outer_angle={0.5} inner_angle={0.3} color="#fff2dc" range={60} />
       <Fog color="#14161c" near={60} far={150} />
@@ -363,7 +359,7 @@ function Film() {
       <Fleet t={T} />
       <Parliament t={T} />
       {/* the traffic: three cars in the far lane, holding the Grab car on "traffic", then moving on */}
-      {[0, 1, 2].map((n) => <Model key={`jam${n}`} name={`jam${n}`} src={S("car_b.glb")} position={[18 + n * 5 + 12 * k(T, 14.4, 15.4, Easing.in(Easing.quad)), 0, AR + 5.2]} rotation={[0, Math.PI / 2, 0]}><StandardMaterial material="Blue" base_color={["#5a2a2a", "#2d3b52", "#4a4a4a"][n]} /></Model>)}
+      {[0, 1, 2].map((n) => <Model key={`jam${n}`} name={`jam${n}`} src={S("car_b.glb")} position={[jamAt(T, n), 0, AR + 5.2]} rotation={[0, Math.PI / 2, 0]}><StandardMaterial material="Blue" base_color={["#5a2a2a", "#2d3b52", "#4a4a4a"][n]} /></Model>)}
       <Model name="rider" src={S("people/s_f35.glb")} position={RIDER} rotation={[0, Math.PI, 0]}><StandardMaterial base_color="#55585f" perceptual_roughness={0.7} /></Model>
       <Model name="rider2" src={S("people/s_m50.glb")} position={NEXT_RIDER} rotation={[0, Math.PI, 0]}><StandardMaterial base_color="#55585f" perceptual_roughness={0.7} /></Model>
       <GrabCar id="gc" p={car.p} yaw={car.yaw} />

@@ -25,7 +25,7 @@ Change a locked trait only when the user says so by name. "Make it better" never
 ### Style A — the white model world (BIBLE-A)
 | Trait | Locked value |
 |---|---|
-| Camera | **High three-quarter / near-isometric**, looking down at a whole street block (like `_tests/style-test-mrdiy/A/stills/A2_preview.png`'s angle, but fuller). Low or impossible angles only for a hook beat, never as the default. |
+| Camera | **High three-quarter / near-isometric**, looking down at a whole street block (as in the EX29 baseline's opening, `EX29_mrdiy-margin/export/EX29-Final.mp4`). Low or impossible angles only for a hook beat, never as the default. |
 | World | **Dark model world** (charcoal clay, cool moonlight) — user 2026-11-09 chose dark over white and dusk (`_tests/style-test-mrdiy/A2/stills/A1_white_dark_dusk.jpg`). Not realistic colour, not eye-level realism. |
 | Subject | **One real subject** in full real colour and detail (the business's shop), everything else white. |
 | Detail | **Full and dense**: detailed shophouses (mouldings, louvred windows, aircon units, signboards, pillars, arches, roofs, rooftop clutter, wires), a populated street (scooters, cars, trees, stalls, chairs, crates, posed figures). Never plain boxes. |
@@ -91,6 +91,7 @@ Change a locked trait only when the user says so by name. "Make it better" never
 
 | Date | What I showed | Verdict (user's words) | Lesson |
 |---|---|---|---|
+| 2026-11-10 | EX31 v1 (Grab car) | "the grab car go through another object" | Moving things get a path file + collision check before any render (`EX31_grab-cut/build/paths.py`: oriented footprints vs every obstacle, every frame; the film reads the same file). Read raea's clipping log on the preview AND every render chunk — EX31's log had the warnings and I didn't read it. Keep foreground props off tracking-camera lines. |
 | 2026-11-09 | EX30 v1 L04 (worm's-eye factory, 97% in the sky) | "i'm not sure what being shown on this scene" | Name the place on the place (logo on the building); side-on objects read, head-on silhouettes don't; never let the key prop overlap the scenery. Ask of every frame: would a muted viewer know what this is in 1 s? |
 | 2026-11-09 | EX29 full v1 (39 s, silent) | "this is the new baseline for style A … take note on what's failing. we can't repeat the same on next episode … where's the sound effect … why i took so long" | Baseline + failure list in §1; sound in every render; render budget in §5. |
 | 2026-11-09 | A video v2 | "everything looks good. but some of the scene do look washed out" | Volumetric cone/fog washout (failure 6). |
@@ -164,6 +165,8 @@ Every shot, every style, in this order. No step skipped, no "final quality" clai
 - **Judging my own renders**: always run the independent critic (§7.5).
 - **Objects passing through each other** (coin through kerb, floor, man, stock through the shutter): check every path
   against every prop's footprint; use baked physics for anything that falls.
+  **Gate (2026-11-10):** a `paths.py` collision check (exit 1 on any overlap) + zero `clipping` lines in raea's preview
+  log and in every `media/_render/c*.log` before showing anything.
 - **Flicker** (user 2026-11-09): (1) a part count that changes between frames makes raea re-match parts in tree order,
   so models swap every other frame: keep every part on every frame (hide by tiny scale), name moving parts;
   (2) coplanar faces z-fight (two kerbs); (3) a physics body that never settles; (4) rare all-black GPU frames in long
