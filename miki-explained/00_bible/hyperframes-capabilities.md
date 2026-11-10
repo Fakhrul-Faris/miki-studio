@@ -43,6 +43,6 @@ Gotchas found (EX33, 2026-11-10):
 - A 3D world is deterministic per frame (render(t) from a paused GSAP clock), so HyperFrames renders it in parallel
   workers: 1,920 frames at 1080×1920 in ~30 s (draft).
 - The pass-through check lives in the scene (`window.__ex33check()`: every string vs every hanging thing, part by part).
- a block's `data-composition-id` may differ from its file name (`vfx-shatter.html` is `glass-shatter`);
+- Older: a block's `data-composition-id` may differ from its file name (`vfx-shatter.html` is `glass-shatter`);
 the include must use the id inside the file or HTML-in-Canvas fails with "No cached paint record". Blocks are 1920×1080 —
 re-lay out for 1080×1920.
