@@ -1,6 +1,7 @@
-# EX33 — voice (Nathan `v4k7NzxipnuJNJtrKxob`, Eleven v4) → `audio/L01.mp3` … `L05.mp3`
-Everything else is built locally (HyperFrames + Three.js, Style B upgraded). Until the real lines land, the film runs on
-a temporary Kokoro voice (`audio/tmp/`) for timing only; never posted.
+# EX33 — voice: **Kokoro-82M (local), voice `am_michael`**, speed 1.0 → `audio/L01.mp3` … `L05.mp3` (the user kept it, 2026-11-10)
+
+`HYPERFRAMES_PYTHON=<venv with kokoro-onnx soundfile> npx hyperframes tts "<line>" -v am_michael -o L0n.wav` (text below, plain — no v4 tags).
+The Eleven v4 column (Nathan) is kept for reference:
 
 | Line | v4 text (paste this) |
 |---|---|

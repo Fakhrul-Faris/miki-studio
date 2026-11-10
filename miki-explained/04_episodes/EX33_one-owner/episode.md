@@ -1,10 +1,7 @@
 # EX33 — One Owner
 
-Status: **preview 2026-11-10** `out/preview.mp4` (32.0 s, 60 fps, −14 LUFS, sound in) on a **temporary Kokoro voice**
-(`audio/tmp/`) — waiting for the real lines (`how-i-generate.md`), then: `tools/words.py` on `audio/`, `build/vo.py`,
-`build/sfx.py`, `build/hf_ex33.py`, delivery render (everything retimes from `audio/vo_timeline.json`).
-Gates passed on the preview: pass-through check clean (`window.__ex33check()`, 960 samples: strings vs hanging things,
-things vs things, 90 shop strings) · no flicker, no black frames (frame diff) · `hyperframes check` 0 errors.
+Status: **final 2026-11-10** `export/EX33-Final.mp4` (32.0 s, 60 fps, −14 LUFS, Style B upgraded: Three.js in HyperFrames) · voice: **Kokoro-82M local, `am_michael`** (the user chose it over the Eleven voice: "it has so much character") · pushed to Telegram /ex33 · slot Thu 12 Nov 21:00
+Gates: pass-through check clean (`window.__ex33check()`, 960 samples) · no flicker / black frames (frame diff) · `hyperframes check` 0 errors.
 Strategy: series **Who Secretly Owns What** (new lane; not How It Makes Money, EX32 was) · global brands, Malaysian
 stake (A-Look) · ~26 s · **Style B upgraded** (user 2026-11-10: "apply the upgrade and push furthest … go beyond me";
 `00_bible/hyperframes-capabilities.md`).
