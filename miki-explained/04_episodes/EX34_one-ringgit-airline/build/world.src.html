@@ -1,0 +1,484 @@
+<!doctype html>
+<!--
+  EX34 "One Ringgit, One Airline" — one continuous Three.js world, drawn flat (Style B, the EX33 baseline pushed further).
+  Built by build/hf_ex34.py: /*TIMES*/ → the voice's word times, /*END*/ → the film's length.
+  Three new layers on the EX33 look (user 2026-11-10: "apply all three"):
+   1. Shadows carry the story: shadow-only casters (invisible, castShadow) — the spinning coin's shadow is an airliner;
+      the debt is RM40,000,000 cast in shadow over the old planes; noon (no shadow) is the debt cleared; a tail fin is
+      a sundial's gnomon for the 25-minute turnaround; the 2024 fleet is shadows racing over the apron.
+   2. A colour script: one sun crosses the sky over the film — pre-dawn 2001 → dawn (debt) → morning (work) →
+      noon (cleared) → golden hour (2024, AirAsia red is the hot accent) → dusk.
+   3. Motion and sound from one equation: the coin spins like Euler's disk (its rattle in build/sfx.py integrates the
+      same φ(t)); the flap board's clacks are its flips; the sundial ticks when the shadow crosses a mark.
+  Every value comes from t (render(t)), so a render equals a seek and the film renders in parallel.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #24314D; }
+      #w-root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #24314D; }
+      #w-canvas { position: absolute; inset: 0; width: 1080px; height: 1920px; display: block; }
+    </style>
+  </head>
+  <body>
+    <div id="w-root" data-composition-id="world" data-start="0" data-duration="/*END*/" data-width="1080" data-height="1920">
+      <canvas id="w-canvas" class="clip" data-start="0" data-duration="/*END*/" data-track-index="1"></canvas>
+    </div>
+    <script>
+      (function () {
+        var duration = /*END*/;   // baked in: inside the film the root's data-duration is not readable (EX33)
+        var clock = { t: 0 };
+        var host = { duration: duration, clock: clock, render: null };
+        window.__ex34 = host;
+        window.__hf = window.__hf || {};
+        window.__hf.buildReady = window.__hf.buildReady || {};
+        window.__hf.buildReady["world"] = new Promise(function (resolve) { host.ready = resolve; });
+        var tl = gsap.timeline({ paused: true });
+        tl.to(clock, { t: duration, duration: duration, ease: "none", onUpdate: function () { if (host.render) host.render(clock.t); } });
+        window.__timelines = window.__timelines || {};
+        window.__timelines["world"] = tl;
+      })();
+    </script>
+    <script type="module">
+      import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.184.0/+esm";
+      import { FontLoader } from "https://cdn.jsdelivr.net/npm/three@0.184.0/examples/jsm/loaders/FontLoader.js/+esm";
+      import { TextGeometry } from "https://cdn.jsdelivr.net/npm/three@0.184.0/examples/jsm/geometries/TextGeometry.js/+esm";
+      const host = window.__ex34;
+      const WT = /*TIMES*/;
+      const END = host.duration;
+      const at = (L, frag, n = 0) => WT[L].filter((x) => x[0].toLowerCase().includes(frag.toLowerCase()))[n][1];
+
+      // ---------- easing
+      const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+      const k = (t, a, b) => clamp((t - a) / (b - a));
+      const io = (u) => (u < 0.5 ? 4 * u * u * u : 1 - Math.pow(-2 * u + 2, 3) / 2);
+      const out3 = (u) => 1 - Math.pow(1 - u, 3);
+      const smooth = (u) => u * u * (3 - 2 * u);
+      const lerp = (a, b, u) => a + (b - a) * u;
+      const P2 = Math.PI * 2;
+      const V = (x, y, z) => new THREE.Vector3(x, y, z);
+
+      // ---------- word times
+      const T = {
+        y2001: at("L01", "2001"), tony: at("L01", "Tony"), airline: at("L01", "airline"), rm1: at("L01", "RM1"),
+        came: at("L02", "came"), two: at("L02", "two"), planes: at("L02", "planes"), rm40: at("L02", "RM40"), debt: at("L02", "debt"),
+        cut: at("L03", "cut"), meals: at("L03", "meals"), tickets: at("L03", "Tickets"), online: at("L03", "online"),
+        back: at("L03", "back"), air: at("L03", "air"), m25: at("L03", "25"), minutes: at("L03", "minutes"),
+        within: at("L04", "Within"), cleared: at("L04", "cleared"),
+        y2024: at("L05", "2024"), airasia: at("L05", "AirAsia"), m63: at("L05", "63"), passengers: at("L05", "passengers"),
+        one: at("L06", "RM1"), whole: at("L06", "whole"), follow: at("L06", "Follow"),
+      };
+      window.__ex34T = T;
+
+      // ---------- renderer
+      const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById("w-canvas"), antialias: true, preserveDrawingBuffer: true });
+      renderer.setPixelRatio(1);
+      renderer.setSize(1080, 1920, false);
+      renderer.outputColorSpace = THREE.SRGBColorSpace;
+      renderer.toneMapping = THREE.NoToneMapping;
+      renderer.shadowMap.enabled = true;
+      renderer.shadowMap.type = THREE.PCFShadowMap;
+      renderer.localClippingEnabled = true;
+      const scene = new THREE.Scene();
+      scene.background = new THREE.Color("#24314D");
+      scene.fog = new THREE.Fog("#24314D", 110, 260);
+      const camera = new THREE.PerspectiveCamera(40, 1080 / 1920, 0.5, 900);
+
+      // two-tone toon (EX33): only faces turned from the sun and cast shadows take the shadow tone
+      const ramp = new THREE.DataTexture(new Uint8Array([0, 0, 0, 255, ...Array(7).fill([255, 255, 255, 255]).flat()]), 8, 1, THREE.RGBAFormat);
+      ramp.minFilter = ramp.magFilter = THREE.NearestFilter; ramp.needsUpdate = true;
+      const toon = (color, extra = {}) => new THREE.MeshToonMaterial({ color, gradientMap: ramp, ...extra });
+      const hemi = new THREE.HemisphereLight("#5D6E9C", "#5D6E9C", 2.0); scene.add(hemi);
+      const sun = new THREE.DirectionalLight("#9FB4E0", 1.3);
+      sun.castShadow = true; sun.shadow.mapSize.set(4096, 4096); sun.shadow.bias = -0.0004; sun.shadow.normalBias = 0.05;
+      scene.add(sun, sun.target);
+
+      // ---------- the colour script: [time, background, hemisphere colour, hemi I, sun colour, sun I, elevation, azimuth]
+      // azimuth a: the sun at (cos a, ·, sin a) — east (+x) at dawn, through the south (+z, behind the camera) to the west
+      const ACTS = [
+        [0.0, "#22304C", "#5A6A98", 1.05, "#B4C6EC", 1.55, 0.2, 0.32],                 // pre-dawn, 2001: apron floodlit, cold
+        [T.came - 0.4, "#24314E", "#5A6A98", 1.05, "#B4C6EC", 1.55, 0.22, 0.36],
+        [T.planes, "#5B587A", "#8C88AE", 2.0, "#F5B795", 1.35, 0.3, 0.5],            // dawn: the debt
+        [T.cut, "#E5D2B5", "#C2BEDC", 2.6, "#FFF1C8", 1.54, 0.55, 0.78],              // morning: the work
+        [T.back - 0.3, "#E8D6BA", "#C3C0DD", 2.6, "#FFF2CC", 1.55, 0.62, 0.55],      // the turnaround: 25 minutes as a sweep
+        [T.minutes + 0.15, "#EBDCC2", "#C4C2DE", 2.6, "#FFF4D4", 1.56, 0.78, 1.75],
+        [T.cleared + 0.2, "#F1ECE2", "#C9CCE0", 2.6, "#FFFFF0", 1.6, 1.42, 1.85],      // noon: no shadow, no debt
+        [T.y2024 + 0.2, "#F0B276", "#B79AC4", 2.3, "#FFC27A", 1.62, 0.42, 2.55],       // golden hour, 2024
+        [T.one, "#E79A6A", "#A98AB8", 2.2, "#FFB06A", 1.5, 0.32, 2.7],
+        [T.follow + 0.4, "#3A2D4A", "#6C5A8E", 2.0, "#FF8A5C", 0.8, 0.12, 2.92],      // dusk
+        [END, "#1E1A2C", "#4A4270", 1.8, "#FF7A50", 0.25, 0.04, 3.0],
+      ];
+      const cA = new THREE.Color(), cB = new THREE.Color();
+      function act(t) {
+        let i = 0; while (i < ACTS.length - 2 && t > ACTS[i + 1][0]) i++;
+        const a = ACTS[i], b = ACTS[i + 1], u = smooth(k(t, a[0], b[0]));
+        const mix = (x, y) => cA.set(x).lerp(cB.set(y), u).clone();
+        return { bg: mix(a[1], b[1]), hemi: mix(a[2], b[2]), hi: lerp(a[3], b[3], u), sun: mix(a[4], b[4]), si: lerp(a[5], b[5], u), el: lerp(a[6], b[6], u), az: lerp(a[7], b[7], u) };
+      }
+      const sunDir = (t) => { const s = act(t); return V(Math.cos(s.az) * Math.cos(s.el), Math.sin(s.el), Math.sin(s.az) * Math.cos(s.el)); };
+
+      // ---------- textures
+      const img = (src) => new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = src; });
+      const canvasTex = (w, h, draw) => { const c = document.createElement("canvas"); c.width = w; c.height = h; const g = c.getContext("2d"); draw(g, w, h); const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; t.userData.canvas = c; return t; };
+      const fit = (g, im, x, y, w, h) => { const s = Math.min(w / im.width, h / im.height); const dw = im.width * s, dh = im.height * s; g.drawImage(im, x + (w - dw) / 2, y + (h - dh) / 2, dw, dh); };
+      try { for (const [wt, n] of [[500, "Medium"], [700, "Bold"], [900, "Black"]]) document.fonts.add(await new FontFace("Inter Display", `url(assets/fonts/InterDisplay-${n}.ttf)`, { weight: String(wt) }).load()); } catch (e) { console.error("[ex34] font", e); }
+      const LOGO = await img("assets/logos/airasia_red.svg"), LOGO24 = await img("assets/logos/airasia.svg");
+      const FONT3D = new FontLoader().parse(/*FONT3D*/);   // inlined by the build (no fetch)
+
+      // ---------- the apron: concrete, painted lines, the sundial's marks (placed later, from the sun itself)
+      const APRON = 240;
+      const apronTex = canvasTex(4096, 4096, (g, w, h) => {
+        g.fillStyle = "#CFC6B7"; g.fillRect(0, 0, w, h);
+        const m = (x) => (x / APRON + 0.5) * w;                                  // metres → pixels
+        g.strokeStyle = "rgba(0,0,0,0.05)"; g.lineWidth = 3;                     // slab joints every 7.5 m
+        for (let x = -APRON / 2; x <= APRON / 2; x += 7.5) { g.beginPath(); g.moveTo(m(x), 0); g.lineTo(m(x), h); g.stroke(); g.beginPath(); g.moveTo(0, m(x)); g.lineTo(w, m(x)); g.stroke(); }
+        g.strokeStyle = "#E7B400"; g.lineWidth = 14;                             // taxi lead-in lines (yellow), one per stand
+        for (const [x0, z0, x1, z1] of [[-6, 16, -6, -18], [13, 20, 13, -56], [-60, 44, 70, 44]]) { g.beginPath(); g.moveTo(m(x0), m(z0)); g.lineTo(m(x1), m(z1)); g.stroke(); }
+        g.strokeStyle = "#F4F1EA"; g.lineWidth = 10;                             // stand boxes (white)
+        for (const [x, z] of [[-6, -2], [13, -40]]) g.strokeRect(m(x - 17), m(z - 20), m(34) - m(0), m(40) - m(0));
+      });
+      apronTex.wrapS = apronTex.wrapT = THREE.ClampToEdgeWrapping;
+      const apron = new THREE.Mesh(new THREE.PlaneGeometry(APRON, APRON), toon("#FFFFFF", { map: apronTex, polygonOffset: true, polygonOffsetFactor: 2, polygonOffsetUnits: 2 }));
+      apron.rotation.x = -Math.PI / 2; apron.receiveShadow = true; scene.add(apron);
+      const ground = new THREE.Mesh(new THREE.PlaneGeometry(2000, 2000), toon("#BFB6A6", { polygonOffset: true, polygonOffsetFactor: 4, polygonOffsetUnits: 4 }));
+      ground.rotation.x = -Math.PI / 2; ground.position.y = -0.02; ground.receiveShadow = true; scene.add(ground);
+
+      const shadowy = (o) => { o.traverse((m) => { if (m.isMesh) { m.castShadow = true; m.receiveShadow = true; } }); return o; };
+      const plane = (w, h, map, two = false) => new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ map, transparent: true, side: two ? THREE.DoubleSide : THREE.FrontSide, toneMapped: false, fog: true }));
+      // a shadow-only caster: invisible to the camera, but the sun's depth pass sees it
+      const ghost = new THREE.MeshBasicMaterial({ colorWrite: false, depthWrite: false });
+      const caster = (geo) => { const m = new THREE.Mesh(geo, ghost); m.castShadow = true; m.renderOrder = -1; return m; };
+
+      // ---------- an airliner (a 737-300's proportions: 33 m long, 29 m span, 11 m to the fin top), nose +z
+      const PLANE_TOP = [[0, 16.8], [1.2, 15.6], [1.9, 13], [1.95, 3.2], [14.5, -3.6], [14.5, -5.0], [1.95, -2.6], [1.7, -11.5], [6.6, -14.6], [6.6, -15.8], [0.9, -15.2], [0, -16.4]];
+      const planeShape = () => { const pts = [...PLANE_TOP, ...PLANE_TOP.slice().reverse().map(([x, z]) => [-x, z])]; return new THREE.Shape(pts.map(([x, z]) => new THREE.Vector2(x, z))); };
+      function windowsTex(old) {
+        return canvasTex(1024, 2048, (g, w, h) => {
+          g.fillStyle = old ? "#E4E2DD" : "#FFFFFF"; g.fillRect(0, 0, w, h);
+          if (old) { g.fillStyle = "#9AA3B5"; for (const u of [0.22, 0.72]) g.fillRect(u * w, 0, 0.06 * w, h); }
+          else { g.fillStyle = "#E31B23"; g.fillRect(0.4 * w, 0, 0.2 * w, h); }   // the red belly
+          g.fillStyle = "#2E3443";
+          for (const u of [0.255, 0.745]) for (let i = 0; i < 24; i++) { const v = 0.16 + i * 0.026; g.beginPath(); g.roundRect(u * w - 9, v * h, 18, 26, 8); g.fill(); }
+          g.fillStyle = "#2E3443"; for (const u of [0.2, 0.3, 0.7, 0.8]) { g.beginPath(); g.roundRect(u * w - 14, 0.05 * h, 28, 40, 8); g.fill(); }   // cockpit
+          if (!old) { g.save(); for (const [u, flip] of [[0.255, 1], [0.745, -1]]) { g.translate(u * w, 0.45 * h); g.rotate(flip * Math.PI / 2); fit(g, LOGO, -260, -70 - 60 * flip, 520, 120); g.setTransform(1, 0, 0, 1, 0, 0); } g.restore(); }
+        });
+      }
+      function airliner(old) {
+        const grp = new THREE.Group();
+        const prof = [[0, 16.8], [0.9, 16.4], [1.45, 15.4], [1.85, 13.8], [1.95, 11], [1.95, -8], [1.75, -11], [1.2, -14], [0.5, -16.2], [0, -16.5]];
+        const body = new THREE.LatheGeometry(prof.map(([r, z]) => new THREE.Vector2(r, z)).reverse(), 40, 0, P2);
+        body.rotateX(Math.PI / 2);                                              // lathe axis y → z (nose +z)
+        const bodyM = toon("#FFFFFF", { map: windowsTex(old) });
+        const fus = new THREE.Mesh(body, bodyM); fus.position.y = 3.1; grp.add(fus);
+        const skin = old ? "#E4E2DD" : "#FFFFFF", wingC = old ? "#C9CBD0" : "#E9E9EC";
+        const wing = (span, root, tip, sweep, y, z, thick, color) => {
+          const s = new THREE.Shape([new THREE.Vector2(0, root / 2), new THREE.Vector2(span, root / 2 - sweep), new THREE.Vector2(span, root / 2 - sweep - tip), new THREE.Vector2(0, -root / 2)]);
+          const geo = new THREE.ExtrudeGeometry(s, { depth: thick, bevelEnabled: false }); geo.rotateX(Math.PI / 2);
+          for (const sx of [1, -1]) { const m = new THREE.Mesh(geo, toon(color)); m.scale.x = sx; m.position.set(0, y + thick / 2, z); grp.add(m); }
+        };
+        wing(14.4, 7.0, 1.6, 5.2, 2.0, -1.5, 0.35, wingC);                      // main wing, low
+        wing(6.5, 3.6, 1.2, 2.6, 3.9, -13.6, 0.22, wingC);                      // tailplane
+        const fin = new THREE.Shape([new THREE.Vector2(0, 0), new THREE.Vector2(7.6, 0), new THREE.Vector2(5.6, 7.6), new THREE.Vector2(3.0, 7.6)]);
+        const fg = new THREE.ExtrudeGeometry(fin, { depth: 0.3, bevelEnabled: false }); fg.rotateY(-Math.PI / 2);
+        const finM = new THREE.Mesh(fg, toon(old ? "#D9D8D4" : "#E31B23")); finM.position.set(0.15, 4.6, -16.0); grp.add(finM);
+        if (!old) for (const sx of [1, -1]) { const lg = plane(4.4, 1.1, logoPlate, false); lg.position.set(sx * 0.17, 8.6, -12.7); lg.rotation.set(0, sx * Math.PI / 2, 0); grp.add(lg); }
+        for (const sx of [1, -1]) {                                              // CFM56 nacelles, slung under the wings
+          const n = new THREE.Mesh(new THREE.CylinderGeometry(0.95, 0.8, 3.6, 24), toon(old ? "#B8BAC0" : "#E31B23")); n.rotation.x = Math.PI / 2; n.scale.set(1, 1, 0.82); n.position.set(sx * 4.9, 1.5, 2.2); grp.add(n);
+          const intake = new THREE.Mesh(new THREE.CircleGeometry(0.78, 24), toon("#2A2D34")); intake.position.set(sx * 4.9, 1.5, 4.01); intake.scale.set(1, 0.82, 1); grp.add(intake);
+        }
+        for (const [x, z] of [[0, 12.5], [2.6, -2.4], [-2.6, -2.4]]) { const w = new THREE.Mesh(new THREE.CylinderGeometry(0.5, 0.5, 0.45, 16), toon("#2A2D34")); w.rotation.z = Math.PI / 2; w.position.set(x, 0.5, z); grp.add(w); const st = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.12, 2.2, 8), toon("#9A9CA2")); st.position.set(x, 1.6, z); grp.add(st); }
+        grp.userData.fus = fus;
+        return shadowy(grp);
+      }
+      const logoPlate = canvasTex(1024, 256, (g, w, h) => fit(g, LOGO, 0, 0, w, h));
+
+      // ---------- the coin: a ringgit coin of the period, as big as a tail fin (scale play)
+      const R = 6.0, TH = 0.8;
+      const face = canvasTex(1024, 1024, (g, w, h) => {
+        const c = w / 2; g.fillStyle = "#D4A43A"; g.fillRect(0, 0, w, h);
+        g.strokeStyle = "#B7882A"; g.lineWidth = 26; g.beginPath(); g.arc(c, c, c - 30, 0, P2); g.stroke();
+        g.lineWidth = 6; g.beginPath(); g.arc(c, c, c - 120, 0, P2); g.stroke();
+        g.fillStyle = "#8E6519"; g.textAlign = "center"; g.font = '900 420px "Inter Display"'; g.fillText("1", c, c + 120);
+        g.font = '800 86px "Inter Display"'; g.fillText("RINGGIT", c, c + 250);
+        g.save(); g.translate(c, c); g.font = '800 58px "Inter Display"'; const txt = "BANK NEGARA MALAYSIA  ·  2001  ·  ";
+        for (let i = 0; i < txt.length; i++) { g.save(); g.rotate((i / txt.length) * P2); g.fillText(txt[i], 0, -(c - 70)); g.restore(); }
+        g.restore();
+      });
+      const edge = canvasTex(1024, 32, (g, w, h) => { g.fillStyle = "#C9982F"; g.fillRect(0, 0, w, h); g.fillStyle = "#A87C22"; for (let i = 0; i < 256; i++) g.fillRect(i * 4, 0, 2, h); });
+      const coin = new THREE.Mesh(new THREE.CylinderGeometry(R, R, TH, 96), [toon("#FFFFFF", { map: edge }), toon("#FFFFFF", { map: face }), toon("#FFFFFF", { map: face })]);
+      coin.receiveShadow = true; coin.castShadow = false;                        // its shadow is the airliner below
+      scene.add(coin);
+      const COIN = V(2, 0, 26);
+      const coinShadow = caster(new THREE.ShapeGeometry(planeShape()).rotateX(Math.PI / 2).scale(0.8, 1, 0.8)); scene.add(coinShadow);
+
+      // Euler's disk: the tilt θ (disk vs floor) falls to 0 in finite time while the precession rate climbs;
+      // φ is integrated in fixed steps so the frame and build/sfx.py (same constants) agree to the sample
+      const SPINS = [{ t0: -2.0, t1: T.rm1 + 0.42, th0: 1.25 }, { t0: T.one - 0.25, t1: END - 0.55, th0: 1.3 }];
+      const coinPose = (t) => {
+        for (const s of SPINS) {
+          if (t < s.t0) continue;
+          if (t <= s.t1) {
+            const span = s.t1 - s.t0; let phi = 0, dt = 1 / 240;
+            const theta = (x) => s.th0 * Math.pow(clamp((s.t1 - x) / span), 0.62);
+            const omega = (x) => P2 * 1.1 / Math.sqrt(Math.max(0.035, Math.sin(theta(x))));
+            for (let x = s.t0; x < t; x += dt) phi += omega(x) * Math.min(dt, t - x);
+            return { theta: theta(t), phi, spinning: true };
+          }
+        }
+        const last = SPINS.filter((s) => t > s.t1).pop();
+        if (!last) return { theta: 0, phi: 0, spinning: false };
+        const span = last.t1 - last.t0; let phi = 0, dt = 1 / 240;
+        for (let x = last.t0; x < last.t1; x += dt) { const th = last.th0 * Math.pow(clamp((last.t1 - x) / span), 0.62); phi += (P2 * 1.1 / Math.sqrt(Math.max(0.035, Math.sin(th)))) * dt; }
+        return { theta: 0, phi, spinning: false };
+      };
+      window.__ex34coin = coinPose;
+
+      // ---------- the two old planes (2001), and the hangar with the airline's name on it
+      const p1 = airliner(true); p1.position.set(-6, 0, -2); p1.rotation.y = 0.0; scene.add(p1);
+      const p2old = airliner(true), p2new = airliner(false); scene.add(p2old, p2new);
+      const P2POS = V(13, 0, -40);
+      for (const p of [p2old, p2new]) { p.position.copy(P2POS); p.rotation.y = 0.0; }
+      // the repaint wipe (L04): the new livery grows from the tail forward; the old one is clipped away behind it
+      const wipeNew = new THREE.Plane(V(0, 0, -1), 0), wipeOld = new THREE.Plane(V(0, 0, 1), 0);
+      p2new.traverse((m) => { if (m.isMesh) { m.material = m.material.clone(); m.material.clippingPlanes = [wipeNew]; } });
+      p2old.traverse((m) => { if (m.isMesh) { m.material = m.material.clone(); m.material.clippingPlanes = [wipeOld]; } });
+
+      const hangar = new THREE.Group(); scene.add(hangar);
+      {
+        const body = new THREE.Mesh(new THREE.BoxGeometry(92, 18, 40), toon("#D9D3C8")); body.position.y = 9; hangar.add(body);
+        const roof = new THREE.Mesh(new THREE.CylinderGeometry(46, 46, 40, 48, 1, false, -0.42, 0.84), toon("#C4BDB0")); roof.rotation.set(Math.PI / 2, 0, 0); roof.position.y = 18 - 46 * Math.cos(0.42) + 0.3; roof.scale.set(1, 1, 1); hangar.add(roof);
+        const doors = new THREE.Mesh(new THREE.BoxGeometry(70, 15, 0.6), toon("#8E959F")); doors.position.set(0, 7.5, 20.1); hangar.add(doors);
+        for (let i = -6; i <= 6; i++) { const r = new THREE.Mesh(new THREE.BoxGeometry(0.25, 15, 0.3), toon("#767D88")); r.position.set(i * 5.4, 7.5, 20.45); hangar.add(r); }
+        const signBg = new THREE.Mesh(new THREE.BoxGeometry(40, 9, 0.8), toon("#FFFFFF")); signBg.position.set(0, 23.5, 20.4); hangar.add(signBg);
+        const sign = plane(36, 8.4, logoPlate); sign.position.set(0, 23.5, 20.85); hangar.add(sign); hangar.userData.sign = sign;
+        shadowy(hangar);
+        hangar.position.set(-4, 0, -92);
+      }
+      // the night sign glows (pre-dawn), then reads as paint by day
+      const signGlow = new THREE.Mesh(new THREE.PlaneGeometry(42, 11), new THREE.MeshBasicMaterial({ color: "#FFFFFF", transparent: true, opacity: 0, fog: false }));
+      signGlow.position.set(-4, 23.5, -92 + 20.82); scene.add(signGlow);
+
+      // ---------- the debt, cast in shadow: RM40,000,000 (shadow-only letters hovering over the stand)
+      const debt = new THREE.Group(); scene.add(debt);
+      for (const [txt, size, dz] of [["RM40", 8.5, -4.2], ["MILLION", 4.3, 4.6]]) {
+        const g = new TextGeometry(txt, { font: FONT3D, size, depth: 0.4, curveSegments: 6, bevelEnabled: false });
+        g.computeBoundingBox(); const bb = g.boundingBox; g.translate(-(bb.max.x + bb.min.x) / 2, -(bb.max.y + bb.min.y) / 2, 0);
+        g.rotateX(-Math.PI / 2);                                                  // lies flat, the letters' tops point north (-z): reads from the south
+        const m = caster(g); m.position.z = dz; debt.add(m);
+      }
+      const DEBT_AT = V(9, 0, -19);                                               // where its shadow lands (between and over both stands)
+
+      // ---------- L03 props: the catering truck (no free meals), the 2001 web (tickets online), the sundial
+      const truck = new THREE.Group(); scene.add(truck);
+      {
+        const cab = new THREE.Mesh(new THREE.BoxGeometry(2.6, 2.6, 2.4), toon("#F2EFE8")); cab.position.set(0, 1.9, 4.6); truck.add(cab);
+        const chassis = new THREE.Mesh(new THREE.BoxGeometry(2.7, 0.8, 9.6), toon("#5C6470")); chassis.position.set(0, 0.9, 0.6); truck.add(chassis);
+        const box = new THREE.Mesh(new THREE.BoxGeometry(2.8, 3.4, 6.2), toon("#FFFFFF")); box.position.set(0, 4.3, -0.6); truck.add(box);
+        const lift = new THREE.Mesh(new THREE.BoxGeometry(2.2, 1.9, 0.25), toon("#9AA0A9")); lift.position.set(0, 2.5, -0.6); truck.add(lift);
+        const mealSign = plane(5.6, 2.2, canvasTex(1024, 400, (g, w, h) => { g.fillStyle = "#FFFFFF"; g.fillRect(0, 0, w, h); g.fillStyle = "#1C1C21"; g.font = '900 150px "Inter Display"'; g.textAlign = "center"; g.fillText("FREE MEALS", w / 2, 250); }), true);
+        mealSign.position.set(1.42, 4.4, -0.6); mealSign.rotation.y = Math.PI / 2; truck.add(mealSign);
+        for (const [x, z] of [[1.2, 4.2], [-1.2, 4.2], [1.2, -3], [-1.2, -3]]) { const w = new THREE.Mesh(new THREE.CylinderGeometry(0.6, 0.6, 0.5, 14), toon("#2A2D34")); w.rotation.z = Math.PI / 2; w.position.set(x, 0.6, z); truck.add(w); }
+        shadowy(truck);
+      }
+      const crt = new THREE.Group(); scene.add(crt);
+      const webTex = canvasTex(1024, 768, (g, w, h) => {
+        g.fillStyle = "#EDEFF3"; g.fillRect(0, 0, w, h);
+        g.fillStyle = "#1F3D8A"; g.fillRect(0, 0, w, 64); g.fillStyle = "#FFFFFF"; g.font = '700 34px "Inter Display"'; g.fillText("www.airasia.com", 28, 44);
+        fit(g, LOGO, 160, 110, w - 320, 170);
+        g.fillStyle = "#E31B23"; g.beginPath(); g.roundRect(312, 500, 400, 110, 14); g.fill();
+        g.fillStyle = "#FFFFFF"; g.font = '900 64px "Inter Display"'; g.textAlign = "center"; g.fillText("BOOK NOW", w / 2, 578);
+        g.fillStyle = "#1C1C21"; g.font = '700 40px "Inter Display"'; g.fillText("KUL → BKI", w / 2, 360); g.fillText("no ticket · no queue", w / 2, 430);
+      });
+      {
+        const shell = new THREE.Mesh(new THREE.BoxGeometry(11, 9, 10), toon("#E7DDC6")); shell.position.set(0, 6.0, -1.5); crt.add(shell);
+        const back = new THREE.Mesh(new THREE.BoxGeometry(7.5, 6.5, 5), toon("#DCD1B8")); back.position.set(0, 5.8, -8); crt.add(back);
+        const bezel = new THREE.Mesh(new THREE.BoxGeometry(9.4, 7.4, 0.4), toon("#D4C9AF")); bezel.position.set(0, 6.2, 3.6); crt.add(bezel);
+        const scr = plane(8.4, 6.3, webTex); scr.position.set(0, 6.2, 3.82); crt.add(scr); crt.userData.scr = scr;
+        const stand = new THREE.Mesh(new THREE.CylinderGeometry(3.2, 3.8, 1.5, 30), toon("#DCD1B8")); stand.position.set(0, 0.75, -1); crt.add(stand);
+        shadowy(crt);
+      }
+      // the sundial: the marks sit where p1's fin-top shadow will be at each time (so the shadow hits each on its word)
+      const FIN_TOP = () => p1.localToWorld(V(-0.0, 12.2, -12.4));
+      const TICKS = [0, 5, 10, 15, 20, 25];
+      const tickT = TICKS.map((m, i) => lerp(T.back - 0.25, T.minutes + 0.1, i / 5));
+      const ticks = new THREE.Group(); scene.add(ticks);
+      const shadowTip = (t, top) => { const d = sunDir(t); return V(top.x - (d.x / d.y) * top.y, 0.03, top.z - (d.z / d.y) * top.y); };
+      const tickTex = (m) => canvasTex(512, 256, (g, w, h) => { g.fillStyle = m === 25 ? "#E31B23" : "#1C1C21"; g.font = '900 150px "Inter Display"'; g.textAlign = "center"; g.fillText(String(m), w / 2, 170); if (m === 25) { g.font = '800 60px "Inter Display"'; g.fillText("MIN", w / 2, 240); } });
+
+      p1.position.set(-6, 0, -2); p1.updateMatrixWorld(true);
+      const TIPS = TICKS.map((m, i) => shadowTip(tickT[i], FIN_TOP()));
+      TICKS.forEach((m, i) => {
+        const tip = TIPS[i];
+        const bar = new THREE.Mesh(new THREE.PlaneGeometry(0.5, 3.4), toon(m === 25 ? "#E31B23" : "#1C1C21")); bar.rotation.x = -Math.PI / 2; bar.position.set(tip.x, 0.04, tip.z); bar.receiveShadow = true;
+        const lab = new THREE.Mesh(new THREE.PlaneGeometry(4.2, 2.1), new THREE.MeshToonMaterial({ map: tickTex(m), gradientMap: ramp, transparent: true })); lab.rotation.x = -Math.PI / 2; lab.position.set(tip.x, 0.05, tip.z - 3.2); lab.receiveShadow = true;
+        ticks.add(bar, lab);
+      });
+      const TC = TIPS.reduce((a, b) => a.add(b), V(0, 0, 0)).multiplyScalar(1 / TIPS.length);
+      window.__ex34tips = TIPS.map((v) => v.toArray().map((x) => +x.toFixed(1)));
+
+      // ---------- L05: the 2024 fleet — their shadows race across the apron; the split-flap board counts
+      const NF = 34;
+      const flockGeo = new THREE.ShapeGeometry(planeShape()).rotateX(Math.PI / 2);
+      const flock = new THREE.InstancedMesh(flockGeo, toon("#E31B23", { side: THREE.DoubleSide }), NF); flock.castShadow = true; flock.frustumCulled = false; scene.add(flock);   /* its bounds were computed while every instance was scaled away */
+      let seed = 34; const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+      const FLK = Array.from({ length: NF }, (_, i) => ({ x: -60 + rnd() * 120, y: 60 + rnd() * 40, dt: rnd() * 1.0, sp: 64 + rnd() * 18 }));
+      const board = new THREE.Group(); scene.add(board);
+      const BOARD = { w: 1200, h: 1000 };
+      const boardTex = canvasTex(BOARD.w, BOARD.h, () => {});
+      {
+        const frame = new THREE.Mesh(new THREE.BoxGeometry(25.6, 21.6, 1.2), toon("#1C1D22")); frame.position.y = 0; board.add(frame);
+        const face2 = plane(24, 20, boardTex); face2.position.z = 0.62; board.add(face2);
+        for (const sx of [-1, 1]) { const leg = new THREE.Mesh(new THREE.BoxGeometry(0.8, 14, 0.8), toon("#3A3C44")); leg.position.set(sx * 9, -17.5, 0); board.add(leg); }
+        shadowy(board);
+        board.position.set(44, 24.5, -64); board.rotation.y = -0.45;
+      }
+      const LINE1 = "PASSENGERS", LINE1B = "2024", LINE2 = "63,000,000";
+      const glyphs = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ ,";
+      function drawBoard(t) {
+        const c = boardTex.userData.canvas, g = c.getContext("2d"), { w, h } = BOARD;
+        g.fillStyle = "#121318"; g.fillRect(0, 0, w, h);
+        fit(g, LOGO24, (w - 420) / 2, 50, 420, 130);
+        const row = (txt, y, cw, t0, fs) => {
+          const n = txt.length, x0 = (w - n * cw) / 2;
+          for (let i = 0; i < n; i++) {
+            const lock = t0 + i * 0.075, ch = txt[i];
+            let shown = ch;
+            if (t < lock) { const f = Math.floor((t - (t0 - 0.9)) * 22 + i * 7); shown = t < t0 - 0.9 ? " " : glyphs[((f % glyphs.length) + glyphs.length) % glyphs.length]; }
+            const x = x0 + i * cw;
+            g.fillStyle = "#24262E"; g.fillRect(x + 4, y, cw - 8, fs * 1.25);
+            g.fillStyle = "#0C0D10"; g.fillRect(x + 4, y + fs * 0.62, cw - 8, 3);
+            g.fillStyle = "#F4F1EA"; g.font = `800 ${fs}px "Inter Display"`; g.textAlign = "center"; g.fillText(shown, x + cw / 2, y + fs * 1.0);
+          }
+        };
+        row(LINE1, 250, 104, T.y2024 + 0.2, 110);
+        row(LINE1B, 440, 104, T.y2024 + 0.95, 110);
+        row(LINE2, 660, 112, T.m63 - 0.25, 136);
+        boardTex.needsUpdate = true;
+      }
+      window.__ex34flaps = () => [...[...LINE1].map((_, i) => T.y2024 + 0.2 + i * 0.075), ...[...LINE1B].map((_, i) => T.y2024 + 0.95 + i * 0.075), ...[...LINE2].map((_, i) => T.m63 - 0.25 + i * 0.075)];
+
+      // ---------- camera keys: [time, position, look-at, fov]
+      const CAM = [
+        [0.0, V(7, 14, 66), V(-3, 4.6, 22), 38],                                      // the spinning coin, its airliner shadow; the sign behind
+        [T.airline - 0.2, V(5, 15, 62), V(-3, 3.6, 21), 38],
+        [T.rm1 + 0.6, V(2, 44, 60), V(-4, 0, 14), 42],                                 // up: the coin's shadow is an airliner
+        [T.planes + 0.2, V(44, 58, 52), V(4, 0, -16), 46],                             // the two old planes at dawn
+        [T.debt + 0.3, V(14, 78, 30), V(6, 0, -18), 44],                               // high: the debt's shadow over them
+        [T.meals + 0.1, V(1, 8, 36), V(9, 3.4, 6), 42],                               // the catering truck backs away
+        [T.online + 0.2, V(6, 9, 46), V(16, 6, 16), 42],                               // the 2001 web
+        [T.back + 0.1, V(TC.x + 10, 34, TC.z + 30), V(TC.x, 0, TC.z), 44],             // the sundial: the fin's shadow ticks across
+        [T.minutes + 0.4, V(TC.x + 12, 38, TC.z + 33), V(TC.x + 1, 4, TC.z - 6), 44],  // and the plane lifts out of frame
+        [T.cleared + 0.25, V(40, 50, 26), V(9, 0, -28), 44],                           // noon: no shadow, no debt; the repaint
+        [T.m63 - 0.3, V(44 - 66 * Math.sin(0.45), 20, -64 + 66 * Math.cos(0.45)), V(44, 22, -64), 40],   // the board
+        [T.m63 + 0.55, V(44 - 66 * Math.sin(0.45), 20.5, -64 + 66 * Math.cos(0.45)), V(44, 22, -64), 40],
+        [T.passengers + 0.75, V(10, 60, 46), V(4, 0, -4), 50],                         // the fleet's shadows race across
+        [T.whole, V(7, 15, 66), V(-3, 3.2, 22), 38],                                   // back to the coin (a 2 s descent)
+        [END, V(5, 22, 60), V(-2, 0, 22), 38],
+      ];
+      function cameraAt(t) {
+        let i = 0; while (i < CAM.length - 2 && t > CAM[i + 1][0]) i++;
+        const [ta, pa, la, fa] = CAM[i], [tb, pb, lb, fb] = CAM[i + 1];
+        const u = io(k(t, ta, tb));
+        camera.position.lerpVectors(pa, pb, u);
+        const look = new THREE.Vector3().lerpVectors(la, lb, u);
+        camera.position.x += 0.12 * Math.sin((P2 * t) / 7.3) + 0.08 * Math.sin((P2 * t) / 11.9 + 1.3);
+        camera.position.y += 0.08 * Math.cos((P2 * t) / 7.3 + 0.7);
+        camera.fov = lerp(fa, fb, u); camera.updateProjectionMatrix();
+        camera.lookAt(look);
+      }
+
+      // ---------- one frame
+      const Qy = new THREE.Quaternion(), Qz = new THREE.Quaternion(), M4 = new THREE.Matrix4(), Q = new THREE.Quaternion(), S3 = new THREE.Vector3(), P3 = new THREE.Vector3();
+      let ticksBuilt = false;
+      host.render = (t) => {
+        // light: the colour script
+        const s = act(t), d = sunDir(t);
+        scene.background.copy(s.bg); scene.fog.color.copy(s.bg);
+        hemi.color.copy(s.hemi); hemi.groundColor.copy(s.hemi); hemi.intensity = s.hi;
+        sun.color.copy(s.sun); sun.intensity = s.si;
+        const focus = V(2, 0, -8);
+        sun.position.copy(focus).addScaledVector(d, 420); sun.target.position.copy(focus);   /* far out: the fleet (100 m up) must be inside the shadow camera */
+        const sc = sun.shadow.camera; sc.left = -95; sc.right = 95; sc.top = 95; sc.bottom = -95; sc.near = 10; sc.far = 900; sc.updateProjectionMatrix();
+        signGlow.material.opacity = 0.0;
+        const night = 1 - smooth(k(t, T.came, T.cut));
+        hangar.userData.sign.material.color.setScalar(1 + 0.0 * night);
+
+        // the coin
+        const cp = coinPose(t);
+        const th = cp.theta;
+        Qz.setFromAxisAngle(V(0, 0, 1), th);                                      // θ = disk vs floor: 0 flat, π/2 on edge
+        Qy.setFromAxisAngle(V(0, 1, 0), cp.phi);
+        coin.quaternion.copy(Qy).multiply(Qz);
+        const hCentre = R * Math.sin(th) + (TH / 2) * Math.cos(th);
+        coin.position.set(COIN.x, hCentre, COIN.z);
+        // its shadow: the airliner, turning with the coin while it spins, then pointing away down the lead-in line
+        const away = cp.spinning ? cp.phi : 0;
+        const yaw = cp.spinning ? -away : lerp(-cp.phi % P2, -Math.PI * 0.62, 1);
+        const shLen = cp.spinning ? 0.55 : 0.55;
+        const target = V(COIN.x - d.x * 15, 0, COIN.z - d.z * 15);                    // where the shadow falls (sun-side away)
+        const hgt = 0.6;
+        coinShadow.position.set(target.x + (d.x / d.y) * hgt, hgt, target.z + (d.z / d.y) * hgt);
+        coinShadow.rotation.set(0, Math.atan2(-d.x, -d.z) + (cp.spinning ? 0.35 * Math.sin(cp.phi) : 0), 0);
+        coinShadow.scale.setScalar(t < 0.0 ? 0 : 1);
+
+        // the debt's shadow: slides in on "RM40", sits over the stands, shrinks away by noon on "cleared"
+        const din = out3(k(t, T.rm40 - 0.5, T.rm40 + 0.6)), dout = io(k(t, T.within, T.cleared + 0.35));
+        const dh = 14;
+        const dp = V(DEBT_AT.x + (d.x / d.y) * dh, dh, DEBT_AT.z + (d.z / d.y) * dh);
+        debt.position.set(dp.x + 120 * (1 - din), dp.y, dp.z);
+        debt.scale.setScalar(Math.max(1e-3, (1 - dout)));
+        debt.visible = din > 0.001 && dout < 0.999;
+
+        // the planes: p1 sits; on "back in the air" it pushes back and taxis away down its line
+        const go = smooth(k(t, T.minutes + 0.15, T.minutes + 2.6));
+        p1.position.set(-6, 62 * go, -2 - 170 * Math.pow(go, 1.5));
+        p1.rotation.set(-0.16 * Math.sin(Math.PI * Math.min(1, go * 1.6)), 0, 0); p1.visible = go < 0.999;
+        // p2's repaint wipe, tail → nose, on "cleared"
+        const wp = io(k(t, T.within - 0.1, T.cleared + 0.5));
+        const wz = P2POS.z - 17.5 + 35 * wp;
+        wipeNew.constant = wz; wipeOld.constant = -wz;
+        // the catering truck backs away on "meals"; the CRT rises on "online"
+        const tb = io(k(t, T.meals - 0.35, T.meals + 1.2));
+        const tin = out3(k(t, T.cut - 0.7, T.cut - 0.2)); truck.visible = tin > 0.001; truck.scale.setScalar(Math.max(1e-3, tin));
+        truck.position.set(7.0 + 28 * tb, 0, 6.0 + 3 * tb); truck.rotation.y = -Math.PI / 2 + 0.12 * tb;   /* backs away east, out of frame */
+        const cu = out3(k(t, T.online - 0.6, T.online + 0.25)), cd = io(k(t, T.back - 0.2, T.back + 0.6));
+        crt.position.set(16, 0, 16); crt.rotation.y = -0.35; crt.scale.setScalar(Math.max(1e-3, cu * (1 - cd))); crt.visible = cu > 0.001 && cd < 0.999;
+
+        const tk = smooth(k(t, T.cut, T.back - 0.3)) * (1 - smooth(k(t, T.cleared, T.cleared + 0.6)));
+        ticks.visible = tk > 0.01; ticks.children.forEach((m) => { m.material.opacity = tk; m.material.transparent = true; });
+
+        // the fleet: crosses high over the apron, toward the sun's far side, so its shadows sweep the stands
+        for (let i = 0; i < NF; i++) {
+          const f = FLK[i], ft = t - (T.m63 + 0.45 + f.dt);
+          const gz = 70 - f.sp * ft, gx = f.x * 0.5 + 6 - 0.25 * (70 - gz);         // the shadow's path on the ground
+          M4.compose(P3.set(gx + (d.x / d.y) * f.y, f.y, gz + (d.z / d.y) * f.y), Q.setFromAxisAngle(V(0, 1, 0), Math.PI), S3.set(ft > -0.3 && ft < 3.4 ? 1 : 1e-4, 1, ft > -0.3 && ft < 3.4 ? 1 : 1e-4));
+          flock.setMatrixAt(i, M4);
+        }
+        flock.instanceMatrix.needsUpdate = true;
+        drawBoard(t);
+
+        cameraAt(t);
+        renderer.render(scene, camera);
+      };
+
+      window.__ex34check = (step = 1 / 30) => {
+        const bad = {}, things = [["coin", coin], ["plane 1", p1], ["plane 2", p2new], ["truck", truck], ["CRT", crt], ["hangar", hangar], ["board", board]];
+        const parts = (o) => { const r = []; o.updateMatrixWorld(true); o.traverse((m) => { if (m.isMesh && m.visible && m.material !== ghost) r.push(new THREE.Box3().setFromObject(m).expandByScalar(-0.05)); }); return r; };
+        for (let t = 0; t < END; t += step) {
+          host.render(t);
+          const vis = things.filter(([, o]) => o.visible && o.scale.x > 0.01).map(([n, o]) => [n, parts(o)]);
+          for (let i = 0; i < vis.length; i++) for (let j = i + 1; j < vis.length; j++)
+            if (vis[i][1].some((a) => vis[j][1].some((b) => a.intersectsBox(b)))) (bad[vis[i][0] + " × " + vis[j][0]] ||= []).push(+t.toFixed(2));
+        }
+        host.render(host.clock.t);
+        return Object.fromEntries(Object.entries(bad).map(([n, ts]) => [n, `${ts.length} frames, ${ts[0]}–${ts[ts.length - 1]} s`]));
+      };
+
+      host.render(host.clock.t);
+      host.ready();
+    </script>
+  </body>
+</html>

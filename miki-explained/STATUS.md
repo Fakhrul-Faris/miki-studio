@@ -4,7 +4,7 @@ Read this first in a new session — **after `00_bible/WORKING-RULES.md` and `00
 (schedule + Style A/B/C test), and the episode's `RE## ▶ NEXT SESSION (2026-11-10)
 **Finished and on Telegram + dashboard:** EX28 Apple charger (Style B) · EX29 Mr DIY Pt 2 (Style A **baseline**) ·
 EX30 Mixue (Style C, built locally in raea's painted look) · EX31 Grab's cut (Style A) · EX32 printer ink (Style B,
-print-head hand-offs) · EX33 One Owner (Style B upgraded: one Three.js world in HyperFrames, Kokoro voice). Planned: EX28 Tue 10 Nov 12:30, EX29 Tue 21:00, EX30 Wed 11 Nov 12:30, EX31 Wed 21:00, EX32 Thu 12 Nov 12:30, EX33 Thu 21:00 — the user schedules in TikTok Studio, then `/scheduled exNN`.
+print-head hand-offs) · EX33 One Owner (Style B upgraded: one Three.js world in HyperFrames, Kokoro voice). · EX34 One Ringgit, One Airline (Style B on the EX33 baseline: shadow storytelling, colour script, motion = sound). Planned: EX28 Tue 10 Nov 12:30, EX29 Tue 21:00, EX30 Wed 11 Nov 12:30, EX31 Wed 21:00, EX32 Thu 12 Nov 12:30, EX33 Thu 21:00, EX34 Fri 13 Nov 12:30 — the user schedules in TikTok Studio, then `/scheduled exNN`.
 **Before posting (⚠ in each episode.md):** EX29 numbers vs Mr DIY 3Q results (10 Nov); EX30 "almost 60,000 shops" and
 the RM2 cone; EX31 "by law"; EX32 HP Store prices (RM268, RM51) on the day.
 **Next:** a new episode — rotation says Style C next. Light ideas used lately: EX28 window patch, EX31 street lamps, EX32 print head — don't repeat. EX29's comments pick Part 3 (Daiso / ZUS / KK Mart).

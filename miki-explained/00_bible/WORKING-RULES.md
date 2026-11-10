@@ -65,6 +65,12 @@ Change a locked trait only when the user says so by name. "Make it better" never
 | Cutaways | Allowed, drawn flat. |
 | Renderer | HyperFrames (SVG/HTML). |
 
+**Style B baseline (user 2026-11-10): EX33 One Owner** — one continuous Three.js world inside HyperFrames, two-tone
+toon (8-texel ramp), hard sun, words/logos on objects (`04_episodes/EX33_one-owner/build/world.src.html`). EX34 adds
+the three layers every Style B episode now carries: **shadows carry the story** (shadow-only casters), **a colour
+script** (one sun across the film), **motion = sound** (the sfx integrates the picture's own equations). Notes and
+gotchas: `00_bible/hyperframes-capabilities.md`.
+
 ### Style C — the lit plate (BIBLE-C)
 | Trait | Locked value |
 |---|---|

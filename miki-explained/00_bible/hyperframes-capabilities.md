@@ -46,3 +46,9 @@ Gotchas found (EX33, 2026-11-10):
 - Older: a block's `data-composition-id` may differ from its file name (`vfx-shatter.html` is `glass-shatter`);
 the include must use the id inside the file or HTML-in-Canvas fails with "No cached paint record". Blocks are 1920×1080 —
 re-lay out for 1080×1920.
+- EX34: **shadow-only casters** = `MeshBasicMaterial({ colorWrite: false, depthWrite: false })` + `castShadow` — invisible,
+  but the sun's depth pass sees them (a coin whose shadow is an airliner, a debt written in shadow). Place a caster at
+  `target + sunDir * (h / sunDir.y)` so its shadow lands exactly on `target`.
+- An `InstancedMesh` whose instances start scaled away gets a tiny bounding sphere and is culled from the shadow pass:
+  set `frustumCulled = false`. Casters high in the air need the shadow camera far out along the light (`far` ≥ 900).
+- Debug pages load over `file://`, where `fetch` fails: inline JSON (fonts) into the composition at build time.

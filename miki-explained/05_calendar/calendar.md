@@ -44,6 +44,7 @@ Two posts a day, 12:30 and 21:00 MYT (memory `tiktok-goal-nov-2026`). Captions, 
 | Wed 11 Nov | 21:00 | EX31 Grab's cut (`EX31-Final.mp4`) · Style A | ready (Telegram /ex31); schedule in TikTok Studio |
 | Thu 12 Nov | 12:30 | EX32 The ink is the business (`EX32-Final.mp4`) · Style B | ready (Telegram /ex32); check HP Store prices; schedule in TikTok Studio |
 | Thu 12 Nov | 21:00 | EX33 One owner (`EX33-Final.mp4`) · Style B upgraded (3D) | ready (Telegram /ex33); check licences + A-Look; schedule in TikTok Studio |
+| Fri 13 Nov | 12:30 | EX34 One ringgit, one airline (`EX34-Final.mp4`) · Style B (EX33 baseline+) | ready (Telegram /ex34); check the 25-min turnaround; schedule in TikTok Studio |
 
 **Views snapshot 2026-11-08 (TikTok Studio, views · likes · comments):** EX21 Kodak (6 Nov 12:30) 693 · 19 · 0 ·
 EX09 Other Line (6 Nov) 647 · 30 · 0 · EX10 Popcorn (7 Nov 21:00) 629 · 20 · 0 · EX24 McDonald's (8 Nov 12:30, hours old) 431 · 18 · 1.
