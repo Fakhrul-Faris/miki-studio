@@ -12,7 +12,7 @@ passes the topic test (`06_analytics/marketing-research.md` §5: Malaysians sear
 - **Over 70% of orders through its app; "build the app first, then open in cheaper off-street areas"** — co-founder Venon Tian
   on The Game of Impossible podcast, via [Unienrol (Apr 2026)](https://articles.unienrol.com/zus-coffee-rm1bil-revenue-taylors-alumni/).
 - **Revenue "more than a billion" ringgit a year** — Venon Tian, same podcast (Apr 2026), via Unienrol. Earlier: RM15.7 m (2021) → RM200 m+ (FY to Jun 2023), VnExpress.
-- ⚠ **Prices: ZUS Café Latte RM10.20; Starbucks Caffè Latte (tall) RM15.90** — unofficial menu listings
+- ⚠ **Prices: ZUS's cheapest coffee RM8.90 (the user, from the app, 2026-11-11); Starbucks Caffè Latte (tall) RM15.90** — unofficial menu listings
   ([syioknya](https://www.syioknya.com/promotion/zus-coffee-menu), [makanmenus](https://makanmenus.my/coffee-bakeries/starbucks-menu/)).
   Check both apps on the day before posting; the script says "about ten" / "about sixteen".
 - Not claimed: ZUS's margins or rent figures (not public); that every store is a kiosk (it isn't).
@@ -21,7 +21,7 @@ passes the topic test (`06_analytics/marketing-research.md` §5: Malaysians sear
 
 | Line | Beat | Voice (display) | On the world's own objects |
 |---|---|---|---|
-| L01 | Hook | ZUS Coffee sells a latte for about RM10. Starbucks charges about RM16. How is ZUS so cheap? | the ZUS logo on the kiosk from frame 1 · RM10 / RM16 on the two cups' tags |
+| L01 | Hook | ZUS Coffee starts at RM8.90. A Starbucks latte is about RM16. How is ZUS so cheap? | the ZUS logo on the cup from frame 1 · FROM RM8.90 / LATTE RM16 on the two cups' tags |
 | L02 | Mechanism 1 | Its first shop was a 200-square-foot kiosk in KLCC. No seats. | "200 sq ft" marked on the floor round the kiosk · the empty pavement where chairs would be |
 | L03 | Mechanism 2 | Over 70% of orders come through the app. Fewer cashiers, and cheaper side streets instead of the mall's front row. | order pings from phones in the windows → the kiosk · the till light goes off · the kiosk on a side lane vs the mall frontage's rent board |
 | L04 | Proof | In 2024, it passed Starbucks: 566 stores to 411. | blue ZUS lights vs white cafés across the city |
@@ -51,7 +51,7 @@ zero raea clipping lines · sound in the first preview · **a preview to the use
 ## Post (draft)
 **Caption:**
 ```
-How is ZUS Coffee so cheap? ☕ A latte for about RM10, Starbucks about RM16. ZUS started as a 200 sq ft kiosk in KLCC, takes over 70% of orders through its app, and opens on cheaper side streets. In 2024 it passed Starbucks: 566 stores to 411. Part 4: Daiso or KK Mart? 👇  #zuscoffee #malaysia #kopi #bisnes #businessmodel
+How is ZUS Coffee so cheap? ☕ Coffee from RM8.90; a Starbucks latte is about RM16. ZUS started as a 200 sq ft kiosk in KLCC, takes over 70% of orders through its app, and opens on cheaper side streets. In 2024 it passed Starbucks: 566 stores to 411. Part 4: Daiso or KK Mart? 👇  #zuscoffee #malaysia #kopi #bisnes #businessmodel
 ```
 **Pinned comment:**
 ```

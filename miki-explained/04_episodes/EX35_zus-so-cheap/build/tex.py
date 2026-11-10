@@ -13,8 +13,8 @@ def card(name, size, bg, draw):
 def ctext(d, y, s, font, fill, W):
     w = d.textlength(s, font=font); d.text(((W - w) / 2, y), s, font=font, fill=fill)
 # price tags on the two cups
-card("tag_zus", (512, 300), BLUE + (255,), lambda im, d: (logo(im, (60, 30, 392, 70)), ctext(d, 120, "RM10", f("Black", 150), WHITE, 512)))
-card("tag_sb", (512, 300), CREAM + (255,), lambda im, d: (ctext(d, 40, "STARBUCKS", f("Bold", 58), INK, 512), ctext(d, 120, "RM16", f("Black", 150), INK, 512)))
+card("tag_zus", (512, 300), BLUE + (255,), lambda im, d: (logo(im, (60, 22, 392, 60)), ctext(d, 92, "FROM", f("Bold", 48), WHITE, 512), ctext(d, 140, "RM8.90", f("Black", 120), WHITE, 512)))
+card("tag_sb", (512, 300), CREAM + (255,), lambda im, d: (ctext(d, 22, "STARBUCKS", f("Bold", 54), INK, 512), ctext(d, 92, "LATTE", f("Bold", 48), INK, 512), ctext(d, 140, "RM16", f("Black", 120), INK, 512)))
 # the cup sleeve
 card("sleeve", (512, 256), BLUE + (255,), lambda im, d: logo(im, (40, 70, 432, 116)))
 # the phone screen: the ZUS app
@@ -26,8 +26,7 @@ card("app", (400, 760), (250, 250, 252, 255), app)
 # menu board: normal, then the year's revenue (L05)
 def menu(im, d):
     d.rectangle((0, 0, 1200, 160), fill=BLUE); logo(im, (200, 30, 800, 100))
-    for i, (n, p) in enumerate((("CAFÉ LATTE", "RM10.20"), ("SPANISH LATTE", "RM11.90"))):   # menu listings, Nov 2026 (⚠ check the app on the day)
-        d.text((90, 250 + i * 160), n, font=f("Bold", 80), fill=INK); w = d.textlength(p, font=f("Black", 80)); d.text((1110 - w, 250 + i * 160), p, font=f("Black", 80), fill=BLUE)
+    ctext(d, 215, "COFFEE FROM", f("Bold", 90), INK, 1200); ctext(d, 330, "RM8.90", f("Black", 210), BLUE, 1200)   # the user, 2026-11-11: cheapest coffee on ZUS is RM8.90
 card("menu", (1200, 640), CREAM + (255,), menu)
 def menu_bn(im, d):
     d.rectangle((0, 0, 1200, 160), fill=BLUE); logo(im, (200, 30, 800, 100))
@@ -57,3 +56,24 @@ card("bb_zus", (1000, 520), BLUE + (255,), lambda im, d: (logo(im, (150, 50, 700
 card("bb_sb", (1000, 520), CREAM + (255,), lambda im, d: (ctext(d, 60, "STARBUCKS", f("Black", 110), INK, 1000), ctext(d, 200, "411", f("Black", 260), INK, 1000)))
 card("legend", (900, 200), CREAM + (255,), lambda im, d: ctext(d, 50, "1 light = 10 stores · 2024", f("Bold", 70), INK, 900))
 print("wrote", sorted(x for x in os.listdir(M) if x.endswith(".png") and not os.path.islink(f"{M}/{x}")))
+
+# the phone a customer holds up (a UI card above them, with a little tail pointing down to them)
+def phone(im, d):
+    d.rounded_rectangle((0, 0, 399, 759), 46, fill=INK); d.rounded_rectangle((18, 18, 381, 741), 32, fill=(250, 250, 252))
+    d.rectangle((18, 60, 381, 170), fill=NAVY); logo(im, (60, 85, 280, 60))
+    d.rounded_rectangle((50, 210, 350, 420), 26, fill=(235, 238, 250)); ctext(d, 280, "Café Latte", f("Bold", 42), INK, 400)
+    d.rounded_rectangle((60, 560, 340, 660), 40, fill=BLUE); ctext(d, 582, "ORDER", f("Black", 54), WHITE, 400)
+card("phone", (400, 760), (0, 0, 0, 0), phone)
+# QR standee on the counter: order on the app (pattern drawn, not a working code)
+def qr(im, d):
+    d.rectangle((0, 0, 400, 120), fill=BLUE); ctext(d, 30, "ORDER ON", f("Black", 50), WHITE, 400)
+    import random; r = random.Random(35)
+    for y in range(12):
+        for x in range(12):
+            if r.random() < 0.5: d.rectangle((80 + x * 20, 160 + y * 20, 99 + x * 20, 179 + y * 20), fill=INK)
+    for (x, y) in ((80, 160), (240, 160), (80, 320)): d.rectangle((x, y, x + 79, y + 79), fill=INK); d.rectangle((x + 14, y + 14, x + 65, y + 65), fill=WHITE); d.rectangle((x + 26, y + 26, x + 53, y + 53), fill=INK)
+    d.rectangle((0, 440, 400, 560), fill=BLUE); ctext(d, 470, "THE APP", f("Black", 50), WHITE, 400)
+card("qr", (400, 560), (250, 250, 252, 255), qr)
+# shop signboards for the street (generic, grey on white: life without competing colour)
+for name, txt in (("sg_runcit", "KEDAI RUNCIT"), ("sg_farmasi", "FARMASI"), ("sg_kedai", "KEDAI KUNCI"), ("sg_makan", "RESTORAN"), ("sg_salon", "SALON"), ("sg_cetak", "KEDAI CETAK"), ("sg_jam", "KEDAI JAM"), ("sg_kain", "KEDAI KAIN"), ("sg_motor", "MOTOR"), ("sg_tuisyen", "PUSAT TUISYEN")):
+    card(name, (1000, 160), (226, 221, 212, 255), lambda im, d, t=txt: ctext(d, 30, t, f("Black", 92), (92, 92, 100), 1000))

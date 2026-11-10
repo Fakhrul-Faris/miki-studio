@@ -1,19 +1,19 @@
-# EX35 voice on the film clock → audio/voice_full.wav + audio/vo_timeline.json; captions (36 px, 30 fps for raea) → build/caps.json
+# EX35 voice on the film clock → audio/voice_full.wav + audio/vo_timeline.json; captions (36 px, 60 fps for raea) → build/caps.json
 #   ~/.local/bin/uv run -q --with pillow python build/vo.py
 # The words' TEXT comes from the script ; their TIMES from Whisper, matched one to one after
 # joining Whisper's split numbers ("two ringgit" → RM2, "60 ,000", "97 %").
 import json, os, subprocess
 from PIL import ImageFont
-OFF = {"L01": 0.3, "L02": 7.95, "L03": 13.35, "L04": 21.4, "L05": 28.45, "L06": 31.5}; END = 35.8
+OFF = {"L01": 0.3, "L02": 7.95, "L03": 13.35, "L04": 21.4, "L05": 28.45, "L06": 31.5}; END = 37.4   # +1.6 s: the Meikigo end card (silent)
 # until the real voice lands the film runs on the temporary Kokoro lines (audio/tmp/ep/audio, tools/words.py run there)
 SRC = "audio" if os.path.exists("audio/L01.mp3") else "audio/tmp/ep/audio"
-SCRIPT = {"L01": "ZUS Coffee sells a latte for about RM10. Starbucks charges about RM16. How is ZUS so cheap?",
+SCRIPT = {"L01": "ZUS Coffee starts at RM8.90. A Starbucks latte is about RM16. How is ZUS so cheap?",
           "L02": "Its first shop was a 200-square-foot kiosk in KLCC. No seats.",
           "L03": "Over 70% of orders come through the app. Fewer cashiers, and cheaper side streets instead of the mall's front row.",
           "L04": "In 2024, it passed Starbucks: 566 stores to 411.",
           "L05": "Now it makes more than RM1 billion a year.",
           "L06": "Small shops. A big app. Follow for Part 4."}
-JOIN = [("10", "ringgit"), ("200", "square", "foot"), ("70", "%"), ("few", "are"), ("billion", "ringgit")]   # compared with commas and full stops stripped
+JOIN = [("8", "ringgit", "90"), ("16", "ringgit"), ("200", "square", "foot"), ("70", "%"), ("few", "are"), ("billion", "ringgit")]   # compared with commas and full stops stripped
 W = json.load(open(f"{SRC}/words.json"))
 tl = {}
 for L, off in OFF.items():
@@ -38,7 +38,7 @@ for w, t in seq:
 caps = []
 for i, b in enumerate(blocks):
     nxt = blocks[i + 1][0][1] if i + 1 < len(blocks) else END
-    caps.append({"in": round(b[0][1] * 30), "out": round(min(nxt, b[-1][1] + 0.9) * 30),
-                 "words": [{"w": w, "f": round(t * 30), "width": round(font.getlength(w), 1)} for w, t in b]})
+    caps.append({"in": round(b[0][1] * 60), "out": round(min(nxt, b[-1][1] + 0.9) * 60),
+                 "words": [{"w": w, "f": round(t * 60), "width": round(font.getlength(w), 1)} for w, t in b]})
 json.dump(caps, open("build/caps.json", "w"), indent=1)
 print(len(caps), "blocks:", " | ".join(" ".join(x["w"] for x in c["words"]) for c in caps))

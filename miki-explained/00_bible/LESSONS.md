@@ -118,6 +118,17 @@ is not on point … i like the ex33 better."
 | **Motion not on point** (the user's words; what they meant exactly is to confirm next time). What I can see: the plane rose straight up off its stand like a toy; the catering truck and the coin's shadow slid rather than drove/turned; long camera flights between far-apart places (high → low → high); the fleet's shadows strobed past; the board→fleet→coin moves still crowded | I moved the camera across a big world to reach each beat and kept the story objects mostly static, instead of letting the objects carry the motion in a few well-framed places | Motion is planned with the shot list, not fixed with frame-diff numbers: objects move the way they really do (a plane taxis and turns, then rolls and rotates on a runway; vehicles turn their wheels), the camera stays near the action, and no flight goes far without a reason. Ask the user what "on point" means before the next motion-heavy build |
 | **Shipped a new direction straight to final** | "go beyond now" read as "don't stop" | A new direction still gets one preview to the user before the final render (WORKING-RULES §0.4). "Go" means work without small questions, not skip the look |
 
+## 12. EX35 build mistakes (2026-11-10/11)
+
+| What | Why | Now |
+|---|---|---|
+| A block of kiosk detail vanished between two patches | a later replacement spanned "from X to Y" and Y came after the inserted block (LESSONS §8, again) | after any range replacement, grep for the keys that should still be there; prefer anchor-to-anchor edits of one statement |
+| Price tags, the A-board and a floor label never showed | `ImagePlane`'s `width` was animated: raea keeps a part's shape fixed, so the plane never drew | animate scale on a fixed-size board (`Cuboid` + `Lit` texture), never a size prop |
+| Cups half-sunk into the counter, lids floating | `manifold.cone` is centred on its length (cylinder isn't); I guessed the rotation sign twice | test a new solid in a 1-object scene before placing it |
+| The kiosk's base flickered | its bottom face sat exactly on the plaza's top face (coplanar) | sink every object 1 cm into what it stands on |
+| Photo textures (plaster, concrete) turned the white world brown | their diffuse colours are tan; tint × photo darkens | in a toned world use relief (normal/roughness) maps with chosen tints; photo diffuse only where its colour is wanted |
+| A 10 fps flipbook preview read as "choppy" to the user | I saved time and didn't say what it was | when motion is judged, preview at the film's frame rate (or say clearly it's a flipbook) |
+
 ## 10. What worked (keep doing)
 
 - Contact sheets of every beat before a build, judged against the user's last words.

@@ -9,7 +9,7 @@
 #     batch: big batches drift like long runs; one 3-frame render per bad frame was ~2 min each) until clean (3 passes);
 #   - the Mac kept awake for the whole run (caffeinate; EX31's render stopped for 6 h when it slept);
 #   - then encoded with the episode's mixed audio.
-# Usage: [RESUME=1] tools/raea/render_ep.sh EDIT.tsx FRAMES OUT.mp4 AUDIO.wav [cut frames…]
+# Usage: [RESUME=1] [FPS=60] tools/raea/render_ep.sh EDIT.tsx FRAMES OUT.mp4 AUDIO.wav [cut frames…]
 #   EDIT.tsx must contain `const F = useCurrentFrame(), T = F / FPS;` and `durationInFrames={FRAMES}` (the chunker shifts them).
 set -e
 caffeinate -dimsu -w $$ &                  # no sleep while this script runs
@@ -57,5 +57,5 @@ for pass in 1 2 3; do
   done
   flush
 done
-ffmpeg -y -v error -framerate 30 -i $T/frames/frame-%05d.png -i $AUD -c:v libx264 -crf 16 -preset slow -pix_fmt yuv420p -c:a aac -b:a 192k -shortest $OUT
+ffmpeg -y -v error -framerate ${FPS:-30} -i $T/frames/frame-%05d.png -i $AUD -c:v libx264 -crf 16 -preset slow -pix_fmt yuv420p -c:a aac -b:a 192k -shortest $OUT
 echo "wrote $OUT (frames kept in $T/frames until the next render)"

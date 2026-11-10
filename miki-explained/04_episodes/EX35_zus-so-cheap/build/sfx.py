@@ -34,15 +34,15 @@ for t0 in (14.05, 14.35, 14.6, 14.9, 15.2, 15.45):                              
     put(zip_(0.8), t0, 0.1); put(load(LIB + "pop.wav"), t0 + 0.8, 0.25)
 put(tone(220, 0.6, 0.001, 0.25) * np.linspace(1, 0.2, int(0.6 * SR)), 16.6, 0.2)    # the till powers down
 put(thump(110, 0.3), 17.85, 0.4); put(thump(80, 0.35), 19.7, 0.5)                  # RENT boards: the lane's, the mall's
-for n in range(57): put(chime(1046 + (n % 5) * 131), 22.6 + n * 0.028, 0.02)        # blue lights (566)
-for n in range(41): put(chime(523 + (n % 5) * 65), 24.9 + n * 0.035, 0.02)          # white lights (411), lower
+for n in range(0, 57, 2): put(chime(1046 + (n % 5) * 131), 22.6 + n * 0.028, 0.015)        # blue lights (566)
+for n in range(0, 41, 2): put(chime(523 + (n % 5) * 65), 24.9 + n * 0.035, 0.015)          # white lights (411), lower
 put(thump(120, 0.3), 24.2, 0.35); put(thump(95, 0.3), 26.45, 0.35)                 # the two counts land
 put(thump(75, 0.4), 29.3, 0.5)                                                     # the A-board: RM1 billion
 for n in range(26): put(tick(700 + rng.random() * 300) * 2, 32.2 + n * 0.068, 0.12) # the shutter rolls down
 put(thump(60, 0.4), 34.0, 0.45)
 mix.astype(np.float32).tofile("build/_sfx.f32")
 subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", "build/_sfx.f32", "-i", "audio/voice_full.wav",
-                "-filter_complex", "[0]volume=0.9[s];[1]volume=1.0[v];[v][s]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[a]", "-map", "[a]", "-ac", "2", "build/_mix.wav"], check=True)
+                "-filter_complex", "[0]volume=0.45[s];[1]volume=1.0[v];[v][s]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[a]", "-map", "[a]", "-ac", "2", "build/_mix.wav"], check=True)
 def lufs(f): return float(re.search(r"Summary:.*?I:\s+(-?[\d.]+) LUFS", subprocess.run(["ffmpeg", "-i", f, "-af", "ebur128", "-f", "null", "-"], capture_output=True, text=True).stderr, re.S).group(1))
 src = "build/_mix.wav"
 for i in range(3):
