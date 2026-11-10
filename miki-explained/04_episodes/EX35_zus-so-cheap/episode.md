@@ -1,6 +1,8 @@
 # EX35 — How Is ZUS So Cheap? (Part 3)
 
-Status: **script v1 + Style A plan for approval (2026-11-10)** · voice generated (Kokoro am_michael, `audio/L01–L06.mp3`, ~33 s of speech, ~35 s film)
+Status: **script approved; building (2026-11-11)** · preview `out/preview.mp4` (10 fps flipbook, 540 px, with sound) for the user before the final · voice Kokoro am_michael (35.8 s film)
+**World: WHITE** (user 2026-11-10: "approve. let's try white world") — the EX29 street repainted white under daylight; the ZUS kiosk is the only colour.
+Build: `build/ex35.tsx` (raea) · signs `build/tex.py` · voice/captions `build/vo.py` · sound `build/sfx.py` (−14 LUFS) · preview `build/flipbook.sh`.
 Strategy: series **How is X so cheap?** Part 3 (Part 1 99 Speedmart EX25, Part 2 Mr DIY EX29; ZUS was in our own Part 3 vote) ·
 passes the topic test (`06_analytics/marketing-research.md` §5: Malaysians search ZUS; the hook is their question) · 30–35 s · **Style A** (EX29 baseline).
 
@@ -29,7 +31,7 @@ passes the topic test (`06_analytics/marketing-research.md` §5: Malaysians sear
 ## Visual — Style A (WORKING-RULES §1: dark near-isometric model world, the subject in real colour, a travelling token)
 Three lines (rule 0.2):
 - **Camera:** high three-quarter / near-isometric over a KL street block at night (the EX29 world), coming close for the reads.
-- **World:** the dark charcoal model world as in EX29, dense and detailed (shophouses, five-foot way, scooters, stalls, posed figures from behind); a mall frontage with a big white café.
+- **World:** the EX29 street in **white** clay under soft daylight (user's call), dense and detailed (shophouses, five-foot way, scooters, stalls, posed figures from behind); a mall across the cross street with a white front-row café.
 - **What changes:** the ZUS kiosk is the only thing in real colour (royal blue, white logo) and the warm light. The token is a takeaway cup (the latte) that travels the story: from the price comparison, to the app's order pings, to the city of blue lights, onto the RM1 billion stack.
 
 | Line | What we see | Motion (objects move, camera stays near) | Hand-off |
