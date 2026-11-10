@@ -1,6 +1,7 @@
 # EX35 — How Is ZUS So Cheap? (Part 3)
 
-Status: **script approved; building (2026-11-11)** · preview `out/preview.mp4` (10 fps flipbook, 540 px, with sound) for the user before the final · voice Kokoro am_michael (35.8 s film)
+Status: **final 2026-11-11** `export/EX35-Final.mp4` (37.4 s, 60 fps, −14 LUFS, Style A in a white world, raea) · voice Kokoro am_michael · ⏳ Telegram + dashboard pending (the Air was offline at 02:35, 11 Nov): `tools/air.sh push-episode EX35`, then add the Fri 13 Nov 21:00 slot
+Gates: 0 raea clipping lines (8 chunk logs) · no black / flicker frames (frames_check) · Meikigo end card (silent).
 **World: WHITE** (user 2026-11-10: "approve. let's try white world") — the EX29 street repainted white under daylight; the ZUS kiosk is the only colour.
 Build: `build/ex35.tsx` (raea) · signs `build/tex.py` · voice/captions `build/vo.py` · sound `build/sfx.py` (−14 LUFS) · preview `build/flipbook.sh`.
 Strategy: series **How is X so cheap?** Part 3 (Part 1 99 Speedmart EX25, Part 2 Mr DIY EX29; ZUS was in our own Part 3 vote) ·
