@@ -1,6 +1,9 @@
 # EX34 — One Ringgit, One Airline
 
 Status: **final 2026-11-10** `export/EX34-Final.mp4` (31.6 s, 60 fps, −14 LUFS, Style B on the EX33 baseline, pushed further) · voice Kokoro `am_michael` · pushed to Telegram /ex34 · slot Fri 13 Nov 12:30
+**User verdict 2026-11-10:** "it become plain back, not enough detail. not good. and this topic should be longer. the
+motion is not on point … i like the ex33 better. no need to re-render" → lessons in `00_bible/LESSONS.md` §11.
+The final stays as made (on Telegram /ex34, dashboard Fri 13 Nov 12:30); not a baseline.
 Gates: pass-through check clean (`window.__ex34check()`: coin, planes, truck, CRT, hangar, board — part by part) · no flicker / black frames (frame diff) · `hyperframes check` 0 errors.
 Strategy: series **Founder stories** (Malaysia's own: Tony Fernandes / AirAsia) · ~31 s · **Style B, EX33 = baseline** (user 2026-11-10: "apply all three. go beyond now. this is the baseline. push far larger boundaries").
 

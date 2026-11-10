@@ -106,6 +106,18 @@ the wide ones.
 - Logos: official files only, with the source written in `02_kit/brand/logos/CREDITS.md` (apple.com nav SVG, Mixue and
   Grab via their Wikimedia files when the official sites block downloads).
 
+## 11. Clever mechanism, plain picture (EX34, 2026-11-10)
+
+The user: "this round it become plain back, not enough detail. not good. and this topic should be longer. the motion
+is not on point … i like the ex33 better."
+
+| What went wrong | Why it happened | Now |
+|---|---|---|
+| **Plain, under-detailed frames.** A big empty apron, procedural planes with only windows and a stripe, a box hangar, a box truck. EX33 was dense close-up objects (rivets, tags, shelves of frames, a map of 90 shops); EX34 was mostly concrete seen from far away | I spent the effort on the tricks (shadow-only casters, the sun's path, the coin's spin maths) and treated the objects as stand-ins. The scale of an airport put the camera far back, so even the detail I had disappeared | **Detail before mechanism.** Every frame needs EX33's density at phone size: objects close enough to read, with inner detail (panel lines, doors, ground equipment, people-free life on the apron, signage). A trick goes on top of a rich frame, never in place of one. If the world is huge, build the close-up props first and frame tight |
+| **Too short for the story.** 2001 → one year later → 2024 squeezed into 31 s: each beat got 2–3 s | I kept the 25–30 s habit from the "How it makes money" shorts | A story with a timeline or several turns is **long-edu (60 s+)**, memory `long-edu-direction`. Decide the length from the story's beats before writing the script |
+| **Motion not on point** (the user's words; what they meant exactly is to confirm next time). What I can see: the plane rose straight up off its stand like a toy; the catering truck and the coin's shadow slid rather than drove/turned; long camera flights between far-apart places (high → low → high); the fleet's shadows strobed past; the board→fleet→coin moves still crowded | I moved the camera across a big world to reach each beat and kept the story objects mostly static, instead of letting the objects carry the motion in a few well-framed places | Motion is planned with the shot list, not fixed with frame-diff numbers: objects move the way they really do (a plane taxis and turns, then rolls and rotates on a runway; vehicles turn their wheels), the camera stays near the action, and no flight goes far without a reason. Ask the user what "on point" means before the next motion-heavy build |
+| **Shipped a new direction straight to final** | "go beyond now" read as "don't stop" | A new direction still gets one preview to the user before the final render (WORKING-RULES §0.4). "Go" means work without small questions, not skip the look |
+
 ## 10. What worked (keep doing)
 
 - Contact sheets of every beat before a build, judged against the user's last words.

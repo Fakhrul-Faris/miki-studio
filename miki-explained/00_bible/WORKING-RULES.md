@@ -66,10 +66,10 @@ Change a locked trait only when the user says so by name. "Make it better" never
 | Renderer | HyperFrames (SVG/HTML). |
 
 **Style B baseline (user 2026-11-10): EX33 One Owner** — one continuous Three.js world inside HyperFrames, two-tone
-toon (8-texel ramp), hard sun, words/logos on objects (`04_episodes/EX33_one-owner/build/world.src.html`). EX34 adds
-the three layers every Style B episode now carries: **shadows carry the story** (shadow-only casters), **a colour
-script** (one sun across the film), **motion = sound** (the sfx integrates the picture's own equations). Notes and
-gotchas: `00_bible/hyperframes-capabilities.md`.
+toon (8-texel ramp), hard sun, words/logos on objects (`04_episodes/EX33_one-owner/build/world.src.html`). It stays the
+baseline: the user preferred it over EX34 ("i like the ex33 better"). EX34's layers (shadow-only casters, a one-sun
+colour script, sound from the picture's equations) are tools, not a recipe — they never replace EX33's density of
+detail, its close readable objects or its calm motion. Notes and gotchas: `00_bible/hyperframes-capabilities.md`.
 
 ### Style C — the lit plate (BIBLE-C)
 | Trait | Locked value |
@@ -97,6 +97,7 @@ gotchas: `00_bible/hyperframes-capabilities.md`.
 
 | Date | What I showed | Verdict (user's words) | Lesson |
 |---|---|---|---|
+| 2026-11-10 | EX34 final (AirAsia RM1, Style B + shadow storytelling / colour script / motion = sound) | "it become plain back, not enough detail. not good. and this topic should be longer. the motion is not on point … i like the ex33 better" | Detail and craft come before mechanisms (LESSONS §11). A story with a timeline (2001 → 2024) gets the long-edu length (60 s+), not 30 s. Keep the EX33 baseline; don't ship without the user seeing a preview when the direction is new. |
 | 2026-11-10 | EX31 v1 (Grab car) | "the grab car go through another object" | Moving things get a path file + collision check before any render (`EX31_grab-cut/build/paths.py`: oriented footprints vs every obstacle, every frame; the film reads the same file). Read raea's clipping log on the preview AND every render chunk — EX31's log had the warnings and I didn't read it. Keep foreground props off tracking-camera lines. |
 | 2026-11-09 | EX30 v1 L04 (worm's-eye factory, 97% in the sky) | "i'm not sure what being shown on this scene" | Name the place on the place (logo on the building); side-on objects read, head-on silhouettes don't; never let the key prop overlap the scenery. Ask of every frame: would a muted viewer know what this is in 1 s? |
 | 2026-11-09 | EX29 full v1 (39 s, silent) | "this is the new baseline for style A … take note on what's failing. we can't repeat the same on next episode … where's the sound effect … why i took so long" | Baseline + failure list in §1; sound in every render; render budget in §5. |
