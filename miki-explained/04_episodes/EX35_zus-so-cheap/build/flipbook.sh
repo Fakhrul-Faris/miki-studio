@@ -3,7 +3,7 @@
 set -e
 caffeinate -dimsu -w $$ &
 cd ${0:A:h}/..
-O=build/media/_flip; mkdir -p $O; rm -f $O/*.png
+O=build/media/_flip; rm -rf $O; mkdir -p $O
 all=($(seq 0 3 1073)); n=${#all}; i=1
 while [ $i -le $n ]; do
   at=$(echo ${all[$i,$((i+29))]} | tr ' ' ','); rm -rf build/media/_fb
