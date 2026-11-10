@@ -8,7 +8,7 @@ file wins. Update it the same day a decision or a rejection happens.
 
 ## 0. Before any work (every time, no exceptions)
 
-1. Read this file, then `STATUS.md`, then the bible of the style involved (`series-bible/BIBLE-A.md`, `-B.md`, `-C.md`).
+1. Read this file, then `LESSONS.md` (my past mistakes and the checks they created), then `STATUS.md`, then the bible of the style involved (`series-bible/BIBLE-A.md`, `-B.md`, `-C.md`).
 2. **Restate the target in 3 lines** to the user before building anything new:
    camera · what the world looks like (what stays as it is) · what changes and why.
    The 3 lines must keep the style's **locked traits** (§1) unless the user unlocked one by name.

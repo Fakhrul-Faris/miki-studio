@@ -14,7 +14,7 @@
 set -e
 caffeinate -dimsu -w $$ &                  # no sleep while this script runs
 E=$1; N=$2; OUT=$3; AUD=$4; shift 4; CUTS=($@)
-D=${E:h}; T=$D/media/_render; K=${0:A:h}; PY=(~/.local/bin/uv run -q --with pillow --with numpy python)
+D=${E:h}; T=$D/media/_render; K=${0:A:h}; PY=(~/.local/bin/uv run -q --offline --with pillow --with numpy python)   # --offline: the packages are cached; the check must not need the internet (EX31)
 [ "$RESUME" = 1 ] || rm -rf $T
 mkdir -p $T/frames
 
