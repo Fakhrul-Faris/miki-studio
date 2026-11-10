@@ -96,6 +96,8 @@ the wide ones.
 | text spliced by index offsets computed *before* other edits shifted them (EX31 `sfx.py`, broken lines) | splice by unique anchor strings (`replace` with an assert on the count), never by stale indexes |
 | a replacement range that silently swallowed the next block (EX30 beat cameras and `CX` vanished) | check the slice end lands where intended; render one frame right after every structural edit |
 | a `//` comment pasted mid-line ate the rest of the line (TSX) | use `/* … */` inside lines |
+| **repeated in EX33** (a JS line in `world.src.html`: "tip is not defined", 1 min lost) | any edit that adds a comment to the end of an existing code line uses `/* … */` — check the replacement string for `//` before running it |
+| EX33: a value read from the DOM (`data-duration`) was NaN inside the film, blanking the 3D world with no error | bake constants into generated code; when a frame is blank but nothing throws, look for NaN first |
 
 ## 9. Facts
 

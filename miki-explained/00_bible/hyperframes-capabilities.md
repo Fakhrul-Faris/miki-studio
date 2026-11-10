@@ -31,6 +31,18 @@ Checks we haven't used yet:
 - `measure cuts|energy|eases FILE`: measure a reference video's cutting rhythm and eases (for TomTom-style references).
 - `compare` / `grade-compare`: render variants into one labelled sheet.
 
-Gotchas found: a block's `data-composition-id` may differ from its file name (`vfx-shatter.html` is `glass-shatter`);
+Gotchas found (EX33, 2026-11-10):
+- **Inside the film a sub-composition's root has no readable `data-duration`** — `parseFloat(root.dataset.duration)`
+  gave NaN, the NaN reached the sun, and every surface vanished (only the background drew). Bake the length into the
+  script as a constant. Debug a Three.js composition standalone: open `compositions/x.html` copied to the project root
+  via `file://` in the HyperFrames Chrome (`chrome-headless-shell`, `--allow-file-access-from-files`) with puppeteer-core
+  from the npx cache; `validate`/`check` didn't report it (no error was thrown).
+- Toon shading: MeshToonMaterial + a ramp texture; with a 2-texel ramp a low sun (dot < 0.5) puts the whole floor in
+  the shadow tone — use an 8-texel ramp with only the first dark. NoToneMapping; measure the rendered floor and solve
+  hemisphere + sun so a lit surface shows its own colour (EX33: hemi #C2BEDC × 2.6, sun #FFF6C4 × 1.54).
+- A 3D world is deterministic per frame (render(t) from a paused GSAP clock), so HyperFrames renders it in parallel
+  workers: 1,920 frames at 1080×1920 in ~30 s (draft).
+- The pass-through check lives in the scene (`window.__ex33check()`: every string vs every hanging thing, part by part).
+ a block's `data-composition-id` may differ from its file name (`vfx-shatter.html` is `glass-shatter`);
 the include must use the id inside the file or HTML-in-Canvas fails with "No cached paint record". Blocks are 1920×1080 —
 re-lay out for 1080×1920.

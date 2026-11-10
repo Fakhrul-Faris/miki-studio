@@ -1,0 +1,156 @@
+<template>
+  <style>
+    @font-face { font-family: "Inter Display"; font-weight: 500; src: url("assets/fonts/InterDisplay-Medium.ttf"); }
+@font-face { font-family: "Inter Display"; font-weight: 700; src: url("assets/fonts/InterDisplay-Bold.ttf"); }
+@font-face { font-family: "Inter Display"; font-weight: 900; src: url("assets/fonts/InterDisplay-Black.ttf"); }
+
+    #root { position: absolute; inset: 0; }
+    #caps-in .cb, #caps-in .ci { position: absolute; inset: 0; }
+    #caps-in .cp { position: absolute; border-radius: 14px; background: rgba(14,14,16,0.82); }
+    #caps-in .cw { position: absolute; font-family: "Inter Display"; font-weight: 500; font-size: 36px; line-height: 36px; color: #EDE7DC; white-space: nowrap; }
+  </style>
+  <div id="root" data-composition-id="caps" data-width="1080" data-height="1920" data-layout-allow-caption-zone><div id="caps-in">
+    <div id="cap0" class="clip cb" data-start="0.300" data-duration="2.600"><div class="ci"><div class="cp" style="top:1351.7px; height:68.3px;"></div><span class="cw" style="left:253.2px; top:1365.7px;">Ray-Ban</span><span class="cw" style="left:401.9px; top:1365.7px;">and</span><span class="cw" style="left:471.6px; top:1365.7px;">Oakley</span><span class="cw" style="left:593.4px; top:1365.7px;">look</span><span class="cw" style="left:670.1px; top:1365.7px;">like</span><span class="cw" style="left:734.8px; top:1365.7px;">rivals.</span></div></div>
+    <div id="cap1" class="clip cb" data-start="3.033" data-duration="1.983"><div class="ci"><div class="cp" style="top:1351.7px; height:68.3px;"></div><span class="cw" style="left:231.7px; top:1365.7px;">They're</span><span class="cw" style="left:363.4px; top:1365.7px;">owned</span><span class="cw" style="left:482.1px; top:1365.7px;">by</span><span class="cw" style="left:531.9px; top:1365.7px;">the</span><span class="cw" style="left:593.6px; top:1365.7px;">same</span><span class="cw" style="left:691.3px; top:1365.7px;">company.</span></div></div>
+    <div id="cap2" class="clip cb" data-start="5.200" data-duration="3.167"><div class="ci"><div class="cp" style="top:1303.7px; height:116.3px;"></div><span class="cw" style="left:232.0px; top:1317.7px;">So</span><span class="cw" style="left:284.7px; top:1317.7px;">is</span><span class="cw" style="left:320.4px; top:1317.7px;">Sunglass</span><span class="cw" style="left:477.1px; top:1317.7px;">Hut,</span><span class="cw" style="left:552.9px; top:1317.7px;">the</span><span class="cw" style="left:614.6px; top:1317.7px;">shop</span><span class="cw" style="left:703.3px; top:1317.7px;">that</span><span class="cw" style="left:776.0px; top:1317.7px;">sells</span><span class="cw" style="left:494.5px; top:1365.7px;">them.</span></div></div>
+    <div id="cap3" class="clip cb" data-start="8.367" data-duration="2.217"><div class="ci"><div class="cp" style="top:1351.7px; height:68.3px;"></div><span class="cw" style="left:243.7px; top:1365.7px;">And</span><span class="cw" style="left:318.4px; top:1365.7px;">Essilor,</span><span class="cw" style="left:441.1px; top:1365.7px;">which</span><span class="cw" style="left:545.9px; top:1365.7px;">makes</span><span class="cw" style="left:662.6px; top:1365.7px;">the</span><span class="cw" style="left:724.3px; top:1365.7px;">lenses.</span></div></div>
+    <div id="cap4" class="clip cb" data-start="10.850" data-duration="3.683"><div class="ci"><div class="cp" style="top:1303.7px; height:116.3px;"></div><span class="cw" style="left:254.8px; top:1317.7px;">It</span><span class="cw" style="left:285.6px; top:1317.7px;">also</span><span class="cw" style="left:360.3px; top:1317.7px;">makes</span><span class="cw" style="left:477.0px; top:1317.7px;">the</span><span class="cw" style="left:538.7px; top:1317.7px;">glasses</span><span class="cw" style="left:670.4px; top:1317.7px;">for</span><span class="cw" style="left:724.2px; top:1317.7px;">Prada,</span><span class="cw" style="left:382.8px; top:1365.7px;">Chanel</span><span class="cw" style="left:505.5px; top:1365.7px;">and</span><span class="cw" style="left:575.2px; top:1365.7px;">Armani.</span></div></div>
+    <div id="cap5" class="clip cb" data-start="14.783" data-duration="2.867"><div class="ci"><div class="cp" style="top:1351.7px; height:68.3px;"></div><span class="cw" style="left:354.4px; top:1365.7px;">Last</span><span class="cw" style="left:433.1px; top:1365.7px;">year:</span><span class="cw" style="left:520.9px; top:1365.7px;">€28.5</span><span class="cw" style="left:624.6px; top:1365.7px;">billion.</span></div></div>
+    <div id="cap6" class="clip cb" data-start="18.400" data-duration="5.000"><div class="ci"><div class="cp" style="top:1303.7px; height:116.3px;"></div><span class="cw" style="left:240.5px; top:1317.7px;">And</span><span class="cw" style="left:315.2px; top:1317.7px;">in</span><span class="cw" style="left:352.9px; top:1317.7px;">2025</span><span class="cw" style="left:448.6px; top:1317.7px;">it</span><span class="cw" style="left:478.4px; top:1317.7px;">agreed</span><span class="cw" style="left:601.1px; top:1317.7px;">to</span><span class="cw" style="left:642.8px; top:1317.7px;">buy</span><span class="cw" style="left:712.5px; top:1317.7px;">A-Look,</span><span class="cw" style="left:413.8px; top:1365.7px;">Seen</span><span class="cw" style="left:506.5px; top:1365.7px;">and</span><span class="cw" style="left:576.2px; top:1365.7px;">OWL.</span></div></div>
+    <div id="cap7" class="clip cb" data-start="24.017" data-duration="2.683"><div class="ci"><div class="cp" style="top:1351.7px; height:68.3px;"></div><span class="cw" style="left:264.2px; top:1365.7px;">Over</span><span class="cw" style="left:351.9px; top:1365.7px;">90</span><span class="cw" style="left:405.6px; top:1365.7px;">optical</span><span class="cw" style="left:522.4px; top:1365.7px;">shops</span><span class="cw" style="left:629.1px; top:1365.7px;">in</span><span class="cw" style="left:666.8px; top:1365.7px;">Malaysia.</span></div></div>
+    <div id="cap8" class="clip cb" data-start="26.950" data-duration="1.117"><div class="ci"><div class="cp" style="top:1351.7px; height:68.3px;"></div><span class="cw" style="left:406.6px; top:1365.7px;">Different</span><span class="cw" style="left:557.4px; top:1365.7px;">names.</span></div></div>
+    <div id="cap9" class="clip cb" data-start="28.167" data-duration="0.967"><div class="ci"><div class="cp" style="top:1351.7px; height:68.3px;"></div><span class="cw" style="left:447.6px; top:1365.7px;">One</span><span class="cw" style="left:524.4px; top:1365.7px;">owner.</span></div></div>
+    <div id="cap10" class="clip cb" data-start="29.133" data-duration="2.400"><div class="ci"><div class="cp" style="top:1303.7px; height:116.3px;"></div><span class="cw" style="left:278.6px; top:1317.7px;">Follow</span><span class="cw" style="left:392.3px; top:1317.7px;">for</span><span class="cw" style="left:446.0px; top:1317.7px;">more</span><span class="cw" style="left:538.7px; top:1317.7px;">hidden</span><span class="cw" style="left:658.4px; top:1317.7px;">business</span><span class="cw" style="left:477.0px; top:1365.7px;">models.</span></div></div>
+  </div></div>
+  <script>
+    (() => {
+      const tl = gsap.timeline({ paused: true });
+      gsap.set("#cap0 .cp", { left: 231.2, width: 617.6 });
+tl.fromTo("#cap0 .cp", { opacity: 0 }, { opacity: 1, duration: 0.17, ease: "power2.out" }, 0.300);
+gsap.set("#cap0 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" });
+tl.fromTo("#cap0 .cw:nth-of-type(1)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 0.300);
+tl.fromTo("#cap0 .cw:nth-of-type(2)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 0.833);
+tl.fromTo("#cap0 .cw:nth-of-type(3)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 1.067);
+tl.fromTo("#cap0 .cw:nth-of-type(4)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 1.533);
+tl.fromTo("#cap0 .cw:nth-of-type(5)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 1.767);
+tl.fromTo("#cap0 .cw:nth-of-type(6)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 2.000);
+tl.fromTo("#cap0 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" }, { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)", duration: 0.12, ease: "power2.out", immediateRender: false }, 1.940);
+tl.fromTo("#cap0 .ci", { opacity: 1 }, { opacity: 0, duration: 0.13, ease: "power1.in", immediateRender: false }, 2.770);
+gsap.set("#cap1 .cp", { left: 209.7, width: 660.6 });
+tl.fromTo("#cap1 .cp", { opacity: 0 }, { opacity: 1, duration: 0.17, ease: "power2.out" }, 3.033);
+gsap.set("#cap1 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" });
+tl.fromTo("#cap1 .cw:nth-of-type(1)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 3.033);
+tl.fromTo("#cap1 .cw:nth-of-type(2)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 3.317);
+tl.fromTo("#cap1 .cw:nth-of-type(3)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 3.567);
+tl.fromTo("#cap1 .cw:nth-of-type(4)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 3.767);
+tl.fromTo("#cap1 .cw:nth-of-type(5)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 3.883);
+tl.fromTo("#cap1 .cw:nth-of-type(6)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 4.117);
+tl.fromTo("#cap1 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" }, { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)", duration: 0.12, ease: "power2.out", immediateRender: false }, 4.057);
+tl.fromTo("#cap1 .ci", { opacity: 1 }, { opacity: 0, duration: 0.13, ease: "power1.in", immediateRender: false }, 4.887);
+gsap.set("#cap2 .cp", { left: 210.0, width: 660.0 });
+tl.fromTo("#cap2 .cp", { opacity: 0 }, { opacity: 1, duration: 0.17, ease: "power2.out" }, 5.200);
+gsap.set("#cap2 .cp", { clipPath: "inset(0px 0.0px 48.0px 0.0px round 14px)" });
+tl.fromTo("#cap2 .cw:nth-of-type(1)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 5.200);
+tl.fromTo("#cap2 .cw:nth-of-type(2)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 5.383);
+tl.fromTo("#cap2 .cw:nth-of-type(3)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 5.567);
+tl.fromTo("#cap2 .cw:nth-of-type(4)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 6.033);
+tl.fromTo("#cap2 .cw:nth-of-type(5)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 6.617);
+tl.fromTo("#cap2 .cw:nth-of-type(6)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 6.683);
+tl.fromTo("#cap2 .cw:nth-of-type(7)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 6.967);
+tl.fromTo("#cap2 .cw:nth-of-type(8)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 7.200);
+tl.fromTo("#cap2 .cp", { clipPath: "inset(0px 0.0px 48.0px 0.0px round 14px)" }, { clipPath: "inset(0px 0.0px 48.0px 0.0px round 14px)", duration: 0.12, ease: "power2.out", immediateRender: false }, 7.140);
+tl.fromTo("#cap2 .cw:nth-of-type(9)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 7.517);
+tl.fromTo("#cap2 .cp", { clipPath: "inset(0px 0.0px 48.0px 0.0px round 14px)" }, { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)", duration: 0.12, ease: "power2.out", immediateRender: false }, 7.457);
+tl.fromTo("#cap2 .ci", { opacity: 1 }, { opacity: 0, duration: 0.13, ease: "power1.in", immediateRender: false }, 8.237);
+gsap.set("#cap3 .cp", { left: 221.7, width: 636.6 });
+tl.fromTo("#cap3 .cp", { opacity: 0 }, { opacity: 1, duration: 0.17, ease: "power2.out" }, 8.367);
+gsap.set("#cap3 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" });
+tl.fromTo("#cap3 .cw:nth-of-type(1)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 8.367);
+tl.fromTo("#cap3 .cw:nth-of-type(2)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 8.433);
+tl.fromTo("#cap3 .cw:nth-of-type(3)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 8.967);
+tl.fromTo("#cap3 .cw:nth-of-type(4)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 9.217);
+tl.fromTo("#cap3 .cw:nth-of-type(5)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 9.483);
+tl.fromTo("#cap3 .cw:nth-of-type(6)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 9.683);
+tl.fromTo("#cap3 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" }, { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)", duration: 0.12, ease: "power2.out", immediateRender: false }, 9.623);
+tl.fromTo("#cap3 .ci", { opacity: 1 }, { opacity: 0, duration: 0.13, ease: "power1.in", immediateRender: false }, 10.453);
+gsap.set("#cap4 .cp", { left: 232.8, width: 614.3 });
+tl.fromTo("#cap4 .cp", { opacity: 0 }, { opacity: 1, duration: 0.17, ease: "power2.out" }, 10.850);
+gsap.set("#cap4 .cp", { clipPath: "inset(0px 0.0px 48.0px 0.0px round 14px)" });
+tl.fromTo("#cap4 .cw:nth-of-type(1)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 10.850);
+tl.fromTo("#cap4 .cw:nth-of-type(2)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 11.033);
+tl.fromTo("#cap4 .cw:nth-of-type(3)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 11.333);
+tl.fromTo("#cap4 .cw:nth-of-type(4)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 11.583);
+tl.fromTo("#cap4 .cw:nth-of-type(5)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 11.767);
+tl.fromTo("#cap4 .cw:nth-of-type(6)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 12.133);
+tl.fromTo("#cap4 .cw:nth-of-type(7)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 12.383);
+tl.fromTo("#cap4 .cp", { clipPath: "inset(0px 0.0px 48.0px 0.0px round 14px)" }, { clipPath: "inset(0px 0.0px 48.0px 0.0px round 14px)", duration: 0.12, ease: "power2.out", immediateRender: false }, 12.323);
+tl.fromTo("#cap4 .cw:nth-of-type(8)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 12.950);
+tl.fromTo("#cap4 .cp", { clipPath: "inset(0px 0.0px 48.0px 0.0px round 14px)" }, { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)", duration: 0.12, ease: "power2.out", immediateRender: false }, 12.890);
+tl.fromTo("#cap4 .cw:nth-of-type(9)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 13.617);
+tl.fromTo("#cap4 .cw:nth-of-type(10)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 13.633);
+tl.fromTo("#cap4 .ci", { opacity: 1 }, { opacity: 0, duration: 0.13, ease: "power1.in", immediateRender: false }, 14.403);
+gsap.set("#cap5 .cp", { left: 332.4, width: 415.2 });
+tl.fromTo("#cap5 .cp", { opacity: 0 }, { opacity: 1, duration: 0.17, ease: "power2.out" }, 14.783);
+gsap.set("#cap5 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" });
+tl.fromTo("#cap5 .cw:nth-of-type(1)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 14.783);
+tl.fromTo("#cap5 .cw:nth-of-type(2)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 15.117);
+tl.fromTo("#cap5 .cw:nth-of-type(3)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 15.733);
+tl.fromTo("#cap5 .cw:nth-of-type(4)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 16.750);
+tl.fromTo("#cap5 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" }, { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)", duration: 0.12, ease: "power2.out", immediateRender: false }, 16.690);
+tl.fromTo("#cap5 .ci", { opacity: 1 }, { opacity: 0, duration: 0.13, ease: "power1.in", immediateRender: false }, 17.520);
+gsap.set("#cap6 .cp", { left: 218.5, width: 643.0 });
+tl.fromTo("#cap6 .cp", { opacity: 0 }, { opacity: 1, duration: 0.17, ease: "power2.out" }, 18.400);
+gsap.set("#cap6 .cp", { clipPath: "inset(0px 0.0px 48.0px 0.0px round 14px)" });
+tl.fromTo("#cap6 .cw:nth-of-type(1)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 18.400);
+tl.fromTo("#cap6 .cw:nth-of-type(2)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 18.583);
+tl.fromTo("#cap6 .cw:nth-of-type(3)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 18.667);
+tl.fromTo("#cap6 .cw:nth-of-type(4)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 19.933);
+tl.fromTo("#cap6 .cw:nth-of-type(5)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 20.133);
+tl.fromTo("#cap6 .cw:nth-of-type(6)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 20.433);
+tl.fromTo("#cap6 .cw:nth-of-type(7)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 20.667);
+tl.fromTo("#cap6 .cw:nth-of-type(8)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 20.867);
+tl.fromTo("#cap6 .cp", { clipPath: "inset(0px 0.0px 48.0px 0.0px round 14px)" }, { clipPath: "inset(0px 0.0px 48.0px 0.0px round 14px)", duration: 0.12, ease: "power2.out", immediateRender: false }, 20.807);
+tl.fromTo("#cap6 .cw:nth-of-type(9)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 21.867);
+tl.fromTo("#cap6 .cp", { clipPath: "inset(0px 0.0px 48.0px 0.0px round 14px)" }, { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)", duration: 0.12, ease: "power2.out", immediateRender: false }, 21.807);
+tl.fromTo("#cap6 .cw:nth-of-type(10)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 22.433);
+tl.fromTo("#cap6 .cw:nth-of-type(11)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 22.500);
+tl.fromTo("#cap6 .ci", { opacity: 1 }, { opacity: 0, duration: 0.13, ease: "power1.in", immediateRender: false }, 23.270);
+gsap.set("#cap7 .cp", { left: 242.2, width: 595.6 });
+tl.fromTo("#cap7 .cp", { opacity: 0 }, { opacity: 1, duration: 0.17, ease: "power2.out" }, 24.017);
+gsap.set("#cap7 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" });
+tl.fromTo("#cap7 .cw:nth-of-type(1)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 24.017);
+tl.fromTo("#cap7 .cw:nth-of-type(2)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 24.217);
+tl.fromTo("#cap7 .cw:nth-of-type(3)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 24.600);
+tl.fromTo("#cap7 .cw:nth-of-type(4)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 25.083);
+tl.fromTo("#cap7 .cw:nth-of-type(5)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 25.533);
+tl.fromTo("#cap7 .cw:nth-of-type(6)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 25.800);
+tl.fromTo("#cap7 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" }, { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)", duration: 0.12, ease: "power2.out", immediateRender: false }, 25.740);
+tl.fromTo("#cap7 .ci", { opacity: 1 }, { opacity: 0, duration: 0.13, ease: "power1.in", immediateRender: false }, 26.570);
+gsap.set("#cap8 .cp", { left: 384.6, width: 310.7 });
+tl.fromTo("#cap8 .cp", { opacity: 0 }, { opacity: 1, duration: 0.17, ease: "power2.out" }, 26.950);
+gsap.set("#cap8 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" });
+tl.fromTo("#cap8 .cw:nth-of-type(1)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 26.950);
+tl.fromTo("#cap8 .cw:nth-of-type(2)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 27.167);
+tl.fromTo("#cap8 .ci", { opacity: 1 }, { opacity: 0, duration: 0.13, ease: "power1.in", immediateRender: false }, 27.937);
+gsap.set("#cap9 .cp", { left: 425.6, width: 228.7 });
+tl.fromTo("#cap9 .cp", { opacity: 0 }, { opacity: 1, duration: 0.17, ease: "power2.out" }, 28.167);
+gsap.set("#cap9 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" });
+tl.fromTo("#cap9 .cw:nth-of-type(1)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 28.167);
+tl.fromTo("#cap9 .cw:nth-of-type(2)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 28.433);
+tl.fromTo("#cap9 .ci", { opacity: 1 }, { opacity: 0, duration: 0.13, ease: "power1.in", immediateRender: false }, 29.003);
+gsap.set("#cap10 .cp", { left: 256.6, width: 566.9 });
+tl.fromTo("#cap10 .cp", { opacity: 0 }, { opacity: 1, duration: 0.17, ease: "power2.out" }, 29.133);
+gsap.set("#cap10 .cp", { clipPath: "inset(0px 0.0px 48.0px 0.0px round 14px)" });
+tl.fromTo("#cap10 .cw:nth-of-type(1)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 29.133);
+tl.fromTo("#cap10 .cw:nth-of-type(2)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 29.483);
+tl.fromTo("#cap10 .cw:nth-of-type(3)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 29.750);
+tl.fromTo("#cap10 .cw:nth-of-type(4)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 29.950);
+tl.fromTo("#cap10 .cw:nth-of-type(5)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 30.250);
+tl.fromTo("#cap10 .cp", { clipPath: "inset(0px 0.0px 48.0px 0.0px round 14px)" }, { clipPath: "inset(0px 0.0px 48.0px 0.0px round 14px)", duration: 0.12, ease: "power2.out", immediateRender: false }, 30.190);
+tl.fromTo("#cap10 .cw:nth-of-type(6)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 30.633);
+tl.fromTo("#cap10 .cp", { clipPath: "inset(0px 0.0px 48.0px 0.0px round 14px)" }, { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)", duration: 0.12, ease: "power2.out", immediateRender: false }, 30.573);
+tl.fromTo("#cap10 .ci", { opacity: 1 }, { opacity: 0, duration: 0.13, ease: "power1.in", immediateRender: false }, 31.403);
+      window.__timelines["caps"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,488 @@
+<!doctype html>
+<!--
+  EX33 "One Owner" — the whole film is one continuous Three.js world, drawn flat (Style B upgraded, 2026-11-10).
+  Every value comes from the clock t (render(t)), so a render equals a seek. Built by build/hf_ex33.py:
+  /*TIMES*/ is replaced with the voice's word times (audio/vo_timeline.json), /*MAP*/ with Malaysia's outline
+  (Natural Earth 1:50m via world-atlas, build/malaysia.json).
+  Look: two-tone toon shading (one light tone, one cool shadow tone per surface), no outlines, a low hard sun whose
+  shadows carry the idea, one accent: the red strings (the owner's control) — everything hangs from one bar.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #E6D6BC; }
+      #w-root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #E6D6BC; }
+      #w-canvas { position: absolute; inset: 0; width: 1080px; height: 1920px; display: block; }
+    </style>
+  </head>
+  <body>
+    <div id="w-root" data-composition-id="world" data-start="0" data-duration="/*END*/" data-width="1080" data-height="1920">
+      <canvas id="w-canvas" class="clip" data-start="0" data-duration="/*END*/" data-track-index="1"></canvas>
+    </div>
+    <script>
+      (function () {
+        var root = document.getElementById("w-root");
+        var duration = /*END*/;   // not read from the root: inside the film the root's data-duration is not there (NaN blanked every surface)
+        var clock = { t: 0 };
+        var host = { duration: duration, clock: clock, render: null };
+        window.__ex33 = host;
+        window.__hf = window.__hf || {};
+        window.__hf.buildReady = window.__hf.buildReady || {};
+        window.__hf.buildReady["world"] = new Promise(function (resolve) { host.ready = resolve; });
+        var tl = gsap.timeline({ paused: true });
+        tl.to(clock, { t: duration, duration: duration, ease: "none", onUpdate: function () { if (host.render) host.render(clock.t); } });
+        window.__timelines = window.__timelines || {};
+        window.__timelines["world"] = tl;
+      })();
+    </script>
+    <script type="module">
+      import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.184.0/+esm";
+      const host = window.__ex33;
+      const WT = /*TIMES*/;
+      const MAP = /*MAP*/;
+      const END = host.duration;
+      const at = (L, frag, n = 0) => WT[L].filter((x) => x[0].toLowerCase().includes(frag.toLowerCase()))[n][1];
+
+      // ---------- easing (no bounce: arrive with weight)
+      const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+      const k = (t, a, b) => clamp((t - a) / (b - a));
+      const io = (u) => (u < 0.5 ? 4 * u * u * u : 1 - Math.pow(-2 * u + 2, 3) / 2);
+      const out3 = (u) => 1 - Math.pow(1 - u, 3);
+      const spring = (u, w = 9) => { const e = 1 - (1 + w) * Math.exp(-w); return clamp((1 - (1 + w * u) * Math.exp(-w * u)) / e); };
+      const lerp = (a, b, u) => a + (b - a) * u;
+      // a hanging thing's sway: damped pendulum after it arrives (angle in rad)
+      const sway = (t, t0, amp = 0.12, per = 1.7, damp = 1.1) => (t < t0 ? 0 : amp * Math.exp(-(t - t0) * damp) * Math.sin((2 * Math.PI * (t - t0)) / per));
+      const P2 = Math.PI * 2;
+
+      // ---------- palette: warm light, cool shadow, one accent
+      const C = {
+        floor: "#E6D6BC", land: "#F4ECDF", wood: "#B9844F", woodDark: "#8F5F34", card: "#FBF7F0",
+        black: "#1C1C21", white: "#F2EFEA", string: "#D7262E", lensRB: "#263A2C", lensOak: "#C8452E",
+        kiosk: "#F1E9DC", kioskBand: "#2B2B30", essilor: "#BFE0E6", grey: "#8A8C93", tort: "#6B4128", shop: "#FBF5EA", awning: "#D7262E",
+      };
+
+      // ---------- renderer
+      const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById("w-canvas"), antialias: true, preserveDrawingBuffer: true });
+      renderer.setPixelRatio(1);
+      renderer.setSize(1080, 1920, false);
+      renderer.outputColorSpace = THREE.SRGBColorSpace;
+      renderer.toneMapping = THREE.NoToneMapping;
+      renderer.shadowMap.enabled = true;
+      renderer.shadowMap.type = THREE.PCFShadowMap;
+      const scene = new THREE.Scene();
+      scene.background = new THREE.Color(C.floor);
+      scene.fog = new THREE.Fog(C.floor, 26, 60);   // the floor melts into the backdrop: no horizon line
+      const camera = new THREE.PerspectiveCamera(42, 1080 / 1920, 0.05, 200);
+
+      // two-tone toon ramp: below the step = shadow tone (hemisphere only), above = full sun
+      const ramp = new THREE.DataTexture(new Uint8Array([0, 0, 0, 255, ...Array(7).fill([255, 255, 255, 255]).flat()]), 8, 1, THREE.RGBAFormat);
+      ramp.minFilter = ramp.magFilter = THREE.NearestFilter; ramp.needsUpdate = true;
+      const toon = (color, extra = {}) => new THREE.MeshToonMaterial({ color, gradientMap: ramp, ...extra });
+      const hemi = new THREE.HemisphereLight("#C2BEDC", "#C2BEDC", 2.6);   // the cool shadow tone (measured: shadow = albedo × ~(.55,.52,.72))
+      scene.add(hemi);
+      const sun = new THREE.DirectionalLight("#FFF6C4", 1.54);   // hemi + sun ≈ 1.0: a lit surface shows its own colour
+      sun.castShadow = true;
+      sun.shadow.mapSize.set(4096, 4096);
+      sun.shadow.bias = -0.0004; sun.shadow.normalBias = 0.02;
+      scene.add(sun, sun.target);
+
+      // ---------- floor (the sea and, later, the map's ground)
+      const floor = new THREE.Mesh(new THREE.PlaneGeometry(120, 120), toon(C.floor, { polygonOffset: true, polygonOffsetFactor: 2, polygonOffsetUnits: 2 }));
+      floor.rotation.x = -Math.PI / 2; floor.receiveShadow = true; scene.add(floor);
+
+      // ---------- textures (logos rasterised once; official files, 02_kit/brand/logos)
+      const img = (src) => new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = src; });
+      const canvasTex = (w, h, draw) => { const c = document.createElement("canvas"); c.width = w; c.height = h; const g = c.getContext("2d"); draw(g, w, h); const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t; };
+      const fit = (g, im, x, y, w, h) => { const s = Math.min(w / im.width, h / im.height); const dw = im.width * s, dh = im.height * s; g.drawImage(im, x + (w - dw) / 2, y + (h - dh) / 2, dw, dh); };
+      try { for (const [wt, n] of [[500, "Medium"], [700, "Bold"], [900, "Black"]]) document.fonts.add(await new FontFace("Inter Display", `url(assets/fonts/InterDisplay-${n}.ttf)`, { weight: String(wt) }).load()); } catch (e) { console.error("[ex33] font", e); }
+      const L = {};
+      for (const n of ["rayban.svg", "oakley.svg", "essilorluxottica.svg", "prada.svg", "chanel.svg", "armani.svg", "alook.png", "sunglasshut.jpg"]) L[n.split(".")[0]] = await img(`assets/logos/${n}`);
+      // the Ray-Ban script alone (the white letters of its own badge), as printed on a Wayfarer's lens
+      const rbScript = canvasTex(1024, 552, (g, w, h) => {
+        g.drawImage(L.rayban, 0, 0, w, h); const d = g.getImageData(0, 0, w, h), p = d.data;
+        for (let i = 0; i < p.length; i += 4) { const m = Math.min(p[i], p[i + 1], p[i + 2]); p[i + 3] = m > 200 ? 255 : m > 150 ? (m - 150) * 5 : 0; p[i] = p[i + 1] = p[i + 2] = 246; }
+        g.putImageData(d, 0, 0);
+      });
+      const rbBadge = canvasTex(1024, 552, (g, w, h) => g.drawImage(L.rayban, 0, 0, w, h));
+      // Oakley's ellipse icon (the top of its own lockup), white, for the temple
+      const oakIcon = canvasTex(1024, 512, (g, w, h) => {
+        const sh = L.oakley.height * (1024 / L.oakley.width); g.drawImage(L.oakley, 0, 0, 1024, sh);
+        const d = g.getImageData(0, 0, w, h), p = d.data;
+        for (let i = 0; i < p.length; i += 4) { const a = p[i + 3] * (1 - Math.min(p[i], p[i + 1], p[i + 2]) / 255); p[i] = p[i + 1] = p[i + 2] = 30; p[i + 3] = a; }
+        g.putImageData(d, 0, 0);
+      });
+      const oakLockup = canvasTex(640, 900, (g, w, h) => { g.fillStyle = C.card; g.fillRect(0, 0, w, h); g.fillStyle = "rgba(0,0,0,0.12)"; g.beginPath(); g.arc(w / 2, 90, 34, 0, P2); g.fill(); fit(g, L.oakley, 70, 250, w - 140, 300); });
+      const card = (logo, sub, tone = C.card, ink = "#1C1C21") => canvasTex(640, 900, (g, w, h) => {
+        g.fillStyle = tone; g.fillRect(0, 0, w, h);
+        g.fillStyle = "rgba(0,0,0,0.12)"; g.beginPath(); g.arc(w / 2, 90, 34, 0, P2); g.fill();     // the tag's hole
+        fit(g, logo, 70, 230, w - 140, 300);
+        if (sub) { g.fillStyle = ink; g.font = '700 54px "Inter Display"'; g.textAlign = "center"; g.fillText(sub, w / 2, 700); }
+      });
+      const elPlate = canvasTex(2048, 300, (g, w, h) => { g.fillStyle = C.card; g.fillRect(0, 0, w, h); fit(g, L.essilorluxottica, 110, 70, w - 220, h - 140); });
+      const shSign = canvasTex(1375, 343, (g, w, h) => g.drawImage(L.sunglasshut, 0, 0, w, h));
+      const revenue = canvasTex(900, 1200, (g, w, h) => {
+        g.fillStyle = C.card; g.fillRect(0, 0, w, h);
+        g.fillStyle = "rgba(0,0,0,0.12)"; g.beginPath(); g.arc(w / 2, 110, 44, 0, P2); g.fill();
+        g.fillStyle = "#1C1C21"; g.textAlign = "center";
+        g.font = '900 236px "Inter Display"'; g.fillText("€28.5", w / 2, 560);
+        g.font = '900 150px "Inter Display"'; g.fillText("billion", w / 2, 730);
+        g.fillStyle = C.string; g.fillRect(140, 820, w - 280, 10);
+        g.fillStyle = "#1C1C21"; g.font = '700 70px "Inter Display"'; g.fillText("revenue · 2025", w / 2, 950);
+      });
+      const tagBack = canvasTex(900, 1200, (g, w, h) => {
+        g.fillStyle = C.card; g.fillRect(0, 0, w, h);
+        g.fillStyle = "rgba(0,0,0,0.12)"; g.beginPath(); g.arc(w / 2, 110, 44, 0, P2); g.fill();
+        fit(g, L.essilorluxottica, 90, 480, w - 180, 220);
+      });
+      const essilorTag = canvasTex(1024, 300, (g, w, h) => { g.fillStyle = C.card; g.fillRect(0, 0, w, h); g.fillStyle = "#16365E"; g.font = '900 170px "Inter Display"'; g.textAlign = "center"; g.fillText("ESSILOR", w / 2, 212); });
+      const signTex = (txt) => canvasTex(800, 240, (g, w, h) => { g.fillStyle = "#1C1C21"; g.fillRect(0, 0, w, h); g.fillStyle = C.white; g.font = '900 150px "Inter Display"'; g.textAlign = "center"; g.fillText(txt, w / 2, 172); });
+      const aLookSign = canvasTex(1000, 240, (g, w, h) => { g.fillStyle = C.white; g.fillRect(0, 0, w, h); fit(g, L.alook, 60, 30, w - 120, h - 60); });
+      // the kiosk's window: shelves of frames, drawn flat
+      const shelves = canvasTex(1024, 768, (g, w, h) => {
+        g.fillStyle = "#2E3A44"; g.fillRect(0, 0, w, h);
+        for (let r = 0; r < 3; r++) {
+          const y = 150 + r * 230; g.fillStyle = "#C9B79C"; g.fillRect(40, y + 60, w - 80, 16);
+          for (let c = 0; c < 5; c++) {
+            const x = 110 + c * 190; g.fillStyle = ["#1C1C21", C.lensOak, "#6B4128", "#1C1C21", "#8A8C93"][(c + r) % 5];
+            g.beginPath(); g.ellipse(x - 34, y + 22, 34, 24, 0, 0, P2); g.ellipse(x + 34, y + 22, 34, 24, 0, 0, P2); g.fill(); g.fillRect(x - 10, y + 10, 20, 7);
+          }
+        }
+        g.fillStyle = "rgba(255,255,255,0.10)"; g.beginPath(); g.moveTo(w * 0.55, 0); g.lineTo(w * 0.75, 0); g.lineTo(w * 0.35, h); g.lineTo(w * 0.15, h); g.fill();
+      });
+
+      // ---------- geometry helpers
+      const chaikin = (pts, n = 3) => { let p = pts; for (let i = 0; i < n; i++) { const q = []; for (let j = 0; j < p.length; j++) { const a = p[j], b = p[(j + 1) % p.length]; q.push([0.75 * a[0] + 0.25 * b[0], 0.75 * a[1] + 0.25 * b[1]], [0.25 * a[0] + 0.75 * b[0], 0.25 * a[1] + 0.75 * b[1]]); } p = q; } return p; };
+      const mirror = (half) => [...half, ...half.slice().reverse().map(([x, y]) => [-x, y])];
+      const shapeOf = (pts) => new THREE.Shape(pts.map(([x, y]) => new THREE.Vector2(x, y)));
+      const pathOf = (pts) => new THREE.Path(pts.map(([x, y]) => new THREE.Vector2(x, y)));
+      const flipX = (pts) => pts.map(([x, y]) => [-x, y]).reverse();
+      const shadowy = (o) => { o.traverse((m) => { if (m.isMesh) { m.castShadow = true; m.receiveShadow = true; } }); return o; };
+      const plane = (w, h, map, two = false) => new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ map, transparent: true, side: two ? THREE.DoubleSide : THREE.FrontSide, toneMapped: false }));
+      // wrap round a vertical cylinder whose axis is R behind the front: the ends sweep back
+      const bend = (geo, R) => { const p = geo.attributes.position; for (let i = 0; i < p.count; i++) { const x = p.getX(i), z = p.getZ(i), a = x / R; p.setX(i, (R + z) * Math.sin(a)); p.setZ(i, (R + z) * Math.cos(a) - R); } p.needsUpdate = true; geo.computeVertexNormals(); return geo; };
+      // a decal on a temple's outer face (R: the +x temple, whose outer face is its local -z)
+      const templeDecal = (tm, tex, w, h, isR, at = -0.3) => { const d = plane(w, h, tex); d.position.set(at, 0, isR ? -0.002 : 0.037); if (isR) d.rotation.y = Math.PI; tm.add(d); return d; };
+
+      // a pair of glasses: front (with lens holes) + lenses + temples; facing +z, bridge top at the origin's +y
+      function glasses({ outer, hole, frame, lens, depth = 0.07, wrap = 0, templeLen = 1.05, hingeX, hingeY = 0.12 }) {
+        const g = new THREE.Group();
+        const holeR = chaikin(hole), holeL = flipX(holeR);
+        const s = shapeOf(chaikin(mirror(outer)));
+        s.holes.push(pathOf(holeR), pathOf(holeL));
+        let fg = new THREE.ExtrudeGeometry(s, { depth, bevelEnabled: true, bevelSize: 0.012, bevelThickness: 0.012, bevelSegments: 2, curveSegments: 6 });
+        fg.translate(0, 0, -depth / 2);
+        if (wrap) fg = bend(fg, wrap);
+        const front = new THREE.Mesh(fg, toon(frame)); g.add(front);
+        for (const hp of [holeR, holeL]) {
+          let lg = new THREE.ShapeGeometry(shapeOf(hp)); if (wrap) lg = bend(lg, wrap);
+          const m = new THREE.Mesh(lg, toon(lens, { side: THREE.DoubleSide })); g.add(m);
+        }
+        for (const sx of [1, -1]) {   // temples: a bar running back with the earpiece bend
+          const tp = new THREE.Shape(chaikin([[0.02, 0.05], [-templeLen * 0.82, 0.03], [-templeLen, -0.16], [-templeLen - 0.03, -0.12], [-templeLen * 0.84, -0.02], [0.02, -0.05]], 2).map(([x, y]) => new THREE.Vector2(x, y)));
+          const tg = new THREE.ExtrudeGeometry(tp, { depth: 0.035, bevelEnabled: false });
+          const tm = new THREE.Mesh(tg, toon(frame));
+          const hx = wrap ? wrap * Math.sin(hingeX / wrap) : hingeX, hz = wrap ? wrap - wrap * Math.cos(hingeX / wrap) : 0;
+          tm.rotation.y = -Math.PI / 2 - sx * 0.05;            // local +x runs back (-z); splayed out a touch
+          tm.position.set(sx > 0 ? hx : -hx + 0.035, hingeY, -hz);
+          g.add(tm); if (sx > 0) g.userData.templeR = tm; else g.userData.templeL = tm;
+        }
+        return shadowy(g);
+      }
+      // Ray-Ban Wayfarer: trapezoid lenses, a heavy brow, the two rivets at the hinge wings
+      const WAYF = { outer: [[0, 0.245], [0.74, 0.255], [0.79, 0.2], [0.75, 0.1], [0.67, -0.2], [0.56, -0.255], [0.21, -0.255], [0.13, -0.18], [0.1, 0.03], [0, 0.07]],
+                     hole: [[0.155, 0.165], [0.665, 0.17], [0.6, -0.165], [0.53, -0.2], [0.23, -0.2], [0.17, -0.13]] };
+      function wayfarer() {
+        const g = glasses({ ...WAYF, frame: C.black, lens: C.lensRB, hingeX: 0.765, hingeY: 0.16 });
+        for (const sx of [1, -1]) {   // rivets
+          for (const dx of [0, 0.07]) { const r = new THREE.Mesh(new THREE.CylinderGeometry(0.016, 0.016, 0.01, 16), toon("#D8D8D8")); r.rotation.x = Math.PI / 2; r.position.set(sx * (0.62 + dx), 0.2, 0.05); g.add(r); }
+        }
+        const logo = plane(0.2, 0.108, rbScript); logo.position.set(-0.47, 0.11, 0.006); g.add(logo);   // the wearer's right lens, top corner
+        templeDecal(g.userData.templeL, rbBadge, 0.17, 0.092, false); templeDecal(g.userData.templeR, rbBadge, 0.17, 0.092, true);
+        return g;
+      }
+      // Oakley wrap: one shield lens across, a half rim on top, the ellipse on the temples
+      const SHIELD = [[0, 0.17], [0.3, 0.205], [0.6, 0.17], [0.72, 0.08], [0.7, -0.07], [0.6, -0.2], [0.4, -0.25], [0.21, -0.215], [0.11, -0.1], [0.06, -0.02], [0, -0.005]];
+      function oakley() {
+        const g = new THREE.Group();
+        let lg = new THREE.ExtrudeGeometry(shapeOf(chaikin(mirror(SHIELD))), { depth: 0.012, bevelEnabled: false, curveSegments: 6 });
+        lg = bend(lg, 0.95); g.add(new THREE.Mesh(lg, toon(C.lensOak)));
+        const rim = [[0, 0.215], [0.3, 0.255], [0.62, 0.22], [0.76, 0.12], [0.73, 0.07], [0.6, 0.15], [0.3, 0.18], [0, 0.15]];
+        let rg = new THREE.ExtrudeGeometry(shapeOf(chaikin(mirror(rim))), { depth: 0.06, bevelEnabled: true, bevelSize: 0.01, bevelThickness: 0.01, bevelSegments: 2 });
+        rg.translate(0, 0, -0.04); rg = bend(rg, 0.95); g.add(new THREE.Mesh(rg, toon(C.white)));
+        const tmp = glasses({ outer: [[0, 0.01], [0.01, 0.01], [0.01, 0], [0, 0]], hole: [[0.002, 0.004], [0.004, 0.004], [0.004, 0.002], [0.002, 0.002]], frame: C.white, lens: C.white, hingeX: 0.74, hingeY: 0.12, wrap: 0.95, templeLen: 1.0 });
+        for (const tm of [tmp.userData.templeR, tmp.userData.templeL]) { g.add(tm); templeDecal(tm, oakIcon, 0.2, 0.1, tm === tmp.userData.templeR, -0.25); }
+        return shadowy(g);
+      }
+
+      // ---------- the owner: a marionette control bar (wood), EssilorLuxottica's plate on its face
+      const bar = new THREE.Group(); scene.add(bar);
+      const woodM = toon(C.wood);
+      const mainBar = new THREE.Mesh(new THREE.BoxGeometry(3.9, 0.16, 0.16), woodM); bar.add(mainBar);
+      const crossBar = new THREE.Mesh(new THREE.BoxGeometry(0.16, 0.16, 1.9), woodM); crossBar.position.y = 0.16; bar.add(crossBar);
+      for (const sx of [-1, 1]) { const cap = new THREE.Mesh(new THREE.CylinderGeometry(0.1, 0.1, 0.2, 20), toon(C.woodDark)); cap.rotation.z = Math.PI / 2; cap.position.x = sx * 2.0; bar.add(cap); }
+      const hook = new THREE.Mesh(new THREE.TorusGeometry(0.16, 0.035, 10, 32), toon(C.woodDark)); hook.position.y = 0.42; bar.add(hook);
+      const plate = plane(2.6, 0.38, elPlate); plate.position.set(0, -0.02, 0.083); bar.add(plate);
+      const plateBack = plane(2.6, 0.38, elPlate); plateBack.position.set(0, -0.02, -0.083); plateBack.rotation.y = Math.PI; bar.add(plateBack);
+      shadowy(bar);
+      const BAR_Y = 6.4;
+
+      // ---------- the hanging things
+      const rb = wayfarer(); scene.add(rb);
+      const oak = oakley(); scene.add(oak);
+      const rivalTag = (g, tex, x) => { const tg = new THREE.Group(); const m = new THREE.Mesh(new THREE.PlaneGeometry(0.46, 0.64), new THREE.MeshToonMaterial({ map: tex, gradientMap: ramp, side: THREE.DoubleSide })); m.position.y = -0.4; m.castShadow = true; tg.add(m); tg.position.set(x, 0.12, 0.06); g.add(tg); return tg; };
+      const rbTag = rivalTag(rb, card(L.rayban, ""), -0.78), oakTag = rivalTag(oak, oakLockup, 0.74);
+      const kiosk = new THREE.Group(); scene.add(kiosk);
+      {
+        const body = new THREE.Mesh(new THREE.BoxGeometry(1.25, 0.95, 0.75), toon(C.kiosk)); body.position.y = -0.95; kiosk.add(body);
+        const win = plane(1.05, 0.62, shelves); win.position.set(0, -0.98, 0.378); kiosk.add(win);
+        const band = new THREE.Mesh(new THREE.BoxGeometry(1.31, 0.1, 0.81), toon(C.kioskBand)); band.position.y = -0.44; kiosk.add(band);
+        const sign = new THREE.Mesh(new THREE.BoxGeometry(1.31, 0.33, 0.81), toon(C.white)); sign.position.y = -0.22; kiosk.add(sign);
+        const sp = plane(1.24, 0.31, shSign); sp.position.set(0, -0.22, 0.408); kiosk.add(sp);
+        const base = new THREE.Mesh(new THREE.BoxGeometry(1.31, 0.08, 0.81), toon(C.kioskBand)); base.position.y = -1.46; kiosk.add(base);
+        shadowy(kiosk);
+      }
+      const lens = new THREE.Group(); scene.add(lens);
+      {
+        const prof = []; for (let i = 0; i <= 24; i++) { const r = (i / 24) * 0.62; prof.push(new THREE.Vector2(r, 0.07 - 0.11 * (r / 0.62) ** 2)); }
+        for (let i = 24; i >= 0; i--) { const r = (i / 24) * 0.62; prof.push(new THREE.Vector2(r, -0.02 - 0.07 * (r / 0.62) ** 2)); }
+        const disc = new THREE.Mesh(new THREE.LatheGeometry(prof, 64), toon(C.essilor)); disc.rotation.x = Math.PI / 2; disc.position.y = -0.64; lens.add(disc);
+        const st = plane(0.72, 0.21, essilorTag); st.position.set(0, -0.64, 0.075); lens.add(st);
+        shadowy(lens);
+      }
+      // licensed frames, each with its brand's swing tag on a short thread
+      const OUT_CAT = [[0, 0.2], [0.42, 0.25], [0.8, 0.33], [0.79, 0.17], [0.66, -0.16], [0.5, -0.23], [0.22, -0.22], [0.12, -0.14], [0.09, 0.05], [0, 0.08]];
+      const HOLE_CAT = [[0.16, 0.13], [0.42, 0.17], [0.69, 0.21], [0.66, 0.1], [0.57, -0.13], [0.48, -0.17], [0.24, -0.16], [0.18, -0.1]];
+      const OUT_ROUND = [[0, 0.13], [0.2, 0.25], [0.45, 0.28], [0.66, 0.2], [0.72, 0.02], [0.64, -0.19], [0.45, -0.26], [0.23, -0.2], [0.13, -0.06], [0.08, 0.07], [0, 0.08]];
+      const HOLE_ROUND = [[0.17, 0.09], [0.26, 0.19], [0.45, 0.215], [0.6, 0.15], [0.65, 0.02], [0.58, -0.14], [0.45, -0.2], [0.28, -0.15], [0.2, -0.05]];
+      const OUT_RECT = [[0, 0.17], [0.76, 0.18], [0.78, 0.12], [0.74, -0.15], [0.68, -0.19], [0.18, -0.19], [0.12, -0.12], [0.09, 0.05], [0, 0.07]];
+      const HOLE_RECT = [[0.15, 0.115], [0.7, 0.12], [0.68, -0.12], [0.63, -0.14], [0.21, -0.14], [0.16, -0.09]];
+      const lic = [
+        { name: "prada", g: glasses({ outer: OUT_CAT, hole: HOLE_CAT, frame: C.black, lens: "#3A3436", hingeX: 0.78, hingeY: 0.2 }), tag: card(L.prada, "") },
+        { name: "chanel", g: glasses({ outer: OUT_ROUND, hole: HOLE_ROUND, frame: C.tort, lens: "#4A3A33", hingeX: 0.7, hingeY: 0.1 }), tag: card(L.chanel, "") },
+        { name: "armani", g: glasses({ outer: OUT_RECT, hole: HOLE_RECT, frame: C.grey, lens: "#2F3540", hingeX: 0.76, hingeY: 0.12 }), tag: card(L.armani, "") },
+      ];
+      for (const it of lic) {
+        scene.add(it.g);
+        const tg = new THREE.Group(); const tc = new THREE.Mesh(new THREE.PlaneGeometry(0.46, 0.64), new THREE.MeshToonMaterial({ map: it.tag, gradientMap: ramp, side: THREE.DoubleSide }));
+        tc.position.y = -0.4; tc.castShadow = true; tg.add(tc); tg.position.set(0.72, 0.0, 0.05); it.g.add(tg); it.tagG = tg;
+      }
+      // the bar's own tag: the owner's revenue (front: EssilorLuxottica, back: €28.5 billion)
+      const bigTag = new THREE.Group(); scene.add(bigTag);
+      {
+        const f = new THREE.Mesh(new THREE.PlaneGeometry(0.9, 1.2), new THREE.MeshToonMaterial({ map: tagBack, gradientMap: ramp })); f.position.y = -0.62; bigTag.add(f);
+        const b = new THREE.Mesh(new THREE.PlaneGeometry(0.9, 1.2), new THREE.MeshToonMaterial({ map: revenue, gradientMap: ramp })); b.position.y = -0.62; b.rotation.y = Math.PI; bigTag.add(b);
+        shadowy(bigTag);
+      }
+
+      // ---------- Malaysia: the map rises out of the floor; 90 shops; their strings rise to the bar
+      const MZ = 7.0;   // the map lies south of the hanging group (toward the camera)
+      const PX = (lon) => (lon - 109.4) * 0.36, PZ = (lat) => MZ - (lat - 4.0) * 0.36;
+      const mapG = new THREE.Group(); mapG.position.y = 0.002; scene.add(mapG);
+      for (const ring of MAP) {
+        const sh = shapeOf(ring.map(([lo, la]) => [PX(lo), -PZ(la)]));
+        const geo = new THREE.ExtrudeGeometry(sh, { depth: 0.07, bevelEnabled: false, curveSegments: 1 });
+        geo.rotateX(-Math.PI / 2);
+        const m = new THREE.Mesh(geo, toon(C.land)); m.receiveShadow = true; m.castShadow = true; mapG.add(m);
+      }
+      // shop sites: seeded, around the cities (illustrative positions; the 90+ is the press release's number)
+      let seed = 33; const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+      const inside = (x, z) => MAP.some((ring) => { let c = false; for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) { const xi = PX(ring[i][0]), zi = PZ(ring[i][1]), xj = PX(ring[j][0]), zj = PZ(ring[j][1]); if ((zi > z) !== (zj > z) && x < ((xj - xi) * (z - zi)) / (zj - zi) + xi) c = !c; } return c; });
+      const CITIES = [[101.69, 3.14, 30, 0.35], [100.33, 5.41, 9, 0.18], [103.76, 1.49, 10, 0.25], [101.08, 4.6, 6, 0.2], [102.25, 2.19, 5, 0.18], [101.94, 2.73, 4, 0.15], [103.33, 3.82, 4, 0.18], [100.37, 6.12, 3, 0.15], [102.24, 6.13, 3, 0.15], [103.14, 5.33, 2, 0.15], [116.07, 5.98, 5, 0.25], [110.36, 1.55, 5, 0.22], [113.99, 4.4, 2, 0.2], [118.07, 5.84, 1, 0.15], [111.82, 2.29, 1, 0.15]];
+      const SITES = [];
+      for (const [lo, la, n, sp] of CITIES) { let made = 0, tries = 0; while (made < n && tries < 500) { tries++; const u = rnd(), v = rnd(), r = sp * Math.sqrt(-2 * Math.log(u + 1e-9)), a = P2 * v; const x = PX(lo) + r * Math.cos(a) * 0.36, z = PZ(la) + r * Math.sin(a) * 0.36; if (!inside(x, z)) continue; if (SITES.some((s) => Math.hypot(s[0] - x, s[1] - z) < 0.105)) continue; SITES.push([x, z, rnd()]); made++; } }
+      const NS = SITES.length;
+      const shopBody = new THREE.InstancedMesh(new THREE.BoxGeometry(0.1, 0.085, 0.085), toon(C.shop), NS);
+      const shopRoof = new THREE.InstancedMesh(new THREE.BoxGeometry(0.108, 0.024, 0.094), toon(C.awning), NS);
+      const shopStr = new THREE.InstancedMesh(new THREE.CylinderGeometry(0.008, 0.008, 1, 5).translate(0, 0.5, 0), new THREE.MeshBasicMaterial({ color: C.string }), NS);
+      for (const m of [shopBody, shopRoof]) { m.castShadow = true; m.receiveShadow = true; scene.add(m); }
+      shopStr.castShadow = true; scene.add(shopStr);
+      // the KL flagship signs: A-Look (its logo), Seen, OWL
+      const signs = new THREE.Group(); scene.add(signs);
+      const sA = plane(0.6, 0.144, aLookSign, true), sS = plane(0.36, 0.108, signTex("SEEN"), true), sO = plane(0.3, 0.09, signTex("OWL"), true);
+      sA.position.set(0, 0.42, 0); sS.position.set(-0.5, 0.3, 0.12); sO.position.set(0.46, 0.27, 0.1); signs.add(sA, sS, sO);
+      const signPosts = []; for (const s of [sA, sS, sO]) { const p = new THREE.Mesh(new THREE.CylinderGeometry(0.008, 0.008, 1, 6).translate(0, 0.5, 0), toon(C.kioskBand)); p.scale.y = s.position.y - 0.05; p.position.set(s.position.x, 0, s.position.z); signs.add(p); }
+      shadowy(signs);
+      signs.position.set(PX(101.69), 0.07, PZ(3.14) + 0.02);
+
+      // ---------- strings (cylinders re-aimed every frame)
+      const strM = new THREE.MeshBasicMaterial({ color: C.string });
+      const strGeo = new THREE.CylinderGeometry(0.009, 0.009, 1, 6).translate(0, 0.5, 0);
+      const strings = [];
+      const mkString = () => { const m = new THREE.Mesh(strGeo, strM); m.castShadow = true; scene.add(m); strings.push(m); return m; };
+      const UP = new THREE.Vector3(0, 1, 0), tmpV = new THREE.Vector3(), tmpQ = new THREE.Quaternion();
+      const aim = (m, a, b) => { tmpV.subVectors(b, a); const len = tmpV.length(); m.position.copy(a); m.quaternion.setFromUnitVectors(UP, tmpV.normalize()); m.scale.set(1, Math.max(1e-4, len), 1); m.visible = len > 1e-3; };
+      const sRb = mkString(), sOak = mkString(), sK1 = mkString(), sK2 = mkString(), sLens = mkString(), sLic = lic.map(() => mkString()), sTag = mkString();
+      const tagThreads = lic.map(() => { const m = new THREE.Mesh(new THREE.CylinderGeometry(0.004, 0.004, 1, 5).translate(0, 0.5, 0), toon(C.kioskBand)); scene.add(m); return m; });
+
+      // ---------- the timeline (word times from the voice)
+      const T = {
+        rivals: at("L01", "rivals"), theyre: at("L01", "They're"), same: at("L01", "same"), company: at("L01", "company"),
+        sh: at("L02", "Sunglass"), shop: at("L02", "shop"), ess: at("L02", "Essilor"), lenses: at("L02", "lenses"),
+        prada: at("L03", "Prada"), chanel: at("L03", "Chanel"), armani: at("L03", "Armani"), last: at("L03", "Last"), bn: at("L03", "€28.5"),
+        y2025: at("L04", "2025"), alook: at("L04", "A-Look"), over: at("L04", "Over"), ninety: at("L04", "90"), malaysia: at("L04", "Malaysia"),
+        diff: at("L05", "Different"), one: at("L05", "One"), follow: at("L05", "Follow"),
+      };
+      window.__ex33T = T;
+
+      // where each hanging thing rests, and how it arrives (drops in on its word, settles with a sway)
+      const REST = {
+        rb: new THREE.Vector3(-0.74, 1.2, 0.15), oak: new THREE.Vector3(0.76, 0.56, -0.1),
+        kiosk: new THREE.Vector3(1.55, 3.55, 0.25), lens: new THREE.Vector3(-1.55, 4.05, 0.3),
+        lic: [new THREE.Vector3(-1.3, 4.75, -1.0), new THREE.Vector3(0.0, 3.95, -1.15), new THREE.Vector3(1.3, 4.75, -1.0)],
+        tag: new THREE.Vector3(0, 5.7, 0.45),
+      };
+      const BAR_X = { rb: -0.74, oak: 0.76, k1: 1.05, k2: 1.95, lens: -1.55, lic: [-1.3, 0.0, 1.3], tag: 0 };
+      // lowered from the bar: grows out of its anchor (scale 0.04 → 1) while it descends to rest, then settles
+      const drop = (t, t0, rest, d = 0.8) => { const u = spring(k(t, t0, t0 + d), 7), top = BAR_Y - 0.35; return [rest.x, lerp(top, rest.y, u), rest.z, t >= t0, Math.max(0.04, Math.min(1, 0.04 + 1.1 * u))]; };
+            const reel = () => 0;
+
+      // ---------- camera keys: [time, position, look-at, fov]
+      const V = (x, y, z) => new THREE.Vector3(x, y, z);
+      const CAM = [
+        [0.0, V(1.05, 2.4, 8.6), V(0.0, 0.95, 0), 40],
+        [T.theyre - 0.1, V(0.6, 2.1, 7.8), V(0.0, 1.0, 0), 40],
+        [T.company + 0.15, V(0.3, 1.25, 5.3), V(0.0, 6.0, 0), 50],
+        [T.sh + 0.6, V(0.4, 3.6, 10.8), V(0.0, 3.6, 0), 44],
+        [T.lenses + 0.2, V(-1.0, 3.8, 10.6), V(0.0, 3.8, 0), 44],
+        // L03: a lateral track along the licensed frames, high enough to look over the lens and the kiosk
+        [T.prada - 0.05, V(-1.3, 5.6, 2.3), V(-1.3, 4.55, -1.0), 44],
+        [T.chanel + 0.15, V(0.0, 3.2, 2.3), V(0.0, 3.95, -1.15), 44],   /* under the big tag, not through it */
+        [T.armani + 0.45, V(1.3, 5.6, 2.3), V(1.3, 4.55, -1.0), 44],
+        [T.bn + 0.1, V(-0.9, 5.3, 3.4), V(0.0, 4.75, 0.45), 44],
+        [T.alook + 0.1, V(-2.55, 3.1, PZ(3.14) + 2.7), V(PX(101.69), 0.15, PZ(3.14)), 44],
+        // L04: the whole country from above (north up), the strings rising out of frame toward the owner…
+        [T.over + 0.35, V(0.0, 13.6, PZ(4.1) + 1.3), V(0.0, 0.0, PZ(4.1)), 50],
+        [T.malaysia - 0.6, V(0.0, 13.4, PZ(4.1) + 1.4), V(0.0, 0.0, PZ(4.1) - 0.1), 50],
+        // …then up the fan of strings to the bar
+        [T.diff + 0.5, V(0.2, 5.2, 12.8), V(0.0, 5.4, 2.0), 54],   /* 2.1 s climb: no rushed move */
+        [T.one + 0.6, V(0.6, 3.5, 10.8), V(0.0, 3.4, 0), 44],
+        [END, V(0.3, 3.3, 10.4), V(0.1, 3.4, 0), 44],
+      ];
+      function cameraAt(t) {
+        let i = 0; while (i < CAM.length - 2 && t > CAM[i + 1][0]) i++;
+        const [ta, pa, la, fa] = CAM[i], [tb, pb, lb, fb] = CAM[i + 1];
+        const u = io(k(t, ta, tb));
+        camera.position.lerpVectors(pa, pb, u);
+        const look = new THREE.Vector3().lerpVectors(la, lb, u);
+        // a slow handheld drift (two offset sines), never still
+        camera.position.x += 0.05 * Math.sin((P2 * t) / 7.3) + 0.03 * Math.sin((P2 * t) / 11.9 + 1.3);
+        camera.position.y += 0.03 * Math.cos((P2 * t) / 7.3 + 0.7);
+        camera.fov = lerp(fa, fb, u); camera.updateProjectionMatrix();
+        camera.lookAt(look);
+      }
+
+      // ---------- one frame
+      const A = new THREE.Vector3(), B = new THREE.Vector3();
+      const anchor = (x, z = 0) => bar.localToWorld(B.set(x, -0.08, z));
+      host.render = (t) => {
+        // sun: low and hard from back-left; it sinks at the very end (the shadows stretch over everything)
+        const dusk = io(k(t, T.follow + 0.6, END));
+        const el = lerp(0.62, 0.12, dusk), az = 2.05 + 0.04 * Math.sin(t / 5);
+        sun.position.set(Math.cos(az) * 30 * Math.cos(el), 30 * Math.sin(el), Math.sin(az) * 30 * Math.cos(el));
+        sun.target.position.set(0, 0, 0);
+        const sc = sun.shadow.camera; sc.left = -9; sc.right = 9; sc.top = 9; sc.bottom = -9; sc.near = 1; sc.far = 80; sc.updateProjectionMatrix();
+        sun.intensity = lerp(1.54, 0.5, dusk);
+
+        // the bar: sways a little like a held control; dips on "same company"; lifts on "One owner"
+        const lift = io(k(t, T.one - 0.1, T.one + 0.9));
+        bar.position.set(0.04 * Math.sin((P2 * t) / 6.1), BAR_Y + 0.08 * Math.sin((P2 * t) / 4.3) + 0.55 * lift, 0);
+        bar.rotation.set(0.03 * Math.sin((P2 * t) / 5.3), 0.05 * Math.sin((P2 * t) / 9.7), 0.025 * Math.sin((P2 * t) / 4.9 + 0.5));
+        bar.updateMatrixWorld();
+        const rl = reel(t);
+
+        // the rivals: they size each other up (turn toward, away), bob on their strings; lifted together at the end
+        const face = 0.42 + 0.1 * Math.sin((P2 * t) / 3.1);
+        rb.position.set(REST.rb.x, REST.rb.y + 0.05 * Math.sin((P2 * t) / 2.3) + 0.55 * lift, REST.rb.z);
+        rb.rotation.set(0.05 * Math.sin((P2 * t) / 2.9), face, 0.04 * Math.sin((P2 * t) / 2.3));
+        oak.position.set(REST.oak.x, REST.oak.y + 0.05 * Math.sin((P2 * t) / 2.3 + 1.4) + 0.55 * lift, REST.oak.z);
+        oak.rotation.set(0.05 * Math.sin((P2 * t) / 3.3 + 1), -face - 0.08, -0.04 * Math.sin((P2 * t) / 2.3 + 1.4));
+        rbTag.rotation.set(0.12 * Math.sin((P2 * t) / 1.9), -0.5 + 0.2 * Math.sin((P2 * t) / 2.6), 0); oakTag.rotation.set(0.12 * Math.sin((P2 * t) / 2.1 + 1), 0.45 + 0.2 * Math.sin((P2 * t) / 2.8 + 1), 0);
+
+        // kiosk (on "Sunglass"), the lens (on "Essilor"): lowered in on their strings
+        const kd = drop(t, T.sh - 0.25, REST.kiosk);
+        kiosk.position.set(kd[0], kd[1] + 2.2 * rl, kd[2]); kiosk.scale.setScalar(kd[4]); kiosk.rotation.set(0, -0.35 + sway(t, T.sh + 0.4, 0.1), sway(t, T.sh + 0.4, 0.05, 2.1)); kiosk.visible = kd[3];
+        const ld = drop(t, T.ess - 0.25, REST.lens);
+        lens.position.set(ld[0], ld[1] + 1.7 * rl, ld[2]); lens.scale.setScalar(ld[4]); lens.rotation.set(0, 0.3 + sway(t, T.ess + 0.4, 0.25, 2.4), sway(t, T.ess + 0.4, 0.06)); lens.visible = ld[3];
+        // the licensed frames, one on each brand's word
+        lic.forEach((it, i) => {
+          const t0 = [T.prada, T.chanel, T.armani][i] - 0.2, d = drop(t, t0, REST.lic[i]);
+          it.g.position.set(d[0], d[1] + 1.05 * rl, d[2]); it.g.scale.setScalar(0.72 * d[4]);   /* smaller than the rivals: three must fit side by side */ it.g.rotation.set(0.04 * Math.sin(t * 1.7 + i), 0.15 * Math.sin((P2 * (t - t0)) / 4.1) + sway(t, t0 + 0.5, 0.3), sway(t, t0 + 0.5, 0.06)); it.g.visible = d[3];
+          it.tagG.rotation.set(sway(t, t0 + 0.6, 0.35, 1.3), 0.3 * Math.sin(t * 1.1 + i), 0);
+        });
+        // the bar's tag: hangs from frame 1 (EssilorLuxottica side); turns to €28.5 billion on the number
+        const flip = io(k(t, T.bn - 0.45, T.bn + 0.35));
+        bigTag.position.set(REST.tag.x, REST.tag.y + 0.55 * lift + 0.6 * rl, REST.tag.z);
+        bigTag.rotation.set(0, Math.PI * flip + 0.12 * Math.sin((P2 * t) / 5.7) + Math.PI * 0.0, sway(t, T.bn + 0.4, 0.05));
+        const tg0 = spring(k(t, T.company - 0.35, T.company + 0.45), 7); bigTag.visible = tg0 > 0; bigTag.scale.setScalar(Math.max(0.04, tg0));
+
+        // the map rises; shops grow on "A-Look" in a wave (KL first, outward); strings shoot up on "Over 90"
+        const mapU = io(k(t, T.y2025 - 0.3, T.y2025 + 0.7)) * (1 - io(k(t, T.one - 0.35, T.one + 0.45)));   /* stays while the camera climbs the strings */
+        mapG.visible = mapU > 0.002; mapG.scale.set(1, Math.max(0.001, mapU), 1);
+        const kl = [PX(101.69), PZ(3.14)], M4 = new THREE.Matrix4(), Q = new THREE.Quaternion(), S3 = new THREE.Vector3(), P3 = new THREE.Vector3();
+        for (let i = 0; i < NS; i++) {
+          const [x, z, r] = SITES[i], dist = Math.hypot(x - kl[0], z - kl[1]);
+          const g = out3(k(t, T.alook - 0.2 + dist * 0.16 + r * 0.25, T.alook + 0.25 + dist * 0.16 + r * 0.25)) * mapU;
+          const s = Math.max(1e-4, g);
+          M4.compose(P3.set(x, 0.07 + 0.0425 * s, z), Q.identity(), S3.set(s, s, s)); shopBody.setMatrixAt(i, M4);
+          M4.compose(P3.set(x, 0.07 + 0.097 * s, z), Q.identity(), S3.set(s, s, s)); shopRoof.setMatrixAt(i, M4);
+          // its string: from the shop's roof up to the bar's end on its side
+          const su = io(k(t, T.over - 0.1 + r * 0.5, T.over + 0.5 + r * 0.5)) * mapU;
+          A.set(x, 0.18, z); const top = anchor(clamp(x * 0.52, -1.85, 1.85), 0.06).clone(); /* spread along the bar: a fan */ const tip = new THREE.Vector3().lerpVectors(A, top, su);
+          tmpV.subVectors(tip, A); const len = tmpV.length();
+          Q.setFromUnitVectors(UP, len > 1e-5 ? tmpV.clone().normalize() : UP);
+          M4.compose(A, Q, S3.set(su > 0.001 ? 1 : 1e-4, Math.max(1e-4, len), su > 0.001 ? 1 : 1e-4)); shopStr.setMatrixAt(i, M4);
+        }
+        shopBody.instanceMatrix.needsUpdate = shopRoof.instanceMatrix.needsUpdate = shopStr.instanceMatrix.needsUpdate = true;
+        const sg = out3(k(t, T.alook - 0.3, T.alook + 0.3)) * mapU; signs.scale.setScalar(Math.max(1e-4, sg)); signs.visible = sg > 0.002;
+
+        // strings: item attach point → straight up to its anchor on the bar
+        scene.updateMatrixWorld();
+        aim(sRb, rb.localToWorld(A.set(0, 0.25, 0)).clone(), anchor(BAR_X.rb));
+        aim(sOak, oak.localToWorld(A.set(0, 0.25, 0)).clone(), anchor(BAR_X.oak));
+        aim(sK1, kiosk.localToWorld(A.set(-0.55, -0.05, 0)).clone(), anchor(BAR_X.k1, 0.3)); sK1.visible = kiosk.visible;
+        aim(sK2, kiosk.localToWorld(A.set(0.55, -0.05, 0)).clone(), anchor(BAR_X.k2, 0.1)); sK2.visible = kiosk.visible;
+        aim(sLens, lens.localToWorld(A.set(0, -0.02, 0)).clone(), anchor(BAR_X.lens, 0.3)); sLens.visible = lens.visible;
+        lic.forEach((it, i) => { aim(sLic[i], it.g.localToWorld(A.set(0, 0.2, 0)).clone(), anchor(BAR_X.lic[i], -0.9)); sLic[i].visible = it.g.visible; });
+        aim(sTag, bigTag.localToWorld(A.set(0, -0.08, 0)).clone(), anchor(0, 0.45)); sTag.visible = bigTag.visible;
+        lic.forEach((it, i) => { aim(tagThreads[i], it.tagG.localToWorld(A.set(0, -0.08, 0)).clone(), it.g.localToWorld(B.set(0.72, 0.02, 0.05)).clone()); tagThreads[i].visible = it.g.visible; });
+
+        cameraAt(t);
+        renderer.render(scene, camera);
+      };
+
+      // pass-through gate: sample the film; every string segment vs every other hanging thing's bounding box
+      window.__ex33check = (step = 1 / 30) => {
+        const bad = {}; const box = new THREE.Box3(), seg = new THREE.Line3(), p = new THREE.Vector3();
+        const things = [["Ray-Ban", rb], ["Oakley", oak], ["kiosk", kiosk], ["lens", lens], ...lic.map((x) => [x.name, x.g]), ["tag", bigTag]];
+        const own = new Map([[sRb, rb], [sOak, oak], [sK1, kiosk], [sK2, kiosk], [sLens, lens], [sTag, bigTag], ...sLic.map((s, i) => [s, lic[i].g])]);
+        for (let t = 0; t < END; t += step) {
+          host.render(t);
+          const boxes = things.filter(([, o]) => o.visible).map(([n, o]) => [n, o, new THREE.Box3().setFromObject(o).expandByScalar(-0.02)]);
+          for (const [s, owner] of own) {
+            if (!s.visible) continue;
+            const a = s.position.clone(), b = a.clone().add(new THREE.Vector3(0, 1, 0).applyQuaternion(s.quaternion).multiplyScalar(s.scale.y));
+            for (const [n, o, bx] of boxes) { if (o === owner) continue; seg.set(a, b); for (let q = 0.02; q < 0.98; q += 0.02) { seg.at(q, p); if (bx.containsPoint(p)) { (bad[n + " × string of " + things.find((x) => x[1] === owner)[0]] ||= []).push(+t.toFixed(2)); break; } } }
+          }
+          // thing vs thing: only when their overall boxes meet, then part by part (each mesh's own box)
+          const parts = (o) => { const r = []; o.traverse((m) => { if (m.isMesh && m.visible) r.push(new THREE.Box3().setFromObject(m).expandByScalar(-0.005)); }); return r; };
+          for (let i = 0; i < boxes.length; i++) for (let j = i + 1; j < boxes.length; j++) {
+            if (!boxes[i][2].intersectsBox(boxes[j][2])) continue;
+            const pa = parts(boxes[i][1]), pb = parts(boxes[j][1]);
+            if (pa.some((x) => pb.some((y) => x.intersectsBox(y)))) (bad[boxes[i][0] + " × " + boxes[j][0]] ||= []).push(+t.toFixed(2));
+          }
+          // shop strings vs the hanging things
+          const M = new THREE.Matrix4();
+          for (let i = 0; i < NS; i++) { shopStr.getMatrixAt(i, M); const a = new THREE.Vector3().setFromMatrixPosition(M); const b = new THREE.Vector3(0, 1, 0).applyMatrix4(M); if (a.distanceTo(b) < 0.05) continue; seg.set(a, b); for (const [n, , bx] of boxes) for (let q = 0.02; q < 0.98; q += 0.02) { seg.at(q, p); if (bx.containsPoint(p)) { (bad[n + " × shop string"] ||= []).push(+t.toFixed(2)); break; } } }
+        }
+        host.render(host.clock.t);
+        return Object.fromEntries(Object.entries(bad).map(([n, ts]) => [n, `${ts.length} frames, ${ts[0]}–${ts[ts.length - 1]} s`]));
+      };
+
+      host.render(host.clock.t);
+      host.ready();
+    </script>
+  </body>
+</html>
