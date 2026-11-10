@@ -42,6 +42,7 @@ Two posts a day, 12:30 and 21:00 MYT (memory `tiktok-goal-nov-2026`). Captions, 
 | Tue 10 Nov | 21:00 | EX29 Mr DIY Pt 2 (`EX29-Final.mp4`) · Style A baseline | ready (Telegram /ex29); schedule in TikTok Studio |
 | Wed 11 Nov | 12:30 | EX30 Mixue's real customer (`EX30-Final.mp4`) · Style C (raea painted) | ready (Telegram /ex30); schedule in TikTok Studio |
 | Wed 11 Nov | 21:00 | EX31 Grab's cut (`EX31-Final.mp4`) · Style A | ready (Telegram /ex31); schedule in TikTok Studio |
+| Thu 12 Nov | 12:30 | EX32 The ink is the business (`EX32-Final.mp4`) · Style B | ready (Telegram /ex32); check HP Store prices; schedule in TikTok Studio |
 
 **Views snapshot 2026-11-08 (TikTok Studio, views · likes · comments):** EX21 Kodak (6 Nov 12:30) 693 · 19 · 0 ·
 EX09 Other Line (6 Nov) 647 · 30 · 0 · EX10 Popcorn (7 Nov 21:00) 629 · 20 · 0 · EX24 McDonald's (8 Nov 12:30, hours old) 431 · 18 · 1.

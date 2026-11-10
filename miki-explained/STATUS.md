@@ -3,11 +3,11 @@
 Read this first in a new session — **after `00_bible/WORKING-RULES.md` and `00_bible/LESSONS.md`** (the contract: locked style traits, rejections, tools, gates). Then: `00_bible/flat-v3-playbook.md` (the new look), `05_calendar/calendar.md`
 (schedule + Style A/B/C test), and the episode's `RE## ▶ NEXT SESSION (2026-11-10)
 **Finished and on Telegram + dashboard:** EX28 Apple charger (Style B) · EX29 Mr DIY Pt 2 (Style A **baseline**) ·
-EX30 Mixue (Style C, built locally in raea's painted look) · EX31 Grab's cut (Style A). Planned: EX28 Tue 10 Nov 12:30,
-EX29 Tue 21:00, EX30 Wed 11 Nov 12:30, EX31 Wed 21:00 — the user schedules in TikTok Studio, then `/scheduled exNN`.
+EX30 Mixue (Style C, built locally in raea's painted look) · EX31 Grab's cut (Style A) · EX32 printer ink (Style B,
+print-head hand-offs). Planned: EX28 Tue 10 Nov 12:30, EX29 Tue 21:00, EX30 Wed 11 Nov 12:30, EX31 Wed 21:00, EX32 Thu 12 Nov 12:30 — the user schedules in TikTok Studio, then `/scheduled exNN`.
 **Before posting (⚠ in each episode.md):** EX29 numbers vs Mr DIY 3Q results (10 Nov); EX30 "almost 60,000 shops" and
-the RM2 cone; EX31 "by law".
-**Next:** a new episode — rotation says Style B next. EX29's comments pick Part 3 (Daiso / ZUS / KK Mart).
+the RM2 cone; EX31 "by law"; EX32 HP Store prices (RM268, RM51) on the day.
+**Next:** a new episode — rotation says Style C next. Light ideas used lately: EX28 window patch, EX31 street lamps, EX32 print head — don't repeat. EX29's comments pick Part 3 (Daiso / ZUS / KK Mart).
 **Pipelines:** Style A/C in raea (`tools/raea/preview.sh`, `render_ep.sh`, collision check `paths.py`, physics bake),
 Style B in HyperFrames (`EX28_apple-charger/build/`). No Seedream/Dreamina subscription.
 **Repo cleaned 2026-11-10:** 21 GB → 6.6 GB (older episodes keep text + code; finals on Telegram). Git history kept.

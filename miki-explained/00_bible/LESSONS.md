@@ -76,6 +76,7 @@ the wide ones.
 | per-shot first/last keyframes in Seedance proposed again | ignored a recorded result (they were poor) | read the tool notes before proposing a method |
 | Style A rebuilt at eye level after a note about detail (v2) | answered a quality note by changing the style | fix only what the note names; locked traits stay |
 | using an old pipeline (EX26 plate pushes) for a new style | habit | design from the bible, not the last episode |
+| the window-light patch proposed again for EX32 after EX28 ("don't use windows light on every episode. chase new idea") | reusing my last good idea | each episode's light comes from its own story (EX32: the printer's scan bar and print head); list the last 3 episodes' light ideas and don't repeat one |
 
 ## 7. Time and process
 
