@@ -124,6 +124,7 @@ Change a locked trait only when the user says so by name. "Make it better" never
 | Materials and textures | **MaterialCraft** (`materialcraft-cli new pbr / export / render`), **TextureCraft** (`texturecraft-cli`), Poly Haven textures | Installed 2026-11-09 (apps in /Applications, CLIs in ~/.local/bin). Export PBR maps (basecolor, normal, roughness, AO, height) for raea. |
 | Flat motion (Style B) | HyperFrames | `flat-v3-playbook.md`. |
 | Plates and video (Style C) | Seedream / Seedance (the user generates from my prompts) | Prompts short (memory `short-generation-prompts`). |
+| Voice | **Kokoro-82M local, `am_michael`** (`npx hyperframes tts … -v am_michael`, needs `HYPERFRAMES_PYTHON` → a venv with `kokoro-onnx soundfile`) | User 2026-11-10 on EX33: "it has so much character" — preferred over the Eleven voice. Free, offline, seconds per line; no v4 tags (plain text, numbers as words); check brand names by ear. |
 | Captions | raea `tools/raea/kit/Captions.tsx` (EX15) | Built from `audio/vo_timeline.json` (`EX29_mrdiy-margin/build_vo.py`, `fix_caps.py`). |
 | Loudness | **−14 LUFS integrated**, measured and corrected (`EX28_apple-charger/build/sfx.py`: loudnorm's single pass lands 1–2 LU off) | Set 2026-11-09 for EX28/EX29 (the B playbook's old −18.5 is superseded). |
 | SFX | `EX29_mrdiy-margin/sfx_ex29.py` pattern: library samples + synthesised shutter / coin clinks timed from the physics bake, drone bed, loudnorm −14 | Part of every render. Sparse; silent ending. |
