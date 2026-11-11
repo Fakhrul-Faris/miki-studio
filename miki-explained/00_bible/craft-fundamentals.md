@@ -144,6 +144,9 @@ justified (an impact), drive it with decaying trauma² × smooth noise, never ra
 - Lead room toward where the token or eye is going; avoid tangents (edges that just touch the frame or each other).
 - Lens with intent: 18–28 mm establish, 35–50 mm story/product, 85 mm+ compression. Don't default one lens.
 - Move camera + target together, slow ease in/out.
+- **Measure the move, don't eyeball it** (EX31): compute the camera as data and check per half second: camera speed
+  (≲ 40 m/s), turn rate (≲ 130°/s for a deliberate tilt, ≲ 70°/s for a follow); a long tilt blends the view direction
+  (slerp), not the aim point, or the turn bunches up near the target. Smooth each stretch between intended cuts.
 
 ## 13. Light and lookdev
 

@@ -41,7 +41,7 @@ Two posts a day, 12:30 and 21:00 MYT (memory `tiktok-goal-nov-2026`). Captions, 
 | Tue 10 Nov | 12:30 | EX28 Apple charger (`EX28-Final.mp4`) · Style B | ready (Telegram /ex28); schedule in TikTok Studio |
 | Tue 10 Nov | 21:00 | EX29 Mr DIY Pt 2 (`EX29-Final.mp4`) · Style A baseline | ready (Telegram /ex29); schedule in TikTok Studio |
 | Wed 11 Nov | 12:30 | EX30 Mixue's real customer (`EX30-Final.mp4`) · Style C (raea painted) | ready (Telegram /ex30); schedule in TikTok Studio |
-| Wed 11 Nov | 21:00 | EX31 Grab's cut (`EX31-Final.mp4`) · Style A | ready (Telegram /ex31); schedule in TikTok Studio |
+| Wed 11 Nov | 20:00 | EX31 Grab's cut (`EX31-Final.mp4`, v2 60 fps 34.2 s) · Style A | v2 ready 18:41 (user notes fixed); Telegram /ex31 holds v1 until re-pushed |
 | Thu 12 Nov | 12:30 | EX32 The ink is the business (`EX32-Final.mp4`) · Style B | ready (Telegram /ex32); check HP Store prices; schedule in TikTok Studio |
 | Thu 12 Nov | 21:00 | EX33 One owner (`EX33-Final.mp4`) · Style B upgraded (3D) | ready (Telegram /ex33); check licences + A-Look; schedule in TikTok Studio |
 | Fri 13 Nov | 12:30 | EX34 One ringgit, one airline (`EX34-Final.mp4`) · Style B (EX33 baseline+) | ready (Telegram /ex34); check the 25-min turnaround; schedule in TikTok Studio |

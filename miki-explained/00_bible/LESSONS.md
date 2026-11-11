@@ -135,3 +135,13 @@ is not on point … i like the ex33 better."
 - One source of truth for timing (`audio/vo_timeline.json`), motion (`paths.json`, `phys_s3.json`) and captions.
 - Reading the user's feedback literally and fixing exactly that, then saying what still fails.
 - Telegram + dashboard updated at the end of every episode; `/scheduled exNN` after the user schedules in TikTok Studio.
+
+## 7. Motion that isn't smooth (EX31, 2026-11-11)
+
+| What the user saw | Why | Check now |
+|---|---|---|
+| camera whips (a 77 m flight in 0.85 s; tilts at 225°/s) | each move eased on its own, judged on stills; nobody measured speed | the camera is data in `paths.py`; it prints peak acceleration and I check speed and turn rate per half second before any render |
+| the car stops, then restarts at full speed (0:12.7) | two easings joined: in-out to a stop, then ease-out (full speed at its start) | one eased move per action; an ease-out never starts from a standstill |
+| the jam cars stop dead at 15.6 s | ease-in with nothing after it | moving traffic keeps going out of frame |
+| the car turns 180° while parked (0:27–0:28) | heading taken from frame-to-frame motion, so a cut's teleport turned it backwards | ignore any step over 1 m when computing heading |
+| the road flickers under the tracking camera (0:14) | big soft sun (`soft_shadow_size` 1.2): Bevy's dithered penumbra crawls as the camera moves | sun 0.5, `mapSize` 8192, `firstCascade` at the tracking distance |

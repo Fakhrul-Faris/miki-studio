@@ -1,7 +1,7 @@
 // EX31 Grab's cut — Style A (WORKING-RULES §1; from the EX29 baseline, _tests/style-test-mrdiy/A2/video_a.tsx).
 // The dark model world; the one real-coloured subject is the Grab car; the token is the fare (a drawn RM20 note) that
 // gets cut. Timed to audio/vo_timeline.json. Street world, materials and props: EX29 (Poly Haven CC0, kit models).
-import { AbsoluteFill, Composition, Easing, interpolate, registerRoot, staticFile, useCurrentFrame } from "raea";
+import { AbsoluteFill, Composition, Easing, Img, interpolate, registerRoot, staticFile, useCurrentFrame } from "raea";
 import { AmbientOcclusion, Bloom, DepthOfField, Environment, Fog, FogVolume, Grade, ImagePlane, Model, Text3D, ToneMapping, VolumetricFog, manifold, type Solid } from "raea/3d";
 import { Cuboid, Cylinder, Mesh3d } from "raea/mesh";
 import { StandardMaterial } from "raea/pbr";
@@ -15,7 +15,7 @@ import PATHS from "./paths.json";   // vehicle paths, written and collision-chec
 import { Captions, type CapBlock } from "../../../tools/raea/kit/Captions";
 
 const S = (p: string) => staticFile(p);
-const FPS = 30;
+const FPS = 60;                                 // 60 fps from 2026-11-11 (EX35 rule)
 const k = (t: number, a: number, b: number, e = Easing.inOut(Easing.cubic)) => interpolate(t, [a, b], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: e });
 const lerp = (a: number, b: number, u: number) => a + (b - a) * u;
 const L3 = (a: number[], b: number[], u: number): [number, number, number] => [lerp(a[0], b[0], u), lerp(a[1], b[1], u), lerp(a[2], b[2], u)];
@@ -82,15 +82,16 @@ function Unit({ i, t: TNOW }: { i: number; t: number }) {
   const src = diy ? "parts/shophouse_A_open.glb" : `parts/shophouse_${VAR(i)}.glb`;
   const right = i === DIY + 1;
   const tint = ["#3b3d44", "#36383f", "#40414a", "#393b43"][((i % 4) + 4) % 4];
+  const amber = [-5, -2, 2, 4].includes(i);       // a few neighbours still up: their windows glow amber (Style A locked light trait)
   const P: any[] = [];
   P.push(<Model key="sh" src={S(src)} position={[cx, 0, 0]}>
     <StandardMaterial material="wall" base_color={diy ? "#a86a00" : tint} normal_map_texture={S("tex/grey_plaster_nor_gl_1k.jpg")} metallic_roughness_texture={S("tex/grey_plaster_rough_1k.jpg")} perceptual_roughness={1} uv_transform={Affine2.fromScale([2.4, 2.4])} />
     <StandardMaterial material="trim" base_color={diy ? "#fff3cf" : "#4a4c54"} perceptual_roughness={0.75} />
-    <StandardMaterial material="shutter" base_color={diy ? "#2f7a4a" : "#2c2e34"} perceptual_roughness={0.6} />
+    <StandardMaterial material="shutter" base_color={diy ? "#2f7a4a" : amber ? "#5a4326" : "#2c2e34"} perceptual_roughness={0.6} emissive={amber ? glow("#ffae55", 0.32) : undefined} />   {/* lamplight through the louvres */}
     <StandardMaterial material="tile" base_color={tint} normal_map_texture={S("tex/clay_roof_tiles_02_nor_gl_1k.jpg")} perceptual_roughness={0.85} />
     <StandardMaterial material="floor" base_color={diy ? "#c9a77a" : "#45474e"} normal_map_texture={S("tex/concrete_tiles_nor_gl_1k.jpg")} perceptual_roughness={0.8} />
     <StandardMaterial material="party" base_color="#2b2d33" perceptual_roughness={0.8} />
-    <StandardMaterial material="dark" base_color={diy ? "#ffd9a0" : "#15161a"} emissive={diy ? glow("#ffc070", 1.2) : undefined} />
+    <StandardMaterial material="dark" base_color={diy ? "#ffd9a0" : amber ? "#6b4a22" : "#15161a"} emissive={diy ? glow("#ffc070", 1.2) : amber ? glow("#ffb45c", 0.55) : undefined} />
   </Model>);
   // signboard on the façade over the arcade
   P.push(<B key="sg" p={[cx, 4.05, 2.32]} s={[W - 0.5, 0.62, 0.1]}>
@@ -145,7 +146,7 @@ function Street() {
   const P: any[] = [];
   P.push(<B key="kerb" p={[xm, 0.07, AR + 0.15]} s={[L + 30, 0.14, 0.28]}>   {/* inside the shophouse kerbs (y 0–0.15, z 2.2–2.5): coplanar faces z-fought */}
     <Flat c={WHITE2} /></B>);
-  P.push(<B key="road" p={[xm, -0.02, AR + 4.6]} s={[L + 60, 0.04, 8.6]}><Tiles n="asphalt_02" u={30} v={4} tint="#34363d" /></B>);
+  P.push(<B key="road" p={[xm, -0.02, AR + 4.6]} s={[L + 60, 0.04, 8.6]}><Tiles n="asphalt_02" u={30} v={4} tint="#5b5e66" real /></B>);   // real asphalt colour (aggregate, patches) under the tint, not relief only
   for (let k = -10; k < 12; k++) P.push(<B key={`ln${k}`} p={[k * 4, 0.005, AR + 4.6]} s={[2, 0.01, 0.14]}><Flat c="#ffffff" /></B>);
   P.push(<B key="pv" p={[xm, 0.08, AR + 10]} s={[L + 60, 0.16, 2.2]}><Tiles n="concrete_tiles" u={40} v={2} /></B>);
   P.push(<B key="gr" p={[xm, -0.06, -10]} s={[L + 80, 0.1, 60]}><Flat c={WHITE2} /></B>);
@@ -201,7 +202,7 @@ function GrabCar({ p, yaw, id, on = 1, sc = 1 }: { p: [number, number, number]; 
   const g = Math.max(sc, 0.001);
   return <>
     <Model name={`${id}m`} src={S("car_b.glb")} position={p} rotation={[0, yaw + Math.PI / 2, 0]} scale={[g, g, g]}>
-      <StandardMaterial material="Blue" base_color="#e9edf1" perceptual_roughness={0.35} />
+      <StandardMaterial material="Blue" base_color="#e9edf1" perceptual_roughness={0.38} clearcoat={1} clearcoat_perceptual_roughness={0.12} />   {/* car paint: lacquer over the white */}
     </Model>
     {[-1, 1].map((sd) => <Mesh3d key={`${id}d${sd}`} name={`${id}d${sd}`} transform={Transform.fromXyz(...place(p, yaw, [0.25, 0.62, sd * 0.915])).withRotation(Quat.mul(rotY(yaw), rotY(sd > 0 ? 0 : Math.PI))).withScale([g, g, g])}>
       <Cuboid half_size={[0.62, 0.22, 0.002]} /><Lit tex="grab_white.png" /></Mesh3d>)}
@@ -296,11 +297,22 @@ function cutAt(T: number) {             // Grab's share of the note, trip by tri
                         [0.2, 0.2, 0.27, 0.27, 0.13, 0.13, 0.23, 0.23, 0.17, 0.17, 0.2, 0.2, 0.2, 0.15], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
 }
 
+const CAPS60 = (CAPS as CapBlock[]).map((b: any) => ({ ...b, in: b.in * 2, out: b.out * 2, words: b.words.map((w: any) => ({ ...w, f: w.f * 2 })) })) as CapBlock[];   // caps.json is in 30 fps frames
+const END = 32.6;                                // the voice's end; +1.6 s Meikigo end card (silent)
+function EndCard({ t }: { t: number }) {
+  const u = k(t, END + 0.1, END + 0.65, Easing.out(Easing.cubic));
+  if (u <= 0) return null;
+  return <div style={{ position: "absolute", inset: 0, background: "#14161c", opacity: u, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+    <Img src={S("meikigo-logo.png")} style={{ height: 420, transform: `scale(${0.92 + 0.08 * u})` }} />
+    <div style={{ marginTop: 40, fontFamily: "Inter Display", fontWeight: 700, fontSize: 76, color: "#eef0f4", letterSpacing: -1 }}>Meikigo</div>
+  </div>;
+}
+
 function Film() {
   const F = useCurrentFrame(), T = F / FPS;
   const car = carAt(T), cut = cutAt(T), cx = car.p[0];
   const io = Easing.inOut(Easing.cubic), K = (a: number, b: number) => k(T, a, b, io);
-  let cam: [number, number, number], look: [number, number, number], fov = 0.62;
+  let cam: [number, number, number], look: [number, number, number], fov: number;
   // the note: L01 from the rider to above the car; rides above the car through L03; L05 a new fare, same RM20
   const above: [number, number, number] = [cx + 0.2, 2.35, car.p[2] + 0.6];
   let note: [number, number, number] = L3([RIDER[0] + 0.2, 1.5, RIDER[2] + 0.4], above, K(2.9, 3.8));
@@ -311,26 +323,8 @@ function Film() {
   }
   if (T >= 26.4) note = L3([RIDER[0] + 0.2, 1.5, RIDER[2] + 0.4], [STOP + 0.2, 2.35, AR + 2.2], K(26.6, 27.4));
   const sliceGrow = T >= 9.2 && T < 26.4 ? k(T, 9.2, 9.8) : 1;
-  if (T < 4.7) {                      // L01: near-iso over the street; push toward the car as the fare goes in
-    const u = K(0, 4.6); cam = L3([-20, 16, 22], [STOP - 5, 7.5, 13], u); look = L3([-6, 1.5, 1.5], [STOP, 1.6, AR + 1.4], u);
-  } else if (T < 9.2) {               // L02: close on the note, then follow the slice up to the tower
-    const up = K(5.6, 7.6); cam = L3([STOP - 1.4, 3.0, AR + 6.2], [STOP - 10, 18, 26], up); look = L3([STOP + 0.2, 2.3, AR + 2.2], [TW[0], 40, TW[2]], up); fov = lerp(0.55, 0.62, up);
-  } else if (T < 19.4) {              // L03: back down with the car (a tracking near-iso), up to the week board at the end
-    const down = K(9.2, 10.2), board = K(16.0, 16.9);
-    const track: [number, number, number] = [cx - 9, 11, car.p[2] + 15], tl: [number, number, number] = [cx + 2, 1.2, car.p[2] - 1];
-    cam = L3(L3([STOP - 10, 18, 26], track, down), [BBX - 4, 12.5, 12], board); look = L3(L3([TW[0], 40, TW[2]], tl, down), [BBX, 10.6, -5.4], board);
-  } else if (T < 23.05) {             // L04: up over the street: the fleet lights; the tower's LED says 170,000; up to MAX 20%
-    const rise = K(19.3, 20.4), tilt = K(20.9, 21.9), sign = K(22.2, 23.05);
-    const cA: [number, number, number] = [-2, 15, 27], lA: [number, number, number] = [3, 0, 4];           // the street from above: the fleet lights up
-    const cB: [number, number, number] = [0, 17, 48], lB: [number, number, number] = [8, 24, -26];         // up to the tower's "170,000 DRIVERS"
-    cam = L3(L3(L3([BBX - 4, 12.5, 12], cA, rise), cB, tilt), [TW[0], 42.6, TW[2] + 9], sign); look = L3(L3(L3([BBX, 10.6, -5.4], lA, rise), lB, tilt), [TW[0], 42.6, TW[2]], sign); fov = lerp(0.62, 0.5, sign);
-  } else if (T < 26.4) {              // L04: the cap document at Parliament; the stamp on "reviewing"
-    const down = K(23.7, 24.45);
-    cam = L3([PX - 3, 2.2, 16], [PX, 3.4, 11.7], down); look = L3([PX + 5, 26, -26], [PX, 0.8, 10.05], down); fov = 0.75;
-  } else {                            // L05: out of the paper, back to the street: the same fare, a different cut; drive off
-    const out = K(26.4, 27.6), wide = K(28.5, 30.5);
-    cam = L3(L3([STOP + 0.2, 2.6, AR + 4.0], [STOP - 6, 8, 15], out), [-14, 15, 24], wide); look = L3(L3([STOP + 0.2, 2.3, AR + 2.2], [STOP, 1.6, AR + 1.5], out), [2, 1.5, 2], wide);
-  }
+  // the camera is data (paths.py): eased in-out moves, the L03 track on a smoothed car, smoothed between the cuts
+  { const c = (PATHS.cam as number[][])[Math.max(0, Math.min(PATHS.cam.length - 1, F))]; cam = [c[0], c[1], c[2]]; look = [c[3], c[4], c[5]]; fov = c[6]; }
   const focus = Math.hypot(cam[0] - look[0], cam[1] - look[1], cam[2] - look[2]);
   return (
     <AbsoluteFill style={{ background: "#14161c" }}>
@@ -339,8 +333,8 @@ function Film() {
       </Camera3d>
       <Environment src={S("sky.hdr")} intensity={0.12} rotation={2.6} />
       <AmbientLight brightness={16} color="#8ea4dc" />
-      <DirectionalLight color="#a7bdff" transform={Transform.fromXyz(-22, 18, 6).lookingAt([0, 0, 0])} illuminance={3200} shadow_maps_enabled soft_shadow_size={1.2} />
-      <Shadows distance={60} firstCascade={18} mapSize={4096} bias={0.04} normalBias={1.5} />
+      <DirectionalLight color="#a7bdff" transform={Transform.fromXyz(-22, 18, 6).lookingAt([0, 0, 0])} illuminance={3200} shadow_maps_enabled soft_shadow_size={0.5} />   {/* 1.2: its dithered penumbra crawled on the road as the camera tracked (flicker ~14 s) */}
+      <Shadows distance={45} firstCascade={14} mapSize={8192} bias={0.04} normalBias={1.5} />
       <SpotLight name="hl" transform={Transform.fromXyz(...place(car.p, car.yaw, [2.2, 0.7, 0])).lookingAt(place(car.p, car.yaw, [12, 0, 0]))} intensity={2600000} outer_angle={0.45} inner_angle={0.2} color="#fff1d6" range={22} shadow_maps_enabled />
       <PointLight name="cg" transform={Transform.fromXyz(cx, 2.6, car.p[2])} intensity={180000} color="#7dffb4" range={5} />
       <PointLight name="tg" transform={Transform.fromXyz(TW[0], 44, TW[2] + 9)} intensity={9000000} color="#5dff9a" range={20} />
@@ -364,8 +358,9 @@ function Film() {
       <Model name="rider2" src={S("people/s_m50.glb")} position={NEXT_RIDER} rotation={[0, Math.PI, 0]}><StandardMaterial base_color="#55585f" perceptual_roughness={0.7} /></Model>
       <GrabCar id="gc" p={car.p} yaw={car.yaw} />
       <Note id="nt" p={note} cut={cut * sliceGrow + (1 - sliceGrow) * 0.001} s={noteS} slice={slice} />
-      <Captions blocks={CAPS as CapBlock[]} frame={F} fps={FPS} />
+      <Captions blocks={CAPS60} frame={F} fps={FPS} />
+      <EndCard t={T} />
     </AbsoluteFill>
   );
 }
-registerRoot(() => <Composition id="ex31" component={Film} width={1080} height={1920} fps={FPS} durationInFrames={978} />);
+registerRoot(() => <Composition id="ex31" component={Film} width={1080} height={1920} fps={FPS} durationInFrames={2052} />);

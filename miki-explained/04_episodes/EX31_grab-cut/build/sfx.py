@@ -5,8 +5,8 @@
 import json, re, subprocess
 import numpy as np
 SR = 48000
-TL = json.load(open("../audio/vo_timeline.json")); END = TL["end"]
-rng = np.random.default_rng(31); mix = np.zeros(int(END * SR))
+TL = json.load(open("../audio/vo_timeline.json")); END = TL["end"]; CARD = 1.6      # + the silent Meikigo end card
+rng = np.random.default_rng(31); mix = np.zeros(int((END + CARD) * SR))
 def put(sig, at, g): i = int(at * SR); sig = sig[: max(0, len(mix) - i)]; mix[i:i + len(sig)] += g * sig
 def lp(x, k): return np.convolve(x, np.ones(k) / k, "same")
 def env(n, a, d): e = np.exp(-np.arange(n) / (d * SR)); m = int(a * SR); e[:m] *= np.linspace(0, 1, m); return e
@@ -24,20 +24,20 @@ def load(path, start=0.0, dur=None):
     return np.frombuffer(subprocess.run(cmd, capture_output=True, check=True).stdout, np.float32).astype(float)
 def tick(): n = int(0.06 * SR); return lp(rng.standard_normal(n), 4) * env(n, 0.001, 0.008)
 n = len(mix); tt = np.arange(n) / SR
-bed = load(LIB + "Free Drone Bed Sound Effects.mp3", 70, END); e = np.clip(np.minimum(tt[:len(bed)] / 1.5, (END - 1.2 - tt[:len(bed)]) / 2.0), 0, 1)
+bed = load(LIB + "Free Drone Bed Sound Effects.mp3", 70, END); e = np.clip(np.minimum(tt[:len(bed)] / 1.5, (END - 1.2 - tt[:len(bed)]) / 2.0), 0, 1)   # fades out before the card
 put(bed * e, 0, 0.11)
 put(rumble(2.3), 0.2, 0.45)                                                       # the car glides in
 put(swoosh(0.5), 2.9, 0.22)                                                       # the fare note floats to the car
 put(swoosh(1.8), 5.5, 0.28)                                                       # the slice flies up to the tower
 put(thump(90, 0.3), 7.4, 0.35)                                                    # it lands in "MAX 20%"
-put(rumble(1.4), 9.3, 0.35); put(rumble(1.2), 12.6, 0.3); put(rumble(1.2), 14.5, 0.3)   # pull out · "distance" · on to the next rider
+put(rumble(4.4), 9.3, 0.35); put(rumble(1.4), 14.5, 0.3)                          # one move: pull out → brake behind the jam · on to the next rider
 for d in range(7): put(tick(), 16.25 + d * 0.15, 0.28)                            # the week's bars rise
 put(swoosh(1.6), 19.4, 0.22); [put(tick(), 19.95 + m * 0.07, 0.12) for m in range(22)]   # up over the street; the fleet lights
 put(load(LIB + "Traditional Stamp Sound Effect.mp3", 0, 0.82), 24.75 - 0.546, 0.6)  # the stamp lands on "reviewing"
 put(swoosh(0.6), 26.6, 0.22); put(rumble(2.4), 28.5, 0.45)                        # the new fare · the car drives off
 mix.astype(np.float32).tofile("_sfx.f32")
 subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", "_sfx.f32", "-i", "../audio/voice_full.wav",
-                "-filter_complex", "[0]volume=0.9[s];[1]volume=1.0[v];[v][s]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[a]", "-map", "[a]", "-ac", "2", "_mix.wav"], check=True)
+                "-filter_complex", "[0]volume=0.45[s];[1]volume=1.0[v];[v][s]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[a]", "-map", "[a]", "-ac", "2", "_mix.wav"], check=True)
 def lufs(f): return float(re.search(r"Summary:.*?I:\s+(-?[\d.]+) LUFS", subprocess.run(["ffmpeg", "-i", f, "-af", "ebur128", "-f", "null", "-"], capture_output=True, text=True).stderr, re.S).group(1))
 src = "_mix.wav"
 for i in range(3):
