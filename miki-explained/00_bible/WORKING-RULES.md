@@ -8,7 +8,7 @@ file wins. Update it the same day a decision or a rejection happens.
 
 ## 0. Before any work (every time, no exceptions)
 
-1. Read this file, then `LESSONS.md` (my past mistakes and the checks they created), then `STATUS.md`, then the bible of the style involved (`series-bible/BIBLE-A.md`, `-B.md`, `-C.md`).
+1. Read this file, then `LESSONS.md` (my past mistakes and the checks they created), then `STATUS.md`, then the bible of the style involved (`series-bible/BIBLE-A.md`, `-B.md`, `-C.md`). Before building or judging a look, also `craft-fundamentals.md` (build order, metrics, anchors, scale, set dressing, emphasis tiers; adopted 2026-11-11).
 2. **Restate the target in 3 lines** to the user before building anything new:
    camera · what the world looks like (what stays as it is) · what changes and why.
    The 3 lines must keep the style's **locked traits** (§1) unless the user unlocked one by name.
@@ -121,7 +121,10 @@ detail, its close readable objects or its calm motion. Notes and gotchas: `00_bi
 3. **Readable without a caption:** every object, number and metaphor.
 4. **Not a slide:** an angle, a light decision, one meaningful accent, real detail.
 5. **Motion test:** something moves inside the scene in every shot; handovers use scene objects.
-6. Say plainly what still fails. Don't over-claim.
+6. **Measured evidence** (2026-11-11): `tools/raea/frame_metrics.py` on the preview frames (`preview.sh … A|B` prints it)
+   — no BELOW-BASELINE, every per-frame flag fixed or explained; zero clipping lines; none of the automatic failures in
+   `craft-fundamentals.md` §4. Never add clutter just to move a number.
+7. Say plainly what still fails, as a verdict: **SHIP / SHIP WITH NOTES / NO-SHIP** with blockers, majors, minors. Don't over-claim.
 
 ## 5. Tools — who does what
 
@@ -137,6 +140,8 @@ detail, its close readable objects or its calm motion. Notes and gotchas: `00_bi
 | Captions | raea `tools/raea/kit/Captions.tsx` (EX15) | Built from `audio/vo_timeline.json` (`EX29_mrdiy-margin/build_vo.py`, `fix_caps.py`). |
 | Loudness | **−14 LUFS integrated**, measured and corrected (`EX28_apple-charger/build/sfx.py`: loudnorm's single pass lands 1–2 LU off) | Set 2026-11-09 for EX28/EX29 (the B playbook's old −18.5 is superseded). |
 | SFX | `EX29_mrdiy-margin/sfx_ex29.py` pattern: library samples + synthesised shutter / coin clinks timed from the physics bake, drone bed, loudnorm −14 | Part of every render. Sparse; silent ending. |
+| **Frame metrics** (2026-11-11) | `tools/raea/frame_metrics.py DIR_OR_IMGS --style A\|B` (also printed by `preview.sh`) | Edge density, one-colour share, entropy, contrast, mean; per-style house baseline calibrated on EX29/EX33/EX34/EX35. Signals, not verdicts. |
+| Precise hard-surface props (trial) | **text-to-cad library** in `tools/cad/.venv` (build123d 0.13 → GLB, metres, Y up) | Installed 2026-11-11, project-only: library only, no server/plugin, so nothing is sent. Pattern: `tools/cad/props/espresso.py`; skill docs in `tools/cad/skill/`. Only for props no library has (machines, printers, POS, kiosks). raea renders. |
 | **Render budget** (user 2026-11-09: "apply things to make it faster from now on") | Looks: `tools/raea/preview.sh EDIT.tsx f1,f2,… sheet.jpg` (540 px, one batch). Final: `tools/raea/render_ep.sh EDIT.tsx FRAMES OUT.mp4 AUDIO.wav [cuts]` (300-frame chunks, every frame checked, bad frames auto-repaired) — once per approval | Collect all fixes, then one render. Never a full render to check a single change; never wait on a render without working on the next step. Physics: bake once, pick the seed with `phys_check.py`. |
 | Physics (drops, bounces, settling) | **Blender rigid body (Bullet) baked** → JSON → raea plays it back (`_tests/style-test-mrdiy/A2/phys_bake.py`, `phys_check.py`) | User 2026-11-09: objects must never pass through each other. Pick a seed that passes the check (every body in place, still once settled). |
 
@@ -144,11 +149,15 @@ detail, its close readable objects or its calm motion. Notes and gotchas: `00_bi
 
 Every shot, every style, in this order. No step skipped, no "final quality" claim without step 6.
 1. **Reference image** for the shot: a bible north star, a frame the user pointed at, or a plate the user generates.
-   Saved next to the build as `ref_<shot>.png`. The render is judged against it.
-2. **Grey box**: camera path, subject positions, the token's route and timing with plain shapes. User approves it.
-3. **Build** detail on the approved grey box (locked traits §1).
+   Saved next to the build as `ref_<shot>.png`. The render is judged against it. Write `ref_<shot>.md` from
+   `templates/ref_analysis.md` before any code (camera, fill %, key light, 5–8 hex, materials); match the camera first.
+2. **Grey box**: camera path, subject positions, the token's route and timing with plain shapes, **at real scale**
+   (`craft-fundamentals.md` §7 table). User approves it.
+3. **Build** detail on the approved grey box (locked traits §1), in order: forms → materials → light → effects; one
+   variable per pass. Dress by story clusters and zones (`craft-fundamentals.md` §8); scatter seeded and validated (§9).
 4. **Render** preview frames (raea `--w 540 --h 960` for speed).
-5. **Independent critic**: a separate review agent that sees only the render, the reference and the brief (never my
+5. **Independent critic**: a separate review agent that sees only the render, the reference, the brief, the
+   **anchors** (`00_bible/anchors/`, looked at first), the automatic-failure list and the `frame_metrics.py` line (never my
    code or reasoning). It scores 1–10: light, composition, materials/texture, colour, detail density, readability,
    artifacts, match to locked traits; and lists the top 5 fixes. Fix and re-run until every score is ≥ 7 or progress stalls.
 6. **Evidence to the user**: reference vs render, the critic's scores before/after, what still fails.
@@ -161,6 +170,7 @@ Every shot, every style, in this order. No step skipped, no "final quality" clai
 | Blender | Modelling, splitting, rescaling, UV, baking; exports GLB | Our final renders (user ruling) |
 | MaterialCraft / TextureCraft | Procedural PBR materials / painted texture sets, exported as map sets | Rendering scenes |
 | EffectCraft | Effects/compositing for what raea can't do (ask first) | Default part of the pipeline |
+| text-to-cad (trial, 2026-11-11) | Parametric hard-surface parts in Python (build123d/OpenCASCADE) → GLB/STEP; exact dimensions, joints | Organic shapes, people, textures; our renders (raea renders) |
 | Seedream / Seedance (user runs) | Plates; image-to-video between keyframes | Exact numbers, exact object paths |
 | raea + avian physics | Real physics in a render | A body spawned mid-shot arrives already settled; switching body type panics → can't time a drop to a word. Bake in Blender instead |
 | Style C hybrid (to test) | raea renders depth / outline / colour-ID passes → Seedance stylises with exact layout and motion | Unverified until a test shows Seedance accepts those passes |

@@ -271,3 +271,18 @@ Pick one real Malaysian business from the EX28/EX29 slate.
 
 Rule: stills and a check .blend first (memory `stills-for-look-tests`), user verdict, then the 10-s preview
 (memory `blender-preview-before-render`).
+
+## 15. Craft methods (adopted 2026-11-11; full text in `00_bible/craft-fundamentals.md`)
+
+- **Build order:** forms → materials → light → effects. Haze, cones, bloom and darkness never cover an empty street;
+  fill it with authored objects (the EX35 "pretty empty" note).
+- **Dress by story clusters:** per beat, 3–7 props that say what the street is doing + 1–2 wear cues, then stop.
+  Zones: the shop = high intent, low noise; midground = people, scooters, signboards, stalls; background = silhouettes and
+  glowing windows; camera and token paths clear (`paths.py`).
+- **Scatter seeded:** people, vehicles and signboards from one seed, written to JSON, checked, then rendered.
+- **Real scale first** (figure 1.6–1.75 m, door 2.1 m, counter 0.9–1.05 m, RM1 coin 24 mm), so the token never drifts to 1 m.
+- **Props:** silhouette first; working parts (hinges, vents, handles, cables, labels); wear on contact edges; detail only
+  where the camera looks. Library GLBs pass the export hygiene list (craft-fundamentals §15) before raea.
+- **Light:** warm subject (tungsten ~3200 K) against the cool world (moonlight 8000 K+, or toned daylight in the white
+  variant); fill ½–¼ of key; the frame must read in greyscale. Never animate a material the building shares.
+- **Measured:** `preview.sh … A` must not report BELOW-BASELINE (edge ≥ 0.20, entropy ≥ 4.3); anchors in `00_bible/anchors/`.

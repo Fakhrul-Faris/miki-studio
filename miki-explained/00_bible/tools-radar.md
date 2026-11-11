@@ -29,3 +29,26 @@ Free to add:
 - **Flubber** (shape morphing): a 2D icon morph for a card; check EffectCraft's own morph first.
 
 Not for this Mac or this look: Newton / Warp (CPU only on macOS; GPU sims need NVIDIA), Effekseer, Pixelorama, Bark (ElevenLabs is better), OBS, Shotcut.
+
+## Trial approved 2026-11-11: text-to-cad (earthtojake/text-to-cad, MIT, 26k stars)
+
+The agent writes a part as a Python script (build123d on OpenCASCADE), runs it, exports **GLB** (also STEP/STL) → raea
+loads it. For precise hard-surface props no library has: espresso machine, printer and ink cartridge, POS terminal,
+kiosk, vending machine, shutter mechanism. Not for organic shapes, people or textures; its own Blender render skill is
+not used (raea renders). Cautions: the official installer (`curl … | sh`) adds itself to **every** agent app and
+installs its own Blender 5.2 bpy; usage stats are **on by default** (turn off). Status: see below.
+
+**Installed 2026-11-11, project-only:** `tools/cad/.venv` holds `cad[build123d,trimesh]==0.11.8` (the library only; its
+telemetry hook stays `None` without the `cad-server`, which is not installed; no agent apps touched). First prop:
+`tools/cad/props/espresso.py` → `tools/cad/out/espresso.glb` + `grinder.glb` (4 s build, 39 + 8 named parts, true size).
+Comparison with EX35's primitive set: `04_episodes/_tests/cad-trial/compare.png`. Gotcha: OCCT's glTF writer already
+converts Z up → Y up (model in build123d with the front at −Y; it lands at +Z); don't rotate again.
+Second set (EX32's hero props, reusable): `tools/cad/props/printer_ink.py` → `printer.glb` (tray out, page), 
+`printer_door_open.glb` (ink bay cut open, carriage, black + colour cartridges, door hinged down), `cartridge.glb` (label
+recess for the ml/price, nozzle plate, contacts). No brand marks modelled: logos go on as textures from official files.
+Look still: `04_episodes/_tests/cad-trial/printer.png`. Lessons: an open door needs a real cavity cut behind it, or the
+parts inside are buried in the solid; hinge a flap at its edge with an aligned box, never float it.
+
+**CADCraft (ArtCraft, checked 2026-11-11, not installed):** a 2D drafting app (DXF/DWG, dimensions, layers, headless CLI;
+exports PDF/SVG/PNG, no 3D solids or GLB listed). Not a prop modeller; possible later for 2D plans or sign outlines as DXF
+that build123d extrudes.

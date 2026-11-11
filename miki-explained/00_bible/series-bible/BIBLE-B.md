@@ -181,3 +181,17 @@ Same business as the A test.
 - A is modelled clay with real-lens depth and soft AO; B is flat shapes with grain and hard light shapes.
 - A's world is white with one real subject; B's world is a 2–4 colour palette with light and shadow colours.
 - A's camera moves through space; B's frames are mostly locked and the light/objects move.
+
+## 15. Craft methods (adopted 2026-11-11; full text in `00_bible/craft-fundamentals.md`)
+
+- **Build order:** forms → materials (the two-tone ramp, grain) → the light shape → effects. A mechanism or a colour
+  script never replaces object density (the EX34 lesson).
+- **Authored forms in Three.js** (from threejs-game-skills' authoring recipes): build objects from extrusions
+  (`ExtrudeGeometry` with bevel for signboards, shutters, tags), lathes (cups, lamps, bottles), tubes (wires, pipes,
+  handles), custom buffers; repeated small parts (louvres, tiles, bolts, windows) by **instancing** and shared
+  geometry/materials. A box with a texture is a placeholder, not an object.
+- **Working parts and asymmetry** make an invented object read without a caption: hinge, slot, handle, screen, feet.
+- **Story clusters** of 3–7 small readable objects per beat, as EX33 does; background as silhouette.
+- **Greyscale check:** the two tones must separate the subject from the world in greyscale.
+- **Measured:** `frame_metrics.py --style B` must not report BELOW-BASELINE (contrast ≥ 110, one colour ≤ 0.37);
+  FLAT is off for B (flat is the style). Anchors: `00_bible/anchors/B-*`.

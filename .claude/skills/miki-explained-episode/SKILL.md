@@ -5,6 +5,14 @@ description: Playbook for making an episode of the Miki Explained series (miki-e
 
 # Miki Explained — episode playbook
 
+**Read first (2026-11-11):** `miki-explained/00_bible/WORKING-RULES.md` and `LESSONS.md` override everything below
+(raea renders now; Blender only builds; styles A/B/C). For any look work also read `00_bible/craft-fundamentals.md`
+(methods adopted from game-art pipelines): build order forms → materials → light → effects; real-scale table; set
+dressing by story clusters and zones; seeded scatter; emphasis tiers; camera and lookdev craft; GLB hygiene; the
+SHIP / NO-SHIP verdict. Every shot gets `ref_<shot>.md` from `00_bible/templates/ref_analysis.md` before code. Every
+preview prints `tools/raea/frame_metrics.py` (per-style house baseline; `preview.sh EDIT.tsx frames OUT.jpg A|B`) and the
+critic sees `00_bible/anchors/` first. Props no library has: text-to-cad (build123d → GLB), on trial.
+
 **Blender expert skills (added 2026-11-04, scenario-labs/skills, MIT, offline — no Scenario service):** for v4 work load
 `scenario-blender-lighting-rendering` (value separation: check every key frame desaturated, darken the set before
 brightening the subject; EEVEE volume probes so interiors don't leak light), `scenario-blender-animation` (timing,
