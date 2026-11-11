@@ -76,6 +76,7 @@ def main():
                       (ep, t.group(1).strip() if t else ep, field(doc, "Lane"), field(doc, "Setting"), field(doc, "Named concept"),
                        json.dumps(st.get(ep, {})), float(dur.group(1)) if dur else None, status,
                        block(doc, "Caption"), block(doc, "Pinned comment"), db.now()))
+            if c.execute("select coalesce(deleted, 0) from episodes where id = ?", (ep,)).fetchone()[0]: continue   # deleted in the dashboard
             if ep in posted:                                       # earlier posts: TikTok, on the logged date
                 day = posted[ep] if re.match(r"\d{4}-\d\d-\d\d", str(posted[ep])) else None
                 c.execute("insert into posts(episode, platform, posted_at) values(?, 'tiktok', ?) on conflict(episode, platform) do nothing",
@@ -83,7 +84,7 @@ def main():
         if "--plan" in sys.argv:                                  # one post a day, slots rotated, from tomorrow
             taken = {r[0] for r in c.execute("select substr(planned_at,1,10) from posts where planned_at is not null and posted_at is null")}
             day, k = datetime.date.today() + datetime.timedelta(days=1), 0
-            for r in c.execute("select id from episodes where status='ready' and id not in (select episode from posts where platform='tiktok') order by id").fetchall():
+            for r in c.execute(f"select id from episodes where status='ready' and id in {db.ACTIVE} and id not in (select episode from posts where platform='tiktok') order by id").fetchall():
                 while day.isoformat() in taken: day += datetime.timedelta(days=1)
                 c.execute("insert into posts(episode, platform, planned_at) values(?, 'tiktok', ?)", (r[0], f"{day.isoformat()}T{SLOTS[k % 3]}"))
                 taken.add(day.isoformat()); k += 1

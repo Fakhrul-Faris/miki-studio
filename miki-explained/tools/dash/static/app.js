@@ -33,7 +33,7 @@ async function api(path, body, raw) {
 }
 function toast(msg, bad) { const t = document.createElement("div"); t.className = "toastx"; if (bad) t.style.borderLeftColor = "#E5534B"; t.textContent = msg; $("#toasts").append(t); setTimeout(() => t.remove(), 2600); }
 async function load() { S = await api("/api/state"); render(); $("#synced").textContent = "Updated " + new Date().toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" }); }
-const ep = id => S.episodes.find(e => e.id === id) || { id, title: id, stack: {} };
+const ep = id => S.episodes.find(e => e.id === id) || (S.archived || []).find(e => e.id === id) || { id, title: id, stack: {} };
 const postOf = (id, pl = "tiktok") => S.posts.find(p => p.episode === id && p.platform === pl);
 const posted = p => p && p.posted_at;
 const latest = p => p ? (p.metrics["7d"] || p.metrics["72h"] || p.metrics["24h"] || null) : null;
@@ -128,12 +128,13 @@ function calendar() {
 
 // ---------- Library + drawer ----------
 function library() {
-  const st = { all: () => true, ready: e => e.status === "ready", posted: e => e.status === "posted", draft: e => e.status === "draft", retired: e => e.status === "retired" };
-  const list = S.episodes.filter(st[libFilter]).filter(e => !libQ || (e.id + " " + e.title + " " + (e.concept || "")).toLowerCase().includes(libQ.toLowerCase())).reverse();
-  const count = k => S.episodes.filter(st[k]).length;
+  const st = { all: () => true, ready: e => e.status === "ready", posted: e => e.status === "posted", draft: e => e.status === "draft", retired: e => e.status === "retired", archived: () => true };
+  const src = k => k === "archived" ? (S.archived || []) : S.episodes;
+  const list = src(libFilter).filter(st[libFilter]).filter(e => !libQ || (e.id + " " + e.title + " " + (e.concept || "")).toLowerCase().includes(libQ.toLowerCase())).reverse();
+  const count = k => src(k).filter(st[k]).length;
   $("#p-library").innerHTML = `<div class="page-head"><div><h1 class="h-page">Library</h1><div class="sub">${S.episodes.length} episodes</div></div>
     <input class="form-control" style="max-width:260px" placeholder="Search episodes" value="${esc(libQ)}" id="lib-q"></div>
-    <div class="d-flex gap-2 mb-3 flex-wrap">${["all", "ready", "posted", "draft", "retired"].filter(k => k !== "retired" || count(k)).map(k => `<button class="chip ${libFilter === k ? "ochre" : ""}" data-filter="${k}">${k[0].toUpperCase() + k.slice(1)} · ${count(k)}</button>`).join("")}</div>
+    <div class="d-flex gap-2 mb-3 flex-wrap">${["all", "ready", "posted", "draft", "retired", "archived"].filter(k => (k !== "retired" && k !== "archived") || count(k)).map(k => `<button class="chip ${libFilter === k ? "ochre" : ""}" data-filter="${k}">${k[0].toUpperCase() + k.slice(1)} · ${count(k)}</button>`).join("")}</div>
     <div class="lib">${list.map(e => { const p = postOf(e.id), L = latest(p);
       return `<button class="lib-card" data-open="${e.id}"><img src="${thumb(e.id)}" alt="" loading="lazy" onerror="this.style.opacity=.15"><div class="lib-meta">
         <div class="d-flex gap-1 flex-wrap"><span class="chip">${esc(e.id)}</span><span class="chip ${e.status === "posted" ? "ok" : e.status === "ready" ? "ochre" : ""}">${e.status}</span></div>
@@ -162,7 +163,11 @@ function openDrawer(id) {
     <div class="section-title">What it tested</div><div class="stack-chips">${Object.entries(e.stack || {}).map(([k, v]) => `<span class="chip" title="${esc(v)}">${esc(k)}: ${esc(String(v).split(/[ (]/)[0])}</span>`).join("") || `<span class="muted small">No test stack logged</span>`}</div>
     <div class="section-title">Caption</div>${capBox(e, "caption")}
     ${e.pinned ? `<div class="section-title">Pinned comment</div>${capBox(e, "pinned")}` : ""}
-    <div class="section-title">Notes</div><textarea class="form-control" rows="3" placeholder="Anything you noticed: comments, a dip, an idea…" data-note="${id}">${esc(e.notes || "")}</textarea>`;
+    <div class="section-title">Notes</div><textarea class="form-control" rows="3" placeholder="Anything you noticed: comments, a dip, an idea…" data-note="${id}">${esc(e.notes || "")}</textarea>
+    <div class="section-title">Manage</div>
+    <div class="small muted mb-2">${e.archived ? "Archived: hidden from Today, Calendar, Analytics and reminders." : "Archive hides it everywhere and drops its unposted slot; restore any time. Delete removes its slots, numbers and screenshots from the dashboard (videos and Telegram storage are kept)."}</div>
+    <div class="actions mb-3">${e.archived ? `<button class="btn btn-primary btn-sm" data-restore="${id}">↩ Restore</button>` : `<button class="btn btn-soft btn-sm" data-archive="${id}">🗄 Archive</button>`}
+      <button class="btn btn-soft btn-sm text-danger" data-epdel="${id}">🗑 Delete</button></div>`;
   bootstrap.Offcanvas.getOrCreateInstance("#drawer").show();
 }
 
@@ -326,7 +331,7 @@ function openSched(id) {
 
 // ---------- events ----------
 document.addEventListener("click", async ev => {
-  const t = ev.target.closest("[data-sched],[data-unsched],[data-swhen],[data-copy],[data-posted],[data-open],[data-play],[data-replan],[data-upload],[data-num],[data-filter],[data-range],[data-review],[data-del],[data-unpost],[data-addslot],[data-rmslot],[data-savesettings],[data-theme],[data-pl],[data-when],#theme-d");
+  const t = ev.target.closest("[data-sched],[data-unsched],[data-swhen],[data-copy],[data-posted],[data-open],[data-play],[data-replan],[data-upload],[data-num],[data-filter],[data-range],[data-review],[data-del],[data-unpost],[data-archive],[data-restore],[data-epdel],[data-addslot],[data-rmslot],[data-savesettings],[data-theme],[data-pl],[data-when],#theme-d");
   if (!t) return; const d = t.dataset;
   if (d.sched) openSched(d.sched);
   else if (d.unsched) { const [id, pl] = d.unsched.split("|"); await api("/api/unschedule", { episode: id, platform: pl || "tiktok" }); toast(`${id}: back to not scheduled`); await load(); if ($("#drawer").classList.contains("show")) openDrawer(id); }
@@ -343,6 +348,11 @@ document.addEventListener("click", async ev => {
   else if (d.review) { const i = S.inbox.find(x => x.id == d.review), p = postOf(i.episode); openNum(p ? p.id : null, i.checkpoint, i.suggest, i.id); }
   else if (d.del) { if (confirm("Delete this screenshot from the inbox?")) { await api("/api/inbox/delete", { id: +d.del }); load(); } }
   else if (d.unpost) { const [id, pl] = d.unpost.split("|"); if (confirm(`Undo "posted" for ${id} on ${PLAT[pl]}?`)) { await api("/api/unpost", { episode: id, platform: pl }); await load(); openDrawer(id); } }
+  else if (d.archive) { await api("/api/archive", { episode: d.archive, archived: true }); toast(`${d.archive} archived`); bootstrap.Offcanvas.getOrCreateInstance("#drawer").hide(); load(); }
+  else if (d.restore) { await api("/api/archive", { episode: d.restore, archived: false }); toast(`${d.restore} restored`); await load(); openDrawer(d.restore); }
+  else if (d.epdel) { const typed = prompt(`Delete ${d.epdel} from the dashboard? Its slots, numbers and screenshots go; the video and Telegram copy stay.\nType ${d.epdel} to confirm:`);
+    if (typed && typed.trim().toUpperCase() === d.epdel) { await api("/api/episode/delete", { episode: d.epdel, confirm: d.epdel }); toast(`${d.epdel} deleted`); bootstrap.Offcanvas.getOrCreateInstance("#drawer").hide(); load(); }
+    else if (typed !== null) toast("Not deleted: the id didn't match", true); }
   else if (d.addslot !== undefined) { const v = $("#add-slot").value; if (v && !S.settings.slots.includes(v)) { S.settings.slots = [...S.settings.slots, v].sort(); settings(); } }
   else if (d.rmslot) { ev.preventDefault(); if (S.settings.slots.length > 1) { S.settings.slots = S.settings.slots.filter(x => x !== d.rmslot); settings(); } }
   else if (d.savesettings !== undefined) { await api("/api/settings", { slots: S.settings.slots, per_day: +$("#per-day").value, lead_min: +$("#lead").value, quiet: [$("#q0").value, $("#q1").value] }); toast("Settings saved"); load(); }

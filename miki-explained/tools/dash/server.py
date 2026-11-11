@@ -64,12 +64,14 @@ def median(a):
 def state():
     with db.conn() as c:
         db.auto_post(c)
-        eps = [dict(r) for r in c.execute("select * from episodes order by id")]
-        posts = [dict(r) for r in c.execute("select * from posts order by coalesce(posted_at, planned_at)")]
+        allep = [dict(r) for r in c.execute("select * from episodes where coalesce(deleted, 0) = 0 order by id")]
+        eps = [e for e in allep if not e["archived"]]; archived = [e for e in allep if e["archived"]]
+        live = {e["id"] for e in eps}
+        posts = [dict(r) for r in c.execute("select * from posts order by coalesce(posted_at, planned_at)") if r["episode"] in live]
         mets = [dict(r) for r in c.execute("select * from metrics")]
-        inbox = [dict(r) for r in c.execute("select * from inbox order by received_at desc")]
+        inbox = [dict(r) for r in c.execute("select * from inbox order by received_at desc") if r["episode"] in live]
         due = db.due(c); s = db.settings(c)
-    for e in eps:
+    for e in allep:
         e["stack"] = json.loads(e["stack"] or "{}")
         e["has_video"] = any(EPISODES.glob(e["id"] + "_*/export/*.mp4")) or e["status"] in ("ready", "posted")
     for i in inbox: i["suggest"] = json.loads(i["suggest"]) if i["suggest"] else {}
@@ -77,7 +79,7 @@ def state():
     for m in mets: byp.setdefault(m["post_id"], {})[m["checkpoint"]] = m
     for p in posts: p["metrics"] = byp.get(p["id"], {})
     v72 = [p["metrics"]["72h"]["views"] for p in posts if p["platform"] == "tiktok" and p["metrics"].get("72h", {}).get("views") is not None]
-    return {"episodes": eps, "posts": posts, "inbox": inbox, "due": due, "settings": s, "median_72h_tiktok": median(v72),
+    return {"episodes": eps, "archived": archived, "posts": posts, "inbox": inbox, "due": due, "settings": s, "median_72h_tiktok": median(v72),
             "checkpoints": db.CHECKPOINTS, "platforms": db.PLATFORMS, "server": {"started": STARTED, "now": db.now()}}
 
 
@@ -169,6 +171,10 @@ class H(BaseHTTPRequestHandler):
             if path == "/api/schedule": db.schedule(d["episode"], d["scheduled_at"], d.get("platform", "tiktok")); return self.send(200, {"ok": True})
             if path == "/api/unschedule": db.unschedule(d["episode"], d.get("platform", "tiktok")); return self.send(200, {"ok": True})
             if path == "/api/unpost": db.unpost(d["episode"], d.get("platform", "tiktok")); return self.send(200, {"ok": True})
+            if path == "/api/archive": db.archive(d["episode"], bool(d.get("archived", True))); return self.send(200, {"ok": True})   # {episode, archived}
+            if path == "/api/episode/delete":                       # {episode, confirm: episode} — the id typed back guards a stray tap
+                if d.get("confirm") != d["episode"]: raise ValueError("type the episode id to confirm")
+                db.delete_episode(d["episode"]); return self.send(200, {"ok": True})
             with db.conn() as c:
                 if path == "/api/plan":                             # {episode, platform, planned_at|null}
                     c.execute("insert into posts(episode, platform, planned_at) values(?,?,?) on conflict(episode, platform) "

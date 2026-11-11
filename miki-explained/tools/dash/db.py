@@ -29,7 +29,8 @@ create table if not exists nudges(post_id integer, checkpoint text, sent_at text
 create table if not exists settings(key text primary key, value text);
 """
 MIGRATE = [("episodes", "notes", "text"), ("posts", "reminded", "int default 0"), ("inbox", "suggest", "text"), ("inbox", "origin", "text"),
-           ("posts", "scheduled_at", "text")]
+           ("posts", "scheduled_at", "text"), ("episodes", "archived", "int default 0"), ("episodes", "deleted", "int default 0")]
+ACTIVE = "(select id from episodes where coalesce(archived, 0) = 0 and coalesce(deleted, 0) = 0)"   # archived/deleted: out of every view
 CHECKPOINTS = ("24h", "72h", "7d")
 HOURS = {"24h": 24, "72h": 72, "7d": 168}
 PLATFORMS = ("tiktok", "instagram", "threads")
@@ -111,7 +112,7 @@ def due(c=None):
     own = c is None; c = c or conn(); out = []; t = datetime.datetime.now(); auto_post(c)
     have = {(r[0], r[1]) for r in c.execute("select post_id, checkpoint from metrics where views is not null")}
     sent = {(r[0], r[1]) for r in c.execute("select episode, checkpoint from inbox where processed = 0")}
-    for p in c.execute("select id, episode, platform, posted_at from posts where posted_at is not null and length(posted_at) > 10"):
+    for p in c.execute(f"select id, episode, platform, posted_at from posts where posted_at is not null and length(posted_at) > 10 and episode in {ACTIVE}"):
         at = datetime.datetime.fromisoformat(p["posted_at"])
         for i, cp in enumerate(CHECKPOINTS):
             d = at + datetime.timedelta(hours=HOURS[cp]); later = CHECKPOINTS[i + 1:]
@@ -131,7 +132,7 @@ def replan(start=None):
         c.execute("update posts set planned_at = null where platform='tiktok' and posted_at is null")
         taken = {r[0] for r in c.execute("select planned_at from posts where planned_at is not null")}
         day = start or (datetime.date.today() + datetime.timedelta(days=1)); k, out = 0, []
-        eps = [r[0] for r in c.execute("select id from episodes where status='ready' and id not in "
+        eps = [r[0] for r in c.execute(f"select id from episodes where status='ready' and id in {ACTIVE} and id not in "
                                        "(select episode from posts where platform='tiktok' and posted_at is not null) order by id")]
         while eps:
             for j in range(per):
@@ -143,3 +144,23 @@ def replan(start=None):
                           "do update set planned_at=excluded.planned_at, reminded=0", (ep, when)); out.append((ep, when))
             k += per; day += datetime.timedelta(days=1)
         return out
+
+
+def archive(ep, on=True):
+    """Archive (hide from Today, Calendar, Library, Analytics, stats reminders) or restore an episode. Archiving drops its
+    unposted plans and schedules so the bot stops reminding; posted history and numbers are kept."""
+    with conn() as c:
+        c.execute("update episodes set archived = ? where id = ?", (1 if on else 0, ep))
+        if on: c.execute("update posts set planned_at = null, scheduled_at = null, reminded = 0 where episode = ? and posted_at is null", (ep,))
+
+
+def delete_episode(ep):
+    """Delete an episode from the dashboard: its posts, numbers and inbox rows go; the episode row stays as a hidden marker so
+    the seeder (air.sh dash) doesn't bring it back. Never touches video files, Telegram storage or screenshot files."""
+    with conn() as c:
+        ids = [r[0] for r in c.execute("select id from posts where episode = ?", (ep,))]
+        c.executemany("delete from metrics where post_id = ?", [(i,) for i in ids])
+        c.execute("delete from posts where episode = ?", (ep,))
+        c.execute("delete from inbox where episode = ?", (ep,))
+        c.executemany("delete from nudges where post_id = ?", [(i,) for i in ids])
+        c.execute("update episodes set deleted = 1, archived = 1, notes = null where id = ?", (ep,))

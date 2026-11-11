@@ -465,7 +465,7 @@ def parse_when(parts):
 def reply_dash(chat):
     with dash().conn() as c:
         n_post = c.execute("select count(*) from posts where posted_at is not null").fetchone()[0]
-        n_ready = c.execute("select count(*) from episodes where status='ready'").fetchone()[0]
+        n_ready = c.execute("select count(*) from episodes where status='ready' and coalesce(archived, 0) = 0").fetchone()[0]
         unread = c.execute("select count(*) from inbox where processed=0").fetchone()[0]
         nxt = c.execute("select episode, planned_at from posts where posted_at is null and planned_at is not null order by planned_at limit 3").fetchall()
     lines = ["📈 <b>Miki dashboard</b>", f"Posted: {n_post} · ready: {n_ready} · screenshots to read: {unread}"]
