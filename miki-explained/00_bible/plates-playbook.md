@@ -20,7 +20,7 @@ Target: `04_episodes/EX26_starbucks-float/styleframes/refs/1–3.png`. Approved 
 - **Everything else is mine:** the camera, depth, light breathing, vector overlays (numbers, cards, coins, arcs, logo), EX15 captions, sound and the end card.
 
 ## Pipeline (EX26 files are the reference implementation)
-1. **Depth maps:** Depth Anything V2 Base (`tools-venv/depth`) on each plate → `plates/P{n}_depth.png`.
+1. **Depth maps:** Depth Anything V2 Base (`tools-venv/depth`, removed 2026-11-09 to save space: reinstall with `uv venv tools-venv/depth` + the model before using this pipeline again) on each plate → `plates/P{n}_depth.png`.
 2. **Camera paths:** `build/cams.py` holds the scene slots plus keys `(time, x, y, zoom)` in preview px (the plate at 1200 px tall). Moves ease with cubic-bezier(.65,0,.35,1), and a two-sine drift keeps holds alive. Neighbouring slots overlap so the hand-offs have room.
 3. **Plate moves:** `build/plates.py depth|plain [--still t,…]` renders `plates/S{n}_{mode}.mp4` (1080×1920, 60 fps) and `S{n}_cam.json` (per-frame camera). The depth warp moves near things more than far ones. The overlay plane (REF) stays fixed, and warm light breathes ±6 %. Check the framing with `--still` before rendering in full.
 4. **Overlays:** `build/hf_ex26.py [depth|plain]` builds the HyperFrames project. Each scene is a `<video>` of its plate move plus a `.pin` layer that follows the same camera, frame by frame (`pin()`), with screen-space elements on top. Captions come from the shared EX15 code (`EX27…/build/hf_build.py overlays()`), plus animated grain at 12 fps.

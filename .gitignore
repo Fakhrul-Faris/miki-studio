@@ -107,3 +107,9 @@ miki-explained/04_episodes/*/hf/.hyperframes/
 miki-explained/04_episodes/*/plates/
 miki-explained/04_episodes/*/hf/assets/plates/
 miki-explained/00_bible/series-bible/work/
+# raea render scratch (2026-11-11): chunk/preview/flipbook dirs, chunk sources left by a stopped render, temp audio, test logs
+miki-explained/04_episodes/*/build/media/_*/
+miki-explained/04_episodes/*/build/media/_*.log
+miki-explained/04_episodes/*/build/_chunk*.tsx
+miki-explained/04_episodes/*/audio/tmp/
+miki-explained/04_episodes/_tests/*/*.log
