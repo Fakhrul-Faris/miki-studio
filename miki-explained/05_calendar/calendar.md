@@ -66,6 +66,32 @@ Already scheduled in TikTok Studio and left as they are: EX28 Thu 12 Nov 12:30, 
 held during the test. The dashboard planner (`tools/dash/seed.py --plan`) follows the test windows. Needs 9 more episodes
 (18–26 Nov) after EX34 on 17 Nov.
 
+## 30 hari, 30 bisnes Malaysia (started by the user 2026-11-11; Day 1 = Wed 18 Nov, Day 30 = Thu 17 Dec)
+
+One Malaysian business a day, numbered. **"Hari N/30" on screen at frame one** (with the logo), the series name and day in
+the caption's second line, the pinned comment asks which business is next (feeds S14 "You asked"). Episodes come from the
+series portfolio (`03_ideas/content-bank.md` § 6); tag each in `06_analytics/series.json`. Every premise is ☐ until verified.
+Times follow the post-time test (20:00 to 19 Nov, 12:30 from 20 to 26 Nov), then the winning slot (decided 27 Nov).
+**After Day 10** run `tools/series_score.py`, compare the series, and fill Days 11–30 doubling the winner.
+
+| Day | Date | Time | Series | Episode (question to verify) | Status |
+|---|---|---|---|---|---|
+| 1 | Wed 18 Nov | 20:00 | S07 Food economics | Where does your RM10 nasi lemak actually go? | ☐ to script by 16 Nov |
+| 2 | Thu 19 Nov | 20:00 | S06 Versus | Shopee vs Lazada vs TikTok Shop: who is actually cheapest? | ☐ |
+| 3 | Fri 20 Nov | 12:30 | S02 Always like that | Why does Grab cost more the moment it rains? | ☐ |
+| 4 | Sat 21 Nov | 12:30 | S07 Food economics | Why did teh tarik go from RM1.50 to RM3? | ☐ |
+| 5 | Sun 22 Nov | 12:30 | S06 Versus | KK Mart vs 7-Eleven vs Family Mart | ☐ |
+| 6 | Mon 23 Nov | 12:30 | S02 Always like that | Why is the Touch 'n Go lane always the jammed one? | ☐ |
+| 7 | Tue 24 Nov | 12:30 | S07 Food economics | How does a mamak stay open 24 hours? | ☐ |
+| 8 | Wed 25 Nov | 12:30 | S06 Versus | ZUS vs Gigi vs Tealive | ☐ |
+| 9 | Thu 26 Nov | 12:30 | S02 Always like that | Why do banks close their counters so early? | ☐ |
+| 10 | Fri 27 Nov | winner | S07 Food economics | How much of your bubble tea price is the tea? | ☐ |
+| 11–30 | 28 Nov – 17 Dec | winner | the scoreboard's winner, doubled | pool: S01 Eco-Shop / KK Mart cheap · S03 Mr DIY aisles · S04 no Costco · S09 Ramly, Sambal Nyet · S12 news within 48 h · S13 one number · S14 you asked · S15 kedai boss | — |
+
+Skipped from the note on purpose: cinema popcorn (EX10 posted 7 Nov), GrabFood vs Foodpanda (too close to EX31 Grab's cut,
+11 Nov), Mixue vs every chain (EX30, 11 Nov). Production: a new finished episode every day from 18 Nov; Day 1 and 2 scripts
+by Mon 16 Nov.
+
 Status: scheduled = in TikTok Studio · ready = exported · queued = next to script · ☐ = idea (verify → script → build).
 Production: one finished episode a day is more than the pipeline makes today (about one per working day once media is in).
 Isometric format: about one episode a day (script → voice → preview → render). Keep a buffer of 3 ready episodes.

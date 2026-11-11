@@ -174,7 +174,7 @@ marketing blogs; only TikTok's trend report and news items are strong.
 (`python3 miki-explained/tools/series_score.py` → `06_analytics/series-scoreboard.md`): keep if follows per 1k views ≥ 2 × the
 account median (floor 0.5) **or** watched-full ≥ 10 %. Tags live in `06_analytics/series.json` — add every new episode there.
 
-**The container (proposed, to start after the post-time test's first week): "30 hari, 30 bisnes Malaysia"** — one Malaysian
+**The container (STARTED by the user 2026-11-11: Day 1 Wed 18 Nov → Day 30 Thu 17 Dec; line-up in `05_calendar/calendar.md`): "30 hari, 30 bisnes Malaysia"** — one Malaysian
 business a day, the day number on screen in frame one (a numbered run gives cold viewers a reason to follow; Khairul Aming's
 "30 Hari 30 Resepi" is the local proof of the format). Episodes inside come from the series below. First ten days: S06 Versus,
 S07 Food economics, S02 "Why is it always like that?". After ten, compare series on the scoreboard and double the winner.

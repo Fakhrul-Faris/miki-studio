@@ -81,6 +81,7 @@ type and ending in `experiments.md` § 14 and don't repeat all three of the last
 
 - **Frame 0 already moving and odd:** the real logo and the hook's number on an object in the world at 0.0 s, shown in
   a way people don't see day to day (memories: odd-moving-first-frame, brand-logo-first). Most viewers are muted.
+- **30 hari run (18 Nov – 17 Dec):** "Hari N/30" on screen at frame one with the logo; caption line 2 = "30 hari, 30 bisnes Malaysia · Hari N"; the pinned comment asks which business is next.
 - Show what each line **literally** says; a metaphor only if the line is one.
 - Numbers and brands on the world's own objects, readable at phone size, clear of the caption band.
 - UI makes physical sense: phones are held by people, never posters on walls.
