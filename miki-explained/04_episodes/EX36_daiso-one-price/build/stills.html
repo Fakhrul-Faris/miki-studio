@@ -1,0 +1,451 @@
+<!doctype html>
+<!--
+  EX36 look stills (art-direction.md v2): one Three.js scene per shot, real scale (1 unit = 1 m), Style B two-tone toon,
+  no outlines, grain, words and the logo on objects, one accent (Daiso #E4007F) on the tag only.
+  ?shot=L01|L05|L06  &grey=1 (blockout: no textures, flat grey)  &caps=0 (no caption sample)
+  window.__info = the readability check for the key prop (craft §7 / §17): its screen box, area share, caption-band overlap.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<style>
+  html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #D5DDD3; }
+  #c { position: absolute; inset: 0; width: 1080px; height: 1920px; display: block; }
+  #ov { position: absolute; inset: 0; pointer-events: none; }
+  .bub { position: absolute; font-family: "Inter Display"; font-weight: 700; font-size: 40px; color: #1C1C21; background: #F2EEE6;
+         padding: 12px 24px 14px; border-radius: 10px; white-space: nowrap; transform: translate(-50%, -100%); }
+  .bub::after { content: ""; position: absolute; left: 36px; bottom: -18px; border: 10px solid transparent; border-top: 12px solid #F2EEE6; border-left: 10px solid #F2EEE6; }
+  #grain { position: absolute; inset: 0; width: 1080px; height: 1920px; mix-blend-mode: overlay; opacity: .5; }
+  .cap { position: absolute; left: 0; width: 1080px; text-align: center; }
+  .cap span { display: inline-block; max-width: 640px; font-family: "Inter Display"; font-weight: 500; font-size: 36px; line-height: 48px;
+              color: #EDE7DC; background: rgba(14,14,16,0.82); border-radius: 14px; padding: 12px 22px; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="ov"></div>
+<svg id="grain" viewBox="0 0 1080 1920"><filter id="gf"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="36"/><feColorMatrix type="saturate" values="0"/></filter><rect width="1080" height="1920" filter="url(#gf)" opacity=".24"/></svg>
+<script type="module">
+import * as THREE from "./vendor/three.module.js";
+const Q = new URLSearchParams(location.search);
+const SHOT = Q.get("shot") || "L01", GREY = Q.get("grey") === "1", CAPS = Q.get("caps") !== "0";
+const P2 = Math.PI * 2;
+let seed = 36; const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+const pick = (a) => a[Math.floor(rnd() * a.length)];
+
+// ---------- palette (art-direction.md v2): ground / shadow pairs, paper, kraft, one accent
+const C = {
+  ground: "#D5DDD3", shadow: "#2E4A4E", paper: "#F2EEE6", ink: "#1C1C21", kraft: "#C9A57A", tape: "#B48E61",
+  accent: "#E4007F", steel: "#7E8E8C", steelDark: "#4E5E5D", rail: "#F4F1EA",
+  goods: ["#ECE6DA", "#CFC6B4", "#B8C4BC", "#9FB0AA", "#E2D8C3", "#C7CFC8", "#8E9C98", "#F4F0E8", "#D9C2AE", "#A9B6C2"],
+};
+
+// ---------- renderer, two-tone toon (EX33 baseline)
+const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById("c"), antialias: true, preserveDrawingBuffer: true, logarithmicDepthBuffer: SHOT === "L05" });
+renderer.setPixelRatio(1); renderer.setSize(1080, 1920, false);
+renderer.outputColorSpace = THREE.SRGBColorSpace; renderer.toneMapping = THREE.NoToneMapping;
+renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFShadowMap;
+const scene = new THREE.Scene();
+const ramp = new THREE.DataTexture(new Uint8Array([0, 0, 0, 255, ...Array(7).fill([255, 255, 255, 255]).flat()]), 8, 1, THREE.RGBAFormat);
+ramp.minFilter = ramp.magFilter = THREE.NearestFilter; ramp.needsUpdate = true;
+const greyM = new THREE.MeshToonMaterial({ color: "#BDBDBD", gradientMap: ramp });
+const toon = (color, extra = {}) => (GREY ? greyM : new THREE.MeshToonMaterial({ color, gradientMap: ramp, ...extra }));
+const toonMap = (map, extra = {}) => (GREY ? greyM : new THREE.MeshToonMaterial({ map, gradientMap: ramp, ...extra }));
+const basic = (color, extra = {}) => (GREY ? new THREE.MeshBasicMaterial({ color: "#E0E0E0" }) : new THREE.MeshBasicMaterial({ color, toneMapped: false, ...extra }));
+const shadowy = (o) => { o.traverse((m) => { if (m.isMesh) { m.castShadow = true; m.receiveShadow = true; } }); return o; };
+
+// ---------- fonts, logo, canvas textures
+const img = (src) => new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = src; });
+for (const [wt, n] of [[500, "Medium"], [700, "Bold"], [900, "Black"]]) document.fonts.add(await new FontFace("Inter Display", `url(../hf/assets/fonts/InterDisplay-${n}.ttf)`, { weight: String(wt) }).load());
+const LOGO = await img("../hf/assets/logos/daiso.svg");
+const canvasTex = (w, h, draw) => { const c = document.createElement("canvas"); c.width = w; c.height = h; const g = c.getContext("2d"); draw(g, w, h); const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 16; return t; };
+const fit = (g, im, x, y, w, h) => { const s = Math.min(w / im.width, h / im.height); const dw = im.width * s, dh = im.height * s; g.drawImage(im, x + (w - dw) / 2, y + (h - dh) / 2, dw, dh); };
+const logoWhite = (g, x, y, w, h) => { const c = document.createElement("canvas"); c.width = Math.ceil(w); c.height = Math.ceil(h); const q = c.getContext("2d"); fit(q, LOGO, 0, 0, w, h); q.globalCompositeOperation = "source-in"; q.fillStyle = "#FFFFFF"; q.fillRect(0, 0, w, h); g.drawImage(c, x, y); };
+
+// the swing tag's face (B-type-004: a huge number, small technical labels, one accent bar) — card 1100 x 1700 px
+function tagFace(price = "RM5.90", sub = "EVERY ITEM", foot = "SINCE SEP 2018") {
+  return canvasTex(1100, 1700, (g, w, h) => {
+    g.fillStyle = C.paper; g.fillRect(0, 0, w, h);
+    g.fillStyle = "rgba(28,28,33,0.10)"; g.fillRect(70, 330, w - 140, 3);
+    fit(g, LOGO, 90, 375, 620, 120);
+    g.fillStyle = C.ink; g.font = '700 54px "Inter Display"'; g.textAlign = "right"; g.fillText("PRICE", w - 80, 455);
+    g.font = '900 360px "Inter Display"'; g.textAlign = "center"; g.letterSpacing = "-12px"; g.fillText(price, w / 2 + 6, 900);
+    g.letterSpacing = "0px";
+    g.fillStyle = C.accent; g.fillRect(80, 1010, w - 160, 70);
+    g.fillStyle = C.ink; g.font = '700 58px "Inter Display"'; g.textAlign = "left"; g.fillText(sub, 80, 1190);
+    g.font = '500 46px "Inter Display"'; g.fillStyle = "rgba(28,28,33,0.62)"; g.fillText(foot, 80, 1270);
+    g.fillStyle = "rgba(28,28,33,0.10)"; g.fillRect(70, 1360, w - 140, 3);
+    for (let i = 0; i < 38; i++) { const bw = 6 + (i * 7919) % 3 * 7; g.fillStyle = C.ink; g.fillRect(80 + i * 24, 1420, bw * 0.6, 150); }   // barcode
+    g.font = '500 38px "Inter Display"'; g.fillStyle = "rgba(28,28,33,0.55)"; g.textAlign = "right"; g.fillText("4 549131 000590", w - 80, 1610);
+  });
+}
+// tag outline (a swing tag: clipped top corners, punched hole) in metres; returns the Shape
+function tagShape(w, h, holeR) {
+  const c = w * 0.22, s = new THREE.Shape();
+  s.moveTo(-w / 2, -h / 2); s.lineTo(w / 2, -h / 2); s.lineTo(w / 2, h / 2 - c); s.lineTo(w / 2 - c, h / 2); s.lineTo(-w / 2 + c, h / 2); s.lineTo(-w / 2, h / 2 - c); s.closePath();
+  const hp = new THREE.Path(); hp.absarc(0, h / 2 - c * 0.85, holeR, 0, P2, true); s.holes.push(hp);
+  return s;
+}
+// a swing tag: card (extruded, the face mapped onto its front), metal eyelet ring, a string loop up to `hang`
+function swingTag(w, h, face) {
+  const g = new THREE.Group();
+  const geo = new THREE.ExtrudeGeometry(tagShape(w, h, w * 0.07), { depth: 0.0006, bevelEnabled: false, curveSegments: 24 });
+  face.repeat.set(1 / w, 1 / h); face.offset.set(0.5, 0.5);
+  const card = new THREE.Mesh(geo, [toonMap(face), toon(C.paper)]); g.add(card);
+  const ring = new THREE.Mesh(new THREE.TorusGeometry(w * 0.085, w * 0.018, 10, 40), toon("#B9BDBA")); ring.position.set(0, h / 2 - w * 0.22 * 0.85, 0.0004); g.add(ring);
+  g.userData.eye = new THREE.Vector3(0, h / 2 - w * 0.22 * 0.85, 0);
+  return shadowy(g);
+}
+const tube = (pts, r, color) => new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts), 48, r, 6, false), toon(color));
+
+// ---------- readability check (craft §17): key prop's screen box
+function screenBox(obj, cam) {
+  const b = new THREE.Box3().setFromObject(obj), v = new THREE.Vector3(); let x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9;
+  for (const x of [b.min.x, b.max.x]) for (const y of [b.min.y, b.max.y]) for (const z of [b.min.z, b.max.z]) {
+    v.set(x, y, z).project(cam); const sx = (v.x * 0.5 + 0.5) * 1080, sy = (1 - (v.y * 0.5 + 0.5)) * 1920;
+    x0 = Math.min(x0, sx); x1 = Math.max(x1, sx); y0 = Math.min(y0, sy); y1 = Math.max(y1, sy);
+  }
+  const cx0 = Math.max(0, x0), cx1 = Math.min(1080, x1), cy0 = Math.max(0, y0), cy1 = Math.min(1920, y1);
+  const area = Math.max(0, cx1 - cx0) * Math.max(0, cy1 - cy0) / (1080 * 1920);
+  return { box: [x0, y0, x1, y1].map(Math.round), area: +(area * 100).toFixed(2) + "%", inCaptionBand: y1 > 1340 && y0 < 1420, offscreen: area === 0 };
+}
+// aim the camera (yaw/pitch, no roll) so a world point lands on screen point (fx, fy) in 0..1
+function aimAt(cam, P, fx, fy) {
+  const e = new THREE.Euler(0, 0, 0, "YXZ"); e.setFromQuaternion(cam.quaternion);
+  for (let i = 0; i < 80; i++) {
+    cam.quaternion.setFromEuler(e); cam.updateMatrixWorld();
+    const v = P.clone().project(cam), ex = (v.x * 0.5 + 0.5) - fx, ey = (1 - (v.y * 0.5 + 0.5)) - fy;
+    if (Math.abs(ex) + Math.abs(ey) < 1e-4) break;
+    e.y -= ex * 0.9; e.x -= ey * 0.9 * (cam.fov / 66);
+  }
+}
+function bubble(text, world, cam, dx = 0, dy = -10) {
+  const v = world.clone().project(cam), d = document.createElement("div");
+  d.className = "bub"; d.textContent = text; d.style.left = `${(v.x * 0.5 + 0.5) * 1080 + dx}px`; d.style.top = `${(1 - (v.y * 0.5 + 0.5)) * 1920 + dy}px`;
+  document.getElementById("ov").appendChild(d);
+}
+function caption(text) {
+  if (!CAPS) return; const d = document.createElement("div"); d.className = "cap"; d.innerHTML = `<span>${text}</span>`;
+  document.getElementById("ov").appendChild(d); d.style.top = `${1420 - d.offsetHeight}px`;
+}
+
+// =====================================================================================================
+// L01 — one tag on the shadow edge of an aisle whose shelf lips recede like lanes (B-light-028 + B-type-004)
+// =====================================================================================================
+function L01() {
+  scene.background = new THREE.Color(C.ground);
+  const hemi = new THREE.HemisphereLight("#5F8A8E", "#5F8A8E", 1.0); scene.add(hemi);
+  const key = new THREE.DirectionalLight("#FFFFFF", 2.6); key.castShadow = true; key.shadow.mapSize.set(4096, 4096);
+  key.shadow.bias = -0.0003; key.shadow.normalBias = 0.01;
+  key.position.set(-2.0, 4.2, 0.9); key.target.position.set(0.55, 0, -0.9); scene.add(key, key.target);
+  const sc = key.shadow.camera; sc.left = -5; sc.right = 5; sc.top = 6; sc.bottom = -6; sc.near = 0.5; sc.far = 20; sc.updateProjectionMatrix();
+
+  // floor: big pale tiles
+  const tiles = canvasTex(1024, 1024, (g, w, h) => { g.fillStyle = C.ground; g.fillRect(0, 0, w, h); g.fillStyle = "rgba(46,74,78,0.10)"; g.fillRect(0, 0, w, 6); g.fillRect(0, 0, 6, h); });
+  tiles.wrapS = tiles.wrapT = THREE.RepeatWrapping; tiles.repeat.set(20, 40);
+  const floor = new THREE.Mesh(new THREE.PlaneGeometry(12, 24), toonMap(tiles)); floor.rotation.x = -Math.PI / 2; floor.position.z = -6; floor.receiveShadow = true; scene.add(floor);
+
+  // gondola runs: back pegboard, kick plate, uprights, 5 shelves with label rails (the "lanes"), goods
+  const peg = canvasTex(512, 512, (g, w, h) => { g.fillStyle = "#E7E3DA"; g.fillRect(0, 0, w, h); g.fillStyle = "rgba(46,74,78,0.35)"; for (let y = 16; y < h; y += 32) for (let x = 16; x < w; x += 32) { g.beginPath(); g.arc(x, y, 4, 0, P2); g.fill(); } });
+  peg.wrapS = peg.wrapT = THREE.RepeatWrapping;
+  const labels = canvasTex(2048, 64, (g, w, h) => { g.fillStyle = C.rail; g.fillRect(0, 0, w, h); for (let x = 30; x < w; x += 170) { g.fillStyle = "rgba(28,28,33,0.16)"; g.fillRect(x, 14, 70, 36); g.fillStyle = "rgba(28,28,33,0.55)"; g.fillRect(x + 8, 22, 34, 6); } });
+  labels.wrapS = THREE.RepeatWrapping;
+  const LEVELS = [0.16, 0.5, 0.84, 1.18, 1.5];
+  const goodsGeo = {
+    pot: new THREE.LatheGeometry([[0, 0], [0.07, 0], [0.085, 0.11], [0.09, 0.115], [0.0, 0.115]].map(([x, y]) => new THREE.Vector2(x, y)), 24),
+    mug: new THREE.CylinderGeometry(0.045, 0.042, 0.095, 20).translate(0, 0.0475, 0),
+    box: new THREE.BoxGeometry(0.16, 0.12, 0.22).translate(0, 0.06, 0),
+    lid: new THREE.BoxGeometry(0.165, 0.025, 0.225).translate(0, 0.12, 0),
+    bottle: new THREE.LatheGeometry([[0, 0], [0.035, 0], [0.036, 0.16], [0.016, 0.2], [0.016, 0.23], [0, 0.23]].map(([x, y]) => new THREE.Vector2(x, y)), 18),
+    bowl: new THREE.LatheGeometry([[0, 0], [0.04, 0], [0.075, 0.05], [0.074, 0.055], [0.0, 0.055]].map(([x, y]) => new THREE.Vector2(x, y)), 24),
+    card: new THREE.BoxGeometry(0.012, 0.2, 0.11).translate(0, 0.1, 0),
+    sponge: new THREE.BoxGeometry(0.09, 0.05, 0.13).translate(0, 0.025, 0),
+  };
+  const TYPES = Object.keys(goodsGeo).filter((k) => k !== "lid");
+  const label = (bg) => canvasTex(256, 128, (g, w, h) => { g.fillStyle = bg; g.fillRect(0, 0, w, h); g.fillStyle = "rgba(28,28,33,0.55)"; g.fillRect(24, 30, 120, 14); g.fillStyle = "rgba(28,28,33,0.28)"; for (let i = 0; i < 3; i++) g.fillRect(24, 58 + i * 16, 180 - i * 40, 7); g.fillStyle = "rgba(28,28,33,0.18)"; g.fillRect(170, 24, 60, 60); });
+  const LABELS = C.goods.map((c) => label(c));
+  const sleeve = new THREE.CylinderGeometry(0.0365, 0.0365, 0.08, 18, 1, true).translate(0, 0.08, 0);
+  const boxFace = new THREE.PlaneGeometry(0.15, 0.1);
+  const gondola = (x, face, z0, z1) => {   // face: +1 shelves open toward +x
+    const len = z1 - z0, zc = (z0 + z1) / 2, g = new THREE.Group();
+    const back = new THREE.Mesh(new THREE.BoxGeometry(0.04, 1.62, len), toonMap(peg.clone())); back.material.map && (back.material.map.repeat.set(len * 3, 5)); back.position.set(x - face * 0.42, 0.81, zc); g.add(back);
+    const kick = new THREE.Mesh(new THREE.BoxGeometry(0.44, 0.12, len), toon(C.steelDark)); kick.position.set(x - face * 0.21, 0.06, zc); g.add(kick);
+    for (let z = z0; z <= z1 + 1e-6; z += 1.0) { const up = new THREE.Mesh(new THREE.BoxGeometry(0.05, 1.66, 0.05), toon(C.steelDark)); up.position.set(x - face * 0.42, 0.83, z); g.add(up); }
+    for (const y of LEVELS) {
+      const sh = new THREE.Mesh(new THREE.BoxGeometry(0.42, 0.022, len), toon("#DCD6CB")); sh.position.set(x - face * 0.2, y, zc); g.add(sh);
+      const lt = labels.clone(); lt.repeat.set(len / 1.2, 1); lt.needsUpdate = true;
+      const rail = new THREE.Mesh(new THREE.BoxGeometry(0.012, 0.04, len), [toonMap(lt), toonMap(lt), toon(C.rail), toon(C.rail), toon(C.rail), toon(C.rail)]);
+      rail.position.set(x + face * 0.012, y - 0.004, zc); g.add(rail);
+      if (y > 1.4) continue;
+      // goods on this shelf: packed along z, seeded, a few gaps (an afternoon restock)
+      for (let z = z0 + 0.12; z < z1 - 0.1;) {
+        const ty = pick(TYPES), col = pick(C.goods);
+        if (rnd() < 0.08) { z += 0.25; continue; }
+        const rows = ty === "card" ? 3 : 2;
+        for (let r = 0; r < rows; r++) {
+          const m = new THREE.Mesh(goodsGeo[ty], toon(col)); m.position.set(x - face * (0.08 + r * 0.15), y + 0.011, z); m.rotation.y = ty === "card" ? 0 : rnd() * 0.3; g.add(m);
+          if (ty === "box") { const l = new THREE.Mesh(goodsGeo.lid, toon(pick(C.goods))); l.position.copy(m.position); g.add(l); if (r === 0) { const f = new THREE.Mesh(boxFace, toonMap(pick(LABELS))); f.rotation.y = face * Math.PI / 2; f.position.set(m.position.x + face * 0.111, y + 0.07, z); g.add(f); } }
+          if (ty === "bottle" || ty === "mug") { const sl = new THREE.Mesh(sleeve, toonMap(pick(LABELS))); sl.position.copy(m.position); if (ty === "mug") { sl.scale.set(1.25, 0.8, 1.25); sl.position.y -= 0.025; } g.add(sl); }
+          if (ty === "mug") { const hd = new THREE.Mesh(new THREE.TorusGeometry(0.025, 0.006, 8, 16, Math.PI), toon(col)); hd.rotation.z = -Math.PI / 2; hd.position.set(m.position.x, y + 0.06, z - 0.045); hd.rotation.y = Math.PI / 2; g.add(hd); }
+          if (ty === "card") { const pen = new THREE.Mesh(new THREE.CylinderGeometry(0.006, 0.006, 0.15, 8), toon(pick(["#2E4A4E", "#7E8E8C", "#C9A57A"]))); pen.position.set(m.position.x + face * 0.01, y + 0.1, z); g.add(pen); }
+        }
+        z += ty === "box" ? 0.24 : ty === "card" ? 0.13 : ty === "pot" ? 0.2 : 0.12;
+      }
+    }
+    // pegboard section above the 4th shelf: hooks with blister packs
+    for (let z = z0 + 0.15; z < z1 - 0.1; z += 0.16) for (const hy of [1.36]) {
+      if (rnd() < 0.15) continue;
+      const pk = new THREE.Mesh(new THREE.BoxGeometry(0.02, 0.17, 0.11), toonMap(pick(LABELS))); pk.position.set(x - face * 0.3, hy - 0.06, z); g.add(pk);
+      const bl = new THREE.Mesh(new THREE.BoxGeometry(0.03, 0.09, 0.06), toon(pick(C.goods))); bl.position.set(x - face * 0.28, hy - 0.08, z); g.add(bl);
+    }
+    return shadowy(g);
+  };
+  scene.add(gondola(-0.7, 1, -4.0, 2.0), gondola(0.7, -1, -4.0, 2.0));
+  // the next runs beyond the cross aisle, and the end-cap facing us with the DAISO header (the top of the lanes)
+  const endcap = new THREE.Group();
+  const ec = new THREE.Mesh(new THREE.BoxGeometry(2.6, 0.75, 0.9), toon("#E7E3DA")); ec.position.set(0, 0.375, -5.6); endcap.add(ec); endcap.position.x = 0.05; endcap.position.z = 1.2;
+  for (const y of [0.75]) { const s = new THREE.Mesh(new THREE.BoxGeometry(2.5, 0.03, 0.42), toon("#DCD6CB")); s.position.set(0, y, -5.36); endcap.add(s);
+    for (let x = -1.15; x < 1.2; x += 0.16) { const m = new THREE.Mesh(goodsGeo[pick(["bottle", "mug", "bowl"])], toon(pick(C.goods))); m.position.set(x, y + 0.015, -5.3); endcap.add(m); } }
+  const header = canvasTex(1600, 300, (g, w, h) => { g.fillStyle = "#FFFFFF"; g.fillRect(0, 0, w, h); fit(g, LOGO, 160, 50, w - 320, h - 100); });
+  const hb = new THREE.Mesh(new THREE.BoxGeometry(2.4, 0.42, 0.05), [toon("#FFFFFF"), toon("#FFFFFF"), toon("#FFFFFF"), toon("#FFFFFF"), basic("#FFFFFF", { map: header }), toon("#FFFFFF")]);
+  hb.position.set(0, 1.12, -5.95); endcap.add(hb);
+  for (const sx of [-1.15, 1.15]) { const p = new THREE.Mesh(new THREE.BoxGeometry(0.04, 0.4, 0.04), toon(C.steelDark)); p.position.set(sx, 0.95, -5.95); endcap.add(p); }
+  scene.add(shadowy(endcap));
+  scene.add(gondola(-1.9, 1, -12, -6.4), gondola(1.9, -1, -12, -6.4));
+
+  // the hero: a hook peg out of the right run's pegboard, the tag hanging from it
+  const pegY = 1.38, pegZ = 0.66;
+  const hook = tube([new THREE.Vector3(-1.1, pegY, pegZ), new THREE.Vector3(-0.62, pegY, pegZ), new THREE.Vector3(-0.42, pegY + 0.005, pegZ), new THREE.Vector3(-0.4, pegY + 0.035, pegZ)], 0.0035, "#9AA3A1");
+  hook.castShadow = true; scene.add(hook);
+  const TAGX = -0.52;
+  const tag = swingTag(0.16, 0.25, tagFace());
+  tag.position.set(TAGX, pegY - 0.165, pegZ); tag.rotation.set(-0.28, 0.3, -0.05); scene.add(tag);
+  tag.updateMatrixWorld();
+  const eye = tag.localToWorld(tag.userData.eye.clone());
+  const str = tube([eye, eye.clone().add(new THREE.Vector3(0.0, 0.03, 0.004)), new THREE.Vector3(TAGX - 0.005, pegY + 0.004, pegZ), eye.clone().add(new THREE.Vector3(0.012, 0.015, -0.006)), eye], 0.0011, "#EDE8DF");
+  scene.add(str);
+  // frame 0: goods mid-slide on the lane under the tag (they flow toward us along the 4th lane)
+  for (const [ty, z] of [["pot", -0.55], ["card", -1.05], ["bottle", -1.5], ["box", -2.1]]) {
+    const m = new THREE.Mesh(goodsGeo[ty], toon(pick(C.goods))); m.position.set(-0.62, 1.18 + 0.011, z); m.castShadow = true; m.receiveShadow = true; scene.add(m);
+  }
+
+  const cam = new THREE.PerspectiveCamera(66, 1080 / 1920, 0.02, 60);
+  cam.position.set(-0.46, 2.02, 1.62); cam.lookAt(-0.3, 0.4, -1.9);
+  tag.updateMatrixWorld(); aimAt(cam, new THREE.Box3().setFromObject(tag).getCenter(new THREE.Vector3()), 0.40, 0.55);
+  return { cam, key: tag, line: "Everything at Daiso costs RM5.90. How?", also: { header: hb } };
+}
+
+// =====================================================================================================
+// L05 — one huge carton over the tiny Pulau Indah map, on the diagonal (B-core-049)
+// =====================================================================================================
+function L05() {
+  const SEA = "#2E4A4E", LAND = "#D5DDD3";
+  scene.background = new THREE.Color(SEA);
+  const hemi = new THREE.HemisphereLight("#6F8F92", "#6F8F92", 1.15); scene.add(hemi);
+  const sun = new THREE.DirectionalLight("#FFFFFF", 2.3); sun.castShadow = true; sun.shadow.mapSize.set(8192, 8192); sun.shadow.bias = -0.0002;
+  sun.position.set(-500, 900, -300); sun.target.position.set(0, 0, 0); scene.add(sun, sun.target);
+  const sc = sun.shadow.camera; sc.left = -900; sc.right = 900; sc.top = 900; sc.bottom = -900; sc.near = 10; sc.far = 3000; sc.updateProjectionMatrix();
+  const ROT = -0.6;   // the site and the flight line sit on this diagonal
+  const site = new THREE.Group(); site.rotation.y = ROT; scene.add(site);
+  // land and sea: the coast runs along the site's +x edge; sea beyond
+  const land = new THREE.Mesh(new THREE.PlaneGeometry(3000, 3000), toon(LAND)); land.rotation.x = -Math.PI / 2; land.position.set(-1500 + 470, 0, 0); land.receiveShadow = true; site.add(land);
+  const sea = new THREE.Mesh(new THREE.PlaneGeometry(3000, 3000), toon(SEA)); sea.rotation.x = -Math.PI / 2; sea.position.set(1500 + 470, -0.5, 0); site.add(sea);
+  // roads: the main road on the flight diagonal, service roads
+  const road = (w, l, x, z, ry = 0) => { const r = new THREE.Mesh(new THREE.PlaneGeometry(w, l), toon("#EEF0EA")); r.rotation.set(-Math.PI / 2, 0, ry); r.position.set(x, 0.05, z); r.receiveShadow = true; site.add(r); };
+  road(22, 3000, -330, 0); road(3000, 14, 0, 260); road(3000, 14, 0, -300); road(12, 700, 200, -300 + 350);
+  // the GDC: 520 x 257 m (~133,666 m²), roof with skylight rows, rooftop units, DAISO painted on the roof
+  const roofTex = canvasTex(2600, 1285, (g, w, h) => {
+    g.fillStyle = "#E9ECE6"; g.fillRect(0, 0, w, h);
+    g.fillStyle = "rgba(46,74,78,0.10)"; for (let x = 0; x < w; x += 26) g.fillRect(x, 0, 3, h);   // standing seams
+    g.fillStyle = "#BFD0D1"; for (let x = 120; x < w - 100; x += 210) g.fillRect(x, 90, 34, h - 180);   // skylight rows
+    g.save(); g.translate(w * 0.5, h * 0.5); fit(g, LOGO, -700, -150, 1400, 300); g.restore();
+  });
+  const gdc = new THREE.Group(); gdc.position.set(0, 0, -20); site.add(gdc);
+  const body = new THREE.Mesh(new THREE.BoxGeometry(520, 18, 257), [toon("#DADFD8"), toon("#DADFD8"), toonMap(roofTex), toon("#DADFD8"), toon("#C8CFC9"), toon("#C8CFC9")]); body.position.y = 9; gdc.add(body);
+  for (let i = 0; i < 14; i++) { const u = new THREE.Mesh(new THREE.BoxGeometry(9, 3, 6), toon("#B7C0BC")); u.position.set(-230 + i * 34, 19.5, 112); gdc.add(u); }
+  // loading docks along the long south side, trucks backed in
+  for (let i = 0; i < 46; i++) {
+    const x = -245 + i * 10.8; const door = new THREE.Mesh(new THREE.BoxGeometry(4, 5, 0.6), toon("#5D6E6C")); door.position.set(x, 2.5, 128.8); gdc.add(door);
+    if (rnd() < 0.7) { const tr = new THREE.Group(); const tb = new THREE.Mesh(new THREE.BoxGeometry(2.6, 3.8, 13.6), toon(pick(["#F2EEE6", "#E9E4DA", "#CBD3D0"]))); tb.position.set(0, 2.2, 7.4); tr.add(tb);
+      const cab = new THREE.Mesh(new THREE.BoxGeometry(2.5, 3, 3.4), toon(pick(["#7E8E8C", "#4E5E5D", "#C9A57A"]))); cab.position.set(0, 1.8, 16.2); tr.add(cab); tr.position.set(x, 0, 129); gdc.add(tr); }
+  }
+  shadowy(gdc);
+  // container yard between the GDC and the quay (instanced 40 ft boxes in muted colours)
+  const CN = ["#8E9C98", "#B48E61", "#7E8E8C", "#C7CFC8", "#9C7F6B", "#5D6E6C", "#D9C2AE"];
+  const cGeo = new THREE.BoxGeometry(2.44, 2.6, 12.2);
+  const yard = []; for (let blk = 0; blk < 5; blk++) for (let bz = 0; bz < 7; bz++) for (let col = 0; col < 7; col++) for (let n = 0; n < 6; n++) { if (rnd() < 0.12) continue; const st = 1 + Math.floor(rnd() * 3); for (let s = 0; s < st; s++) yard.push([300 + blk * 30 + col * 2.6 - 9, 1.3 + s * 2.6, -560 + bz * 90 + n * 12.6, pick(CN)]); }
+  for (const col of CN) { const list = yard.filter((y) => y[3] === col); const im = new THREE.InstancedMesh(cGeo, toon(col), list.length); const M = new THREE.Matrix4(); list.forEach((y, i) => { M.makeTranslation(y[0], y[1], y[2]); im.setMatrixAt(i, M); }); im.castShadow = im.receiveShadow = true; site.add(im); }
+  // quay + ship-to-shore cranes + ships
+  const quay = new THREE.Mesh(new THREE.BoxGeometry(40, 3, 1400), toon("#C2C9C3")); quay.position.set(470 - 20, 1.5, -100); quay.receiveShadow = true; site.add(quay);
+  for (let i = 0; i < 9; i++) {
+    const cr = new THREE.Group(), z = -600 + i * 95;
+    for (const dz of [-8, 8]) for (const dx of [-12, 12]) { const leg = new THREE.Mesh(new THREE.BoxGeometry(1.6, 45, 1.6), toon("#E4007F" === "x" ? "" : "#D9C2AE")); leg.position.set(dx, 22.5, dz); cr.add(leg); }
+    const beam = new THREE.Mesh(new THREE.BoxGeometry(110, 4, 6), toon("#D9C2AE")); beam.position.set(25, 46, 0); cr.add(beam);
+    const mh = new THREE.Mesh(new THREE.BoxGeometry(14, 7, 10), toon("#EEF0EA")); mh.position.set(-4, 51, 0); cr.add(mh);
+    cr.position.set(458, 0, z); site.add(shadowy(cr));
+  }
+  const ship = (x, z, len, ry) => {
+    const s = new THREE.Group(); const hull = new THREE.Mesh(new THREE.BoxGeometry(44, 10, len), toon("#3C4E50")); hull.position.y = 5; s.add(hull);
+    const bow = new THREE.Mesh(new THREE.CylinderGeometry(22, 22, 10, 3, 1, false, 0, Math.PI), toon("#3C4E50")); bow.rotation.y = Math.PI / 2; bow.scale.set(1, 1, 0.9); bow.position.set(0, 5, -len / 2); s.add(bow);
+    for (let r = 0; r < Math.floor(len / 14) - 2; r++) for (let c = 0; c < 3; c++) { const cb = new THREE.Mesh(new THREE.BoxGeometry(13, 2.6 * (1 + (r + c) % 3), 12), toon(pick(CN))); cb.position.set(-14 + c * 14, 10 + 1.3 * (1 + (r + c) % 3), -len / 2 + 30 + r * 14); s.add(cb); }
+    const brg = new THREE.Mesh(new THREE.BoxGeometry(36, 18, 12), toon("#F2EEE6")); brg.position.set(0, 19, len / 2 - 22); s.add(brg);
+    s.position.set(x, 0, z); s.rotation.y = ry; site.add(shadowy(s));
+  };
+  ship(530, -380, 300, 0); ship(530, 60, 260, 0); ship(900, 650, 280, 0.35);
+  // trees (instanced dots) along the roads and in the industrial park
+  const tGeo = new THREE.SphereGeometry(5, 10, 8); const trees = []; for (let i = 0; i < 900; i++) { const x = -1400 + rnd() * 1800, z = -1400 + rnd() * 2800; if (x > -360 && x < 290 && z > -170 && z < 160) continue; if (x > 280) continue; if (Math.abs(x + 330) < 18) continue; trees.push([x, z]); }
+  const tIm = new THREE.InstancedMesh(tGeo, toon("#6F8B80"), trees.length); const TM = new THREE.Matrix4(); trees.forEach(([x, z], i) => { const s = 0.7 + rnd() * 0.8; TM.makeScale(s, s, s).setPosition(x, 4, z); tIm.setMatrixAt(i, TM); }); tIm.castShadow = true; site.add(tIm);
+  // land parcels (cleared lots, lawns) and car parks with car rows: texture the empty land
+  for (let i = 0; i < 60; i++) { const w = 80 + rnd() * 220, d = 60 + rnd() * 200; const pc = new THREE.Mesh(new THREE.PlaneGeometry(w, d), toon(pick(["#CAD5CA", "#C3CFC4", "#DCE2D9", "#BFCBBF"]))); pc.rotation.x = -Math.PI / 2; pc.position.set(-1400 + rnd() * 1650, 0.02, -1400 + rnd() * 2800); pc.receiveShadow = true; site.add(pc); }
+  const carGeo = new THREE.BoxGeometry(1.8, 1.4, 4.5); const cars = []; for (const [px, pz, rows] of [[-120, 205, 5], [120, 205, 5], [-420, -60, 8]]) for (let r = 0; r < rows; r++) for (let c = 0; c < 26; c++) if (rnd() < 0.75) cars.push([px - 60 + c * 2.6, pz + r * 7, pick(["#F2EEE6", "#7E8E8C", "#4E5E5D", "#B8C4BC", "#9C7F6B"])]);
+  for (const col of ["#F2EEE6", "#7E8E8C", "#4E5E5D", "#B8C4BC", "#9C7F6B"]) { const L = cars.filter((c) => c[2] === col); const im = new THREE.InstancedMesh(carGeo, toon(col), L.length); const MM = new THREE.Matrix4(); L.forEach((c, i) => { MM.makeTranslation(c[0], 0.7, c[1]); im.setMatrixAt(i, MM); }); im.castShadow = true; site.add(im); }
+  for (const [px, pz, rows] of [[-120, 205, 5], [120, 205, 5], [-420, -60, 8]]) { const lot = new THREE.Mesh(new THREE.PlaneGeometry(72, rows * 7 + 6), toon("#B9C2BC")); lot.rotation.x = -Math.PI / 2; lot.position.set(px - 26, 0.03, pz + rows * 3.5 - 3); lot.receiveShadow = true; site.add(lot); }
+  // other sheds in the park (smaller, plain)
+  for (let i = 0; i < 70; i++) { const w = 60 + rnd() * 90, d = 40 + rnd() * 60; const x = -1300 + rnd() * 1560, z = -1300 + rnd() * 2600; if (x > -380 && z < 330 && z > -340) continue; if (x > 250) continue; if (Math.abs(x + 330) < 70 || Math.abs(z - 260) < 50 || Math.abs(z + 300) < 50) continue; const sh = new THREE.Mesh(new THREE.BoxGeometry(w, 9, d), toon(pick(["#E6E9E3", "#DADFD8", "#CFD6D0"]))); sh.position.set(x, 4.5, z); site.add(shadowy(sh)); }
+
+  // camera: very high, straight down (135 mm ≈ 15° vFOV); the carton hangs 5.4 m below the lens
+  const cam = new THREE.PerspectiveCamera(15, 1080 / 1920, 1, 6000);
+  cam.position.set(130, 4050, -40); cam.up.set(0, 0, -1); cam.lookAt(130, 0, -40);
+  const ctop = canvasTex(1600, 1200, (g, w, h) => {
+    g.fillStyle = C.kraft; g.fillRect(0, 0, w, h);
+    g.fillStyle = "rgba(90,60,30,0.10)"; for (let y = 0; y < h; y += 9) g.fillRect(0, y, w, 2);   // corrugation
+    g.fillStyle = C.tape; g.fillRect(0, h / 2 - 80, w, 160);   // the tape across the seam
+    g.fillStyle = "rgba(255,255,255,0.18)"; g.fillRect(0, h / 2 - 80, w, 18);
+    g.fillStyle = "rgba(60,40,20,0.35)"; g.fillRect(0, h / 2 - 2, w, 4);
+    fit(g, LOGO, 120, 120, 760, 190);   // DAISO printed on the lid
+    // the tag printed on every carton (the through-line)
+    g.save(); g.translate(1180, 880); g.rotate(-0.08); g.fillStyle = C.paper; g.fillRect(-230, -230, 460, 420);
+    g.fillStyle = C.ink; g.font = '900 150px "Inter Display"'; g.textAlign = "center"; g.fillText("RM5.90", 0, 20); g.fillStyle = C.accent; g.fillRect(-190, 70, 380, 34); g.restore();
+    g.fillStyle = "rgba(28,28,33,0.7)"; g.font = '700 64px "Inter Display"'; g.textAlign = "left"; g.fillText("×100,000", 130, 1080);
+  });
+  const carton = new THREE.Mesh(new THREE.BoxGeometry(0.4, 0.3, 0.3), [toon("#B8935F"), toon("#B8935F"), toonMap(ctop), toon("#B8935F"), toon("#A98656"), toon("#A98656")]);
+  const cp = cam.position.clone().add(new THREE.Vector3(-0.2, -5.4, -0.5)); carton.position.copy(cp); carton.rotation.y = ROT + 0.08; scene.add(carton);
+  // its flat shadow on the map (stylised, as the storks' are): where the sun would put it if it flew low
+  const shTex = canvasTex(64, 64, (g) => { g.fillStyle = "rgba(20,36,38,0.55)"; g.fillRect(0, 0, 64, 64); });
+  const csh = new THREE.Mesh(new THREE.PlaneGeometry(0.4 * 760, 0.3 * 760), new THREE.MeshBasicMaterial({ map: shTex, transparent: true, depthWrite: false }));
+  const SC = 4050 / 5.4;   // the shadow sits where the carton projects onto the map, offset like the storks' (sun from top-left)
+  csh.rotation.set(-Math.PI / 2, 0, ROT + 0.08); csh.position.set(cam.position.x - 0.2 * SC + 70, 25, cam.position.z - 0.5 * SC + 95); scene.add(csh);
+  const carLight = new THREE.DirectionalLight("#FFFFFF", 0.0); scene.add(carLight);
+  return { cam, key: carton, line: "This month, Daiso opened its biggest warehouse ever. In Selangor.", after: () => {
+    bubble("Pulau Indah", site.localToWorld(new THREE.Vector3(-150, 20, -40)), cam, 120, -20);
+    bubble("Port Klang", site.localToWorld(new THREE.Vector3(460, 50, -120)), cam, -170, -10);
+  } };
+}
+
+// =====================================================================================================
+// L06 — closing time in the mall: the shop's own light lands on the floor as one RM5.90 tag (B-light-001)
+// =====================================================================================================
+function L06() {
+  const N1 = "#1E2F4F", N2 = "#2C4A73", N3 = "#3E5F8C";   // one slate-blue family
+  scene.background = new THREE.Color(N1);
+  const hemi = new THREE.HemisphereLight("#7A8FC0", "#7A8FC0", 1.0); scene.add(hemi);
+  const sky = new THREE.DirectionalLight("#C9D4F2", 1.15); sky.castShadow = true; sky.shadow.mapSize.set(4096, 4096); sky.shadow.bias = -0.0003;
+  sky.position.set(-8, 14, 9); sky.target.position.set(2, 0, 0); scene.add(sky, sky.target);
+  const sc = sky.shadow.camera; sc.left = -16; sc.right = 16; sc.top = 16; sc.bottom = -16; sc.near = 1; sc.far = 50; sc.updateProjectionMatrix();
+  // corridor floor: big tiles
+  const ft = canvasTex(1024, 1024, (g, w, h) => { g.fillStyle = N2; g.fillRect(0, 0, w, h); g.fillStyle = "rgba(10,18,40,0.35)"; g.fillRect(0, 0, w, 5); g.fillRect(0, 0, 5, h); });
+  ft.wrapS = ft.wrapT = THREE.RepeatWrapping; ft.repeat.set(30 / 1.2, 20 / 1.2);
+  const floor = new THREE.Mesh(new THREE.PlaneGeometry(30, 20), toonMap(ft)); floor.rotation.x = -Math.PI / 2; floor.position.set(2, 0, 6); floor.receiveShadow = true; scene.add(floor);
+  // the shopfront wall + bulkhead above the fronts
+  const wall = new THREE.Mesh(new THREE.BoxGeometry(34, 6, 0.4), toon(N3)); wall.position.set(2, 3, -0.2); scene.add(wall);
+  const bulk = new THREE.Mesh(new THREE.BoxGeometry(34, 0.9, 0.5), toon(N2)); bulk.position.set(2, 4.05, 0.05); scene.add(bulk);
+  for (const x of [-4.6, 2.0, 9.9, 15.6]) { const pil = new THREE.Mesh(new THREE.BoxGeometry(0.5, 4.5, 0.6), toon(N3)); pil.position.set(x, 2.25, 0.1); scene.add(pil); }
+  // the upper floor's slab edge and glass balustrade over the shopfronts (an atrium mall), its lights off
+  const slab = new THREE.Mesh(new THREE.BoxGeometry(34, 0.55, 2.2), toon("#2C4A73")); slab.position.set(2, 5.0, 0.9); scene.add(slab);
+  const bal = new THREE.Mesh(new THREE.BoxGeometry(34, 1.0, 0.04), toon("#3E5F8C")); bal.position.set(2, 5.8, 1.98); scene.add(bal);
+  const rail = new THREE.Mesh(new THREE.BoxGeometry(34, 0.06, 0.08), toon("#6C86B4")); rail.position.set(2, 6.32, 1.98); scene.add(rail);
+  for (let x = -14; x <= 18; x += 1.6) { const pst = new THREE.Mesh(new THREE.BoxGeometry(0.05, 1.0, 0.05), toon("#6C86B4")); pst.position.set(x, 5.8, 1.98); scene.add(pst); }
+  for (let x = -12; x <= 16; x += 3.2) { const lb = new THREE.Mesh(new THREE.BoxGeometry(1.4, 0.05, 0.3), toon("#4F6E98")); lb.position.set(x, 4.71, 1.2); scene.add(lb); }
+  const up = new THREE.Mesh(new THREE.BoxGeometry(34, 4, 0.4), toon("#1B2C4B")); up.position.set(2, 7.4, -0.6); scene.add(up);
+  // left neighbour (x -6..-1.2): grille half down; behind it a window crowded with little dark tags, each its own price
+  const nb = new THREE.Group();
+  const nGlass = new THREE.Mesh(new THREE.PlaneGeometry(5.6, 3.4), toon("#1A2A47")); nGlass.position.set(-1.4, 1.7, 0.02); nb.add(nGlass);
+  const tagGeo = new THREE.ExtrudeGeometry(tagShape(0.12, 0.19, 0.01), { depth: 0.0006, bevelEnabled: false });
+  const nTags = new THREE.InstancedMesh(tagGeo, toon("#6C86B4"), 220); const M = new THREE.Matrix4(), Qn = new THREE.Quaternion(), E = new THREE.Euler();
+  for (let i = 0; i < 220; i++) { const s = 0.6 + rnd() * 1.4; Qn.setFromEuler(E.set(0, 0, (rnd() - 0.5) * 0.6)); M.compose(new THREE.Vector3(-4.0 + rnd() * 5.2, 0.35 + rnd() * 1.75, 0.08 + rnd() * 0.05), Qn, new THREE.Vector3(s, s, 1)); nTags.setMatrixAt(i, M); }
+  nb.add(nTags);
+  const grilleT = canvasTex(256, 512, (g, w, h) => { g.fillStyle = "#4F6E98"; g.fillRect(0, 0, w, h); g.fillStyle = "rgba(10,18,40,0.55)"; for (let y = 0; y < h; y += 16) g.fillRect(0, y, w, 4); });
+  grilleT.wrapS = grilleT.wrapT = THREE.RepeatWrapping; grilleT.repeat.set(1, 6);
+  const grille = new THREE.Mesh(new THREE.BoxGeometry(5.8, 1.4, 0.06), toonMap(grilleT)); grille.position.set(-1.4, 2.85, 0.25); nb.add(grille);
+  const nSign = canvasTex(1200, 220, (g, w, h) => { g.fillStyle = "#28406A"; g.fillRect(0, 0, w, h); g.fillStyle = "#6C86B4"; g.font = '700 120px "Inter Display"'; g.textAlign = "center"; g.fillText("HOMEWARE", w / 2, 155); });
+  const ns = new THREE.Mesh(new THREE.PlaneGeometry(5.4, 0.75), toonMap(nSign)); ns.position.set(-1.4, 4.05, 0.31); nb.add(ns);
+  scene.add(shadowy(nb));
+  // Daiso (x -0.8..9.2): glass front, open doorway, lit interior, lit fascia
+  const dz = new THREE.Group();
+  const interior = canvasTex(2000, 700, (g, w, h) => {
+    g.fillStyle = "#FFE4A8"; g.fillRect(0, 0, w, h);
+    g.fillStyle = "#F0C67E"; for (let x = 40; x < w; x += 300) { g.fillRect(x, 120, 230, h - 120); }
+    g.fillStyle = "#FFE9B8"; for (let x = 40; x < w; x += 300) for (let y = 170; y < h; y += 110) g.fillRect(x + 10, y, 210, 14);
+    g.fillStyle = "#C98F45"; for (let x = 40; x < w; x += 300) for (let y = 120; y < h - 30; y += 110) for (let k = 0; k < 7; k++) g.fillRect(x + 18 + k * 30, y + 60, 20, 44 - (k * 13) % 20);
+  });
+  const glass = new THREE.Mesh(new THREE.PlaneGeometry(7.2, 3.4), basic("#FFFFFF", { map: interior })); glass.position.set(6.0, 1.7, 0.02); dz.add(glass);
+  for (let x = 2.6; x <= 9.5; x += 1.4) { const mul = new THREE.Mesh(new THREE.BoxGeometry(0.08, 3.4, 0.1), toon(N2)); mul.position.set(x, 1.7, 0.08); dz.add(mul); }
+  const door = new THREE.Mesh(new THREE.PlaneGeometry(2.4, 2.9), basic("#FFF1CF")); door.position.set(6.0, 1.45, 0.05); dz.add(door);
+  const fascia = canvasTex(2100, 260, (g, w, h) => { g.fillStyle = "#FFFFFF"; g.fillRect(0, 0, w, h); fit(g, LOGO, 450, 40, 1200, 180); });
+  const fs = new THREE.Mesh(new THREE.PlaneGeometry(7.0, 0.82), basic("#FFFFFF", { map: fascia }));
+  fascia.repeat.set(1, 1); fs.position.set(6.0, 4.05, 0.31); dz.add(fs);
+  scene.add(shadowy(dz));
+  // right neighbour: closed grille, unlit
+  const rg = new THREE.Mesh(new THREE.BoxGeometry(5.4, 3.6, 0.06), toonMap(grilleT.clone())); rg.position.set(12.75, 1.8, 0.25); scene.add(shadowy(rg));
+  // the landing: the doorway's light on the floor, cut as one swing tag with its price (warm only here)
+  const landTex = canvasTex(1100, 1700, (g, w, h) => {
+    g.clearRect(0, 0, w, h);
+    const c = w * 0.22, hr = w * 0.07 * (w / 1.0) / w * 1.0;
+    g.beginPath(); g.moveTo(0, h); g.lineTo(w, h); g.lineTo(w, c); g.lineTo(w - c, 0); g.lineTo(c, 0); g.lineTo(0, c); g.closePath();
+    g.arc(w / 2, c * 0.85, w * 0.07, 0, P2, true); g.fillStyle = "#FFE3A6"; g.fill("evenodd");
+    g.fillStyle = "rgba(150,90,30,0.55)"; g.font = '900 270px "Inter Display"'; g.textAlign = "center"; g.letterSpacing = "-8px"; g.fillText("RM5.90", w / 2 + 6, 880); g.letterSpacing = "0px";
+    g.fillStyle = C.accent; g.fillRect(90, 1010, w - 180, 66);
+  });
+  const land = new THREE.Mesh(new THREE.PlaneGeometry(2.3, 3.55), basic("#FFFFFF", { map: landTex, transparent: true, depthWrite: false }));
+  land.rotation.set(-Math.PI / 2, 0, 0); land.position.set(6.0, 0.012, 0.12 + 1.775); scene.add(land);
+  // the polished floor mirrors the lit front: soft warm bands under each glass bay (flat shapes, B §4)
+  const reflT = canvasTex(64, 256, (g, w, h) => { const gr = g.createLinearGradient(0, 0, 0, h); gr.addColorStop(0, "rgba(255,228,168,0.55)"); gr.addColorStop(1, "rgba(255,228,168,0)"); g.fillStyle = gr; g.fillRect(0, 0, w, h); });
+  for (let x = 2.6; x < 9.4; x += 1.4) { if (Math.abs(x + 0.7 - 6.0) < 1.3) continue; const r = new THREE.Mesh(new THREE.PlaneGeometry(1.25, 3.0), new THREE.MeshBasicMaterial({ map: reflT, transparent: true, depthWrite: false, toneMapped: false }));
+    r.rotation.x = -Math.PI / 2; r.position.set(x + 0.7, 0.008, 1.6); scene.add(r); }
+  const reflN = canvasTex(64, 256, (g, w, h) => { const gr = g.createLinearGradient(0, 0, 0, h); gr.addColorStop(0, "rgba(108,134,180,0.35)"); gr.addColorStop(1, "rgba(108,134,180,0)"); g.fillStyle = gr; g.fillRect(0, 0, w, h); });
+  const rn = new THREE.Mesh(new THREE.PlaneGeometry(5.6, 2.2), new THREE.MeshBasicMaterial({ map: reflN, transparent: true, depthWrite: false })); rn.rotation.x = -Math.PI / 2; rn.position.set(-1.4, 0.008, 1.2); scene.add(rn);
+  // a floor sign of closing time and the mall's floor inlay band (wear and story in the empty foreground)
+  const inlay = new THREE.Mesh(new THREE.PlaneGeometry(40, 0.25), toon("#24406A")); inlay.rotation.x = -Math.PI / 2; inlay.position.set(2, 0.006, 6.2); inlay.receiveShadow = true; scene.add(inlay);
+  const inlay2 = inlay.clone(); inlay2.position.z = 6.7; scene.add(inlay2);
+  const aT = canvasTex(400, 520, (g, w, h) => { g.fillStyle = "#E9EEF8"; g.fillRect(0, 0, w, h); g.fillStyle = "#1E2F4F"; g.font = '900 70px "Inter Display"'; g.textAlign = "center"; g.fillText("CLOSING", w / 2, 160); g.font = '700 46px "Inter Display"'; g.fillText("10:00 PM", w / 2, 250); g.fillStyle = "#6C86B4"; g.fillRect(60, 320, w - 120, 10); g.fillRect(60, 360, w - 180, 10); });
+  const aframe = new THREE.Group(); for (const s2 of [1, -1]) { const pnl = new THREE.Mesh(new THREE.BoxGeometry(0.6, 0.9, 0.02), [toon("#E9EEF8"), toon("#E9EEF8"), toon("#E9EEF8"), toon("#E9EEF8"), toonMap(aT), toonMap(aT)]); pnl.position.set(0, 0.44, s2 * 0.12); pnl.rotation.x = -s2 * 0.26; aframe.add(pnl); }
+  aframe.position.set(-0.2, 0, 2.9); aframe.rotation.y = 0.5; scene.add(shadowy(aframe));
+  // the doorway's spill: a soft trapezoid between the door and the tag (source → landing, two flat shapes)
+  const spill = new THREE.Mesh(new THREE.PlaneGeometry(2.6, 0.12), basic("#FFE3A6")); spill.rotation.x = -Math.PI / 2; spill.position.set(6.0, 0.011, 0.07); scene.add(spill);
+  // props of closing time: a cleaning trolley, a bench, a planter, a bin
+  const props = new THREE.Group();
+  const trolley = new THREE.Group(); const tb = new THREE.Mesh(new THREE.BoxGeometry(0.9, 0.8, 0.5), toon("#4F6E98")); tb.position.y = 0.55; trolley.add(tb);
+  const bucket = new THREE.Mesh(new THREE.CylinderGeometry(0.2, 0.17, 0.3, 16), toon("#6C86B4")); bucket.position.set(0.25, 1.1, 0); trolley.add(bucket);
+  const mop = new THREE.Mesh(new THREE.CylinderGeometry(0.015, 0.015, 1.4, 6), toon("#9FB2D6")); mop.position.set(-0.3, 1.3, 0); mop.rotation.z = 0.15; trolley.add(mop);
+  for (const [x, z] of [[-0.4, -0.2], [0.4, -0.2], [-0.4, 0.2], [0.4, 0.2]]) { const wh = new THREE.Mesh(new THREE.CylinderGeometry(0.06, 0.06, 0.04, 12), toon("#16233D")); wh.rotation.x = Math.PI / 2; wh.position.set(x, 0.06, z); trolley.add(wh); }
+  trolley.position.set(0.6, 0, 1.5); trolley.rotation.y = 0.4; props.add(trolley);
+  const bench = new THREE.Group(); const seat = new THREE.Mesh(new THREE.BoxGeometry(2.0, 0.08, 0.5), toon("#4F6E98")); seat.position.y = 0.45; bench.add(seat);
+  for (const x of [-0.85, 0.85]) { const lg = new THREE.Mesh(new THREE.BoxGeometry(0.08, 0.45, 0.45), toon("#2C4A73")); lg.position.set(x, 0.225, 0); bench.add(lg); }
+  bench.position.set(9.5, 0, 4.4); props.add(bench);
+  const planter = new THREE.Group(); const pot = new THREE.Mesh(new THREE.CylinderGeometry(0.45, 0.38, 0.7, 20), toon("#3E5F8C")); pot.position.y = 0.35; planter.add(pot);
+  for (let i = 0; i < 9; i++) { const lf = new THREE.Mesh(new THREE.SphereGeometry(0.28, 10, 8), toon("#2B4A5E")); lf.position.set((rnd() - 0.5) * 0.6, 0.85 + rnd() * 0.7, (rnd() - 0.5) * 0.6); planter.add(lf); }
+  planter.position.set(2.0, 0, 1.4); props.add(planter);
+  const bin = new THREE.Mesh(new THREE.CylinderGeometry(0.25, 0.25, 0.8, 18), toon("#4F6E98")); bin.position.set(11.6, 0.4, 1.0); props.add(bin);
+  scene.add(shadowy(props));
+  const cam = new THREE.PerspectiveCamera(54, 1080 / 1920, 0.1, 80);
+  cam.fov = 60; cam.updateProjectionMatrix();
+  cam.position.set(-1.6, 6.3, 12.4); cam.lookAt(2.6, 1.6, 0.8);
+  aimAt(cam, new THREE.Vector3(6.0, 0, 1.9), 0.74, 0.6);
+  const near = new THREE.Group();
+  const nslab = new THREE.Mesh(new THREE.BoxGeometry(40, 0.6, 4), toon("#101B33")); nslab.position.set(2, 4.4, 12.3); near.add(nslab);
+  const nglass = new THREE.Mesh(new THREE.BoxGeometry(40, 1.0, 0.03), new THREE.MeshBasicMaterial({ color: "#2C4A73", transparent: true, opacity: 0.35 })); nglass.position.set(2, 5.2, 10.4); near.add(nglass);
+  const nrail = new THREE.Mesh(new THREE.BoxGeometry(40, 0.07, 0.09), toon("#0E1830")); nrail.position.set(2, 5.72, 10.4); near.add(nrail);
+  for (let x = -16; x <= 20; x += 1.6) { const pst = new THREE.Mesh(new THREE.BoxGeometry(0.05, 1.0, 0.05), toon("#0E1830")); pst.position.set(x, 5.2, 10.4); near.add(pst); }
+  // (the near balustrade blocked the floor from this height: kept out)
+  return { cam, key: land, line: "Other shops price each item. Daiso prices the whole shop.", also: { neighbourWindow: nGlass, daisoFascia: fs } };
+}
+
+const S = { L01, L05, L06 }[SHOT]();
+caption(S.line);
+renderer.render(scene, S.cam);
+if (S.after) S.after();
+window.__info = { shot: SHOT, keyProp: screenBox(S.key, S.cam), ...Object.fromEntries(Object.entries(S.also || {}).map(([k, o]) => [k, screenBox(o, S.cam)])) };
+window.__done = true;
+</script>
+</body>
+</html>

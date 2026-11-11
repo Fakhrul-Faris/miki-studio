@@ -1,148 +1,144 @@
 # Script formula
 
-Adopted 2026-10-31, replacing the old Hook/Setup/Guess/Reveal/Turn/Takeaway skeleton (kept in `series-plan.md`'s history
-for reference). Every script is written to this shape, then checked against the list below before it goes to the user.
+**v2, 2026-11-11.** Merges the Fable 5.2 script prompt (`04_episodes/Meikigo TikTok Script Prompt.md`) with the series'
+own rules and the 10 Nov postmortem (`06_analytics/2026-11-10/postmortem.md`). Replaces the 2026-10-31 formula
+(Hook → Stakes → Mechanism → Twist → Payoff → Bridge → End → Follow; see § History). The paste-ready prompt for an
+outside model is `04_episodes/Meikigo TikTok Script Prompt v2.md`; this file is the source of truth if they disagree.
+
+## Who is watching
+
+- 95–99% Malaysia, 85–90% aged 18–34, about two thirds male; 99–100% non-followers from the For You page.
+- They decide in the first second: every video so far loses most viewers at 0:01–0:02.
+- They know ZUS, Mixue, 99 Speedmart, Mr DIY, Grab, McDonald's Malaysia, IKEA on sight; not Costco, Marriott, US banks.
+
+What the data says (17 videos to 10 Nov): only IKEA and McDonald's passed the ~700-view first pool (Malaysian-searched
+brand + a question viewers already had); 6 of 8 follows came from "How is 99 Speedmart so cheap?" and the McDonald's
+machine (30–35 s); search arrives as "<brand> malaysia" and "part 3 4 5"; 3 comments in 17 videos.
+
+## Topic gate (before writing)
+
+1. A brand, shop or habit a Malaysian sees every week **and searches for**.
+2. The hook asks a question the viewer has half-wondered: why is it so cheap, why is it always like that, how does it
+   make money, who really owns it.
+3. One idea; two mechanisms at most.
+4. Ringgit, Malaysian store counts and examples. Foreign-only data → say so and find a Malaysian angle.
+5. Would a viewer say "wait, really?"
+
+Any no → don't write it now. Topic types still allowed: everyday thing nobody questioned; insider secret on a named
+company (the How It Makes Money / How is X so cheap? / Who Secretly Owns What series); founder stories (Malaysian).
+
+## Length
+
+- **Default 55–70 spoken words ≈ 25–35 s.** Time it at the measured rate of the voice in use (the voice is still a
+  test): Kokoro `am_michael` ~2.0 words/s incl. pauses (EX33 68 words/32.0 s, EX35 74/37.4 s); Eleven Nathan ~2.75
+  (EX24 95/34.7 s, EX25 87/31.5 s). Aim for 30–35 s on whichever voice records it.
+- **Exception:** a story with a timeline or several turns gets the length its beats need, 60 s+ allowed (LESSONS §11,
+  EX34). Decide the length from the beats before writing; state the target in `episode.md` (`experiments.md` § 8).
+- Lines of one or two sentences, 15 words at most; sentences under 12 words.
 
 ## The beats
 
-**HOOK → STAKES → MECHANISM → TWIST → PAYOFF → BRIDGE → LOOP**
+**HOOK → OPEN LOOP → MECHANISM 1 → (MECHANISM 2) → PROOF ↔ PAYOFF → END → FOLLOW**
 
-BRIDGE is our brand's addition (the series' "Niche Variant"); it's now optional and tested (below).
-
-| Beat | Job | Rule |
+| Beat | Job | Rules |
 |---|---|---|
-| Hook | A claim or question the viewer must see resolved | Works as on-screen text with sound off. No "Today I'll explain…" |
-| Stakes | The problem, one concrete physical detail | A scene, not a statistic |
-| Mechanism | How it works, one vivid image or analogy | 3–5 short sentences; a named person/thing beats "researchers" or "a company" |
-| Twist | An assumption the viewer held gets flipped | At about the 60% mark. "It wasn't X, it was Y." Without this it's an explainer, not a story |
-| Payoff | Hard numbers, a clear before/after | At least 3 specific numbers total across the script |
-| Bridge | Turn to the viewer's own shop, one concrete scene — the opener rotates (§ Bridge openers, `experiments.md` § 15), never defaults to "now picture your…" | Our named concept gets a title card here or in Twist/Payoff |
-| End | A landing line (rotated: reframe · "next time you…" · callback · question sparingly) | Not a question by default — see the competitor rules below |
-| Follow | "Follow Meikigo for more." | Last line, after the End |
+| Hook | Asks the question | First words, ≤ 12 words, brand in the first three spoken words, a price or number the viewer knows. No setup, greeting, "did you know" or "In 2001". Works as on-screen text with sound off. |
+| Open loop | Rules out the obvious answer | Contradict in the first breath ("It's not the coffee. It's what ZUS refuses to pay for."). Don't give the real answer. |
+| Mechanism 1 | First concrete piece | One picturable fact, one number, one physical detail (a size, a count, a material). |
+| Mechanism 2 | Second piece | Only if new. A few words of re-hook near 10 s ("But that's not the clever part."). |
+| Proof | One number that shows it worked | A single figure, never a list. Before or after the Payoff: the stronger of the two goes last. |
+| Payoff | The real answer, as a reframe | Answers the hook directly; < 12 words, two mirrored halves; repeatable to a friend. This is the twist: the viewer's assumption flips here. |
+| End | A comment or a loop | A forced choice answerable in one word (a matter of opinion), or a line that leads back into the hook. Rotate and log (`experiments.md` § 11). |
+| Follow | "Follow Meikigo for more." | Kept (user, 2026-11-11). Last line, after the End, said flatter so the End lands. |
 
-## The Bridge is optional, and tested
+Whole-script rules:
 
-The Bridge (turning to the viewer's own shop) is the series' default, but whether to include it is itself a tested
-variable (`03_ideas/experiments.md` § 9 Bridge presence), since it's also the moment most likely to read as a pitch and
-cost retention. **Default: on** (series-plan's "every story ends inside a shop" rule).
+- The real answer never appears before the Payoff. A revenue or size figure is Proof, not Payoff ("It makes RM1
+  billion" doesn't answer "why is it cheap" — EX35's mistake).
+- **Series parts never in the voice** ("Part 4", "Follow for Part 4"): they tell a new viewer they missed something.
+  Series name and part go in the caption, a small on-screen label and the pinned comment's next-part vote.
+- **No Bridge to "your shop" in the voice** (off since EX24; the account now serves a general Malaysian audience). Any
+  shop tie-in goes in the caption or pinned comment.
+- Plain spoken English a 12-year-old follows: no "leverages", no "business model" in the voice. No vague intensifiers
+  (huge, massive, crazy, insane, amazing, incredible): name the number, object or gesture.
+- Link lines with "but" and "so", never "and". If two lines could swap unnoticed, it's a list: fix it.
+- Say "you" at least once (their money, their queue, their habit). Use contrast: this brand does X, that one Y.
+- At least three specific, sourced numbers; one number per line; exact numbers (566, not "over 500").
+- Every line gives the animator a new picture; two lines on one picture → merge or cut.
+- No "comment YES if", "wait for the end", fake urgency, deliberate mistakes, factual traps or accusations.
 
-## Bridge openers (added 2026-11-02: "now picture your X in Y" ran five episodes straight, EX12–EX16, before anyone
-noticed — found the same way the angle repeat was found, by logging it)
+## Angle check (before locking)
 
-Six ways into the Bridge, none of them "now picture…". Check `experiments.md` § 15 before writing one; the last 3
-episodes shouldn't share an opener any more than they should share an angle or a hero device.
+Sketch the hook both ways and pick the sharper:
+- **Number-led (analytical):** the price gap or figure opens; mechanisms break it down.
+- **Moment-led (anthropological):** a lived moment opens ("You've stood in that line"); numbers land at Proof.
 
-1. **B1 Fragment, no verb:** "Your bengkel in Klang." — drop straight into the scene, let the next line carry the action.
-2. **B2 Present-tense claim:** "Your bengkel in Klang does this too." — states it as already true, not a request to imagine.
-3. **B3 Causal carry-over:** "That's how your bengkel in Klang should sort too." — ties directly to the Twist/Payoff mechanism just explained.
-4. **B4 Direct instruction:** "Run your bengkel in Klang the same way." — a command aimed at the action, not at "picturing" it.
-5. **B5 Demonstrative:** "Here's your bengkel in Klang:" — a label on the scene that follows, not a scene-setting verb.
-6. **B6 Comparative ellipsis:** "Same at your bengkel in Klang." — the shortest version, leans on the shot to do the rest. When a script tests it **off**: end on
-Payoff → Loop, move any documentary image earlier (Stakes is a natural spot) so the three-ingredient rule still holds,
-and carry the shop tie-in in the caption and pinned comment instead of the narration.
+Draft ten hooks of different types (price gap · contradiction · a thing you do without knowing why · surprising number ·
+impossible question), return three, recommend one. The first one is what every other account wrote. Log angle, hook
+type and ending in `experiments.md` § 14 and don't repeat all three of the last three episodes.
 
-## Competitor-informed rules (2026-10-31)
+## Visual column (the build starts from it)
 
-The user flagged the scripts as repetitive ("it will always be question at the end") and pointed at two competitor scripts
-(how the store exit gates know you didn't pay; hedge funds counting cars from space). What they do, and what we now do:
+- **Frame 0 already moving and odd:** the real logo and the hook's number on an object in the world at 0.0 s, shown in
+  a way people don't see day to day (memories: odd-moving-first-frame, brand-logo-first). Most viewers are muted.
+- Show what each line **literally** says; a metaphor only if the line is one.
+- Numbers and brands on the world's own objects, readable at phone size, clear of the caption band.
+- UI makes physical sense: phones are held by people, never posters on walls.
+- Every claim gets a visual; nothing said only in the voice.
 
-1. **Everyday, viewer's-eye topics are allowed** — the viewer as a customer ("why does the other line move faster?"), not
-   only "your shop". The shop tie-in can live in the caption and pinned comment (Bridge off).
-2. **Contradict in the first breath:** "How do the gates know? They don't." / "Because it usually does."
-3. **Go deep and physical in the Mechanism:** a concrete size, count or material ("38 mm, thinner than paper, 58,000 times
-   a second") and **one** comparison (a tuning fork).
-4. **Put the viewer in the scene** at least once: "Imagine you're walking out with…"
-5. **Name the thing they've lived:** "That's why the alarm goes off even when you did pay." — the "so THAT's why" moment.
-6. **Escalate when the topic allows:** "But X is just the start" → two more cases, each with a number.
-7. **Rotate the ending — no default question.** Pick one per episode and log it (`experiments.md` § 11):
-   reframe line ("They never checked your receipt. They only listened.") · "next time you…" instruction · callback to the
-   hook · a question (sparingly).
-8. **Follow line at the end:** "Follow Meikigo for more." (user, 2026-10-31: put the follow at the end). Its presence and
-   wording are logged (`experiments.md` § 10).
+## Voice text
 
-The beats become: **HOOK → STAKES → MECHANISM → TWIST → PAYOFF → (BRIDGE) → END → FOLLOW**. "Loop" in older episodes =
-END here; a seamless visual loop (S1) can still carry the last frame back to the first.
+Each line in two forms: **display** (captions: "RM8.90") and **spoken** (numbers, money, dates, units as words;
+respellings checked by ear: "Zoos", "ringghit"). Kokoro: plain text, pauses from full stops. Eleven v4: "…" pauses,
+one CAPS word, one [tag] max per line. `voice.md`.
 
-## Length is a variable, not fixed
+## Facts
 
-The formula's native target is 120–170 words / 45–60s. **We don't default to that — length is tested per episode**
-(`03_ideas/experiments.md` § 8 Script length). State the target in `episode.md` and report the actual word count and
-tightened duration once the voice is in.
+Never invent a number, date, price or quote; unsure → UNVERIFIED with what to check. Source and date for every figure,
+Malaysian and recent first. Prices: "about RM16" unless checked in the app on the day. Write a "Not claimed" line
+(what isn't public: margins, rent). Describe how the business works; no accusations.
 
-## Writing rules
+## Deliverables in `episode.md`
 
-- Sentences under 12 words. One idea per sentence.
-- A new fact, image or number roughly every 5s.
-- At least 3 specific numbers; never "a lot", "many", "significantly" when a number exists.
-- **No vague intensifiers** (huge, massive, crazy, insane, amazing, incredible) — name the number, object or gesture
-  instead. Added 2026-11-02, adapted from an external script-writing workflow the user shared.
-- Delete any line that wouldn't make a viewer keep scrolling if it were cut.
-- No filler, no recap of what was just said, no pitch before Payoff.
-- Don't reveal the Twist before its beat.
+1. Topic gate answers. 2. Three hooks (of ten) + the pick. 3. Script table:
+   `| Line | Beat | Voice (display) | Voice (spoken) | On the objects | Visual |` (L01's Visual describes frame 0).
+4. Word count + duration at the voice's rate. 5. Caption: first line the search phrase with "malaysia", one sentence, series
+   name + part, 3–5 hashtags (≥ 2 Malaysian). 6. Pinned comment: next-part binary vote + sources, worded unlike the End.
+7. BM version of the voice (for a BM caption or a later test). 8. Fact sheet + "Not claimed". 9. Log line for
+   `experiments.md`. 10. Self-check below.
 
-## Angle check (added 2026-11-02, before writing the script)
+## Self-check (all yes, or fix before presenting)
 
-Our beats (Hook → Stakes → Mechanism → Twist → Payoff → Bridge → End → Follow) stay fixed; **angle** is which part of
-that skeleton carries the weight, and it's worth naming on purpose instead of defaulting to whichever framing comes
-first. Two angles fit this series (the other two — ACTIONABLE "here's how" and ASPIRATIONAL "before/after" — don't:
-we report other businesses' systems, we don't teach a personal method or a transformation):
+- [ ] Brand in the first three spoken words and on screen, moving, at frame 0
+- [ ] Question asked in the first sentence; delete L01 and the script breaks
+- [ ] Real answer held until the Payoff; the Payoff answers the hook and is a reframe, not a statistic
+- [ ] Within the length target for this topic
+- [ ] Every brand known to a Malaysian 22-year-old
+- [ ] End answerable in one word or loops; no "Part N" in the voice; ends "Follow Meikigo for more."
+- [ ] ≥ 3 numbers, each in the fact sheet and on an object
+- [ ] Every line has its own literal picture
+- [ ] A stranger could repeat the Payoff to a friend after one watch
 
-- **ANALYTICAL:** the number leads. Hook opens on the figure itself (H1 data at frame 0), Mechanism explains the
-  breakdown, Payoff adds a second number as the "so what" comparison.
-- **ANTHROPOLOGICAL:** the moment leads. Hook opens on a felt, familiar scene (H2–H4), Mechanism explains why, Twist
-  flips the assumption, numbers land at Payoff.
+## Example of the shape (don't copy its wording)
 
-**Before locking the script, sketch the hook line both ways** (one sentence each is enough) and pick the sharper one.
-"If the first idea feels obvious, it is — reject it, take the next." Log the angle, hook type and setting in
-`03_ideas/experiments.md` § 14 and check it against the last 3 episodes: if they share an angle, that's a reason to
-pick the other one here, not a coincidence to repeat.
-
-## Topic types
-
-1. **Everyday thing nobody questioned** (store security gates, zip files).
-2. **Unexpected source solves a problem** (a bird's beak fixes a train).
-3. **Insider secret, calling out big corp** (user, 2026-10-31): name the company directly, "insider secret" framing,
-   not a neutral explainer. This is the **How It Makes Money** bank (`03_ideas/content-bank.md` § 2) — hospitals, cinemas,
-   airlines, gyms, printers, Costco's hot dog, McDonald's, banks, petrol stations, supermarkets, hotels, delivery apps.
-
-Topic test: would a viewer say "wait, really?" If no, pick a different topic.
-
-## Hook patterns
-
-1. **Impossible question:** "How does one sick barber cost you forty minutes?"
-2. **Concrete problem:** "Japan's bullet train had a problem."
-3. **Surprising claim:** "Doctors made colonoscopies longer. On purpose."
-4. **Counterintuitive claim:** "This airport fixed complaints by making people walk further."
-
-First frame is already in motion (never a title card); the hook line, if it's on screen, is at least 84px; it's under 12 words.
-
-## Quality checklist
-
-Run before presenting a script. Score 1 per yes; below 6/7, rewrite.
-
-- [ ] First line works as on-screen text with sound off
-- [ ] Exactly one big idea, one analogy
-- [ ] A real twist (an assumption flips), not facts in sequence
-- [ ] At least 3 specific, sourced numbers
-- [ ] The Bridge names "your shop" concretely
-- [ ] The last line invites a comment, share or follow
-- [ ] A stranger could repeat the idea to a friend after one watch
-
-## `episode.md` table shape
-
-| Line | Beat | Voice |
+| Line | Beat | Voice (display) |
 |---|---|---|
-| L01 | Hook | |
-| L02 | Stakes | |
-| L03 | Mechanism | |
-| L04 | Twist | |
-| L05 | Payoff | |
-| L06 | Bridge | |
-| L07 | Loop | |
+| L01 | Hook | ZUS is RM8.90. Starbucks is RM16. Why? |
+| L02 | Open loop | It's not the coffee. It's what ZUS refuses to pay for. |
+| L03 | Mechanism 1 | The first ZUS was a 200-square-foot kiosk in KLCC. No seats. |
+| L04 | Mechanism 2 | But here's the clever part. Over 70% of orders come through the app. |
+| L05 | Mechanism 2 | So it skips the mall's front row for cheaper side streets. |
+| L06 | Proof | By 2024: 566 stores to Starbucks' 411. |
+| L07 | Payoff | Starbucks sells you a seat. ZUS only sells the cup. |
+| L08 | End | So which one are you paying for? |
+| L09 | Follow | Follow Meikigo for more. |
 
-Lines can combine beats (Twist and Payoff often sit in one line) or split a long Mechanism into two; the beat column is what
-matters, not a fixed line count.
+~75 words ≈ 36 s, one line over the default: merge L04–L05 or drop L06 to fit.
 
-## Worked example: EX05 "One Barber Down"
+## History
 
-See `04_episodes/EX05_one-barber-down/episode.md` § Script.
+- **2026-10-31 → 2026-11-11:** Hook → Stakes → Mechanism → Twist → Payoff → Bridge → End → Follow, 7-point checklist,
+  Bridge on by default with six rotating openers (fragment · present-tense claim · causal carry-over · instruction ·
+  demonstrative · comparative ellipsis; never "now picture…"). Stakes and Twist live on as the Open loop and the
+  Payoff-as-reframe. If the Bridge is ever tested again, reuse those openers.
+- Before 2026-10-31: Hook / Setup / Guess / Reveal / Turn / Takeaway (`series-plan.md`).

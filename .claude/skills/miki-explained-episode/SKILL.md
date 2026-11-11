@@ -92,15 +92,14 @@ a primary source and quote it in `episode.md` § Sources. Unconfirmable details 
 
 ### 2. Script + shot list
 Copy `templates/episode.md`. **Angle check first** (`00_bible/script-formula.md` § Angle check): sketch the hook both
-Analytical and Anthropological ways, check the last 3 episodes in `03_ideas/experiments.md` § 14, pick whichever angle
-they don't share. Write to the formula: **Hook → Stakes → Mechanism → Twist →
-Payoff → Bridge → Loop**, run its quality checklist, and fix anything scoring below 6/7 before presenting it. Length
-(word count, seconds) is a tested variable (`03_ideas/experiments.md` § 8) — state the target, don't default to a fixed
-count. The named concept (glossary) gets a title card around Twist/Payoff; the Bridge (optional, tested) turns to the viewer's shop with a rotating opener (never "now picture…",
-`00_bible/script-formula.md` § Bridge openers);
-the End rotates (reframe · "next time you…" · callback · question sparingly) and the last line is "Follow Meikigo for more."
-Apply the competitor-informed rules in script-formula.md (everyday viewer-POV topics, contradict early, one physical
-detail + one comparison, "that's why…", escalation). Rotate business types (retail, F&B, clinics…), not barbers by default. Voice direction for Nathan, narrator (ElevenLabs `v4k7NzxipnuJNJtrKxob`, `00_bible/voice.md`).
+number-led and moment-led ways, check the last 3 episodes in `03_ideas/experiments.md` § 14, pick whichever angle
+they don't share. Run the **topic gate** first, then write to the v2 formula (2026-11-11): **Hook → Open loop →
+Mechanism (1–2) → Proof ↔ Payoff → End → Follow**. Default 55–70 words ≈ 28–35 s at Kokoro's ~2.0 words/s; timeline
+stories get the length their beats need. The Payoff is a reframe that answers the hook (a revenue figure is Proof, not
+Payoff); no "Part N" and no "your shop" Bridge in the voice (both go in the caption / pinned comment); the End is a
+one-word forced choice or a loop (rotate, log § 11); the last line is "Follow Meikigo for more." Return the full
+deliverables list and pass the self-check in `script-formula.md` before presenting. Rotate business types (retail,
+F&B, clinics…), not barbers by default. Voice direction for Nathan, narrator (ElevenLabs `v4k7NzxipnuJNJtrKxob`, `00_bible/voice.md`).
 **Scene brief, before the shot list:** read `03_ideas/experiments.md` § 13 (the device log, last 5 episodes). Pick a
 **hero device** — the 3D mechanism the Twist/Payoff beat is built from — that differs from the last 2 episodes' hero
 devices; supporting devices may repeat but not more than 2 should match the immediately previous episode. Plan **one

@@ -16,17 +16,18 @@ Every fact in the script, with its source. No unverified claims.
 
 ## Script (`00_bible/script-formula.md`; length is a tested variable, `03_ideas/experiments.md` § 8 — state the target)
 
-| Line | Beat | Voice |
-|---|---|---|
-| L01 | Hook | |
-| L02 | Stakes | |
-| L03 | Mechanism | |
-| L04 | Twist | |
-| L05 | Payoff | |
-| L06 | Bridge ("now picture your shop…") | |
-| L07 | Loop | |
+| Line | Beat | Voice (display) | Voice (spoken, Kokoro) | On the objects | Visual |
+|---|---|---|---|---|---|
+| L01 | Hook (frame 0: logo + number, moving) | | | | |
+| L02 | Open loop | | | | |
+| L03 | Mechanism 1 | | | | |
+| L04 | Mechanism 2 (optional, re-hook) | | | | |
+| L05 | Proof | | | | |
+| L06 | Payoff (reframe) | | | | |
+| L07 | End (forced choice or loop) | | | | |
+| L08 | Follow | Follow Meikigo for more. | | — | Meikigo end card |
 
-Word count: _ (target: _) · Checklist score: _/7
+Word count: _ (target: _, at ~2.0 words/s) · Self-check: _/9 · Fact sheet + "Not claimed" in § Sources
 
 ## Shot list (cut to the voice)
 

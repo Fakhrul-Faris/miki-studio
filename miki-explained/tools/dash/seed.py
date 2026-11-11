@@ -9,7 +9,14 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent)); import db
 
 ME = Path(__file__).resolve().parents[2]                          # miki-explained/
-SLOTS = ["12:30", "18:00", "21:00"]                               # rotated, so post time is an experiment
+SLOTS = ["12:30", "18:00", "21:00"]                               # old rotation (before the 13–26 Nov time test)
+# Post-time test (user 2026-11-11): one post a day at 20:00 for a week, then 12:30 for a week; compare first-24-hour views,
+# keep the winner, switch to TikTok Studio's follower-activity chart once there are a few hundred followers.
+TEST = [(datetime.date(2026, 11, 13), datetime.date(2026, 11, 19), "20:00"), (datetime.date(2026, 11, 20), datetime.date(2026, 11, 26), "12:30")]
+def slot_for(day, k):
+    for a, b, hm in TEST:
+        if a <= day <= b: return hm
+    return SLOTS[k % 3]
 
 
 def field(doc, name):
@@ -81,12 +88,12 @@ def main():
                 day = posted[ep] if re.match(r"\d{4}-\d\d-\d\d", str(posted[ep])) else None
                 c.execute("insert into posts(episode, platform, posted_at) values(?, 'tiktok', ?) on conflict(episode, platform) do nothing",
                           (ep, day))
-        if "--plan" in sys.argv:                                  # one post a day, slots rotated, from tomorrow
+        if "--plan" in sys.argv:                                  # one post a day from tomorrow; the slot follows the time test
             taken = {r[0] for r in c.execute("select substr(planned_at,1,10) from posts where planned_at is not null and posted_at is null")}
             day, k = datetime.date.today() + datetime.timedelta(days=1), 0
             for r in c.execute(f"select id from episodes where status='ready' and id in {db.ACTIVE} and id not in (select episode from posts where platform='tiktok') order by id").fetchall():
                 while day.isoformat() in taken: day += datetime.timedelta(days=1)
-                c.execute("insert into posts(episode, platform, planned_at) values(?, 'tiktok', ?)", (r[0], f"{day.isoformat()}T{SLOTS[k % 3]}"))
+                c.execute("insert into posts(episode, platform, planned_at) values(?, 'tiktok', ?)", (r[0], f"{day.isoformat()}T{slot_for(day, k)}"))
                 taken.add(day.isoformat()); k += 1
     with db.conn() as c:
         for r in c.execute("select id, status, title from episodes order by id"): print(r["id"], r["status"], r["title"])

@@ -62,17 +62,21 @@ happens through a breakout. **Every post is aimed at the one pattern that has pr
 4. **Caption:** the first line is the searchable question with "<brand> Malaysia"; 3–5 hashtags (brand, #malaysia,
    #bisnes, #businessmodel); "Meikigo" stays in the bio.
 5. **Series by name:**
-   - "How is X so cheap?": Part 1 99 Speedmart, Part 2 Mr DIY, Part 3 next.
-   - The end line promises the next part.
+   - "How is X so cheap?": Part 1 99 Speedmart, Part 2 Mr DIY, Part 3 ZUS, Part 4 Daiso.
+   - The part number lives in the caption, a small on-screen label and the pinned vote, never in the voice (script-formula v2).
    - The pinned comment is a two-option vote for the next one.
 6. **Comment bait that works:** ask the viewer to name something local ("which branch…", "which one next…").
-7. **Cadence:** 1–2 posts a day, **only new-strategy episodes**. No more old stock on US or European topics (EX20, EX22,
+7. **Cadence and time:** **one post a day** during the post-time test (user 2026-11-11): **20:00 from 13 to 19 Nov, 12:30 from
+   20 to 26 Nov**; compare first-24-hour views on 27 Nov, keep the winner; switch to TikTok Studio's follower-activity chart at a
+   few hundred followers (`05_calendar/calendar.md`). Only new-strategy episodes. No more old stock on US or European topics (EX20, EX22,
    EX23 are shelved).
 8. **Style:** Style A (EX29 baseline) is the only style with mature, positive numbers. Style B (EX33 baseline) and
    Style C are still being measured.
-9. **Voice:** Kokoro am_michael (the user prefers it). Spell brand names so they're said right (e.g. "ringghit").
+9. **Voice:** Nathan (ElevenLabs); Kokoro opted out 2026-11-11. Check brand names by ear.
 
 ## 6. Measurement
+- **Series scoreboard** (2026-11-11): `python3 miki-explained/tools/series_score.py` after every export → `06_analytics/series-scoreboard.md`;
+  the series portfolio and the keep/drop rule are in `03_ideas/content-bank.md` § 6.
 - Pull a TikTok Studio export **every 2–3 days**: next on 12 Nov. Save it under `06_analytics/YYYY-MM-DD/`. Log each
   post's 24 h and 72 h numbers in the dashboard.
 - The numbers to watch per post:

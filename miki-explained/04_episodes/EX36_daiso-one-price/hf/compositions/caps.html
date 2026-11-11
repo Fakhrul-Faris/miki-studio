@@ -1,0 +1,168 @@
+<template>
+  <style>
+    @font-face { font-family: "Inter Display"; font-weight: 500; src: url("assets/fonts/InterDisplay-Medium.ttf"); }
+@font-face { font-family: "Inter Display"; font-weight: 700; src: url("assets/fonts/InterDisplay-Bold.ttf"); }
+@font-face { font-family: "Inter Display"; font-weight: 900; src: url("assets/fonts/InterDisplay-Black.ttf"); }
+
+    #root { position: absolute; inset: 0; }
+    #caps-in .cb, #caps-in .ci { position: absolute; inset: 0; }
+    #caps-in .cp { position: absolute; border-radius: 14px; background: rgba(14,14,16,0.82); }
+    #caps-in .cw { position: absolute; font-family: "Inter Display"; font-weight: 500; font-size: 36px; line-height: 36px; color: #EDE7DC; white-space: nowrap; }
+  </style>
+  <div id="root" data-composition-id="caps" data-width="1080" data-height="1920" data-layout-allow-caption-zone><div id="caps-in">
+    <div id="cap0" class="clip cb" data-start="0.300" data-duration="2.100"><div class="ci"><div class="cp" style="top:1351.7px; height:68.3px;"></div><span class="cw" style="left:263.1px; top:1365.7px;">Everything</span><span class="cw" style="left:444.8px; top:1365.7px;">at</span><span class="cw" style="left:485.5px; top:1365.7px;">Daiso</span><span class="cw" style="left:585.2px; top:1365.7px;">costs</span><span class="cw" style="left:681.9px; top:1365.7px;">RM5.90.</span></div></div>
+    <div id="cap1" class="clip cb" data-start="2.933" data-duration="0.900"><div class="ci"><div class="cp" style="top:1351.7px; height:68.3px;"></div><span class="cw" style="left:493.5px; top:1365.7px;">How?</span></div></div>
+    <div id="cap2" class="clip cb" data-start="4.050" data-duration="1.417"><div class="ci"><div class="cp" style="top:1351.7px; height:68.3px;"></div><span class="cw" style="left:429.4px; top:1365.7px;">It's</span><span class="cw" style="left:487.1px; top:1365.7px;">not</span><span class="cw" style="left:548.9px; top:1365.7px;">a</span><span class="cw" style="left:577.6px; top:1365.7px;">sale.</span></div></div>
+    <div id="cap3" class="clip cb" data-start="5.467" data-duration="2.067"><div class="ci"><div class="cp" style="top:1351.7px; height:68.3px;"></div><span class="cw" style="left:249.2px; top:1365.7px;">That</span><span class="cw" style="left:331.9px; top:1365.7px;">price</span><span class="cw" style="left:421.6px; top:1365.7px;">hasn't</span><span class="cw" style="left:529.4px; top:1365.7px;">moved</span><span class="cw" style="left:650.1px; top:1365.7px;">since</span><span class="cw" style="left:744.8px; top:1365.7px;">2018.</span></div></div>
+    <div id="cap4" class="clip cb" data-start="8.350" data-duration="4.233"><div class="ci"><div class="cp" style="top:1303.7px; height:116.3px;"></div><span class="cw" style="left:250.3px; top:1317.7px;">Its</span><span class="cw" style="left:299.1px; top:1317.7px;">founder</span><span class="cw" style="left:433.8px; top:1317.7px;">got</span><span class="cw" style="left:496.5px; top:1317.7px;">tired</span><span class="cw" style="left:579.2px; top:1317.7px;">of</span><span class="cw" style="left:620.9px; top:1317.7px;">pricing</span><span class="cw" style="left:739.7px; top:1317.7px;">every</span><span class="cw" style="left:317.7px; top:1365.7px;">item,</span><span class="cw" style="left:406.4px; top:1365.7px;">so</span><span class="cw" style="left:454.1px; top:1365.7px;">he</span><span class="cw" style="left:503.9px; top:1365.7px;">made</span><span class="cw" style="left:604.6px; top:1365.7px;">one</span><span class="cw" style="left:674.3px; top:1365.7px;">price.</span></div></div>
+    <div id="cap5" class="clip cb" data-start="12.950" data-duration="2.300"><div class="ci"><div class="cp" style="top:1351.7px; height:68.3px;"></div><span class="cw" style="left:272.7px; top:1365.7px;">But</span><span class="cw" style="left:337.4px; top:1365.7px;">one</span><span class="cw" style="left:407.1px; top:1365.7px;">price</span><span class="cw" style="left:496.9px; top:1365.7px;">needs</span><span class="cw" style="left:605.6px; top:1365.7px;">huge</span><span class="cw" style="left:696.3px; top:1365.7px;">orders.</span></div></div>
+    <div id="cap6" class="clip cb" data-start="15.283" data-duration="2.367"><div class="ci"><div class="cp" style="top:1351.7px; height:68.3px;"></div><span class="cw" style="left:237.6px; top:1365.7px;">Bigger</span><span class="cw" style="left:352.3px; top:1365.7px;">orders,</span><span class="cw" style="left:473.0px; top:1365.7px;">cheaper</span><span class="cw" style="left:613.7px; top:1365.7px;">factory</span><span class="cw" style="left:736.4px; top:1365.7px;">prices.</span></div></div>
+    <div id="cap7" class="clip cb" data-start="18.150" data-duration="3.017"><div class="ci"><div class="cp" style="top:1303.7px; height:116.3px;"></div><span class="cw" style="left:240.7px; top:1317.7px;">This</span><span class="cw" style="left:318.4px; top:1317.7px;">month,</span><span class="cw" style="left:439.1px; top:1317.7px;">Daiso</span><span class="cw" style="left:538.9px; top:1317.7px;">opened</span><span class="cw" style="left:670.6px; top:1317.7px;">its</span><span class="cw" style="left:718.3px; top:1317.7px;">biggest</span><span class="cw" style="left:407.1px; top:1365.7px;">warehouse</span><span class="cw" style="left:593.9px; top:1365.7px;">ever.</span></div></div>
+    <div id="cap8" class="clip cb" data-start="21.183" data-duration="1.000"><div class="ci"><div class="cp" style="top:1351.7px; height:68.3px;"></div><span class="cw" style="left:445.1px; top:1365.7px;">In</span><span class="cw" style="left:483.9px; top:1365.7px;">Selangor.</span></div></div>
+    <div id="cap9" class="clip cb" data-start="22.550" data-duration="1.800"><div class="ci"><div class="cp" style="top:1351.7px; height:68.3px;"></div><span class="cw" style="left:308.1px; top:1365.7px;">Other</span><span class="cw" style="left:408.8px; top:1365.7px;">shops</span><span class="cw" style="left:515.5px; top:1365.7px;">price</span><span class="cw" style="left:605.2px; top:1365.7px;">each</span><span class="cw" style="left:692.9px; top:1365.7px;">item.</span></div></div>
+    <div id="cap10" class="clip cb" data-start="24.350" data-duration="1.917"><div class="ci"><div class="cp" style="top:1351.7px; height:68.3px;"></div><span class="cw" style="left:309.1px; top:1365.7px;">Daiso</span><span class="cw" style="left:408.8px; top:1365.7px;">prices</span><span class="cw" style="left:516.5px; top:1365.7px;">the</span><span class="cw" style="left:578.2px; top:1365.7px;">whole</span><span class="cw" style="left:683.9px; top:1365.7px;">shop.</span></div></div>
+    <div id="cap11" class="clip cb" data-start="27.450" data-duration="2.717"><div class="ci"><div class="cp" style="top:1351.7px; height:68.3px;"></div><span class="cw" style="left:315.2px; top:1365.7px;">So,</span><span class="cw" style="left:375.9px; top:1365.7px;">RM5.90:</span><span class="cw" style="left:520.6px; top:1365.7px;">worth</span><span class="cw" style="left:622.4px; top:1365.7px;">it</span><span class="cw" style="left:652.1px; top:1365.7px;">or</span><span class="cw" style="left:693.8px; top:1365.7px;">not?</span></div></div>
+    <div id="cap12" class="clip cb" data-start="30.167" data-duration="1.800"><div class="ci"><div class="cp" style="top:1351.7px; height:68.3px;"></div><span class="cw" style="left:342.4px; top:1365.7px;">Follow</span><span class="cw" style="left:456.1px; top:1365.7px;">Meikigo</span><span class="cw" style="left:592.9px; top:1365.7px;">for</span><span class="cw" style="left:646.6px; top:1365.7px;">more.</span></div></div>
+  </div></div>
+  <script>
+    (() => {
+      const tl = gsap.timeline({ paused: true });
+      gsap.set("#cap0 .cp", { left: 241.1, width: 597.9 });
+tl.fromTo("#cap0 .cp", { opacity: 0 }, { opacity: 1, duration: 0.17, ease: "power2.out" }, 0.300);
+gsap.set("#cap0 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" });
+tl.fromTo("#cap0 .cw:nth-of-type(1)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 0.300);
+tl.fromTo("#cap0 .cw:nth-of-type(2)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 0.633);
+tl.fromTo("#cap0 .cw:nth-of-type(3)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 0.817);
+tl.fromTo("#cap0 .cw:nth-of-type(4)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 1.200);
+tl.fromTo("#cap0 .cw:nth-of-type(5)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 1.500);
+tl.fromTo("#cap0 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" }, { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)", duration: 0.12, ease: "power2.out", immediateRender: false }, 1.440);
+tl.fromTo("#cap0 .ci", { opacity: 1 }, { opacity: 0, duration: 0.13, ease: "power1.in", immediateRender: false }, 2.270);
+gsap.set("#cap1 .cp", { left: 471.5, width: 137.0 });
+tl.fromTo("#cap1 .cp", { opacity: 0 }, { opacity: 1, duration: 0.17, ease: "power2.out" }, 2.933);
+gsap.set("#cap1 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" });
+tl.fromTo("#cap1 .cw:nth-of-type(1)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 2.933);
+tl.fromTo("#cap1 .ci", { opacity: 1 }, { opacity: 0, duration: 0.13, ease: "power1.in", immediateRender: false }, 3.703);
+gsap.set("#cap2 .cp", { left: 407.4, width: 265.2 });
+tl.fromTo("#cap2 .cp", { opacity: 0 }, { opacity: 1, duration: 0.17, ease: "power2.out" }, 4.050);
+gsap.set("#cap2 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" });
+tl.fromTo("#cap2 .cw:nth-of-type(1)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 4.050);
+tl.fromTo("#cap2 .cw:nth-of-type(2)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 4.283);
+tl.fromTo("#cap2 .cw:nth-of-type(3)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 4.433);
+tl.fromTo("#cap2 .cw:nth-of-type(4)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 4.567);
+tl.fromTo("#cap2 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" }, { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)", duration: 0.12, ease: "power2.out", immediateRender: false }, 4.507);
+tl.fromTo("#cap2 .ci", { opacity: 1 }, { opacity: 0, duration: 0.13, ease: "power1.in", immediateRender: false }, 5.337);
+gsap.set("#cap3 .cp", { left: 227.2, width: 625.6 });
+tl.fromTo("#cap3 .cp", { opacity: 0 }, { opacity: 1, duration: 0.17, ease: "power2.out" }, 5.467);
+gsap.set("#cap3 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" });
+tl.fromTo("#cap3 .cw:nth-of-type(1)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 5.467);
+tl.fromTo("#cap3 .cw:nth-of-type(2)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 5.617);
+tl.fromTo("#cap3 .cw:nth-of-type(3)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 5.833);
+tl.fromTo("#cap3 .cw:nth-of-type(4)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 6.183);
+tl.fromTo("#cap3 .cw:nth-of-type(5)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 6.367);
+tl.fromTo("#cap3 .cw:nth-of-type(6)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 6.633);
+tl.fromTo("#cap3 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" }, { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)", duration: 0.12, ease: "power2.out", immediateRender: false }, 6.573);
+tl.fromTo("#cap3 .ci", { opacity: 1 }, { opacity: 0, duration: 0.13, ease: "power1.in", immediateRender: false }, 7.403);
+gsap.set("#cap4 .cp", { left: 228.3, width: 623.3 });
+tl.fromTo("#cap4 .cp", { opacity: 0 }, { opacity: 1, duration: 0.17, ease: "power2.out" }, 8.350);
+gsap.set("#cap4 .cp", { clipPath: "inset(0px 0.0px 48.0px 0.0px round 14px)" });
+tl.fromTo("#cap4 .cw:nth-of-type(1)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 8.350);
+tl.fromTo("#cap4 .cw:nth-of-type(2)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 8.533);
+tl.fromTo("#cap4 .cw:nth-of-type(3)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 8.883);
+tl.fromTo("#cap4 .cw:nth-of-type(4)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 9.167);
+tl.fromTo("#cap4 .cw:nth-of-type(5)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 9.583);
+tl.fromTo("#cap4 .cw:nth-of-type(6)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 9.767);
+tl.fromTo("#cap4 .cw:nth-of-type(7)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 10.117);
+tl.fromTo("#cap4 .cp", { clipPath: "inset(0px 0.0px 48.0px 0.0px round 14px)" }, { clipPath: "inset(0px 0.0px 48.0px 0.0px round 14px)", duration: 0.12, ease: "power2.out", immediateRender: false }, 10.057);
+tl.fromTo("#cap4 .cw:nth-of-type(8)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 10.383);
+tl.fromTo("#cap4 .cp", { clipPath: "inset(0px 0.0px 48.0px 0.0px round 14px)" }, { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)", duration: 0.12, ease: "power2.out", immediateRender: false }, 10.323);
+tl.fromTo("#cap4 .cw:nth-of-type(9)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 10.883);
+tl.fromTo("#cap4 .cw:nth-of-type(10)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 11.050);
+tl.fromTo("#cap4 .cw:nth-of-type(11)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 11.250);
+tl.fromTo("#cap4 .cw:nth-of-type(12)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 11.467);
+tl.fromTo("#cap4 .cw:nth-of-type(13)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 11.683);
+tl.fromTo("#cap4 .ci", { opacity: 1 }, { opacity: 0, duration: 0.13, ease: "power1.in", immediateRender: false }, 12.453);
+gsap.set("#cap5 .cp", { left: 250.7, width: 578.6 });
+tl.fromTo("#cap5 .cp", { opacity: 0 }, { opacity: 1, duration: 0.17, ease: "power2.out" }, 12.950);
+gsap.set("#cap5 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" });
+tl.fromTo("#cap5 .cw:nth-of-type(1)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 12.950);
+tl.fromTo("#cap5 .cw:nth-of-type(2)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 13.150);
+tl.fromTo("#cap5 .cw:nth-of-type(3)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 13.367);
+tl.fromTo("#cap5 .cw:nth-of-type(4)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 13.683);
+tl.fromTo("#cap5 .cw:nth-of-type(5)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 14.033);
+tl.fromTo("#cap5 .cw:nth-of-type(6)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 14.350);
+tl.fromTo("#cap5 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" }, { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)", duration: 0.12, ease: "power2.out", immediateRender: false }, 14.290);
+tl.fromTo("#cap5 .ci", { opacity: 1 }, { opacity: 0, duration: 0.13, ease: "power1.in", immediateRender: false }, 15.120);
+gsap.set("#cap6 .cp", { left: 215.6, width: 648.9 });
+tl.fromTo("#cap6 .cp", { opacity: 0 }, { opacity: 1, duration: 0.17, ease: "power2.out" }, 15.283);
+gsap.set("#cap6 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" });
+tl.fromTo("#cap6 .cw:nth-of-type(1)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 15.283);
+tl.fromTo("#cap6 .cw:nth-of-type(2)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 15.633);
+tl.fromTo("#cap6 .cw:nth-of-type(3)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 16.133);
+tl.fromTo("#cap6 .cw:nth-of-type(4)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 16.317);
+tl.fromTo("#cap6 .cw:nth-of-type(5)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 16.750);
+tl.fromTo("#cap6 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" }, { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)", duration: 0.12, ease: "power2.out", immediateRender: false }, 16.690);
+tl.fromTo("#cap6 .ci", { opacity: 1 }, { opacity: 0, duration: 0.13, ease: "power1.in", immediateRender: false }, 17.520);
+gsap.set("#cap7 .cp", { left: 218.7, width: 642.6 });
+tl.fromTo("#cap7 .cp", { opacity: 0 }, { opacity: 1, duration: 0.17, ease: "power2.out" }, 18.150);
+gsap.set("#cap7 .cp", { clipPath: "inset(0px 0.0px 48.0px 0.0px round 14px)" });
+tl.fromTo("#cap7 .cw:nth-of-type(1)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 18.150);
+tl.fromTo("#cap7 .cw:nth-of-type(2)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 18.383);
+tl.fromTo("#cap7 .cw:nth-of-type(3)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 18.767);
+tl.fromTo("#cap7 .cw:nth-of-type(4)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 19.150);
+tl.fromTo("#cap7 .cw:nth-of-type(5)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 19.433);
+tl.fromTo("#cap7 .cw:nth-of-type(6)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 19.617);
+tl.fromTo("#cap7 .cp", { clipPath: "inset(0px 0.0px 48.0px 0.0px round 14px)" }, { clipPath: "inset(0px 0.0px 48.0px 0.0px round 14px)", duration: 0.12, ease: "power2.out", immediateRender: false }, 19.557);
+tl.fromTo("#cap7 .cw:nth-of-type(7)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 19.917);
+tl.fromTo("#cap7 .cp", { clipPath: "inset(0px 0.0px 48.0px 0.0px round 14px)" }, { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)", duration: 0.12, ease: "power2.out", immediateRender: false }, 19.857);
+tl.fromTo("#cap7 .cw:nth-of-type(8)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 20.267);
+tl.fromTo("#cap7 .ci", { opacity: 1 }, { opacity: 0, duration: 0.13, ease: "power1.in", immediateRender: false }, 21.037);
+gsap.set("#cap8 .cp", { left: 423.1, width: 233.7 });
+tl.fromTo("#cap8 .cp", { opacity: 0 }, { opacity: 1, duration: 0.17, ease: "power2.out" }, 21.183);
+gsap.set("#cap8 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" });
+tl.fromTo("#cap8 .cw:nth-of-type(1)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 21.183);
+tl.fromTo("#cap8 .cw:nth-of-type(2)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 21.283);
+tl.fromTo("#cap8 .ci", { opacity: 1 }, { opacity: 0, duration: 0.13, ease: "power1.in", immediateRender: false }, 22.053);
+gsap.set("#cap9 .cp", { left: 286.1, width: 507.9 });
+tl.fromTo("#cap9 .cp", { opacity: 0 }, { opacity: 1, duration: 0.17, ease: "power2.out" }, 22.550);
+gsap.set("#cap9 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" });
+tl.fromTo("#cap9 .cw:nth-of-type(1)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 22.550);
+tl.fromTo("#cap9 .cw:nth-of-type(2)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 22.767);
+tl.fromTo("#cap9 .cw:nth-of-type(3)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 23.050);
+tl.fromTo("#cap9 .cw:nth-of-type(4)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 23.433);
+tl.fromTo("#cap9 .cw:nth-of-type(5)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 23.667);
+tl.fromTo("#cap9 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" }, { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)", duration: 0.12, ease: "power2.out", immediateRender: false }, 23.607);
+tl.fromTo("#cap9 .ci", { opacity: 1 }, { opacity: 0, duration: 0.13, ease: "power1.in", immediateRender: false }, 24.220);
+gsap.set("#cap10 .cp", { left: 287.1, width: 505.9 });
+tl.fromTo("#cap10 .cp", { opacity: 0 }, { opacity: 1, duration: 0.17, ease: "power2.out" }, 24.350);
+gsap.set("#cap10 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" });
+tl.fromTo("#cap10 .cw:nth-of-type(1)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 24.350);
+tl.fromTo("#cap10 .cw:nth-of-type(2)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 24.683);
+tl.fromTo("#cap10 .cw:nth-of-type(3)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 25.017);
+tl.fromTo("#cap10 .cw:nth-of-type(4)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 25.233);
+tl.fromTo("#cap10 .cw:nth-of-type(5)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 25.367);
+tl.fromTo("#cap10 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" }, { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)", duration: 0.12, ease: "power2.out", immediateRender: false }, 25.307);
+tl.fromTo("#cap10 .ci", { opacity: 1 }, { opacity: 0, duration: 0.13, ease: "power1.in", immediateRender: false }, 26.137);
+gsap.set("#cap11 .cp", { left: 293.2, width: 493.6 });
+tl.fromTo("#cap11 .cp", { opacity: 0 }, { opacity: 1, duration: 0.17, ease: "power2.out" }, 27.450);
+gsap.set("#cap11 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" });
+tl.fromTo("#cap11 .cw:nth-of-type(1)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 27.450);
+tl.fromTo("#cap11 .cw:nth-of-type(2)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 27.833);
+tl.fromTo("#cap11 .cw:nth-of-type(3)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 28.867);
+tl.fromTo("#cap11 .cw:nth-of-type(4)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 28.967);
+tl.fromTo("#cap11 .cw:nth-of-type(5)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 29.150);
+tl.fromTo("#cap11 .cw:nth-of-type(6)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 29.283);
+tl.fromTo("#cap11 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" }, { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)", duration: 0.12, ease: "power2.out", immediateRender: false }, 29.223);
+tl.fromTo("#cap11 .ci", { opacity: 1 }, { opacity: 0, duration: 0.13, ease: "power1.in", immediateRender: false }, 30.037);
+gsap.set("#cap12 .cp", { left: 320.4, width: 439.2 });
+tl.fromTo("#cap12 .cp", { opacity: 0 }, { opacity: 1, duration: 0.17, ease: "power2.out" }, 30.167);
+gsap.set("#cap12 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" });
+tl.fromTo("#cap12 .cw:nth-of-type(1)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 30.167);
+tl.fromTo("#cap12 .cw:nth-of-type(2)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 30.450);
+tl.fromTo("#cap12 .cw:nth-of-type(3)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 30.850);
+tl.fromTo("#cap12 .cw:nth-of-type(4)", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.23, ease: "power2.out" }, 31.067);
+tl.fromTo("#cap12 .cp", { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)" }, { clipPath: "inset(0px 0.0px 0.0px 0.0px round 14px)", duration: 0.12, ease: "power2.out", immediateRender: false }, 31.007);
+tl.fromTo("#cap12 .ci", { opacity: 1 }, { opacity: 0, duration: 0.13, ease: "power1.in", immediateRender: false }, 31.837);
+      window.__timelines["caps"] = tl;
+    })();
+  </script>
+</template>

@@ -77,6 +77,7 @@ the wide ones.
 | Style A rebuilt at eye level after a note about detail (v2) | answered a quality note by changing the style | fix only what the note names; locked traits stay |
 | using an old pipeline (EX26 plate pushes) for a new style | habit | design from the bible, not the last episode |
 | the window-light patch proposed again for EX32 after EX28 ("don't use windows light on every episode. chase new idea") | reusing my last good idea | each episode's light comes from its own story (EX32: the printer's scan bar and print head); list the last 3 episodes' light ideas and don't repeat one |
+| EX36 art direction v1 cited BIBLE-B north-star ids from memory, never looked at them, and packed 4–6 objects into every frame ("do you use the skill we learn when we did art direction analysis homework?") | I used the bible as a citation list instead of doing the method | open the north stars at 768 px (`series-bible/work/B/view/`) before any frame brief; write each frame as Ref → Idea → Decision → Eye → Feeling → Not generic because → Moves → Handover; one decision per frame; then check the light idea against the last 3 episodes and the window-light rule |
 
 ## 7. Time and process
 

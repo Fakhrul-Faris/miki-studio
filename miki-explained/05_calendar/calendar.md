@@ -42,10 +42,11 @@ Two posts a day, 12:30 and 21:00 MYT (memory `tiktok-goal-nov-2026`). Captions, 
 | Tue 10 Nov | 21:00 | EX29 Mr DIY Pt 2 (`EX29-Final.mp4`) · Style A baseline | ready (Telegram /ex29); schedule in TikTok Studio |
 | Wed 11 Nov | 12:30 | EX30 Mixue's real customer (`EX30-Final.mp4`) · Style C (raea painted) | ready (Telegram /ex30); schedule in TikTok Studio |
 | Wed 11 Nov | 20:00 | EX31 Grab's cut (`EX31-Final.mp4`, v2 60 fps 34.2 s) · Style A | v2 ready 18:41 (user notes fixed); Telegram /ex31 holds v1 until re-pushed |
-| Thu 12 Nov | 12:30 | EX32 The ink is the business (`EX32-Final.mp4`) · Style B | ready (Telegram /ex32); check HP Store prices; schedule in TikTok Studio |
-| Thu 12 Nov | 21:00 | EX33 One owner (`EX33-Final.mp4`) · Style B upgraded (3D) | ready (Telegram /ex33); check licences + A-Look; schedule in TikTok Studio |
-| Fri 13 Nov | 12:30 | EX34 One ringgit, one airline (`EX34-Final.mp4`) · Style B (EX33 baseline+) | ready (Telegram /ex34); check the 25-min turnaround; schedule in TikTok Studio |
-| Fri 13 Nov | 21:00 | EX35 How is ZUS so cheap? Part 3 (`EX35-Final.mp4`) · Style A, white world | ready (Telegram /ex35); check prices in both apps; schedule in TikTok Studio |
+| Fri 13 Nov | 20:00 | EX35 How is ZUS so cheap? Part 3 (`EX35-Final.mp4`) · Style A, white world | ready (Telegram /ex35); check prices in both apps; schedule in TikTok Studio |
+| Sat 14 Nov | 20:00 | EX33 One owner (`EX33-Final.mp4`) · Style B upgraded (3D) | ready (Telegram /ex33); check licences + A-Look; schedule in TikTok Studio |
+| Sun 15 Nov | 20:00 | EX36 How is Daiso so cheap? Part 4 (`EX36-Final.mp4`, 33.4 s) · Style B (EX33 baseline), Nathan voice | ready (Telegram /ex36); check RM5.90 in store / Daiso MY app; if EX35's Part 4 vote picks KK Mart, bill this as Part 5; schedule in TikTok Studio |
+| Mon 16 Nov | 20:00 | EX32 The ink is the business (`EX32-Final.mp4`) · Style B | ready (Telegram /ex32); check HP Store prices; schedule in TikTok Studio |
+| Tue 17 Nov | 20:00 | EX34 One ringgit, one airline (`EX34-Final.mp4`) · Style B (EX33 baseline+) | ready (Telegram /ex34); check the 25-min turnaround; schedule in TikTok Studio |
 
 **Views snapshot 2026-11-08 (TikTok Studio, views · likes · comments):** EX21 Kodak (6 Nov 12:30) 693 · 19 · 0 ·
 EX09 Other Line (6 Nov) 647 · 30 · 0 · EX10 Popcorn (7 Nov 21:00) 629 · 20 · 0 · EX24 McDonald's (8 Nov 12:30, hours old) 431 · 18 · 1.
@@ -56,6 +57,14 @@ Telegram: EX24–EX30 finals pushed 2026-11-09; dashboard updated (EX24–EX27 p
 **Style test (2026-11-08):** Style A = smooth iso v2 (EX25 99 Speedmart look, raea) vs Style B = flat geometry v3 (EX27,
 HyperFrames, `00_bible/flat-v3-playbook.md`) vs Style C = illustrated plates (EX26 Starbucks, user-generated plates +
 depth camera + overlays, `00_bible/plates-playbook.md`). Compare views, 2-s and full-watch rate, follows per video in TikTok Studio.
+
+**Post-time test (user 2026-11-11, applied the same day):** one post a day, **20:00 from Fri 13 to Thu 19 Nov**, then
+**12:30 from Fri 20 to Thu 26 Nov**; compare first-24-hour views (dashboard `/stats`) on Fri 27 Nov, keep the winner, and switch
+to TikTok Studio's follower-activity chart once there are a few hundred followers. Malaysian guides point at 7–10 pm
+(Wed/Fri strongest) or 6–9 pm; studies disagree, and timing is a small lever next to the first second and completion.
+Already scheduled in TikTok Studio and left as they are: EX28 Thu 12 Nov 12:30, EX29 Thu 12 Nov 21:00. EX20 (old stock) is
+held during the test. The dashboard planner (`tools/dash/seed.py --plan`) follows the test windows. Needs 9 more episodes
+(18–26 Nov) after EX34 on 17 Nov.
 
 Status: scheduled = in TikTok Studio · ready = exported · queued = next to script · ☐ = idea (verify → script → build).
 Production: one finished episode a day is more than the pipeline makes today (about one per working day once media is in).

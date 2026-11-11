@@ -17,6 +17,7 @@ Editing, camera and animation tests (one per episode): `03_ideas/experiments.md`
 3. Series pitches
 4. Next focus: story types, global (shorts and long-edu)
 5. Series: Everyday Owners (ordinary people who quietly owned a piece of business)
+6. **Series portfolio (2026-11-11): the live strategy — fifteen series, each tested on ~5 videos, kept or dropped by numbers**
 
 ## 1. Stories (single episodes, by lane)
 
@@ -161,3 +162,44 @@ claims strictly); dates and amounts from major outlets or primary records; flag 
 
 Add a row to the right table with: the story, a draft hook, the lead to verify (with where to verify it), what it lands on
 in the shop, and ☐. New series go in § 3 with three example episodes. Ideas from the user go in as given, then get a hook.
+
+## 6. Series portfolio (2026-11-11) — the live content strategy
+
+Source: the user's research note (11 Nov: web research + the account's own analytics), checked against
+`06_analytics/2026-11-10/tiktok-2026-11-10.csv` (every own-data claim in it matched). **Every episode idea below is a question
+to research, not a fact:** verify the premise against a primary source before scripting (🔍 until then). Most web sources are
+marketing blogs; only TikTok's trend report and news items are strong.
+
+**Rule:** each series is a bet tested on about **five videos**, then kept or dropped on the scoreboard
+(`python3 miki-explained/tools/series_score.py` → `06_analytics/series-scoreboard.md`): keep if follows per 1k views ≥ 2 × the
+account median (floor 0.5) **or** watched-full ≥ 10 %. Tags live in `06_analytics/series.json` — add every new episode there.
+
+**The container (proposed, to start after the post-time test's first week): "30 hari, 30 bisnes Malaysia"** — one Malaysian
+business a day, the day number on screen in frame one (a numbered run gives cold viewers a reason to follow; Khairul Aming's
+"30 Hari 30 Resepi" is the local proof of the format). Episodes inside come from the series below. First ten days: S06 Versus,
+S07 Food economics, S02 "Why is it always like that?". After ten, compare series on the scoreboard and double the winner.
+
+| ID | Series | Evidence | Status (11 Nov scoreboard) | Episode ideas (🔍 all) |
+|---|---|---|---|---|
+| S01 | Why is [Malaysian brand] so cheap? | 99 Speedmart: 6.6 % likes, 5 saves, 3 follows (4.1 / 1k, best) | testing 1/5 measured; EX29, EX35, EX36 queued | Mixue, Eco-Shop, AirAsia fares, mamak roti canai, KK Mart |
+| S02 | Why is it always like that? | McDonald's machine: the only comments (3), 5 shares, 3 follows | testing 1/5 | Grab costs more when it rains · the Touch 'n Go lane is always jammed · cinema popcorn costs more than the ticket · banks close counters early · mamak tables on the road |
+| S03 | It's not bad design. It's the business. | IKEA: top views (1,973), longest watch (15.8 s) | testing 3/5 (with .99, close-door: weak) | Mr DIY narrow aisles · eggs and milk at the back of Lotus's / Aeon · Family Mart soft-serve at the counter · no clocks in the mall · the escalator walk-around |
+| S04 | Why isn't it in Malaysia? / Why did it leave? | Costco: highest search share (3.1 %), all "costco malaysia" | not started | no Costco here · Tesco → Lotus's · Carrefour left · Uber left · no In-N-Out / Chick-fil-A |
+| S05 | The queue (Meikigo link) | Other line: 14.1 s, 10.5 % full | **below the keep line after 5** (0.34 follows / 1k) — keep at most 1 in 5 as the Meikigo bridge, Malaysian settings only | bank, klinik, JPJ, the barber on Friday, the ER |
+| S06 | Versus | comparison fills comments (blog claim); targets the weakest number | not started | GrabFood vs Foodpanda vs ShopeeFood: the cut · Shopee vs Lazada vs TikTok Shop: cheapest · ZUS vs Gigi vs Tealive · KK Mart vs 7-Eleven vs Family Mart · Mixue vs every ice-cream chain · AirAsia vs the bus |
+| S07 | Food economics | food is the top Malaysian category (blog claim) | not started | where your RM10 nasi lemak goes · a pasar malam stall's night · teh tarik RM1.50 → RM3 · how a mamak stays open 24 h · why Ramly is still cheap · how much of bubble tea is tea |
+| S08 | How [Malaysian brand] makes money | Shopee 11.11 (partial, 123 views) | testing 1/5; EX30, EX31 posted today | — |
+| S09 | Founder origin stories | TikTok Next 2026: real connection, founder-led | EX34 queued | Ramly · 99 Speedmart · Mr DIY · Sambal Nyet (TikTok → shelves) · ZUS's 200 sq ft kiosk · Tealive after Chatime |
+| S10 | Who secretly owns what | — | EX33 queued | — |
+| S11 | Global brand, Malaysian price | — | EX28, EX32 queued | — |
+| S12 | What just happened? (≤ 48 h after the news) | search intent (TikTok Next 2026) | not started | Lee Biscuits' Johor factory (Oct 2026) · Flash Express leaving Malaysia (Jan 2026). Neutral and factual; explain the business, take no side |
+| S13 | One number | hardest to copy (blog claim) | not started | 99 Speedmart stores opened a year · Mr DIY revenue per store · the float in Touch 'n Go eWallet · ZUS cups per outlet per day. Number on screen at frame one; source always shown |
+| S14 | You asked | a community-ask post beat the channel average (TikTok report) | not started | end videos asking which business next; answer the best comment with a reply-to-comment video |
+| S15 | Recurring character: the kedai boss | original animation IP rising in MY (blog) | not started; needs a character design (no primitive people: MPFB / library figures) | raises the price 50 sen, loses half his regulars · hires a second barber, the queue gets longer · a discount that earns less · ignores no-shows for a month |
+| X00 | Legacy: US / abstract / psychology | bank, .99, Marriott, close-door, Disney averaged 7–10 s, 0 follows | **stop** | — |
+
+**Notes from the research:** 15–30 s videos have the best engagement rate, 120–180 s the best median views (one 6 M-video
+benchmark): fix retention on shorts first, then test one 60–90 s deep-dive a week. Faceless daily accounts typically reach
+1,000 followers in 60–90 days. Platform rules target repetitive, mass-produced video and unlabelled realistic AI content:
+vary the visuals and label AI content where required.
+
