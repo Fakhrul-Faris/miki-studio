@@ -3,7 +3,7 @@
 Status: **v2 final 2026-11-11** `export/EX31-Final.mp4` (34.2 s incl. the Meikigo end card, **60 fps**, −14 LUFS) — user notes fixed: smooth camera
 (camera as data, speed/turn checks), one eased car move at 9.4–13.6 s, jam cars keep driving, no 180° turn at 27–28 s, road
 flicker (soft-shadow crawl), clearcoat car paint, real asphalt colour, amber neighbour windows, SFX under the voice ×0.45.
-v1 (30 fps) kept as `export/EX31-Final_v1-30fps.mp4`. Slot Wed 11 Nov 20:00 (user).
+v1 (30 fps) kept as `_old/EX31-Final_v1-30fps.mp4` (out of export/ so the Telegram push sees one final). Slot Wed 11 Nov 20:00 (user).
 Strategy: Malaysian everyday business · timely (Parliament reply 5 Nov 2026) · 25–30 s · **Style A** (WORKING-RULES §1;
 starts from the EX29 baseline and must not repeat its 9 listed failures).
 
