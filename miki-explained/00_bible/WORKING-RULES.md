@@ -81,6 +81,26 @@ detail, its close readable objects or its calm motion. Notes and gotchas: `00_bi
 | Motion | **Not a camera move over a still.** Plates are the look reference: real motion comes from Seedance (start and end keyframes per shot) and/or a raea rebuild; my overlays (logo, numbers, captions) go on the plates' own surfaces. |
 | Renderer | ~~Seedream → Seedance~~ — **the user has no Seedream/Dreamina subscription** (2026-11-09). Build C locally: raea painted look (`<Look mode="paint">`) on a modelled night world, or ask what generator the user does have. |
 
+### Style D — the macro object (user 2026-11-12: "i want 1:1 from lighting, to camera motion, to model"; "unlock all")
+
+**How to build one: `series-bible/RECIPE-D.md`** (the EX38 recipe, step by step; user approved EX38 preview v2 on 2026-11-13: "i really really love this. everything is perfect"). Start a new episode by copying `04_episodes/EX38_ecoshop-rm260/build/`. **Before drafting anything (script, shot list, board, code): read the recipe, then ask the user its § 0.1 questions and wait** (user 2026-11-13: "go through the recipe and ask me question before drafting anything").
+Reference: three videos by the Instagram account preporato (`Video from Facebook*.mp4` in `miki-explained/`); main target the TV-box
+video (`04_episodes/EX38_ecoshop-rm260/refs/ref_hero.jpg`). First episode EX38. For this format the user unlocked, by name: the EX15
+caption panel, the high isometric camera, the 30 s length and Nathan's pace.
+| Trait | Value |
+|---|---|
+| Subject | One everyday object from the business, at macro detail, on a real surface. Realistic library models. |
+| Light | Dark room, one soft top light, shallow depth of field, bloom. **One saturated accent = the brand colour**, used only on what the line is about. |
+| Camera | **A new setup every 2–3 s** (B: 36 in 83 s), joined by camera flights and object morphs, almost no hard cuts. Full vocabulary: rack focus, orbit to top-down, crane, eye-level frontal, low angle, macro, scale travel. Read `series-bible/STUDY-D.md` before every Style D build. (Corrected 2026-11-12: I first wrote "one continuous move", which produced a 5-setup film.) |
+| Pace | Voice ~3.4 words/s, 55–90 s. A new on-screen event (label, number, glow, object) about every second, on the word. |
+| Captions | Word by word at the top, **animated** (STUDY-D § 6): word blurs in over 2 frames, earlier words drop to light grey, the box draws on (dots → edges → fill), the phrase fades out before the next. |
+| Objects | Change state on the words: x-ray, open, slice, multiply with a counter, become a chart. |
+| Voice | The user records in ElevenLabs and imports it (2026-11-12: "the voice from voicestudio is trash"). No VoiceStudio. |
+| Text | Source line top-left from frame one; small disclaimers ("illustration", "average"); labels in spaced capitals on thin leader lines. |
+| Cover | 9:16 still from the world: 2–3 line capital headline top-left, one line in the accent colour, one small subtitle. |
+| Script | The user's pasted technique (2026-11-12): frame-0 text ≤ 8 words, one idea, end text = a question, loop note, **no follow line**. |
+| Renderer | raea. |
+
 ## 2. Rules for every style (house rules)
 
 - The **real business logo is on screen from frame 1**. Use official files only (`02_kit/brand/logos/`; sources noted).
@@ -97,6 +117,7 @@ detail, its close readable objects or its calm motion. Notes and gotchas: `00_bi
 
 | Date | What I showed | Verdict (user's words) | Lesson |
 |---|---|---|---|
+| 2026-11-12 | EX38 preview v1 (Style D, Eco-Shop, 59 s) | "i was hoping for a similar camera work style and composition as the reference … only have move, pan and zoom … lazy work … only have 1 setup … subtitle should be animated with in and out animation. the highlight also repetitive with no animation … the voice from voicestudio is trash … learn from the reference videos frame by frame … i do not approve this pass" | I studied the references at 1 frame/s and built from a summary. Study at 5 frames/s (30 for type), write the shot log, then plan setups per line at the reference's density (`series-bible/STUDY-D.md`). Count setups and events per line before showing. Voice is the user's (ElevenLabs). |
 | 2026-11-11 | EX36 first 60 fps preview (Style B, Daiso) | "we're opt out kokoro. we use nathan … change to different set of sound effect? tone it down a bit … weird founder figure. doesn't look like a human … change to RM instead of yen … i don't know what that halo thing is? … should've no shadow here … shops light flickering" | Never build people from primitives: use the MPFB library figures (back view, held pose). Prices on screen in RM even for a foreign back-story. Machines are opaque, readable objects; a translucent shell reads as a halo. No stylised drop shadow on a top-down map. No on/off light strobes to show time: one smooth light move. SFX: 4–6 library sounds on key moments, bus ×0.3. |
 | 2026-11-11 | EX31 final (30 fps), before posting | "fix the camera velocity making sure its in-out is smooth curve … flicker issue on the road … 00:14 … janky sudden stop car path on 0:11 … 0:27 the cab sudden turned … fix the texture and material" | The camera is data like the vehicles (`paths.py` writes it; the film reads it) and gets a speed + turn-rate check: no move above ~130°/s or ~40 m/s, every stretch between cuts smoothed. One eased move per car action (never stop + full-speed restart); moving traffic never stops dead; heading ignores a cut's teleport. Soft sun shadows (`soft_shadow_size` > 0.5) crawl on the road under a tracking camera: 0.5 + `mapSize` 8192 + cascades at the tracking distance. |
 | 2026-11-11 | EX35 preview (white world, 10 fps flipbook) | "tone down the white … buildings pretty white washing … lack of texture … the world is pretty empty … slight flickering on shop's base … chair and table … easily missed … illogical visual, the app is poster/screen placed on the wall … make it 60fps … add meikigo logo at the end … tone down the sound effect" | A white world still needs value range: toned-down off-whites (#d7d0c4–#e6e0d5), relief maps everywhere, darker roofs and roads so the top-down reads. Fill the world (people, scooters, signboards, bins, a bus stop, traffic timed clear of the reads). Every UI device must make physical sense: phones are held by people (a card above the customer), never posters on shutters. Put the thing the line names where the camera looks. Previews at the film's frame rate when motion is judged. Meikigo end card on every episode (silent). SFX under the voice (sfx bus ×0.45). |

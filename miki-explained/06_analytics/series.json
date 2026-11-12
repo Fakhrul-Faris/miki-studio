@@ -19,16 +19,71 @@
     "X00": "Legacy: US / abstract / psychology (stop)"
   },
   "episodes": {
-    "EX01V3": "S05", "EX04": "X00", "EX05": "S05", "EX06": "X00", "EX07": "X00", "EX08": "S03", "EX09": "S05", "EX10": "X00",
-    "EX11": "S05", "EX12": "S03", "EX13": "S05", "EX14": "S03", "EX15": "X00", "EX16": "S05", "EX17": "X00", "EX19": "X00",
-    "EX20": "X00", "EX21": "X00", "EX22": "X00", "EX23": "X00", "EX24": "S02", "EX25": "S01", "EX26": "X00", "EX27": "S08",
-    "EX28": "S11", "EX29": "S01", "EX30": "S08", "EX31": "S08", "EX32": "S11", "EX33": "S10", "EX34": "S09", "EX35": "S01",
-    "EX36": "S01"
+    "EX01V3": "S05",
+    "EX04": "X00",
+    "EX05": "S05",
+    "EX06": "X00",
+    "EX07": "X00",
+    "EX08": "S03",
+    "EX09": "S05",
+    "EX10": "X00",
+    "EX11": "S05",
+    "EX12": "S03",
+    "EX13": "S05",
+    "EX14": "S03",
+    "EX15": "X00",
+    "EX16": "S05",
+    "EX17": "X00",
+    "EX19": "X00",
+    "EX20": "X00",
+    "EX21": "X00",
+    "EX22": "X00",
+    "EX23": "X00",
+    "EX24": "S02",
+    "EX25": "S01",
+    "EX26": "X00",
+    "EX27": "S08",
+    "EX28": "S11",
+    "EX29": "S01",
+    "EX30": "S08",
+    "EX31": "S08",
+    "EX32": "S11",
+    "EX33": "S10",
+    "EX34": "S09",
+    "EX35": "S01",
+    "EX36": "S01",
+    "EX37": "S07",
+    "EX38": "S01"
   },
   "_lengths": "seconds, for episodes the dashboard has no duration for (postmortem 10 Nov, files on the Air)",
-  "lengths": { "EX14": 46.3, "EX16": 37.7, "EX07": 28.0, "EX15": 45.0, "EX26": 27.8, "EX27": 36.2, "EX19": 61.4, "EX24": 35.2, "EX25": 32.0 },
+  "lengths": {
+    "EX14": 46.3,
+    "EX16": 37.7,
+    "EX07": 28.0,
+    "EX15": 45.0,
+    "EX26": 27.8,
+    "EX27": 36.2,
+    "EX19": 61.4,
+    "EX24": 35.2,
+    "EX25": 32.0
+  },
   "_title_map": "CSV titles that can't be matched to a stored caption",
-  "title_map": { "The .99 Trick": "EX08" },
+  "title_map": {
+    "The .99 Trick": "EX08"
+  },
   "_overrides": "CSV rows that came out malformed (fused Total Play Time / Avg Watch Time); values from postmortem 10 Nov",
-  "overrides": { "EX21": { "avg_watch": 13.95, "full_pct": 8.9, "follows": 0, "search_pct": 0.3 }, "EX06": { "avg_watch": 10.8, "full_pct": 5.7, "follows": 0, "search_pct": 0.1 } }
+  "overrides": {
+    "EX21": {
+      "avg_watch": 13.95,
+      "full_pct": 8.9,
+      "follows": 0,
+      "search_pct": 0.3
+    },
+    "EX06": {
+      "avg_watch": 10.8,
+      "full_pct": 5.7,
+      "follows": 0,
+      "search_pct": 0.1
+    }
+  }
 }

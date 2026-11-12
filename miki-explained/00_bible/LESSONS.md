@@ -78,6 +78,7 @@ the wide ones.
 | using an old pipeline (EX26 plate pushes) for a new style | habit | design from the bible, not the last episode |
 | the window-light patch proposed again for EX32 after EX28 ("don't use windows light on every episode. chase new idea") | reusing my last good idea | each episode's light comes from its own story (EX32: the printer's scan bar and print head); list the last 3 episodes' light ideas and don't repeat one |
 | EX36 art direction v1 cited BIBLE-B north-star ids from memory, never looked at them, and packed 4–6 objects into every frame ("do you use the skill we learn when we did art direction analysis homework?") | I used the bible as a citation list instead of doing the method | open the north stars at 768 px (`series-bible/work/B/view/`) before any frame brief; write each frame as Ref → Idea → Decision → Eye → Feeling → Not generic because → Moves → Handover; one decision per frame; then check the light idea against the last 3 episodes and the window-light rule |
+| EX37 Style A stills cost hours on raea gotchas: a price board kept its old text; a label never grew; frames silently never rendered; the kitchen shot looked at a plaster wall | raea fixes a part's shape on its first frame (Text3D content and size are shape); a Cylinder with a negative height makes raea REFUSE the frame (my `timeout … | grep` hid the REFUSED line); the closed shophouse models have a solid wall behind the shutter | text variants = separate named parts shown by scale; animate size by transform scale; clamp every computed size > 0; never filter a render's output without REFUSED/APPLIED; interiors use `shophouse_A_open.glb` |
 
 ## 7. Time and process
 
@@ -146,3 +147,13 @@ is not on point … i like the ex33 better."
 | the jam cars stop dead at 15.6 s | ease-in with nothing after it | moving traffic keeps going out of frame |
 | the car turns 180° while parked (0:27–0:28) | heading taken from frame-to-frame motion, so a cut's teleport turned it backwards | ignore any step over 1 m when computing heading |
 | the road flickers under the tracking camera (0:14) | big soft sun (`soft_shadow_size` 1.2): Bevy's dithered penumbra crawls as the camera moves | sun 0.5, `mapSize` 8192, `firstCascade` at the tracking distance |
+
+## 13. "1:1 with the reference" built from a summary (EX38 v1, 2026-11-12)
+
+| What went wrong | Why | Now |
+|---|---|---|
+| 5 setups in 59 s where the reference has one every 2.3 s; camera only pushed, panned and pulled | I looked at the reference at 1 frame/s and trusted a cut detector ("0 cuts" → "one continuous move") | For a "copy this" brief: 5 frames/s sheets of the whole reference, a shot log (setup, camera, events, times), and a count of setups per second **before** any plan. `series-bible/STUDY-D.md` is the pattern |
+| Captions switched on with no animation; a static highlight box | I copied the caption's look from a still | Read type animation at the video's full frame rate; write it as timings (frames) before coding |
+| Showed a full preview before the user saw a shot list or a board | I treated "all yes" as approval of whatever I built | A new format still goes shot list → board → build (WORKING-RULES §7); "yes" to a plan is not a yes to skipping its gates |
+| Generated the voice in VoiceStudio, could not hear it, shipped it in the preview | I can check words by transcript, not quality | Voice quality is the user's ear; never present a generated voice as usable |
+
