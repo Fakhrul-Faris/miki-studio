@@ -36,7 +36,7 @@ function DeskSet({ n }: { n: number }) {
   // 3–5 step 1: the certificate slides out of a dark slot, the stamp lands, a clock sweeps four hours
   P.push(<Mesh3d key="slot" transform={Transform.fromXyz(SLOT[0], FY + 0.03, SLOT[2] - 0.06)}><Cuboid half_size={[0.2, 0.03, 0.1]} /><StandardMaterial base_color="#2a2c31" metallic={0.4} perceptual_roughness={0.35} /></Mesh3d>);
   P.push(<Mesh3d key="slotl" transform={Transform.fromXyz(SLOT[0], FY + 0.061, SLOT[2] + 0.035)}><Cuboid half_size={[0.16, 0.0015, 0.004]} /><StandardMaterial base_color={YEL} emissive={glow(YHOT, n === 3 ? 2.5 : 0.6)} /></Mesh3d>);
-  const out = n < 3 ? 0 : n === 3 ? on(22, 0.6, -0.3) : 1, stamp = n < 4 ? 0 : n === 4 ? on(26, 0.25, -0.1) : 1;
+  const out = n < 3 ? 0 : n === 3 ? on(17, 1.1, -0.15) : 1, stamp = n < 4 ? 0 : n === 4 ? on(26, 0.25, -0.1) : 1;
   if (out > 0.01) P.push(<Card key="cert" k="cert" p={[CERT[0], FY + 0.0015, lerp(SLOT[2] + 0.02, CERT[2] + 0.04, out)]} size={[0.297, 0.21]} tex="cert" rx={-Math.PI / 2} rz={0.06} em={0.08}>
     {stamp > 0.01 ? <Mesh3d name="stamp" transform={Transform.fromXyz(0.07, -0.05, 0.0015 + (1 - stamp) * 0.06).withScale(sc3(lerp(1.4, 1, stamp)))}><Cuboid half_size={[0.065, 0.033, 0.0002]} /><StandardMaterial base_color_texture={TX("stamp_kkm")} alpha_mode="Blend" emissive={glow(YHOT, 0.6)} emissive_texture={TX("stamp_kkm")} /></Mesh3d> : null}</Card>);
   { const sw = n === 5 ? lin(W(30) - 0.1, W(32) + 0.2) : n > 5 ? 1 : 0, ang = sw * 4 * Math.PI / 6;
@@ -46,7 +46,7 @@ function DeskSet({ n }: { n: number }) {
       P.push(<Mesh3d key={"cw" + h} name={"cw" + h} transform={Transform.fromXyz(CLK[0] + Math.sin(a) * 0.06, CLK[1] + Math.cos(a) * 0.06, CLK[2] + 0.003).withRotation(Quat.fromEuler("XYZ", 0, 0, -a))}><Cuboid half_size={[0.012, 0.006, 0.0006]} /><StandardMaterial base_color={YEL} emissive={glow(YHOT, 1.4)} /></Mesh3d>); } }
   // 6–8 step 2: the vaccination card flips face up on a tray; three price tags; a 36-month ring
   P.push(<Mesh3d key="tray" transform={Transform.fromXyz(VAX[0], FY + 0.005, VAX[2])}><Cuboid half_size={[0.16, 0.005, 0.11]} /><StandardMaterial base_color="#a9adb4" metallic={0.6} perceptual_roughness={0.3} /></Mesh3d>);
-  { const fl = n < 6 ? 0 : n === 6 ? on(36, 0.45, -0.2) : 1;
+  { const fl = n < 6 ? 0 : n === 6 ? on(33, 0.5, -0.1) : 1;
     P.push(<Card key={"vax" + (fl > 0.5)} k={"vax" + (fl > 0.5)} p={[VAX[0], FY + 0.012 + Math.sin(Math.PI * fl) * 0.05, VAX[2]]} size={[0.1712, 0.108]} tex={fl > 0.5 ? "vax" : "pack_side"} rx={lerp(Math.PI / 2, -Math.PI / 2, fl)} rz={0.1} em={0.15} />); }
   ["rm50", "rm80", "rm120"].forEach((t, i) => { const u = n < 7 ? 0 : n === 7 ? on(i === 0 ? 39 : i === 1 ? 40 : 41, 0.3, -0.15) : 1;
     if (u > 0.01) P.push(<Card key={"pt" + t} k={"pt" + t} p={DX(0.16 + i * 0.12, FY + 0.028 * u, 0.06)} size={[0.1, 0.05]} tex={`tag_${t}`} rx={lerp(-Math.PI / 2, -0.4, u)} ry={-0.2 + i * 0.1} em={0.3} />); });
@@ -110,7 +110,7 @@ function CouncilSet() {
 const VV = [300, 0, 300], CART2 = [VV[0] + 0.2, 0, VV[2] - 0.15];
 function CartSet({ n }: { n: number }) {
   const P: any[] = [<Mesh3d key="vf" transform={Transform.fromXyz(VV[0], -0.02, VV[2])}><Cuboid half_size={[6, 0.02, 6]} /><StandardMaterial base_color="#30333a" normal_map_texture={S("tex/concrete_tiles_nor_gl_1k.jpg")} uv_transform={Affine2.fromScale([8, 8])} perceptual_roughness={0.55} /></Mesh3d>];
-  const cartIn = n === 14 ? on(92, 0.6, -0.35) : 1, can = n === 15 ? on(99, 0.6, -0.3) : 0, real = n === 15 ? on(106, 0.4, -0.25) : 0;
+  const cartIn = n === 14 ? on(89, 0.9, -0.1) : 1, can = n === 15 ? on(99, 0.6, -0.3) : 0, real = n === 15 ? on(106, 0.4, -0.25) : 0;
   const pk = n === 14 ? on(96, 0.5, -0.25) : 1, top = [CART2[0] + 0.45, CT + 0.012, CART2[2] + 0.3];
   P.push(<Stall key="c2" k="c2" o={[CART2[0] + 1.8 * (1 - ss(cartIn, 0, 1)), 0, CART2[2]]} real={real} canopy={can} lamp={real} />);
   if (pk > 0.01) P.push(<Pack key="pk" k="pk" p={[top[0], top[1] + (1 - ss(pk, 0, 1)) * 0.5, top[2]]} ry={0.62} glowK={n === 15 ? on(103, 0.3, -0.1) : 0} x={n === 15 ? 0.25 * on(103, 0.3, -0.1) : 0} />);
