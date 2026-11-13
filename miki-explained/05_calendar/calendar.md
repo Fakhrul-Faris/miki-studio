@@ -66,7 +66,29 @@ Already scheduled in TikTok Studio and left as they are: EX28 Thu 12 Nov 12:30, 
 held during the test. The dashboard planner (`tools/dash/seed.py --plan`) follows the test windows. Needs 9 more episodes
 (18–26 Nov) after EX34 on 17 Nov.
 
-## 30 hari, 30 bisnes Malaysia (started by the user 2026-11-11; Day 1 = Wed 18 Nov, Day 30 = Thu 17 Dec)
+## Shuffle test (user 2026-11-13: 30 hari paused)
+
+User: "pause 30 hari series. continue with other series. we want to test all of it with different shuffle … we don't have
+to stay rigid because we're still experimenting." Each episode = one series × one look (A/B/C/D); the same series or look
+never twice in a row; untested series first; S01 rests at 5 videos until the scoreboard; S05 and X00 stay dropped.
+**Every look uses Style D's motion and pace** (WORKING-RULES § 2). Top picks (user): Ramly, Touch 'n Go, S12.
+Times follow the post-time test. Every premise is ☐ until verified; RECIPE-D § 0.1 questions before each script.
+
+| # | Date | Time | Series | Episode (question to verify) | Look | Status |
+|---|---|---|---|---|---|---|
+| 1 | Wed 18 Nov | 20:00 | S07 Food economics | EX37 Nasi lemak +81 % vs inflation +29 % | A | preview `out/preview.mp4` waiting for the user's notes (built before the D-motion rule) |
+| 2 | Thu 19 Nov | 20:00 | S06 Versus | EX39 KK Mart vs 7-Eleven vs FamilyMart (posts as is, HARI 2/30 badge kept) | D | ready; schedule in TikTok Studio |
+| 3 | Fri 20 Nov | 12:30 | S09 Founder story | Ramly: from a stall to a burger empire ⭐ | B | ☐ next |
+| 4 | Sat 21 Nov | 12:30 | S13 One number | The money sitting in Touch 'n Go eWallets (the float) ⭐ | C | ☐ |
+| 5 | Sun 22 Nov | 12:30 | S12 What just happened | Business news within 48 h of the day ⭐ (pick on 20–21 Nov) | D | ☐ |
+| 6 | Mon 23 Nov | 12:30 | S04 Why isn't it here? | Why is there no Costco in Malaysia? | A | ☐ |
+| 7 | Tue 24 Nov | 12:30 | S02 Always like that | Why Grab costs more the moment it rains | B | ☐ |
+| 8 | Wed 25 Nov | 12:30 | S10 Who owns what | to research | C | ☐ |
+| 9 | Thu 26 Nov | 12:30 | S14 You asked | answer the best comment on EX35–EX39 | D | ☐ |
+| 10 | Fri 27 Nov | winner | S15 Kedai boss | raises the price 50 sen, loses half his regulars (needs an MPFB character first) | A | ☐ |
+| then | | | S11 · S03 · S08 second rounds | rerun `tools/series_score.py`, double the winners | | |
+
+## 30 hari, 30 bisnes Malaysia — PAUSED 2026-11-13 (was: Day 1 = Wed 18 Nov, Day 30 = Thu 17 Dec)
 
 One Malaysian business a day, numbered. **"Hari N/30" on screen at frame one** (with the logo), the series name and day in
 the caption's second line, the pinned comment asks which business is next (feeds S14 "You asked"). Episodes come from the
