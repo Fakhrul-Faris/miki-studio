@@ -32,7 +32,7 @@ const so40 = () => (SO40 ??= (() => {
     egg: rev([[0, 0], [0.058, 0], [0.061, 0.003], [0.057, 0.006], [0, 0.006]]),
   };
 })());
-const meat = (c = "#6a3f1d") => <StandardMaterial base_color={c} normal_map_texture={S("tex/grey_plaster_nor_gl_1k.jpg")} uv_transform={Affine2.fromScale([3, 3])} perceptual_roughness={0.72} />;
+const meat = (c = "#55301a") => <StandardMaterial base_color={c} normal_map_texture={S("tex/grey_plaster_nor_gl_1k.jpg")} uv_transform={Affine2.fromScale([3, 3])} perceptual_roughness={0.72} />;
 // a patty lying flat; tilt turns it up to face the camera (rx), glow = the yellow rim (accent)
 function Patty({ p, k, rx = 0, ry = 0, sc = 1, glowK = 0 }: { p: number[]; k: string; rx?: number; ry?: number; sc?: number; glowK?: number }) {
   return (
@@ -114,7 +114,7 @@ function Pack({ p, ry = 0, rx = 0, x = 0, k, sc = 1, glowK = 0 }: { p: number[];
 // the stall: the library cart (its coffee things hidden), a griddle, the yellow-and-maroon canopy with the logo, the tube light
 const CT = 1.057;                                 // cart top: Bottom_Cart max y in CoffeeCart_01.gltf
 function Stall({ o, ry = 0, real = 1, canopy = 1, lamp = 1, k = "st" }: { o: number[]; ry?: number; real?: number; canopy?: number; lamp?: number; k?: string }) {
-  const tint = mixHex("#4a4c54", "#ffffff", real), P: any[] = [];
+  const tint = mixHex("#4a4c54", "#b9bdc5", real), P: any[] = [];
   P.push(<Model key={k + "cart"} src={S("CoffeeCart_01/CoffeeCart_01.gltf")} position={[0, 0, 0]}>
     <StandardMaterial material="CoffeeCart_01_cart" base_color={tint} />
     <StandardMaterial material="CoffeeCart_01_props" base_color={Srgba.hex("#000000").with_alpha(0)} alpha_mode="Blend" />
@@ -191,8 +191,8 @@ function DocSet({ n }: { n: number }) {
   return (<>
     <Mesh3d transform={Transform.fromXyz(VD[0], FY - 0.02, VD[2])}><Cuboid half_size={[1.4, 0.02, 0.9]} /><StandardMaterial base_color="#1c1e22" normal_map_texture={S("tex/grey_plaster_nor_gl_1k.jpg")} perceptual_roughness={0.55} /></Mesh3d>
     <Card k="form" p={[VD[0], FY + 0.0013, VD[2]]} size={FS} tex="form" rx={-Math.PI / 2} rz={0.14} em={0.05}>
-      <WriteIn k="vfee" size={FS} cx={346 / 1024} cy={414 / 1448} w={0.5} h={128 / 1448} tex="v_fee" a={fee} />
-      <WriteIn k="vroy" size={FS} cx={346 / 1024} cy={604 / 1448} w={0.5} h={128 / 1448} tex="v_roy" a={roy} />
+      <WriteIn k="vfee" size={FS} cx={346 / 1024} cy={428 / 1448} w={0.5} h={128 / 1448} tex="v_fee" a={fee} />
+      <WriteIn k="vroy" size={FS} cx={346 / 1024} cy={618 / 1448} w={0.5} h={128 / 1448} tex="v_roy" a={roy} />
       <Under k="ufee" size={FS} u0={90 / 1024} u1={0.42} v={455 / 1448} a={ufee} />
       <Under k="uroy" size={FS} u0={90 / 1024} u1={0.42} v={645 / 1448} a={n === 10 ? on(52, 0.3, 0.12) : 0} />
     </Card>
@@ -246,7 +246,7 @@ const VF = [0, 0, -300];
 function FactorySet() {
   return (<>
     <Mesh3d transform={Transform.fromXyz(VF[0], -0.02, VF[2])}><Cuboid half_size={[60, 0.02, 60]} /><StandardMaterial base_color="#26282d" normal_map_texture={S("tex/asphalt_02_nor_gl_1k.jpg")} uv_transform={Affine2.fromScale([30, 30])} perceptual_roughness={0.7} /></Mesh3d>
-    <Model src={S("factory_a.glb")} position={VF as any} scale={[0.012, 0.012, 0.012]}><StandardMaterial base_color="#55585f" /></Model>
+    <Model src={S("factory_a.glb")} position={VF as any} scale={[0.012, 0.012, 0.012]}><StandardMaterial base_color="#3b3d44" base_color_texture={null as any} normal_map_texture={S("tex/grey_plaster_nor_gl_1k.jpg")} perceptual_roughness={0.9} /></Model>
     <Card k="fsg" p={[VF[0] + 0.3, 3.0, VF[2] + 2.75]} size={[3.2, 0.8]} tex="factory_sign" em={1.1 * on(91, 0.4, -0.3)} />
     <DirectionalLight color="#a7bdff" transform={Transform.fromXyz(VF[0] - 20, 18, VF[2] + 12).lookingAt(VF as any)} illuminance={2600} shadow_maps_enabled soft_shadow_size={0.5} />
     <SpotLight transform={Transform.fromXyz(VF[0] + 4, 9, VF[2] + 18).lookingAt([VF[0] + 0.7, 3, VF[2] + 2.7])} intensity={4e6 * (0.3 + 0.7 * on(91, 0.4, -0.3))} outer_angle={0.35} inner_angle={0.2} color="#ffe6c2" range={30} />
@@ -259,48 +259,48 @@ function FactorySet() {
 type Pose = { p: number[]; l: number[] };
 type Tag = { at: number[]; x: number; y: number; cap: string; big?: string; sub?: string; t: number };
 type Setup = { set: string; a: Pose; b: Pose; fov?: number; fs?: number; up?: number[]; tr?: "in" | "out" | "side"; fd?: () => number | null; tags?: Tag[];
-  count?: { v: () => string; unit: string; t?: number }; note?: string; src?: string };
+  count?: { v: () => string; unit: string; t?: number }; note?: string; src?: string; ex?: number };
 const fromT = (l: number[], dir: number[], d: number) => { const k = Math.hypot(dir[0], dir[1], dir[2]); return [l[0] + (dir[0] / k) * d, l[1] + (dir[1] / k) * d, l[2] + (dir[2] / k) * d]; };
 const dist3 = (a: number[], b: number[]) => Math.hypot(a[0] - b[0], a[1] - b[1], a[2] - b[2]);
 const C = (p: number[], l: number[]): Pose => ({ p, l });
 const num = (a: number, b: number, t0: number, t1: number, d = 0) => lerp(a, b, cl((T - t0) / (t1 - t0))).toFixed(d);
 const thou = (a: number, b: number, t0: number, t1: number) => Math.round(lerp(a, b, cl((T - t0) / (t1 - t0)))).toLocaleString("en-US");
 const SL = [SX + 0.1, 1.0, SZ];
-const P1A = C([SX + 7.0, 6.2, SZ + 12.5], SL);
+const P1A = C([SX + 8.6, 8.2, SZ + 15.5], [SX - 0.6, 1.5, SZ - 0.4]);
 const PKL = [PKP[0], CT + 0.12, PKP[2]], GC = [SX + 0.19, CT, SZ + 0.38], BGL = [BGP[0], CT + 0.045, BGP[2]];
-const FEE = [VD[0] - 0.01, FY, VD[2] - 0.05], ROY = [VD[0], FY, VD[2] - 0.015];
+const FEE = [VD[0] - 0.01, FY, VD[2] - 0.05], ROY = [VD[0] - 0.035, FY, VD[2] - 0.02];
 const SRC_JG = "price: Jaya Grocer online, 13 Nov 2026", SRC_BL = "source: CompareHero · franchise-info.my (blogs)", SRC_VP = "Vulcan Post, 19 Nov 2020 (company figures)";
 const SETUPS: Setup[] = [
-  /* 1 */ { set: "s", a: P1A, b: C([SX + 5.4, 4.9, SZ + 9.8], SL), fov: 34, fs: 8 },
-  /* 2 */ { set: "s", tr: "in", a: C(fromT(G, [0.25, 0.6, 1], 0.95), G), b: C(fromT([G[0], G[1] + 0.05, G[2]], [0.3, 0.48, 1], 0.8), [G[0], G[1] + 0.05, G[2]]), fov: 26, fs: 2.8 },
-  /* 3 */ { set: "s", a: C(fromT(PKL, [-0.3, 0.14, 1], 1.1), PKL), b: C(fromT(PKL, [-0.2, 0.1, 1], 0.95), PKL), fov: 26, fs: 2.4,
+  /* 1 */ { set: "s", a: P1A, b: C([SX + 7.0, 6.6, SZ + 12.8], [SX - 0.4, 1.4, SZ - 0.3]), fov: 34, fs: 8 },
+  /* 2 */ { set: "s", tr: "in", a: C(fromT(G, [0.35, 1.6, 0.5], 0.9), G), b: C(fromT([G[0], G[1] + 0.04, G[2]], [0.2, 1.15, 0.8], 0.72), [G[0], G[1] + 0.04, G[2]]), fov: 26, fs: 4, ex: 0.45 },
+  /* 3 */ { set: "s", a: C(fromT(PKL, [-1, 0.05, 0.3], 1.05), PKL), b: C(fromT(PKL, [-1, 0.08, 0.55], 0.92), PKL), fov: 26, fs: 2.4, up: [0.08, 1, 0], ex: 0.45,
             tags: [{ at: [PKP[0] - 0.05, CT + 0.2, PKP[2]], x: 70, y: 1330, cap: "RAMLY BURGER AYAM", big: "6 patties", sub: "420 g pack", t: W(15) }] },
-  /* 4 */ { set: "s", a: C([SX + 0.48, CT + 0.14, SZ + 1.4], [SX + 0.66, CT + 0.08, SZ + 0.36]), b: C([SX + 0.53, CT + 0.13, SZ + 1.3], [SX + 0.68, CT + 0.07, SZ + 0.4]), fov: 26, fs: 2.2, src: SRC_JG,
-            fd: () => lerp(0.98, 0.76, on(19, 0.4, -0.25)), count: { v: () => "RM" + num(0, 9.4, W(19) - 0.3, W(19) + 0.3, 2), unit: "6 chicken patties, 420 g", t: W(19) - 0.35 } },
+  /* 4 */ { set: "s", a: C([SX + 0.64, CT + 0.11, SZ + 2.45], [SX + 0.63, CT + 0.08, SZ + 0.38]), b: C([SX + 0.64, CT + 0.11, SZ + 2.3], [SX + 0.63, CT + 0.08, SZ + 0.4]), fov: 16, fs: 2.8, ex: 0.45, src: SRC_JG,
+            fd: () => lerp(2.1, 1.88, on(19, 0.4, -0.25)), count: { v: () => "RM" + num(0, 9.4, W(19) - 0.3, W(19) + 0.3, 2), unit: "6 chicken patties, 420 g", t: W(19) - 0.35 } },
   /* 5 */ { set: "s", a: C([GC[0] + 0.1, CT + 0.7, GC[2] + 0.95], GC), b: C([GC[0] + 0.04, CT + 1.25, GC[2] + 0.28], GC), fov: 30, fs: 8, src: SRC_JG, up: [0, 1, 0],
-            count: { v: () => "RM" + num(9.4, 1.57, W(24) - 0.2, W(24) + 0.4, 2), unit: "each: RM9.40 ÷ 6", t: W(23) }, note: "shop price; stalls buy wholesale" },
-  /* 6 */ { set: "s", a: C(fromT(BGL, [0.12, 0.22, 1], 0.72), BGL), b: C(fromT(BGL, [0.26, 0.16, 1], 0.64), BGL), fov: 26, fs: 4, up: [-0.08, 1, 0],
+            count: { v: () => "RM" + num(9.4, 1.57, W(24) - 0.2, W(24) + 0.4, 2), unit: "each: RM9.40 ÷ 6", t: W(23) }, note: "shop price; stalls buy wholesale", ex: 0.42 },
+  /* 6 */ { set: "s", a: C(fromT(BGL, [1, 0.14, 0.3], 0.66), BGL), b: C(fromT(BGL, [1, 0.1, 0.5], 0.6), BGL), fov: 26, fs: 4, up: [-0.1, 1, 0], ex: 0.45,
             tags: [{ at: [BGP[0] + 0.05, CT + 0.034, BGP[2] + 0.03], x: 640, y: 1360, cap: "EGG", t: W(30) }, { at: [BGP[0] - 0.04, CT + 0.043, BGP[2] + 0.04], x: 70, y: 1300, cap: "CABBAGE", t: W(31) }, { at: [BGP[0], CT + 0.05, BGP[2] + 0.02], x: 640, y: 1250, cap: "SAUCE", t: W(33) }] },
   /* 7 */ { set: "s", a: C([SX + 0.3, CT + 0.14, SZ + 1.25], [SX + 0.4, CT + 0.08, SZ + 0.42]), b: C([SX + 0.28, CT + 0.24, SZ + 1.3], [SX + 0.37, 1.42, SZ - 0.15]), fov: 26, fs: 2.4,
-            fd: () => lerp(0.84, 1.48, on(38, 0.5, -0.1)), tags: [{ at: [SGN[0], CT + 0.09, SGN[2]], x: 620, y: 1330, cap: "AT THE STALL", big: "RM5 or more", sub: "menu: an illustration", t: W(37) }] },
+            fd: () => lerp(0.84, 1.48, on(38, 0.5, -0.1)), ex: 0.45, tags: [{ at: [SGN[0], CT + 0.09, SGN[2]], x: 620, y: 1330, cap: "AT THE STALL", big: "RM5 or more", t: W(37) }] },
   /* 8 */ { set: "s", a: C([SX + 1.1, 1.45, SZ + 2.3], [SX, 0.95, SZ]), b: C([SX + 3.6, 3.9, SZ + 8.4], [SX, 0.8, SZ]), fov: 30, fs: 8 },
   /* 9 */ { set: "d", tr: "in", a: C(fromT(FEE, [0.12, 1, 0.55], 0.72), FEE), b: C(fromT(FEE, [0.1, 1, 0.45], 0.62), FEE), fov: 34, fs: 5.6, up: [0.15, 0, -1], src: SRC_BL, note: "form: an illustration" },
   /* 10 */ { set: "d", a: C([VD[0] + 0.3, FY + 0.07, VD[2] + 0.14], ROY), b: C([VD[0] + 0.18, FY + 0.17, VD[2] + 0.32], ROY), fov: 30, fs: 2.8, up: [0.14, 1, 0], src: SRC_BL },
   /* 11 */ { set: "v", tr: "out", a: C(fromT([PK2[0], STH + 0.1, PK2[2]], [-0.4, 0.3, 1], 0.85), [PK2[0], STH + 0.1, PK2[2]]), b: C(fromT([PK2[0], STH + 0.1, PK2[2]], [-0.3, 0.24, 1], 0.74), [PK2[0], STH + 0.1, PK2[2]]), fov: 26, fs: 2.8, src: SRC_BL,
             tags: [{ at: [PK2[0], STH + 0.2, PK2[2]], x: 640, y: 1330, cap: "1 · PATTIES", sub: "from Ramly", t: W(56) }] },
-  /* 12 */ { set: "v", a: C(fromT([LIC[0], STH + 0.03, LIC[2]], [0.45, 0.4, 1], 0.42), [LIC[0], STH + 0.03, LIC[2]]), b: C(fromT([LIC[0], STH + 0.03, LIC[2]], [0.55, 0.32, 1], 0.36), [LIC[0], STH + 0.03, LIC[2]]), fov: 26, fs: 2.8, src: SRC_BL,
+  /* 12 */ { set: "v", a: C(fromT([LIC[0], STH + 0.03, LIC[2]], [0.2, 1, 0.3], 0.46), [LIC[0], STH + 0.03, LIC[2]]), b: C(fromT([LIC[0], STH + 0.03, LIC[2]], [0.1, 1, 0.45], 0.38), [LIC[0], STH + 0.03, LIC[2]]), fov: 26, fs: 4, up: [0.25, 0, -1], src: SRC_BL,
             tags: [{ at: [LIC[0], STH + 0.05, LIC[2]], x: 70, y: 1330, cap: "2 · HAWKER LICENCE", sub: "from your local council", t: W(60) }], note: "card: an illustration" },
   /* 13 */ { set: "v", a: C([VV[0] + 3.6, 2.6, VV[2] + 4.8], [VV[0] + 0.25, 0.7, VV[2]]), b: C([VV[0] + 3.2, 2.4, VV[2] + 4.3], [VV[0] + 0.3, 0.7, VV[2]]), fov: 34, fs: 5.6, src: SRC_BL,
-            tags: [{ at: [CART2[0] + 0.05, 0.62, CART2[2] + 0.53], x: 70, y: 1330, cap: "3 · A CART", big: "RM2,000–6,000", sub: "start-up estimates", t: W(70) }] },
+            tags: [{ at: [CART2[0] + 0.3, CT + 0.01, CART2[2] + 0.4], x: 70, y: 1330, cap: "3 · A CART", big: "a few thousand ringgit", sub: "blog and forum estimates: RM2,000–6,000", t: W(70) }] },
   /* 14 */ { set: "v", a: C([VV[0] + 3.2, 1.8, VV[2] + 4.6], [VV[0] + 0.55, 1.35, VV[2]]), b: C([VV[0] + 2.8, 3.5, VV[2] + 5.2], [VV[0] + 0.6, 1.3, VV[2]]), fov: 30, fs: 5.6,
             tags: [{ at: [CART2[0] + 0.05, 2.1, CART2[2] + 0.72], x: 70, y: 1330, cap: "= A RAMLY BURGER STALL", t: W(76) }] },
-  /* 15 */ { set: "m", tr: "out", a: C([MX(109.2), 4.0, MZ(4.0) + 0.001], [MX(109.2), 0, MZ(4.0)]), b: C([MX(109.2), 4.3, MZ(4.0) + 0.001], [MX(109.2), 0, MZ(4.0)]), up: [-1, 0, -0.12], fov: 34, fs: 11, src: SRC_VP,
+  /* 15 */ { set: "m", tr: "out", a: C([MX(109.2) - 0.35, 4.5, MZ(4.0) + 0.001], [MX(109.2) - 0.35, 0, MZ(4.0)]), b: C([MX(109.2) - 0.35, 4.8, MZ(4.0) + 0.001], [MX(109.2) - 0.35, 0, MZ(4.0)]), up: [-1, 0, -0.12], fov: 34, fs: 11, src: SRC_VP,
             count: { v: () => "~" + thou(0, 30000, W(78) - 0.3, W(79) + 0.3), unit: "people selling Ramly burgers", t: W(77) }, note: "one dot ≈ 8 stalls · positions are illustrative" },
-  /* 16 */ { set: "m", a: C([MX(109.2) + 1.0, 2.2, MZ(4.0) + 3.3], [HUB[0], 0.4, HUB[2]]), b: C([MX(109.2) + 0.45, 2.5, MZ(4.0) + 3.0], [HUB[0], 0.45, HUB[2]]), fov: 34, fs: 8, src: SRC_VP,
-            tags: [{ at: HUB, x: 70, y: 1330, cap: "RAMLY", big: "sells to all of them", t: W(86) }] },
-  /* 17 */ { set: "f", tr: "out", a: C([VF[0] + 1.8, 3.3, VF[2] + 7.5], [VF[0] + 0.7, 3.0, VF[2] + 2.7]), b: C([VF[0] + 6, 5.0, VF[2] + 22], [VF[0] + 0.7, 3.8, VF[2] + 1.5]), fov: 36, fs: 8, src: "Vulcan Post 2020 · Malay Mail 2016",
+  /* 16 */ { set: "m", a: C([MX(109.2) + 2.2, 1.0, MZ(4.0) + 2.6], [HUB[0], 0.45, HUB[2]]), b: C([MX(109.2) + 0.3, 1.5, MZ(4.0) + 3.2], [HUB[0], 0.5, HUB[2]]), fov: 34, fs: 8, src: SRC_VP,
+            tags: [{ at: [HUB[0], HUB[1] - 0.15, HUB[2]], x: 70, y: 1330, cap: "RAMLY", big: "sells to all of them", t: W(86) }] },
+  /* 17 */ { set: "f", tr: "out", a: C([VF[0] + 7, 4.6, VF[2] + 21], [VF[0] + 0.4, 3.6, VF[2] + 1.5]), b: C([VF[0] + 3.2, 3.6, VF[2] + 12], [VF[0] + 0.3, 3.1, VF[2] + 2.7]), fov: 36, fs: 8, src: "Vulcan Post 2020 · Malay Mail 2016",
             count: { v: () => { const x = lerp(0, 1000, lin(W(91) - 0.35, W(92) + 0.2)); return x < 999.5 ? "RM" + Math.round(x) + "m" : "RM1 billion"; }, unit: "a year in sales (2019, company figure)", t: W(90) } },
-  /* 18 */ { set: "s", tr: "out", a: C([SX + 1.2, 2.0, SZ + 3.0], SL), b: P1A, fov: 34, fs: 8 },
+  /* 18 */ { set: "s", tr: "in", a: C([SX + 15, 16, SZ + 26], [SX - 0.6, 1.5, SZ - 0.4]), b: P1A, fov: 34, fs: 8 },
 ];
 function World({ n }: { n: number }) {
   const s = SETUPS[n - 1].set;
@@ -418,7 +418,7 @@ function Frame({ n, cam, dk, still, fast }: { n: number; cam: Cam; dk: number; s
       {fast ? <MotionBlur shutterAngle={1} samples={6} /> : null}
       <Bloom intensity={0.6} threshold={0.9} />
       <AmbientOcclusion quality="high" />
-      <ToneMapping mode="agx" exposure={street ? 0.65 : 0.55} />
+      <ToneMapping mode="agx" exposure={SETUPS[n - 1].ex ?? (street ? 0.65 : 0.55)} />
       <Grade temperature={0.0} vignette={0.28} midtones={{ saturation: 1.05, contrast: 1.12, gamma: 1, gain: 1, lift: 0 }} />
       <World n={n} />
       <Overlay n={n} cam={cam} still={still} />

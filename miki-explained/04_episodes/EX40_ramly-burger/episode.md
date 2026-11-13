@@ -1,6 +1,6 @@
 # EX40 — Ramly Burger doesn't sell burgers
 
-Status: **script v2 APPROVED (2026-11-13). Shot list v1 + art direction waiting for "ok".** Signature sound: user picked C, start softened → `02_kit/brand/sonic-logo/sig_C_boom_v2.wav`. v1 notes from the user: say
+Status: **board v2 (2026-11-13) waiting for the user: `stills/board_v2.jpg`, camera map `stills/camera_map.jpg`.** Voice in (user, ElevenLabs, 36.2 s with end). Build: `build/assemble.sh` → `film40.tsx` (head40 + base40 = EX37 street + film40 + cammap). Script v2 approved; shot list ok'd. Signature sound: user picked C, start softened → `02_kit/brand/sonic-logo/sig_C_boom_v2.wav`. v1 notes from the user: say
 "Ramly Burger" not "Ramly"; give viewers knowledge (how easy it is to partner with Ramly); price checked at Jaya Grocer;
 signature outro sound (see `02_kit/brand/sonic-logo/`).
 Series: S09 Founder story / S08 money angle · Look: **Style A** (dark model world; the night Ramly stall is the warm real
@@ -20,7 +20,7 @@ suit the best" → A; length ~40 s like EX39; user records the voice, I find ref
 | F6 | Jaya Grocer online, 13 Nov 2026: Ramly chicken burger patties 420 g **RM9.40**, beef 420 g (6 × 70 g) **RM10.30** → chicken ≈ RM1.57 a patty | user's screenshot `refs/jaya_grocer_ramly_packs_2026-11-13.png` | ✅ retail (stalls buy wholesale, likely less) |
 | F7 | Stall burger ayam biasa RM5–7 | biayaitu.my (blog); Rakyat Post: "burger daging still below RM10" | ⚠ check at a stall |
 | F9 | No franchise fee, no royalty: anyone can open a Ramly Burger stall; the must-have is the local council hawker licence (lesen penjaja); stock from Ramly's wholesalers / Ramly Halal Mart | Lowyat forum (2012 thread), franchise-info.my, CompareHero (blogs) | 🟡 user 13 Nov: claim it as "from reputable blogs" → on screen during L04–L05: *Source: CompareHero, franchise-info.my* |
-| F8 | A stall's set-up (cart, gas stove, tools) is paid by the operator, ~RM5,000–6,000 | comparehero.my, franchise-info.my (blogs) | ⚠ |
+| F8 | A stall's set-up (cart, gas stove, tools) is paid by the operator: ~RM5,000–6,000 (CompareHero, franchise-info.my); "at least RM2,000", wheeled stall ~RM1,200 (Lowyat forum) → on screen "a few thousand ringgit", sub "blog and forum estimates: RM2,000–6,000" | comparehero.my, franchise-info.my (blogs); forum.lowyat.net/topic/2316264 | ⚠ |
 
 ## Script draft v2 (~115 words, ≈ 38–40 s)
 

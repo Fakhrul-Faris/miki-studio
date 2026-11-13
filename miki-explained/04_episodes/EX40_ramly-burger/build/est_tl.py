@@ -9,7 +9,7 @@ DISPLAY = {   # caption text; * marks the key word (selection box)
  "L04": "And here's what most people don't know. There's *no franchise fee. *No royalty.",
  "L05": "You buy the patties, get a *hawker licence from your council, and a *cart for a few thousand ringgit. That's a Ramly Burger stall.",
  "L06": "About *30,000 people did exactly that.",
- "L07": "Ramly sells to every one of them. About *RM1 billion a year, and it never paid for a single *cart.",
+ "L07": "Ramly sells to every one of them. About *RM1 *billion a year, and it never paid for a single *cart.",
 }
 t, caps, lines = 0.25, [], {}
 for L, txt in DISPLAY.items():
