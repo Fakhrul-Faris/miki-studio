@@ -131,7 +131,7 @@ function Stall({ o, ry = 0, real = 1, canopy = 1, lamp = 1, k = "st" }: { o: num
   if (real > 0.5) {
     for (let i = 0; i < 4; i++) P.push(<Mesh3d key={k + "bn" + i} shape={so40().bunTop} transform={Transform.fromXyz(0.55 + (i % 2) * 0.12, CT + 0.002 + Math.floor(i / 2) * 0.0, -0.08 + Math.floor(i / 2) * 0.12)}><StandardMaterial base_color="#cd8436" perceptual_roughness={0.5} /></Mesh3d>);
     for (let e = 0; e < 6; e++) P.push(<Mesh3d key={k + "eg" + e} transform={Transform.fromXyz(0.15 + (e % 3) * 0.05, CT + 0.025, -0.12 + Math.floor(e / 3) * 0.055).withScale([1, 1.25, 1])}><Sphere radius={0.022} /><StandardMaterial base_color="#f2ecdf" perceptual_roughness={0.5} /></Mesh3d>);
-    for (const [bx, c] of [[0.02, "#b8321f"], [0.08, "#f2ead2"]] as [number, string][]) P.push(<Mesh3d key={k + "sb" + bx} transform={Transform.fromXyz(bx, CT + 0.09, -0.12)}><Cylinder radius={0.025} half_height={0.09} /><StandardMaterial base_color={c} perceptual_roughness={0.35} /></Mesh3d>);
+    for (const [bx, c] of [[0.02, "#b8321f"], [0.08, "#f2ead2"]] as [number, string][]) P.push(<Mesh3d key={k + "sb" + bx} transform={Transform.fromXyz(bx, CT + 0.1, -0.12)}><Cylinder radius={0.025} half_height={0.09} /><StandardMaterial base_color={c} perceptual_roughness={0.35} /></Mesh3d>);
   }
   return <Entity key={k} transform={Transform.fromXyz(o[0], o[1], o[2]).withRotation(rotY(ry))}>{P}</Entity>;
 }
@@ -215,7 +215,7 @@ function PartsSet({ n }: { n: number }) {
   P.push(<Model key="stool" src={S("wooden_stool_01/wooden_stool_01.gltf")} position={STOOL as any} scale={[1, 1, 1]}><StandardMaterial material="wooden_stool_01" base_color="#6a6d75" /></Model>);
   const slide = n === 11 ? on(56, 0.45, -0.35) : 1, fly = n === 14 ? on(72, 0.6, -0.2) : 0;
   const cartIn = n === 13 ? on(66, 0.6, -0.35) : n > 13 ? 1 : 0, can = n === 14 ? on(74, 0.6, -0.25) : 0, real = n === 14 ? on(76, 0.4, -0.2) : 0;
-  const top = [CART2[0] + 0.45, CT, CART2[2] + 0.25];
+  const top = [CART2[0] + 0.45, CT + 0.012, CART2[2] + 0.3];
   const arc = (a: number[], b: number[], f: number, hgt: number) => [lerp(a[0], b[0], f), lerp(a[1], b[1], f) + Math.sin(Math.PI * f) * hgt, lerp(a[2], b[2], f)];
   P.push(<Pack key="pk2" k="pk2" p={arc([PK2[0] - 0.4 * (1 - slide), PK2[1], PK2[2]], top, ss(fly, 0, 1), 0.4)} ry={0.3} />);
   const tip = n === 12 ? on(60, 0.4, -0.25) : n > 12 ? 1 : 0;
@@ -280,7 +280,7 @@ const FEE = [VD[0] - 0.01, FY, VD[2] - 0.05], ROY = [VD[0] - 0.035, FY, VD[2] - 
 const SRC_JG = "price: Jaya Grocer online, 13 Nov 2026", SRC_BL = "source: CompareHero · franchise-info.my (blogs)", SRC_VP = "Vulcan Post, 19 Nov 2020 (company figures)";
 const SETUPS: Setup[] = [
   /* 1 */ { set: "s", a: P1A, b: C([SX + 7.0, 6.6, SZ + 12.8], [SX - 0.4, 1.4, SZ - 0.3]), fov: 34, fs: 8 },
-  /* 2 */ { set: "s", tr: "in", a: C(fromT(G, [0.35, 1.6, 0.5], 0.9), G), b: C(fromT([G[0], G[1] + 0.04, G[2]], [0.2, 1.15, 0.8], 0.72), [G[0], G[1] + 0.04, G[2]]), fov: 26, fs: 4 },
+  /* 2 */ { set: "s", tr: "side", a: C(fromT(G, [0.35, 1.6, 0.5], 0.9), G), b: C(fromT([G[0], G[1] + 0.04, G[2]], [0.2, 1.15, 0.8], 0.72), [G[0], G[1] + 0.04, G[2]]), fov: 26, fs: 4 },
   /* 3 */ { set: "s", a: C(fromT(PKL, [-1, 0.05, 0.3], 1.05), PKL), b: C(fromT(PKL, [-1, 0.08, 0.55], 0.92), PKL), fov: 26, fs: 2.4, up: [0.08, 1, 0],
             tags: [{ at: [PKP[0] - 0.05, CT + 0.2, PKP[2]], x: 70, y: 1330, cap: "RAMLY BURGER AYAM", big: "6 patties", sub: "420 g pack", t: W(15) }] },
   /* 4 */ { set: "s", a: C([SX + 0.64, CT + 0.11, SZ + 2.45], [SX + 0.63, CT + 0.08, SZ + 0.38]), b: C([SX + 0.64, CT + 0.11, SZ + 2.3], [SX + 0.63, CT + 0.08, SZ + 0.4]), fov: 16, fs: 2.8, src: SRC_JG,
