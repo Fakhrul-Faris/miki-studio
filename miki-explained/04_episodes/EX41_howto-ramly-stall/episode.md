@@ -1,6 +1,6 @@
 # EX41 — How to open a Ramly Burger stall (S16 How to · Part 2 of EX40)
 
-Status: **facts + script draft v1 (2026-11-13), waiting for the user.** Nothing built.
+Status: **script draft v2 (2026-11-13): direct "if you want to…" opening (user), waiting for the user.** Nothing built.
 Series S16 How to (first episode) · 40–60 s, 4 numbered steps, cost + time on screen · look: mixed (3D for the physical
 steps, phone/portal UI for the licence step) with Style D motion · voice: the user records in ElevenLabs · posts after EX40.
 
@@ -15,13 +15,15 @@ steps, phone/portal UI for the licence step) with Style D motion · voice: the u
 | H5 | DBKL: licence holder and assistants need a valid typhoid jab and the KKM food course | DBKL FAQ / portal (search summary, not read yet) | ⚠ read DBKL page |
 | H6 | No franchise fee or royalty for a Ramly Burger stall; buy the patties; cart a few thousand ringgit | EX40 F8/F9 (blogs + forum, labelled) | ⚠ labelled as blogs |
 
-## Script draft v1 (~145 words, ≈ 45 s)
+## Script draft v2 (~140 words, ≈ 45 s)
 
-Frame-0 text: **OPEN A RAMLY STALL: 4 STEPS.** · Ramly Burger logo + "Part 2".
+Series rule (user 2026-11-13): open straight on the how-to, "If you want to…", no recap of an earlier episode.
+
+Frame-0 text: **WANT A RAMLY BURGER STALL? 4 STEPS.** · Ramly Burger logo.
 
 | L | Voice | On screen |
 |---|---|---|
-| L01 | Yesterday: Ramly Burger doesn't charge a franchise fee. So how do you actually open a stall? Four steps. | the EX40 stall at night, "1 2 3 4" cards fan out |
+| L01 | If you want to open a Ramly Burger stall, here's how. Four steps, and no franchise fee. | the stall at night, "1 2 3 4" cards fan out |
 | L02 | Step one. A food handler course, recognised by the Health Ministry. About fifty ringgit, half a day. | certificate prints, tag "≈ RM50 · ½ day" |
 | L03 | Step two. A typhoid jab. Around fifty to a hundred and twenty ringgit, and you renew it every three years. | vaccination card, a 3-year calendar ring |
 | L04 | Without both, the council won't give you a licence. That's step three: apply to your local council. In KL, it's online, on eLesen. | phone UI: eLesen form, "Penjaja" chosen, submit |
