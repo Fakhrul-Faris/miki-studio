@@ -1,6 +1,6 @@
 # EX41 — How to open a Ramly Burger stall (S16 How to · Part 2 of EX40)
 
-Status: **script v3 APPROVED (v2 ok'd 2026-11-13; v3 only drops the unverified total in L07). Shot list v1 + art direction waiting for "ok".** Voice: the user records from § Voice text. Nothing built.
+Status: **board v1 (2026-11-14) waiting for the user: `stills/board_v1.jpg`, camera map `stills/camera_map.jpg`.** Voice in (44.7 s with end). L07 was recorded from the v2 text ("So about RM200 of paperwork, then the cart"): on screen "~RM200 · course + jab + licence fee (council fees vary)" + "an estimate"; re-record from v3 pending the user. Build: `build/assemble.sh` → `film41.tsx`.nly drops the unverified total in L07). Shot list v1 + art direction waiting for "ok".** Voice: the user records from § Voice text. Nothing built.
 Series S16 How to (first episode) · 40–60 s, 4 numbered steps, cost + time on screen · look: mixed (3D for the physical
 steps, phone/portal UI for the licence step) with Style D motion · voice: the user records in ElevenLabs · posts after EX40.
 
