@@ -78,10 +78,10 @@ Times follow the post-time test. Every premise is ☐ until verified; RECIPE-D �
 |---|---|---|---|---|---|---|
 | 1 | Wed 18 Nov | 20:00 | S07 Food economics | EX37 Nasi lemak +81 % vs inflation +29 % | A | preview `out/preview.mp4` waiting for the user's notes (built before the D-motion rule) |
 | 2 | Thu 19 Nov | 20:00 | S06 Versus | EX39 KK Mart vs 7-Eleven vs FamilyMart (posts as is, HARI 2/30 badge kept) | D | ready; schedule in TikTok Studio |
-| 3 | Fri 20 Nov | 12:30 | S09 Founder story | Ramly: from a stall to a burger empire ⭐ | B | ☐ next |
+| 3 | Fri 20 Nov | 12:30 | S09 Founder story | EX40 Ramly Burger doesn't sell burgers: patties to ~30,000 stalls, no franchise fee ⭐ | A | script v2 13 Nov, waiting for approval |
 | 4 | Sat 21 Nov | 12:30 | S13 One number | The money sitting in Touch 'n Go eWallets (the float) ⭐ | C | ☐ |
 | 5 | Sun 22 Nov | 12:30 | S12 What just happened | Business news within 48 h of the day ⭐ (pick on 20–21 Nov) | D | ☐ |
-| 6 | Mon 23 Nov | 12:30 | S04 Why isn't it here? | Why is there no Costco in Malaysia? | A | ☐ |
+| 6 | Mon 23 Nov | 12:30 | S04 Why isn't it here? | Why is there no Costco in Malaysia? | B | ☐ |
 | 7 | Tue 24 Nov | 12:30 | S02 Always like that | Why Grab costs more the moment it rains | B | ☐ |
 | 8 | Wed 25 Nov | 12:30 | S10 Who owns what | to research | C | ☐ |
 | 9 | Thu 26 Nov | 12:30 | S14 You asked | answer the best comment on EX35–EX39 | D | ☐ |

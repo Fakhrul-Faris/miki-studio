@@ -112,6 +112,7 @@ caption panel, the high isometric camera, the 30 s length and Nathan's pace.
 - **Accent colour comes from the brand and the story's meaning.**
 - **Retired, never propose:** cut-paper collage, paper diorama, printed 3D. **After Effects is prohibited.**
 - **Styles share techniques** (A, B and C borrow from each other), but each keeps its locked traits.
+- **Signature outro sound** (user 2026-11-13: "a short outro music or signature sound so people can remember. something like netflix dum thum sound"): the end card carries the one Meikigo signature sound (`02_kit/brand/sonic-logo/`), identical on every episode. Replaces the old "no sound on the logo outro" rule; still no other SFX there.
 - **Style D motion for every style** (user 2026-11-13: "i want all style to have the same camera movement and animation fluidity and fast pace as style D"). A, B and C keep their look (world, light, drawing, texture, renderer) but take Style D's motion: a new camera setup every 2–3 s joined by camera flights and object morphs (not hard cuts), an on-screen event about every second on the word, objects that change state, the full camera vocabulary (RECIPE-D Part 2: § 14 camera, § 15 joining setups, § 16 animation) and its pace (about 3.4 words/s). This replaces Style A's "high three-quarter as the default" camera (that view stays one setup among many) and Style B's EX33 "calm motion". Review with the camera map + animatic (RECIPE-D § 8.1) before any preview.
 
 ## 3. Feedback log — what was rejected and why (newest first)
