@@ -86,6 +86,7 @@ Times follow the post-time test. Every premise is ☐ until verified; RECIPE-D �
 | 8 | Wed 25 Nov | 12:30 | S10 Who owns what | to research | C | ☐ |
 | 9 | Thu 26 Nov | 12:30 | S14 You asked | answer the best comment on EX35–EX39 | D | ☐ |
 | 10 | Fri 27 Nov | winner | S15 Kedai boss | raises the price 50 sen, loses half his regulars (needs an MPFB character first) | A | ☐ |
+| 3b | after EX40 | — | S16 How to | EX41 How to open a Ramly Burger stall (Part 2 of EX40): licence, food course + typhoid jab, stock, cart | mix (3D steps) | ☐ research 13 Nov |
 | then | | | S11 · S03 · S08 second rounds | rerun `tools/series_score.py`, double the winners | | |
 
 ## 30 hari, 30 bisnes Malaysia — PAUSED 2026-11-13 (was: Day 1 = Wed 18 Nov, Day 30 = Thu 17 Dec)
