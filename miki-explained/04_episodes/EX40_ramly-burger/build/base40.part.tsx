@@ -170,9 +170,7 @@ function Street() {
   P.push(<WhiteModel key="ht2" src="hand_truck/hand_truck.gltf" p={[4.2, 0.12, 1.4]} r={-0.6} />);
   P.push(<Model key="vs" src={S("parts/vespa.glb")} position={[-6.5, 0.12, 1.4]} rotation={[0, 1.2, 0]}><StandardMaterial base_color={WHITE2} /></Model>);
   P.push(<Model key="vsp" src={S("parts/vespa.glb")} position={[-1.6, 0.15, 1.0]} rotation={[0, 1.3, 0]}>   {/* on the five-foot way, out of the Grab car's path */}<StandardMaterial base_color={WHITE2} /></Model>);
-  // people hold poses (house rule): MPFB figures, faceless, charcoal clay
-  for (const [src, x, z, r] of [["s_m30", 0.7, 2.6, 2.4], ["s_f25", 3.9, 1.6, -2.6], ["s_m50", -9.0, AR + 9.0, 0.3], ["s_f35", -8.3, AR + 9.4, -2.4], ["s_m30", -4.2, 0.75, 0.9], ["s_f25", 10.8, AR + 9.6, -0.4]] as [string, number, number, number][])
-    P.push(<Model key={`pp${src}${x}`} src={S(`people/${src}.glb`)} position={[x, 0.12, z]} rotation={[0, r, 0]}><StandardMaterial base_color="#55585f" perceptual_roughness={0.7} /></Model>);
+  // EX40: no people (user 2026-11-13: "remove the person")
   return <>{P}</>;
 }
 
