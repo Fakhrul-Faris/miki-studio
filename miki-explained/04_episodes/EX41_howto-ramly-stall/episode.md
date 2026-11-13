@@ -1,6 +1,6 @@
 # EX41 — How to open a Ramly Burger stall (S16 How to · Part 2 of EX40)
 
-Status: **preview v1 (2026-11-14, 30 fps, 44.7 s): `out/preview_v1.mp4`, waiting for the user.** Board v2 passed ("fix weak. proceed"). Voice in (44.7 s with end). L07 was recorded from the v2 text ("So about RM200 of paperwork, then the cart"): on screen "~RM200 · course + jab + licence fee (council fees vary)" + "an estimate"; re-record from v3 pending the user. Build: `build/assemble.sh` → `film41.tsx`.nly drops the unverified total in L07). Shot list v1 + art direction waiting for "ok".** Voice: the user records from § Voice text. Nothing built.
+Status: **FINAL rendered 2026-11-14: `export/EX41-Final.mp4`** (44.7 s, 1080×1920, 60 fps, −14.5 LUFS; `build/final41.sh`; voice + sound C under the logo). Preview v1 passed ("repair the weak. go"): empty wall in the phone→calendar flight fixed, pack fill light. Frame check: no black frames, no flicker. Cover `export/EX41-cover.png` (frame 0.9 s). L07 as recorded (v2 text) with "~RM200 · an estimate" on screen.
 Series S16 How to (first episode) · 40–60 s, 4 numbered steps, cost + time on screen · look: mixed (3D for the physical
 steps, phone/portal UI for the licence step) with Style D motion · voice: the user records in ElevenLabs · posts after EX40.
 
@@ -80,6 +80,25 @@ A numbered rail "1 2 3 4" sits in the world (four yellow tiles on the table edge
 3. **Grey:** EX38/EX39 dark studio surfaces; the EX40 stall reused for setups 1 and 15.
 4. **Font:** Outfit (EX38–EX40); captions as EX39/EX40.
 5. **Sets:** desk void (paper steps), clinic tray, council model, phone, calendar wall, the EX40 parts void and stall.
+
+## Post (after EX40; S16 How to #1)
+
+**Caption:**
+```
+If you want to open a Ramly Burger stall, here's how: 4 steps. 🍔
+1 Food handler course (≈ RM50) · 2 Typhoid jab (RM50–120, every 3 years) · 3 Hawker licence from your council (KL: online, in application windows) · 4 Cart + stock (a few thousand ringgit)
+Which step stops you? 👇
+
+Sources: Food Hygiene Regulations 2009 (reg. 30–31) · Malaysia Gazette (21 May 2025) · course and clinic prices from providers (vary) · cart costs: blog and forum estimates. ~RM200 is an estimate; council fees vary. Certificate, cards, phone screen and council building are illustrations.
+Ramly Burger logo: Wikimedia Commons, public domain.
+
+#ramlyburger #bisnesmalaysia #lesenpenjaja #howto #malaysia
+```
+
+**Pinned comment:**
+```
+Part 1: why Ramly Burger doesn't sell burgers (no franchise fee). What should we teach next? 👇
+```
 
 ## Sources
 - AskLegal, Food Act and regulations: https://asklegal.my/p/malaysian-restaurants-food-act-and-regulations
