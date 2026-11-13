@@ -131,7 +131,7 @@ function Stall({ o, ry = 0, real = 1, canopy = 1, lamp = 1, k = "st" }: { o: num
   if (real > 0.5) {
     for (let i = 0; i < 4; i++) P.push(<Mesh3d key={k + "bn" + i} shape={so40().bunTop} transform={Transform.fromXyz(0.55 + (i % 2) * 0.12, CT + 0.002 + Math.floor(i / 2) * 0.0, -0.08 + Math.floor(i / 2) * 0.12)}><StandardMaterial base_color="#cd8436" perceptual_roughness={0.5} /></Mesh3d>);
     for (let e = 0; e < 6; e++) P.push(<Mesh3d key={k + "eg" + e} transform={Transform.fromXyz(0.15 + (e % 3) * 0.05, CT + 0.025, -0.12 + Math.floor(e / 3) * 0.055).withScale([1, 1.25, 1])}><Sphere radius={0.022} /><StandardMaterial base_color="#f2ecdf" perceptual_roughness={0.5} /></Mesh3d>);
-    for (const [bx, c] of [[0.02, "#b8321f"], [0.08, "#f2ead2"]] as [number, string][]) P.push(<Mesh3d key={k + "sb" + bx} transform={Transform.fromXyz(bx, CT + 0.1, -0.12)}><Cylinder radius={0.025} half_height={0.09} /><StandardMaterial base_color={c} perceptual_roughness={0.35} /></Mesh3d>);
+    for (const [bx, c] of [[0.02, "#b8321f"], [0.08, "#f2ead2"]] as [number, string][]) P.push(<Mesh3d key={k + "sb" + bx} transform={Transform.fromXyz(bx, CT + 0.1, -0.05)}><Cylinder radius={0.025} half_height={0.09} /><StandardMaterial base_color={c} perceptual_roughness={0.35} /></Mesh3d>);
   }
   return <Entity key={k} transform={Transform.fromXyz(o[0], o[1], o[2]).withRotation(rotY(ry))}>{P}</Entity>;
 }
@@ -141,7 +141,7 @@ const SX = 2.3, SZ = 3.3;                                                  // th
 const G = [SX - 0.3, CT + 0.026, SZ + 0.15];                               // the griddle's middle
 const PKP = [SX + 0.55, CT, SZ + 0.26], LBL = [SX + 0.66, CT + 0.035, SZ + 0.46];
 const GRID = [0, 1, 2, 3, 4, 5].map((i) => [SX + 0.06 + (i % 3) * 0.13, CT, SZ + 0.31 + Math.floor(i / 3) * 0.14]);
-const BGP = [SX + 0.19, CT, SZ + 0.36], SGN = [SX + 0.42, CT, SZ + 0.44];
+const BGP = [SX + 0.19, CT + 0.003, SZ + 0.36], SGN = [SX + 0.42, CT, SZ + 0.44];
 function StreetSet({ n }: { n: number }) {
   const P: any[] = [<Street key="street" />, ...UNITS.map((i) => <Unit key={"u" + i} i={i} t={0} />)];
   P.push(<Stall key="stall" o={[SX, 0, SZ]} />);

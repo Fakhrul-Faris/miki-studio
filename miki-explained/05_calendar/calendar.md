@@ -78,7 +78,7 @@ Times follow the post-time test. Every premise is ☐ until verified; RECIPE-D �
 |---|---|---|---|---|---|---|
 | 1 | Wed 18 Nov | 20:00 | S07 Food economics | EX37 Nasi lemak +81 % vs inflation +29 % | A | preview `out/preview.mp4` waiting for the user's notes (built before the D-motion rule) |
 | 2 | Thu 19 Nov | 20:00 | S06 Versus | EX39 KK Mart vs 7-Eleven vs FamilyMart (posts as is, HARI 2/30 badge kept) | D | ready; schedule in TikTok Studio |
-| 3 | Fri 20 Nov | 12:30 | S09 Founder story | EX40 Ramly Burger doesn't sell burgers: patties to ~30,000 stalls, no franchise fee ⭐ | A | script approved 13 Nov; shot list v1 waiting for ok |
+| 3 | Fri 20 Nov | 12:30 | S09 Founder story | EX40 Ramly Burger doesn't sell burgers: patties to ~30,000 stalls, no franchise fee ⭐ | A | ready 13 Nov: `EX40-Final.mp4` (36.2 s, 60 fps); post copy in episode.md § Post; schedule in TikTok Studio |
 | 4 | Sat 21 Nov | 12:30 | S13 One number | The money sitting in Touch 'n Go eWallets (the float) ⭐ | C | ☐ |
 | 5 | Sun 22 Nov | 12:30 | S12 What just happened | Business news within 48 h of the day ⭐ (pick on 20–21 Nov) | D | ☐ |
 | 6 | Mon 23 Nov | 12:30 | S04 Why isn't it here? | Why is there no Costco in Malaysia? | B | ☐ |

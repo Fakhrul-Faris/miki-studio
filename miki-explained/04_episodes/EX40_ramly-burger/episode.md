@@ -1,6 +1,6 @@
 # EX40 — Ramly Burger doesn't sell burgers
 
-Status: **preview v1 (2026-11-13, 30 fps, 36.2 s, voice + sound C): `out/preview_v1.mp4`, waiting for the user.** Animatic passed ("everything is okay just remove the person"): figures removed. Voice in (user, ElevenLabs, 36.2 s with end). Build: `build/assemble.sh` → `film40.tsx` (head40 + base40 = EX37 street + film40 + cammap). Script v2 approved; shot list ok'd. Signature sound: user picked C, start softened → `02_kit/brand/sonic-logo/sig_C_boom_v2.wav`. v1 notes from the user: say
+Status: **FINAL rendered 2026-11-13: `export/EX40-Final.mp4`** (36.2 s, 1080×1920, 60 fps, −14.6 LUFS; `build/final40.sh`; voice + Meikigo sound C under the logo). Preview v1 passed ("go"); figures removed after the animatic. Cover `export/EX40-cover.png` (frame 0.9 s, the frame-0 headline + logo). Frame check: no black frames; the one flagged spike (15.4 s) is the motion-blurred push into the franchise form, by design. Known: 1 cm seams where the bun and pack meet the cart top (raea log), bright step into the burger close-up (~9.2 s), dark frames at the 17.7 s and 22.7 s set changes.
 "Ramly Burger" not "Ramly"; give viewers knowledge (how easy it is to partner with Ramly); price checked at Jaya Grocer;
 signature outro sound (see `02_kit/brand/sonic-logo/`).
 Series: S09 Founder story / S08 money angle · Look: **Style A** (dark model world; the night Ramly stall is the warm real
@@ -94,9 +94,23 @@ pace: Style D (RECIPE-D Part 2). No people: things move by themselves. Patty = t
 4. **Font:** EX38/EX39 (Outfit) for labels, counters and frame-0/end text; captions as EX39.
 5. **Sets:** the street (EX31/EX35 Style A base), the stall close-ups, a dark document table, the map (EX39), the factory.
 
-## Post
-Caption: Ramly Burger doesn't sell burgers. It sells the patty, and about 30,000 stalls do the rest. Would you open one?
-Hashtags: #ramlyburger #bisnesmalaysia #burgerramly #meikigo #malaysia
+## Post (Fri 20 Nov 12:30 · shuffle #3)
+
+**Caption:**
+```
+Ramly Burger doesn't sell burgers. It sells the patty, about 30,000 stall owners do the rest. 🍔
+No franchise fee. No royalty. Would you open one? 👇
+
+Sources: Jaya Grocer online price (13 Nov 2026) · Vulcan Post (Nov 2020) · Malay Mail (Jan 2016) · franchise and start-up costs from CompareHero, franchise-info.my and Lowyat forum (blog estimates). Menu, form and licence card are illustrations; map dots are illustrative.
+Ramly Burger logo: Wikimedia Commons, public domain.
+
+#ramlyburger #burgerramly #bisnesmalaysia #malaysia #meikigo
+```
+
+**Pinned comment:**
+```
+Part 2 next: how to actually open a Ramly Burger stall, step by step. Want it? 👇
+```
 
 ## Sources
 - Vulcan Post, 19 Nov 2020: https://vulcanpost.com/722927/ramly-burger-malaysia-founder-history/
