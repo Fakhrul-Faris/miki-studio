@@ -1,0 +1,11 @@
+  0.00  drone.wav        gain 0.32
+  1.66  pop_big.wav      gain 0.35
+  4.65  tick.wav         gain 0.35
+  7.83  whoosh.wav       gain 0.3
+ 13.71  tick.wav         gain 0.3
+ 18.25  whoosh.wav       gain 0.3
+ 26.91  swipe.wav        gain 0.3
+ 29.64  ding.wav         gain 0.18
+ 32.11  pop_big.wav      gain 0.35
+ 36.69  tick.wav         gain 0.35
+(logo outro: silent)

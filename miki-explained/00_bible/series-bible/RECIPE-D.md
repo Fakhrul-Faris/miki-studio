@@ -223,6 +223,25 @@ Then look at it before the user does:
 - a strip of the subtitle area at 30 frames/s for one second (does the word blur in, does the box draw?);
 - the raea log's `clipping:` lines.
 
+### 8.1 Motion review before the preview (added 2026-11-13, EX39)
+
+The user wants to judge camera moves and animation fast. Two tools, both drawn from the real film file (never from
+generated images: the user asked about GPT image generation for motion; the decision was that generated frames have no
+continuity between them and would show a different film. GPT images are for **look references** per shot only):
+
+- **Camera map** — `cammap.part.tsx` (copy from EX39 `build/`), concatenated after the film part; composition `cammap`
+  renders one page per set: every setup's camera path from above (○ start ▶ end, dashed line to where it looks) and a
+  table with time, lens, height and distance start → end and the move in words ("push in 8%, orbit → 11°"). Seconds to
+  render. Use it to catch repeated moves (EX39's counter setups were nearly all "push in 7–8%") and shots aimed at the
+  same wall. Sheet: `stills/camera_map.jpg`.
+- **Animatic** — `tools/raea/animatic.sh film.tsx ../audio/mix.wav ../out/animatic.mp4 [FPS] [FROM TO]`: the same film at 15 fps (EX39: 3 min 40 s for 41 s; `FROM TO` seconds renders one stretch, 6 s in ~30 s),
+  draft quality, with a yellow "S<setup> · <time>" tag bottom-right for notes. The film file needs
+  `const FPS = 30, OFF = 0, RFPS = 30, HUD = false;` and the HUD line in `Frame` (see EX39 `film39.part.tsx`).
+  `--lite` is twice as fast but drops the subtitles, so it is not used. `--w/--h` are ignored by raea (always 1080×1920),
+  and `--frame N` renders every frame before N, so single late frames are slow: use the board composition for stills.
+
+Order: board → camera map + animatic (user notes by setup and second) → full preview → final.
+
 ## 9. raea traps met on EX38
 
 - Portrait frames are narrow: visible width ≈ 0.5625 × 2 × distance × tan(fov/2). Frame by the subject's width.

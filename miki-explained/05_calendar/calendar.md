@@ -42,10 +42,10 @@ Two posts a day, 12:30 and 21:00 MYT (memory `tiktok-goal-nov-2026`). Captions, 
 | Tue 10 Nov | 21:00 | EX29 Mr DIY Pt 2 (`EX29-Final.mp4`) · Style A baseline | ready (Telegram /ex29); schedule in TikTok Studio |
 | Wed 11 Nov | 12:30 | EX30 Mixue's real customer (`EX30-Final.mp4`) · Style C (raea painted) | ready (Telegram /ex30); schedule in TikTok Studio |
 | Wed 11 Nov | 20:00 | EX31 Grab's cut (`EX31-Final.mp4`, v2 60 fps 34.2 s) · Style A | v2 ready 18:41 (user notes fixed); Telegram /ex31 holds v1 until re-pushed |
-| Fri 13 Nov | 20:00 | EX35 How is ZUS so cheap? Part 3 (`EX35-Final.mp4`) · Style A, white world | ready (Telegram /ex35); check prices in both apps; schedule in TikTok Studio |
+| Fri 13 Nov | 19:00 | EX35 How is ZUS so cheap? Part 3 (`EX35-Final.mp4`) · Style A, white world | ready (Telegram /ex35); check prices in both apps; schedule in TikTok Studio |
 | Sat 14 Nov | 20:00 | EX33 One owner (`EX33-Final.mp4`) · Style B upgraded (3D) | ready (Telegram /ex33); check licences + A-Look; schedule in TikTok Studio |
-| Sun 15 Nov | 20:00 | EX36 How is Daiso so cheap? Part 4 (`EX36-Final.mp4`, 33.4 s) · Style B (EX33 baseline), Nathan voice | ready (Telegram /ex36); check RM5.90 in store / Daiso MY app; if EX35's Part 4 vote picks KK Mart, bill this as Part 5; schedule in TikTok Studio |
-| Mon 16 Nov | 20:00 | EX32 The ink is the business (`EX32-Final.mp4`) · Style B | ready (Telegram /ex32); check HP Store prices; schedule in TikTok Studio |
+| Sun 15 Nov | 20:00 | EX32 The ink is the business (`EX32-Final.mp4`) · Style B | ready (Telegram /ex32); check HP Store prices; schedule in TikTok Studio |
+| Mon 16 Nov | 19:00 | EX36 How is Daiso so cheap? Part 4 (`EX36-Final.mp4`, 33.4 s) · Style B (EX33 baseline), Nathan voice | ready (Telegram /ex36); check RM5.90 in store / Daiso MY app; if EX35's Part 4 vote picks KK Mart, bill this as Part 5; schedule in TikTok Studio |
 | Tue 17 Nov | 20:00 | EX34 One ringgit, one airline (`EX34-Final.mp4`) · Style B (EX33 baseline+) | ready (Telegram /ex34); check the 25-min turnaround; schedule in TikTok Studio |
 
 **Views snapshot 2026-11-08 (TikTok Studio, views · likes · comments):** EX21 Kodak (6 Nov 12:30) 693 · 19 · 0 ·
@@ -76,8 +76,8 @@ Times follow the post-time test (20:00 to 19 Nov, 12:30 from 20 to 26 Nov), then
 
 | Day | Date | Time | Series | Episode (question to verify) | Status |
 |---|---|---|---|---|---|
-| 1 | Wed 18 Nov | 20:00 | S07 Food economics | Where does your RM10 nasi lemak actually go? | ☐ to script by 16 Nov |
-| 2 | Thu 19 Nov | 20:00 | S06 Versus | Shopee vs Lazada vs TikTok Shop: who is actually cheapest? | ☐ |
+| 1 | Wed 18 Nov | 20:00 | S07 Food economics | EX37 Nasi lemak +81 % vs inflation +29 % (reframed: no source splits an RM10 plate) | Style A preview rendering 12 Nov (Nathan voice) |
+| 2 | Thu 19 Nov | 20:00 | S06 Versus | EX39 KK Mart vs 7-Eleven vs FamilyMart: RM97m vs RM32m profit, a third of the shops (switched from Shopee/Lazada/TikTok Shop: fee tables not verifiable) | ready 13 Nov: `EX39-Final.mp4` (Style D, 41 s); post copy in episode.md § Post; schedule in TikTok Studio |
 | 3 | Fri 20 Nov | 12:30 | S02 Always like that | Why does Grab cost more the moment it rains? | ☐ |
 | 4 | Sat 21 Nov | 12:30 | S07 Food economics | Why did teh tarik go from RM1.50 to RM3? | ☐ |
 | 5 | Sun 22 Nov | 12:30 | S06 Versus | KK Mart vs 7-Eleven vs Family Mart | ☐ |

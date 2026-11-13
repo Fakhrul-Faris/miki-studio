@@ -53,7 +53,8 @@
     "EX35": "S01",
     "EX36": "S01",
     "EX37": "S07",
-    "EX38": "S01"
+    "EX38": "S01",
+    "EX39": "S06"
   },
   "_lengths": "seconds, for episodes the dashboard has no duration for (postmortem 10 Nov, files on the Air)",
   "lengths": {
