@@ -205,7 +205,7 @@ function DeskSet({ n }: { n: number }) {
     </Entity>);
     P.push(<Mesh3d key="phst" transform={Transform.fromXyz(PHONE[0], FY + 0.02, PHONE[2] - 0.03)}><Cuboid half_size={[0.03, 0.02, 0.03]} /><StandardMaterial base_color="#2a2c31" /></Mesh3d>); }
   // 12–13 the calendar wall: one window (June 2025) lights; a shutter rolls down over it on "Miss it"
-  if (n === 12 || n === 13) for (let i = 0; i < 12; i++) { const m = MONTH(i), jun = i === 5, onU = jun && (n === 12 ? on(76, 0.3, -0.15) : n > 12 ? 1 : 0) > 0.5;
+  if (n >= 11 && n <= 13) for (let i = 0; i < 12; i++) { const m = MONTH(i), jun = i === 5, onU = jun && (n === 12 ? on(76, 0.3, -0.15) : n > 12 ? 1 : 0) > 0.5;
     P.push(<Card key={"mo" + i + onU} k={"mo" + i + onU} p={m} size={[0.12, 0.12]} tex={onU ? `m${i}_on` : `m${i}`} em={onU ? 0.6 : 0.05} />); }
   { const sh = n === 13 ? on(84, 0.5, -0.15) : n > 13 ? 1 : 0, j = MONTH(5);
     if (sh > 0.01) P.push(<Mesh3d key="shut" name="shut" transform={Transform.fromXyz(j[0], j[1] + 0.065 - 0.065 * sh, j[2] + 0.006).withScale([1, Math.max(0.001, sh), 1])}><Cuboid half_size={[0.064, 0.065, 0.002]} /><StandardMaterial base_color="#3e4047" metallic={0.4} perceptual_roughness={0.5} /></Mesh3d>);
@@ -257,6 +257,7 @@ function CartSet({ n }: { n: number }) {
     <RectLight transform={Transform.fromXyz(VV[0] + 0.2, 2.6, VV[2] + 1.4).lookingAt([VV[0], 0.4, VV[2]])} intensity={90000} width={2.2} height={1.2} color="#fff3e2" range={7} />
     <SpotLight transform={Transform.fromXyz(VV[0] + 1.4, 2.4, VV[2] + 2.0).lookingAt([VV[0], 0.5, VV[2]])} intensity={120000} outer_angle={0.6} inner_angle={0.2} color="#fff1dc" shadow_maps_enabled range={7} />
     <PointLight transform={Transform.fromXyz(CART2[0] + 0.05, 2.0, CART2[2] + 0.15)} intensity={600000 * real} color={WARM} range={6} />
+    <PointLight transform={Transform.fromXyz(top[0] + 0.5, CT + 0.25, top[2] + 0.7)} intensity={4000} color="#fff1dc" range={1.5} />   {/* fill on the pack's face */}
     <AmbientLight brightness={30} color="#8ea4dc" />
     <Environment src={S("sky.hdr")} intensity={0.2} />
   </>);
