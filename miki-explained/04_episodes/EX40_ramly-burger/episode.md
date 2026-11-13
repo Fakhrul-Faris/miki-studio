@@ -1,6 +1,6 @@
 # EX40 — Ramly Burger doesn't sell burgers
 
-Status: **board v2 (2026-11-13) waiting for the user: `stills/board_v2.jpg`, camera map `stills/camera_map.jpg`.** Voice in (user, ElevenLabs, 36.2 s with end). Build: `build/assemble.sh` → `film40.tsx` (head40 + base40 = EX37 street + film40 + cammap). Script v2 approved; shot list ok'd. Signature sound: user picked C, start softened → `02_kit/brand/sonic-logo/sig_C_boom_v2.wav`. v1 notes from the user: say
+Status: **preview v1 (2026-11-13, 30 fps, 36.2 s, voice + sound C): `out/preview_v1.mp4`, waiting for the user.** Animatic passed ("everything is okay just remove the person"): figures removed. Voice in (user, ElevenLabs, 36.2 s with end). Build: `build/assemble.sh` → `film40.tsx` (head40 + base40 = EX37 street + film40 + cammap). Script v2 approved; shot list ok'd. Signature sound: user picked C, start softened → `02_kit/brand/sonic-logo/sig_C_boom_v2.wav`. v1 notes from the user: say
 "Ramly Burger" not "Ramly"; give viewers knowledge (how easy it is to partner with Ramly); price checked at Jaya Grocer;
 signature outro sound (see `02_kit/brand/sonic-logo/`).
 Series: S09 Founder story / S08 money angle · Look: **Style A** (dark model world; the night Ramly stall is the warm real
