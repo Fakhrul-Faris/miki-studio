@@ -67,7 +67,7 @@ function DeskSet({ n }: { n: number }) {
     </Entity>);
     P.push(<Mesh3d key="phst" transform={Transform.fromXyz(PHONE[0], FY + 0.02, PHONE[2] - 0.03)}><Cuboid half_size={[0.03, 0.02, 0.03]} /><StandardMaterial base_color="#2a2c31" /></Mesh3d>); }
   // 12–13 the calendar wall: one window (June 2025) lights; a shutter rolls down over it on "Miss it"
-  for (let i = 0; i < 12; i++) { const m = MONTH(i), jun = i === 5, onU = jun && (n === 12 ? on(76, 0.3, -0.15) : n > 12 ? 1 : 0) > 0.5;
+  if (n === 12 || n === 13) for (let i = 0; i < 12; i++) { const m = MONTH(i), jun = i === 5, onU = jun && (n === 12 ? on(76, 0.3, -0.15) : n > 12 ? 1 : 0) > 0.5;
     P.push(<Card key={"mo" + i + onU} k={"mo" + i + onU} p={m} size={[0.12, 0.12]} tex={onU ? `m${i}_on` : `m${i}`} em={onU ? 0.6 : 0.05} />); }
   { const sh = n === 13 ? on(84, 0.5, -0.15) : n > 13 ? 1 : 0, j = MONTH(5);
     if (sh > 0.01) P.push(<Mesh3d key="shut" name="shut" transform={Transform.fromXyz(j[0], j[1] + 0.065 - 0.065 * sh, j[2] + 0.006).withScale([1, Math.max(0.001, sh), 1])}><Cuboid half_size={[0.064, 0.065, 0.002]} /><StandardMaterial base_color="#3e4047" metallic={0.4} perceptual_roughness={0.5} /></Mesh3d>);
@@ -116,7 +116,7 @@ function CartSet({ n }: { n: number }) {
   if (pk > 0.01) P.push(<Pack key="pk" k="pk" p={[top[0], top[1] + (1 - ss(pk, 0, 1)) * 0.5, top[2]]} ry={0.62} glowK={n === 15 ? on(103, 0.3, -0.1) : 0} x={n === 15 ? 0.25 * on(103, 0.3, -0.1) : 0} />);
   if (n === 15) P.push(<Card key="ctag" k="ctag" p={[CART2[0] + 0.05, 0.62, CART2[2] + 0.53]} size={[0.2, 0.08]} tex="carttag" em={0.3} sc={on(99, 0.3, -0.2)} />);
   return (<>{P}
-    <RectLight transform={Transform.fromXyz(VV[0] + 0.2, 2.6, VV[2] + 1.4).lookingAt([VV[0], 0.4, VV[2]])} intensity={160000} width={2.2} height={1.2} color="#fff3e2" range={7} />
+    <RectLight transform={Transform.fromXyz(VV[0] + 0.2, 2.6, VV[2] + 1.4).lookingAt([VV[0], 0.4, VV[2]])} intensity={90000} width={2.2} height={1.2} color="#fff3e2" range={7} />
     <SpotLight transform={Transform.fromXyz(VV[0] + 1.4, 2.4, VV[2] + 2.0).lookingAt([VV[0], 0.5, VV[2]])} intensity={120000} outer_angle={0.6} inner_angle={0.2} color="#fff1dc" shadow_maps_enabled range={7} />
     <PointLight transform={Transform.fromXyz(CART2[0] + 0.05, 2.0, CART2[2] + 0.15)} intensity={600000 * real} color={WARM} range={6} />
     <AmbientLight brightness={30} color="#8ea4dc" />
@@ -156,7 +156,7 @@ const SETUPS: Setup[] = [
   /* 10 */ { set: "c", step: 3, tr: "out", a: C([VC[0] + 1.5, 1.2, VC[2] + 17], [VC[0], 5.4, VC[2]]), b: C([VC[0] + 3.5, 2.4, VC[2] + 21], [VC[0], 5.0, VC[2]]), fov: 34, fs: 8, note: "a council building: an illustration" },
   /* 11 */ { set: "d", step: 3, tr: "in", a: C(fromT([PHONE[0], FY + 0.06, PHONE[2]], [-0.25, 0.55, 1], 0.42), [PHONE[0], FY + 0.06, PHONE[2]]), b: C(fromT([PHONE[0], FY + 0.06, PHONE[2]], [-0.18, 0.5, 1], 0.32), [PHONE[0], FY + 0.06, PHONE[2]]), fov: 26, fs: 2.8, src: SRC_DB, note: "screen: an illustration" },
   /* 12 */ { set: "d", step: 3, a: C([VD[0] + 0.3, FY + 0.35, VD[2] + 0.75], [VD[0] + 0.26, FY + 0.34, WALLZ]), b: C([VD[0] + 0.27, FY + 0.36, VD[2] + 0.62], [VD[0] + 0.26, FY + 0.34, WALLZ]), fov: 30, fs: 5.6 },
-  /* 13 */ { set: "d", step: 3, a: C([MONTH(5)[0] - 0.14, MONTH(5)[1] + 0.03, WALLZ + 0.62], MONTH(5)), b: C([MONTH(5)[0] - 0.06, MONTH(5)[1], WALLZ + 0.52], MONTH(5)), fov: 26, fs: 2.8, src: "Malaysia Gazette, 21 May 2025",
+  /* 13 */ { set: "d", step: 3, a: C([MONTH(5)[0] - 0.12, MONTH(5)[1] + 0.03, WALLZ + 0.98], MONTH(5)), b: C([MONTH(5)[0] - 0.05, MONTH(5)[1] + 0.01, WALLZ + 0.86], MONTH(5)), fov: 26, fs: 2.8, src: "Malaysia Gazette, 21 May 2025",
             tags: [{ at: MONTH(5), x: 640, y: 1330, cap: "DBKL WINDOW", big: "1–30 Jun 2025", sub: "results in August", t: W(82) }] },
   /* 14 */ { set: "v", step: 4, tr: "out", a: C([VV[0] + 3.0, 2.2, VV[2] + 4.0], [VV[0] + 0.35, 0.8, VV[2]]), b: C([VV[0] + 2.4, 1.6, VV[2] + 3.3], [VV[0] + 0.4, 0.9, VV[2]]), fov: 30, fs: 5.6 },
   /* 15 */ { set: "v", step: 4, a: C([VV[0] + 2.2, 1.6, VV[2] + 3.6], [VV[0] + 0.3, 1.3, VV[2]]), b: C([VV[0] + 1.6, 3.0, VV[2] + 4.4], [VV[0] + 0.35, 1.3, VV[2]]), fov: 30, fs: 5.6, src: "blog and forum estimates (EX40)",
