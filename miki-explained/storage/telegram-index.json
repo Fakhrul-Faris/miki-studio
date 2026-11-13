@@ -6839,6 +6839,18 @@
   "size": 45425728,
   "stored": "2026-11-13 23:49:18"
  },
+ "EX40/export/EX40-cover.png": {
+  "chat_id": 8165127397,
+  "episode": "EX40",
+  "file_id": "BQACAgUAAxkDAAIDVWr3MYpAdpeYjWi0MoTJNMNZVuQyAAIHIQACShG5V_wXs1XS8TX9PQQ",
+  "file_unique_id": "AgADByEAAkoRuVc",
+  "message_id": 853,
+  "path": "export/EX40-cover.png",
+  "role": "source",
+  "sha256": "66a88640b6fea840ff94f05d6543303f6f99f4a5b018c22fe3c95659cd6daf23",
+  "size": 2393243,
+  "stored": "2026-11-13 23:49:31"
+ },
  "_headers": {
   "EX01V3": 4,
   "EX02V3": 31,
