@@ -1,6 +1,6 @@
 # EX43 — If you want to check whether an investment is a scam (S16 How to)
 
-Status: **facts + script draft v1 (2026-11-14), waiting for the user.** Nothing built.
+Status: **script v1 approved, voice in (2026-11-14; 43 s voice, 46.5 s with end). Shot list v1 (80 % UI / 20 % physical) waiting for "ok".**
 Series S16 How to (main focus from 14 Nov) · opens "If you want to…" · 4 checks · ~45 s · look: Style D (macro objects:
 phone, documents, the 997 call) with Style D motion · slot Sun 22 Nov 12:30 · voice: the user (ElevenLabs).
 
@@ -31,6 +31,41 @@ Frame-0 text: **SCAM OR NOT? 4 FREE CHECKS.**
 | L07 | In 2025, it stopped thirty-four million ringgit reaching scammers. Which check will you do first? | counter RM34.05m · source The Star / Home Minister |
 
 End text: **WHICH CHECK FIRST?** → sound C + Meikigo logo.
+
+## Design (user 2026-11-14: "80% ui work and 20% physical visual"; frontend-design + ui-ux-pro-max)
+
+- **Idea:** the loud scam flyer vs the calm official lookup. The flyer is the only loud thing in the film.
+- **Palette:** ink `#1C2430` · paper `#EEF1F4` · official teal `#1F6F78` · flag red `#D6452E` (listed results only) ·
+  scam gold `#E8B53A` (flyer only) · freeze blue `#8EC9F0` (997 only).
+- **Type:** Avenir Next for every interface; a heavy condensed face for the flyer; captions stay Outfit (EX39/40).
+- **Layout:** in UI scenes the 9:16 frame *is* the phone screen: a slim browser bar with the real address
+  (bnm.gov.my, sc.com.my, semakmule.rmp.gov.my) so viewers know where to go; page bodies are my illustrations of the
+  tools (search box, results table, empty state), no copied logos or layouts, "illustration" on each. The camera
+  moves *inside* the UI (zoom to the search field, pan to the result row) at Style D pace.
+- **Example names are invented** ("Profit Emas Club"): never a real company on a list.
+
+## Shot list v1 (18 setups · 13 UI / 5 physical · ≈ 80 % of the time on screens)
+
+| S | Words | Kind | What happens |
+|---|---|---|---|
+| 1 | "If you want to check whether an investment is a scam, here's how." | 3D | a gold flyer "GUARANTEED 20% A MONTH" lands on a desk beside a phone; frame-0 text **SCAM OR NOT? 4 FREE CHECKS.** |
+| 2 | "Four checks, all free." | UI | a checklist card with four rows draws in, one per beat |
+| 3 | "Check one. Search the company on Bank Negara's Financial Consumer Alert List." | UI | browser at bnm.gov.my → the alert-list page; the name types into search |
+| 4 | "If it's there," | UI | zoom to the result row: it slides in, flag-red |
+| 5 | "walk away." | UI | the row stamps LISTED; the tab slides shut |
+| 6 | "Check two. Search the Securities Commission's Investor Alert List," | UI | sc.com.my alert list, the same name searched |
+| 7 | "and its list of licensed firms." | UI | the licensed-persons search: "no match" |
+| 8 | "Not licensed? Don't invest." | UI | the flyer's "INVEST NOW" button greys out and strikes through |
+| 9 | "Check three. Before you transfer," | 3D | the phone on the desk: a banking transfer screen with an account number, thumb-free (things move by themselves) |
+| 10 | "put the bank account or phone number into Semak Mule, the police portal." | UI | semakmule.rmp.gov.my form: account no. and phone no. type in |
+| 11 | "But no result doesn't mean safe." | UI | empty result card; "not proof of safety" |
+| 12 | "It only means nobody has reported it yet." | UI | a report counter at 0 with a ticking "first report?" |
+| 13 | "Check four. If you've already paid, call 997." | 3D | the phone's dial pad: 9 · 9 · 7 light in turn |
+| 14 | "It's open 24 hours," | UI | a 24-hour ring fills |
+| 15 | "and the faster you call, the more they can freeze." | UI | a transfer progress bar races; on "freeze" it stops, tiles ice over |
+| 16 | "In 2025, it stopped RM34 million reaching scammers." | UI | counter → RM34.05m; small cards: 146,167 calls · 138,915 accounts frozen (source: The Star, 3 Mar 2026) |
+| 17 | "Which check will you do first?" | UI | the checklist from 2 returns, all four ticked |
+| 18 | end text + sound C | 3D | back to the flyer on the desk (loop); end text **WHICH CHECK FIRST?** |
 
 ## Voice text (ElevenLabs v4)
 
