@@ -1,6 +1,6 @@
 # EX44 — If you want to price a nasi lemak so it makes money (S16 How to)
 
-Status: **facts + script draft v1 (2026-11-14), waiting for the user.** Nothing built.
+Status: **LANGUAGE TEST (user 2026-11-14): this episode in Bahasa Melayu, voiced by Nathan in Malay. Malay script v1 + recording guide waiting for the user's first test line.** English v1 approved and kept below for reference.
 User's answers (RECIPE § 0.1): dish = nasi lemak bungkus · method = food cost % · look = ~60 % UI costing sheet / ~40 % food
 macro (Style D motion) · ~45 s · voice: the user (ElevenLabs) · slot Mon 23 Nov 12:30.
 
@@ -30,6 +30,40 @@ The recipe quantities are an example, not a measured stall: ⚠ on screen "examp
 | Calc | 1.61 ÷ 0.35 = RM4.60 · 1.61 ÷ 0.30 = RM5.37 ≈ RM5.40 · 1.61 ÷ 3.68 = 43.8 % ≈ 44 % | — | arithmetic |
 
 Not claimed: any stall's real cost; that RM3.68 sellers lose money (food cost alone isn't profit or loss).
+
+## Bahasa Melayu version (the test) — script v1
+
+User 2026-11-14: "let's make this as a test. content in bahasa melayu. but the challenge is making nathan speak bahasa melayu."
+Malaysian Malay (not Indonesian): *kalau nak*, *lebih kurang*, *bungkus*, *sasarkan*. Same facts and numbers as the English v1.
+Captions, frame-0 text, the costing sheet and labels all in Malay.
+
+Frame-0 text: **HARGA SEBENAR NASI LEMAK ANDA?** · End text: **ANDA JUAL BERAPA?**
+
+| L | Caption (display) | Voice text for ElevenLabs (numbers spelled out, Malaysian spelling) |
+|---|---|---|
+| L01 | Kalau nak letak harga nasi lemak yang betul-betul untung, ini caranya. Empat langkah. | Kalau nak letak harga nasi lemak yang betul-betul untung, ini caranya. Empat langkah. |
+| L02 | Langkah satu. Kira harga setiap bahan dalam sebungkus: beras, santan, separuh telur, ikan bilis, kacang, timun, sambal dan pembungkus. | Langkah satu. Kira harga setiap bahan dalam sebungkus: beras, santan, separuh telur, ikan bilis, kacang, timun, sambal… dan pembungkus. |
+| L03 | Ikut harga kerajaan bulan Oktober, jumlahnya lebih kurang RM1.60. | Ikut harga kerajaan bulan Oktober, jumlahnya lebih kurang satu ringgit enam puluh sen. |
+| L04 | Langkah dua. Pilih kos makanan anda. Kebanyakan restoran sasarkan 30 hingga 35 peratus. | Langkah dua. Pilih kos makanan anda. Kebanyakan restoran sasarkan tiga puluh hingga tiga puluh lima peratus. |
+| L05 | Langkah tiga. Bahagi. RM1.60 dibahagi 0.35, lebih kurang RM4.60. Pada 30 peratus, RM5.40. | Langkah tiga. Bahagi. Satu ringgit enam puluh, dibahagi kosong perpuluhan tiga lima, lebih kurang empat ringgit enam puluh. Pada tiga puluh peratus… lima ringgit empat puluh. |
+| L06 | Langkah empat. Semak. Purata sebungkus nasi lemak di Malaysia RM3.68. Pada harga itu, bahan makanan ambil 44 peratus. | Langkah empat. Semak. Purata sebungkus nasi lemak di Malaysia, tiga ringgit enam puluh lapan sen. Pada harga itu, bahan makanan ambil empat puluh empat peratus. |
+| L07 | Bakinya kena tampung gas, sewa dan masa anda. Nombor mana yang buat anda terkejut? | Bakinya kena tampung gas, sewa, dan masa anda. Nombor mana yang buat anda terkejut? |
+
+### Recording guide: Nathan in Malay (ElevenLabs)
+
+1. **Model:** a multilingual model that lists Malay (Eleven v3 or Multilingual v2; v4 only if Malay is in its language list).
+   If the model has a language setting, choose **Malay (ms)**: it fixes vowel and number reading more than any text trick.
+2. **Test one line first: L05** (the hardest: numbers + *perpuluhan*). If it sounds right, the rest will.
+3. **Settings:** stability a bit higher than usual (~0.6), style low (~0.1–0.2). High style exaggerates the English
+   intonation; higher stability keeps Malay vowels flat and clean.
+4. **Text rules (already applied above):** every number in Malay words (*satu ringgit enam puluh sen*, never "RM1.60"
+   or "1.60"); no CAPS for stress (English stress pattern bleeds into Malay); "…" only for a real breath; no English
+   words left in (we say *pembungkus*, not "wrap").
+5. **If a word comes out English-sounding**, respell it the way it's said, only in the voice text (captions keep the
+   correct spelling): e.g. *santan* → "san-tan", *ikan bilis* → "i-kan bi-lis", *perpuluhan* → "per-pu-lu-han".
+6. **If the whole line still sounds like an English speaker reading Malay**: try ElevenLabs' Speech-to-Speech with your
+   own Malay read of the line as the guide (keeps Nathan's voice, takes your Malay rhythm).
+7. Name files L01–L07.mp3 and drop them in `04_episodes/EX44_howto-price-menu/` (or Downloads).
 
 ## Script draft v1 (~135 words, ≈ 45 s)
 
