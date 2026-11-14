@@ -2,7 +2,7 @@
 // Style D motion (RECIPE-D Part 2). Assembled: head40 + base40 (EX37's street, renamed) + film40 + cammap → film40.tsx
 import { AbsoluteFill, Composition, Easing, Img, interpolate, registerRoot, staticFile, useCurrentFrame } from "raea";
 import { AmbientOcclusion, Entity, Fog, Grade, ImagePlane, Look, Model, Text3D, type Solid } from "raea/3d";
-import { Cuboid, Cylinder, Sphere, Mesh3d, manifold, crossSection } from "raea/mesh";
+import { Capsule3d, Cuboid, Cylinder, Sphere, Mesh3d, manifold, crossSection } from "raea/mesh";
 import { StandardMaterial } from "raea/pbr";
 import { AmbientLight, DirectionalLight, Environment, PointLight, RectLight, Shadows, SpotLight } from "raea/light";
 import { Quat, Transform } from "raea/transform";
