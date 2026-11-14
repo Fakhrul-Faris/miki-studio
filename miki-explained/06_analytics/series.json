@@ -59,7 +59,8 @@
     "EX40": "S09",
     "EX41": "S16",
     "EX42": "S13",
-    "EX43": "S16"
+    "EX43": "S16",
+    "EX44": "S16"
   },
   "_lengths": "seconds, for episodes the dashboard has no duration for (postmortem 10 Nov, files on the Air)",
   "lengths": {
