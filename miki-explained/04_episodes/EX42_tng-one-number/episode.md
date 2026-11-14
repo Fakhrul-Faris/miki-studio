@@ -1,6 +1,6 @@
 # EX42 — Touch 'n Go: one number (S13 One number)
 
-Status: **preview v1 (2026-11-14, 30 fps, 35.6 s): `out/preview_v1.mp4`, waiting for the user.** Board v2 (materials, set dressing) → animatic → preview; voice tails no longer clipped (RM33).
+Status: **FINAL rendered 2026-11-14: `export/EX42-Final.mp4`** (35.6 s, 1080×1920, 60 fps, −14.2 LUFS; `build/final42.sh`). Preview passed ("go"). Frame check: no black; the flagged frames at 11.8 s are the designed pull-out from the top-up counter to the bank. Cover `export/EX42-cover.png` (frame 0.9 s).
 User's answers (RECIPE § 0.1): number = the float; look = Style C painted (raea, EX30) with Style D motion; ~40 s; number at
 frame 0 with its source. Slot: Sat 21 Nov 12:30 (shuffle #4).
 
