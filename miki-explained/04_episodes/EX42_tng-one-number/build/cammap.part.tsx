@@ -2,8 +2,8 @@
 // ================= camera map (review tool, RECIPE-D § 8.1): one page per set, seen from above =================
 // Each setup's camera path (start ○ → end ▶, sampled through its drift), a thin line to where it looks, the setup number,
 // and a table: time, lens, height and distance start → end, and the move in words. Needs SETUPS, ST, camOf, NSET, dist3.
-// Render: raea render film41.tsx --composition cammap -o media/_cm   (one PNG per set)
-const SETNAMES: Record<string, string> = { s: "Street + stall", d: "Desk + calendar wall", c: "Council", v: "Cart" };
+// Render: raea render film42.tsx --composition cammap -o media/_cm   (one PNG per set)
+const SETNAMES: Record<string, string> = { t: "Kopitiam table", s: "Toll · parking · top-up", b: "Bank" };
 const SETORDER = SETUPS.map((s) => s.set).filter((s, i, a) => a.indexOf(s) === i);
 const PAL = ["#ff5a5a", "#ffb03a", "#f5e663", "#7be37b", "#4fd2e8", "#6f8cff", "#c57bff", "#ff7bd1"];
 function movesOf(k: number) {
