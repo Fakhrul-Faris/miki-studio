@@ -34,7 +34,7 @@ function TableSet({ n }: { n: number }) {
     P.push(<Entity key="sge" pass="ui" transform={Transform.fromXyz(0, 0, 0)}><Sign unlit k="sg" p={SGN} price={fl > 0 ? "33" : "43"} prev="43" fl={n === 3 ? fl : 1} ry={0.15} sc={1.6} /></Entity>);
     P.push(<Entity key="yre" pass="ui" transform={Transform.fromXyz(0, 0, 0)}><Card unlit k={"yr" + (fl > 0.5)} p={[SGN[0] + 0.1, TY + 0.03, SGN[2] + 0.03]} size={[0.06, 0.03]} tex={fl > 0.5 ? "yr2024" : "yr2025"} ry={0.15} em={0.6} /></Entity>); }
   // 8: coins grow on "bigger"; 9: three cards land, one per word
-  { const g = n === 8 ? on(43, 0.5, -0.2) : n > 8 ? 1 : 0;
+  { const g = n === 8 ? on(43, 0.5, -0.2) : n === 9 ? 1 - on(51, 0.4, -0.5) : 0;   // big for "bigger things", back to coin size before GO+
     for (let i = 0; i < 7; i++) P.push(<Coin key={"cn" + i} k={"cn" + i} p={TX0(-0.2 + (i % 4) * 0.035 * lerp(1, 2.4, g), TY + Math.floor(i / 4) * 0.0038 * lerp(1, 3, g), 0.06 + (i % 3) * 0.01)} s={lerp(1, 3, g)} />); }
   if (n >= 9) ["c_loan", "c_ins", "c_fund"].forEach((t, i) => { const u = n === 9 ? on([46, 47, 50][i], 0.35, -0.2) : 1;
     if (u > 0.01) P.push(<Entity key={"lc" + i} pass="ui" transform={Transform.fromXyz(0, 0, 0)}><Card unlit k={"lc" + i} p={[LAND[i][0], LAND[i][1] + (1 - u) * 0.15, LAND[i][2]]} size={[0.128, 0.08]} tex={t} rx={-Math.PI / 2} ry={(i - 1) * 0.18} em={0.3} sc={Math.max(0.001, u)} /></Entity>); });
