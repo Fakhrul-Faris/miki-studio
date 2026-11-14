@@ -246,6 +246,9 @@ Order: board → camera map + animatic (user notes by setup and second) → full
 
 - (EX40) Post effects (ToneMapping exposure, Bloom, Grade) are fixed at a render's first frame: a per-setup exposure does
   nothing in the board or the film. Set brightness per setup with the lights (EX40 `near` factor on the stall lights).
+- (EX42, user caught it) Voice lines were trimmed 0.1 s after Whisper's last-word end, and Whisper's end runs early:
+  "thirty-three" lost its tail; EX40/EX41 (posted) lost up to 0.23 s per line. Copy `timeline.py` from EX42: it cuts at
+  the real end of sound (last 10 ms window above −40 dBFS + 0.08 s) and advances by the trimmed file's length.
 - (EX42) An `<Entity>` with no `transform` hides everything inside it (it rendered nothing, with or without a Look).
   Always give a wrapper `transform={Transform.fromXyz(0, 0, 0)}`. For the painted look (Style C), put `pass="ui"` on the
   card/sign Mesh3d itself and make it `unlit`, so logos, screens and numbers stay crisp under `<Look mode="paint" skip={["ui"]}>`.

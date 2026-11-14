@@ -25,7 +25,11 @@ def tighten(L, ws):
             g0 = ws[i - 1][2] + KEEP / 2; g1 = s0 - KEEP / 2
             segs.append((cur, g0)); pos += g0 - cur; cur = g1
         out.append([w, pos + (s0 - cur), pos + (e0 - cur)])
-    end = ws[-1][2] + 0.10; segs.append((cur, end))
+    # end where the sound really stops (last 10 ms window above -40 dBFS) + 0.08 s: Whisper's last word end runs early
+    # (EX42 L02: "thirty-three" ended 0.25 s after Whisper's end and was clipped)
+    win = int(sr * 0.01); env = [abs(x[i:i + win].astype(np.int32)).max() if i + win <= len(x) else 0 for i in range(0, len(x), win)]
+    last = max((k for k, v in enumerate(env) if v > 32767 * 0.01), default=len(env) - 1)
+    end = min(len(x) / sr, max(ws[-1][2] + 0.10, (last + 1) * win / sr + 0.08)); segs.append((cur, end))
     y = np.concatenate([x[int(a * sr):int(b * sr)] for a, b in segs])
     raw = A / f"_{L}_raw.wav"
     with wave.open(str(raw), "wb") as f: f.setnchannels(1); f.setsampwidth(2); f.setframerate(sr); f.writeframes(y.tobytes())
@@ -55,7 +59,8 @@ def align(disp, ws):
     return list(zip(disp, t))
 t = LEAD; parts = []; lines = {}; caps = []
 for L in DISPLAY:
-    ws, tmp = tighten(L, words[L]); a0 = 0.0; a1 = ws[-1][2] + 0.10 / TEMPO
+    ws, tmp = tighten(L, words[L]); a0 = 0.0
+    with wave.open(str(tmp)) as h: a1 = h.getnframes() / h.getframerate()   # the trimmed file's real length (keeps the tail)
     t += GAP.get(L, 0.16) if parts else 0
     lines[L] = {"start": round(t, 3), "end": round(t + a1 - a0, 3)}
     # display words spread over the heard words' times (by position when counts differ)
