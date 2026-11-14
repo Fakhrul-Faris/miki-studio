@@ -73,6 +73,7 @@ to stay rigid because we're still experimenting." Each episode = one series × o
 never twice in a row; untested series first; S01 rests at 5 videos until the scoreboard; S05 and X00 stay dropped.
 **Every look uses Style D's motion and pace** (WORKING-RULES § 2). Top picks (user): Ramly, Touch 'n Go, S12.
 Times follow the post-time test. Every premise is ☐ until verified; RECIPE-D § 0.1 questions before each script.
+**User 2026-11-14: "pump more how to, lets focus to educational"** → mostly S16 How-to (about 3 in 4); first: scam check (EX43), menu pricing (EX44).
 
 | # | Date | Time | Series | Episode (question to verify) | Look | Status |
 |---|---|---|---|---|---|---|
@@ -80,12 +81,12 @@ Times follow the post-time test. Every premise is ☐ until verified; RECIPE-D �
 | 2 | Thu 19 Nov | 20:00 | S06 Versus | EX39 KK Mart vs 7-Eleven vs FamilyMart (posts as is, HARI 2/30 badge kept) | D | ready; schedule in TikTok Studio |
 | 3 | Fri 20 Nov | 12:30 | S09 Founder story | EX40 Ramly Burger doesn't sell burgers: patties to ~30,000 stalls, no franchise fee ⭐ | A | ready 13 Nov: `EX40-Final.mp4` (36.2 s, 60 fps); post copy in episode.md § Post; schedule in TikTok Studio |
 | 4 | Sat 21 Nov | 12:30 | S13 One number | The money sitting in Touch 'n Go eWallets (the float) ⭐ | C | ☐ |
-| 5 | Sun 22 Nov | 12:30 | S12 What just happened | Business news within 48 h of the day ⭐ (pick on 20–21 Nov) | D | ☐ |
-| 6 | Mon 23 Nov | 12:30 | S04 Why isn't it here? | Why is there no Costco in Malaysia? | B | ☐ |
-| 7 | Tue 24 Nov | 12:30 | S02 Always like that | Why Grab costs more the moment it rains | B | ☐ |
-| 8 | Wed 25 Nov | 12:30 | S10 Who owns what | to research | C | ☐ |
-| 9 | Thu 26 Nov | 12:30 | S14 You asked | answer the best comment on EX35–EX39 | D | ☐ |
-| 10 | Fri 27 Nov | winner | S15 Kedai boss | raises the price 50 sen, loses half his regulars (needs an MPFB character first) | A | ☐ |
+| 5 | Sun 22 Nov | 12:30 | S16 How to | EX43 If you want to check whether an investment is a scam: BNM Financial Consumer Alert list + SC Investor Alert list, step by step | D | ☐ research |
+| 6 | Mon 23 Nov | 12:30 | S16 How to | EX44 If you want to price a menu item so it makes money: food-cost %, worked on a real plate | A/C | ☐ |
+| 7 | Tue 24 Nov | 12:30 | S12 What just happened | Business news within 48 h of the day (pick on 22–23 Nov) | D | ☐ |
+| 8 | Wed 25 Nov | 12:30 | S16 How to | next How-to (pool: register with SSM · take DuitNow QR · …) | — | ☐ |
+| 9 | Thu 26 Nov | 12:30 | S16 How to | next How-to | — | ☐ |
+| 10 | Fri 27 Nov | winner | S04 / S02 / S10 / S14 / S15 | one of the other series | — | ☐ |
 | 3b | after EX40 | — | S16 How to | EX41 How to open a Ramly Burger stall (Part 2 of EX40): licence, food course + typhoid jab, stock, cart | D (desk) + A stall | ready 14 Nov: `EX41-Final.mp4` (44.7 s, 60 fps); post copy in episode.md § Post; schedule in TikTok Studio |
 | then | | | S11 · S03 · S08 second rounds | rerun `tools/series_score.py`, double the winners | | |
 
