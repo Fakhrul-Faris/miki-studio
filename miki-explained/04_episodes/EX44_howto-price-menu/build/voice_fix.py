@@ -7,12 +7,13 @@ audio/L0n.wav, tighter and cleaner. User 2026-11-14: "a bit slow and not a studi
 3. Voice chain (v2): FFT denoise + declick · high-pass 75 Hz · low-pass 15.5 kHz · warmth +2.5 dB @150 Hz · de-box
    −2.5 dB @300 Hz · presence +3.5 dB @4 kHz · air +2 dB @9 kHz · de-esser · compressor 3:1 @ −20 dB · −16 LUFS, TP −1.5 dB.
    Tempo by Rubber Band (R3 engine, formants kept), not ffmpeg atempo (phasey on speech).
-Usage: python3 build/voice_fix.py [TEMPO]   (default 1.15)
+Usage: python3 build/voice_fix.py [TEMPO] [--plain]   (default 1.25; --plain = no EQ/denoise, the original sound)
 """
 import subprocess, sys, wave
 import numpy as np
 from pathlib import Path
-TEMPO = float(sys.argv[1]) if len(sys.argv) > 1 else 1.15     # user 14 Nov: "pace: second" (×1.15)
+PLAIN = "--plain" in sys.argv; sys.argv = [a for a in sys.argv if a != "--plain"]
+TEMPO = float(sys.argv[1]) if len(sys.argv) > 1 else 1.25     # user 14 Nov: the original sound, faster (~1.2–1.3)
 LONG, KEEP, TH, SR = 0.30, 0.22, 10 ** (-42 / 20), 48000
 A, R = Path("audio"), Path("audio/raw")
 # v2 (user: "brighter and warmer … robotic static kind of sound"): light FFT denoise + declick against the MP3/TTS shimmer,
@@ -51,7 +52,7 @@ for p in sorted(R.glob("L0*.mp3")):
     out = A / f"{p.stem}.wav"
     st = A / f"_{p.stem}_st.wav"                       # Rubber Band R3 (--fine), formants kept: no phasey, robotic stretch
     subprocess.run(["rubberband", "-q", f"-T{TEMPO}", "--fine", "--formant", str(tmp), str(st)], check=True)
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(st), "-af", CHAIN, "-ar", str(SR), "-ac", "1", str(out)], check=True)
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(st), "-af", "loudnorm=I=-16:TP=-1.5:LRA=7" if PLAIN else CHAIN, "-ar", str(SR), "-ac", "1", str(out)], check=True)   # --plain: the original sound, loudness only
     tmp.unlink(); st.unlink()
     with wave.open(str(out)) as h: d = h.getnframes() / h.getframerate()
     print(f"{p.stem}: {len(x) / SR:5.2f}s → {d:5.2f}s ({cuts} long pauses trimmed)")
