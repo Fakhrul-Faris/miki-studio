@@ -1,6 +1,6 @@
 # EX42 — Touch 'n Go: one number (S13 One number)
 
-Status: **script v1 (2026-11-14) waiting for the user.** User picked option 1 (RM43) after the float proved unpublished.
+Status: **script v1 approved + voice in (2026-11-14; 31 s voice, 34.7 s with end). Shot list v1 waiting for "ok".** User changed L03 "teh tarik" → "top-up" (pronunciation).
 User's answers (RECIPE § 0.1): number = the float; look = Style C painted (raea, EX30) with Style D motion; ~40 s; number at
 frame 0 with its source. Slot: Sat 21 Nov 12:30 (shuffle #4).
 
@@ -38,7 +38,7 @@ Frame-0 text: **RM43.** · small: "average e-money payment, 2025 · Bank Negara"
 |---|---|---|
 | L01 | Forty-three ringgit. That's the average payment Malaysians made with an e-wallet or a prepaid card like Touch 'n Go, last year. | RM43 on a painted toll-card / phone, the number at frame 0 |
 | L02 | The year before, it was thirty-three. | counter RM33 → RM43 |
-| L03 | E-wallets started with tolls, parking and teh tarik. Small money. | painted toll gate, parking meter, a glass of teh tarik, coins |
+| L03 | E-wallets started with tolls, parking and top-up. Small money. | painted toll gate, parking gantry, a reload counter, small coins |
 | L04 | Now Bank Negara says people use them for bigger things: small loans, insurance, and investment funds. | three bigger objects slide in: a loan slip, an insurance card, a fund chart |
 | L05 | In Touch 'n Go, that's GO+. Your balance goes into a money-market fund and can earn a little every day. | the wallet balance pours into a jar labelled GO+, a small daily tick; "returns not guaranteed" |
 | L06 | And Malaysians made five hundred and thirty-eight e-payments each last year. | counter 432 → 538, one tap per… |
@@ -46,13 +46,36 @@ Frame-0 text: **RM43.** · small: "average e-money payment, 2025 · Bank Negara"
 
 End text: **HOW MUCH SITS IN YOURS?** → sound C + Meikigo logo.
 
+## Shot list v1 (14 setups, ≈ 2.2 s each, on the user's word times)
+
+Look: **Style C painted** (raea `<Look mode="paint">`, EX30 method): a modelled Malaysian night, flat tones, grain, ragged
+edges; the Touch 'n Go blue (#2b5ba8) is the one accent and the light source. Logos, numbers and screens sit in the "ui"
+pass the paint skips (exact brand colours). Motion and pace: Style D. No people. Logo: Commons, public domain.
+
+| S | Words | Camera | What changes |
+|---|---|---|---|
+| 1 | "RM43. That's the average payment Malaysians made with" | macro push on a phone on a kopitiam table, screen glowing blue | frame-0: **RM43** + "average e-money payment, 2025 · Bank Negara" + TnG logo; the screen shows a paid RM43 |
+| 2 | "an e-wallet, or a prepaid card like Touch 'n Go, last year." | orbit to the TnG card beside the phone | "e-wallet" phone lights; "prepaid card" the blue card slides out and lifts |
+| 3 | "The year before, it was RM33." | eye-level frontal on a split-flap sign | flaps 43 → 33, small "2024" tab; the room cools a step |
+| 4 | "E-wallets started with tolls," | crane down on a painted toll plaza at night | the barrier arm lifts on "tolls"; card reader glows blue |
+| 5 | "parking" | low skim along a parking gantry | gantry arm lifts |
+| 6 | "and top-up. Small money." | high three-quarter on a reload counter | a stack of small coins; "small money" — they're tiny next to a hand-sized card |
+| 7 | "Now Bank Negara says people use them for" | rise to a generic central-bank façade (clay, painted; "illustration") | source line BNM Annual Report 2025 |
+| 8 | "bigger things:" | push in to the phone again | coins grow 3× in scale |
+| 9 | "small loans, insurance, and investment funds." | top-down on the table | three cards land one per word: loan slip · insurance card · fund chart |
+| 10 | "In Touch 'n Go, that's GO+." | macro on the phone | screen: a GO+ panel (illustration), the logo |
+| 11 | "Your balance goes into a money-market fund," | side elevation | coins pour from the phone into a glass jar labelled "money-market fund" |
+| 12 | "and can earn a little every day." | slow orbit round the jar | a calendar strip; one small blue tick lights per day; "returns not guaranteed" |
+| 13 | "And Malaysians made 538 e-payments each, last year." | pull out to a year ring of 365 tiles | taps fill the ring, counter 432 → 538 |
+| 14 | "Your e-wallet isn't a toll card anymore. It's where your money lives." + end | dive to the loop (setup 1's pose) | the phone glows; end text **HOW MUCH SITS IN YOURS?** → sound C + Meikigo logo |
+
 ## Voice text (ElevenLabs v4)
 
 | L | v4 text |
 |---|---|
 | L01 | [matter-of-fact] Forty-three ringgit. That's the average payment Malaysians made with an e-wallet… or a prepaid card like Touch 'n Go, last year. |
 | L02 | The year before, it was thirty-three. |
-| L03 | E-wallets started with tolls, parking, and teh tarik. Small money. |
+| L03 | E-wallets started with tolls, parking, and top-up. Small money. (as recorded) |
 | L04 | Now Bank Negara says people use them for BIGGER things: small loans, insurance, and investment funds. |
 | L05 | In Touch 'n Go, that's GO-plus. Your balance goes into a money-market fund… and can earn a little every day. |
 | L06 | And Malaysians made five hundred and thirty-eight e-payments each, last year. |

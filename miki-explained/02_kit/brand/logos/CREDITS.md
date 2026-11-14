@@ -39,3 +39,5 @@
   kkmart.com.my returns an empty page to scripts, so no vector logo from the company.
 
 - ramly_burger_logo.png — Wikimedia Commons "File:Ramly Burger Logo.png", public domain (recreated from ramly.com.my, logo of Ramly Food Processing). Downloaded 2026-11-13 for EX40.
+
+- tng_logo.svg/.png, tng_ewallet_logo.svg/.png: Wikimedia Commons "File:Touch 'n Go logo.svg" and "File:Touch 'n Go eWallet logo.svg", public domain (Touch 'n Go). Downloaded 2026-11-14 for EX42.
