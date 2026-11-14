@@ -81,6 +81,25 @@ pass the paint skips (exact brand colours). Motion and pace: Style D. No people.
 | L06 | And Malaysians made five hundred and thirty-eight e-payments each, last year. |
 | L07 | Your e-wallet isn't a toll card anymore. It's where your money lives. |
 
+## Post (Sat 21 Nov 12:30 · shuffle #4 · S13 One number)
+
+**Caption:**
+```
+RM43: the average e-money payment in Malaysia in 2025. A year earlier it was RM33. 💳
+E-wallets started with tolls and top-ups. Now Bank Negara says we use them for loans, insurance and funds.
+How much sits in yours? 👇
+
+Sources: Bank Negara Malaysia Annual Report 2025 (average e-money transaction RM43, 2024: RM33; 538 e-payments per person) · Principal Malaysia (GO+, Principal e-Cash Fund, from 29 Mar 2021). GO+ returns are not guaranteed. Phone screens, card, cards and the bank building are illustrations. Not financial advice.
+Touch 'n Go logos: Wikimedia Commons, public domain.
+
+#touchngo #ewallet #kewangan #bisnesmalaysia #malaysia
+```
+
+**Pinned comment:**
+```
+Which one number should we break down next? 👇
+```
+
 ## Sources
 - BNM Annual Report 2025: https://www.bnm.gov.my/documents/20124/21185005/ar2025_en_book.pdf
 - Principal Malaysia, GO+ release: https://www.principal.com.my/index.php/en/touch-n-go-ewallet-enters-mainstream-financial-services-sector
