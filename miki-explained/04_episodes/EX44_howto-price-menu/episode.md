@@ -1,6 +1,6 @@
 # EX44 — If you want to price a nasi lemak so it makes money (S16 How to)
 
-Status: **Malay voice in (Eleven v3), sped ×1.25 with the original sound kept (`build/voice_fix.py 1.25 --plain`; raw takes in audio/raw); 44.5 s voice, 49.1 s with end. Shot list v1 waiting for "ok".** English v1 approved and kept below for reference.
+Status: **FINAL rendered 2026-11-14: `export/EX44-Final.mp4`** (49.1 s, 1080×1920, 60 fps, −14.1 LUFS; `build/final44.sh`). Frame check: no black; flicker flags 13.4–14.1 s and 18.2 s are the receipt total and slider % counting (checked). Cover `export/EX44-cover.png` (frame 2.3 s). Preview v1 passed ("proceed") after fixes: wrapper slides away from the lens (0:01), price tags on the leaf in shot 3, receipt total counts through L03. Board v2: hawker-tool interfaces (receipt, ruler slider, LCD calculator, price-tag split) on banana-leaf green; Malay voice ×1.25 plain.
 User's answers (RECIPE § 0.1): dish = nasi lemak bungkus · method = food cost % · look = ~60 % UI costing sheet / ~40 % food
 macro (Style D motion) · ~45 s · voice: the user (ElevenLabs) · slot Mon 23 Nov 12:30.
 
@@ -115,6 +115,28 @@ End text: **WHAT DO YOU CHARGE?** → sound C + Meikigo logo.
 | L05 | Step three. Divide. One sixty, divided by point three five, is about four sixty. At thirty percent… five forty. |
 | L06 | Step four. Check it. The average plate in Malaysia was three sixty-eight. At that price, food eats FORTY-FOUR percent. |
 | L07 | The rest has to pay for gas, rent, and your time. Which number surprised you? |
+
+## Post (Mon 23 Nov 12:30 · S16 How to · Bahasa Melayu test)
+
+**Caption:**
+```
+Kalau nak letak harga nasi lemak yang betul-betul untung, ini caranya. 4 langkah. 🍛
+1 Kira kos setiap bahan sebungkus (contoh kami: lebih kurang RM1.61)
+2 Pilih kos makanan anda: kebanyakan restoran sasarkan 30–35%
+3 Bahagi: RM1.61 ÷ 0.35 ≈ RM4.60 · pada 30% ≈ RM5.40
+4 Semak dengan harga pasaran: purata RM3.68 (2024)
+Baki harga kena tampung gas, sewa dan masa anda.
+Anda jual berapa? 👇
+
+Sumber: harga bahan PriceCatcher KPDN (data.gov.my), median nasional Okt 2026; ikan bilis dan pembungkus anggaran. Purata RM3.68: DOSM 2024. 30–35% ialah panduan industri restoran, bukan peraturan. Resipi ialah contoh, bukan gerai sebenar.
+
+#nasilemak #peniaga #bisneskecil #kosmakanan #malaysia
+```
+
+**Pinned comment:**
+```
+Nak kami kira harga menu apa seterusnya? 👇
+```
 
 ## Sources
 - PriceCatcher (DOSM open data): https://open.dosm.gov.my/data-catalogue/pricecatcher · https://storage.data.gov.my/pricecatcher/pricecatcher_2026-10.parquet

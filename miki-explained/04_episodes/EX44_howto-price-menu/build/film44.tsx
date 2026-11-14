@@ -341,6 +341,8 @@ const kraft = () => <StandardMaterial base_color="#a8794a" normal_map_texture={S
 const getah = (k: string) => { const y = 0.028, w = 0.07 * (1 - y / 0.085) + 0.0012, m = <StandardMaterial base_color="#c8323c" perceptual_roughness={0.45} />;
   return [[w, 0, 0.0014, w], [-w, 0, 0.0014, w], [0, w, w, 0.0014], [0, -w, w, 0.0014]].map(([x, z, hx, hz], i) =>
     <Mesh3d key={k + i} name={k + i} transform={Transform.fromXyz(x, y, z)}><Cuboid half_size={[hx, 0.0016, hz]} />{m}</Mesh3d>); };
+const PTAGS: [string, number, number, number][] = [["beras", -0.051, 0.085, 21], ["santan", -0.017, 0.085, 22], ["telur", 0.017, 0.085, 24], ["bilis", 0.051, 0.085, 25],
+  ["kacang", -0.051, -0.075, 27], ["timun", -0.017, -0.075, 28], ["sambal", 0.017, -0.075, 29], ["bungkus", 0.051, -0.075, 31]];   // [tex, dx, dz (camera-facing rows: front, behind the rice), the word it lands on]
 function Food({ n }: { n: number }) {
   const P: any[] = [];
   P.push(<Mesh3d key="ct" transform={Transform.fromXyz(VT[0], TY - 0.02, VT[2])}><Cuboid half_size={[0.9, 0.02, 0.6]} /><StandardMaterial base_color="#6b4a2e" normal_map_texture={S("tex/grey_plaster_nor_gl_1k.jpg")} uv_transform={Affine2.fromScale([3, 1])} perceptual_roughness={0.6} /></Mesh3d>);
@@ -352,9 +354,11 @@ function Food({ n }: { n: number }) {
     V.push(<Mesh3d key={"vn" + i} transform={Transform.fromXyz(s, 0.0073, 0).withRotation(rotY(0.12))}><Cuboid half_size={[0.0005, 0.00025, L]} /><StandardMaterial base_color="#3f7d45" perceptual_roughness={0.3} /></Mesh3d>); }
   P.push(<Entity key="leafset" transform={Transform.fromXyz(LF[0], TY + 0.001, LF[2]).withRotation(rotY(0.3))}>{V}</Entity>);
   // which ingredients are on the leaf, by time (the loop shots 1 and 15 show the full packet)
-  const full = n === 1 || n >= 12, at = (i: number) => (full ? 1 : n < 3 ? 0 : onO(i, 0.35, -0.25));
-  const paper = n === 1 ? 1 - onO(4, 0.6, -0.2) : n === 15 ? onO(94, 0.6, -0.2) : 0;
-  const rice = at(21), san = at(22), egg = n >= 4 || full ? 1 : 0, bil = n >= 5 || full ? at(25) : 0, kac = n >= 5 || full ? at(27) : 0, tim = n >= 5 || full ? at(28) : 0, smb = n >= 6 || full ? at(29) : 0;
+  const paper = n === 1 ? 1 - ss(T, W(4) - 0.35, W(4) + 0.75) : n === 15 ? ss(T, W(94) - 0.3, W(94) + 0.7) : 0;
+  // 1 and 15: under the closed packet nothing shows; the food lands as the paper lifts off (and leaves as it closes in 15)
+  const cf = n === 1 || n === 15 ? ss(1 - paper, 0.2, 0.75) : 1;
+  const full = n === 1 || n >= 12, at = (i: number) => (full ? cf : n < 3 ? 0 : onO(i, 0.35, -0.25));
+  const rice = at(21), san = at(22), egg = full ? cf : n >= 4 ? 1 : 0, bil = n >= 5 || full ? at(25) : 0, kac = n >= 5 || full ? at(27) : 0, tim = n >= 5 || full ? at(28) : 0, smb = n >= 6 || full ? at(29) : 0;
   if (rice > 0.01) { const y0 = TY + 0.006 + drop(rice);
     P.push(<Mesh3d key="rice" name="rice" transform={Transform.fromXyz(LF[0], y0, LF[2]).withScale([1, 0.5, 1])}><Sphere radius={0.07} /><StandardMaterial base_color="#e3d9c2" perceptual_roughness={0.7} /></Mesh3d>);
     for (let i = 0; i < 420; i++) { const a = rnd(i + 200) * 6.283, q = Math.sqrt(rnd(i + 400)) * 0.97, r = q * 0.07, k = Math.sqrt(Math.max(0.02, 1 - q * q));
@@ -362,7 +366,7 @@ function Food({ n }: { n: number }) {
       P.push(<Mesh3d key={"rg" + i} name={"rg" + i} transform={Transform.fromXyz(LF[0] + Math.cos(a) * r, y0 + h - 0.0006, LF[2] + Math.sin(a) * r).withRotation(lay(yaw, radial ? -slope : (rnd(i * 3) - 0.5) * 0.5))}>
         <Capsule3d radius={0.0017} half_length={0.0029} /><StandardMaterial base_color={i % 4 ? "#f4efe3" : "#ebe2cd"} perceptual_roughness={0.42} /></Mesh3d>); } }
   if (san > 0.01) P.push(<Mesh3d key="san" name="san" transform={Transform.fromXyz(LF[0], TY + 0.013, LF[2]).withScale([1.02, 0.55 * san, 1.02])}><Sphere radius={0.074} /><StandardMaterial base_color={Srgba.hex("#f6ead0").with_alpha(0.2)} alpha_mode="Blend" perceptual_roughness={0.1} /></Mesh3d>);
-  if (egg > 0.01) { const u = n === 4 ? onO(24, 0.35, -0.25) : 1, e = [LF[0] + 0.07, TY + 0.012 + drop(u), LF[2] + 0.05];
+  if (egg > 0.01) { const u = n === 4 ? onO(24, 0.35, -0.25) : full ? egg : 1, e = [LF[0] + 0.07, TY + 0.012 + drop(u), LF[2] + 0.05];
     P.push(<Mesh3d key="egw" name="egw" transform={Transform.fromXyz(e[0], e[1], e[2]).withScale([1, 0.55, 1.25])}><Sphere radius={0.026} /><StandardMaterial base_color="#f6f3ec" perceptual_roughness={0.3} /></Mesh3d>);
     P.push(<Mesh3d key="egy" name="egy" transform={Transform.fromXyz(e[0], e[1] + 0.011, e[2]).withScale([1, 0.4, 1.05])}><Sphere radius={0.0145} /><StandardMaterial base_color="#f0a21a" perceptual_roughness={0.45} /></Mesh3d>); }
   // ikan bilis: slim golden fish, piled; kacang: skin-on fried peanuts, reddish brown
@@ -382,9 +386,13 @@ function Food({ n }: { n: number }) {
     for (let i = 0; i < 12; i++) { const a = rnd(i + 60) * 6.28, r = Math.sqrt(rnd(i + 70)) * 0.024, h = 0.0135 * Math.sqrt(Math.max(0, 1 - (r / 0.03) ** 2));
       P.push(<Mesh3d key={"sf" + i} name={"sf" + i} transform={Transform.fromXyz(LF[0] + 0.01 + Math.cos(a) * r, sy + h, LF[2] - 0.02 + Math.sin(a) * r).withScale([1.4, 0.5, 1])}><Sphere radius={0.0022} /><StandardMaterial base_color={i % 3 ? "#d4552a" : "#5c140a"} perceptual_roughness={0.2} /></Mesh3d>); } }
   // the paper, folded up over the packet (unwraps in 1, closes again in 15)
-  if (paper > 0.01) { const k = Math.max(0.001, paper);
-    P.push(<Entity key="pkt" transform={Transform.fromXyz(LF[0], TY + 0.002 + (1 - paper) * 0.2, LF[2]).withRotation(rotY(0.3)).withScale([1.7 * k, 1.6 * k, 1.7 * k])}>
+  if (paper > 0.01) { const u = 1 - paper;     // the paper lifts up and tips away, whole (no shrinking)
+    // it slides back and up, away from the lens (the camera sits above and in front, +z): never towards it
+    P.push(<Entity key="pkt" transform={Transform.fromXyz(LF[0] - 0.04 * u, TY + 0.002 + 0.1 * u, LF[2] - 0.45 * u).withRotation(Quat.fromEuler("YXZ", 0.3 + 0.3 * u, -0.6 * u, 0.1 * u)).withScale([1.7, 1.6, 1.7])}>
       <Mesh3d name="ppr" shape={sob().bkPaper} transform={Transform.fromXyz(0, 0, 0)}>{kraft()}</Mesh3d>{getah("pg")}</Entity>); }
+  // 3 and 5: a price tag stands where each ingredient will land (in on "Kira harga setiap bahan"); it bows out as its food lands
+  if (n === 3 || n === 5) PTAGS.forEach(([k, dx, dz, wi], i) => { const inn = n === 5 ? 1 : eo((T - (W(15) + i * 0.13)) / 0.35), out = 1 - eo((T - (W(wi) - 0.3)) / 0.3), s = inn * out;
+    if (s > 0.01) P.push(<Card key={"pt" + k} k={"pt" + k} p={[LF[0] + dx, TY + (dz < 0 ? 0.058 : 0.03) + (1 - inn) * 0.03, LF[2] + dz]} size={[0.032, 0.02]} tex={"pt_" + k} rx={-0.55} ry={-0.15} em={0.3} sc={s} />); });
   // 12: the stall: more packets, the price card
   if (n === 12) { for (let i = 0; i < 6; i++) P.push(<Entity key={"bk" + i} transform={Transform.fromXyz(VT[0] - 0.42 + (i % 3) * 0.14, TY, VT[2] - 0.22 - Math.floor(i / 3) * 0.13).withRotation(rotY(i)).withScale([1.4, 1.3, 1.4])}><Mesh3d name={"bkp" + i} shape={sob().bkPaper} transform={Transform.fromXyz(0, 0, 0)}>{kraft()}</Mesh3d>{getah("g" + i)}</Entity>);
     P.push(<Card key="tag" k="tag" p={[LF[0] + 0.2, TY + 0.06, LF[2] + 0.08]} size={[0.13, 0.081]} tex="tag368" ry={-0.35} rx={-0.25} em={0.35} sc={onO(76, 0.3, -0.25)} />); }
@@ -408,7 +416,7 @@ const ROWS44 = [["Beras", "100 g", 0.32, 21], ["Santan", "25 g", 0.25, 22], ["Te
 const zig = (c: string) => ({ height: 22, backgroundImage: `linear-gradient(135deg, ${c} 50%, transparent 50%), linear-gradient(225deg, ${c} 50%, transparent 50%)`, backgroundSize: "44px 22px", backgroundRepeat: "repeat-x" });
 function Sheet({ n }: { n: number }) {
   const shown = (r: [string, string, number, number], i: number) => n >= 7 ? 1 : n === 4 ? (i < 2 ? 1 : i === 2 ? onO(24, 0.3, -0.2) : 0) : n === 6 ? (i < 3 ? 1 : i < 6 ? onO(28, 0.3, -0.6 + (i - 3) * 0.18) : onO(r[3], 0.3, -0.2)) : 0;
-  const tot = n === 7 ? eo(lin(W(37), W(40) + 0.2)) : 1, total = 1.61 * tot;
+  const tot = n === 7 ? eo(lin(ST[6] + 0.3, W(40) + 0.2)) : 1, total = 1.61 * tot;
   return (<div style={{ position: "absolute", left: 80, top: 300, width: 920 }}>
     {/* the printer's mouth the receipt hangs from */}
     <div style={{ height: 34, borderRadius: 17, background: "#0b1710", boxShadow: "inset 0 6px 10px rgba(0,0,0,0.7), 0 2px 0 rgba(255,255,255,0.06)" }} />
