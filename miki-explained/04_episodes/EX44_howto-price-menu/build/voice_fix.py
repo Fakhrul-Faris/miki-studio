@@ -3,19 +3,23 @@
 audio/L0n.wav, tighter and cleaner. User 2026-11-14: "a bit slow and not a studio quality. can you fix it for me?"
 
 1. Pauses longer than LONG are cut down to KEEP (energy-based, 10 ms windows, -42 dBFS), with 15 ms fades at each cut.
-2. Tempo ×TEMPO with pitch kept (ffmpeg atempo).
-3. Voice chain: high-pass 75 Hz · warmth +1.5 dB @120 Hz · de-box −2.5 dB @260 Hz · presence +2.5 dB @3.4 kHz ·
-   air +1.5 dB @10 kHz · de-esser · compressor 3:1 @ −20 dB · loudness −16 LUFS, true peak −1.5 dB.
-Usage: python3 build/voice_fix.py [TEMPO]   (default 1.12)
+2. Tempo ×TEMPO with pitch and formants kept (Rubber Band R3).
+3. Voice chain (v2): FFT denoise + declick · high-pass 75 Hz · low-pass 15.5 kHz · warmth +2.5 dB @150 Hz · de-box
+   −2.5 dB @300 Hz · presence +3.5 dB @4 kHz · air +2 dB @9 kHz · de-esser · compressor 3:1 @ −20 dB · −16 LUFS, TP −1.5 dB.
+   Tempo by Rubber Band (R3 engine, formants kept), not ffmpeg atempo (phasey on speech).
+Usage: python3 build/voice_fix.py [TEMPO]   (default 1.15)
 """
 import subprocess, sys, wave
 import numpy as np
 from pathlib import Path
-TEMPO = float(sys.argv[1]) if len(sys.argv) > 1 else 1.12
+TEMPO = float(sys.argv[1]) if len(sys.argv) > 1 else 1.15     # user 14 Nov: "pace: second" (×1.15)
 LONG, KEEP, TH, SR = 0.30, 0.22, 10 ** (-42 / 20), 48000
 A, R = Path("audio"), Path("audio/raw")
-CHAIN = ("highpass=f=75,equalizer=f=120:t=q:w=1:g=1.5,equalizer=f=260:t=q:w=1.2:g=-2.5,equalizer=f=3400:t=q:w=1:g=2.5,"
-         "highshelf=f=10000:g=1.5,deesser=i=0.35:m=0.5:f=0.5,acompressor=threshold=-20dB:ratio=3:attack=5:release=80:makeup=2,"
+# v2 (user: "brighter and warmer … robotic static kind of sound"): light FFT denoise + declick against the MP3/TTS shimmer,
+# a gentle 15.5 kHz low-pass where the codec artefacts live, warmer low-mids, brighter presence and air.
+CHAIN = ("afftdn=nr=8:nf=-42:tn=1,adeclick,highpass=f=75,lowpass=f=15500,"
+         "equalizer=f=150:t=q:w=1:g=2.5,equalizer=f=300:t=q:w=1.2:g=-2.5,equalizer=f=4000:t=q:w=1.1:g=3.5,highshelf=f=9000:g=2,"
+         "deesser=i=0.4:m=0.5:f=0.5,acompressor=threshold=-20dB:ratio=3:attack=5:release=80:makeup=2,"
          "loudnorm=I=-16:TP=-1.5:LRA=7")
 
 def load(p):
@@ -45,7 +49,9 @@ for p in sorted(R.glob("L0*.mp3")):
     tmp = A / f"_{p.stem}.wav"
     with wave.open(str(tmp), "wb") as h: h.setnchannels(1); h.setsampwidth(2); h.setframerate(SR); h.writeframes((np.clip(y, -1, 1) * 32767).astype(np.int16).tobytes())
     out = A / f"{p.stem}.wav"
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(tmp), "-af", f"atempo={TEMPO},{CHAIN}", "-ar", str(SR), "-ac", "1", str(out)], check=True)
-    tmp.unlink()
+    st = A / f"_{p.stem}_st.wav"                       # Rubber Band R3 (--fine), formants kept: no phasey, robotic stretch
+    subprocess.run(["rubberband", "-q", f"-T{TEMPO}", "--fine", "--formant", str(tmp), str(st)], check=True)
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(st), "-af", CHAIN, "-ar", str(SR), "-ac", "1", str(out)], check=True)
+    tmp.unlink(); st.unlink()
     with wave.open(str(out)) as h: d = h.getnframes() / h.getframerate()
     print(f"{p.stem}: {len(x) / SR:5.2f}s → {d:5.2f}s ({cuts} long pauses trimmed)")
