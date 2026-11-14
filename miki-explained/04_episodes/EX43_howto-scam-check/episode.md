@@ -1,6 +1,6 @@
 # EX43 — If you want to check whether an investment is a scam (S16 How to)
 
-Status: **script v1 approved, voice in (2026-11-14; 43 s voice, 46.5 s with end). Shot list v1 (80 % UI / 20 % physical) waiting for "ok".**
+Status: **board v1 (2026-11-14) waiting for the user: `stills/board_v1.jpg`.** Voice in (43 s, 46.5 s with end); 13 interface + 5 physical setups; fonts Public Sans + Anton (OFL).nd). Shot list v1 (80 % UI / 20 % physical) waiting for "ok".**
 Series S16 How to (main focus from 14 Nov) · opens "If you want to…" · 4 checks · ~45 s · look: Style D (macro objects:
 phone, documents, the 997 call) with Style D motion · slot Sun 22 Nov 12:30 · voice: the user (ElevenLabs).
 
