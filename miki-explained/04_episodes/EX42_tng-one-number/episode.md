@@ -1,6 +1,6 @@
 # EX42 — Touch 'n Go: one number (S13 One number)
 
-Status: **script v1 approved + voice in (2026-11-14; 31 s voice, 34.7 s with end). Shot list v1 waiting for "ok".** User changed L03 "teh tarik" → "top-up" (pronunciation).
+Status: **preview v1 (2026-11-14, 30 fps, 35.6 s): `out/preview_v1.mp4`, waiting for the user.** Board v2 (materials, set dressing) → animatic → preview; voice tails no longer clipped (RM33).
 User's answers (RECIPE § 0.1): number = the float; look = Style C painted (raea, EX30) with Style D motion; ~40 s; number at
 frame 0 with its source. Slot: Sat 21 Nov 12:30 (shuffle #4).
 
