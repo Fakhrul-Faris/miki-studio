@@ -37,7 +37,8 @@ EPISODES, INDEX = REPO / "04_episodes", REPO / "storage" / "telegram-index.json"
 POSTED, CALENDAR = REPO / "storage" / "posted.json", REPO / "05_calendar" / "calendar.md"
 CONF = Path.home() / ".config" / "telegram" / "tgstore.env"
 SOURCE_DIRS, FINAL_DIR, FINAL_EXT = ("media", "audio"), "export", {".mp4", ".mov"}
-ICON = {"final": "🎬", "render": "🎞", "source": "📎"}
+COVER_EXT = {".png", ".jpg", ".jpeg"}                       # export/EXNN-cover.png: the post's cover image (role "cover")
+ICON = {"final": "🎬", "render": "🎞", "source": "📎", "cover": "🖼"}
 CLOUD = "https://api.telegram.org"
 MB = 1024 * 1024
 
@@ -190,7 +191,13 @@ def header(ix, ep, title):
     hd[ep] = m["message_id"]; save_index(ix); time.sleep(1.1)
 
 
+def is_cover(p):
+    return p.parent.name == FINAL_DIR and p.suffix.lower() in COVER_EXT and "cover" in p.stem.lower()
+
+
 def role_of(p):
+    if is_cover(p):
+        return "cover"
     if p.parent.name == FINAL_DIR and p.suffix.lower() in FINAL_EXT:
         return "final" if "final" in p.stem.lower() else "render"
     return "source"
@@ -253,7 +260,8 @@ def episode_files(ep_root):
     ex = [(p, role_of(p)) for p in sorted((ep_root / FINAL_DIR).glob("*")) if p.suffix.lower() in FINAL_EXT and "preview" not in p.name]
     if len(ex) == 1 and ex[0][1] == "render":                 # no -Final file: a lone export is the final
         ex = [(ex[0][0], "final")]
-    return out + ex
+    covers = [(p, "cover") for p in sorted((ep_root / FINAL_DIR).glob("*")) if is_cover(p)]
+    return out + ex + covers
 
 
 def cmd_push_episode(args):

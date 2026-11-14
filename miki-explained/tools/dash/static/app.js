@@ -82,7 +82,7 @@ function today() {
         <div class="d-flex align-items-end gap-3 flex-wrap"><div><div class="kpi-label">${sch ? "Goes live" : late ? "Was due" : "Slot"} ${fmtWhen(at)}</div>
           <div class="count-big ${late ? "text-danger" : ""}" data-count="${at}">${rel(at)}</div></div>
           ${sch ? `<button class="btn btn-soft btn-sm" data-unsched="${e.id}">Not scheduled after all</button>` : `<input type="datetime-local" class="form-control form-control-sm" style="max-width:210px" value="${n.planned_at}" data-plan="${e.id}" aria-label="Change slot">`}</div>
-        <div class="actions"><a class="btn btn-soft" href="/media/video/${e.id}?dl=1" download="${e.id}.mp4">⬇ Video</a>
+        <div class="actions"><a class="btn btn-soft" href="/media/video/${e.id}?dl=1" download="${e.id}.mp4">⬇ Video</a>${e.has_cover ? `<a class="btn btn-soft" href="/media/cover/${e.id}?dl=1" download="${e.id}-cover.png">⬇ Cover</a>` : ""}
           <button class="btn btn-soft" data-copy="caption" data-ep="${e.id}">Copy caption</button>${e.pinned ? `<button class="btn btn-soft" data-copy="pinned" data-ep="${e.id}">Copy pinned</button>` : ""}
           ${sch ? `<button class="btn btn-soft" data-posted="${e.id}">✓ Went live early</button>` : `<button class="btn btn-primary" data-sched="${e.id}">📅 Scheduled in Studio</button><button class="btn btn-soft" data-posted="${e.id}">✓ Posted now</button>`}</div>
         <details ${innerWidth > 860 ? "open" : ""}><summary class="muted small">Caption</summary><div class="mt-2">${capBox(e, "caption")}</div></details></div></div>`;
@@ -153,7 +153,7 @@ function openDrawer(id) {
       <td><button class="btn btn-soft btn-sm" data-num="${p.id}|${cp}">${m.views != null ? "Edit" : "Add"}</button></td></tr>`; }).join("")).join("");
   $("#dr-title").textContent = `${e.id} · ${e.title}`;
   $("#dr-body").innerHTML = `<video controls playsinline preload="none" poster="${thumb(id)}" src="/media/video/${id}"></video>
-    <div class="actions my-3"><a class="btn btn-soft btn-sm" href="/media/video/${id}?dl=1" download="${id}.mp4">⬇ Video</a><button class="btn btn-soft btn-sm" data-copy="caption" data-ep="${id}">Copy caption</button>
+    <div class="actions my-3"><a class="btn btn-soft btn-sm" href="/media/video/${id}?dl=1" download="${id}.mp4">⬇ Video</a>${e.has_cover ? `<a class="btn btn-soft btn-sm" href="/media/cover/${id}?dl=1" download="${id}-cover.png">⬇ Cover</a>` : ""}<button class="btn btn-soft btn-sm" data-copy="caption" data-ep="${id}">Copy caption</button>
       ${e.pinned ? `<button class="btn btn-soft btn-sm" data-copy="pinned" data-ep="${id}">Copy pinned</button>` : ""}<a class="btn btn-soft btn-sm" href="${STUDIO}" target="_blank" rel="noopener">TikTok Studio ↗</a></div>
     <div class="d-flex flex-wrap gap-2 mb-2"><span class="chip ${e.status === "posted" ? "ok" : "ochre"}">${e.status}</span>${e.duration ? `<span class="chip">${e.duration}s</span>` : ""}${e.lane ? `<span class="chip">${esc(e.lane.split("·")[0].split("(")[0])}</span>` : ""}</div>
     ${e.concept ? `<div class="mb-3">${esc(e.concept)}</div>` : ""}

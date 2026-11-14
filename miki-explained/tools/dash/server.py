@@ -38,7 +38,26 @@ def video_path(ep):
     return None
 
 
+def cover_path(ep, fetch=True):
+    """The episode's cover (export/EXNN-cover.png): the Air's copy, else (fetch) the file the local Telegram server keeps."""
+    for d in EPISODES.glob(ep + "_*"):
+        c = sorted(p for p in d.glob("export/*") if p.suffix.lower() in (".png", ".jpg", ".jpeg") and "cover" in p.stem.lower())
+        if c: return c[0]
+    try:
+        sys.path.insert(0, str(HERE.parent)); import tgstore
+        v = next((v for v in tgstore.files(tgstore.load_index()).values() if v["episode"] == ep and (v["role"] == "cover" or "cover" in v["path"].rsplit("/", 1)[-1].lower())), None)
+        if v and not fetch: return Path(v["path"])
+        if v:
+            p = tgstore.local_file(v["file_id"])
+            if p.exists(): return p
+    except Exception as e:
+        print(f"cover {ep}: {type(e).__name__}", flush=True)      # never the message: local Telegram paths contain the bot token
+    return None
+
+
 def thumb_path(ep):
+    c = cover_path(ep)                                            # the episode's own cover beats a QuickLook frame
+    if c: return c
     THUMBS.mkdir(parents=True, exist_ok=True); t = THUMBS / f"{ep}.png"
     if t.exists(): return t
     v = video_path(ep)
@@ -74,6 +93,7 @@ def state():
     for e in allep:
         e["stack"] = json.loads(e["stack"] or "{}")
         e["has_video"] = any(EPISODES.glob(e["id"] + "_*/export/*.mp4")) or e["status"] in ("ready", "posted")
+        e["has_cover"] = cover_path(e["id"], fetch=False) is not None
     for i in inbox: i["suggest"] = json.loads(i["suggest"]) if i["suggest"] else {}
     byp = {}
     for m in mets: byp.setdefault(m["post_id"], {})[m["checkpoint"]] = m
@@ -111,10 +131,10 @@ class H(BaseHTTPRequestHandler):
         for k, v in (extra or {}).items(): self.send_header(k, v)
         self.end_headers(); self.wfile.write(b)
 
-    def file(self, p, download=None):
+    def file(self, p, download=None, name=None):
         """Serve a file with Range support (Safari won't play a video without it)."""
         if not p or not Path(p).is_file(): return self.send(404, {"error": "not found"})
-        p = Path(p); size = p.stat().st_size; ctype = mimetypes.guess_type(p.name)[0] or "application/octet-stream"
+        p = Path(p); size = p.stat().st_size; ctype = mimetypes.guess_type(name or download or p.name)[0] or "application/octet-stream"   # Telegram's stored files have no extension
         rng = self.headers.get("Range"); start, end = 0, size - 1
         if rng and (m := re.match(r"bytes=(\d*)-(\d*)", rng)):
             if m.group(1): start = int(m.group(1))
@@ -149,8 +169,12 @@ class H(BaseHTTPRequestHandler):
             return self.file(p if str(p).startswith(str(STATS.resolve())) else None)
         if path.startswith("/media/video/"):
             ep = path.rsplit("/", 1)[1].upper(); return self.file(video_path(ep), f"{ep}.mp4" if "dl" in q else None)
+        if path.startswith("/media/cover/"):                       # ?dl=1 downloads it as EXNN-cover.png
+            ep = path.rsplit("/", 1)[1].upper(); c = cover_path(ep)
+            nm = f"{ep}-cover{(c.suffix or '.png') if c else '.png'}"
+            return self.file(c, nm if "dl" in q else None, nm)
         if path.startswith("/media/thumb/"):
-            return self.file(thumb_path(path.rsplit("/", 1)[1].upper()))
+            return self.file(thumb_path(path.rsplit("/", 1)[1].upper()), None, "thumb.png")
         if path == "/api/state": return self.send(200, state())
         self.send(404, {"error": "not found"})
 
