@@ -173,7 +173,7 @@ function TableSet({ n }: { n: number }) {
     P.push(<Entity key="yre" pass="ui" transform={Transform.fromXyz(0, 0, 0)}><Card unlit k={"yr" + (fl > 0.5)} p={[SGN[0] + 0.1, TY + 0.03, SGN[2] + 0.03]} size={[0.06, 0.03]} tex={fl > 0.5 ? "yr2024" : "yr2025"} ry={0.15} em={0.6} /></Entity>); }
   // 8: coins grow on "bigger"; 9: three cards land, one per word
   { const g = n === 8 ? on(43, 0.5, -0.2) : n > 8 ? 1 : 0;
-    for (let i = 0; i < 7; i++) P.push(<Coin key={"cn" + i} k={"cn" + i} p={TX0(-0.2 + (i % 4) * 0.035, TY + Math.floor(i / 4) * 0.0026 * lerp(1, 3, g), 0.06 + (i % 3) * 0.01)} s={lerp(1, 3, g)} />); }
+    for (let i = 0; i < 7; i++) P.push(<Coin key={"cn" + i} k={"cn" + i} p={TX0(-0.2 + (i % 4) * 0.035 * lerp(1, 2.4, g), TY + Math.floor(i / 4) * 0.0038 * lerp(1, 3, g), 0.06 + (i % 3) * 0.01)} s={lerp(1, 3, g)} />); }
   if (n >= 9) ["c_loan", "c_ins", "c_fund"].forEach((t, i) => { const u = n === 9 ? on([46, 47, 50][i], 0.35, -0.2) : 1;
     if (u > 0.01) P.push(<Entity key={"lc" + i} pass="ui" transform={Transform.fromXyz(0, 0, 0)}><Card unlit k={"lc" + i} p={[LAND[i][0], LAND[i][1] + (1 - u) * 0.15, LAND[i][2]]} size={[0.128, 0.08]} tex={t} rx={-Math.PI / 2} ry={(i - 1) * 0.18} em={0.3} sc={Math.max(0.001, u)} /></Entity>); });
   // 11–12: the fund jar: coins pour from the phone into it; 12: a day strip, one tick lights per day
@@ -221,7 +221,7 @@ function TollSet({ n }: { n: number }) {
   for (const x of [-2.5, 0.5]) P.push(<Arm key={"arm" + x} k={"arm" + x} p={[cx + x, 1.0, cz + 1.2]} lift={x === 0.5 ? lift : 0} />);
   P.push(<Entity key="rdr" pass="ui" transform={Transform.fromXyz(0, 0, 0)}><Mesh3d name="rdr" transform={Transform.fromXyz(cx + 0.35, 1.15, cz + 1.0)}><Cuboid half_size={[0.12, 0.16, 0.02]} /><StandardMaterial base_color={BLUEH} emissive={glow(BLUEH, 1.5 + 2 * lift)} /></Mesh3d></Entity>);
   // parking gantry at +14 m
-  const pk = n === 5 ? on(30, 0.5, -0.2) : n > 5 ? 1 : 0, px = cx + 14;
+  const pk = n === 5 ? on(30, 0.4, -0.25) : n > 5 ? 1 : 0, px = cx + 7.5;   // close to the lanes: setup 5 lasts half a second
   P.push(<B key="pkb" p={[px, 0.75, cz]} s={[0.7, 1.5, 0.7]}><Plaster u={1} v={1} tint="#40424a" /></B>);
   P.push(<Arm key="parm" k="parm" p={[px + 0.35, 1.0, cz + 0.2]} lift={pk} len={3} />);
   P.push(<Entity key="psg" pass="ui" transform={Transform.fromXyz(0, 0, 0)}><Card unlit k="psg" p={[px, 2.6, cz + 0.36]} size={[1.6, 0.4]} tex="s_park" em={0.8} /></Entity>);
@@ -279,7 +279,7 @@ const SETUPS: Setup[] = [
   /* 3 */ { set: "t", a: C([SGN[0] + 0.05, TY + 0.1, SGN[2] + 0.75], [SGN[0], TY + 0.06, SGN[2]]), b: C([SGN[0] + 0.04, TY + 0.1, SGN[2] + 0.66], [SGN[0], TY + 0.06, SGN[2]]), fov: 26, fs: 2.8, src: SRC,
             count: { v: () => "RM" + num(43, 33, W(25) - 0.3, W(25) + 0.2), unit: "average e-money payment, 2024", t: W(23) } },
   /* 4 */ { set: "s", tr: "out", a: C([VS[0] + 3, 6, VS[2] + 22], [VS[0], 3.2, VS[2]]), b: C([VS[0] + 2.4, 4.8, VS[2] + 18], [VS[0], 2.9, VS[2]]), fov: 34, fs: 8 },
-  /* 5 */ { set: "s", a: C([VS[0] + 11.6, 1.0, VS[2] + 6.4], [VS[0] + 14.4, 1.7, VS[2]]), b: C([VS[0] + 12.1, 0.9, VS[2] + 5.8], [VS[0] + 14.5, 1.7, VS[2]]), fov: 30, fs: 5.6, up: [0.1, 1, 0] },
+  /* 5 */ { set: "s", a: C([VS[0] + 5.1, 1.0, VS[2] + 6.4], [VS[0] + 7.9, 1.7, VS[2]]), b: C([VS[0] + 5.6, 0.9, VS[2] + 5.8], [VS[0] + 8.0, 1.7, VS[2]]), fov: 30, fs: 5.6, up: [0.1, 1, 0] },
   /* 6 */ { set: "s", a: C([VS[0] - 12.4, 2.3, VS[2] + 4.8], [VS[0] - 14, 1.55, VS[2]]), b: C([VS[0] - 12.7, 2.2, VS[2] + 4.3], [VS[0] - 14, 1.5, VS[2]]), fov: 30, fs: 4,
             tags: [{ at: [VS[0] - 14.25, 1.02, VS[2] + 0.15], x: 70, y: 1330, cap: "SMALL MONEY", sub: "tolls · parking · top-up", t: W(33) }] },
   /* 7 */ { set: "b", tr: "out", a: C([VC[0] + 1.5, 1.6, VC[2] + 22], [VC[0], 4.6, VC[2]]), b: C([VC[0] + 3.5, 2.6, VC[2] + 26], [VC[0], 4.4, VC[2]]), fov: 34, fs: 8, src: SRC, note: "building: an illustration" },
