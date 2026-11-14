@@ -246,6 +246,9 @@ Order: board → camera map + animatic (user notes by setup and second) → full
 
 - (EX40) Post effects (ToneMapping exposure, Bloom, Grade) are fixed at a render's first frame: a per-setup exposure does
   nothing in the board or the film. Set brightness per setup with the lights (EX40 `near` factor on the stall lights).
+- (EX42) An `<Entity>` with no `transform` hides everything inside it (it rendered nothing, with or without a Look).
+  Always give a wrapper `transform={Transform.fromXyz(0, 0, 0)}`. For the painted look (Style C), put `pass="ui"` on the
+  card/sign Mesh3d itself and make it `unlit`, so logos, screens and numbers stay crisp under `<Look mode="paint" skip={["ui"]}>`.
 - (EX40) Library carts/props: read the glTF accessor bounds for the real working height before placing things on top
   (EX40 guessed 0.80 m, the cart top is 1.057 m: everything sank inside). Hide a model's extra parts by re-covering their
   material with alpha 0 (`alpha_mode="Blend"`).
