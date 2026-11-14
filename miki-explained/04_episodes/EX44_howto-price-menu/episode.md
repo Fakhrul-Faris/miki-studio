@@ -1,6 +1,6 @@
 # EX44 — If you want to price a nasi lemak so it makes money (S16 How to)
 
-Status: **LANGUAGE TEST (user 2026-11-14): this episode in Bahasa Melayu, Nathan in Malay on Eleven v3 with audio tags. Malay script v2 + v3 recording guide waiting for the user's test of L05.** English v1 approved and kept below for reference.
+Status: **Malay voice in (Eleven v3), sped ×1.25 with the original sound kept (`build/voice_fix.py 1.25 --plain`; raw takes in audio/raw); 44.5 s voice, 49.1 s with end. Shot list v1 waiting for "ok".** English v1 approved and kept below for reference.
 User's answers (RECIPE § 0.1): dish = nasi lemak bungkus · method = food cost % · look = ~60 % UI costing sheet / ~40 % food
 macro (Style D motion) · ~45 s · voice: the user (ElevenLabs) · slot Mon 23 Nov 12:30.
 
@@ -62,6 +62,31 @@ Frame-0 text: **HARGA SEBENAR NASI LEMAK ANDA?** · End text: **ANDA JUAL BERAPA
 6. **Stubborn word?** Respell it by syllables in the voice text only: "per-pu-lu-han", "pem-bung-kus". Captions stay correct.
 7. **Last resort:** Speech-to-Speech with your own Malay read as the guide (keeps Nathan's voice, takes your rhythm).
 8. Save as L01–L07.mp3 in this folder (or Downloads).
+
+## Shot list v1 (15 setups · 10 costing-sheet UI / 5 food & stall · Malay on screen)
+
+UI: one "Kos sebungkus" costing sheet (Public Sans, EX43's calm interface language) that fills line by line; a step rail
+"1 Kira · 2 Kos makanan · 3 Bahagi · 4 Semak". Food: macro on a banana leaf, ingredients landing on their words (Style D).
+Accent: sambal red for the money that matters (totals, 44 %). Source line "Harga: PriceCatcher (KPDN), Okt 2026";
+"contoh resipi" (example recipe) on the costs.
+
+| S | Words | Kind | What happens |
+|---|---|---|---|
+| 1 | "Kalau nak letak harga … ini caranya." | food | macro on a bungkus; the paper unfolds on a banana leaf; frame-0 **HARGA SEBENAR NASI LEMAK ANDA?** |
+| 2 | "Empat langkah." | UI | the step rail draws in |
+| 3 | "Langkah satu. Kira harga setiap bahan dalam sebungkus: beras, santan," | food | a rice mound lands, santan glazes it, on the words |
+| 4 | "separuh telur," | UI | the sheet: rows *beras RM0.32 · santan RM0.25 · telur ½ RM0.25* fill as said |
+| 5 | "ikan bilis, kacang, timun," | food | bilis, kacang, timun land on the leaf one per word |
+| 6 | "sambal dan pembungkus." | UI | rows *ikan bilis RM0.30 (anggaran) · kacang · timun · sambal · pembungkus* |
+| 7 | "Ikut harga kerajaan bulan Oktober … RM1.60." | UI | the total counts to **RM1.61**; source PriceCatcher; "contoh resipi" |
+| 8 | "Langkah dua. Pilih kos makanan anda." | UI | step 2 lights; a slider "kos makanan %" |
+| 9 | "Kebanyakan restoran sasarkan 30 hingga 35 peratus." | UI | the slider's 30–35 % band lights |
+| 10 | "Langkah tiga. Bahagi. RM1.60 dibahagi 0.35, lebih kurang RM4.60." | UI | calculator: 1.61 ÷ 0.35 = **4.60** |
+| 11 | "Pada 30 peratus, RM5.40." | UI | ÷ 0.30 = 5.37 → price tag **RM5.40** |
+| 12 | "Langkah empat. Semak. Purata sebungkus … RM3.68." | food | the bungkus on a stall counter with a **RM3.68** tag (DOSM 2024 average) |
+| 13 | "Pada harga itu, bahan makanan ambil 44 peratus." | UI | a bar fills to **44 %** in sambal red |
+| 14 | "Bakinya kena tampung gas, sewa dan masa anda." | UI | the rest of the bar splits: gas · sewa · masa anda |
+| 15 | "Nombor mana yang buat anda terkejut?" + end | food | back to the bungkus (loop); **ANDA JUAL BERAPA?** → sound C + logo |
 
 ## Script draft v1 (~135 words, ≈ 45 s)
 
