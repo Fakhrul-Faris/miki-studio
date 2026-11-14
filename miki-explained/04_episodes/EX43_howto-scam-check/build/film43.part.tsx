@@ -169,6 +169,8 @@ function DeskSet({ n }: { n: number }) {
 
 // ---------- the interfaces (illustrations of the real tools; the address bar names where to go) ----------
 const typed = (s: string, t0: number, d: number) => s.slice(0, Math.round(s.length * cl((T - t0) / d)));
+const eo = (x: number) => 1 - Math.pow(1 - cl(x), 5);                                   // strong ease-out ≈ cubic-bezier(0.23, 1, 0.32, 1)
+const onO = (i: number, d = 0.3, off = 0) => eo((T - (W(i) + off)) / d);               // interface entrances land fast and settle
 function Browser({ url, children }: { url: string; children: any }) {
   return (<div style={{ position: "absolute", left: 60, top: 330, width: 960, height: 1330, borderRadius: 34, overflow: "hidden", background: PAPER, boxShadow: "0 30px 80px rgba(0,0,0,0.55)", fontFamily: PS, color: INK }}>
     <div style={{ height: 96, background: "#dfe4ea", display: "flex", alignItems: "center", padding: "0 30px", gap: 18 }}>
@@ -195,7 +197,7 @@ function ResultTable({ hit, show, stamp = 0 }: { hit: number; show: number; stam
     <div style={{ display: "flex", fontSize: 26, color: "#5d6673", padding: "0 20px 12px", borderBottom: "2px solid #c4ccd6" }}><span style={{ flex: 1 }}>Name</span><span>Added</span></div>
     {ROWS.map(([nm, yr], i) => { const isHit = nm === "Profit Emas Club", vis = isHit ? 1 : 1 - hit;
       if (vis < 0.02) return null;
-      return (<div key={i} style={{ position: "relative", display: "flex", alignItems: "center", fontSize: 38, padding: "26px 20px", borderBottom: "1px solid #d5dbe2", opacity: vis * show, background: isHit ? `rgba(214,69,46,${0.12 * hit})` : "transparent", borderLeft: isHit ? `${Math.round(10 * hit)}px solid ${FLAG}` : "none", transform: `translateY(${(1 - show) * 20}px)` }}>
+      return (<div key={i} style={{ position: "relative", display: "flex", alignItems: "center", fontSize: 38, padding: `${26 * vis}px 20px`, maxHeight: 110 * vis, overflow: "hidden", borderBottom: "1px solid #d5dbe2", opacity: vis * show, background: isHit ? `rgba(214,69,46,${0.12 * hit})` : "transparent", borderLeft: isHit ? `${Math.round(10 * hit)}px solid ${FLAG}` : "none", transform: `translateY(${(1 - show) * 20}px)` }}>
         <span style={{ flex: 1, fontWeight: isHit ? 700 : 400 }}>{nm}</span><span style={{ color: "#5d6673" }}>{yr}</span>
         {isHit && stamp > 0.01 ? <span style={{ position: "absolute", right: 120, top: 8, padding: "6px 20px", border: `5px solid ${FLAG}`, color: FLAG, fontWeight: 800, fontSize: 40, borderRadius: 10, transform: `rotate(-8deg) scale(${lerp(1.6, 1, stamp)})`, opacity: stamp }}>LISTED</span> : null}
       </div>); })}
@@ -203,13 +205,13 @@ function ResultTable({ hit, show, stamp = 0 }: { hit: number; show: number; stam
   </div>);
 }
 function UiBnm({ n }: { n: number }) {
-  const close = n === 5 ? on(33, 0.4, -0.1) : 0, hit = n === 3 ? 0 : n === 4 ? on(30, 0.35, -0.2) : 1;
+  const close = n === 5 ? onO(33, 0.45, -0.1) : 0, hit = n === 3 ? 0 : n === 4 ? onO(30, 0.4, -0.2) : 1;
   return (<div style={{ position: "absolute", inset: 0, transform: `translateX(${-close * 260}px) scale(${1 - 0.08 * close})`, opacity: 1 - close * 0.55 }}>   {/* "walk away": the page backs off, the stamp stays readable */}
     <Browser url="bnm.gov.my/financial-consumer-alert-list">
       <div style={{ fontSize: 58, fontWeight: 700, lineHeight: 1.1 }}>Financial Consumer Alert List</div>
       <div style={{ fontSize: 30, color: "#4a5361", marginTop: 16, lineHeight: 1.35 }}>Companies and schemes that may be wrongly presented as licensed or regulated by Bank Negara Malaysia.</div>
       <Search text="Profit Emas" t0={W(19) - 0.1} d={1.2} label="Search the list" />
-      <ResultTable hit={hit} show={n === 3 ? on(25, 0.4, -0.2) : 1} stamp={n === 5 ? on(32, 0.3, -0.2) : 0} />
+      <ResultTable hit={hit} show={n === 3 ? onO(25, 0.4, -0.2) : 1} stamp={n === 5 ? onO(32, 0.25, -0.2) : 0} />
     </Browser></div>);
 }
 function UiSc({ n }: { n: number }) {
@@ -218,13 +220,13 @@ function UiSc({ n }: { n: number }) {
     <div style={{ fontSize: 58, fontWeight: 700, lineHeight: 1.1 }}>{lic ? "Licensed and registered persons" : "Investor Alert List"}</div>
     <div style={{ fontSize: 30, color: "#4a5361", marginTop: 16, lineHeight: 1.35 }}>{lic ? "Firms the Securities Commission has licensed or registered." : "Unauthorised entities and individuals. Do not deal with or invest through them."}</div>
     <Search text="Profit Emas" t0={lic ? W(45) - 0.2 : W(38) - 0.2} d={0.9} label={lic ? "Search licensed firms" : "Search the list"} />
-    {lic ? <div style={{ marginTop: 60, padding: "50px 40px", borderRadius: 20, border: "3px dashed #b4bcc7", textAlign: "center", opacity: on(47, 0.35, -0.2) }}>
+    {lic ? <div style={{ marginTop: 60, padding: "50px 40px", borderRadius: 20, border: "3px dashed #b4bcc7", textAlign: "center", opacity: onO(47, 0.35, -0.2), transform: `translateY(${(1 - onO(47, 0.35, -0.2)) * 16}px)` }}>
       <div style={{ fontSize: 46, fontWeight: 700 }}>No match found</div><div style={{ fontSize: 30, color: "#4a5361", marginTop: 12 }}>"Profit Emas Club" is not a licensed firm.</div></div>
-      : <ResultTable hit={on(41, 0.35, -0.2)} show={on(40, 0.4, -0.3)} />}
+      : <ResultTable hit={onO(41, 0.4, -0.2)} show={onO(40, 0.4, -0.3)} />}
   </Browser>);
 }
 function UiFlyerButton() {
-  const g = on(51, 0.35, -0.2), x = on(52, 0.35, -0.1);
+  const g = onO(51, 0.35, -0.2), x = onO(52, 0.3, -0.1);
   return (<div style={{ position: "absolute", left: 90, top: 340, width: 900, height: 1272 * 0.9 / 0.9, transformOrigin: "50% 0" }}>
     <img src={S("tx/flyer.png")} style={{ width: 900, height: 1272, borderRadius: 18, filter: `saturate(${1 - 0.7 * g})`, boxShadow: "0 30px 80px rgba(0,0,0,0.55)" }} />
     <div style={{ position: "absolute", left: 170, top: 830, width: 560, height: 130, borderRadius: 60, background: `rgba(120,126,136,${g})` }} />
@@ -240,15 +242,15 @@ function UiSemak({ n }: { n: number }) {
     <Search text="5621 0098 4412" t0={W(60) - 0.1} d={0.9} label="Bank account number" />
     <Search text="012-345 6789" t0={W(63) - 0.1} d={0.7} label="Phone number" />
     <div style={{ marginTop: 36, height: 96, borderRadius: 48, background: TEAL, color: "#fff", fontSize: 40, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", transform: `scale(${n === 10 ? lerp(1, 0.96, on(68, 0.12)) : 1})` }}>Search</div>
-    {res ? <div style={{ marginTop: 40, padding: "36px 40px", borderRadius: 20, background: "#fff", border: "3px solid #c4ccd6", opacity: n === 11 ? on(72, 0.3, -0.2) : 1 }}>
+    {res ? <div style={{ marginTop: 40, padding: "36px 40px", borderRadius: 20, background: "#fff", border: "3px solid #c4ccd6", opacity: n === 11 ? onO(72, 0.3, -0.2) : 1, transform: `translateY(${n === 11 ? (1 - onO(72, 0.3, -0.2)) * 16 : 0}px)` }}>
       <div style={{ fontSize: 42, fontWeight: 700 }}>No record found</div>
-      <div style={{ fontSize: 32, color: FLAG, marginTop: 14, fontWeight: 600, opacity: n === 11 ? on(75, 0.3, -0.15) : 1 }}>This is not proof the account is safe.</div>
-      {n >= 12 ? <div style={{ marginTop: 26, display: "flex", alignItems: "baseline", gap: 18, opacity: on(79, 0.3, -0.2) }}><span style={{ fontSize: 120, fontWeight: 800 }}>0</span><span style={{ fontSize: 32, color: "#4a5361" }}>reports so far: maybe nobody has reported it yet</span></div> : null}
+      <div style={{ fontSize: 32, color: FLAG, marginTop: 14, fontWeight: 600, opacity: n === 11 ? onO(75, 0.3, -0.15) : 1 }}>This is not proof the account is safe.</div>
+      {n >= 12 ? <div style={{ marginTop: 26, display: "flex", alignItems: "baseline", gap: 18, opacity: onO(79, 0.3, -0.2) }}><span style={{ fontSize: 120, fontWeight: 800 }}>0</span><span style={{ fontSize: 32, color: "#4a5361" }}>reports so far: maybe nobody has reported it yet</span></div> : null}
     </div> : null}
   </Browser>);
 }
 function UiRing() {
-  const f = lin(W(94) - 0.1, W(95) + 0.3), R = 300, c = 2 * Math.PI * R;
+  const f = eo(lin(W(94) - 0.1, W(95) + 0.4)), R = 300, c = 2 * Math.PI * R;
   return (<div style={{ position: "absolute", left: 0, top: 380, width: 1080, height: 1200, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: PS }}>
     <svg width={760} height={760} style={{ position: "absolute" }}><circle cx={380} cy={380} r={R} stroke="#2a3340" strokeWidth={34} fill="none" />
       <circle cx={380} cy={380} r={R} stroke={ICE} strokeWidth={34} fill="none" strokeDasharray={`${c * f} ${c}`} transform="rotate(-90 380 380)" strokeLinecap="round" /></svg>
@@ -257,18 +259,18 @@ function UiRing() {
   </div>);
 }
 function UiFreeze() {
-  const run = lin(W(98), W(105)), stop = on(106, 0.3, -0.15), p = Math.min(run, 0.62) ;
+  const run = lin(W(98), W(105)), stop = onO(106, 0.35, -0.15), p = Math.min(eo(run) * 0.75, 0.62);
   return (<div style={{ position: "absolute", left: 90, top: 560, width: 900, fontFamily: PS, color: "#fff" }}>
     <div style={{ fontSize: 40, color: "#9aa6b6" }}>RM 5,000 leaving your account</div>
     <div style={{ marginTop: 26, height: 70, borderRadius: 35, background: "#2a3340", overflow: "hidden" }}>
-      <div style={{ width: `${p * 100}%`, height: 70, background: stop > 0.5 ? ICE : FLAG, boxShadow: stop > 0.5 ? `0 0 40px ${ICE}` : "none" }} /></div>
+      <div style={{ width: `${p * 100}%`, height: 70, background: mixHex(FLAG, ICE, stop), boxShadow: `0 0 ${40 * stop}px ${ICE}` }} /></div>
     <div style={{ marginTop: 34, fontSize: 76, fontWeight: 800, color: stop > 0.5 ? ICE : "#fff", opacity: 0.4 + 0.6 * stop }}>{stop > 0.5 ? "Frozen" : "Sending…"}</div>
     <div style={{ marginTop: 18, fontSize: 30, color: "#9aa6b6" }}>The sooner you call, the more can be frozen.</div>
     <div style={{ marginTop: 10, fontSize: 22, color: "#6b7686" }}>illustration</div>
   </div>);
 }
 function UiStats() {
-  const m = lerp(0, 34.05, lin(W(110) - 0.2, W(112) + 0.2)), a = on(113, 0.3, -0.1), b = on(114, 0.3, 0.1);
+  const m = 34.05 * eo(lin(W(110) - 0.2, W(112) + 0.3)), a = onO(113, 0.35, -0.1), b = onO(114, 0.35, 0.02);
   const card = (big: string, small: string, o: number) => <div style={{ flex: 1, padding: "34px 30px", borderRadius: 22, background: "#232b37", opacity: o, transform: `translateY(${(1 - o) * 18}px)` }}><div style={{ fontSize: 60, fontWeight: 800 }}>{big}</div><div style={{ fontSize: 28, color: "#9aa6b6", marginTop: 6 }}>{small}</div></div>;
   return (<div style={{ position: "absolute", left: 80, top: 500, width: 920, fontFamily: PS, color: "#fff" }}>
     <div style={{ fontSize: 34, color: "#9aa6b6" }}>Kept from scammers in 2025</div>
@@ -281,9 +283,10 @@ const CHECKS = ["Bank Negara's alert list", "SC alert list + licensed firms", "S
 function UiChecklist({ n }: { n: number }) {
   return (<div style={{ position: "absolute", left: 90, top: 470, width: 900, fontFamily: PS }}>
     <div style={{ fontSize: 44, fontWeight: 700, color: "#fff", marginBottom: 30 }}>{n === 17 ? "Before you invest" : "Four free checks"}</div>
-    {CHECKS.map((c, i) => { const inn = n === 2 ? on(13 + Math.min(i, 3), 0.3, -0.25 + i * 0.12) : 1, tick = n === 17 ? on(116 + i, 0.3, -0.2) : 0;
+    {CHECKS.map((c, i) => { const inn = n === 2 ? onO(13 + Math.min(i, 3), 0.35, -0.25 + i * 0.08) : 1, tick = n === 17 ? onO(116 + i, 0.25, -0.2) : 0;
       return (<div key={i} style={{ display: "flex", alignItems: "center", gap: 26, padding: "30px 32px", marginBottom: 18, borderRadius: 20, background: PAPER, color: INK, opacity: inn, transform: `translateX(${(1 - inn) * 60}px)` }}>
-        <div style={{ width: 66, height: 66, borderRadius: 33, background: tick > 0.5 ? TEAL : "#d5dbe2", color: tick > 0.5 ? "#fff" : INK, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 34, fontWeight: 800 }}>{tick > 0.5 ? "✓" : i + 1}</div>
+        <div style={{ position: "relative", width: 66, height: 66, borderRadius: 33, background: mixHex("#d5dbe2", TEAL, tick), color: INK, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 34, fontWeight: 800 }}>
+          <span style={{ position: "absolute", opacity: 1 - tick }}>{i + 1}</span><span style={{ position: "absolute", color: "#fff", opacity: tick, transform: `scale(${0.9 + 0.1 * tick})` }}>✓</span></div>
         <div style={{ fontSize: 38, fontWeight: 600 }}>{c}</div></div>); })}
   </div>);
 }
@@ -292,10 +295,13 @@ function Ui({ n }: { n: number }) {
   const c = SETUPS[n - 1]; if (!c.ui) return null;
   const x = cl((T - ST[n - 1]) / (ST[n] - ST[n - 1])), u = 0.55 * x + 0.45 * ss(x, 0, 1);
   const s = lerp(c.ui.a[0], c.ui.b[0], u), fx = lerp(c.ui.a[1], c.ui.b[1], u), fy = lerp(c.ui.a[2], c.ui.b[2], u);
-  const enter = ss(T, ST[n - 1] - 0.05, ST[n - 1] + 0.28), blur = (1 - enter) * 10;
+  const prev = n > 1 ? SETUPS[n - 2].ui : undefined, same = !!prev && prev.screen === c.ui.screen;
+  let [s2, fx2, fy2] = [s, fx, fy];
+  if (same) { const g = ss(T, ST[n - 1] - 0.05, ST[n - 1] + 0.35); s2 = lerp(prev!.b[0], s, g); fx2 = lerp(prev!.b[1], fx, g); fy2 = lerp(prev!.b[2], fy, g); }   // glide, no re-entry
+  const enter = same ? 1 : eo((T - (ST[n - 1] - 0.05)) / 0.33), blur = (1 - enter) * 10;
   const sc = c.ui.screen, body = sc === "bnm" ? <UiBnm n={n} /> : sc === "sc" ? <UiSc n={n} /> : sc === "fly" ? <UiFlyerButton /> : sc === "semak" ? <UiSemak n={n} /> : sc === "ring" ? <UiRing /> : sc === "freeze" ? <UiFreeze /> : sc === "stats" ? <UiStats /> : <UiChecklist n={n} />;
   return (<div style={{ position: "absolute", left: 0, top: 0, width: 1080, height: 1920, background: `radial-gradient(ellipse at 50% 40%, #273141 0%, ${INK} 55%, #10151d 100%)` }}>
-    <div style={{ position: "absolute", left: 0, top: 0, width: 1080, height: 1920, transformOrigin: "0 0", transform: `translate(${540 - fx * s}px, ${1000 - fy * s}px) scale(${s})`, filter: `blur(${blur}px)`, opacity: 0.4 + 0.6 * enter }}>{body}</div>
+    <div style={{ position: "absolute", left: 0, top: 0, width: 1080, height: 1920, transformOrigin: "0 0", transform: `translate(${540 - fx2 * s2}px, ${1000 - fy2 * s2}px) scale(${s2})`, filter: `blur(${blur}px)`, opacity: 0.4 + 0.6 * enter }}>{body}</div>
   </div>);
 }
 
@@ -308,13 +314,13 @@ const fromT = (l: number[], dir: number[], d: number) => { const k = Math.hypot(
 const dist3 = (a: number[], b: number[]) => Math.hypot(a[0] - b[0], a[1] - b[1], a[2] - b[2]);
 const C = (p: number[], l: number[]): Pose => ({ p, l });
 const num = (a: number, b: number, t0: number, t1: number, d = 0) => lerp(a, b, cl((T - t0) / (t1 - t0))).toFixed(d);
-const DESKC = [VT[0] + 0.03, TY, VT[2] + 0.04];
-const P1A = C(fromT(DESKC, [0.25, 1.3, 0.9], 0.85), DESKC);
+const DESKC = [VT[0] - 0.01, TY, VT[2] + 0.05];
+const P1A = C(fromT(DESKC, [0.2, 1.5, 0.75], 1.2), DESKC);
 const NOCAM = C([VT[0], 3, VT[2] + 3], [VT[0], 0, VT[2]]);           // UI setups: the 3D camera rests on the empty desk room
 const U = (screen: string, a: number[], b: number[]) => ({ ui: { screen, a, b }, set: "u", a: NOCAM, b: NOCAM });
 const SRC_BNM = "bnm.gov.my/financial-consumer-alert-list", SRC_SC = "sc.com.my/investor-alert-list", SRC_SM = "semakmule.rmp.gov.my (PDRM)";
 const SETUPS: Setup[] = [
-  /* 1 */ { set: "d", a: P1A, b: C(fromT(DESKC, [0.2, 1.4, 0.7], 0.7), DESKC), fov: 30, fs: 4 },
+  /* 1 */ { set: "d", a: P1A, b: C(fromT(DESKC, [0.15, 1.6, 0.65], 1.05), DESKC), fov: 30, fs: 5.6 },
   /* 2 */ { ...U("check", [1.0, 540, 900], [1.04, 540, 880]) },
   /* 3 */ { ...U("bnm", [1.0, 540, 980], [1.1, 540, 900]) },
   /* 4 */ { ...U("bnm", [1.04, 540, 1000], [1.08, 540, 1020]) },
@@ -331,7 +337,7 @@ const SETUPS: Setup[] = [
   /* 15 */ { ...U("freeze", [1.0, 540, 900], [1.12, 540, 820]) },
   /* 16 */ { ...U("stats", [1.0, 540, 900], [1.06, 540, 880]) },
   /* 17 */ { ...U("check", [1.04, 540, 880], [1.0, 540, 900]) },
-  /* 18 */ { set: "d", tr: "in", a: C(fromT(DESKC, [0.4, 1.6, 1.2], 1.2), DESKC), b: P1A, fov: 30, fs: 4 },
+  /* 18 */ { set: "d", tr: "in", a: C(fromT(DESKC, [0.4, 1.6, 1.2], 1.6), DESKC), b: P1A, fov: 30, fs: 5.6 },
 ];
 function World({ n }: { n: number }) {
   return <DeskSet n={n} />;
