@@ -132,7 +132,7 @@ function UiFreeze() {
   </div>);
 }
 function UiStats() {
-  const m = 34.05 * eo(lin(W(110) - 0.2, W(112) + 0.3)), a = onO(113, 0.35, -0.1), b = onO(114, 0.35, 0.02);
+  const m = 34.05 * eo(lin(W(108) - 0.1, W(112) + 0.2)), a = onO(113, 0.35, -0.1), b = onO(114, 0.35, 0.02);
   const card = (big: string, small: string, o: number) => <div style={{ flex: 1, padding: "34px 30px", borderRadius: 22, background: "#232b37", opacity: o, transform: `translateY(${(1 - o) * 18}px)` }}><div style={{ fontSize: 60, fontWeight: 800 }}>{big}</div><div style={{ fontSize: 28, color: "#9aa6b6", marginTop: 6 }}>{small}</div></div>;
   return (<div style={{ position: "absolute", left: 80, top: 500, width: 920, fontFamily: PS, color: "#fff" }}>
     <div style={{ fontSize: 34, color: "#9aa6b6" }}>Kept from scammers in 2025</div>
