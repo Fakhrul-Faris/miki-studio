@@ -175,10 +175,11 @@ function Browser({ url, children }: { url: string; children: any }) {
   return (<div style={{ position: "absolute", left: 60, top: 330, width: 960, height: 1330, borderRadius: 34, overflow: "hidden", background: PAPER, boxShadow: "0 30px 80px rgba(0,0,0,0.55)", fontFamily: PS, color: INK }}>
     <div style={{ height: 96, background: "#dfe4ea", display: "flex", alignItems: "center", padding: "0 30px", gap: 18 }}>
       <svg width={26} height={30}><rect x={3} y={13} width={20} height={15} rx={3} fill="#5d6673" /><path d="M7 13 V9 a6 6 0 0 1 12 0 V13" stroke="#5d6673" strokeWidth={3} fill="none" /></svg>
-      <div style={{ fontSize: 32, color: "#3a4452" }}>{url}</div>
+      <div style={{ fontSize: 32, color: "#3a4452", flex: 1 }}>{url}</div>
+      <div style={{ padding: "8px 18px", borderRadius: 10, background: INK, color: "#fff", fontSize: 30, fontWeight: 700 }}>Illustration</div>
     </div>
     <div style={{ padding: "44px 50px" }}>{children}</div>
-    <div style={{ position: "absolute", right: 30, bottom: 22, fontSize: 22, color: "#8a93a0" }}>illustration of the site</div>
+    <div style={{ position: "absolute", left: 50, bottom: 26, fontSize: 28, color: "#3a4452" }}>Drawn to show the steps: not the real page</div>
   </div>);
 }
 function Search({ text, t0, d = 0.9, label }: { text: string; t0: number; d?: number; label: string }) {
@@ -201,7 +202,7 @@ function ResultTable({ hit, show, stamp = 0 }: { hit: number; show: number; stam
         <span style={{ flex: 1, fontWeight: isHit ? 700 : 400 }}>{nm}</span><span style={{ color: "#5d6673" }}>{yr}</span>
         {isHit && stamp > 0.01 ? <span style={{ position: "absolute", right: 120, top: 8, padding: "6px 20px", border: `5px solid ${FLAG}`, color: FLAG, fontWeight: 800, fontSize: 40, borderRadius: 10, transform: `rotate(-8deg) scale(${lerp(1.6, 1, stamp)})`, opacity: stamp }}>LISTED</span> : null}
       </div>); })}
-    <div style={{ fontSize: 22, color: "#8a93a0", marginTop: 16 }}>names on this page are invented examples</div>
+    <div style={{ fontSize: 28, color: "#3a4452", marginTop: 18 }}>Names here are invented examples</div>
   </div>);
 }
 function UiBnm({ n }: { n: number }) {
@@ -231,7 +232,7 @@ function UiFlyerButton() {
     <img src={S("tx/flyer.png")} style={{ width: 900, height: 1272, borderRadius: 18, filter: `saturate(${1 - 0.7 * g})`, boxShadow: "0 30px 80px rgba(0,0,0,0.55)" }} />
     <div style={{ position: "absolute", left: 170, top: 830, width: 560, height: 130, borderRadius: 60, background: `rgba(120,126,136,${g})` }} />
     <div style={{ position: "absolute", left: 150, top: 893, width: 600 * x, height: 10, background: INK, transform: "rotate(-6deg)", transformOrigin: "0 50%" }} />
-    <div style={{ position: "absolute", left: 250, top: 990, padding: "10px 26px", borderRadius: 40, background: TEAL, color: "#fff", fontFamily: PS, fontSize: 36, fontWeight: 700, opacity: x }}>Not licensed: don't invest</div>
+    <div style={{ position: "absolute", left: 250, top: 1110, padding: "10px 26px", borderRadius: 40, background: TEAL, color: "#fff", fontFamily: PS, fontSize: 36, fontWeight: 700, opacity: x }}>Not licensed: don't invest</div>
   </div>);
 }
 function UiSemak({ n }: { n: number }) {
@@ -254,8 +255,8 @@ function UiRing() {
   return (<div style={{ position: "absolute", left: 0, top: 380, width: 1080, height: 1200, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: PS }}>
     <svg width={760} height={760} style={{ position: "absolute" }}><circle cx={380} cy={380} r={R} stroke="#2a3340" strokeWidth={34} fill="none" />
       <circle cx={380} cy={380} r={R} stroke={ICE} strokeWidth={34} fill="none" strokeDasharray={`${c * f} ${c}`} transform="rotate(-90 380 380)" strokeLinecap="round" /></svg>
-    <div style={{ textAlign: "center", color: "#fff" }}><div style={{ fontSize: 190, fontWeight: 800, letterSpacing: -4 }}>997</div><div style={{ fontSize: 46, color: ICE }}>{Math.round(24 * f)} hours a day</div>
-      <div style={{ fontSize: 28, color: "#9aa6b6", marginTop: 14 }}>National Scam Response Centre</div></div>
+    <div style={{ textAlign: "center", color: "#fff" }}><div style={{ fontSize: 190, fontWeight: 800, letterSpacing: -4 }}>997</div><div style={{ fontSize: 46, color: ICE }}>24 hours a day</div>
+      <div style={{ fontSize: 32, color: "#c3cad4", marginTop: 14 }}>National Scam Response Centre</div></div>
   </div>);
 }
 function UiFreeze() {
@@ -266,7 +267,7 @@ function UiFreeze() {
       <div style={{ width: `${p * 100}%`, height: 70, background: mixHex(FLAG, ICE, stop), boxShadow: `0 0 ${40 * stop}px ${ICE}` }} /></div>
     <div style={{ marginTop: 34, fontSize: 76, fontWeight: 800, color: stop > 0.5 ? ICE : "#fff", opacity: 0.4 + 0.6 * stop }}>{stop > 0.5 ? "Frozen" : "Sending…"}</div>
     <div style={{ marginTop: 18, fontSize: 30, color: "#9aa6b6" }}>The sooner you call, the more can be frozen.</div>
-    <div style={{ marginTop: 10, fontSize: 22, color: "#6b7686" }}>illustration</div>
+    <div style={{ marginTop: 12, fontSize: 28, color: "#c3cad4" }}>Illustration</div>
   </div>);
 }
 function UiStats() {
@@ -276,7 +277,7 @@ function UiStats() {
     <div style={{ fontSize: 34, color: "#9aa6b6" }}>Kept from scammers in 2025</div>
     <div style={{ fontSize: 170, fontWeight: 800, letterSpacing: -5, lineHeight: 1.05, marginTop: 10 }}>RM{m.toFixed(2)}<span style={{ fontSize: 80 }}>m</span></div>
     <div style={{ display: "flex", gap: 24, marginTop: 50 }}>{card("146,167", "calls to 997", a)}{card("138,915", "accounts frozen", b)}</div>
-    <div style={{ marginTop: 30, fontSize: 24, color: "#6b7686" }}>The Star, 3 Mar 2026, quoting the Home Minister</div>
+    <div style={{ marginTop: 30, fontSize: 30, color: "#c3cad4" }}>The Star, 3 Mar 2026, quoting the Home Minister</div>
   </div>);
 }
 const CHECKS = ["Bank Negara's alert list", "SC alert list + licensed firms", "Semak Mule: account and phone", "Paid already? Call 997"];
@@ -294,7 +295,10 @@ function UiChecklist({ n }: { n: number }) {
 function Ui({ n }: { n: number }) {
   const c = SETUPS[n - 1]; if (!c.ui) return null;
   const x = cl((T - ST[n - 1]) / (ST[n] - ST[n - 1])), u = 0.55 * x + 0.45 * ss(x, 0, 1);
-  const s = lerp(c.ui.a[0], c.ui.b[0], u), fx = lerp(c.ui.a[1], c.ui.b[1], u), fy = lerp(c.ui.a[2], c.ui.b[2], u);
+  let s = lerp(c.ui.a[0], c.ui.b[0], u), fx = lerp(c.ui.a[1], c.ui.b[1], u), fy = lerp(c.ui.a[2], c.ui.b[2], u);
+  if (c.ui.m) { const m = c.ui.m, k = ss(T, W(c.ui.tm!) - 0.15, W(c.ui.tm!) + 0.3);     // a second framing on word tm: push in, then glide on
+    const p1 = [lerp(c.ui.a[0], m[0], u), lerp(c.ui.a[1], m[1], u), lerp(c.ui.a[2], m[2], u)];
+    s = lerp(p1[0], s, k); fx = lerp(p1[1], fx, k); fy = lerp(p1[2], fy, k); }
   const prev = n > 1 ? SETUPS[n - 2].ui : undefined, same = !!prev && prev.screen === c.ui.screen;
   let [s2, fx2, fy2] = [s, fx, fy];
   if (same) { const g = ss(T, ST[n - 1] - 0.05, ST[n - 1] + 0.35); s2 = lerp(prev!.b[0], s, g); fx2 = lerp(prev!.b[1], fx, g); fy2 = lerp(prev!.b[2], fy, g); }   // glide, no re-entry
@@ -309,7 +313,7 @@ function Ui({ n }: { n: number }) {
 type Pose = { p: number[]; l: number[] };
 type Tag = { at: number[]; x: number; y: number; cap: string; big?: string; sub?: string; t: number };
 type Setup = { set: string; a: Pose; b: Pose; fov?: number; fs?: number; up?: number[]; tr?: "in" | "out" | "side"; fd?: () => number | null; tags?: Tag[];
-  count?: { v: () => string; unit: string; t?: number }; note?: string; src?: string; step?: number; ui?: { screen: string; a: number[]; b: number[] } };
+  count?: { v: () => string; unit: string; t?: number }; note?: string; src?: string; step?: number; ui?: { screen: string; a: number[]; b: number[]; m?: number[]; tm?: number } };
 const fromT = (l: number[], dir: number[], d: number) => { const k = Math.hypot(dir[0], dir[1], dir[2]); return [l[0] + (dir[0] / k) * d, l[1] + (dir[1] / k) * d, l[2] + (dir[2] / k) * d]; };
 const dist3 = (a: number[], b: number[]) => Math.hypot(a[0] - b[0], a[1] - b[1], a[2] - b[2]);
 const C = (p: number[], l: number[]): Pose => ({ p, l });
@@ -325,11 +329,11 @@ const SETUPS: Setup[] = [
   /* 3 */ { ...U("bnm", [1.0, 540, 980], [1.1, 540, 900]) },
   /* 4 */ { ...U("bnm", [1.04, 540, 1000], [1.08, 540, 1020]) },
   /* 5 */ { ...U("bnm", [1.08, 540, 1020], [1.03, 540, 1000]) },
-  /* 6 */ { ...U("sc", [1.0, 540, 980], [1.1, 540, 920]) },
+  /* 6 */ { ...U("sc", [1.0, 540, 980], [1.1, 540, 1040]), ui: { screen: "sc", a: [1.0, 540, 980], m: [1.1, 540, 880], b: [1.1, 540, 1040], tm: 40 } },
   /* 7 */ { ...U("sc", [1.1, 540, 960], [1.12, 540, 1020]) },
   /* 8 */ { ...U("fly", [0.95, 540, 980], [1.25, 540, 1240]) },
   /* 9 */ { set: "d", tr: "out", a: C(fromT(PHN, [-0.15, 1.6, 0.7], 0.42), PHN), b: C(fromT(PHN, [-0.1, 1.7, 0.55], 0.34), PHN), fov: 26, fs: 4 },
-  /* 10 */ { ...U("semak", [1.0, 540, 980], [1.08, 540, 940]) },
+  /* 10 */ { ...U("semak", [1.0, 540, 980], [1.1, 540, 1010]), ui: { screen: "semak", a: [1.0, 540, 980], m: [1.08, 540, 900], b: [1.1, 540, 1010], tm: 63 } },
   /* 11 */ { ...U("semak", [1.04, 540, 1000], [1.07, 540, 1025]) },
   /* 12 */ { ...U("semak", [1.07, 540, 1025], [1.08, 540, 1035]) },
   /* 13 */ { set: "d", tr: "in", a: C(fromT(PHN, [0.2, 1.8, 0.5], 0.36), PHN), b: C(fromT(PHN, [0.1, 1.9, 0.4], 0.3), PHN), fov: 26, fs: 4, src: "NSRC hotline 997" },
@@ -392,7 +396,7 @@ function Caption() {
     <div style={{ position: "absolute", top: 172, left: 540 - Math.min(940, wNow) / 2, width: 940, textAlign: "left", fontFamily: FF, fontSize: 66, lineHeight: 1.2, letterSpacing: -0.5, whiteSpace: wNow > 940 ? "normal" : "nowrap", opacity: out < 1 ? 0.25 + 0.75 * out * out : 1 }}>
       {ws.map((i, j) => { const c = CAPS[i], f = (T - CT2[i]) * FPS, fresh = f < 0.99, curr = j === ws.length - 1, b = f - 1, e = cl((b - 1) / 2), sd = cl(b - 3);
         return (
-          <span key={i} style={{ display: "inline-block", position: "relative", margin: "0 9px", padding: c.key ? "0 9px" : "0px", background: `rgba(22,35,60,${c.key ? cl(b - 3) : 0})`, fontWeight: curr && !fresh ? 700 : 300, color: curr && !fresh ? "#ffffff" : "#9a9da4", transform: `translateY(${fresh ? 7 : 0}px)`, filter: `blur(${fresh ? 5 : 0}px)`, opacity: fresh ? 0.7 : 1 }}>
+          <span key={i} style={{ display: "inline-block", position: "relative", margin: "0 9px", padding: c.key ? "0 9px" : "0px", background: `rgba(22,35,60,${c.key ? cl(b - 3) : 0})`, fontWeight: curr && !fresh ? 700 : 300, color: curr && !fresh ? "#ffffff" : "#c9ccd2", transform: `translateY(${fresh ? 7 : 0}px)`, filter: `blur(${fresh ? 5 : 0}px)`, opacity: fresh ? 0.7 : 1 }}>
             {c.key && b >= 0 ? <>
               <span style={{ position: "absolute", left: 0, top: 0, height: 2, width: `${e * 100}%`, background: BL }} />
               <span style={{ position: "absolute", left: 0, bottom: 0, height: 2, width: `${e * 100}%`, background: BL }} />
@@ -418,7 +422,7 @@ function Overlay({ n, cam, still }: { n: number; cam: Cam; still?: boolean }) {
   return (<>
     <div style={{ position: "absolute", left: 0, top: 0, width: 1080, height: 470, background: "linear-gradient(#0d0e11 34%, rgba(13,14,17,0))" }} />
     <div style={{ position: "absolute", left: 0, top: 1480, width: 1080, height: 440, background: "linear-gradient(rgba(13,14,17,0), #0d0e11 70%)" }} />
-    {c.src ? <div style={{ position: "absolute", left: 60, top: 372, display: "flex", alignItems: "center", gap: 12, fontFamily: FF, fontSize: 27, fontWeight: 400, color: "#d6d8dc", opacity: life * fade(t0 + 0.2, 0.3) }}>{LOGO(34)}<span>{c.src}</span></div> : null}
+    {c.src ? <div style={{ position: "absolute", left: 60, top: 372, display: "flex", alignItems: "center", gap: 12, fontFamily: FF, fontSize: 32, fontWeight: 500, color: "#e6e8ec", opacity: life * fade(t0 + 0.2, 0.3) }}>{LOGO(34)}<span>{c.src}</span></div> : null}
     {c.count ? <div style={{ position: "absolute", left: 44, top: 430, padding: "8px 16px 10px", borderRadius: 10, background: "rgba(13,14,17,0.62)", fontFamily: FF, color: "#ffffff", opacity: life * fade(c.count.t ?? t0 + 0.15), transform: `translateY(${(1 - fade(c.count.t ?? t0 + 0.15)) * 14}px)` }}><div style={{ fontSize: 96, fontWeight: 600, letterSpacing: -2, lineHeight: 1 }}>{c.count.v()}</div><div style={{ fontSize: 30, fontWeight: 400, color: "#c9ccd2", marginTop: 4 }}>{c.count.unit}</div></div> : null}
     {(c.tags ?? []).map((g, i) => { const a = life * fade(g.t, 0.22); if (a < 0.01) return null; const q = projS(cam, g.at), ly = g.y < q.y ? g.y + (g.big ? 112 : 44) : g.y - 8, x1 = g.x + 50, d = fade(g.t, 0.3); return (
       <div key={i} style={{ position: "absolute", left: 0, top: 0, width: 1080, height: 1920, opacity: a }}>
@@ -436,7 +440,7 @@ function Overlay({ n, cam, still }: { n: number; cam: Cam; still?: boolean }) {
       <div style={{ marginBottom: 22 }}>{LOGO(120)}</div>
       Scam or not?<br /><span style={{ color: GOLD }}>4 free checks.</span></div> : null}
     {end > 0.01 ? <div style={{ ...BIG, top: 1330, opacity: end * (1 - logoEnd), transform: `translateY(${(1 - end) * 14}px)` }}>Which check<br /><span style={{ color: ICE }}>first?</span></div> : null}
-    {logoEnd > 0.01 ? <div style={{ position: "absolute", left: 0, top: 0, width: 1080, height: 1920, background: `rgba(13,14,17,${0.82 * logoEnd})`, display: "flex", alignItems: "center", justifyContent: "center" }}>
+    {logoEnd > 0.01 ? <div style={{ position: "absolute", left: 0, top: 0, width: 1080, height: 1920, background: `rgba(13,14,17,${0.98 * logoEnd})`, display: "flex", alignItems: "center", justifyContent: "center" }}>
       <img src={S("meikigo-logo.png")} style={{ height: 300, opacity: logoEnd, transform: `scale(${0.94 + 0.06 * logoEnd})` }} /></div> : null}
   </>);
 }

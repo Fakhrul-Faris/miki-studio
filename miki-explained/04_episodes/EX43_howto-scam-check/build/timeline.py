@@ -70,7 +70,7 @@ for L in DISPLAY:
     parts.append((t, tmp)); t += a1 - a0
 # monotonic word times
 for i in range(1, len(caps)): caps[i]["t"] = max(caps[i]["t"], caps[i - 1]["t"] + 0.06)
-dur = round(t + 3.2, 3)   # end text + the signature sound (2.8 s)
+dur = round(t + 4.4, 3)   # end text held ≥ 1.5 s (critic), then the signature sound (2.8 s)
 # phrases: break after punctuation or every 4 words
 ph = 0; cnt = 0
 for i, c in enumerate(caps):
