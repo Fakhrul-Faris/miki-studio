@@ -1,6 +1,6 @@
 # EX43 — If you want to check whether an investment is a scam (S16 How to)
 
-Status: **preview v1 (2026-11-14, 30 fps, 46.5 s): `out/preview_v1.mp4`, waiting for the user.** Board v2 (desk framing, motion audit) → animatic → preview.n (43 s, 46.5 s with end); 13 interface + 5 physical setups; fonts Public Sans + Anton (OFL).nd). Shot list v1 (80 % UI / 20 % physical) waiting for "ok".**
+Status: **preview v2 (2026-11-14, 30 fps, 47.7 s): `out/preview_v2.mp4`, waiting for the user.** Critic on v1: SHIP WITH NOTES (clarity 7, readability 5, craft 6, pace 5, facts 8); all 7 notes fixed in v2. Invented names checked: none on BNM's full FCA list; none on the SC page (partial list).ng for the user.** Board v2 (desk framing, motion audit) → animatic → preview.n (43 s, 46.5 s with end); 13 interface + 5 physical setups; fonts Public Sans + Anton (OFL).nd). Shot list v1 (80 % UI / 20 % physical) waiting for "ok".**
 Series S16 How to (main focus from 14 Nov) · opens "If you want to…" · 4 checks · ~45 s · look: Style D (macro objects:
 phone, documents, the 997 call) with Style D motion · slot Sun 22 Nov 12:30 · voice: the user (ElevenLabs).
 

@@ -15,5 +15,5 @@ for ((s = 0; s < N; s += 300)); do
   i=0; for f in $T/c$s/*.png; do mv $f $T/frames/frame-$(printf %05d $((s + i))).png; i=$((i + 1)); done
   rm -rf $T/c$s _chunk_$s.tsx; echo "chunk $s done ($(date +%H:%M:%S))"
 done
-ffmpeg -y -v error -framerate 30 -i $T/frames/frame-%05d.png -i ../audio/mix.wav -c:v libx264 -pix_fmt yuv420p -crf 18 -c:a aac -b:a 192k -shortest ../out/preview_v1.mp4
-ffmpeg -y -v error -i ../out/preview_v1.mp4 -an -c:v copy ../out/preview_v1_silent.mp4 && echo "wrote ../out/preview_v1.mp4 (+ _silent)"
+ffmpeg -y -v error -framerate 30 -i $T/frames/frame-%05d.png -i ../audio/mix.wav -c:v libx264 -pix_fmt yuv420p -crf 18 -c:a aac -b:a 192k -shortest ../out/preview_v2.mp4
+ffmpeg -y -v error -i ../out/preview_v2.mp4 -an -c:v copy ../out/preview_v2_silent.mp4 && echo "wrote ../out/preview_v2.mp4 (+ _silent)"
