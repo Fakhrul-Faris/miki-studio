@@ -81,7 +81,7 @@ Times follow the post-time test. Every premise is ☐ until verified; RECIPE-D �
 | 2 | Thu 19 Nov | 20:00 | S06 Versus | EX39 KK Mart vs 7-Eleven vs FamilyMart (posts as is, HARI 2/30 badge kept) | D | ready; schedule in TikTok Studio |
 | 3 | Fri 20 Nov | 12:30 | S09 Founder story | EX40 Ramly Burger doesn't sell burgers: patties to ~30,000 stalls, no franchise fee ⭐ | A | ready 13 Nov: `EX40-Final.mp4` (36.2 s, 60 fps); post copy in episode.md § Post; schedule in TikTok Studio |
 | 4 | Sat 21 Nov | 12:30 | S13 One number | EX42 Touch 'n Go: RM43, the average e-money payment (2025, BNM) ⭐ | C | ready 14 Nov: `EX42-Final.mp4` (35.6 s, 60 fps); post copy in episode.md § Post; schedule in TikTok Studio |
-| 5 | Sun 22 Nov | 12:30 | S16 How to | EX43 If you want to check whether an investment is a scam: BNM Financial Consumer Alert list + SC Investor Alert list, step by step | D | ☐ research |
+| 5 | Sun 22 Nov | 12:30 | S16 How to | EX43 If you want to check whether an investment is a scam: BNM Financial Consumer Alert list + SC Investor Alert list, step by step | D (80 % UI) | ready 14 Nov: `EX43-Final.mp4` (47.7 s, 60 fps); post copy in episode.md § Post; schedule in TikTok Studio |
 | 6 | Mon 23 Nov | 12:30 | S16 How to | EX44 If you want to price a menu item so it makes money: food-cost %, worked on a real plate | A/C | ☐ |
 | 7 | Tue 24 Nov | 12:30 | S12 What just happened | Business news within 48 h of the day (pick on 22–23 Nov) | D | ☐ |
 | 8 | Wed 25 Nov | 12:30 | S16 How to | next How-to (pool: register with SSM · take DuitNow QR · …) | — | ☐ |
