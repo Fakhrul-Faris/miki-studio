@@ -272,3 +272,14 @@ The six openers are in `00_bible/script-formula.md` § Bridge openers. Check the
 
 Found on backfill: five straight episodes opened the Bridge with "Now picture your…" before this log existed to catch
 it. EX16 switches to B1; the next one shouldn't repeat B1, or match EX13–EX15's "Now picture" default either.
+
+## X1 — OSS upgrade (opt-in, added 2026-11-16; test #1 EX45)
+
+Layered on top of the current method, removes nothing: claim ledger, copy check, shot card add-on (eye, three details,
+rhythm, carries out, seam kind), X1 devices diff vs last three, exposure check, stageshow UI rules, cinetic motion library,
+fresh critic with a pass bar. Full spec: `00_bible/experiments/X1-oss-upgrade/README.md`. Runs only on an episode the user
+marks as an X1 test.
+
+| Episode | Series | Rounds to approval | Critic final score | 72 h vs last 3 non-X1 | Build time | Verdict |
+|---|---|---|---|---|---|---|
+| EX45 Terima QR di gerai | S16 How to (Malay) | user: 0 visual notes; 3 audio notes (muffled, metallic/cut words, add music) | board 7.9 (bar 8, stalled) · preview v4 **8.0 pass** | _ (fill at 72 h) | ~1 day, well over +20 % (16 critic rounds) | pending 72 h — keep critic, cap board rounds ~5, add a voice-quality check |

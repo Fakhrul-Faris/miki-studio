@@ -84,7 +84,7 @@ Times follow the post-time test. Every premise is ☐ until verified; RECIPE-D �
 | 5 | Sun 22 Nov | 12:30 | S16 How to | EX43 If you want to check whether an investment is a scam: BNM Financial Consumer Alert list + SC Investor Alert list, step by step | D (80 % UI) | ready 14 Nov: `EX43-Final.mp4` (47.7 s, 60 fps); post copy in episode.md § Post; schedule in TikTok Studio |
 | 6 | Mon 23 Nov | 12:30 | S16 How to | EX44 Harga sebenar nasi lemak (Bahasa Melayu test): food-cost %, worked on a nasi lemak bungkus | D (60 % UI) | ready 14 Nov: `EX44-Final.mp4` (49.1 s, 60 fps); Malay post copy in episode.md § Post; schedule in TikTok Studio |
 | 7 | Tue 24 Nov | 12:30 | S12 What just happened | Business news within 48 h of the day (pick on 22–23 Nov) | D | ☐ |
-| 8 | Wed 25 Nov | 12:30 | S16 How to | next How-to (pool: register with SSM · take DuitNow QR · …) | — | ☐ |
+| 8 | Wed 25 Nov | 12:30 | S16 How to | EX45 Terima QR di gerai (Bahasa Melayu, X1 test #1): the 1 Nov QR-fee rumour is false; take DuitNow QR at a stall for RM0 in 4 steps | D (75 % UI) | ready 16 Nov: `EX45-Final.mp4` (62.6 s, 60 fps); Malay post copy in episode.md § Post; ⚠ check Maybank facts + music licence; schedule in TikTok Studio |
 | 9 | Thu 26 Nov | 12:30 | S16 How to | next How-to | — | ☐ |
 | 10 | Fri 27 Nov | winner | S04 / S02 / S10 / S14 / S15 | one of the other series | — | ☐ |
 | 3b | after EX40 | — | S16 How to | EX41 How to open a Ramly Burger stall (Part 2 of EX40): licence, food course + typhoid jab, stock, cart | D (desk) + A stall | ready 14 Nov: `EX41-Final.mp4` (44.7 s, 60 fps); post copy in episode.md § Post; schedule in TikTok Studio |

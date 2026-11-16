@@ -41,3 +41,5 @@
 - ramly_burger_logo.png — Wikimedia Commons "File:Ramly Burger Logo.png", public domain (recreated from ramly.com.my, logo of Ramly Food Processing). Downloaded 2026-11-13 for EX40.
 
 - tng_logo.svg/.png, tng_ewallet_logo.svg/.png: Wikimedia Commons "File:Touch 'n Go logo.svg" and "File:Touch 'n Go eWallet logo.svg", public domain (Touch 'n Go). Downloaded 2026-11-14 for EX42.
+
+- duitnow_qr.svg/.png — Wikimedia Commons "File:DuitNow QR Logo.svg", CC0 (User:Bamboofirdaus; mark of PayNet). Brand pink #dd195c taken from the file. Downloaded 2026-11-16 for EX45.
