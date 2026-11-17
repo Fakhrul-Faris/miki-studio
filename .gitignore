@@ -113,3 +113,4 @@ miki-explained/04_episodes/*/build/media/_*.log
 miki-explained/04_episodes/*/build/_chunk*.tsx
 miki-explained/04_episodes/*/audio/tmp/
 miki-explained/04_episodes/_tests/*/*.log
+tools/.venv-whisper/

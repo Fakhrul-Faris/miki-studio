@@ -120,3 +120,25 @@ Voice ~3.5 words/s, almost no pauses over 0.4 s, a pause of ~0.5 s only before a
 4. Use the whole vocabulary: at least rack focus, orbit to top-down, eye-level frontal, macro, low angle and one scale travel.
 5. Captions as in § 6, as a component.
 6. Check before showing: count setups and events per line against this file.
+
+## Video D — gas pump / octane (added 2026-11-17, EX46)
+
+File: `04_episodes/EX46_howto-sale-real/refs/ref_gas.mp4` (same account; repo-root `Video from Facebook.mp4`, 86.6 s,
+720×1280). Studied at 5 fps for 0–48 s (`refs/sheets5/`) and 2 fps for the whole video.
+
+| | D gas |
+|---|---|
+| Setups | ~45 → one every ~1.9 s |
+| Worlds (places) | pump (0–7, 10–22, 77–87), car wide (6.6, 30.8, 62.6, 75), fuel tank (7.4–8.4), lab bench (22–30), engine cutaway (31–75, reframed every 1–2 s), test garage (52–60) |
+| Hard cuts | ~3, hidden in blur passes; the rest are pushes through an object or same-world reframes |
+| Events | ~every 0.5–1 s: caption box, label on a leader line, chart draw, state change (flame spreads, gas squeezes, price ticks) |
+
+What it adds to A–C:
+- **One world held long, reframed often.** The engine cutaway stays ~40 s but is a new framing every 1–2 s (full cylinder → spark-plug macro → side cutaway → split 87|93 → isolated piston).
+- **The hero returns 4×** (pump #4): open, after the first explanation, mid, and the loop end with the opening line.
+- **Labels** in spaced capitals on short leader lines, landing on the word: OCTANE NUMBER, PISTON, GAS AND AIR, SPARK PLUG, FLAME, UNBURNT GAS, SELF-IGNITION, KNOCK, RING LAND, COMPRESSOR.
+- **Thin-line charts** drawn above the object (cylinder pressure with the PING/KNOCK spike).
+- **Split comparison** of the same cutaway (87 | 93, small yellow tags top-left of each half).
+- **Source notes** bottom-left in tiny grey: "US average, EIA, week of Nov 9, 2026", "A California pump", "Magnified illustration", "Slow motion", "Heat shown in orange, invisible to the eye".
+- **Colour:** near-black + greys; heat orange and the pump's yellow/green are the only colours, each only on its story beat.
+- A realistic hand presses buttons — **not copied** (house rule: no hands); the button reacts by itself.
