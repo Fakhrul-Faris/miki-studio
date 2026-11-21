@@ -1,0 +1,310 @@
+00:00 So, here's a really simple animation in
+00:02 
+
+00:02 Blender, but it looks like trash. But
+00:04 
+
+00:04 how can we make it look cool, smooth,
+00:06 
+
+00:06 and professional? Well, it all comes
+00:08 
+
+00:08 down to easing, which controls the speed
+00:10 
+
+00:10 of your object's movement. So, in this
+00:12 
+
+00:12 Blender Essentials tutorial, we're going
+00:13 
+
+00:13 to learn all about easing using the
+00:15 
+
+00:15 graph editor in Blender. So, here in
+00:18 
+
+00:18 Blender, we have a really simple
+00:20 
+
+00:20 animation of this clock rotating and
+00:22 
+
+00:22 going up. Currently, we are in the dope
+00:24 
+
+00:24 sheet. So, to quickly switch to the
+00:26 
+
+00:26 graph editor, all you need to do is
+00:28 
+
+00:28 press control tab. For the animation,
+00:30 
+
+00:30 the starting point is called in, and the
+00:33 
+
+00:33 ending point is called out. So, now
+00:35 
+
+00:35 let's talk about the big three of
+00:37 
+
+00:37 easing. Whenever you want to make change
+00:39 
+
+00:39 to any of a keyframe, the easiest way is
+00:42 
+
+00:42 to go back through the dope sheet,
+00:43 
+
+00:43 select the keyframe, and then switch
+00:45 
+
+00:45 back using control tab, and then in the
+00:47 
+
+00:47 graph editor, everything will be
+00:49 
+
+00:49 selected. Now, I'm going to press S and
+00:52 
+
+00:52 X to scale this keyframe here, and as
+00:55 
+
+00:55 you can see, the graph is increasing.
+00:57 
+
+00:57 So, this animation is called the ease
+00:59 
+
+00:59 out animation with a smooth ending.
+01:02 
+
+01:02 Similarly, we can select the first
+01:04 
+
+01:04 keyframe, press S and X to increase the
+01:07 
+
+01:07 keyframe in the front as well, and this
+01:09 
+
+01:09 creates a ease in out animation, which
+01:11 
+
+01:11 creates a quick whip-like animation.
+01:14 
+
+01:14 Now, similarly, I'm going to press
+01:15 
+
+01:15 control Z to go back, and we can select
+01:18 
+
+01:18 the first keyframe, increase it by using
+01:20 
+
+01:20 the scale again, and this will create
+01:22 
+
+01:22 just the ease in animation having a slow
+01:25 
+
+01:25 start and ending quickly. So, now with
+01:28 
+
+01:28 the big three out of the way, let's talk
+01:30 
+
+01:30 about how duration can change the
+01:32 
+
+01:32 easing. Here, I use the G key to move
+01:34 
+
+01:34 the keyframe back. Now, we can increase
+01:37 
+
+01:37 the easing by increasing the scale here.
+01:39 
+
+01:39 As you can see, the motion is much
+01:41 
+
+01:41 slower now and creates a much smoother
+01:44 
+
+01:44 animation. But if you bring the same
+01:46 
+
+01:46 keyframe closer together, even though
+01:48 
+
+01:48 it's smooth animation, it'll be really
+01:50 
+
+01:50 quick. Now, let's see how we can make
+01:52 
+
+01:52 transition using the easing. So, here,
+01:55 
+
+01:55 I'm I'm to select the first keyframe and
+01:56 
+
+01:56 increase it to be almost full and the
+01:59 
+
+01:59 ending key frame we can scale it down to
+02:01 
+
+02:01 be almost zero. Now if we play the
+02:03 
+
+02:03 animation, you can see it creates a
+02:05 
+
+02:05 really slow start with a quick ending.
+02:09 
+
+02:09 So using this principle we're going to
+02:10 
+
+02:10 create a transition. Here I have a
+02:12 
+
+02:12 really basic setup switching from one
+02:15 
+
+02:15 camera to another going from left to
+02:17 
+
+02:17 right. But here if I play the animation
+02:19 
+
+02:19 without any easing applied to it, it
+02:21 
+
+02:21 looks really basic. So to make a cool
+02:23 
+
+02:23 transition out of it, we're going to
+02:25 
+
+02:25 select the first key frame of the first
+02:27 
+
+02:27 camera and increase it to be almost
+02:29 
+
+02:29 full. Then the ending point of the first
+02:32 
+
+02:32 camera and scale it down to be almost
+02:34 
+
+02:34 zero. Similarly, we have to match the
+02:36 
+
+02:36 starting point of the second camera and
+02:38 
+
+02:38 make it almost zero and then increase
+02:41 
+
+02:41 the ending to be [music] full. So it's
+02:44 
+
+02:44 going from a quick ease in to ease out
+02:46 
+
+02:46 animation switching from one camera to
+02:48 
+
+02:48 another.
+02:49 
+
+02:49 >> [music]
+02:49 
+
+02:49 >> And as you can see it creates a quick
+02:51 
+
+02:51 motion helping in creating a cool
+02:53 
+
+02:53 transition. Now finally, to make
+02:56 
+
+02:56 everything easier we have this Easer
+02:58 
+
+02:58 plugin which you can get from Blender
+02:60 
+
+02:60 extension. Once you have installed the
+03:02 
+
+03:02 plugin, you can press the N key to open
+03:04 
+
+03:04 the side panel and the Easer plugin will
+03:07 
+
+03:07 be available there with all the
+03:08 
+
+03:08 different type of easing presets. Now to
+03:11 
+
+03:11 use it, go to graph editor and press A
+03:13 
+
+03:13 to select all the key frames and then
+03:15 
+
+03:15 here for example I'm going to use the
+03:17 
+
+03:17 super smooth preset. Now if I play the
+03:20 
+
+03:20 animation, it's already adjusted the
+03:22 
+
+03:22 easing for us to create a smooth
+03:24 
+
+03:24 animation. You can play around and
+03:26 
+
+03:26 switch between these other fun preset as
+03:28 
+
+03:28 well. Like here I'm using the overshoot
+03:31 
+
+03:31 and the spring preset to create cool and
+03:33 
+
+03:33 fun animation. So this completes our
+03:35 
+
+03:35 quick easing tutorial.
+03:37 
+
+03:37 >> [music]
+03:37 
+
+03:37 >> If you learned something new, please
+03:39 
+
+03:39 like and subscribe and I'll see you in
+03:40 
+
+03:40 the next one.

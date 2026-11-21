@@ -1,0 +1,1492 @@
+00:06 Hey there class creatives and in this
+00:08 
+
+00:08 special video edition, we'll discuss how
+00:09 
+
+00:09 the best studios in the world actually
+00:11 
+
+00:11 create incredibly detailed and complex
+00:13 
+
+00:13 assets quickly and professionally
+00:15 
+
+00:15 without losing any of the high fidelity
+00:17 
+
+00:17 once it hits the final version inside a
+00:19 
+
+00:19 game engine or final production. This
+00:21 
+
+00:21 video collaboration with OnMars3D and
+00:23 
+
+00:23 Tab Shandy, we'll dive into professional
+00:25 
+
+00:25 techniques for 3D asset creation and
+00:28 
+
+00:28 we'll look directly into how AAA titles
+00:30 
+
+00:30 like The Last of Us, Valorant, and
+00:32 
+
+00:32 Assassin's Creed utilize trim sheets and
+00:34 
+
+00:34 how you can take this approach to your
+00:36 
+
+00:36 own personal or professional projects.
+00:38 
+
+00:38 We plan to do a lot more technical
+00:39 
+
+00:39 videos from OnMars and Tab, so please
+00:41 
+
+00:41 leave a comment and let us know what you
+00:43 
+
+00:43 want to see from us next time. Let's get
+00:44 
+
+00:44 into it.
+00:46 
+
+00:46 >> How do games create such large high
+00:48 
+
+00:48 detailed environments without uniquely
+00:50 
+
+00:50 texturing every single object?
+00:53 
+
+00:53 The answer, trim sheets. And we're going
+00:55 
+
+00:55 to cover that in today's 3D Art Talk
+00:56 
+
+00:56 video. We'll be jump over here
+00:60 
+
+01:00 and look at a few examples. If you've
+01:03 
+
+01:03 never heard of the word trim sheets,
+01:06 
+
+01:06 well you're in for a good time. Let's
+01:07 
+
+01:07 look at this example from Assassin's
+01:08 
+
+01:08 Creed Mirage.
+01:10 
+
+01:10 We have Camille here who has done
+01:13 
+
+01:13 an amazing job showing the material
+01:16 
+
+01:16 created as a trim sheet and then being
+01:17 
+
+01:17 applied in context in the environment.
+01:19 
+
+01:19 And what this is allowing us to do
+01:22 
+
+01:22 is create these high detailed looking
+01:24 
+
+01:24 environments without the constraint of
+01:29 
+
+01:29 having to texture every single object
+01:31 
+
+01:31 uniquely.
+01:33 
+
+01:33 And also not having to worry about
+01:37 
+
+01:37 texel density limitations.
+01:40 
+
+01:40 So you can see here, we have this
+01:42 
+
+01:42 pattern here that's being applied
+01:45 
+
+01:45 and it's tiling across as well as of
+01:47 
+
+01:47 that some of that tiling being broken up
+01:49 
+
+01:49 with some grunge and probably vertex
+01:52 
+
+01:52 bonding and decals. We have another
+01:54 
+
+01:54 example here of these fence
+01:57 
+
+01:57 shapes.
+02:02 
+
+02:02 Then it really starts to become
+02:03 
+
+02:03 impressive, right? You really start to
+02:06 
+
+02:06 appreciate what texel density
+02:09 
+
+02:09 or what trim sheets can do by
+02:13 
+
+02:13 looking at large-scale environments.
+02:14 
+
+02:14 Here's this pretty large ship here. We
+02:16 
+
+02:16 can see the main character on the side
+02:18 
+
+02:18 of this ship.
+02:20 
+
+02:20 Yet at the same time, I mean, look at
+02:22 
+
+02:22 the detail in these wood panels.
+02:24 
+
+02:24 There is
+02:27 
+
+02:27 no hint of quality loss, no pixelation,
+02:31 
+
+02:31 no resolution drop. And all of that is
+02:35 
+
+02:35 because we're able to use trim sheets to
+02:37 
+
+02:37 tile this horizontally.
+02:41 
+
+02:41 And one of my favorite examples here is
+02:44 
+
+02:44 you see this again, our main character.
+02:46 
+
+02:46 So, we have Nikolai here. He shows our
+02:48 
+
+02:48 main character in context in front of
+02:50 
+
+02:50 this door that is probably 10 times his
+02:52 
+
+02:52 size. And we can again zoom into the
+02:55 
+
+02:55 door. The only pixelation is happening
+02:58 
+
+02:58 is just the capture the resolution cap
+03:00 
+
+03:00 that we're dealing from the capture.
+03:02 
+
+03:02 But it looks amazing. And here, again,
+03:05 
+
+03:05 when it comes to using trim sheets, it's
+03:07 
+
+03:07 a combination of
+03:10 
+
+03:10 breaking our models up in modular
+03:11 
+
+03:11 fashion, pre-planning,
+03:14 
+
+03:14 setting up our UVs, creating the
+03:16 
+
+03:16 geometry. We're going to look at that
+03:18 
+
+03:18 here today. So, let's look at this in
+03:21 
+
+03:21 Blender, right? So, I have this nice
+03:23 
+
+03:23 simple example of exactly kind of like
+03:25 
+
+03:25 how this is set up, right? I have just
+03:28 
+
+03:28 this simple plane here. We can look at
+03:30 
+
+03:30 this in solid shaded mode. We can We
+03:32 
+
+03:32 have this broken up by horizontal
+03:35 
+
+03:35 segments. Great.
+03:36 
+
+03:36 If we go back to material preview, we
+03:38 
+
+03:38 can see this is our
+03:40 
+
+03:40 geometry or a low-poly geometry, and
+03:42 
+
+03:42 this is our high-poly geometry. And
+03:43 
+
+03:43 we're able to get this high-poly
+03:45 
+
+03:45 detailed information baked down.
+03:48 
+
+03:48 Now, it really helps to understand that
+03:51 
+
+03:51 trim sheets can be made in a whole bunch
+03:54 
+
+03:54 of different ways. Look at this absolute
+03:57 
+
+03:57 beautiful graph here by Sam. He created
+03:59 
+
+03:59 this nice sci-fi wall
+04:02 
+
+04:02 environment corridor using pretty much
+04:06 
+
+04:06 Substance Designers and it looks
+04:08 
+
+04:08 absolutely insane. You have that type of
+04:10 
+
+04:10 method and then you have a method where
+04:12 
+
+04:12 you can just use traditional Maya,
+04:14 
+
+04:14 Blender, Max, and even ZBrush to create
+04:17 
+
+04:17 these high
+04:19 
+
+04:19 poly details that's used for for tiling.
+04:22 
+
+04:22 So, now we take this information and
+04:25 
+
+04:25 instead of right dealing with the
+04:26 
+
+04:26 limitation of going here and just like
+04:29 
+
+04:29 scaling this up and worrying about now
+04:33 
+
+04:33 we start to deal with
+04:36 
+
+04:36 texel density loss.
+04:38 
+
+04:38 Instead, we can build that same type of
+04:41 
+
+04:41 wall here by grabbing the sections that
+04:43 
+
+04:43 we need
+04:45 
+
+04:45 from these horizontal
+04:48 
+
+04:48 texture sets. So, I could grab, let's
+04:51 
+
+04:51 say, this part.
+04:54 
+
+04:54 Just do a shift D,
+04:56 
+
+04:56 move it in the Z axis, and then press P
+04:59 
+
+04:59 and separate by selection.
+05:01 
+
+05:01 And so, that's how I get this separate
+05:02 
+
+05:02 piece. So, I can delete this example.
+05:04 
+
+05:04 And if I move this up,
+05:06 
+
+05:06 add an array modifier, you know, now I
+05:10 
+
+05:10 can start to incre- increase this
+05:12 
+
+05:12 however many times that I need.
+05:14 
+
+05:14 What's really nice about this is you
+05:16 
+
+05:16 have complete control over this, right?
+05:18 
+
+05:18 So, I can go in here and say, "Oh, now I
+05:21 
+
+05:21 want to change the material or the
+05:23 
+
+05:23 texture." You absolutely can. So, not
+05:25 
+
+05:25 only can I move this in the
+05:29 
+
+05:29 X and Y,
+05:31 
+
+05:31 but I can increase the texel density by
+05:34 
+
+05:34 scaling in the X. So, now we start to
+05:36 
+
+05:36 scale and add more detail. And I could
+05:39 
+
+05:39 change this if I want if we wanted to to
+05:41 
+
+05:41 this nice brick texture.
+05:45 
+
+05:45 And so, we're able to get a high-level
+05:47 
+
+05:47 amount of detail, right? Just like this.
+05:51 
+
+05:51 And we can really, really zoom in and
+05:53 
+
+05:53 look at that. I mean, this is tiling
+05:55 
+
+05:55 materials, right? And you might be
+05:56 
+
+05:56 saying, "Okay, so what? It's a tiling
+05:58 
+
+05:58 material." But now,
+06:01 
+
+06:01 instead of having each one of these
+06:02 
+
+06:02 pieces be a uniquely separate material,
+06:06 
+
+06:06 right? With each material having its own
+06:08 
+
+06:08 texture set, all of that could live in
+06:10 
+
+06:10 this single texture set.
+06:12 
+
+06:12 So, you get really the best of both
+06:14 
+
+06:14 worlds. You get high-level fidelity and
+06:17 
+
+06:17 optimization, which is what game art
+06:20 
+
+06:20 optimization is all about.
+06:22 
+
+06:22 Hands down one of my favorites, of
+06:24 
+
+06:24 course, The Last of Us. They just do
+06:26 
+
+06:26 such an amazing job
+06:29 
+
+06:29 really showcasing how to create these
+06:30 
+
+06:30 environments, right? So, we have
+06:31 
+
+06:31 Jonathan here. He has these two samples.
+06:34 
+
+06:34 Check him out on ArtStation. And we look
+06:37 
+
+06:37 at all of these unique assets, and
+06:39 
+
+06:39 you're like, you ever just look at these
+06:40 
+
+06:40 materials and textures, and you're like,
+06:42 
+
+06:42 "Man, just how are they creating such a
+06:44 
+
+06:44 high level of fidelity?" Well, you can
+06:46 
+
+06:46 see clearly here what each one of these
+06:48 
+
+06:48 materials
+06:49 
+
+06:49 where it's being applied. Now, what's
+06:51 
+
+06:51 interesting here is that they're using
+06:52 
+
+06:52 multiple trim sheets on this asset. So,
+06:54 
+
+06:54 that is kind of three sets. But what's
+06:57 
+
+06:57 you can need to keep in mind is that if
+06:59 
+
+06:59 you look at the environment,
+07:01 
+
+07:01 there's a lot of this stone material.
+07:04 
+
+07:04 So, they can build once, not only use it
+07:06 
+
+07:06 here on this single asset, but use it
+07:08 
+
+07:08 all throughout different parts of the
+07:11 
+
+07:11 environment whenever they have these
+07:12 
+
+07:12 stone material types. So, a great
+07:16 
+
+07:16 workflow, a a great ability to reuse
+07:19 
+
+07:19 what's already been made, and here comes
+07:22 
+
+07:22 that pre-planning, right? We look at
+07:23 
+
+07:23 real life. We look at materials. We look
+07:25 
+
+07:25 at textures.
+07:27 
+
+07:27 And if we look at the sequence here,
+07:29 
+
+07:29 now, like we talked in our last video,
+07:31 
+
+07:31 we looked at vertex blending uh
+07:32 
+
+07:32 examples,
+07:34 
+
+07:34 vertex color information. That's exactly
+07:36 
+
+07:36 what's being used here. So, now, they're
+07:38 
+
+07:38 taking this kind of moss material plus
+07:41 
+
+07:41 the trim sheets, and then hiding the
+07:43 
+
+07:43 obvious tiling using
+07:46 
+
+07:46 vines geometry all of this to make this
+07:48 
+
+07:48 such a a unique looking asset.
+07:51 
+
+07:51 And you'll see another example
+07:54 
+
+07:54 of this as well. We have kind of an
+07:56 
+
+07:56 interior version and I I love this
+07:59 
+
+07:59 because what this does is a lot of
+08:01 
+
+08:01 people in order to
+08:04 
+
+08:04 we need to understand in order to use
+08:05 
+
+08:05 vertex colors you need vertex, right?
+08:07 
+
+08:07 It's a little bit hard to see but you
+08:09 
+
+08:09 can see that these simple flat walls
+08:13 
+
+08:13 do have about 1 2 3 4 5 6 7 about eight
+08:16 
+
+08:16 faces, right? That's needed, right? In
+08:20 
+
+08:20 order to do this next step which is
+08:22 
+
+08:22 using that vertex color and vertex
+08:24 
+
+08:24 blending painting information here,
+08:26 
+
+08:26 right? And you can see how that's done
+08:29 
+
+08:29 there.
+08:30 
+
+08:30 So another beautiful example we've
+08:33 
+
+08:33 already looked at Assassin's Creed
+08:35 
+
+08:35 Mirage. Looked at this Naughty Dog
+08:38 
+
+08:38 example
+08:39 
+
+08:39 and a couple other various examples
+08:41 
+
+08:41 here. We can see Anthony
+08:44 
+
+08:44 with this brick and Legos. We have wood
+08:48 
+
+08:48 using this trim sheet technique here.
+08:51 
+
+08:51 So shout out to all the artists that
+08:53 
+
+08:53 that went through
+08:55 
+
+08:55 that post these breakdowns. They're
+08:56 
+
+08:56 they're they're so helpful to learn from
+08:58 
+
+08:58 and one of the things that came up in my
+08:60 
+
+08:60 Discord was
+09:02 
+
+09:02 Valorant, right? If we look at Valorant
+09:06 
+
+09:06 we have this breakdown here by Tobias.
+09:11 
+
+09:11 And he's using a combination of just
+09:14 
+
+09:14 tiling textures, tiling materials as
+09:16 
+
+09:16 well as trim sheets, right? You can see
+09:18 
+
+09:18 these trims that are created in ZBrush
+09:21 
+
+09:21 to in order to create these details
+09:22 
+
+09:22 here.
+09:23 
+
+09:23 When you again you start to think about
+09:25 
+
+09:25 these large scale environments you need
+09:27 
+
+09:27 to stop thinking about uniquely
+09:29 
+
+09:29 texturing them and think about texturing
+09:31 
+
+09:31 them not only with tiling materials but
+09:34 
+
+09:34 using a trim sheet that now we can
+09:36 
+
+09:36 create multiple, right? Multiple
+09:40 
+
+09:40 material types in a single texture set,
+09:43 
+
+09:43 right?
+09:44 
+
+09:44 And then, I love this resource here, the
+09:46 
+
+09:46 art of Valorant. This one was posted
+09:48 
+
+09:48 around 2020. It's the developer or the
+09:51 
+
+09:51 artist was Lydia, and she just it does
+09:53 
+
+09:53 an awesome job breaking down what goes
+09:55 
+
+09:55 into it. And that's where I pulled these
+09:56 
+
+09:56 images from.
+09:58 
+
+09:58 And if we look directly on the website,
+10:01 
+
+10:01 you see how
+10:03 
+
+10:03 they build their environments.
+10:04 
+
+10:04 Obviously, they start with the blockout,
+10:06 
+
+10:06 and then from there they start to
+10:08 
+
+10:08 take that into production, you know, the
+10:11 
+
+10:11 blockout can then be used at the same
+10:13 
+
+10:13 time, so that it's not blocking
+10:14 
+
+10:14 developers. Developers can do what they
+10:16 
+
+10:16 need to do. Lighting artists can do what
+10:17 
+
+10:17 they need to do until everything kind of
+10:19 
+
+10:19 emerges into the final. So, some really
+10:21 
+
+10:21 great breakdowns here, and you we can
+10:24 
+
+10:24 look at this specifically like on this
+10:27 
+
+10:27 container here, right? So, you look at
+10:29 
+
+10:29 we have the the base model, and you can
+10:31 
+
+10:31 just see these layers and layers and
+10:32 
+
+10:32 layers of material. And so, we have the
+10:34 
+
+10:34 base, we have some color, and then you
+10:36 
+
+10:36 start to add detail through trim sheets,
+10:38 
+
+10:38 right?
+10:39 
+
+10:39 They give this nice little mini
+10:40 
+
+10:40 breakdown. They say, "As far as
+10:41 
+
+10:41 texturing goes, we primarily use tiling
+10:44 
+
+10:44 textures and trim sheets on our
+10:45 
+
+10:45 buildings and large structures. These
+10:48 
+
+10:48 are created using a variety of programs
+10:49 
+
+10:49 such as ZBrush, Substance Designer,
+10:51 
+
+10:51 Substance Painter, and Photoshop. They
+10:53 
+
+10:53 do use custom textures on props when
+10:55 
+
+10:55 needed, such as a coffee machine in the
+10:57 
+
+10:57 kitchen or the forklift near the A site,
+10:60 
+
+10:60 right? So, if we look here again, you
+11:02 
+
+11:02 can see just the different paths, the
+11:03 
+
+11:03 main color path, and then you start to
+11:05 
+
+11:05 see these minor details of decals,
+11:07 
+
+11:07 grunge, lighting, snow,
+11:11 
+
+11:11 add layered by layer, right? And a lot
+11:14 
+
+11:14 of this fidelity, a lot of this
+11:15 
+
+11:15 information
+11:17 
+
+11:17 is coming in phases, and it's coming
+11:19 
+
+11:19 from using these tileable textures and
+11:22 
+
+11:22 trim sheets.
+11:24 
+
+11:24 So,
+11:25 
+
+11:25 similar workflows when you go from
+11:27 
+
+11:27 something like Valorant to The Last of
+11:30 
+
+11:30 Us, it's the same workflow, but with
+11:32 
+
+11:32 very different art art styles.
+11:35 
+
+11:35 Again, my favorite part to understand is
+11:37 
+
+11:37 that you're able to just get such an
+11:39 
+
+11:39 amazing amount of detail out of a single
+11:43 
+
+11:43 texture set, right? That's really what
+11:45 
+
+11:45 it comes down to. But, only if you're
+11:48 
+
+11:48 putting in that pre-planning and work to
+11:51 
+
+11:51 make sure you're kind of organized uh as
+11:54 
+
+11:54 you go. So, with that, I'll see you in
+11:56 
+
+11:56 the next one.
+11:57 
+
+11:57 >> Thanks for that amazing breakdown, Omar.
+11:59 
+
+11:59 You just showed us the potential of trim
+12:01 
+
+12:01 sheets for breaking up the grid using
+12:03 
+
+12:03 AAA gaming examples. But, how does this
+12:05 
+
+12:05 actually look when you're in real
+12:06 
+
+12:06 production yourself? Optimizing a large
+12:08 
+
+12:08 hero asset for Unreal Engine. To show
+12:10 
+
+12:10 you the exact software pipeline, we
+12:12 
+
+12:12 pulled highlights directly from our new
+12:14 
+
+12:14 3D environment masterclass with AAA
+12:16 
+
+12:16 veteran Taf Shandy. In this quick
+12:18 
+
+12:18 segment, Taf skips the traditional skin
+12:20 
+
+12:20 texturing method and uses a custom
+12:22 
+
+12:22 script to align his UVs perfectly to a
+12:24 
+
+12:24 trim sheet. Let's dive into his pro
+12:26 
+
+12:26 workflow.
+12:28 
+
+12:28 >> All right, hello everyone. Uh so, today
+12:30 
+
+12:30 we're going to be looking at um UVing.
+12:33 
+
+12:33 And I'm going to be UVing this uh
+12:36 
+
+12:36 fountain, and specifically I'm going to
+12:38 
+
+12:38 be using a technique called trim
+12:40 
+
+12:40 texturing to texture the entire thing
+12:44 
+
+12:44 because it's kind of a large object in a
+12:47 
+
+12:47 way, not super large like a building,
+12:49 
+
+12:49 but just large enough where
+12:51 
+
+12:51 uh if you were making
+12:53 
+
+12:53 a um
+12:55 
+
+12:55 a a prop of it like or a skin of the
+12:58 
+
+12:58 entire thing, you could do this because
+13:00 
+
+13:00 it's round, but you might not get the
+13:02 
+
+13:02 best uh resolution or texel densities.
+13:05 
+
+13:05 And so, you can see like if I do the
+13:07 
+
+13:07 shells,
+13:08 
+
+13:08 like that there's this shell
+13:12 
+
+13:12 um
+13:13 
+
+13:13 here in red. And then, I
+13:17 
+
+13:17 you know, moved it over one unit, and
+13:19 
+
+13:19 this just uses the same UV space as as
+13:22 
+
+13:22 these over here. So, I can just do a
+13:24 
+
+13:24 quarter of this fountain
+13:26 
+
+13:26 and get a skin, but you're still this is
+13:29 
+
+13:29 a 4096 texture. So, you're still getting
+13:32 
+
+13:32 an you're getting okay texel density,
+13:34 
+
+13:34 but it's not as
+13:37 
+
+13:37 high as if you're going to do it with a
+13:39 
+
+13:39 trim texture.
+13:41 
+
+13:41 And so, that's the low-res and I can
+13:43 
+
+13:43 hide that and now this is the high-res.
+13:46 
+
+13:46 It's It's just kind of like a
+13:49 
+
+13:49 flat plane with like four strips and
+13:53 
+
+13:53 they have a
+13:55 
+
+13:55 kind of a bevel and a 45° angle in
+13:58 
+
+13:58 between each side and that'll bake down
+14:01 
+
+14:01 into a very nice normal map, which I can
+14:05 
+
+14:05 show you in Substance Painter. This is
+14:07 
+
+14:07 that the trim texture that I'm going to
+14:09 
+
+14:09 use. Very simple. Usually, I
+14:12 
+
+14:12 uh have like some space down here for
+14:14 
+
+14:14 smaller details like the drains and all
+14:16 
+
+14:16 that stuff, but in this case, I'm just
+14:18 
+
+14:18 going to use the steel
+14:20 
+
+14:20 up here to make the drains. So,
+14:23 
+
+14:23 this is these are the tiles here
+14:26 
+
+14:26 and
+14:27 
+
+14:27 uh I'll put this back over here.
+14:30 
+
+14:30 You see and then
+14:31 
+
+14:31 the tiles, the concrete, and
+14:35 
+
+14:35 the uh iron or the steel.
+14:38 
+
+14:38 And then, you know, those
+14:41 
+
+14:41 every then that's that should be all I
+14:43 
+
+14:43 need for this.
+14:45 
+
+14:45 And so, if you want the bevel to
+14:47 
+
+14:47 continue properly, you want to line up
+14:51 
+
+14:51 the green edges with the green edges and
+14:53 
+
+14:53 the purple edges with the purple edges.
+14:55 
+
+14:55 And so, you might need to flip or rotate
+14:59 
+
+14:59 uh some of your shells so that works. I
+15:01 
+
+15:01 called it A Trim, but it's Fast Trim UV
+15:03 
+
+15:03 and it's free on ArtStation and I want
+15:07 
+
+15:07 to credit the person that made it. This
+15:08 
+
+15:08 is the awesome tool. It's saved me so
+15:09 
+
+15:09 much time.
+15:11 
+
+15:11 Um he made a paid version and a free
+15:13 
+
+15:13 version. I have both. This is the free
+15:15 
+
+15:15 version that I just use for like quick
+15:18 
+
+15:18 quick trim adjustments, but you can
+15:20 
+
+15:20 customize the other one. You customize
+15:22 
+
+15:22 this one, too, and have different
+15:25 
+
+15:25 different settings of your how you want
+15:28 
+
+15:28 your trim to be aligned. So, what I'm
+15:30 
+
+15:30 going to do now is
+15:31 
+
+15:31 uh instead of me trying to manually move
+15:33 
+
+15:33 this into place, I can just say
+15:35 
+
+15:35 the top one is This is all 1024 1024
+15:38 
+
+15:38 1024 1024 to make this 4096. And so,
+15:42 
+
+15:42 they're all equally divided, so it's
+15:45 
+
+15:45 really easy to do. I just say, "Okay,
+15:48 
+
+15:48 put that trim over here." And
+15:52 
+
+15:52 uh you can also say match trim height,
+15:55 
+
+15:55 and then
+15:56 
+
+15:56 you can say center it, and that it
+15:58 
+
+15:58 centers it
+16:00 
+
+16:00 on that on that trim section. Or I could
+16:03 
+
+16:03 say
+16:04 
+
+16:04 go down here, or go down here.
+16:07 
+
+16:07 You know, or go down to the bottom one.
+16:09 
+
+16:09 So, I'm saying, "Okay, top one is what I
+16:12 
+
+16:12 need cuz that's where the steel is." And
+16:14 
+
+16:14 notice how there's purple next to green.
+16:17 
+
+16:17 That's going to give you
+16:18 
+
+16:18 uh
+16:19 
+
+16:19 a divot or indent, and you want it to
+16:22 
+
+16:22 look like a bevel. So,
+16:24 
+
+16:24 um what I'll do is either just rotate it
+16:29 
+
+16:29 you know, 180. So, now
+16:31 
+
+16:31 they're smooth across that, and I get
+16:32 
+
+16:32 that.
+16:33 
+
+16:33 And I also get another bevel down here.
+16:38 
+
+16:38 Okay, here we are in uh UE4, and
+16:42 
+
+16:42 um usually I start with UE4, and then
+16:44 
+
+16:44 I'll work my way up to UE5 when I'm
+16:46 
+
+16:46 working on a pack just for
+16:49 
+
+16:49 compatibility reasons. Um and so,
+16:52 
+
+16:52 anyway, so here's the two uh models the
+16:55 
+
+16:55 that's kind of the old one to the right
+16:56 
+
+16:56 there, the square one. And then here's
+16:58 
+
+16:58 the one with uh the trim texturing, and
+17:00 
+
+17:00 you can kind of see the difference
+17:01 
+
+17:01 between
+17:03 
+
+17:03 uh the texel density right now. When you
+17:05 
+
+17:05 get up really close to it, it holds up.
+17:08 
+
+17:08 Uh you know, you can see all the
+17:09 
+
+17:09 details, scratches there. You can see
+17:10 
+
+17:10 the
+17:12 
+
+17:12 the kind of lines in there that make it
+17:14 
+
+17:14 look like
+17:15 
+
+17:15 a shutter or kind of a really cool like
+17:18 
+
+17:18 futuristic Tron wheel or something. And
+17:21 
+
+17:21 uh when you look at
+17:23 
+
+17:23 the concrete here, you can it holds up
+17:27 
+
+17:27 um you know, even when you get really
+17:28 
+
+17:28 close to it.
+17:30 
+
+17:30 Uh where whereas if you look at the skin
+17:32 
+
+17:32 version, it's like it just doesn't hold
+17:34 
+
+17:34 up and that's using the whole They're
+17:36 
+
+17:36 both the same
+17:37 
+
+17:37 texture uh resolution 4K and here here
+17:41 
+
+17:41 they are right here. 4K start to add up
+17:43 
+
+17:43 really quickly and you know, eventually
+17:46 
+
+17:46 you'll have to turn on like virtual
+17:47 
+
+17:47 textures to stream it in, but that's
+17:49 
+
+17:49 what I did for the road. The road has
+17:51 
+
+17:51 its own
+17:53 
+
+17:53 uh kind of tiling and then everything is
+17:55 
+
+17:55 like
+17:56 
+
+17:56 layered on top as decals. So So yeah,
+17:60 
+
+17:60 anyway, so that's you know, UVing and
+18:02 
+
+18:02 that's the
+18:04 
+
+18:04 the in-game model and
+18:06 
+
+18:06 you know, hope hope you enjoyed it and
+18:08 
+
+18:08 thanks for watching.
+18:09 
+
+18:09 >> Well, that about wraps up this video. So
+18:11 
+
+18:11 as you can see, swapping from a basic
+18:13 
+
+18:13 skin texture completely changes the game
+18:15 
+
+18:15 for your resolution and texel density in
+18:17 
+
+18:17 Unreal Engine.
+18:18 
+
+18:18 To keep this video from being over an
+18:19 
+
+18:19 hour long, we had to compress hours of
+18:21 
+
+18:21 Taff's full process of detailed UV
+18:23 
+
+18:23 mapping, edge loop fixing, and vertex
+18:25 
+
+18:25 merging into just the highlights. But
+18:28 
+
+18:28 hopefully combined with Onmar's
+18:29 
+
+18:29 breakdowns, you'll now possess valuable
+18:31 
+
+18:31 insights into the pro AAA workflows that
+18:33 
+
+18:33 the best studios in the world use. We
+18:35 
+
+18:35 want to thank Onmar Mohammed and Taff
+18:37 
+
+18:37 Shanny for collaborating with us on
+18:38 
+
+18:38 this.
+18:39 
+
+18:39 Are you currently using these trim sheet
+18:41 
+
+18:41 workflows for your personal projects or
+18:43 
+
+18:43 as a working professional at your
+18:44 
+
+18:44 studio? Let us know your thoughts in the
+18:46 
+
+18:46 comments.
+18:49 
+
+18:49 And uh don't forget to like and
+18:50 
+
+18:50 subscribe, and we'll see you in the next
+18:52 
+
+18:52 one.
+18:53 
+
+18:53 >> Perfect.

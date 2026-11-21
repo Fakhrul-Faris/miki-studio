@@ -1,0 +1,3616 @@
+00:00 okay I want to show you a technique to
+00:03 
+
+00:03 really easily add a lot of complexity to
+00:05 
+
+00:05 your renders this is a method of just
+00:07 
+
+00:07 you know adding a lot of detail really
+00:09 
+
+00:09 fast and very honestly very easily so
+00:13 
+
+00:13 here's a render using this technique
+00:15 
+
+00:15 that I'm going to show you this is when
+00:17 
+
+00:17 I finished a couple days ago and in a
+00:19 
+
+00:19 second I'll show you the blend file when
+00:21 
+
+00:21 you see the blend file it's going to
+00:22 
+
+00:22 look crazy and it's going to look insane
+00:24 
+
+00:24 and just so complicated but I promise I
+00:27 
+
+00:27 will break it down into a way that's
+00:28 
+
+00:28 like very simple and honestly like very
+00:31 
+
+00:31 easy to understand and look at and like
+00:33 
+
+00:33 it hopefully I'll like hopefully I'll
+00:35 
+
+00:35 kind of be able to break the illusion of
+00:36 
+
+00:36 what's going on here and you'll be able
+00:37 
+
+00:37 to see how stupid simple this actually
+00:39 
+
+00:39 is
+00:40 
+
+00:40 so yesterday I was working on this
+00:42 
+
+00:42 render right here and
+00:44 
+
+00:44 I've used this technique before but I
+00:46 
+
+00:46 really realized how powerful it was
+00:47 
+
+00:47 yesterday when I was kind of sitting
+00:49 
+
+00:49 there struggling and
+00:50 
+
+00:50 then I just did this thing which I'll
+00:52 
+
+00:52 explain in a second and then all of a
+00:54 
+
+00:54 sudden everything just kind of came
+00:56 
+
+00:56 together
+00:57 
+
+00:57 quite easily so what I'm talking about
+00:59 
+
+00:59 is it's going to sound very simple but
+01:01 
+
+01:01 I'll kind of show you how this works
+01:03 
+
+01:03 taking a bunch of models combining them
+01:05 
+
+01:05 into one collection and then just
+01:06 
+
+01:06 instancing that collection duplicating
+01:08 
+
+01:08 it around a bunch more times to create
+01:11 
+
+01:11 something very complex so that sounds
+01:13 
+
+01:13 simple but
+01:14 
+
+01:14 um
+01:14 
+
+01:14 well it is simple but let me just kind
+01:16 
+
+01:16 of show you what I mean how this applies
+01:18 
+
+01:18 to this here so
+01:19 
+
+01:19 here's the blend file
+01:21 
+
+01:21 and this is what I mean I know it looks
+01:23 
+
+01:23 like scary at first when you see this
+01:26 
+
+01:26 um but let me break this down into it's
+01:29 
+
+01:29 very uh like it's core pieces that are
+01:32 
+
+01:32 actually very very simple when you break
+01:34 
+
+01:34 it down to the fundamental level so
+01:37 
+
+01:37 let's look at what's going on here if I
+01:39 
+
+01:39 click on this you might notice this is
+01:41 
+
+01:41 one object or it seems to be one object
+01:43 
+
+01:43 this is actually a collection instance
+01:45 
+
+01:45 of a bunch of objects together and if I
+01:47 
+
+01:47 click around here you can see you can
+01:49 
+
+01:49 see how I put this together I've just
+01:50 
+
+01:50 kind of a bunch of clusters of
+01:53 
+
+01:53 uh they're actually all pretty much the
+01:56 
+
+01:56 same model there's a couple variations
+01:57 
+
+01:57 so you know you'll see some of these
+01:60 
+
+01:60 towers have an extra piece on top
+02:02 
+
+02:02 this like it's the same Tower duplicated
+02:05 
+
+02:05 it just has one extra model on the top
+02:08 
+
+02:08 of it and I'll explain all this in a
+02:10 
+
+02:10 second but that's what's going on here
+02:12 
+
+02:12 it's just a bunch of these same Towers
+02:13 
+
+02:13 duplicated around here and you know with
+02:16 
+
+02:16 the help of different angles and
+02:19 
+
+02:19 different rotations and lighting and you
+02:21 
+
+02:21 know the lights hitting some of these in
+02:24 
+
+02:24 uh and making some spots brighter and
+02:26 
+
+02:26 it's you know kind of hidden in Shadows
+02:27 
+
+02:27 and other spots you can't tell that much
+02:30 
+
+02:30 that it's the same model duplicated a
+02:32 
+
+02:32 bunch of times but it gives the illusion
+02:34 
+
+02:35 here that it's you know all this
+02:36 
+
+02:36 complexity and all this variation but it
+02:38 
+
+02:38 all fits together in a cohesive way
+02:40 
+
+02:40 well it all fits together because it's
+02:42 
+
+02:42 all the same thing
+02:43 
+
+02:43 so let's actually break this one piece
+02:46 
+
+02:46 down into its you know individual pieces
+02:49 
+
+02:49 and I'll break that down even further if
+02:50 
+
+02:50 you want but
+02:52 
+
+02:52 um yeah basically all of these towers
+02:53 
+
+02:53 here are the same model or the same
+02:55 
+
+02:55 cluster of models
+02:57 
+
+02:57 uh with some filler things here and
+02:59 
+
+02:59 there which I'll get to later but let's
+03:00 
+
+03:00 let's break down this main tower so this
+03:03 
+
+03:03 main thing in the middle is what is it's
+03:06 
+
+03:06 the same thing as all these other ones
+03:07 
+
+03:07 around here so I'll just look at this
+03:08 
+
+03:08 one thing here and let's break this down
+03:11 
+
+03:11 so
+03:12 
+
+03:12 I know this even just one of these looks
+03:14 
+
+03:14 complex to a lot of people so let's I'll
+03:17 
+
+03:17 just go through this and kind of explain
+03:18 
+
+03:18 this in a more simple way but let's look
+03:20 
+
+03:20 at this first of all
+03:22 
+
+03:22 um so this is the collection instance
+03:24 
+
+03:24 that I was talking about where if I
+03:27 
+
+03:27 actually bring this back so I'll just
+03:29 
+
+03:29 bring in I have a tower collection which
+03:31 
+
+03:31 is what all these are select that and
+03:33 
+
+03:33 isolate it
+03:34 
+
+03:34 so
+03:36 
+
+03:36 here's all the individual models that
+03:38 
+
+03:38 make up that bigger collection of stuff
+03:40 
+
+03:40 and if you've been watching my channel
+03:41 
+
+03:41 you recognize a lot of these a lot of
+03:43 
+
+03:43 these are just the uh if you've seen the
+03:45 
+
+03:45 temple video that's there's a lot of
+03:48 
+
+03:48 these pieces in here
+03:49 
+
+03:49 um kind of mixed in with some other ones
+03:50 
+
+03:50 as soon as I bring this collection in
+03:52 
+
+03:52 it's gonna go like weird in the render
+03:53 
+
+03:53 view that's just because it's uh it's
+03:55 
+
+03:55 overlapping with another model just
+03:56 
+
+03:56 ignore that but yeah it's um there's not
+04:00 
+
+04:00 anything crazy I will break these
+04:02 
+
+04:02 individual pieces these individual
+04:04 
+
+04:04 pieces down even further in a second but
+04:06 
+
+04:06 for now I just want you to understand
+04:07 
+
+04:07 this is like
+04:09 
+
+04:09 like low effort like this is me taking a
+04:13 
+
+04:13 bunch of models and slapping them
+04:14 
+
+04:14 together into the shape of roughly a
+04:16 
+
+04:16 tower and just kind of putting things
+04:17 
+
+04:17 into
+04:19 
+
+04:19 I don't know like a shape vertically
+04:22 
+
+04:22 like I didn't spend that long on this
+04:23 
+
+04:23 this is pretty simple it's just kind of
+04:25 
+
+04:25 taking models that I made a while ago or
+04:26 
+
+04:26 that other people made and stacking them
+04:29 
+
+04:29 on top of each other literally and then
+04:31 
+
+04:31 there you go and then
+04:33 
+
+04:33 so that's what's creating this main
+04:36 
+
+04:36 tower that I could duplicate it all over
+04:37 
+
+04:37 the place but let's break this down to
+04:40 
+
+04:40 an even simpler level so if I go in here
+04:43 
+
+04:44 I'll kind of just go through a bunch of
+04:46 
+
+04:46 these different models and show you
+04:47 
+
+04:47 where they came from and how that
+04:49 
+
+04:49 they're kind of put together in a way
+04:51 
+
+04:51 that makes sense
+04:52 
+
+04:52 so
+04:55 
+
+04:55 maybe I should do this I'm going to
+04:56 
+
+04:56 duplicate this move it to a new
+04:58 
+
+04:58 collection because otherwise it'll mess
+04:60 
+
+04:60 up the existing one this instance all
+05:03 
+
+05:03 over the entire scene as you can see
+05:04 
+
+05:04 there so we'll just call it test
+05:06 
+
+05:06 whatever
+05:07 
+
+05:07 and there we go
+05:10 
+
+05:10 and I'll just isolate that okay so now I
+05:13 
+
+05:13 can move this around and it will destroy
+05:14 
+
+05:14 my entire scene and let's get out of
+05:16 
+
+05:16 rendered view here so
+05:19 
+
+05:19 let's just kind of pull these pieces
+05:21 
+
+05:21 apart and maybe I can just kind of show
+05:22 
+
+05:22 you
+05:23 
+
+05:23 um
+05:24 
+
+05:24 like what how this is getting put
+05:26 
+
+05:26 together
+05:27 
+
+05:27 so
+05:28 
+
+05:28 you will probably recognize if you have
+05:32 
+
+05:32 the fantasy asset pack that I sell a lot
+05:34 
+
+05:34 of these models and same thing if you
+05:37 
+
+05:37 have the free Tempo pack you'll
+05:38 
+
+05:38 recognize a lot of these here so like
+05:41 
+
+05:41 this piece for example in the middle
+05:42 
+
+05:42 that's just that free Temple thing I
+05:44 
+
+05:44 gave away in that other video
+05:46 
+
+05:46 if you want to find the video just I'm
+05:47 
+
+05:47 not going to link it but just search
+05:48 
+
+05:48 like Max hey Temple modeling you'll find
+05:51 
+
+05:51 it
+05:51 
+
+05:51 um but there's some other ones that I
+05:53 
+
+05:53 haven't shown in videos before that I've
+05:54 
+
+05:54 just made recently
+05:55 
+
+05:55 so like this
+05:57 
+
+05:57 it has a mirror modifier
+05:59 
+
+05:59 um you know I can take that off like a
+06:02 
+
+06:02 lot of these pieces here are just
+06:04 
+
+06:04 actually the same like it's the same
+06:05 
+
+06:05 thing where it's like one piece
+06:07 
+
+06:07 duplicated again over itself to make it
+06:09 
+
+06:09 a bigger piece so you can see these
+06:11 
+
+06:11 pillars are the same thing just like
+06:14 
+
+06:14 stretched out in different ways and put
+06:15 
+
+06:15 together in kind of different orders
+06:18 
+
+06:18 um and then just like some slats or like
+06:21 
+
+06:21 slabs or whatever kind of just put in
+06:22 
+
+06:22 between them but it's like the same
+06:25 
+
+06:25 pillar duplicated a bunch of times over
+06:27 
+
+06:27 itself and then that creates an even
+06:29 
+
+06:29 bigger pillar and then that pillar gets
+06:30 
+
+06:30 duplicated over itself a bunch more
+06:32 
+
+06:32 times and that creates an even bigger
+06:34 
+
+06:34 pillar I guess a tower in this case but
+06:37 
+
+06:38 um yeah like
+06:39 
+
+06:39 let's actually just uh explode this like
+06:42 
+
+06:42 if I hit uh effect only locations and
+06:45 
+
+06:45 then scale this up
+06:47 
+
+06:47 um we can see
+06:49 
+
+06:49 like this this will just kind of break
+06:50 
+
+06:50 it apart and just move everything away
+06:52 
+
+06:52 from itself
+06:53 
+
+06:53 ignore this viewport over here just
+06:55 
+
+06:55 focus on this one
+06:56 
+
+06:56 but you can see here it's all not very
+06:59 
+
+06:59 complex models like uh there's kind of
+07:02 
+
+07:02 it's pretty jankly thrown together like
+07:04 
+
+07:04 if you've seen my that Temple modeling
+07:06 
+
+07:06 video I made this one in that other
+07:08 
+
+07:08 video and I just slapped that right into
+07:10 
+
+07:10 the middle of this thing and there you
+07:12 
+
+07:12 go it's stacked on top of itself and
+07:14 
+
+07:14 then there's other pieces from this is
+07:16 
+
+07:16 the um this is a temple pack that I got
+07:19 
+
+07:19 from our station I can't remember where
+07:20 
+
+07:20 but
+07:21 
+
+07:21 um if you go on our station and just
+07:22 
+
+07:23 search Temple acid pack you'll probably
+07:25 
+
+07:25 find it it's not the highest quality but
+07:27 
+
+07:27 it works for things that are far away in
+07:29 
+
+07:29 this case so you can see here like if I
+07:31 
+
+07:31 just isolate one of these pieces
+07:33 
+
+07:33 this is like um one model that I just
+07:36 
+
+07:36 put in a square like four times so it
+07:39 
+
+07:39 would have been something like this I
+07:40 
+
+07:40 think it might have been this exact one
+07:41 
+
+07:41 actually and then you know
+07:44 
+
+07:44 just drop that in from the asset Library
+07:45 
+
+07:45 if it and for some reason it just made
+07:48 
+
+07:48 sense for me to just do this you know
+07:51 
+
+07:51 there you go that's how that was made
+07:55 
+
+07:55 um
+07:55 
+
+07:56 let's bring this this side collection
+07:57 
+
+07:57 back
+07:58 
+
+07:58 so you can see it's just literally
+07:60 
+
+07:60 stacking different models that seem like
+08:01 
+
+08:02 they would go together on top of each
+08:03 
+
+08:03 other over and over again and then
+08:05 
+
+08:05 eventually you end up with a bigger
+08:08 
+
+08:08 cluster of just models that seem like
+08:11 
+
+08:11 they fit together in a cohesive order
+08:13 
+
+08:13 and when I say cohesive order I mean
+08:15 
+
+08:15 like I don't know they all are vertical
+08:17 
+
+08:17 like I knew I knew making this that I
+08:19 
+
+08:19 wanted it to be a tower so that's what I
+08:21 
+
+08:21 did I just took the pieces of things you
+08:24 
+
+08:24 might find in a tower and put them
+08:26 
+
+08:26 together into a vertical shape and then
+08:28 
+
+08:28 I ended up with something that looked
+08:30 
+
+08:30 kind of cool
+08:31 
+
+08:32 and so
+08:33 
+
+08:33 hopefully this shows you that it's not
+08:36 
+
+08:36 complicated when you break it down to
+08:38 
+
+08:38 its individual pieces so
+08:40 
+
+08:40 for for some of you still this might
+08:42 
+
+08:42 seem like very complicated because you
+08:43 
+
+08:43 don't know how to get models or how to
+08:45 
+
+08:45 make models or you don't know like how
+08:47 
+
+08:47 to get shapes like this that is um you
+08:50 
+
+08:50 know you can just buy asset packs but I
+08:52 
+
+08:52 would recommend I would say it's it's an
+08:55 
+
+08:55 extremely important skill to at least
+08:56 
+
+08:56 know basic modeling because there's
+08:59 
+
+08:59 things like this in here that are very
+09:01 
+
+09:01 simple to make takes a couple minutes
+09:03 
+
+09:03 and I've used this in the last like
+09:05 
+
+09:05 three renders I've done it saved me so
+09:07 
+
+09:07 much time and it's just like a cool
+09:08 
+
+09:08 piece that I just made
+09:10 
+
+09:10 so if you want to learn I don't know
+09:13 
+
+09:13 modeling there's tons of videos that
+09:14 
+
+09:14 just teach you exactly how to do it if
+09:16 
+
+09:16 you want to see how I do it
+09:18 
+
+09:18 um I wouldn't I don't know if my way is
+09:20 
+
+09:20 like the exact like proper way to do it
+09:22 
+
+09:22 but if you want to see exactly how I
+09:24 
+
+09:24 model I do have a video the one I was
+09:25 
+
+09:25 talking about just search like Max a
+09:27 
+
+09:27 modeling Temple you'll find it
+09:29 
+
+09:29 um and that one comes with a free asset
+09:31 
+
+09:31 pack if you want to just download these
+09:32 
+
+09:32 some of these
+09:34 
+
+09:34 but yeah like these shapes are like not
+09:37 
+
+09:37 that complicated like if I take this for
+09:39 
+
+09:39 example and I just break this down into
+09:41 
+
+09:41 its individual pieces so if I just
+09:43 
+
+09:43 separate by loose Parts in edit mode
+09:45 
+
+09:45 let's look at what's going on here it's
+09:47 
+
+09:47 you know if I take these just kind of
+09:50 
+
+09:50 take the individual loose pieces that I
+09:52 
+
+09:52 put together uh just bring it over here
+09:55 
+
+09:55 I'm actually going to delete this mirror
+09:57 
+
+09:57 because that's annoying
+09:58 
+
+09:58 and if we just look at this
+10:01 
+
+10:01 sorry
+10:02 
+
+10:02 get rid of this on all of these
+10:05 
+
+10:05 yeah delete please
+10:09 
+
+10:09 okay whatever it doesn't matter
+10:11 
+
+10:11 point is look at these pieces that make
+10:14 
+
+10:14 up that that other chunk I was showing
+10:16 
+
+10:16 you this is like a cube stretch out
+10:19 
+
+10:19 vertically there's some insets some
+10:21 
+
+10:21 extrusions a couple of bevels
+10:23 
+
+10:23 you know nothing crazy it's like this is
+10:26 
+
+10:26 basic modeling and so you know look at
+10:29 
+
+10:29 these pieces
+10:30 
+
+10:30 you know cube with like some insets and
+10:33 
+
+10:33 bevels Cube flattened with a bevel
+10:36 
+
+10:36 and when you put all of this stuff
+10:38 
+
+10:38 together all of a sudden it becomes more
+10:40 
+
+10:40 complex when you add these different you
+10:42 
+
+10:42 know simple shapes together
+10:45 
+
+10:45 so it's it's literally it's literally as
+10:47 
+
+10:47 simple as like I'll make something right
+10:49 
+
+10:49 now like if we take a cube let's say I
+10:51 
+
+10:51 want to make something similar maybe
+10:52 
+
+10:52 let's just stretch this out vertically
+10:54 
+
+10:54 maybe let's do a couple of edge loops
+10:56 
+
+10:56 and let's bevel those Edge Loops like
+10:59 
+
+10:59 this and let's do a little bit more
+11:02 
+
+11:02 and let's extrude them so just e and
+11:05 
+
+11:05 then I want to scale that Extrusion in
+11:06 
+
+11:06 so s and then we'll just shift Zed
+11:09 
+
+11:09 and uh I don't I don't need to like tell
+11:11 
+
+11:11 you every single button that I'm
+11:12 
+
+11:12 clicking because again there's so many
+11:14 
+
+11:14 tutorials on like modeling and like I
+11:16 
+
+11:16 don't want this to be a click exactly
+11:19 
+
+11:19 what buttons I'm clicking type tutorial
+11:21 
+
+11:21 but the point is like make something
+11:23 
+
+11:23 simple I will show you this one this is
+11:25 
+
+11:25 alt e for extrude bases along normals
+11:27 
+
+11:27 that's kind of a hidden one so you don't
+11:28 
+
+11:29 hear that one very often but that will
+11:30 
+
+11:30 let you just do this
+11:32 
+
+11:32 and then there you go we can just do
+11:34 
+
+11:34 that again inset alt e extrude bases
+11:37 
+
+11:37 long normals to bring that out
+11:39 
+
+11:39 um I guess you could just hit e and then
+11:40 
+
+11:40 scale it same kind of thing maybe we
+11:42 
+
+11:42 want a bevel on here so we'll just throw
+11:44 
+
+11:44 a bevel modifier or sometimes I'll just
+11:45 
+
+11:45 bevel it right on the mesh maybe we can
+11:48 
+
+11:48 change this to we change the profile to
+11:50 
+
+11:50 custom
+11:51 
+
+11:51 try that I don't know make some squiggly
+11:52 
+
+11:53 line turn up the segments there we go
+11:56 
+
+11:56 just got free detail but from that bevel
+11:58 
+
+11:58 and maybe I want like a piece on the top
+12:00 
+
+12:00 so I'll just hit uh set the origin to
+12:02 
+
+12:02 Geometry put the cursor here let's add
+12:05 
+
+12:05 another Cube and I kind of want like a
+12:07 
+
+12:07 some kind of interesting type chunk at
+12:10 
+
+12:10 the top
+12:10 
+
+12:10 so we'll just bring that down same
+12:12 
+
+12:12 technique like Edge Loops maybe bevel
+12:15 
+
+12:15 The Edge Loops extrude them in
+12:17 
+
+12:17 maybe it's bevel like these things seems
+12:20 
+
+12:20 like this could be a cool spot for like
+12:22 
+
+12:22 a really complex bevel so I'll just take
+12:24 
+
+12:24 that and for some reason it's not
+12:26 
+
+12:26 letting me select this bottom Edge very
+12:28 
+
+12:28 nicely but let's take these oops boom
+12:32 
+
+12:32 boom boom and let's control B bevel
+12:35 
+
+12:35 something like that
+12:37 
+
+12:37 increase the segments and then maybe do
+12:39 
+
+12:39 a custom bevel profile again
+12:42 
+
+12:42 there we go that's kind of cool and then
+12:44 
+
+12:44 I don't know we could just duplicate
+12:46 
+
+12:46 that again up here and then maybe have
+12:47 
+
+12:47 something else in the middle like I
+12:49 
+
+12:49 don't know we could just put uh
+12:51 
+
+12:51 something else doesn't really matter
+12:53 
+
+12:53 maybe we could just inset all these
+12:55 
+
+12:55 faces uh alt e extrude bases or normals
+12:58 
+
+12:58 bevel cool whatever
+13:00 
+
+13:00 and you can see how
+13:02 
+
+13:02 just creating basic shapes like this all
+13:04 
+
+13:04 of a sudden can lead to something a lot
+13:06 
+
+13:06 more interesting so maybe let's convert
+13:08 
+
+13:08 that to mesh join origin to Geometry
+13:11 
+
+13:11 bring it down here
+13:13 
+
+13:13 and cool doesn't have to be perfect for
+13:16 
+
+13:16 this demo
+13:17 
+
+13:17 uh mesh convert to mesh to apply all
+13:19 
+
+13:19 modifiers at once and let's just join
+13:22 
+
+13:22 that together so now we have a big
+13:23 
+
+13:23 pillar and what happens if I take this
+13:25 
+
+13:25 pillar and I make copies of it all over
+13:27 
+
+13:27 itself so let's do like duplicate this
+13:29 
+
+13:29 over here let's duplicate it over here
+13:32 
+
+13:32 cool and let's take some Cube or
+13:35 
+
+13:35 something and like do what I did in the
+13:37 
+
+13:37 last one just take like a slab or
+13:39 
+
+13:39 something like this and we could just
+13:41 
+
+13:41 take these and pull it over here and
+13:44 
+
+13:44 boom and you know something like that
+13:47 
+
+13:47 and then this can be beveled to match
+13:49 
+
+13:49 everything we've done here
+13:51 
+
+13:51 oh that's kind of cool sure and then
+13:53 
+
+13:53 maybe we can take this and like
+13:54 
+
+13:54 duplicate it again rotate 90 degrees and
+13:57 
+
+13:57 then Chuck that right there and you can
+13:59 
+
+13:59 see how after a little while of just
+14:01 
+
+14:01 doing like simple shapes all of a sudden
+14:03 
+
+14:03 you can get something pretty complex and
+14:05 
+
+14:05 you can take these pieces and you can
+14:06 
+
+14:06 like manipulate them and change them and
+14:07 
+
+14:07 like say I want a shorter version of
+14:09 
+
+14:09 this well let's take that and like
+14:10 
+
+14:10 shrink it down this way and maybe pull
+14:12 
+
+14:12 this down and like pull this down
+14:15 
+
+14:15 and then
+14:16 
+
+14:16 boom and then we can take these and
+14:19 
+
+14:19 let's say I want like a roof on here
+14:21 
+
+14:21 cool and then I can put like one more in
+14:23 
+
+14:23 the middle and whatever you know
+14:26 
+
+14:26 and it really is like that simple of
+14:28 
+
+14:28 just taking the same pieces
+14:30 
+
+14:30 moving them around duplicating them
+14:32 
+
+14:32 adding a bit of variation throwing in a
+14:34 
+
+14:34 completely different model once in a
+14:36 
+
+14:36 while just to break up the pattern and
+14:37 
+
+14:37 then before you know it
+14:39 
+
+14:39 you know you have a very very complex
+14:41 
+
+14:41 shape and it's this
+14:43 
+
+14:43 same technique of like making a thing
+14:45 
+
+14:45 that's simple
+14:46 
+
+14:46 duplicating it over itself
+14:48 
+
+14:48 you know make then you get something a
+14:50 
+
+14:50 bit more complex but it's still like a
+14:52 
+
+14:52 simple shape that you're working with
+14:53 
+
+14:53 like a simple chunk and then you can
+14:55 
+
+14:55 even do that again like you just keep
+14:56 
+
+14:56 doing that over and over and over again
+14:58 
+
+14:58 and before you know it you have
+14:60 
+
+14:60 something that's super super complex
+15:02 
+
+15:02 looking but it's just like you know
+15:04 
+
+15:04 repeated shapes in with like a bit of
+15:07 
+
+15:07 variation
+15:08 
+
+15:08 so I know that was like kind of a long
+15:10 
+
+15:10 explanation of like one model but I hope
+15:13 
+
+15:13 that shows you that like this stuff is
+15:15 
+
+15:15 pretty easy Once you can just do some
+15:16 
+
+15:16 basic modeling as long as you know how
+15:19 
+
+15:19 to just you know repeat things in a way
+15:21 
+
+15:21 that's still pleasing to look at and
+15:22 
+
+15:22 that's really what it's about is you
+15:24 
+
+15:24 know being able to repeat the same shape
+15:25 
+
+15:25 without just
+15:27 
+
+15:27 um without it looking like it's just
+15:28 
+
+15:28 duplicated 100 times
+15:30 
+
+15:30 and
+15:32 
+
+15:32 I guess that just comes with practice
+15:35 
+
+15:35 um yeah this is actually kind of cool I
+15:37 
+
+15:37 might save that for later just move this
+15:39 
+
+15:39 to save for later but if we look around
+15:42 
+
+15:42 here all of these pieces except for the
+15:45 
+
+15:45 ones from that uh fantasy or that Temple
+15:47 
+
+15:47 pack that I just bought all the pieces
+15:49 
+
+15:49 that I made here are just simple shapes
+15:51 
+
+15:51 like repeated and duplicated over
+15:54 
+
+15:54 themselves and it's just insets and
+15:55 
+
+15:55 extrusions and bevels and
+15:58 
+
+15:58 just
+15:59 
+
+15:59 quite basic shapes
+16:01 
+
+16:01 put together in a way that looks like a
+16:04 
+
+16:04 temple piece
+16:06 
+
+16:06 and then that like once you have a
+16:08 
+
+16:08 bigger piece you take that repeat it
+16:09 
+
+16:09 over itself and put it together with
+16:10 
+
+16:10 other pieces in a way that seems like it
+16:12 
+
+16:12 would make sense and then eventually it
+16:14 
+
+16:14 does make sense and eventually you have
+16:15 
+
+16:15 something that's a a crazy massive
+16:17 
+
+16:17 structure but you know when you look at
+16:20 
+
+16:20 like again those individual pieces are
+16:23 
+
+16:23 not complex at all even the things like
+16:26 
+
+16:26 this where it's like wow that looks
+16:28 
+
+16:28 um you know some of you guys might see
+16:29 
+
+16:29 this and go like how the hell I'm
+16:30 
+
+16:30 supposed to make that
+16:32 
+
+16:32 you know just when you when you're
+16:34 
+
+16:35 trying to make something look at
+16:36 
+
+16:36 references and look at like the basic
+16:38 
+
+16:38 individual building blocks that you
+16:40 
+
+16:40 could use that are simple shapes that
+16:42 
+
+16:42 make up that more complex shape that
+16:43 
+
+16:43 you're looking at
+16:44 
+
+16:44 so for things like circles
+16:46 
+
+16:46 just you know start with the most basic
+16:48 
+
+16:48 things like add cubes add circles add
+16:52 
+
+16:52 you know slowly more detail inset
+16:55 
+
+16:55 extrude repeat that
+16:57 
+
+16:57 duplicate parts and then before you know
+16:59 
+
+16:59 it you'll have something that's much
+17:00 
+
+17:00 more complex than you thought you would
+17:01 
+
+17:02 have been able to make
+17:04 
+
+17:04 Okay so
+17:06 
+
+17:06 hopefully that makes more sense now that
+17:08 
+
+17:08 you know this this thing here is just a
+17:12 
+
+17:12 bunch of pieces slapped together that
+17:13 
+
+17:13 are all pretty simple on their own
+17:16 
+
+17:16 so
+17:18 
+
+17:18 there you go
+17:20 
+
+17:20 um and I kind of just went like level by
+17:22 
+
+17:22 level I might have started in the middle
+17:23 
+
+17:23 and then like duplicated some of it
+17:25 
+
+17:25 downwards duplicated some upwards
+17:27 
+
+17:27 brought in new models here and there
+17:28 
+
+17:28 just whatever makes
+17:29 
+
+17:29 sense in the moment I don't know just
+17:32 
+
+17:32 um it's you know it's pretty messy and
+17:34 
+
+17:34 janky when you look at it like this but
+17:36 
+
+17:36 from you know I knew this was going to
+17:38 
+
+17:38 be far away so I from far away I made it
+17:41 
+
+17:41 look totally fine
+17:43 
+
+17:43 okay
+17:45 
+
+17:45 once that was done let's check out
+17:47 
+
+17:47 material preview
+17:50 
+
+17:50 um I took a basic texture from quixel
+17:52 
+
+17:52 Mega scans just some 4K Rock texture and
+17:55 
+
+17:55 um some textures that came with these
+17:57 
+
+17:57 other models from the pack that are from
+17:59 
+
+17:59 uh ambient CG
+18:01 
+
+18:01 and I just like for all these ones this
+18:05 
+
+18:05 looks like trash and material preview it
+18:06 
+
+18:06 looks like garbage but in rendered view
+18:09 
+
+18:09 it actually looks sick so
+18:11 
+
+18:11 uh I think that just comes down to
+18:13 
+
+18:13 lighting and like how you present it but
+18:15 
+
+18:15 I'll talk about that later but um yeah
+18:18 
+
+18:18 like this is not like crazy texturing
+18:20 
+
+18:20 it's literally a 4K texture from qixel
+18:24 
+
+18:24 just put directly on the model and then
+18:26 
+
+18:26 cue project like that's it and then
+18:29 
+
+18:29 maybe scale it around a bit in the UV
+18:30 
+
+18:30 editor like if we look here
+18:32 
+
+18:32 there's there's the UV map like it's
+18:34 
+
+18:34 just a cube projection I just hit U and
+18:36 
+
+18:36 then C it's like that
+18:38 
+
+18:38 um and that's on all these and it looks
+18:40 
+
+18:40 good
+18:41 
+
+18:41 you know it doesn't look good here but
+18:42 
+
+18:42 in the render it looks good and that's
+18:44 
+
+18:44 all you need sometimes
+18:46 
+
+18:46 um depends what you're making obviously
+18:47 
+
+18:47 but most of the time like 90 of the time
+18:50 
+
+18:50 if not more I just you'll be unwrapped
+18:52 
+
+18:52 that way and I just don't even worry
+18:54 
+
+18:54 about it because it looks good most of
+18:55 
+
+18:55 the time
+18:56 
+
+18:56 so same thing for here this is just like
+18:58 
+
+18:58 a texture from I think it was
+18:60 
+
+18:60 textures.com or something or maybe a CG
+19:02 
+
+19:02 I'm not sure but same thing Cube reject
+19:04 
+
+19:04 move it around until it looks good on
+19:05 
+
+19:05 the model like on the on the UB editor
+19:07 
+
+19:07 uh and then there you go you just save
+19:10 
+
+19:10 like anytime you make one of those
+19:11 
+
+19:11 pieces save it for later and then when
+19:14 
+
+19:14 you want to just make something really
+19:15 
+
+19:15 quick you just go in into your big pile
+19:17 
+
+19:17 of pieces you made grab anything throw
+19:20 
+
+19:20 it together with a bunch of other pieces
+19:21 
+
+19:21 or make something new really quick and
+19:24 
+
+19:24 then there you go you can make really
+19:25 
+
+19:26 complex intricate crazy structures out
+19:28 
+
+19:28 of like you know chunks of models that
+19:31 
+
+19:31 you already have or made very easily
+19:36 
+
+19:36 um yeah
+19:39 
+
+19:39 I I like I don't think I did anything to
+19:41 
+
+19:41 these textures there's a little bit of
+19:43 
+
+19:43 nonsense is going on up here I don't
+19:44 
+
+19:44 even know what this is but like
+19:46 
+
+19:46 you know this is not that different from
+19:48 
+
+19:48 the base color I think like if we look
+19:50 
+
+19:50 at this yeah maybe it's uh what is it
+19:52 
+
+19:53 ambient occlusion yeah so it's like
+19:55 
+
+19:55 making the corners and edges a little
+19:57 
+
+19:57 bit like softer looking not a big deal
+19:59 
+
+19:59 you can figure out a way to do that it's
+20:00 
+
+20:00 just ambient occlusion into like getting
+20:03 
+
+20:03 multiplied into the the colors amount
+20:05 
+
+20:05 but it's like honestly barely making a
+20:06 
+
+20:06 difference
+20:07 
+
+20:07 um
+20:08 
+
+20:08 but yeah like it's
+20:11 
+
+20:11 there's nothing that I've done here
+20:13 
+
+20:13 that's like
+20:14 
+
+20:14 complicated
+20:16 
+
+20:16 um hopefully you can see it obviously if
+20:18 
+
+20:18 you're very new to blender and you've
+20:19 
+
+20:19 never seen this before yeah it's going
+20:21 
+
+20:21 to be complicated but
+20:22 
+
+20:22 um if you're someone who's just been
+20:23 
+
+20:23 using this offer like you'll you'll
+20:25 
+
+20:25 understand everything I'm talking about
+20:26 
+
+20:26 here it's nothing like there's nothing
+20:28 
+
+20:28 that advanced it's like
+20:30 
+
+20:30 basic modeling basic texture
+20:33 
+
+20:33 and then combine those things together
+20:35 
+
+20:35 and then yeah
+20:37 
+
+20:37 okay so let's look at how I used this
+20:40 
+
+20:40 massive piece here to build the rest of
+20:41 
+
+20:41 the scene because this still looks a bit
+20:43 
+
+20:43 crazy here so let's talk about that
+20:45 
+
+20:45 um I already kind of showed you that but
+20:47 
+
+20:47 let's just look at that even more
+20:49 
+
+20:49 basically what I did with all you saw
+20:51 
+
+20:51 all those loose pieces that I was using
+20:53 
+
+20:53 earlier in that test collection
+20:55 
+
+20:56 um I just
+20:57 
+
+20:57 I don't know where that went
+20:59 
+
+20:59 this one
+21:01 
+
+21:01 yeah if I select this
+21:03 
+
+21:03 so you see how I'm just using all these
+21:05 
+
+21:05 loose individual different chunks of
+21:07 
+
+21:07 models
+21:08 
+
+21:08 what I did to construct the rest of the
+21:10 
+
+21:10 scene from this point was once I was
+21:12 
+
+21:12 happy with the tower and just having
+21:13 
+
+21:13 them all loose
+21:14 
+
+21:14 I actually just moved them all to a
+21:16 
+
+21:16 collection so the way you do that is you
+21:18 
+
+21:18 select
+21:19 
+
+21:19 um I want I won't do it in this but I
+21:20 
+
+21:20 will add like a new thing here let's
+21:22 
+
+21:22 move this to a scene collection so the
+21:24 
+
+21:24 way collections work if you don't know
+21:25 
+
+21:25 I'll just demo it really quick if you
+21:28 
+
+21:28 have any object or any bunch of objects
+21:30 
+
+21:30 so we'll just mix in them really quick
+21:31 
+
+21:32 say this is what I'm working on and we
+21:34 
+
+21:34 have some variation here and there and
+21:36 
+
+21:36 there's some different models and
+21:37 
+
+21:37 whatever
+21:38 
+
+21:38 if I select all these press n m for move
+21:42 
+
+21:42 to collection
+21:43 
+
+21:43 hit uh new collection and we'll just
+21:45 
+
+21:45 call it
+21:46 
+
+21:46 demo collection
+21:49 
+
+21:49 and I hit OK
+21:51 
+
+21:51 nothing's changed in my viewport but
+21:54 
+
+21:54 what's happened is you can see an
+21:55 
+
+21:55 outliner here
+21:56 
+
+21:56 those different objects that I just
+21:58 
+
+21:58 added are now all in this collection and
+22:01 
+
+22:01 what what is nice about that is you can
+22:03 
+
+22:03 add that entire cluster of objects as a
+22:07 
+
+22:07 new object sort of or as a collection
+22:09 
+
+22:09 instance what that means is this if I
+22:10 
+
+22:10 hit shift a and I go to here collection
+22:12 
+
+22:12 instance and what do they call it demo
+22:14 
+
+22:14 collection
+22:16 
+
+22:16 uh and I just thought the origin is like
+22:19 
+
+22:19 way off here because it's like uh I've
+22:22 
+
+22:22 made it like way far away from the world
+22:23 
+
+22:23 origin but I can actually just hit
+22:24 
+
+22:24 origin to Geometry this is my quick
+22:27 
+
+22:27 favorites when I press q but if you
+22:28 
+
+22:28 don't see that just hit F3 search for
+22:30 
+
+22:30 origin to Geometry you'll find it
+22:32 
+
+22:32 um so yeah origin to Geometry
+22:36 
+
+22:36 and then there you go the it'll just
+22:37 
+
+22:37 move that back to the center so there we
+22:40 
+
+22:40 go now you can see how those like in
+22:43 
+
+22:43 before it's moved to think like when
+22:45 
+
+22:45 it's
+22:46 
+
+22:46 the actual objects they're all like
+22:48 
+
+22:48 loose and separate but then when you add
+22:49 
+
+22:49 it as a collection instance it all kind
+22:52 
+
+22:52 of treats all those different pieces as
+22:54 
+
+22:54 one of one solid object
+22:56 
+
+22:56 and so if I try and hit tab let's go to
+22:58 
+
+22:58 edit mode to go to edit mode you can see
+23:01 
+
+23:01 it it's not doing anything it's just an
+23:03 
+
+23:03 instance version of it it's not the
+23:04 
+
+23:04 actual real thing
+23:06 
+
+23:06 so what happens is anytime I move any
+23:07 
+
+23:07 one of those original objects in that
+23:09 
+
+23:09 collection so remember this is the
+23:10 
+
+23:10 original objects it'll move it around in
+23:13 
+
+23:13 the instance collection as well so
+23:15 
+
+23:15 that's really nice if you you know you
+23:17 
+
+23:17 have a bunch of things that are rotated
+23:18 
+
+23:18 all differently if I turn this off
+23:21 
+
+23:21 um and you know you have a bunch of them
+23:23 
+
+23:23 and there's stuff everywhere
+23:25 
+
+23:25 when I move one of these pieces or I
+23:26 
+
+23:26 manipulate one of these shapes it'll
+23:28 
+
+23:28 update that
+23:29 
+
+23:29 straight away in the collection
+23:31 
+
+23:31 instances
+23:33 
+
+23:33 so it's annoying to work like this
+23:34 
+
+23:35 sometimes if you don't set it up right
+23:36 
+
+23:36 because it means if you have one that
+23:38 
+
+23:38 you're working with and then you try to
+23:39 
+
+23:39 move something it might like mess up
+23:40 
+
+23:40 everything because if you want to just
+23:41 
+
+23:41 move it a bit to the left it moves
+23:42 
+
+23:42 everything so what I do is I just move
+23:44 
+
+23:44 it to a collection disable the
+23:46 
+
+23:46 collection like you uncheck it and then
+23:48 
+
+23:48 you just work with these instances and
+23:50 
+
+23:50 then anytime you want to edit it you
+23:51 
+
+23:51 just bring that collection back right
+23:53 
+
+23:53 click press s to select all the objects
+23:55 
+
+23:55 in that collection
+23:56 
+
+23:56 and then just isolate it with backslash
+23:59 
+
+23:59 to uh go to local View
+24:02 
+
+24:02 that's the backslash next to the
+24:04 
+
+24:04 question mark or sorry the uh the same
+24:06 
+
+24:06 key as a question mark but next to the
+24:08 
+
+24:08 shift key
+24:09 
+
+24:09 to isolate temporarily
+24:11 
+
+24:11 and then there you go you just
+24:12 
+
+24:12 manipulate this however you want change
+24:14 
+
+24:14 it and then go back to your instances of
+24:16 
+
+24:16 that collection wherever it was uh
+24:20 
+
+24:20 where yeah where where do they go yeah
+24:23 
+
+24:23 I'm messing on my scene but whatever so
+24:25 
+
+24:25 anyways the point is this is just what I
+24:28 
+
+24:28 showed you there that demo is just this
+24:30 
+
+24:30 so you can see
+24:32 
+
+24:32 if I try to go to edit mode I can't do
+24:34 
+
+24:34 it because this is a collection instance
+24:35 
+
+24:35 it'll render it much faster I think if
+24:37 
+
+24:37 you have
+24:38 
+
+24:38 um the same object instanced versus
+24:40 
+
+24:40 duplicated so if I hit shift d a bunch
+24:43 
+
+24:43 of times it would be a lot laggier than
+24:44 
+
+24:44 if I put it to a collection instance and
+24:46 
+
+24:47 then instance like added a instance of
+24:49 
+
+24:49 that collection and I'm saying it
+24:50 
+
+24:50 instance a lot but if I add a collection
+24:52 
+
+24:52 instance of that it'll be much faster
+24:54 
+
+24:54 than pressing shift d
+24:56 
+
+24:56 um or even OD I think
+24:59 
+
+24:59 so anyways once I once I made that one
+25:02 
+
+25:02 tower out of those smaller pieces I took
+25:04 
+
+25:04 that
+25:06 
+
+25:06 um let's just find this here
+25:08 
+
+25:08 I took that
+25:09 
+
+25:09 that chunk
+25:11 
+
+25:11 pit like shift a collection instance
+25:13 
+
+25:13 Tower
+25:15 
+
+25:15 uh and there you go you get one of those
+25:16 
+
+25:16 straight away
+25:18 
+
+25:18 and so from there it's as simple as
+25:21 
+
+25:21 taking that and spamming it around
+25:24 
+
+25:24 a bunch of times until it looks cool
+25:27 
+
+25:27 so that's exactly what I did here and
+25:28 
+
+25:29 you can see like if I wanted a taller
+25:30 
+
+25:30 one I would just take it and just
+25:31 
+
+25:32 duplicate it over itself even like this
+25:34 
+
+25:34 is
+25:35 
+
+25:35 you know that's not like good don't like
+25:38 
+
+25:38 you can't always get away with that
+25:39 
+
+25:39 depending on what you're doing but for
+25:42 
+
+25:42 just some render yeah it's totally fine
+25:44 
+
+25:44 to do that
+25:45 
+
+25:45 um it looks cool so
+25:49 
+
+25:49 that's that's literally all I did like
+25:51 
+
+25:51 same model duplicated 18 times
+25:54 
+
+25:54 with like some variation here and there
+25:56 
+
+25:56 like I showed you before there's that
+25:57 
+
+25:57 main tower and then if I want variation
+25:60 
+
+25:60 Chuck another one of those models
+26:01 
+
+26:01 straight on the top and just it looks
+26:04 
+
+26:04 you know kind of different
+26:06 
+
+26:06 and so what's going on here is
+26:08 
+
+26:08 like it's just that
+26:10 
+
+26:10 a bunch of times and then to fill in the
+26:12 
+
+26:12 gaps and fill in uh to break up the
+26:15 
+
+26:15 repetition and make it not so obvious
+26:17 
+
+26:17 that it's just repeating so many times
+26:19 
+
+26:19 all you do is you just take some other
+26:21 
+
+26:21 models that fit in there or even in this
+26:23 
+
+26:23 case the same model but just Orient it
+26:26 
+
+26:26 differently to add Bridges
+26:27 
+
+26:27 um and then there you go like I have
+26:29 
+
+26:29 this thing just sticking sideways looks
+26:31 
+
+26:31 like some kind of walkway honestly
+26:33 
+
+26:33 that's pretty lazy I should have like
+26:34 
+
+26:34 done a different piece at least instead
+26:36 
+
+26:36 of the same exact model just rotated
+26:37 
+
+26:37 sideways but whatever look fine
+26:41 
+
+26:41 um but yeah like adding in separate
+26:44 
+
+26:44 objects that are not part of those
+26:45 
+
+26:45 collection instances to kind of bridge
+26:47 
+
+26:47 the gaps literally in this case or just
+26:49 
+
+26:49 fill in
+26:50 
+
+26:50 spaces that feel like they need
+26:52 
+
+26:52 something different that's a really
+26:54 
+
+26:54 really easy efficient and good looking
+26:56 
+
+26:56 way to do that is you just take new
+26:58 
+
+26:58 models
+26:59 
+
+26:59 and just put them and kind of connect
+27:02 
+
+27:02 pieces differently
+27:04 
+
+27:04 um and make it just makes everything
+27:05 
+
+27:05 feel less duplicated and more like it's
+27:09 
+
+27:09 like fitting into the same place and
+27:11 
+
+27:11 more like cohesive
+27:14 
+
+27:14 um I hope I'm explaining that that right
+27:16 
+
+27:16 but yeah
+27:18 
+
+27:18 so that's yeah that's kind of it and
+27:22 
+
+27:22 then like same thing like here this was
+27:24 
+
+27:24 not part of the collection instance I
+27:25 
+
+27:25 just put a bigger one of these down here
+27:27 
+
+27:27 because it looked cool or you know
+27:29 
+
+27:29 there's a in the foreground especially
+27:31 
+
+27:31 like
+27:32 
+
+27:32 this kind of like Bland and boring here
+27:34 
+
+27:34 so to add detail to the foreground I
+27:36 
+
+27:36 just put a model of some stairs and pots
+27:38 
+
+27:38 and a chest and all of a sudden now
+27:40 
+
+27:41 there's like up close here there's all
+27:43 
+
+27:43 this detail in it you can kind of It
+27:45 
+
+27:45 kind of puts into your brain that that
+27:47 
+
+27:47 level of detail is everywhere even
+27:49 
+
+27:49 though it's not
+27:51 
+
+27:51 um
+27:52 
+
+27:52 so I hope that makes sense where it's
+27:54 
+
+27:54 like we're looking at this thing that
+27:56 
+
+27:56 the thing that's like up close to the
+27:57 
+
+27:57 camera it's all super dense detailed
+28:01 
+
+28:01 um but then like
+28:03 
+
+28:03 obviously there's not this level of
+28:05 
+
+28:05 detail like stairs like this everywhere
+28:06 
+
+28:06 it's just in the spots that need it to
+28:09 
+
+28:09 make it like to give it the illusion
+28:10 
+
+28:10 that that level of detail is everywhere
+28:12 
+
+28:12 because when it's that far away you
+28:14 
+
+28:14 can't even tell what's going on
+28:16 
+
+28:16 but it's like if you have uh you know
+28:19 
+
+28:19 something very minimal up close it just
+28:21 
+
+28:21 kind of breaks the illusion
+28:23 
+
+28:23 if you have a lot of detail in the
+28:25 
+
+28:25 foreground and then like medium detail
+28:27 
+
+28:27 in the background or even little detail
+28:29 
+
+28:29 it you can kind of fake it
+28:31 
+
+28:31 um like you can kind of have the
+28:33 
+
+28:33 illusion of tons of detail if it's far
+28:35 
+
+28:35 away enough that you can't really see
+28:36 
+
+28:36 what's happening but in the foreground
+28:38 
+
+28:38 it looks like there's tons of just dense
+28:40 
+
+28:40 detail that's what's going on here I
+28:42 
+
+28:42 hope that was a clear explanation if
+28:44 
+
+28:44 it's not point is just if the foreground
+28:46 
+
+28:47 looks bad just add detail and make the
+28:49 
+
+28:49 immediate stuff that's close to the
+28:51 
+
+28:51 camera good and it will just help
+28:53 
+
+28:53 everything else
+28:55 
+
+28:55 let's talk about the lighting because
+28:58 
+
+28:58 uh this is where it gets a little I
+29:01 
+
+29:01 don't want to say complicated but like
+29:02 
+
+29:02 there's just a bit more happening
+29:05 
+
+29:05 so the main lighting that like that you
+29:08 
+
+29:08 would need to worry about is this right
+29:09 
+
+29:09 here oh sure
+29:12 
+
+29:12 definitely up the spotlight God
+29:13 
+
+29:13 damn it
+29:15 
+
+29:15 and you can't undo that uh yeah this
+29:20 
+
+29:20 trying to put that back to where it was
+29:21 
+
+29:21 so the main lighting is this stuff right
+29:25 
+
+29:25 here these four spotlights and I think
+29:27 
+
+29:27 there's probably even one
+29:29 
+
+29:29 Spotlight that's the main one which
+29:30 
+
+29:30 would be like one or two these ones I
+29:32 
+
+29:32 think yeah the rest are kind of not
+29:34 
+
+29:34 really doing much
+29:36 
+
+29:36 so let's look at what's going on here
+29:38 
+
+29:38 part of the reason this works so well is
+29:40 
+
+29:40 because the lighting is not just super
+29:43 
+
+29:43 bright and lighting up everything all at
+29:45 
+
+29:45 once so I intentionally hid a lot of
+29:49 
+
+29:49 this stuff in darkness because it means
+29:51 
+
+29:51 that the less stuff you can see the less
+29:54 
+
+29:54 stuff you have to worry about making
+29:55 
+
+29:55 look good or repeating or basically the
+29:59 
+
+29:59 less light there is the less problems
+30:01 
+
+30:01 you're going to run into
+30:02 
+
+30:02 um generally I mean it's not always true
+30:04 
+
+30:04 sometimes that can be a problem itself
+30:05 
+
+30:05 just if you know if everything's too
+30:07 
+
+30:07 dark but uh just breaking up the pattern
+30:11 
+
+30:11 of what's being illuminated that's a
+30:14 
+
+30:14 really easy way to just make things look
+30:16 
+
+30:16 better if it's if there's a lot of
+30:17 
+
+30:17 repeating shapes or things just don't
+30:19 
+
+30:19 look that good on their own just having
+30:21 
+
+30:21 lighting that's interesting and like
+30:24 
+
+30:24 some parts are light and some parts are
+30:25 
+
+30:25 really dark that's uh that's a method
+30:28 
+
+30:28 you can use that looks cool but also can
+30:31 
+
+30:31 hide some imperfections sometimes
+30:34 
+
+30:34 so let's look at these lights here I
+30:36 
+
+30:36 think one of the last videos I did was
+30:37 
+
+30:38 just all about using spots spotlights
+30:39 
+
+30:39 like this in those videos I think I just
+30:42 
+
+30:42 used one Spotlight in all the renders
+30:43 
+
+30:43 but in this case
+30:45 
+
+30:45 I did that set it up with one and then
+30:47 
+
+30:47 it looked better to just duplicate it a
+30:49 
+
+30:49 couple more times so I I ran with that
+30:51 
+
+30:51 but it's like the way this works is you
+30:53 
+
+30:53 set up one make it look good and then
+30:55 
+
+30:55 try duplicating it if it looks better
+30:57 
+
+30:57 keep it there if it looks worse then you
+30:60 
+
+30:60 know keep trying until it looks better
+31:01 
+
+31:02 the key here is they're all pointing in
+31:03 
+
+31:03 the exact same direction so it looks
+31:05 
+
+31:05 kind of like sunlight because if you
+31:08 
+
+31:08 think about like the rays of sunlight
+31:10 
+
+31:10 those would all be coming from the same
+31:12 
+
+31:12 Source the Sun so they're all moving
+31:15 
+
+31:15 like all of those light rays would be
+31:17 
+
+31:17 moving parallel to each other all in the
+31:19 
+
+31:19 exact same direction
+31:20 
+
+31:20 so if you're gonna fake uh sunlight with
+31:22 
+
+31:22 spotlights like this just make sure
+31:23 
+
+31:23 they're all pointing the same way
+31:26 
+
+31:26 unless for some rare reason that looks a
+31:29 
+
+31:29 lot better to have like one pointing
+31:30 
+
+31:30 down but just be careful with that
+31:32 
+
+31:32 because this is like not how light works
+31:36 
+
+31:36 um if you're a lot of the times it helps
+31:39 
+
+31:39 a lot to think about the the light
+31:42 
+
+31:42 source you're creating like think about
+31:43 
+
+31:43 what that would be in real life so what
+31:46 
+
+31:46 I mean is like in this case what does
+31:48 
+
+31:48 this light in here look like it's coming
+31:50 
+
+31:50 from to me it kind of looks like it's
+31:52 
+
+31:52 coming from looks like we're in a cave
+31:55 
+
+31:55 and there's some sunlight coming through
+31:56 
+
+31:56 like that's where it would be from it
+31:58 
+
+31:58 doesn't really look like somebody's
+32:00 
+
+32:00 holding a flashlight or it doesn't
+32:02 
+
+32:02 really look like some magical light it
+32:05 
+
+32:05 looks like natural kind of sunlight so
+32:07 
+
+32:07 when you have something that is starting
+32:09 
+
+32:09 to look like natural sunlight you want
+32:10 
+
+32:10 to keep it looking like that and you
+32:12 
+
+32:12 don't want to mess up what like that
+32:14 
+
+32:14 light source would be and yeah just
+32:17 
+
+32:17 if it is meant to be sunlight just keep
+32:20 
+
+32:20 it looking like sunlight is the point uh
+32:22 
+
+32:22 okay let's look at the settings in here
+32:23 
+
+32:23 two million Watts you know it's bright
+32:27 
+
+32:27 um it's going to be different depending
+32:28 
+
+32:28 on
+32:29 
+
+32:29 what your vendor looks like it's going
+32:30 
+
+32:30 to change every time
+32:32 
+
+32:32 color white radius two meters
+32:35 
+
+32:35 um just a little bit softer than like
+32:37 
+
+32:37 this you know there's not a huge
+32:39 
+
+32:39 difference in this case but
+32:41 
+
+32:41 I find that just softening up the
+32:43 
+
+32:43 Shadows by making the light source a bit
+32:44 
+
+32:44 bigger always looks pretty nice and you
+32:47 
+
+32:47 can see the difference that makes there
+32:48 
+
+32:48 if I increase this it's going to be like
+32:50 
+
+32:50 much softer Shadows
+32:52 
+
+32:52 uh yeah and then this this spot size
+32:56 
+
+32:56 right here this is like the uh like
+32:58 
+
+32:58 radius of the cone that's just uh like
+33:01 
+
+33:02 that's how we're getting this
+33:03 
+
+33:03 segmented like broken up lighting effect
+33:05 
+
+33:05 where some parts are really bright and
+33:07 
+
+33:07 some parts are really dark you'll see
+33:09 
+
+33:09 that it's not like an area light like
+33:11 
+
+33:11 this that does look kind of cool but I I
+33:14 
+
+33:14 wanted that effect of like
+33:16 
+
+33:16 different like
+33:18 
+
+33:18 um beams of sunlight coming through like
+33:20 
+
+33:20 cracks in the cave or something
+33:22 
+
+33:22 and so that's what this is so it's not
+33:24 
+
+33:24 lighting up all of it all at once it's
+33:27 
+
+33:27 it's uh we're actually being very
+33:28 
+
+33:28 selective about what's getting lit and
+33:31 
+
+33:31 what's not
+33:33 
+
+33:33 um so obviously I wanted the main tower
+33:34 
+
+33:34 here to be the brightest part and that's
+33:37 
+
+33:37 exactly what I did here with the
+33:38 
+
+33:38 spotlight I just lined it up so that
+33:39 
+
+33:39 that was getting illuminated the most if
+33:41 
+
+33:41 I hide these ones uh you can see what
+33:43 
+
+33:43 that's doing
+33:45 
+
+33:45 yeah so these are all placed kind of
+33:48 
+
+33:48 strategically I just kind of moved them
+33:50 
+
+33:50 around until they looked good and
+33:53 
+
+33:53 yeah so they're just lighting up what I
+33:55 
+
+33:55 want you to see and kind of hiding what
+33:57 
+
+33:57 I don't want you to see
+33:58 
+
+33:58 and then volumetrics are helping a lot
+34:00 
+
+34:00 with the sense of scale here so the if I
+34:04 
+
+34:04 hide this
+34:05 
+
+34:05 um yeah that makes a big difference
+34:07 
+
+34:07 just me like it seems like this
+34:11 
+
+34:11 volumetrics are always going to look
+34:13 
+
+34:13 good
+34:14 
+
+34:14 um yeah just basic settings just default
+34:16 
+
+34:16 color density at 0.02 again things like
+34:20 
+
+34:20 this are going to change every single
+34:21 
+
+34:21 Runner you do so don't copy the exact
+34:23 
+
+34:23 number but just
+34:25 
+
+34:25 um keep it like the rough range in mind
+34:27 
+
+34:27 like point zero zero whatever and
+34:29 
+
+34:29 anisotropy turned up pretty high at 0.8
+34:31 
+
+34:31 whatever
+34:33 
+
+34:33 like um sometimes it looks good to have
+34:35 
+
+34:35 it down sometimes it looks good to have
+34:36 
+
+34:36 it like really cranked really high in
+34:38 
+
+34:38 this case I found this looks good so
+34:40 
+
+34:40 there you go
+34:42 
+
+34:42 and then again that's just on a big Cube
+34:43 
+
+34:43 over everything uh yeah
+34:48 
+
+34:48 let's talk about the rest of these
+34:49 
+
+34:49 lights because
+34:52 
+
+34:52 um I don't want to talk about that yeah
+34:55 
+
+34:55 it's fine so the way this uh the way I
+34:58 
+
+34:58 set up the rest of these lights like if
+34:59 
+
+34:59 I hide the main lighting let's just hide
+35:01 
+
+35:01 this for a sec
+35:03 
+
+35:03 there's still light in here from all
+35:04 
+
+35:05 these like torch like uh torch type
+35:07 
+
+35:07 lights kind of looks like so that gives
+35:10 
+
+35:10 it a lot of like life and uh just makes
+35:12 
+
+35:12 everything feel a bit more alive
+35:14 
+
+35:14 what that is is
+35:18 
+
+35:18 um
+35:19 
+
+35:19 well that's okay so let's go to that
+35:21 
+
+35:21 collection that uh Tower collection
+35:24 
+
+35:24 isolate this
+35:25 
+
+35:25 so remember how I instanced this
+35:27 
+
+35:27 collection all over the place what I
+35:29 
+
+35:29 actually did was I put lights inside
+35:32 
+
+35:32 that collection instance so just regular
+35:34 
+
+35:34 Point lights and just kind of place them
+35:35 
+
+35:35 around in little pockets that seemed
+35:37 
+
+35:37 like they'd be cool
+35:39 
+
+35:39 and then in all of those other instances
+35:41 
+
+35:41 around the scene those lights are now
+35:44 
+
+35:44 going to get put naturally they're
+35:45 
+
+35:45 automatically going to get placed into
+35:47 
+
+35:47 those collection instances and they're
+35:48 
+
+35:48 automatically going to start lighting up
+35:50 
+
+35:50 places
+35:51 
+
+35:51 um like all the all the interior cracks
+35:53 
+
+35:53 and stuff so
+35:54 
+
+35:54 all I did was no real strategy
+35:57 
+
+35:57 um just throw in a point night here's
+35:59 
+
+35:59 the settings like the radius doesn't
+36:01 
+
+36:01 really matter the power doesn't really
+36:02 
+
+36:02 matter it's just like
+36:03 
+
+36:03 however bright it looks here like I was
+36:06 
+
+36:06 aiming for that level of brightness not
+36:08 
+
+36:08 necessarily a number on the power and
+36:11 
+
+36:11 that's just you know I just placed it
+36:14 
+
+36:14 into like little Chambers and little
+36:16 
+
+36:16 rooms and little just pieces of this
+36:19 
+
+36:19 model that were had some empty space
+36:22 
+
+36:22 and then that's kind of just creating
+36:23 
+
+36:23 this effect of like it looks like
+36:25 
+
+36:25 there's illuminated rooms with like
+36:28 
+
+36:28 torches in them or something
+36:31 
+
+36:31 um and then there's a bunch of these all
+36:33 
+
+36:33 over here if I kind of go to x-ray mode
+36:36 
+
+36:36 um it's kind of hard to see but if I
+36:38 
+
+36:38 select let's see if I can yeah here
+36:40 
+
+36:40 uh so this is all the lights inside of
+36:43 
+
+36:43 this collection
+36:44 
+
+36:44 so what's nice about this model is
+36:46 
+
+36:46 there's a lot of empty spaces naturally
+36:48 
+
+36:48 because there's lots of like pillars and
+36:51 
+
+36:51 uh like Hollow shapes
+36:53 
+
+36:53 so it's really easy to just find places
+36:55 
+
+36:55 to put these lights in
+36:57 
+
+36:57 um yeah you can see like
+36:59 
+
+36:59 just again no strategy just like put
+37:02 
+
+37:02 them in places that seem like a room or
+37:04 
+
+37:04 a chamber and then it illuminates light
+37:06 
+
+37:06 from there and that's what I did and
+37:08 
+
+37:08 again once it's in that collection
+37:09 
+
+37:09 instance
+37:11 
+
+37:11 um it'll be updated in real time with
+37:13 
+
+37:13 those other collection instances
+37:15 
+
+37:15 so I actually did that after I placed
+37:17 
+
+37:17 all these around and then it got updated
+37:19 
+
+37:19 immediately to the other instances of
+37:21 
+
+37:21 that collection which is very nice
+37:24 
+
+37:24 and then that what's that's what's uh
+37:26 
+
+37:26 creating this look of like natural
+37:27 
+
+37:27 Torchlight but also like sunlight coming
+37:30 
+
+37:30 into which is uh you don't see that very
+37:32 
+
+37:32 often I think but kind of cool
+37:34 
+
+37:34 I think that is everything
+37:38 
+
+37:38 yeah okay somehow just covered
+37:40 
+
+37:41 everything so I don't know like
+37:44 
+
+37:44 the point of this video is like
+37:47 
+
+37:47 even scenes that look extremely complex
+37:50 
+
+37:50 and like when you see this render at
+37:53 
+
+37:53 first you might think how the hell am I
+37:55 
+
+37:55 going to add that much detail to my
+37:56 
+
+37:56 scene
+37:57 
+
+37:57 the point of this video is to show you
+37:58 
+
+37:58 that like when you break things down to
+38:01 
+
+38:01 like smaller fundamental pieces
+38:04 
+
+38:05 this isn't that crazy it's not that hard
+38:08 
+
+38:08 um and you know it's a lot of it just
+38:10 
+
+38:10 comes down to like using good lights
+38:14 
+
+38:14 finding a good camera angle and that you
+38:17 
+
+38:17 know you just got to practice those
+38:18 
+
+38:18 things and you'll get better at
+38:20 
+
+38:20 presenting
+38:21 
+
+38:21 your vendors
+38:23 
+
+38:23 uh I guess here's the camera settings
+38:24 
+
+38:24 basic perspective 24 millimeters it's up
+38:28 
+
+38:28 here looking down this way I just
+38:29 
+
+38:29 thought that looked good
+38:30 
+
+38:30 so there you go it's kind of like
+38:33 
+
+38:33 anytime I'm using the camera and blender
+38:35 
+
+38:35 I like to imagine if I was walking
+38:37 
+
+38:37 around this place where would I be
+38:38 
+
+38:38 standing to take this picture
+38:41 
+
+38:41 so I kind of Imagine This is like some
+38:42 
+
+38:42 massive
+38:43 
+
+38:43 well or like Cavern or something that we
+38:45 
+
+38:45 would be entering from the top so that's
+38:48 
+
+38:48 why I put the camera up here looking
+38:49 
+
+38:50 downwards like if you discover this
+38:52 
+
+38:52 massive hit for the first time
+38:54 
+
+38:54 and you just looked over the edge and
+38:55 
+
+38:55 just took a picture that's the feeling
+38:58 
+
+38:58 that I wanted to get for this render so
+38:60 
+
+38:60 that's where I started with the camera
+39:01 
+
+39:01 and then I just kind of you know moved
+39:04 
+
+39:04 it around refined it just you know it's
+39:06 
+
+39:06 not that hard you just rotate it around
+39:08 
+
+39:08 and move the position and see what looks
+39:10 
+
+39:10 better do a couple of test renders and
+39:12 
+
+39:12 see what you like about one and what you
+39:14 
+
+39:14 don't like about the other one and then
+39:15 
+
+39:15 refine the camera angle from there uh
+39:17 
+
+39:17 yeah depth of field is disabled there's
+39:20 
+
+39:20 nothing close enough to the camera it
+39:21 
+
+39:21 wouldn't even be blurred out anyways so
+39:24 
+
+39:24 it doesn't matter
+39:25 
+
+39:25 and yeah like
+39:28 
+
+39:28 like I said if you just use some basic
+39:30 
+
+39:30 models some basic textures put them
+39:32 
+
+39:32 together in a way that looks cool and
+39:35 
+
+39:35 then throw on some lights and
+39:36 
+
+39:36 volumetrics
+39:37 
+
+39:37 you're you're good to go for like a lot
+39:39 
+
+39:39 of different environments
+39:41 
+
+39:41 um
+39:42 
+
+39:42 you know depending on what you're making
+39:43 
+
+39:43 obviously you're gonna have to like do
+39:47 
+
+39:47 more work depending on if it's for a
+39:48 
+
+39:48 client or whatever but just for a
+39:50 
+
+39:50 general render yeah you can get away
+39:52 
+
+39:52 with stuff like this uh pretty easily
+39:55 
+
+39:55 okay
+39:56 
+
+39:56 um anything else
+39:58 
+
+39:58 I'll quickly plug the course if you want
+40:00 
+
+40:00 to go really in depth into creating
+40:03 
+
+40:03 environments and watch me create
+40:04 
+
+40:04 environments like from zero percent
+40:06 
+
+40:06 start get an idea and then go through
+40:08 
+
+40:08 all the way through to 100 finished uh I
+40:12 
+
+40:12 have a course where I do like I show you
+40:14 
+
+40:14 that entire process three different
+40:16 
+
+40:16 times and just make three renders from
+40:18 
+
+40:18 start to finish so if you want to get
+40:21 
+
+40:21 like really in-depth information on how
+40:23 
+
+40:23 I put my scenes together that's a great
+40:25 
+
+40:25 place to do it and um yeah it comes with
+40:27 
+
+40:27 a bunch of models as well so a bunch of
+40:29 
+
+40:29 models I used in this one to make this
+40:31 
+
+40:31 render are in there included so if you
+40:34 
+
+40:34 want to check that out there's a link in
+40:36 
+
+40:36 the description of this video
+40:37 
+
+40:37 you can go check it out if you want if
+40:39 
+
+40:39 you don't want to spend money it's
+40:40 
+
+40:40 probably not for you
+40:41 
+
+40:41 but yeah hopefully this was useful and
+40:45 
+
+40:45 I don't know if there's any specific
+40:47 
+
+40:47 videos you want to see or there's a
+40:49 
+
+40:49 specific render you want to see a
+40:50 
+
+40:50 breakdown of you can let me know in the
+40:52 
+
+40:52 comments or uh on Instagram or whatever
+40:55 
+
+40:55 so
+40:58 
+
+40:58 I don't think anything to say anything
+40:59 
+
+40:59 else so uh yeah hopefully that was
+41:01 
+
+41:01 useful and I will see you in some other
+41:03 
+
+41:03 video bye

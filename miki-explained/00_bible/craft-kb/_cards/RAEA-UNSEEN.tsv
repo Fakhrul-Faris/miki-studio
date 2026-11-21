@@ -1,0 +1,7 @@
+Fisheye	mode	prop-unseen	1	cards/05_Camera_Raea_Pipeline/fisheye-lens-polynomial-panoramic-camera--super-wide-angle.md
+LensDistortion	k2	prop-unseen	3	cards/05_Camera_Raea_Pipeline/fisheye-lens-polynomial-panoramic-camera--super-wide-angle.md
+Mesh3d	receiveShadow	prop-unseen	1	masters/04_Shading_Lighting/light-linking.md
+PointLight	key	prop-unseen	1	masters/04_Shading_Lighting/practical-light-inside-object.md
+Sequence	durationInFrames	prop-unseen	1	masters/05_Camera_Raea_Pipeline/audio-first-beat-timing.md
+SpotLight	key	prop-unseen	1	cards/04_Shading_Lighting/parallel-spotlights-fake-sunbeams--detail-isnt-hard.md
+StandardMaterial	lower	prop-unseen	1	cards/04_Shading_Lighting/library-texture-light-touch--beautiful-environments.md

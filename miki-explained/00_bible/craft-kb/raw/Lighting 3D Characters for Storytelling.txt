@@ -1,0 +1,1167 @@
+00:00 - So you have your 3D
+scene, you placed a camera
+00:03 and decided the focal length,
+but then when you hit render,
+00:06 you find the result somewhat
+flat, not appealing,
+00:10 simply nah, well that's
+probably the lighting.
+00:14 Fortunately, this video is here to help.
+00:17 In it, we will deconstruct
+several examples
+00:19 of how you can light your
+scenes directly in Blender
+00:22 to help you in your storytelling
+needs and really push
+00:25 your 3D renders from good to awesome.
+00:29 (sinister tone)
+00:32 Hello everybody, Martin
+here for cgboost.com
+00:35 and I'm happy that I can present to you
+00:37 this much requested video.
+00:39 Last time, we tried out how
+to make a very simple scene,
+00:41 how to place a camera to it,
+some lights and visual goodies
+00:45 and throughout it, we talked
+about general cinematic rules
+00:47 and tips that you can use
+in your own 3D artwork.
+00:51 So check the video
+description or the info books
+00:54 if you don't wanna miss
+the 10 tips to make
+00:56 your renders more cinematic.
+00:58 In fact, I really recommend
+that you have a look at
+01:00 that video now before you watch this one.
+01:03 But judging by our comments,
+I think you wanted to know
+01:06 much more about lighting one
+specific aspect, a character.
+01:11 So that's what this video is all about.
+01:13 To help me out, Juan Hernandez,
+our newest colleague here
+01:16 in the CG Boost family was
+actually so kind as to lend me
+01:20 his Shaolin Monk character.
+01:22 You may know it from
+ArtStation or BlenderNation
+01:25 and this way, I was able
+to focus on the stuff
+01:27 I loved the most, placing
+the character in the scene,
+01:30 figuring out the shot and
+pointing some lights at him.
+01:34 Some call it painting with lights,
+01:36 which I find wonderfully accurate.
+01:38 Anyways, it was lots of fun
+and from this experimentation,
+01:41 came out six very different
+lighting scenarios
+01:45 which I will be breaking down
+today about the importance
+01:47 of story in your compositions
+I talked about last time,
+01:51 but today, you will see
+that you can do so much more
+01:53 with a proper choice of
+lighting angle, quality,
+01:56 quantity and color.
+01:58 Oh, and one more thing,
+you can of course sign up
+02:00 for our cgboost.com resources
+and there, you can download
+02:05 all the examples I present in
+this video and follow along
+02:09 or just create your
+own lighting scenarios.
+02:11 You just subscribe at
+the provided link and get
+02:14 six Blender beginner's course as well as
+02:16 a shortcut PDF for free.
+02:18 Excited?
+02:20 Good, let's go to lighting.
+02:22 There are of course endless
+combinations of lighting setups
+02:25 you can use and yes, I know
+knowing it doesn't really help.
+02:30 However, there are certain
+questions you can ask yourself
+02:32 before you start lighting and the answers
+02:35 then always help you with
+starting out the process.
+02:39 Question number one, what
+is the focus of the image?
+02:42 We talked about this in the
+previous video and here it is
+02:44 not different, only we
+already know that our focus
+02:47 will always be the character,
+this time just one character
+02:51 which makes our job a little bit easier.
+02:54 There is a simple rule,
+human attention is drawn
+02:56 to the brightest spot in the image
+02:58 or a spot with the most contrast.
+03:01 So that's what we will
+be trying to achieve
+03:03 with our monk here.
+03:04 And you know what?
+03:06 Let's name him.
+03:07 So Google Chinese name generator
+03:12 and let's see, male names here.
+03:16 Su, that's nice and simple.
+03:20 So audience, this is Su,
+Su, this is audience.
+03:24 Now where were we?
+03:26 Oh, questions.
+03:28 Second question that's
+good to ask yourself
+03:30 when lighting a brand new scene is,
+03:32 what is your relationship
+to the character?
+03:34 In what way do we want to portray him?
+03:37 Well, that is going to be different
+03:38 in each scenario of course.
+03:40 In this first example, let's
+make something pretty common,
+03:43 something you can see in
+commercials, model photo shoots
+03:46 or movie scenes that want
+to achieve some calmness
+03:50 and general lack of tension.
+03:52 So for that, I first ensured
+that I have some pretty neutral
+03:55 composition, like it's
+something you see here,
+03:57 70 millimeter lens, no roll,
+03:60 I also used a so-called high key lighting,
+04:02 which is basically a very
+bright setup that fills
+04:05 your scene with light.
+04:06 The opposite of that would
+be a low key scenario,
+04:09 which is much more dramatic
+and which we will be
+04:11 talking about pretty much
+in the rest of the video.
+04:14 These various camera settings,
+lighting and color decisions
+04:18 are in fact the third
+question you will do well
+04:20 to think about when making your shots.
+04:22 And helping you choose and
+understand the right ones
+04:25 for your artistic goal is
+what this video is all about.
+04:30 For our purposes now, I
+made my environment bright,
+04:33 for example, within an HDRI
+like this which you can download
+04:36 from HDRI Haven or another
+good site is Openfootage.net.
+04:41 This gives us a nice base for lighting
+04:43 and really if you are
+lighting with a high key setup
+04:46 or a bright outdoor scene,
+you should always consider
+04:49 using an HDRI and really
+take your time choosing it,
+04:53 rotating it around to find a
+lighting angle you really like.
+04:57 This will then influence
+everything you do afterwards.
+05:00 Now it's time to start
+lighting with some lamps.
+05:03 Let's start with this very soft key light,
+05:05 you've heard me talk about light types
+05:07 in the previous video,
+so now very quickly,
+05:10 key light is usually the most
+prominent light in your scene
+05:13 revealing the character we are lighting.
+05:15 Depending on the position
+of the key light,
+05:17 we can achieve many different
+lighting conditions,
+05:20 but inevitably, we also create
+dark shadows on the face
+05:24 and the body which we then
+fill with a fill light
+05:27 if we want, of course.
+05:29 We don't have to as you
+will soon see for yourself.
+05:33 And then there is also a
+back light that you use
+05:35 to separate your character
+from the background
+05:38 and give it that nice
+highlight on the edges.
+05:41 Again, depending on the
+back light position,
+05:43 you achieve various effects.
+05:45 If it goes from one side, it is a rim,
+05:47 if it goes from the top, it
+gives the character a halo
+05:51 and all this, we can use for
+achieving different moods.
+05:54 So back to our first example
+here, to achieve the softness
+05:57 of this key light, I made the size bigger.
+05:60 The bigger the size,
+the softer is the result
+06:03 and vice versa.
+06:04 This softness allowed me to
+have a less dramatic result
+06:07 with less shadows in the face.
+06:09 Also, the stop light
+accentuates the cheeks here,
+06:12 which often looks nice
+and that's why it's used
+06:15 for beauty photo shoots.
+06:17 I could have easily
+chosen area light for this
+06:19 or even point light
+though both would give me
+06:22 slightly different results and besides,
+06:25 spotlight is usually the
+least performance heavy light.
+06:28 So spotlight it is with a
+bigger size and edge softness
+06:32 and white color with a tiny bit of warmth
+06:35 for that good fill.
+06:37 Then I went in and
+placed another soft light
+06:39 below the character filling
+all the shadows that formed
+06:41 on his face due to the key light.
+06:44 I made it an area light
+this time to make it softer
+06:47 because it's coming from a larger area.
+06:50 This way, we achieved that nice glowy fill
+06:52 and filled the face completely.
+06:54 Finally, I added another soft light,
+06:56 and I think you recognize
+the pattern by now,
+06:59 and this soft light, I have
+placed behind him to the top
+07:03 separating him from the
+background as I mentioned.
+07:06 This soft big back light
+achieved a nice glow to his hair
+07:09 and if you want, you can
+make it slightly colder
+07:12 to combine it with a warmer key light.
+07:15 Human eye just loves complimentary colors.
+07:19 Then of course there are
+some settings you can tweak
+07:21 in the rendering tab, I've
+talked about most of these
+07:24 in the previous video,
+so now just quickly,
+07:27 you can activate this ambient occlusion
+07:29 and raise it like this.
+07:30 Also, sending a bloom
+helps with these glints.
+07:34 Screen space reflections
+are not that important here,
+07:38 but raising the resolution
+of the shadows will help
+07:41 with the result as well.
+07:43 One more thing I've done here
+is to turn on the soft shadows
+07:47 to obviously make my shadows more soft.
+07:51 And throughout the rest of this video,
+07:52 I generally left the
+settings as they are now.
+07:55 Finally, I added a fog
+element to the scene as well,
+07:59 one that we've learned how to create
+08:01 in the previous cinematic
+video here on CG Boost.
+08:04 So if you're unsure about the settings,
+08:06 you can watch that one.
+08:08 Also as a final touch, I
+added this large spotlight
+08:11 to the background, illuminating it lightly
+08:14 through the window so that
+it's not just a boring wall.
+08:17 Shadows help with that because
+shadows make everything
+08:20 less boring since they
+add contrast and texture.
+08:25 As a last touch, I
+imported this dust texture,
+08:28 plugged it into the base color
+emission and alpha socket,
+08:32 in this way, you get
+dust element in the air,
+08:34 very cheap, very fast.
+08:36 By the way, if you have some
+moving video of a dust element,
+08:40 you can add it in as well.
+08:41 Same setup and it works.
+08:49 And there you have it.
+08:50 First scenario done and
+now you know how to light
+08:52 your own beauty commercial in Blender.
+08:56 Now for the second
+example, let's do something
+08:58 much more dramatic.
+08:59 We wanna crank up the so
+called lighting ratio,
+09:02 which means the contrast between
+our dark and light areas.
+09:06 Low light ratio means
+there is little contrast
+09:09 between the lightest and the
+darkest part of the scene
+09:12 while high light ratio
+is all about contrasts.
+09:16 Right off the bat, you
+can see that our character
+09:18 is standing in a much
+more dynamic position
+09:21 at least compared to the last case,
+09:23 I placed him in the middle
+of the room and positioned
+09:26 the camera so that it's almost
+on the same level as him,
+09:29 only very slightly below
+him, which means we will feel
+09:32 tiny little inferior towards him.
+09:35 But not too much, just so that
+Su feels more cool than us.
+09:39 Just look at him, his face, he enjoys it.
+09:44 Now you may notice I'm
+not using any HDRI here,
+09:47 just plain old RGB
+channel with a great color
+09:50 in the world surface shader.
+09:52 While the darker and more
+dramatic we get with the scenes,
+09:56 the more I actually like to light
+09:57 just with my available lights,
+not with the environment.
+10:01 For night scenes, I actually
+only like to use HDRIs
+10:04 if I have scenes with a
+lot of reflective materials
+10:07 in which the surrounding
+environment would be reflected,
+10:11 which I don't have here.
+10:12 So we shall make our life easier by having
+10:14 just this gray environment
+as a background.
+10:17 And since this time I'm
+showing the window back here,
+10:21 I decided to add an image behind
+it with our landscape here.
+10:25 As you can see, you can do
+quite a lot with just images
+10:27 for backgrounds,
+especially if you plug them
+10:30 into the emission shader
+10:31 because then, they start
+lighting the scene as well.
+10:34 Immediately, this feels
+more spacious like we are
+10:36 in some temple on a mountain.
+10:39 That's probably because there
+is a mountain in the image.
+10:42 Also fog, you notice from
+the previous cinematic video
+10:46 I've made, if you just make an object
+10:48 and plug a principle volume
+shader into the volume
+10:51 while making the density very
+low, this fog will allow us
+10:55 to fill the scene a bit with it
+10:57 and have very nice light streaks.
+10:59 So let's try it.
+11:00 The first light I added
+was actually the background
+11:03 because I wanted to
+have some light streaks
+11:05 back on the wall.
+11:07 I don't usually use sun
+lamps in my Eevee scenes,
+11:09 I find the effect of sun
+lamp in this real time engine
+11:13 to be a bit harsh and
+sometimes problematic
+11:16 when it comes to shadows.
+11:18 Instead, I just make really,
+really intense spotlights,
+11:22 but not in this case because
+I wanted to have these shadows
+11:25 back here real straight, which
+I would not really achieve
+11:28 with some spotlight that are
+usually much, much smaller.
+11:32 You can see that the
+sunlight already illuminates
+11:34 Su a little bit, but I
+decided to actually add
+11:37 one more proper key light this time,
+11:39 using a very bright
+spotlight behind the window.
+11:43 Again, I wanted to use
+the shadow play here,
+11:45 that's always a nice
+idea to shine your lights
+11:48 through some objects,
+vegetation or windows,
+11:51 thus always achieving
+more dramatic effect.
+11:54 Another useful tip, this
+type of key lighting
+11:57 when the light is most intense
+on the side of the face,
+12:00 opposite from the camera,
+it's called short lighting
+12:03 or also reverse lighting.
+12:05 Well if we shone the light
+on the side of the face
+12:08 close to us, it would be
+called broad lighting.
+12:11 Since we want a more dramatic effect,
+12:13 let's go with the reverse one.
+12:15 And while we're at it, let's
+also mention that this type
+12:18 of key light, that strong raised up
+12:20 coming from the front of the character
+12:22 is sometimes called paramount
+light by the movie studio,
+12:25 Paramount, which going
+through its movie production.
+12:29 You will know it by this distinct shadow
+12:31 called also butterfly shadow
+forming below the nose.
+12:35 And it also accentuates the cheekbones,
+12:38 that's why it was often used in old movies
+12:40 to make famous actresses more beautiful.
+12:43 Then if we move the light
+slightly to the side,
+12:46 we get loop lighting,
+indicated by this looped shadow
+12:50 under the nose.
+12:51 Moving key light to the side
+is actually a more modern way
+12:55 to light your characters.
+12:57 Also, warm orangy color
+will be best for us
+12:59 since we want to simulate
+a late afternoon sun.
+13:03 Just careful, don't go too
+yellow because yellow by itself
+13:06 symbolizes instability and even insanity.
+13:12 Oh, and also we can
+immediately see that the fog
+13:15 is taking effect here and we
+have very nice light streaks
+13:18 coming from the window.
+13:19 To finish off the basic
+lighting, I have added
+13:22 a spotlight here slightly
+behind the character
+13:25 with bluish color and a
+small radius for hard effect
+13:28 and also something that
+I haven't mentioned yet,
+13:31 you can raise this specular value here.
+13:34 This way, everything
+glints a little bit more.
+13:37 And yes, you are breaking
+physical correctness
+13:40 with messing around with this,
+but it's computer graphics.
+13:45 And Su is not a real human after all,
+13:48 so why not bend a few
+rules while we're at it?
+13:51 Let's remember one rule
+we shouldn't break though,
+13:54 it's called motivated
+lighting and it means
+13:56 we shouldn't make up lights
+that don't make sense
+13:59 in the scene.
+13:60 For example, if we had a
+green light coming from
+14:02 underneath him, that
+would be silly of course.
+14:06 However, our lights here are
+coming one from the window,
+14:10 two from the side of the
+room where theoretically
+14:13 there could be another window
+through which a skylight
+14:16 could come through.
+14:18 And look, there is a window,
+so it all makes sense now.
+14:22 I actually remember
+someone posting a comment
+14:24 to the previous cinematic
+video saying something like,
+14:28 aha, good lighting means more lights then.
+14:31 I'd like to react to that now though
+14:33 because it's not really so.
+14:34 In fact, good lighting means
+achieving a great result
+14:38 with the least amount of lights possible
+14:40 and you can see here with just few lights,
+14:42 we have quite a nice result already,
+14:44 but we can go a little further.
+14:46 Here, I have a collection
+called extra lights.
+14:50 You can see I did not add
+fill light here and I'm not
+14:53 too sure whether it's needed.
+14:55 However, if I'll show
+you this extra fill here,
+14:58 let me turn this on, you can
+see, it fills the area here,
+15:03 illuminating some of the
+nasty shadows in his face.
+15:06 I actually made it so that
+this light only illuminates
+15:09 the face not too much more
+by lowering the cone angle
+15:13 and adding softness to it,
+15:16 with or without, I don't know,
+15:19 it's up to your preferences really,
+15:21 which is the awesome thing about lighting.
+15:23 It is an art form, so
+it's not all set in stone,
+15:26 you can experiment, be creative
+and have your own style.
+15:30 And by style, I mean little
+decisions like this mostly.
+15:34 Another little decision
+is setting a soft light
+15:37 that slightly illuminates
+the area on the right side
+15:40 and also the ground like
+there really is a skylight
+15:43 coming from the window up there.
+15:46 Again, optional but maybe better.
+15:49 And finally, I added a big
+area light behind this window
+15:53 to fill the fog with some
+more bluish light spill
+15:56 and also to add a bit of light
+and shadow to this area here.
+16:01 You can see that if I
+deactivate this whole group,
+16:04 it does not really make
+too much of a difference,
+16:06 but these are small touches
+that always have a chance
+16:09 to improve the overall look.
+16:11 Still remember, filling your
+scene with unnecessary lights
+16:14 is not good lighting.
+16:16 Just as before, I added
+these transparent textures
+16:19 of floating dust and
+also a new texture set up
+16:23 in the very same way,
+plugged into the base color,
+16:27 the alpha and the emission.
+16:29 Only this time, it's light race.
+16:31 Slight effect but again,
+16:33 adding to the overall result, I think.
+16:35 And that's it for this
+second more dramatic example.
+16:39 But now, let's go even more dramatic.
+16:43 We are now very low with
+the camera to indeed feel
+16:46 very little compared to Su here.
+16:48 Also, we have centered the composition
+16:50 to really focus on him and not much else.
+16:53 Let's bring the environment
+shader all the way down
+16:56 almost to black.
+16:57 I have left the settings from
+the previous scene the same,
+17:00 so I have a fog here
+which will again ensure
+17:03 that nice spreading light effect,
+17:05 so very important for dramatic scenes.
+17:08 This in fact will be quite a simple setup,
+17:11 what I want is to create
+a very low key lighting,
+17:13 which you can see in
+many mysterious scenes
+17:15 in Blockbuster movies.
+17:17 Just have a look at a few here.
+17:21 I will this time, in fact
+start with a back light
+17:24 or in this case, it could be
+called hair light as well,
+17:27 since it creates this
+very strong light rim
+17:30 on the top of his head,
+lighting up his hair.
+17:33 You can see an example
+of the hair light here.
+17:39 This one's better.
+17:41 I cranked up the specular
+power to this light
+17:44 to really bring out the
+outline, made the light
+17:47 a bit bigger and also made
+the power quite intense.
+17:50 Thanks to the wall metric
+shader, it also adds this awesome
+17:54 cone of light.
+17:55 As a matter of fact, this is a
+very nice cinematic lighting.
+17:58 If you don't really want to
+reveal the character's face,
+18:01 only it's silhouette, you
+can even go much darker
+18:04 with the environment shader,
+but let's not do it now
+18:07 since this is what we will
+focus in the very last example.
+18:12 In fact, let's make it
+bluish to get a filling
+18:14 like it's actually a
+Moonlight coming from a hole
+18:17 in the ceiling.
+18:19 Nope, this time there is not a hole,
+18:21 but there could be, right?
+18:25 There you have it.
+18:27 When placing this light, be
+careful not to go too much
+18:30 above the character, then
+you'd be in danger of having
+18:32 this empty eye socket effect.
+18:34 Not the nicest of looks, all
+these ghoulish eyes here.
+18:39 Not very flattering as well.
+18:41 No, no, having it back
+here will be quite fine.
+18:44 Now let's think about what
+sort of other light source
+18:46 could there be?
+18:49 Shaolin monk, monastery, China, night,
+18:53 well how about a torch or a lamp or both?
+18:58 So one light I added, which
+basically functions as key light
+19:02 is this orangy light in color of a torch
+19:05 that could possibly hang
+on this left side here.
+19:08 I made it a point light
+since I wanted it to come out
+19:12 in all directions out of this point here
+19:15 and I pushed it slightly in front of Su
+19:17 to illuminate one half of his face.
+19:19 That gives it a very dramatic
+fill and this actually
+19:22 has its name as well, it's
+called split lighting.
+19:26 And it effectively divides
+the face into light
+19:29 and dark side.
+19:31 So every time you want to
+make someone mysterious,
+19:34 you will do well to use it.
+19:36 While we're at it, it's
+also worth mentioning
+19:38 another lighting term,
+so-called Rembrandt lighting
+19:41 based on the paintings by
+the famous Dutch painter
+19:44 who regularly used a
+specific lighting scenario
+19:48 where his key light would
+be very much to decide
+19:50 but not too much, still
+shining over the nose
+19:54 onto the other cheek.
+19:55 There, it would create this
+unmistakable light triangle
+19:59 and that's how you know
+it's Rembrandt lighting.
+20:02 Another very, very popular
+type of lighting this is,
+20:05 especially in movies and in
+Hollywood cinematography.
+20:09 But in our case, let's
+go with split lighting.
+20:12 Then I just duplicated
+this light and put it
+20:14 on the other side right here,
+like there is a lamp or candle
+20:18 over here to fill this side as well.
+20:21 This way, I have achieved
+a very dramatic effect
+20:24 where the back light is much,
+much stronger than the key
+20:27 and the fill,
+20:28 by the way, I didn't want
+to have both of these lights
+20:31 down below Su because then it would create
+20:33 the typical campfire
+effect, which is creepy,
+20:37 at least too creepy for what
+I wanted to achieve here.
+20:40 And also, it reveals too
+much of the under chin,
+20:43 which is never a nice place
+to see you on a human being,
+20:46 it just makes everyone seem
+fat even if he or she is not.
+20:50 Of course I used depth of field,
+20:52 focused on the character's
+face to blur out everything
+20:55 that's not needed and if it wasn't enough,
+20:58 I added a spotlight with very low angle
+21:01 to illuminate his face right here.
+21:03 But again, that is completely up to you,
+21:05 that's why it's in the
+extra lights collection
+21:08 and in this case, I ended up
+21:10 not using this collection at all.
+21:13 Then again, I sprinkled in the
+dust texture and here you go,
+21:17 the third dark scenario was done.
+21:22 Wonderful!
+21:22 So we tried some dramatic set
+up, some mysterious setup,
+21:26 but we can go darker still.
+21:28 In fact this time,
+something a little evil.
+21:31 There are times when you want
+to make some of your bad guys
+21:33 look a little twisted.
+21:35 Sure, everybody probably
+knows that famous bad guys
+21:38 are either hidden in shadows
+or completely lit by red light
+21:42 to get that extra juicy evilness in there,
+21:45 but that's actually not
+entirely what I have in mind
+21:48 for this one.
+21:49 Already as you can see, I have
+a pretty intense camera angle
+21:53 placed directly below the character
+21:55 with a slightly lower focal
+length and I rotate it
+21:59 on y-axis to give it that
+unnatural eerie fill.
+22:03 You can see his towering above us,
+22:05 making him feel overwhelming.
+22:07 What I also did, I took
+the world surface shader
+22:10 and tinted it slightly
+towards dark greens.
+22:13 I know this is a dark night
+and that should be bluish
+22:17 or greenish, well I admit
+this is where I allowed myself
+22:21 to go in a little bit more
+fantastical direction,
+22:24 pushing the colors to be more cartoony.
+22:26 Still this greenish
+tint is actually awesome
+22:29 to instantly make people feel unwell.
+22:31 That's for example, one of
+the reasons why most of Matrix
+22:35 is tinted green.
+22:37 Just to justify this tint a
+little, I added the green slits
+22:41 to the window, like there
+is a see-through glass
+22:44 or thick paper.
+22:48 Also, I have the fog here
+again, I can play with its color
+22:52 and emission color and
+then also some lights.
+22:55 Now to achieve that proper
+and easy evil result I want,
+22:59 I decided to combine red and green.
+23:02 So the first light I added was
+this very intense back light.
+23:06 It's always nice to silhouette
+your evil characters
+23:08 with red color like you
+see here for example,
+23:11 but this example is also
+red when compared to
+23:14 let's say this one.
+23:16 Do you see the distinct
+effect this combination
+23:19 of red and green gives you?
+23:21 More sickening, and
+that's what we are after.
+23:24 Of course not always
+do get such an effect,
+23:26 it very much depends on what
+shade of red or green you use.
+23:30 For example here, it's combined
+with pink and that gives you
+23:33 more of a feminine feeling, but again,
+23:36 combined with something a little twisted.
+23:38 You would hardly look at
+this character lit like this
+23:41 and say, yeah, she's completely okay.
+23:45 To capitalize on this look,
+we can add a spotlight
+23:48 to the opposite side of
+the character to act as rim
+23:51 with a green tint, higher
+specularity and not too large
+23:55 a radius to make it harder.
+23:57 That gives a very nice
+contrast to the first red rim
+23:60 we created and helps
+achieve that sickly feeling.
+24:04 Finally, I decided to add
+a small angle spotlight
+24:07 on the opposite side of his face
+24:09 just to get rid of these ugly
+shadows that make his eyes
+24:12 bulge and also at split lighting,
+dividing his face to two,
+24:17 as I mentioned, it's a powerful
+tool for all mysterious
+24:21 and dark lighting setups.
+24:23 The last optional light I've
+added was this little point
+24:27 light down here with a
+distance lower to reach only
+24:30 to his hand and the thigh
+and mostly illuminate
+24:33 just the ground here to give
+more justification to the fill,
+24:36 maybe there's some kind
+of lamp lying there.
+24:39 One little note, you can even go in
+24:41 and tint dust the particles
+to a certain color.
+24:44 Just take an RGB curves
+node and plug it in
+24:47 between the emission socket
+and raise for example
+24:50 the green value.
+24:52 And there it is, even with
+this otherwise cute shelling
+24:55 monk Su, with a proper pose expression,
+24:58 camera angle and lighting
+setup, you can create
+25:00 a real movie villain, no problem.
+25:04 In this fifth scenario, let's
+try out some other techniques
+25:07 we have mentioned but not yet worked with.
+25:10 So for example in this scene,
+I wanted to show you that
+25:13 a very low focal length
+at about 15 millimeter,
+25:17 which is the lowest number
+we have worked with in this
+25:19 or the previous cinematic
+video, does not necessarily mean
+25:22 that the composition is
+going to look ominous.
+25:25 Will it?
+25:26 Yes, because still you have
+this very wide angle view
+25:29 unlike anything our eye
+is actually perceiving.
+25:32 But that does not automatically
+mean that the viewer
+25:34 will feel uneasy.
+25:36 You can see that once we
+have placed the camera
+25:38 above our character, it
+can actually feel dynamic.
+25:42 And since we can see quite
+a lot, not just a narrow cut
+25:45 of the whole scene, this in
+fact gives us a nice overview
+25:49 of the environment around him,
+25:51 making you feel positive
+about this composition.
+25:55 This way, I can even
+afford to roll the camera
+25:58 quite significantly to about
+seven degrees and still
+26:01 it gives you more of a
+dynamic feeling rather than
+26:04 weird uneasy feeling.
+26:05 Compare it now to a
+similarly set up camera,
+26:08 but from below of our characters.
+26:10 See, the placement of the camera
+below or above the eye line
+26:14 matters quite a bit.
+26:16 I already mentioned it, what I
+go for here is a dynamic shot
+26:20 where you can see the
+character quite clearly
+26:22 as well as his stuff here.
+26:24 Also, I don't want an
+extreme colors this time,
+26:27 I just want the character
+to pop from his surroundings
+26:31 and I don't care about the
+environment behind him too much.
+26:34 So to divide him from the background,
+26:36 I've added strong heart
+spotlight behind him,
+26:39 slightly to the side and above.
+26:41 This way, his body is
+highlighted as well as the stuff.
+26:45 And then, I added another spot
+this time bigger and softer
+26:49 filling the opposite side of
+his face with bluish sky color.
+26:53 I restricted the distance to
+not hit this pillar back here
+26:56 since that would detract
+our attention from Su.
+27:01 Finally, I added another fill
+light, this time in form of
+27:04 a point light, I put it in
+front of him and slightly above.
+27:08 This filled the nasty dark regions.
+27:11 And again, I restricted the
+distance to only illuminate him.
+27:16 I used point light mostly
+because it gives me
+27:19 this nice radial glow in the
+corner of the image here.
+27:23 Actually you can now see here
+a very interesting technique
+27:27 called checkerboard lighting.
+27:29 Basically just like a checkerboard,
+27:31 it works with alternating
+dark and bright regions.
+27:34 So we have a very bright
+top part of his body
+27:37 with a very dark background
+and a dark bottom part,
+27:41 contrasted with a very bright floor.
+27:43 And since the human eye
+is drawn to contrast,
+27:46 as I mentioned, this helps
+Su to stand out a lot.
+27:50 I mean, it's not just
+nice to know these names
+27:52 for these techniques, it actually means
+27:54 that you know what you're
+doing and you don't just
+27:57 arrive at these results by an accident.
+27:60 In the extra light folder,
+I actually have one more
+28:03 bluish light like this, a
+spotlight that I put above him
+28:07 and behind him and it just nicely mixes
+28:11 with the yellow glow.
+28:13 Also in this scenario,
+since I wanted something
+28:16 less dramatic, we're actually
+lighting with the broadside
+28:19 key light focusing on the side of the face
+28:22 that is closer towards us.
+28:24 I then again added some nice
+dust in the air and that was it
+28:28 for this scenario.
+28:30 One last lighting set up
+remains and this time,
+28:33 let's get very mysterious.
+28:36 This will be the most extreme
+of the cases we've shown
+28:39 so far, however, it also
+might be the simplest to make
+28:42 if you know what you're after.
+28:44 What I wanted to achieve was
+a very mystical atmospheric
+28:47 and supernatural shot.
+28:49 Often these silhouette lighting
+setups are used in movies,
+28:53 especially for [her
+Flakes] to hide someone,
+28:55 even if they're already in the shot.
+28:58 You can just show the
+shape of the character
+28:60 but nothing else.
+29:01 And in the process, you can
+create some very nice dusty
+29:04 light streaks we all love.
+29:07 So how to do it in Blender?
+29:08 Well, first off, I turned a
+world surface shader color
+29:12 almost all the way to black,
+which ensures that we don't get
+29:15 any unneeded fill so we
+can just work with lights.
+29:19 Then, and this is the key to
+this whole lighting scenario,
+29:22 I took this fog with
+principled volume shader
+29:25 and increased the density to
+0.1 to make it much more dense
+29:30 as well as the [NSL Tropic] to 0.8.
+29:33 And that is exactly why
+I was able to achieve
+29:35 these beautiful light shafts
+immediately when I added
+29:39 this single spotlight to the scene.
+29:41 Now let's have a look at the light,
+29:43 it has quite a lot of power
+to it and most notably,
+29:47 it is purple pinkish tint.
+29:49 Mysticism, science fiction,
+and yes, even eroticism,
+29:53 all of these are usually
+symbolized by this sort of a color.
+29:57 Also, especially in these types of shots,
+29:60 it even matters where you put the light.
+30:02 If you put it down below, it
+is a more mysterious effect,
+30:05 but still something earthly.
+30:07 Well, a glow such as this
+behind the character's head
+30:10 feels almost divine and saintly.
+30:12 Of course, this would
+work better with white
+30:14 or orangy light, but that's
+not what we're after now.
+30:19 We will leave it purple
+and put it down here
+30:21 since I don't want it
+to be too supernatural.
+30:25 After all, he's just floating in the air,
+30:28 so yeah, almost normal.
+30:31 Truth is at this point, I
+didn't really want to add
+30:34 any more lights.
+30:35 I had some extra lamps
+set up here, for example,
+30:38 this orangy left fill
+made with soft spotlight
+30:41 and also the smaller spot fill
+focused only on Su's face,
+30:45 which is great technique to reveal
+30:47 just the eyes of a character.
+30:49 But in this case, he has his
+eyes closed and I find it
+30:52 much more powerful to just
+have to silhouette here
+30:55 with a little hint of the face.
+30:57 Thanks to the not completely
+dark world surface shader.
+31:01 So let me hide these
+extra lights and instead
+31:04 focus on something else
+because we can do much more
+31:06 this time, using 3D objects
+and textured image planes.
+31:10 So in this overlay, I have
+some hidden collections
+31:13 full of visual awesomeness.
+31:15 For example, I added these little spheres
+31:17 to break up the boring
+background of the character.
+31:21 Little effect, but already
+something catching light
+31:24 back here, and it's always a good thing.
+31:26 Proceeding with this idea,
+I added cubes in front of
+31:29 the spotlight to add some
+variety to these light shafts.
+31:33 See, a very simple
+technique but so powerful.
+31:36 If you want to make
+things feel more natural,
+31:38 an evenness is everything.
+31:41 Next, I added the dust
+particles you already know,
+31:46 maybe turn their emission a little lower
+31:49 so they don't shine that much.
+31:56 In another texture set
+up in the very same way,
+31:58 I added these fog overlays
+and put them in space
+32:02 in between the pillars.
+32:03 Adding fog, it's always so awesome.
+32:06 And by the way, I added one
+above Su's head as well.
+32:10 He is apparently being so
+mysterious that he is steaming.
+32:14 Finally to push the levitation
+theme of this image,
+32:18 I decided to add some floating stones.
+32:21 Luke had those, so why not Su?
+32:24 And just like that, this
+very dramatic mystical scene
+32:27 was created directly in Blender.
+32:29 And I think that now is a good
+time to appreciate the fact
+32:33 that we've been able
+to do all this in Eevee
+32:35 in real time without
+any waiting whatsoever.
+32:38 I still remember a time
+when each light added meant
+32:42 a long wait for another test render.
+32:44 These days, it's all too easy to forget
+32:46 that this awesome realtime workflow
+32:49 is not a matter of course.
+32:50 So five seconds of appreciation, please.
+32:57 And with that, we
+successfully went through
+32:59 six scenarios for these
+extremely different types
+33:02 of cinematic lighting setups.
+33:04 Hope you like them.
+33:06 And there you have it, my friends.
+33:07 I hope this video was useful
+for all of you starting out
+33:10 in 3D graphics and maybe
+even the more experienced
+33:13 among you picked a trick or
+two on how to light your scenes
+33:17 and how to work with Eevee.
+33:18 Again, I realized that this
+was a very quick overview
+33:21 of the tools that I used when building
+33:24 my lighting scenarios,
+but if you're still unsure
+33:27 about Blender, you can
+of course jump right in.
+33:29 I mean not only it's
+free but as I mentioned
+33:32 at the beginning, at cgboost.com,
+33:35 Zach has a free introductory
+course for it as well.
+33:38 You just have to sign up at CG Boost site
+33:40 and then if you download these resources,
+33:43 you will also get the project
+files for today's lesson
+33:45 so you can try out your own compositions
+33:48 and lighting setups.
+33:49 Also, I was able to very quickly texture
+33:52 the whole environment
+with substance painter
+33:54 for which surprise, surprise,
+33:56 I have a course at CG Boost as well.
+33:58 So you can learn this
+piece of software too.
+34:01 If you go through the provided
+blend files for this video
+34:04 and create your own lighting
+setups, definitely let us know,
+34:07 just send us a message or
+share it at social media
+34:10 using the tech that you can see below.
+34:13 Until next time, I wish you a
+wonderful time and as always,
+34:16 stay creative, my friends.
+34:18 Martin out.
+34:20 (sinister tone)

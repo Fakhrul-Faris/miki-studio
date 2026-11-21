@@ -1,0 +1,1147 @@
+00:01 [music]
+00:03 
+
+00:03 >> Hey, this is Class Creatives and in this
+00:05 
+
+00:05 video we'll dive into the unique hybrid
+00:06 
+
+00:06 3D 2D workflows of Orange Company, also
+00:09 
+
+00:09 known as Studio Orange.
+00:11 
+
+00:11 We read your comments and requests, so
+00:13 
+
+00:13 we teamed up again with the legendary
+00:14 
+
+00:14 anime archivist Hopsakuga to look into
+00:17 
+
+00:17 how they create their animated
+00:18 
+
+00:18 characters and how they specifically
+00:20 
+
+00:20 choose when to use traditional animation
+00:22 
+
+00:22 so that it fits the needs of a scene to
+00:24 
+
+00:24 emphasize emotional connection.
+00:26 
+
+00:26 We'll dive into how Orange doesn't
+00:28 
+
+00:28 consider 3D animation to be superior to
+00:30 
+
+00:30 2D, but rather complementary,
+00:33 
+
+00:33 which is what makes their work so
+00:34 
+
+00:34 special and how hand-drawn animation is
+00:36 
+
+00:36 not going to leave their production
+00:37 
+
+00:37 anytime soon. We'll also look at some of
+00:39 
+
+00:39 the similarities and inspiration that
+00:41 
+
+00:41 they took from Disney, Pixar, and Sony
+00:44 
+
+00:44 Spider-Verse. Let's get into it.
+00:47 
+
+00:47 Orange Company CEO and CG director AG
+00:50 
+
+00:50 Inamoto
+00:51 
+
+00:51 first took note of full CG TV anime
+00:53 
+
+00:53 series becoming hits as far back as 2012
+00:57 
+
+00:57 with the release of Code Geass: Akito
+00:59 
+
+00:59 the Exiled Chapter 1, The Tyrant Has
+01:02 
+
+01:02 Landed. He shared that audiences were
+01:04 
+
+01:04 repulsed if the mechs were done in CG in
+01:06 
+
+01:06 the early days of anime. This likely
+01:08 
+
+01:08 played a big factor in how well Japan
+01:10 
+
+01:10 hides its CG today.
+01:12 
+
+01:12 As studios that use CG grew over time,
+01:14 
+
+01:14 the audiences started to react more
+01:16 
+
+01:16 favorably to CG in anime. A lot of trial
+01:19 
+
+01:19 and error went into perfecting the CG 2D
+01:21 
+
+01:21 workflow Japan now uses. Some
+01:23 
+
+01:23 fascinating animation facts Inamoto
+01:25 
+
+01:25 shared is that he prefers to use
+01:27 
+
+01:27 two-frame and full-frame animation for
+01:29 
+
+01:29 their CG, even though three-frame
+01:31 
+
+01:31 animation is typically what is used for
+01:33 
+
+01:33 hand-drawn robots in Japanese animation,
+01:36 
+
+01:36 sharing that three-frame CG feels stiff,
+01:38 
+
+01:38 like as if a 2D robot was animated on
+01:41 
+
+01:41 fours. And Inamoto shared how he
+01:43 
+
+01:43 analyzed Disney's Paperman's CG mixed
+01:45 
+
+01:45 with 2D. Not only was it a great
+01:47 
+
+01:47 execution of the mixed medium, but also
+01:50 
+
+01:50 how Japanese anime has influenced the
+01:52 
+
+01:52 West's approach to animation.
+01:54 
+
+01:54 Orange utilizes 3D Studio Max, as seen
+01:56 
+
+01:56 here in Trigun Stampede.
+01:58 
+
+01:58 Highlighting their automorph technique,
+02:00 
+
+02:00 where they developed a program called
+02:02 
+
+02:02 cameraomatic
+02:03 
+
+02:03 for the workflow that simulates flat 2D
+02:05 
+
+02:05 expressions, regardless of the angles
+02:07 
+
+02:07 they were shown from.
+02:09 
+
+02:09 The animators also had a tool called
+02:10 
+
+02:10 posemorph to cameraomatic that would
+02:12 
+
+02:12 automatically correct the mouth shape to
+02:14 
+
+02:14 anime-like form, saving time while
+02:16 
+
+02:16 keeping the desired mouth shape.
+02:18 
+
+02:18 They also did several tests and updated
+02:20 
+
+02:20 workflows for the hair using
+02:22 
+
+02:22 cameraomatic.
+02:23 
+
+02:23 And they used the feature called shape
+02:25 
+
+02:25 maps in 3DS Max to control the shadows
+02:27 
+
+02:27 on faces.
+02:29 
+
+02:29 And unlike Into the Spider-Verse, where
+02:30 
+
+02:30 facial animation was done manually, to
+02:33 
+
+02:33 save time and the fact that most of the
+02:34 
+
+02:34 animators at Orange have an average of
+02:36 
+
+02:36 only 1 to 2 years of industry
+02:38 
+
+02:38 experience, cameraomatic greatly helped
+02:40 
+
+02:40 bridge that experience gap. Orange also
+02:42 
+
+02:42 took a unique approach to handling
+02:44 
+
+02:44 dialogue, where most anime has less
+02:46 
+
+02:46 accurate lip sync.
+02:48 
+
+02:48 They sought out to find a great balance
+02:50 
+
+02:50 between accurate lip sync and anime
+02:52 
+
+02:52 style mouth movements,
+02:53 
+
+02:53 which required some additional hand
+02:55 
+
+02:55 keying from animators. Let's also check
+02:57 
+
+02:57 out some of their workflows with this
+02:59 
+
+02:59 tech in Beastars,
+03:01 
+
+03:01 where they also did some additional tune
+03:03 
+
+03:03 shading work for the hair and fur.
+03:05 
+
+03:05 Their goal was to express the appeal of
+03:06 
+
+03:06 the 2D art. They used Hair Farm for many
+03:09 
+
+03:09 detailed fur shots and TyFlow for
+03:11 
+
+03:11 Legoshi's fur being felt by Haru.
+03:14 
+
+03:14 Shinichi Matsumi, Beastars director,
+03:16 
+
+03:16 mentioned at the start he was conscious
+03:18 
+
+03:18 of Disney's Zootopia,
+03:19 
+
+03:19 but as the work began and the show took
+03:21 
+
+03:21 on its own unique look, he realized
+03:23 
+
+03:23 there was nothing to be concerned about.
+03:25 
+
+03:25 They also used Dynamix EZ, a markerless
+03:27 
+
+03:27 facial motion tracking program to get
+03:29 
+
+03:29 more realistic and believable acting
+03:31 
+
+03:31 performances on their characters.
+03:33 
+
+03:33 Something that is not so common in
+03:34 
+
+03:34 traditional TV anime production.
+03:37 
+
+03:37 They wanted to make the characters look
+03:38 
+
+03:38 and move differently from how animals
+03:40 
+
+03:40 have been portrayed in hand-drawn
+03:41 
+
+03:41 animation previously. Their automorph
+03:44 
+
+03:44 tech helps give characters a bit more
+03:45 
+
+03:45 style as they move and deform.
+03:48 
+
+03:48 Making sure shadows were created with
+03:50 
+
+03:50 simple lines were a critical component
+03:52 
+
+03:52 to the look and feel that they targeted
+03:53 
+
+03:53 for the project. Unlike the eyes in Land
+03:55 
+
+03:55 of the Lustrous, where they had 3D
+03:57 
+
+03:57 bodies with 2D hand-drawn eyes and
+03:59 
+
+03:59 expressions, Beastars was fully 3D.
+04:02 
+
+04:02 Another note about this workflow is that
+04:04 
+
+04:04 unlike typical anime we are used to
+04:05 
+
+04:05 seeing created in the traditional form,
+04:08 
+
+04:08 secondary animation and crowds or when
+04:10 
+
+04:10 idle continuously animate and react.
+04:13 
+
+04:13 Full body motion capture is used for
+04:14 
+
+04:14 body mechanics. And of course, like all
+04:16 
+
+04:16 motion capture productions, stage shoots
+04:19 
+
+04:19 can also be used by animators to clean
+04:20 
+
+04:20 up movements so that the weight and
+04:22 
+
+04:22 timing is as realistic as possible for
+04:24 
+
+04:24 the final shots. After Effects is used
+04:27 
+
+04:27 for compositing, but also is used for
+04:29 
+
+04:29 time remapping to ensure that facial
+04:31 
+
+04:31 animation matches the frame count and
+04:33 
+
+04:33 the facial animation is as smooth and
+04:35 
+
+04:35 natural as possible. Complex shots like
+04:37 
+
+04:37 the angel arm use a combination of 3ds
+04:40 
+
+04:40 Max, After Effects, and EmberGen to
+04:43 
+
+04:43 achieve the final results. Let's take a
+04:45 
+
+04:45 look at some of their 3D characters and
+04:47 
+
+04:47 props along with how the CG models and
+04:49 
+
+04:49 effects hold up perfectly with the 2D
+04:51 
+
+04:51 textures and compositing workflows they
+04:53 
+
+04:53 utilize. For shows like Land of the
+04:55 
+
+04:55 Lustrous,
+04:57 
+
+04:57 which was a manga adaptation from Haruko
+04:59 
+
+04:59 Ichikawa,
+05:00 
+
+05:00 the CG production flow had not yet been
+05:02 
+
+05:02 established. So, they spent about a year
+05:05 
+
+05:05 learning about technique production
+05:06 
+
+05:06 methods of CG from other CG animation
+05:09 
+
+05:09 production companies.
+05:10 
+
+05:10 Eiji Inamoto, being a jack of all
+05:12 
+
+05:12 trades, was tasked with their first
+05:13 
+
+05:13 attempt at creating a work using full
+05:15 
+
+05:15 CG.
+05:17 
+
+05:17 Up until then, Orange had been producing
+05:18 
+
+05:18 battle sequences for other companies,
+05:21 
+
+05:21 handling about 100 out of 300 shots per
+05:23 
+
+05:23 episode. However, this time it was
+05:25 
+
+05:25 around 280 shots for an entire episode
+05:28 
+
+05:28 with 12 episodes in a season, something
+05:30 
+
+05:30 that was an unprecedented volume for the
+05:31 
+
+05:31 company. CG not only gave a unique
+05:34 
+
+05:34 visual to Orange, but also reduced
+05:36 
+
+05:36 overall costs.
+05:38 
+
+05:38 They utilized Marvelous Designer to get
+05:39 
+
+05:39 the initial sim, and then added some
+05:41 
+
+05:41 stylization to get the 2D look they
+05:43 
+
+05:43 wanted.
+05:45 
+
+05:45 Especially when it came to the visual
+05:46 
+
+05:46 representation of the gemstone hair,
+05:49 
+
+05:49 which was rendered in V-Ray to capture
+05:51 
+
+05:51 the reflections and refractions. Various
+05:53 
+
+05:53 tests were created for the effect on the
+05:55 
+
+05:55 hair and the sparkling effect on the
+05:57 
+
+05:57 neck and shoulders.
+05:59 
+
+05:59 They also simplified the look so that
+06:00 
+
+06:00 it's not fully transparent, but looks
+06:02 
+
+06:02 transparent. So, background reflections
+06:04 
+
+06:04 and the shape of the head are not
+06:06 
+
+06:06 visible through the hair. They created
+06:08 
+
+06:08 Cinnabar's hair with geometry so they
+06:10 
+
+06:10 could easily control the movement in the
+06:12 
+
+06:12 simulation.
+06:13 
+
+06:13 For Diamond's hair, the test included
+06:15 
+
+06:15 making colorless, transparent, and hard
+06:17 
+
+06:17 like a real diamond with iridescent
+06:19 
+
+06:19 highlights along with refractions and
+06:21 
+
+06:21 reflection within the hair.
+06:23 
+
+06:23 Needle-shaped crystals were added for
+06:25 
+
+06:25 Rutile's hair.
+06:27 
+
+06:27 Round highlights were a distinctive
+06:28 
+
+06:28 feature that were necessary for
+06:30 
+
+06:30 Morganite's hair.
+06:32 
+
+06:32 For the snail of Ventricosus,
+06:34 
+
+06:34 they used Substance Painter to create an
+06:36 
+
+06:36 otherworldly, unsettling feel, removing
+06:39 
+
+06:39 the gradation tones found in cell
+06:40 
+
+06:40 animation.
+06:41 
+
+06:41 They wanted to be sure they could create
+06:43 
+
+06:43 a delicate balance, highlighting the
+06:45 
+
+06:45 differences in light and shadow while
+06:47 
+
+06:47 controlling brightness and gradation
+06:49 
+
+06:49 using self-illumination.
+06:52 
+
+06:52 Lots of trial and error were required to
+06:53 
+
+06:53 get the look just right.
+06:56 
+
+06:56 They also created a slug version of the
+06:57 
+
+06:57 character.
+06:59 
+
+06:59 To achieve the opening, they mix Cinema
+07:01 
+
+07:01 4D utilizing some Python, After Effects
+07:04 
+
+07:04 for the background graphics,
+07:06 
+
+07:06 and used the concept of Voronoi
+07:07 
+
+07:07 tessellation where the triangular
+07:09 
+
+07:09 polygons overlap to achieve a
+07:11 
+
+07:11 mathematics animated shapes theme.
+07:14 
+
+07:14 Substance Painter was used on projects
+07:16 
+
+07:16 like Godzilla Singular Point to get
+07:19 
+
+07:19 realistic textures on the creatures,
+07:21 
+
+07:21 much like all major 3D characters are
+07:23 
+
+07:23 created in today's AAA pipelines.
+07:26 
+
+07:26 Mixing Substance Painter really adds
+07:28 
+
+07:28 that extra layer of texture to the
+07:29 
+
+07:29 creatures, giving them more dimension
+07:31 
+
+07:31 than if they were just simply toon
+07:32 
+
+07:32 shaded.
+07:34 
+
+07:34 Some simpler techniques were applied
+07:35 
+
+07:35 onto your side, but still gives some
+07:37 
+
+07:37 really great results, especially on the
+07:39 
+
+07:39 full body seen here. Is it your dream to
+07:41 
+
+07:41 someday work for a major animation
+07:43 
+
+07:43 studio or master the Japanese manga and
+07:45 
+
+07:45 anime pipelines? If not, feel free to
+07:47 
+
+07:47 skip ahead to the next section or stick
+07:49 
+
+07:49 around if you're just curious about how
+07:51 
+
+07:51 the masters build these worlds and what
+07:53 
+
+07:53 they look for an artist they want to
+07:54 
+
+07:54 hire. Orange Company's Inamoto stated it
+07:57 
+
+07:57 takes over 1,000 shots or at least 5
+07:59 
+
+07:59 years to become a master of animation.
+08:01 
+
+08:01 And that's why we fast-track you on how
+08:02 
+
+08:02 to get that growth, quality, and speed
+08:05 
+
+08:05 in your own animations.
+08:06 
+
+08:06 We create videos like this one to show
+08:08 
+
+08:08 you how top-tier 2D and 3D features are
+08:10 
+
+08:10 made and to give you the exact workflows
+08:12 
+
+08:12 you need for your own career or personal
+08:14 
+
+08:14 projects. Here in the West, traditional
+08:16 
+
+08:16 art schools often push anime and manga
+08:18 
+
+08:18 completely to the side. They skip the
+08:20 
+
+08:20 soul of the Japanese pipeline, things
+08:23 
+
+08:23 like specialized panel work, inking,
+08:25 
+
+08:25 screen tones, and the storytelling
+08:27 
+
+08:27 techniques used by Shonen Jump pros.
+08:30 
+
+08:30 That is exactly why Class Crates
+08:31 
+
+08:31 partnered with Deo Japan to build our
+08:33 
+
+08:33 intro to manga, the Japan Experience
+08:35 
+
+08:35 Masterclass. Taking you directly inside
+08:38 
+
+08:38 Tokyo's top pipelines.
+08:40 
+
+08:40 But the best anime relies on strong 2D
+08:42 
+
+08:42 and 3D fundamentals. That's why we don't
+08:44 
+
+08:44 just stop at manga. Several of our
+08:46 
+
+08:46 instructors have shipped projects for
+08:47 
+
+08:47 massive studios like Disney and Sony and
+08:50 
+
+08:50 you can learn from them in our courses
+08:51 
+
+08:51 covering everything from animation and
+08:53 
+
+08:53 rigging to environment and game design
+08:55 
+
+08:55 and character creation. We'll have some
+08:57 
+
+08:57 links in the description if you're
+08:58 
+
+08:58 interested in taking your art in a new
+08:59 
+
+08:59 direction with us. Now that we've looked
+09:01 
+
+09:01 into the state-of-the-art approach
+09:03 
+
+09:03 Studio Orange takes to create their
+09:04 
+
+09:04 characters, let's look at their 2D
+09:06 
+
+09:06 pipeline.
+09:08 
+
+09:08 Yuichi Nishikawa, one of the concept
+09:10 
+
+09:10 artist at Orange, shared that one of the
+09:12 
+
+09:12 requirements was that even if the
+09:14 
+
+09:14 concepts work as a picture, you can't
+09:16 
+
+09:16 always produce the colors when rendered
+09:18 
+
+09:18 in 3D. So, he had to be very meticulous
+09:20 
+
+09:20 about making sure everything worked
+09:22 
+
+09:22 together when he would design.
+09:24 
+
+09:24 They plan out their shots traditionally
+09:25 
+
+09:25 with storyboards and even animate them
+09:27 
+
+09:27 to plan out the CG action.
+09:29 
+
+09:29 Traditional style animatic storyboards
+09:32 
+
+09:32 are also used and even mix in some very
+09:34 
+
+09:34 basic 3D characters and environments
+09:36 
+
+09:36 mixed in with the drawings.
+09:38 
+
+09:38 The style of storyboards changes a bit
+09:40 
+
+09:40 based on the show's production needs and
+09:42 
+
+09:42 the director's artistic vision.
+09:44 
+
+09:44 It's fascinating to see how the 2D
+09:47 
+
+09:47 planning goes to 3D and final render
+09:49 
+
+09:49 with these shots here from Trigun
+09:50 
+
+09:50 Stampede where the timing is virtually
+09:52 
+
+09:52 one-to-one.
+09:54 
+
+09:54 Sometimes the shots rendered mixed with
+09:56 
+
+09:56 the raw 2D pencil test are favorites to
+09:58 
+
+09:58 watch as it's a mix of the blueprints of
+10:00 
+
+10:00 the art and what the final render's
+10:02 
+
+10:02 potential is leaving up to the
+10:04 
+
+10:04 imagination. The shots on Godzilla are
+10:06 
+
+10:06 fascinating to see how they take the 3D
+10:08 
+
+10:08 CG elements and add the effects and 2D
+10:11 
+
+10:11 details and textures to get that perfect
+10:13 
+
+10:13 mix of stylization so it doesn't just
+10:16 
+
+10:16 read as a 3D animated shot.
+10:18 
+
+10:18 Everything from the creatures, the
+10:20 
+
+10:20 fluids, and environments go through
+10:22 
+
+10:22 multiple layers of detail to achieve
+10:23 
+
+10:23 that textured hand-painted feeling.
+10:26 
+
+10:26 Let's look now at some of the simpler
+10:28 
+
+10:28 shots in To Your Side and Home
+10:30 
+
+10:30 that also have underlying CG characters
+10:33 
+
+10:33 with unique appealing final 2D results.
+10:35 
+
+10:35 The textures and 2D elements can
+10:37 
+
+10:37 completely change the feeling of the
+10:39 
+
+10:39 style. Something that typical 3D doesn't
+10:42 
+
+10:42 really achieve unless a similar
+10:43 
+
+10:43 technique is applied. Not only does
+10:45 
+
+10:45 Studio Orange use CG, but they also
+10:47 
+
+10:47 implement traditional paintings like
+10:49 
+
+10:49 watercolor to give even more texture to
+10:51 
+
+10:51 the project.
+10:52 
+
+10:52 Physical 3D models were even created for
+10:55 
+
+10:55 Beastars as drawing reference for the
+10:57 
+
+10:57 second season. And Michi Akedo's stop
+10:59 
+
+10:59 motion intro made sure that the dyes in
+11:02 
+
+11:02 the fur along with the silk and man-made
+11:04 
+
+11:04 acrylic fibers were conveyed accurately
+11:06 
+
+11:06 to the watercolor art that was used in
+11:08 
+
+11:08 the manga covers.
+11:10 
+
+11:10 Since dyes were made by hand, the stains
+11:12 
+
+11:12 helped give depth to the colors of the
+11:13 
+
+11:13 fur. Well, that about wraps up this
+11:15 
+
+11:15 video on how Inamoto's Orange Company
+11:18 
+
+11:18 emphasizes the appearance and feel of
+11:20 
+
+11:20 hand-drawn animation using
+11:21 
+
+11:21 state-of-the-art CG workflows and
+11:23 
+
+11:23 techniques.
+11:24 
+
+11:24 His goal of making characters move
+11:26 
+
+11:26 differently from video games and not
+11:27 
+
+11:27 feel like a traced 2D animation is
+11:30 
+
+11:30 something fresh and unique that has
+11:31 
+
+11:31 definitely contributed to modern day 3D
+11:34 
+
+11:34 and 2D workflows in anime as well as
+11:36 
+
+11:36 here in the west.
+11:38 
+
+11:38 And although Orange started with CG
+11:39 
+
+11:39 Mecca, they have transitioned perfectly
+11:41 
+
+11:41 into doing full characters all the way
+11:43 
+
+11:43 down to how they treat their animation
+11:45 
+
+11:45 frame rates to create genuine and unique
+11:47 
+
+11:47 character performances. It's awesome to
+11:49 
+
+11:49 see that Inamoto's inspiration from
+11:51 
+
+11:51 Western animation such as Disney and
+11:53 
+
+11:53 Pixar now have gone full circle where
+11:56 
+
+11:56 he's directly influencing Western 3D
+11:58 
+
+11:58 studios and their approach to 3D 2D
+12:00 
+
+12:00 hybrid style animation.
+12:02 
+
+12:02 As always, we want to thank Hobs for
+12:04 
+
+12:04 collaborating with us, opening his
+12:05 
+
+12:05 archives so we can share with you
+12:07 
+
+12:07 exactly what happens behind the scenes
+12:09 
+
+12:09 when Japan creates their 2D and 3D
+12:11 
+
+12:11 masterpieces. And although Inamoto
+12:13 
+
+12:13 stated there's no specific scene he's
+12:15 
+
+12:15 particularly fond of and that every shot
+12:18 
+
+12:18 has the same equal level of importance
+12:20 
+
+12:20 when he does his checks,
+12:21 
+
+12:21 we still would like to know, what is
+12:23 
+
+12:23 your favorite shot and project from
+12:25 
+
+12:25 Orange? And what else would you like to
+12:27 
+
+12:27 see from us next?
+12:28 
+
+12:28 Let us know your thoughts in the
+12:29 
+
+12:29 comments.
+12:34 
+
+12:34 And uh don't forget to like and
+12:35 
+
+12:35 subscribe
+12:36 
+
+12:36 >> [music]
+12:36 
+
+12:36 >> and we'll see you in the next one.
+12:37 
+
+12:37 >> Perfect.

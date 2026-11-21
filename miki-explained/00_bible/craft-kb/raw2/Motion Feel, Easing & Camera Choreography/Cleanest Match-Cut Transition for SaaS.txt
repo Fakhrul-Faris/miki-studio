@@ -1,0 +1,802 @@
+00:00 In this Da Vinci Resolve tutorial, we'll
+00:03 
+
+00:03 learn how to create a smooth, seamless
+00:05 
+
+00:05 [music] match cut transition that's
+00:07 
+
+00:07 always used in SAS explainers and
+00:09 
+
+00:09 premium motion graphics. And in the last
+00:11 
+
+00:11 [music] section of the video, I'll teach
+00:13 
+
+00:13 you how to do shape morphing using the
+00:15 
+
+00:15 same technique. So, you better stick
+00:17 
+
+00:17 till the end. There [music] is also a
+00:19 
+
+00:19 free plugin in the video. Let's begin.
+00:22 
+
+00:22 All right. So, I'm inside Fusion. Let's
+00:24 
+
+00:24 first add a background. So, I'll drag
+00:26 
+
+00:26 this background node and connect it to
+00:28 
+
+00:28 the media out. After that, select this
+00:30 
+
+00:30 background node and change its color to
+00:32 
+
+00:32 dim white.
+00:34 
+
+00:34 After that, get a text node from here
+00:37 
+
+00:37 and connect it to the output of this
+00:39 
+
+00:39 background node. It'll automatically add
+00:41 
+
+00:41 in a merge here. Then, select the text
+00:43 
+
+00:43 node and write your text. Then, change
+00:45 
+
+00:45 its font. I'm using SF Pro Display Font.
+00:49 
+
+00:49 And head over to the shading tab and
+00:52 
+
+00:52 change the type to gradient. You can
+00:54 
+
+00:54 skip this part if you just want to use
+00:56 
+
+00:56 regular colors. To change the colors of
+00:58 
+
+00:58 the gradient, click on these little
+00:60 
+
+00:60 triangles and choose any color you like.
+01:04 
+
+01:04 But I want this gradient only on the
+01:06 
+
+01:06 first word, not on the second one. To
+01:08 
+
+01:08 fix that, right click in the text box
+01:11 
+
+01:11 and select character level styling. Head
+01:13 
+
+01:13 over to the modifiers tab and on the
+01:15 
+
+01:15 preview window, drag select the second
+01:18 
+
+01:18 word. Didn't work. That's because you
+01:21 
+
+01:21 have to select the text node. It would
+01:23 
+
+01:23 select now. Then go to the shading tab
+01:25 
+
+01:25 and set it to solid. You can use this
+01:27 
+
+01:27 exact method to customize different
+01:29 
+
+01:29 words in a single text node. All right,
+01:32 
+
+01:32 now our text is ready to animate. First,
+01:34 
+
+01:34 let's add in a wordbyword animation.
+01:36 
+
+01:36 Head over to the modifiers menu. Go to
+01:39 
+
+01:39 the text tab,
+01:41 
+
+01:41 rightclick, and select follower. Now, go
+01:44 
+
+01:44 to the transform tab and change the
+01:46 
+
+01:46 transform to words instead of
+01:48 
+
+01:48 characters. Then, make sure you're on
+01:50 
+
+01:50 frame zero and add a key frame to offset
+01:52 
+
+01:52 Y value. It'll kick you out of the
+01:54 
+
+01:54 follower tab. Just double click on
+01:56 
+
+01:56 follower to go back. Now move your
+01:58 
+
+01:58 playhead to frame 15 and add another key
+02:02 
+
+02:02 frame. [music] Then go to the previous
+02:03 
+
+02:03 key frame by clicking this little arrow
+02:05 
+
+02:05 and decrease the Y value. Then go to
+02:08 
+
+02:08 timing and set delay to one. And we have
+02:12 
+
+02:12 this animation, but it looks like
+02:14 
+
+02:14 We'll fix that by going to the spline
+02:16 
+
+02:16 editor here. First make sure that show
+02:18 
+
+02:18 only selected tools option is selected.
+02:21 
+
+02:21 So we deal only with the key frames of
+02:23 
+
+02:23 the selected node. Then select the text.
+02:27 
+
+02:27 Hittrl [music]
+02:27 
+
+02:27 + f on your keyboard to see the key
+02:30 
+
+02:30 frames. Ctrl + a to select all.
+02:33 
+
+02:33 Rightclick ease and select out cubic.
+02:36 
+
+02:36 Close the spline editor. Then go to the
+02:38 
+
+02:38 shading tab and add key frame to opacity
+02:41 
+
+02:41 at frame zero. Add another key frame at
+02:43 
+
+02:43 frame 15. Go to the first key frame. Set
+02:46 
+
+02:46 opacity to zero. And our wordby word
+02:48 
+
+02:48 animation is done.
+02:52 
+
+02:52 Now I'll show you how to do the seamless
+02:54 
+
+02:54 cut transition. Go to a few frames
+02:56 
+
+02:56 before the wordbyword animation is about
+02:59 
+
+02:59 to end. Select the text node and add a
+03:02 
+
+03:02 transform node by clicking here and set
+03:05 
+
+03:05 a key frame to its size.
+03:08 
+
+03:08 Move your playhead about 20 frames ahead
+03:10 
+
+03:10 and add another key frame and decrease
+03:13 
+
+03:13 the size by a lot. Then open the spline
+03:15 
+
+03:15 editor and this is where the magic
+03:17 
+
+03:17 happens. Select all key frames and click
+03:20 
+
+03:20 here or simply press S to smooth the
+03:22 
+
+03:22 curve. Then press T on your keyboard to
+03:25 
+
+03:25 see the in-n-out values. Now increase
+03:28 
+
+03:28 these values to around 70 or 80 each so
+03:31 
+
+03:31 that we have a sharp peak in the curve.
+03:33 
+
+03:33 Meaning it'll be very slow at the
+03:35 
+
+03:35 beginning and ending but will be really
+03:37 
+
+03:37 fast in mid and that's where we'll make
+03:39 
+
+03:39 the cut.
+03:41 
+
+03:41 All right. Now let's add our second
+03:43 
+
+03:43 text. Customize it however you want.
+03:48 
+
+03:48 then add a transform after [music] the
+03:50 
+
+03:50 text.
+03:51 
+
+03:51 Now we will do the same animation we did
+03:53 
+
+03:53 in this transform node.
+03:57 
+
+03:57 So I'll add key frames for the size on
+03:59 
+
+03:59 the same frames.
+04:03 
+
+04:03 And on the last key frame I'll leave it
+04:05 
+
+04:05 as it is. But on the first key frame
+04:07 
+
+04:07 I'll increase its size to give it a zoom
+04:09 
+
+04:09 out animation as well. And in the spline
+04:12 
+
+04:12 editor repeat the same process and make
+04:14 
+
+04:14 it a sharp curve. Now to do the seamless
+04:17 
+
+04:17 transition between them, go to the
+04:19 
+
+04:19 middle key frame of this animation
+04:21 
+
+04:21 because the animation is the fastest at
+04:23 
+
+04:23 this point. Then select the merge of the
+04:25 
+
+04:25 first text and [music] open the key
+04:27 
+
+04:27 frame panel. You won't see anything here
+04:29 
+
+04:29 because we first need to add a random
+04:31 
+
+04:31 key frame in the merge node. Remember
+04:34 
+
+04:34 this key frame doesn't serve any purpose
+04:36 
+
+04:36 except activating the key [music] frame
+04:37 
+
+04:37 panel of the merge. Now you'll see this
+04:40 
+
+04:40 white layer. Drag this layer from the
+04:42 
+
+04:42 right to the playhead like this. And do
+04:44 
+
+04:44 the exact opposite in the second merge.
+04:47 
+
+04:47 Select it and add a random key frame.
+04:49 
+
+04:49 Open the key frame panel and drag it
+04:51 
+
+04:51 from the left side to the play head.
+04:55 
+
+04:55 And now if you play it,
+04:58 
+
+04:58 you have this smooth seamless cut that's
+05:01 
+
+05:01 always used in premium edits.
+05:06 
+
+05:06 Let's do one more, but this time instead
+05:08 
+
+05:08 of zoom out, we will do a left slide
+05:10 
+
+05:10 transition. And this time, instead of
+05:12 
+
+05:12 another text, we will use a logo of Da
+05:14 
+
+05:14 Vinci Resolve. All right, let's get to
+05:17 
+
+05:17 work. First, go back a few frames from
+05:19 
+
+05:19 where our previous animation ends to
+05:21 
+
+05:21 maintain the flow and add another
+05:23 
+
+05:23 transform and add key frame to center
+05:25 
+
+05:25 values.
+05:27 
+
+05:27 Then go about 30 frames forward and add
+05:30 
+
+05:30 another key frame. And on this key
+05:32 
+
+05:32 frame, drag the X value to the left.
+05:35 
+
+05:35 Then go to the spline editor and make
+05:37 
+
+05:37 the sharp curve.
+05:48 
+
+05:48 Now add a Da Vinci logo and connect it
+05:51 
+
+05:51 after this merge. Add a transform node
+05:54 
+
+05:54 and decrease its size.
+05:59 
+
+05:59 Now we will do the same animation we did
+06:01 
+
+06:01 in the second transform node of this
+06:03 
+
+06:03 text to match the movement.
+06:06 
+
+06:06 Add key frames to center values.
+06:10 
+
+06:10 And on the first key frame, drag the X
+06:13 
+
+06:13 value to the right side
+06:17 
+
+06:17 so they move in the same direction.
+06:20 
+
+06:20 Open spline and make the same curve.
+06:25 
+
+06:25 And you know what to do now. Go to the
+06:27 
+
+06:27 middle key frame of the animation.
+06:29 
+
+06:29 Select the merge of this text. Open the
+06:31 
+
+06:31 key frame panel
+06:34 
+
+06:34 and trim it from the right side.
+06:36 
+
+06:36 Then select this Da Vinci Resolve merge
+06:38 
+
+06:38 and open the key frame tab and yep, add
+06:41 
+
+06:41 a random key frame first to activate
+06:43 
+
+06:43 [music] the key frame panel and trim
+06:46 
+
+06:46 this layer from the left side.
+06:50 
+
+06:50 Now let's see how it's looking.
+06:57 
+
+06:57 Damn, this looks super smooth, right?
+07:00 
+
+07:00 And to make it look even smoother, let's
+07:02 
+
+07:02 add motion blur. So, select every key
+07:05 
+
+07:05 frame that has animation and in the
+07:07 
+
+07:07 inspector tab, go to setting and enable
+07:09 
+
+07:09 motion blur.
+07:12 
+
+07:12 If you forgot which node has animation
+07:14 
+
+07:14 and which doesn't, just look at the
+07:16 
+
+07:16 node. And if you see this little key
+07:18 
+
+07:18 frame icon on the right side of the
+07:20 
+
+07:20 node, it means it has animation.
+07:33 
+
+07:33 It's looking much better now.
+07:37 
+
+07:37 All right. Now, I'll teach you guys how
+07:38 
+
+07:38 to do shape morphing using this
+07:40 
+
+07:40 technique. To those who don't know what
+07:42 
+
+07:42 shape morphing is, it basically is a
+07:44 
+
+07:44 visual effects technique that creates a
+07:46 
+
+07:46 smooth, seamless transition from one
+07:48 
+
+07:48 shape or object to another. So, we have
+07:51 
+
+07:51 a new comp and I already have this
+07:53 
+
+07:53 background node connected. To do shape
+07:55 
+
+07:55 morphing, we first need some shapes. For
+07:57 
+
+07:57 that, I'm going to use a free plugin
+07:59 
+
+07:59 made by my good friend Ravise. You can
+08:02 
+
+08:02 create custom shapes using this plugin.
+08:04 
+
+08:04 But first, we need to feed it a
+08:06 
+
+08:06 background node.
+08:08 
+
+08:08 Then connect it after this background
+08:10 
+
+08:10 node. Here we have an oval, but I need a
+08:12 
+
+08:12 circle. So, I'll go to set and increase
+08:16 
+
+08:16 the X scale.
+08:18 
+
+08:18 Now I'll go back to controls and if you
+08:20 
+
+08:20 decrease this squirle value, you'll get
+08:22 
+
+08:22 this star shape that you see everywhere
+08:24 
+
+08:24 nowadays.
+08:27 
+
+08:27 You can also decrease its size or change
+08:30 
+
+08:30 its position from here. But we will use
+08:32 
+
+08:32 a separate transform node for that. So
+08:35 
+
+08:35 add a transform node and decrease its
+08:38 
+
+08:38 size
+08:41 
+
+08:41 and place it on the left side of the
+08:43 
+
+08:43 screen. Now we'll need another shape to
+08:45 
+
+08:45 morph this star shape into. For that,
+08:48 
+
+08:48 copy these two nodes and paste them here
+08:50 
+
+08:50 and connect it after this merge. And for
+08:52 
+
+08:52 the second shape, I'll uncheck this
+08:54 
+
+08:54 squirle. And now you have control over
+08:56 
+
+08:56 almost everything. I'll play with these
+08:58 
+
+08:58 settings to create a flower-like shape.
+09:01 
+
+09:01 Wow, just look how cool this plugin is.
+09:04 
+
+09:04 I created this four leaves clover within
+09:06 
+
+09:06 seconds. All right, I'll use this as the
+09:08 
+
+09:08 second shape. Okay, now make some space
+09:11 
+
+09:11 and copy this transform node and hit
+09:13 
+
+09:13 controll + shift +v on your keyboard to
+09:16 
+
+09:16 create an instance of this transform
+09:18 
+
+09:18 node. And while holding shift, connect
+09:21 
+
+09:21 [music] this instance after this node.
+09:23 
+
+09:23 And as you can see, the flower snapped
+09:25 
+
+09:25 on the star. It even has the same size
+09:27 
+
+09:27 as the star because we're using an
+09:29 
+
+09:29 instance node. Now let's animate the
+09:32 
+
+09:32 shapes. Select the original transform
+09:34 
+
+09:34 node. You can also animate the instance
+09:36 
+
+09:36 instead of the original. It doesn't
+09:38 
+
+09:38 matter. On frame zero, add a key frame
+09:41 
+
+09:41 to the center values. Move your playhead
+09:43 
+
+09:43 to frame 30 and add another key frame.
+09:46 
+
+09:46 And on this key frame, drag the X value
+09:48 
+
+09:48 to the right.
+09:50 
+
+09:50 Now, open the spline editor and make a
+09:53 
+
+09:53 sharp curve as always.
+09:57 
+
+09:57 And because we used an instance, we
+09:59 
+
+09:59 don't need to animate the other one.
+10:03 
+
+10:03 And we have this animation.
+10:07 
+
+10:07 It isn't looking natural. So, let's add
+10:09 
+
+10:09 some rotation as well. Select the
+10:12 
+
+10:12 transform node and on frames 0 and 30,
+10:14 
+
+10:14 add a key frame to angle. Then go to the
+10:17 
+
+10:17 first key frame and change the angle to
+10:19 
+
+10:19 about 200°. Go to the spline, uncheck
+10:22 
+
+10:22 center key frames, and check angle
+10:25 
+
+10:25 and do the curve thing.
+10:31 
+
+10:31 It's looking amazing now. And now you
+10:34 
+
+10:34 know what to do. Go to the middle of the
+10:36 
+
+10:36 animation and select this first merge.
+10:39 
+
+10:39 Open the key frame panel and psych add a
+10:42 
+
+10:42 key frame first. Then trim it from the
+10:45 
+
+10:45 right side.
+10:48 
+
+10:48 And do the exact opposite to the second
+10:50 
+
+10:50 merge. Trim it from the left side.
+10:55 
+
+10:55 And this is how shape morphing looks
+10:57 
+
+10:57 like.
+11:04 
+
+11:04 And again to make it look even smoother,
+11:06 
+
+11:06 select the transform nodes and enable
+11:09 
+
+11:09 motion blur.
+11:13 
+
+11:13 And that's it. That's how you can create
+11:15 
+
+11:15 smooth, seamless transitions and make
+11:17 
+
+11:17 your edits look premium and use the same
+11:20 
+
+11:20 technique to do shape morphing. I hope
+11:22 
+
+11:22 you got to learn something new from this
+11:24 
+
+11:24 video. And if you did, then like the
+11:26 
+
+11:26 video and subscribe the channel. Till
+11:28 
+
+11:28 then, [music] keep grinding.

@@ -1,0 +1,1091 @@
+00:00 okay so in this video I'm going to show
+you how I made this cyber Japan style
+00:03 vender so I'll start off by showing you
+how I modeled everything and hopefully
+00:06 break that down in a way that is very
+easy to understand and can hopefully
+00:10 show you that it's actually not too bad
+to make stuff like this at all on your
+00:12 own next I'll show you my simple
+texturing setup where I just use really
+00:15 basic materials to texture everything
+and then finally we'll move on to the
+00:18 actual scene where I show you the
+lighting and how I put it all together
+00:21 and got like the final image so let's
+start with the modeling breakdown the
+00:25 probably the most complicated part and
+uh hopefully we'll simplify that in a
+00:29 way that's it's actually quite easy to
+understand so let's just start with
+00:31 that okay so for the actual project file
+it's running in cycles for this demo
+00:36 test file right here that I'll just show
+you as an example I'm running Eevee just
+00:39 to make it really fast and snappy just
+to show you around the scene so let's
+00:43 start with this thing here so this looks
+really complicated and hard to make but
+00:46 I'll try and break this down in a way
+that's actually pretty straightforward
+00:50 not necessarily super easy to just make
+instantly but straightforward and fairly
+00:55 simple okay so basically um I think I
+should start I should start with this
+00:59 one right here because if you can
+understand how to make this right here
+01:03 this big one is basically just this you
+know doing this like five
+01:09 times like that's basically what this is
+it's just one level mostly duplicated
+01:14 with some variation here and there but
+for the most part it's just taking one
+01:18 of those and then duplicating it upwards
+on top of
+01:21 itself okay so let's take a closer look
+at this and try and break this down into
+01:25 its fundamental components which are
+actually not that bad at all so I've
+01:30 separated out the roof here from the
+kind of Base I kind of think of this as
+01:34 two main sections there's like the roof
+uh sections and then the the actual like
+01:40 building Square sections so if I just
+separate that out into two parts let's
+01:44 take a look at this half first because
+if you can understand how to make this
+01:48 um it just leaves the only hard part as
+this roof here and this is actually a
+01:53 fairly straightforward problem to solve
+as well so let's take a look at this um
+01:59 you might still think this looks
+complicated with all this all this
+02:01 detail in here but I bet you could
+actually probably make all this stuff in
+02:05 here and I'll just try and show you that
+right now if I take for example some
+02:09 detail piece on here I've just also
+separated this out into which it's uh
+02:13 like individual objects uh just to
+really show you kind of how I structure
+02:17 this so for example if I take some some
+like trim piece like this and I just
+02:21 duplicate this out just to show you what
+this is this is um something like this
+02:28 and if I if I actually go a level deeper
+I'll just kind of show you exactly what
+02:31 this is I've just separated this out
+even further into like a few smaller
+02:36 pieces like this um so if we break this
+down to its smallest level it's it's
+02:40 stuff like this it's
+um like I bet you could make this um
+02:46 fairly easily and I I'll show you right
+now just to kind of demonstrate what
+02:49 this is exactly if I just take a cube
+and I don't want to um show you just
+02:55 exactly what to do here I'm just trying
+to illustrate the point that all like
+02:58 when it comes down to its most basic
+levels here everything is fairly simple
+03:02 shapes put together so what I'm doing
+here um when I was making this I was
+03:06 definitely looking at this mood board
+here so I just dropped in a bunch of
+03:09 images of like this kind of stuff a few
+of these images are stuff that like
+03:13 photos that I took when I was in Japan
+and some of these are from
+03:16 unsplash um but basically when I was
+making this I was looking at like
+03:20 zooming way in here looking at all these
+little details and trying to figure out
+03:22 like okay what are the repeating shapes
+what's the easiest way I can kind of
+03:26 recreate those shapes and then use those
+to just duplicate around a bunch of
+03:29 times to get as much detail as I
+can so I'm not I'm not suggesting you
+03:35 recreate the exact shape I'm showing
+here I'm just showing you what I was
+03:38 doing as an an example of how to
+recreate like the kind of stuff that
+03:43 you're seeing in any reference whatever
+it may be okay so uh if we're going to
+03:47 make something like this for example we
+could take a a cube let's just extrude
+03:51 it out this way um maybe extrude out a
+little piece like this extrude this up
+03:57 extrude it up again let's just take this
+here I'll just extrude that right click
+04:00 to just cancel the transform scale it
+out like this you can see where we're
+04:06 going let's take this Edge right here
+and just going to Bevel that and then
+04:10 I'll just take this Edge and bevel that
+as well so I've already made this so I
+04:14 know exactly what to do to get that
+shape so it's going to take you a bit
+04:16 longer to figure out exactly how to make
+the the shapes that you're going for but
+04:20 the point is like to figure out
+something like this you could probably
+04:24 do it without any guides or help or
+anything like that just by looking at
+04:27 some picture and then trying to recreate
+the kind of detail that you're seeing
+04:31 out of basic shapes so then once you
+have you know this you can you know I
+04:35 was looking at this it's this is like
+repeating a lot um so I I just kind of
+04:39 took that and like rotated this this way
+let's let's just add a let's add a
+04:44 mirror modifier on
+this and then uh I'll just turn on
+04:48 clipping and I'll just delete that face
+on the end just so it's not overlapping
+04:54 there and that means if I just kind of
+Slam those together we get something
+04:57 like this and you can see how you know a
+very detailed little thing can come
+05:03 together pretty easily and pretty
+quickly if I just take this let's just
+05:08 move this in this way delete that maybe
+and you can see there now I have some
+05:13 like trim piece thing that I can
+use um and it this will look good like
+05:19 repeated all over the place on you know
+some Temple so if I come back here and
+05:23 we look at like all the details that are
+in here let me just go full screen
+05:26 here a lot of this stuff actually all
+this stuff fun mentally is quite simple
+05:32 shapes like if I just isolate any one
+object here um like it's it's all stuff
+05:38 that's pretty easy to make uh and pretty
+simple at its core level and then I've
+05:43 just gone to kind of like smaller and
+smaller scales and just added simple
+05:47 shapes um to fill in details and
+eventually um simple shapes put together
+05:54 adds up over over time to create
+something that looks more complex on the
+05:57 outside so for example if I just kind of
+isolate a couple more more pieces here a
+06:01 lot of the stuff is like really like you
+know not that complicated um and even if
+06:07 you don't know how to make any one of
+these specifically if you just
+06:11 experiment you could probably figure it
+out fairly easily right um a lot of the
+06:16 stuff is literally just different sizes
+of squares and cubes with some bevels
+06:21 and extrusions on
+it uh same thing with like the fence
+06:24 here like you know if I isolate any one
+piece it's all fairly you know fairly
+06:30 simple
+stuff and again if it if any one piece
+06:34 looks complicated like you don't
+understand it exactly how you would make
+06:37 it I I bet that even if you're somewhat
+of a beginner if you just tried you
+06:41 probably could figure out if you're just
+looking at a reference roughly how to
+06:45 get a similar sort of shape to what
+you're looking at just by adding basic
+06:49 shapes and kind of moving stuff
+around okay so that's that right there
+06:53 and you can see on the bottom too A lot
+of those similar uh or the same actually
+06:58 details repeated over and over again um
+and then just kind of layered on top of
+07:03 other pieces which are again um mostly
+just cubes with bevels and
+07:09 extrusions and yeah after layering
+enough of that and again the whole time
+07:13 when I when I was making this I'm
+looking at um that mood board that I had
+07:16 open earlier of just a bunch of
+different reference images I think I
+07:18 mainly was looking at one or two of
+these and going for a a certain kind of
+07:23 style mostly but um yeah if you just
+look at reference images just any image
+07:28 that you can reference as you're making
+something that makes it 10 times easier
+07:32 because you can just try to recreate um
+the the basic shapes that you're seeing
+07:36 there in just like with with basic cubes
+and stuff and that like eventually will
+07:41 lead to something that looks complex and
+let's move on to this here cuz this is
+07:44 where it gets a bit more complicated but
+still fairly
+07:48 straightforward
+um let me just let me just kind of show
+07:53 you I I'll I think the easiest way to
+show this is just walk you through how I
+07:57 made this short sort of shape here so
+when I was looking at these reference
+08:00 images I had the idea that actually
+worked pretty well of just kind of
+08:03 starting with the basic um un unaltered
+like unwarped version of this so the the
+08:11 kind of complex part of this is you have
+you know these these Corners that are
+08:16 kind of like um like folding upwards in
+this really interesting
+08:21 way and I'll show you how to do that in
+a second with proportional editing
+08:25 exactly how to do that but the basic
+idea was start with something that's
+08:28 actually just squared off and not um
+like folding up at the corners like that
+08:34 get all the details in there and then
+use proportional editing to kind of warp
+08:38 it into the exact shape that you want
+okay so I'm just taking a plane here
+08:42 I'll just explain what I'm doing taking
+a plane I'm going to inset this thing
+08:45 and then just kind of morph it into a
+basic pyramid shape again I'm like when
+08:50 I was making this I'm looking at
+references the whole time to kind of get
+08:53 the angles right to get the basic um uh
+proportions roughly right and all that
+08:59 kind of stuff
+it's a bit hard to show that while I'm
+09:02 also recording so I'm just going to have
+it off to the side but just know that um
+09:05 when I was making this I was 100%
+looking at that the entire time to get
+09:09 um a general idea of the the rough sort
+of shapes that I need to start with and
+09:14 the whole way through basically okay so
+um I'll start with something like this
+09:18 that's the rough shape of uh you know a
+starting point of that kind of roof and
+09:24 to get those kind of like I don't I
+don't know what you would call it like
+09:27 the the interesting details on the roof
+there with like all these uh I guess
+09:31 cylinders I'm just going to add a
+cylinder I'll actually just do that
+09:33 again here so I'm going to add a
+cylinder I'll I'll probably lower the
+09:36 vertices from 32 down to 16 because it's
+going to be really small you don't need
+09:42 that much geometry here and you want to
+keep it somewhat low poly so it's
+09:44 running
+smooth okay and I'll scale this up and
+09:48 just kind of make it like really long
+like this what I'm going to do I'll just
+09:53 kind of uh I'll actually just hit the
+slash key just to isolate that so that
+09:59 um all the other stuff is just hidden
+for a second and I'm going to take this
+10:03 probably makes more sense to do this
+side so I'll just go to side view and
+10:07 I'm just going to line this up with uh
+the roof
+10:11 roughly and the other thing I want to
+mention here is while I'm doing this
+10:16 this is not like the only way to do this
+this is I'm just showing you how I did
+10:20 it and how I kind of broke this down
+into the easiest way to work with but if
+10:24 you have a different approach or you see
+someone else with a different approach
+10:27 it it uh that could totally work like
+this is there's so many ways to get this
+10:32 kind of stuff and create things like
+this is just how I found what's the
+10:35 easiest way to break it down okay so
+what I did was I lined it up kind of
+10:39 roughly with this um does not need to be
+perfect at all just roughly right and
+10:44 what I did was just added an array
+modifier onto here I'm just going to
+10:48 increase that uh width to like two or
+something and I'm just going to increase
+10:53 the count as well I'll just do I don't
+know 32 or something something like that
+11:00 and then I'm just going to line this up
+here okay so something like that I'll
+11:04 just scale it down on the Z axis local Z
+axis so I'll have it kind of overhanging
+11:10 on the bottom a bit I'm not going to
+make this perfect because it's just an
+11:13 example of how I did this but anyway
+something like that um I'll actually
+11:18 just apply this array modifier uh before
+I do that let me add some geometry in
+11:22 here because we're going to be doing
+proportional editing and that only works
+11:26 if you have some extra geometry to work
+with like you can imagine if I start
+11:29 moving this around and I want it to be
+like a curve it's kind of hard to make a
+11:32 curve if there's only two points to work
+with so I'll just add some Loop Cuts in
+11:37 here uh and you know you don't need that
+many just a few is going to be enough
+11:41 just so that if I do have like a you
+know a curve in this it's going to
+11:44 actually look
+nice okay so I'll do that before I apply
+11:48 the array and I'll just apply that so we
+have this
+11:53 now um and what I'm going to do is just
+do a basic Boolean operation to cut out
+11:58 where it's kind of overlapping on on the
+sides so that I can get it all the way
+12:01 around the roof the way that I found was
+easiest to do that was just take um some
+12:05 faces on here I'll just duplicate that
+and then separate it with P to a new
+12:10 selection and by the way you can just
+see down here the buttons I'm clicking
+12:14 so separate that out to a new
+object so we just have this right here
+12:19 I'm going to take all this here I'm just
+going to extrude it straight up like
+12:23 that and looks a bit weird but it's fine
+um if I really want I can kind of like
+12:29 align it this way I'll just do that
+whatever that's
+12:34 fine okay so what I'm going to do is uh
+just select um I guess I'll select the
+12:40 cutter object so this thing shift select
+the roof so whenever you select there's
+12:48 two colors of the selection so really
+quick um whatever one you have selected
+12:54 last will be the lighter selection
+everything else is kind of like the
+12:58 darker selection ction so I'm going to
+have the roof with the lighter selection
+13:02 the cutter object with the darker
+selection I'm going to hit control minus
+13:07 it's the minus on the
+numpad and that is just going to cut
+13:12 away uh that box from the
+roof um if that does not work for you I
+13:18 believe this should be on by default but
+if it doesn't just go to edit
+13:21 preferences um in add-ons just search
+for bu Tool uh it's a default add-on
+13:27 that comes with blender it might be
+either in the the extensions section or
+13:31 if you don't see it in here just go to
+extensions search for the same thing and
+13:33 just turn it on but that's what lets you
+do that control
+13:37 minus okay so I'm going to apply that
+justr a to apply that and then this
+13:42 cutter thing I can just delete
+that and you can see now I can actually
+13:46 just take this I'm going to put the
+cursor in the middle of this thing so
+13:49 I'm just going to hit shift s and then
+cursor to selected I'm going to take
+13:53 this and then just move the pivot point
+to the cursor so that when I move stuff
+13:57 around it actually moves just from
+wherever the cursor is so shift s cursor
+14:02 to this thing and then I'll just hit alt
+D and then R and then I'll just rotate
+14:07 it 90° and then I'll just do that all
+the way
+14:12 around
+okay and you can see where we're going
+14:17 so you can go in and add as much detail
+as you want in here um I think I might
+14:22 you know another thing I did just to
+show you really quick I had some tiles
+14:25 on the side so the way you might do that
+is just I'll just do a really basic
+14:28 version um like the edges here look
+really messed up uh really not that
+14:33 clean if you look at the reference
+images of this you know all these things
+14:37 have some sort of Border running down
+the edge there to cover up um like the
+14:43 transition between the direction of the
+tiles so you could do something just do
+14:46 something really basic like take a
+little thing like this you know um I'll
+14:50 just do a little really quick take a
+little thing make a little like tiled
+14:57 thing I'll just add a bit of geometry
+there let's do do a bevel and an array
+15:02 and just array it this
+way and I'll just do like I don't know
+15:07 know eight or nine of them apply scale
+just shade Auto smooth Just Adjust that
+15:12 bevel so it's not so
+extreme what I'll do is just kind of
+15:16 line it up this way uh just put it like
+roughly in the right spot and then what
+15:22 you can do is just go to um like front
+view and then if you just hit like uh
+15:28 what is it six and six or four on the
+numpad like four will rotate it this way
+15:33 six rotates it this way um what you can
+do is actually just rotate the view so
+15:38 it lines up perfectly with like a 45°
+angle so if you're not sure you can just
+15:42 go into YF frame too and just kind of
+line it up until it like snaps into the
+15:47 right angle so what what it's what we're
+looking at is like this view right here
+15:50 right perfectly from the side so one and
+then hit six a few times to line it up
+15:55 like that and then now I can just go in
+and perfectly align this thing to like
+15:59 the 45° position on this roof here
+something like
+16:04 that and that's going to be pretty
+good just have it kind of somewhere in
+16:10 there like that and I'm just going to
+apply all the modifiers for that thing
+16:14 and this is my basic approach for the
+whole thing is basically just different
+16:17 versions of this right here let me go
+back to the 3D cursor uh make sure the
+16:22 cursor is on this thing and then I'll
+just hit uh alt d r
+16:26 z90 um if you do that all in one action
+you can actually just hit shift R to
+16:30 repeat the last action so that works
+there and then basically once you have
+16:35 some details I think I went in and did
+more stuff to like I did you know some
+16:38 extrusions on this and beveled this
+thing here and like repeated this a
+16:42 bunch of times and added like more
+variations and more detail and stuff but
+16:48 the basic idea is once you have whatever
+details you want just by looking at the
+16:52 reference image and trying to recreate
+whatever details you like there you can
+16:56 actually just select all this stuff it's
+all it's all loose objects still it's
+16:59 not even joined together and what's cool
+is you can go into edit mode for all
+17:02 these loose objects at once even though
+they're not even joined at all um I'll
+17:07 just deselect everything by just
+clicking off a dty space and I'm going
+17:11 to select some points I'll just pick
+some easy points so like the top point
+17:15 on this piece right here on I'll just
+select that on each corner so select
+17:19 that um before I do that I actually have
+to I'll just isolate this thing really
+17:24 quick um I should actually add some
+geometry in here just so that it can
+17:29 Warp a little bit so I'll just do like a
+few Cuts this way um I'll just do like
+17:33 seven on on each side there just so that
+when I do start warping this again it's
+17:37 not like just but like trying to warp
+between two points only so we do need a
+17:42 bit of resolution there um and did that
+happen on this one too no it didn't so
+17:46 I'll just delete that and duplicate this
+one okay good enough for this demo so we
+17:52 can take all the stuff uh in edit mode
+all at once as separate objects and if
+17:57 you just go and select the same kind of
+point on each corner so I'll just select
+18:01 like that top one there just cuz it's
+easy to grab so just grab this this this
+18:07 and
+this um if you just hit g z that's what
+18:11 we're doing but I'm going to turn on
+proportional editing which is this thing
+18:14 up here and you can see now that it's
+going to be very easy to get that kind
+18:19 of shape right there so you might try
+this and realize like okay this is not
+18:23 doing what I want um there's all these
+different modes in here of the way
+18:27 proportional editing will affect the
+shape of this so the one I found work
+18:30 best was this sharp one right here I'll
+just hit gz now and you can see that
+18:35 that that is the shape that we want
+right there right um something you can
+18:40 see those straight lines that are
+showing up there that means something is
+18:44 not subdivided enough so I'll have to go
+in and just check that like seems um I
+18:49 think probably like the underside of
+this yeah I forgot to add Loop Cuts
+18:53 there so let's just do that get out of
+here uh that should have applied to this
+18:57 one as well and now I can take that
+let's just go back in here I've got to
+19:01 reselect those points you could add a
+Vertex group and do it that way I'm just
+19:04 going to manually reselect it just like
+this and you can see if I just do
+19:11 proportional editing it affects all the
+objects exactly how you'd want it and
+19:15 you don't even have to have it joined
+together which is super nice because you
+19:17 can go in and edit all that stuff really
+easily later on so what I do here is
+19:22 just look at um I'll just kind of
+collapse this and open this back up look
+19:25 at the reference image and just kind of
+pay attention to how much it slopes it's
+19:29 actually not as much as you would think
+um so something pretty subtle like that
+19:34 is probably the right
+amount and it kind of flattens out in
+19:37 the middle too so something like that is
+probably fine and if we want we can kind
+19:41 of go in here take this kind of stuff
+and like maybe expand that up a little
+19:44 bit more this way something like that I
+don't know if it's actually doing that
+19:47 in the reference but looks cool there
+and that's how you get that
+19:51 shape and then so yeah the way I
+recommend this is like get as much
+19:56 detail as you can in there on the flat
+version and once you're happy with the
+19:59 amount of detail then go in and start
+warping it with proportional editing and
+20:03 then if you need to you can kind of go
+in and add more stuff later on from
+20:06 there but just get the basic thing kind
+of figured out before you start warping
+20:09 it around because it's really easy to
+array stuff in a straight line it's
+20:13 pretty hard to like array this thing in
+a in like a curved weird shape like this
+20:18 so that's why I did it in that order but
+yeah you can see now if you go back here
+20:23 it's just that plus a bit of extra work
+that you could probably figure out and
+20:28 honestly all this stuff around here I
+kind of just stumbled through and it's
+20:32 it's not like this was really super
+planned it's a lot of like really kind
+20:36 of odd oops odd shapes that are just
+kind of thrown together and um that I
+20:42 was hoping would kind of be convincing
+enough to look like something that would
+20:46 make sense but to be honest like a lot
+of the stuff was really um you know not
+20:51 not like super refined or anything it's
+just kind of like previous pieces
+20:55 slapped together into roughly the shape
+of like whatever was going on in the the
+20:59 side of this thing it took a few
+attempts too like it's not uh like I
+21:03 just did that on my first try like I'm
+showing in this demo the reason I'm
+21:07 going so fast here is because I've
+already made all this stuff so I kind of
+21:09 know how it all fits together but the
+first time I tried it it wasn't that
+21:13 smooth you know so anyways um yeah
+that's that's pretty much how the
+21:18 modeling came together and you can see
+that when we go from this and then you
+21:22 know combine that with some interesting
+details with some other basic shapes
+21:26 here and uh add more details to the roof
+roof and then combine that all together
+21:30 and then stack it vertically a bunch of
+times you know then you have something
+21:35 that makes more sense for for this like
+it's um if you can make one floor of
+21:40 this you could just repeat it a bunch of
+times and then join it together and then
+21:43 that's that okay I'm going to quickly
+show you the texturing here it's really
+21:46 simple um it's going to look a little
+bit complicated at first but it's it is
+21:50 actually quite simple um so if we look
+at something like this the the major one
+21:55 that I changed was the wood texture so
+this is actually all these text are just
+21:59 straight from poly Haven uh so you can
+get all of them from free from their
+22:03 website I'm using it from their add-on
+which is uh like 30 bucks or something
+22:08 and what it does is it just downloads
+the entire website catalog into the
+22:12 blender asset browser organizes it all
+automatically it's actually really nice
+22:16 I'm not like I have no partnership with
+them or anything like that I just use it
+22:19 because it's it's good um so what I've
+been doing is just they have this whole
+22:23 list of Textures in here I literally
+just dropped a wood texture from here
+22:28 right onto here
+and that is just um being slightly
+22:32 manipulated I'll just show you what it
+looks like as like the stock texture so
+22:36 um this
+is the
+22:39 um oh sorry let me go to this one just
+to make it really clear this is what
+22:44 like the default texture looks like is
+just like some random wood like this so
+22:48 all I'm doing is I'm just um going from
+going from this to making it a bit
+22:52 darker with a just a curves node like
+that um so that just you know making it
+22:58 slightly darker as you can see just
+doing that uh I'll just put that back
+23:03 and then what's going on up here is I'm
+actually just mixing in um so if we if
+23:09 we just kind of break this down let's
+just ignore this for now I'll talk about
+23:12 this in a second but we have the base
+color right here um which is just basic
+23:18 wood texture image that comes with a
+texture making it a bit darker so this
+23:22 is still basically the base color output
+right here that is getting mixed
+23:26 together with some other texture image
+right here which just um this is
+23:31 actually just another concrete image uh
+I think I just actually dropped in a
+23:36 concrete texture also from poly Haven
+and then just copied and pasted the base
+23:40 color map from that concrete texture
+into here just for some extra kind of
+23:44 dirt grunge kind of thing not the most
+realistic way to do it but it worked out
+23:47 fine for this but what this is is just
+this image right here getting mixed
+23:52 together just with a mixed color node
+with with that original uh wood base
+23:57 color here so the wood is going into
+slot a concrete is going into again
+24:02 going a bit darker going into slot B and
+then what determines the mix factor
+24:06 between those two things is actually
+just the concrete image itself so when
+24:09 you run it through a color amp and run
+it into the mix Factor we're just
+24:12 determining what gets mixed together
+with the brightness values of this image
+24:19 and you can see that right here if I
+just adjust the color ramp it's just
+24:22 we're saying okay the the bright parts
+of the concrete get mixed in and the
+24:25 dark Parts don't and there's other ways
+to mix it in you can change the mode
+24:29 here to whatever you want like I'm just
+kind of doing it this way just happen to
+24:32 be what I liked in this one but you can
+mix that together in any way you want um
+24:37 and that's what it's doing so if I mute
+this it's not even that big of a
+24:40 difference it's like there's the wood
+and then there's the concrete that gets
+24:42 mixed in just kind of add some random
+grunge on top that could kind of be
+24:47 replaced with anything though and it's
+not like you have to do it that way at
+24:51 all and then for like the colored wood
+here it's even simpler um I guess I'll
+24:55 just show you the roughness map here
+everything else is like the default
+24:58 texture settings like the it's just the
+roughness map um I guess I did actually
+25:02 there's a color ramp in there doing this
+like if I mute this the color ramp is
+25:06 doing that making it slightly more
+interesting on the roughness map um
+25:10 totally optional and then the normal map
+is just nothing changed at all so on
+25:15 this colored version here I'm kind of
+doing something similar but just by
+25:19 taking the base color again just that
+wood that's running uh again through a
+25:24 curves node just to make to make it a
+bit darker and then so slot a on on this
+25:28 mixed color node is just um the the like
+this image that's slot a just the base
+25:35 color map is running there slot B is
+just no input straight red so that's
+25:40 kind of like if you just had this thing
+like um on whatever color you wanted
+25:44 it's just like that as another input
+there and then those are getting mixed
+25:48 together with actually just this image
+itself so again when you anytime you use
+25:54 an image as the mix factor it's just
+determining like A or B based on the
+25:60 brightness values of the image and that
+actually makes sense here if you look at
+26:02 this like if I adjust the color ramp
+here and I slowly bring it in notice
+26:07 that the parts that get mixed in red
+first are the actually the brightest
+26:11 spots on this image and that's because
+we're using the brightness values of
+26:14 this image to determine like what parts
+get mixed in and what parts don't and as
+26:19 I move through the Spectrum you can see
+what actually gets mixed in what doesn't
+26:23 and you could flip it the other way if
+you wanted to like if you wanted to have
+26:25 only the dark parts coming in you could
+do it that way but that's what that is
+26:28 is uh very simple very effective and
+yeah ends up looking uh like
+26:37 that okay so that's what I did for that
+and the same thing with the white wood
+26:41 here it's the exact same thing just with
+white instead of
+26:44 red and I think for the roof material
+it's it's literally just a uh concrete
+26:48 texture from poly Haven no changes at
+all I think this is like doing basically
+26:53 nothing it was slightly not rough enough
+to where I wanted so I just made this a
+26:58 little bit more rough that's it the rest
+is just straight concrete one thing I
+27:03 did here is on both of these I just
+removed the displacement that it came
+27:06 with I do not want any displacement on
+here that'll mess it all up so just
+27:09 deleted that and then basically just
+went in assigned different colors to
+27:13 different spots based on my reference
+image and you know kind of had fun with
+27:17 it too it didn't have to be perfectly a
+one toone copy of that I'm kind of
+27:20 experimenting and doing what I think is
+more fun in some places too like it's
+27:23 not necessarily supposed to be super
+realistic but um yeah that's the texture
+27:28 right there
+okay so let's just quickly talk about
+27:31 the lighting here um what I'm going to
+show you is it actually turned out
+27:36 fairly um fairly simple and
+straightforward I think I think it all
+27:40 just makes sense what happened here but
+um I do remember getting very frustrated
+27:44 while making this so just keep that in
+mind like it didn't uh just come super
+27:49 easily and it was just like flowing and
+like it was all it was it was very
+27:52 frustrating I remember being like really
+mad making this and some it like it went
+27:58 through a bunch of variations and this
+just kind of what I end it up with and
+28:01 then I was like okay I think we're good
+here that's fine um I I kind of had a
+28:05 rough idea going into what I wanted but
+it wasn't exactly like this but this is
+28:08 just what it ended up as anyways here's
+what happened um let's start with just
+28:13 breaking down this down Al actually just
+turn off all the lights I've uh I've
+28:16 just organized this into some basic
+collections for this demo
+28:21 video in the actual file there's
+literally zero organization uh just so
+28:24 you know anyways if I just hide all the
+lights and kind of go piece by piece
+28:30 here's kind of what this is so um if I
+turn off all the actual lights here and
+28:35 all the neon signs and stuff we have
+some lanterns some other like random red
+28:39 things which I'll show you in a second
+and then uh sky in the back it's also
+28:43 some also some like really soft building
+windows in the back that's kind of like
+28:47 really really secondary so I'm not even
+going to show that it's probably for
+28:51 another video um anyways this sky in the
+back I guess have to do this in this
+28:56 viewport because I can't actually see
+that in there but this is my technique I
+28:60 always use which is put a picture of a
+sky on a giant plane in the back of the
+29:04 scene like you can see the scene is here
+like this is the render right here and
+29:09 that's the sky way back there there's
+the setup for that if you want to just
+29:13 see what I did there Sky image slightly
+blue running to the color in the
+29:19 Alpha and the other thing too is like
+these um I I'll show actually these
+29:24 these lanterns and stuff here these are
+kind of fun and really easy what this is
+29:28 this is kind of like um I think I did
+this at the end I'll show you the actual
+29:32 Lighting in a second but just to really
+I know people are going to be wondering
+29:34 like what these are um these are kind of
+just like not really I wouldn't really
+29:38 consider this lighting it's more just
+decoration that happens to be emissive
+29:41 but what it is um it's this image of a
+lantern that I found on unsplash that's
+29:47 getting projected from view onto this
+like stupid little cylinder that I
+29:51 beveled and then if you actually look
+there on the inside you can see there's
+29:55 a second cylinder inside of there that
+is just an emissive texture it's
+30:00 literally just white emission just
+turned up uh just like that just color
+30:05 white emission strength turned up no
+other
+30:08 changes um so it's being lit from the
+inside with like just you know that and
+30:14 then the outside this this material is
+just uh that that unsplash image there
+30:18 is just getting turned red and then it's
+running through a translucent Shader so
+30:23 translucent is just going to be like a
+pretty much a good like a lampshade kind
+30:27 of material so you can just throw
+whatever color you want under there and
+30:30 that's
+that okay so that's being just kind of
+30:32 repeated a bunch of times throughout
+here um not sure where that just turned
+30:36 off I think it's
+glitching but yeah I just duplicated
+30:40 that one thing a bunch of times all over
+the scene I think I randomly rotated it
+30:43 a bunch of times too so it's not all
+facing the exact same direction but yeah
+30:46 really like how that turned out um I
+think I did a randomized transform as
+30:49 well just to get some size variation not
+sure if You' actually see that in real
+30:53 life but I figured it looked good so
+whatever these here um are actually just
+30:57 an image
+of like this image again from unsplash
+31:01 just free stock photo of uh this is just
+like some area in Japan and literally
+31:09 it's just like some random advertisement
+that I just picked through onto there on
+31:12 the UV map that is just running getting
+turned red again running into the Basse
+31:16 color sorry the emission color not the
+Basse color and it's also running into
+31:20 the emission strength just with the math
+no just getting turned up a bit um so
+31:25 yeah that is what that is that could
+really be anything though so it's not
+31:29 that important what that is and that's
+kind of like all the decorative lighting
+31:33 for the actual lighting I'll actually
+just bring this in one by one um if you
+31:37 just kind of look at this the camera is
+just to kind of get you oriented into
+31:42 what you're looking at here um the
+camera is kind of like down here in this
+31:46 corner so if I just zoom out this is
+kind of what the scene looks like again
+31:50 camera down here facing this way if I
+just go to top view here you can kind of
+31:54 see these lights as I bring them in um
+so
+31:59 I'll just do this one by
+one so there's one area light at the top
+32:02 here um I guess you can't really see oh
+you can right up there this one so that
+32:08 is just kind of doing a general
+downwards Lighting on the whole thing
+32:13 this lighting setup was actually more
+complicated and weird than I would
+32:16 normally go usually my advice is my
+advice is to like simplify the lighting
+32:20 as much as possible and like reduce it
+to like even one or two lights sometimes
+32:25 works really well so in this case I
+didn't do that but it's still like
+32:29 mostly sort of like that maybe I don't
+know um so there's that area light up
+32:34 there and then there's also some
+spotlights coming from the side like
+32:39 over here which are um like this thing
+is mostly just there to kind of help
+32:46 illuminate this all the side uh pieces
+of this roof right here and really just
+32:51 uh exaggerate the form of this Temple
+thing in the middle so that's like
+32:56 that's not really there to add light
+light to the scene so much as it is to
+33:00 just emphasize the form of the main
+object um this area light at the top is
+33:05 kind of doing that too but it's it's
+also there to add like just general
+33:08 ambient light to the whole thing just so
+you can actually see anything at all um
+33:13 and then yeah these spot lights are more
+there to like refine the shape of the
+33:16 thing in the middle not necessarily to
+actually light it
+33:19 up and then these Point lights over here
+these are just like kind of bright point
+33:24 lights in the back like you can see if I
+kind of go here um it's just stuff like
+33:27 this like way back back there just kind
+of to light up the volume in the back um
+33:31 if I turn this on and off you can see
+what that's doing so that's really just
+33:34 there to kind of enhance the atmosphere
+and the mood and just kind of backlight
+33:39 this thing and again kind of have it a
+bit silhouetted really bring out the
+33:42 form and make it make this U main
+structure really stand out from the
+33:46 background just so it's like really
+really clear that it's right there bold
+33:51 in the middle um so there's a bunch of
+Point lights there that are kind of
+33:55 there to do that I guess one of these is
+also just adding a nice reflection on to
+33:58 some of this stuff here I just kind of
+thought that looked nice there so I kept
+34:01 it there uh and then the last one here
+I'm not sure what that is
+34:05 even doing it's somewhere in there oh
+it's back there um again I think that's
+34:09 just there to
+really just help Drive the U silting
+34:14 kind of effect that's going on with
+having the point lights all behind the
+34:17 stuff having it kind of back
+lit um even if you can't see any one
+34:23 super clearly all of them are kind of
+adding up to to create that effect there
+34:27 so that's the light lighting they like
+the main lighting there and then there's
+34:31 also all this neon glowing stuff in the
+back so what this is is actually that
+34:35 same image from Japan I again I didn't
+take this this is this is from unsplash
+34:39 not from me um so you can find just go
+on unsplash search like Japan you'll
+34:43 find a bunch of stuff like this it's
+really good for just cyber Punk scenes
+34:46 like this very simple setup that is
+running into the alpha if I just kind of
+34:51 look at this you can see it's driving
+the
+34:53 transparency and that just kind of um
+when you do that it just it it's it's a
+34:59 lot easier to fit into the scene because
+it kind of looks like it belongs there
+35:03 um you can kind of see through it a bit
+makes it look more complex I just like
+35:06 doing that and then it's also running
+into the emission color and the
+35:09 emissions just turn up to like
+10 and then what's nice about this is
+35:13 since you can't really see it all that
+clearly you can't really tell what's
+35:17 going on you can just kind of see little
+bits of it poking through here and there
+35:21 um it's it's literally like no
+unwrapping at all it's uh just the image
+35:27 directly on the entire plane
+and um that that image is just like hand
+35:34 placed in a few different places so if I
+just kind of look at it in here sorry
+35:37 I'll just do it in here so it's not so
+laggy uh yeah literally just the entire
+35:41 image thrown onto a plane and kind of
+Rand somewhat randomly duplicated you
+35:47 can see this is fairly Carefree back
+here in the back of the scene because it
+35:51 doesn't matter that much you're not
+you're not going to see this part just
+35:54 there for like you know again barely
+visible um it's just duplicated in any
+35:59 spot that I thought looked kind of cool
+not even changed at all it's the same
+36:03 exact image fully duplicated like all
+over the place but since you can't
+36:08 really see it it's it actually feels
+like there's a bunch of complicated
+36:12 stuff going on back there even though
+it's it's really not um so I'm sure if
+36:16 you look really close you could probably
+dissect it and figure out like oh you
+36:20 know you could probably see where that
+shows up in the render is like repeated
+36:24 garbage but for the most part like I bet
+if I didn't break down this way you
+36:28 probably wouldn't actually notice that
+so that's fine uh and then the the
+36:32 buildings back there are just from my
+free buildings pack I still use that all
+36:35 the time in my render so um yeah if you
+want to if you want to know how I made
+36:39 these I have a building a video on my
+channel just called I think how to make
+36:42 buildings in blender uh and you can get
+the pack from there too anyways that's
+36:46 uh just what I threw back there that can
+be anything that could be kit bash cargo
+36:50 whatever you want make your own use mine
+doesn't matter just any random buildings
+36:54 kind of worked for this kind of scene
+cuz again there's so little space that
+36:58 seeing it that just anything anything
+kind of works
+37:01 there um just for the volume setup I'll
+just show show you that really quick
+37:06 here's without the volume here's with it
+makes a big difference to the mood um
+37:10 it's just this just a cube over the
+whole thing um set the cube to display
+37:14 as bounds you can do that in this orange
+Square tab in the properties panel go
+37:19 down to uh viewport display sorry this
+is like really small uh viewport display
+37:25 display as and then just choose bounds
+just to get it out of the way so it's
+37:29 not like super annoying and then yeah
+just put a volume scatter on that uh
+37:34 Cube and then there's the settings that
+I used for this one and yeah that's uh
+37:38 that's like basically how I made this I
+think I'm going to end it there so um
+37:44 yeah hopefully this was helpful um yeah
+if you like to see my creation process
+37:47 you will probably like checking out my
+environments course that I put out a
+37:50 couple years ago that one is a little
+bit uh old right now because again that
+37:54 was actually the first course I ever
+made so the production quality is not
+37:58 amazing or anything it's a little bit uh
+like janky in some areas but the
+38:02 information is still really good and if
+you want to see like my full process and
+38:06 get a very good understanding of like
+how to actually make art um yeah that's
+38:12 the place so go and check that out if
+you want and hopefully this kind of if
+38:16 you like this kind of breakdown style of
+video let me know I'll I'll definitely
+38:19 do more of these also if you have
+questions you could just leave that in
+38:22 the comments I'll try and answer all the
+questions there so yeah thanks for
+38:25 watching and bye

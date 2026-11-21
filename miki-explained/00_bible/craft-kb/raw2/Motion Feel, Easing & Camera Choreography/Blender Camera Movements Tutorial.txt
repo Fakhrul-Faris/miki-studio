@@ -1,0 +1,568 @@
+00:00 hello my name is Austin and today we are
+00:02 
+
+00:02 going to make really smooth camera
+00:04 
+
+00:04 movements ridiculously fast so we are
+00:09 
+
+00:09 going to be animating on a camera in
+00:10 
+
+00:10 real time just by recording our camera
+00:13 
+
+00:13 movement and that's smoothing the
+00:14 
+
+00:14 keyframes I've been doing this for
+00:16 
+
+00:16 almost all my projects recently it's
+00:18 
+
+00:18 such a nice way to just rapidly
+00:20 
+
+00:20 prototype your scenes so select your
+00:22 
+
+00:22 camera go to view cameras active camera
+00:26 
+
+00:26 the whole key of this is number zero so
+00:28 
+
+00:28 you can scroll to make it fullscreen and
+00:30 
+
+00:30 right click camera lens angle and then
+00:33 
+
+00:33 let's do 20 millimeter there we go and
+00:38 
+
+00:38 now we have a wide-angle camera so we
+00:41 
+
+00:41 want to just look around and move using
+00:43 
+
+00:43 WASD so go to view navigation walk
+00:46 
+
+00:47 navigation now you can look around with
+00:49 
+
+00:49 your cursor you can move around using
+00:51 
+
+00:51 WASD you can move up and down using cuny
+00:54 
+
+00:54 and you can press G to turn on gravity
+00:57 
+
+00:57 right click the cancel and let's set up
+01:01 
+
+01:01 a hotkey for this so view navigation and
+01:04 
+
+01:04 when you hover your mouse over walk
+01:05 
+
+01:05 navigation right click and go assign
+01:08 
+
+01:08 shortcut and I want to do shift F just I
+01:11 
+
+01:11 mean it was the old hotkey so shift F
+01:14 
+
+01:14 now when you press shift F you can look
+01:15 
+
+01:15 around so how do we record this well
+01:19 
+
+01:19 press Auto key press space and then you
+01:22 
+
+01:22 press your custom up key which is shift
+01:24 
+
+01:24 F and then you can move around and
+01:26 
+
+01:26 you're making key frames let's take a
+01:30 
+
+01:30 look at this in the graph editor because
+01:31 
+
+01:31 that's really cool right click down here
+01:33 
+
+01:33 and go to vertical split and split if
+01:36 
+
+01:36 you put in half and set this right panel
+01:37 
+
+01:37 to graph editor and let me show you this
+01:42 
+
+01:42 will show up in real time it's really
+01:43 
+
+01:43 cool so press space and then shift F and
+01:46 
+
+01:46 when you're moving around
+01:48 
+
+01:48 we are growing keyframes in real time at
+01:51 
+
+01:51 whatever frame rate you're on so these
+01:56 
+
+01:56 keyframes aren't exactly really smooth
+01:58 
+
+01:58 so go to key smooth keys and they just
+02:02 
+
+02:02 get smoother but if you see here we
+02:07 
+
+02:07 didn't record any keyframes here so it's
+02:11 
+
+02:11 not really possible to make it smooth
+02:13 
+
+02:13 so what you can do is you go to hkey
+02:15 
+
+02:15 sample keyframes and it will create
+02:18 
+
+02:18 keyframe where you didn't have one so to
+02:20 
+
+02:20 fill the gaps just use sample keyframes
+02:22 
+
+02:22 that's the trick and now you basically
+02:25 
+
+02:25 know everything about this method let me
+02:28 
+
+02:28 show you delete everything space shift F
+02:32 
+
+02:32 move around
+02:34 
+
+02:34 let's do 360 degrees let's move around
+02:37 
+
+02:37 like this there let's stop it there
+02:43 
+
+02:43 select all your key frames there select
+02:46 
+
+02:46 particle go to key sample keyframes so
+02:49 
+
+02:49 shift alt oh and then auto look at that
+02:54 
+
+02:54 you can just hold alt Oh 37 times it
+02:60 
+
+02:60 just goes automatically and then it
+03:02 
+
+03:02 becomes really smooth look at that okay
+03:08 
+
+03:08 cool one last trick until we're ready to
+03:10 
+
+03:10 go to an advanced see so delete the
+03:13 
+
+03:13 keyframes press space shift F let's move
+03:17 
+
+03:17 around up and down zoom in zoom out and
+03:21 
+
+03:21 to make the start be a lot smoother go
+03:24 
+
+03:24 to the first keyframe press I for insert
+03:26 
+
+03:26 and press available now we have a
+03:29 
+
+03:29 keyframe at the beginning you might see
+03:31 
+
+03:31 where I'm going with this so let's go to
+03:33 
+
+03:33 180 frames press I and select available
+03:36 
+
+03:36 so now we have keyframes at the edges
+03:38 
+
+03:38 too so when you press shift alt o for
+03:41 
+
+03:41 sample keyframes you get keyframes all
+03:43 
+
+03:43 the way to the beginning and to the end
+03:45 
+
+03:45 so now you can just hold alt o again 34
+03:50 
+
+03:50 times and when you look at the animation
+03:52 
+
+03:52 it starts really smoothly and this is
+03:57 
+
+03:57 just really powerful I mean look at all
+03:59 
+
+03:59 the times we have just deleted all the
+04:01 
+
+04:01 keyframes and we're just making stuff
+04:04 
+
+04:04 it's such a powerful tool so let's take
+04:07 
+
+04:07 a look at this in a more advanced scene
+04:08 
+
+04:08 here I have a car and this is not
+04:11 
+
+04:11 sponsored by Audi I just this is just an
+04:13 
+
+04:13 amazing looking vehicle ok so I'm a cave
+04:16 
+
+04:16 using some textures link below there
+04:19 
+
+04:19 free creative comments 0 so this car
+04:22 
+
+04:22 isn't in cave and I've set up my camera
+04:24 
+
+04:24 here by the way to make it CinemaScope
+04:26 
+
+04:26 you can go
+04:27 
+
+04:27 output properties and set the resolution
+04:29 
+
+04:29 to something more scope II so select a
+04:33 
+
+04:33 camera in the out planner and let's go
+04:36 
+
+04:36 shift F and let's just move around and
+04:39 
+
+04:39 see what this scene looks like I'm not
+04:41 
+
+04:41 recording right now I'm just looking and
+04:42 
+
+04:42 when I'm walking around you can see I'm
+04:44 
+
+04:44 getting awfully close to the ground and
+04:46 
+
+04:46 I don't want that I want this to be like
+04:48 
+
+04:48 a Steadicam operator that is 170
+04:52 
+
+04:52 centimeters tall or so what you can do
+04:55 
+
+04:55 you can press G and it's good to fold
+04:57 
+
+04:57 the ground and you can presumably to
+04:59 
+
+04:59 jump and this is really powerful because
+05:01 
+
+05:01 now we have a walking cameraman in the
+05:03 
+
+05:03 cave with a really expensive car so
+05:06 
+
+05:07 let's just back out here and I want to
+05:11 
+
+05:11 start okay so I want to start here yeah
+05:14 
+
+05:14 I wanna start here so turn on AutoKey
+05:16 
+
+05:16 press space and press shift F and then
+05:19 
+
+05:19 press G now we have turned on gravity
+05:22 
+
+05:22 and we're looking with our camera so
+05:24 
+
+05:24 let's move into the car see you go
+05:27 
+
+05:27 forward go around a little bit there we
+05:31 
+
+05:31 go that's slow and steady let's pause
+05:34 
+
+05:34 here for a second let's go fast and then
+05:37 
+
+05:37 let's see it logo and then let's go back
+05:40 
+
+05:40 okay I I think I've just made it yeah
+05:44 
+
+05:44 okay we're good let's see what it looks
+05:46 
+
+05:46 like when it's not smooth there we go
+05:49 
+
+05:49 holds up a little bit there okay nice so
+05:52 
+
+05:52 let's split the viewport right click
+05:54 
+
+05:54 down here to go to vertical split and
+05:55 
+
+05:55 set it to graph editor and here our
+05:59 
+
+05:59 keyframes let's go to the first keyframe
+06:00 
+
+06:00 press and make sure the camera is
+06:02 
+
+06:02 selected press I and insert available
+06:05 
+
+06:05 and then the last keyframe well we're
+06:07 
+
+06:07 almost at the last but anyways 23
+06:10 
+
+06:10 seconds press I and select available and
+06:13 
+
+06:13 now let's go shift alt oh for sampling
+06:17 
+
+06:17 and then just hold alt oh so I'm gonna
+06:20 
+
+06:20 hold it for a little bit let's do I have
+06:24 
+
+06:24 my screencast keys you can see okay
+06:25 
+
+06:25 88 it's probably a lot but let's take a
+06:30 
+
+06:30 look
+06:33 
+
+06:33 so it starts low
+06:42 
+
+06:42 I think that's really cool I mean this
+06:46 
+
+06:46 is so little work to just get smooth
+06:49 
+
+06:49 movement and it takes so little time
+06:51 
+
+06:51 yeah so it stops a little bit too soon
+06:54 
+
+06:54 you know what let's just extend the
+06:57 
+
+06:57 animation and let's make a new keyframe
+06:60 
+
+06:60 last frame insert available and let's
+07:04 
+
+07:04 just smooth it a little bit more so now
+07:07 
+
+07:07 at the end oh I forgot to add sample oh
+07:11 
+
+07:11 yeah so smooth a little bit more yeah
+07:15 
+
+07:15 and you know if you want to do another
+07:18 
+
+07:18 version of this just delete everything
+07:19 
+
+07:19 and it's going to take you 23 seconds
+07:21 
+
+07:21 and 19 frames to record a new animation
+07:23 
+
+07:23 and once you're getting used to doing
+07:26 
+
+07:26 the sample keyframes and smooth
+07:28 
+
+07:28 keyframes that's a cup of seconds in
+07:32 
+
+07:32 addition to the recording of the
+07:33 
+
+07:33 movement itself so I hope you see the
+07:35 
+
+07:35 value in this workflow and at least try
+07:37 
+
+07:37 it out
+07:37 
+
+07:37 it requires no specs it works with all
+07:39 
+
+07:39 render engines you can do this in
+07:41 
+
+07:41 blender export the camera to Olympic and
+07:44 
+
+07:44 export it to any other software it's
+07:46 
+
+07:46 just such a powerful way to animate the
+07:48 
+
+07:48 camera so I'm going to show you some of
+07:49 
+
+07:50 the work that I've done with this now
+07:51 
+
+07:51 and you can let me know what you think
+07:52 
+
+07:52 and subscribe if you want to see more
+08:01 
+
+08:01 [Music]
+08:34 
+
+08:34 [Music]
+08:36 
+
+08:36 [Applause]
+08:43 
+
+08:43 [Music]
+08:49 
+
+08:49 [Music]
+09:15 
+
+09:15 so if you're still here here's something
+09:18 
+
+09:18 that's so dumb it might actually work
+09:19 
+
+09:19 take a picture of a Steadicam operator
+09:22 
+
+09:22 make a cutout and parent it to the
+09:25 
+
+09:25 camera so when you move around it will
+09:28 
+
+09:28 follow the camera and then in the
+09:30 
+
+09:30 reflection of the car paint you can see
+09:33 
+
+09:33 this subtle just glimpse of technology
+09:37 
+
+09:37 which might be enough to throw your
+09:40 
+
+09:40 viewer off is this real it's the
+09:42 
+
+09:42 surrender so this is really stupid and
+09:45 
+
+09:45 you probably shouldn't do it thanks for
+09:49 
+
+09:49 watching

@@ -1,0 +1,1642 @@
+00:01 okay in this video I'm going to show you
+00:03 
+
+00:03 some tricks to add that sort of special
+00:06 
+
+00:06 look I guess that's what I'll call it to
+00:08 
+
+00:08 the to your vendors so it's kind of hard
+00:09 
+
+00:09 to describe exactly what this is because
+00:11 
+
+00:11 it's a bunch of different things coming
+00:13 
+
+00:13 together to create a certain look I'll
+00:15 
+
+00:15 show you how I kind of include that in
+00:17 
+
+00:17 all my renders and make them look better
+00:19 
+
+00:19 using these settings every time so a few
+00:22 
+
+00:22 of these will be Photoshop tips and a
+00:23 
+
+00:23 few of these will be blender tips but
+00:25 
+
+00:25 let me just show you what exactly what
+00:28 
+
+00:28 I'm talking about so here is a render
+00:31 
+
+00:31 that I've
+00:32 
+
+00:32 I've just finished a few days ago and
+00:34 
+
+00:34 this is the final image after all the
+00:37 
+
+00:37 edits I've done all the settings turned
+00:38 
+
+00:38 on the final thing but while I was
+00:40 
+
+00:40 working on it uh like pretty much all
+00:43 
+
+00:43 the way up until almost the very end it
+00:45 
+
+00:45 was looking mostly like this
+00:47 
+
+00:47 and so that's a pretty big difference
+00:49 
+
+00:49 right there if you look at that
+00:51 
+
+00:51 um so I'll kind of show you the last few
+00:54 
+
+00:54 settings that I turned on here to make
+00:55 
+
+00:55 this go from this to this so a lot of
+00:57 
+
+00:57 times what happens with me is I'll be
+00:58 
+
+00:58 working on something
+00:59 
+
+00:59 looks like it's like you're just
+01:01 
+
+01:01 making trash and then you're not happy
+01:04 
+
+01:04 and then all of a sudden at the very end
+01:06 
+
+01:06 you'll change like three settings that
+01:08 
+
+01:08 all of a sudden you're just like what
+01:10 
+
+01:10 the hell happened and it just blows it
+01:12 
+
+01:12 up and it looks crazy so I'll show you
+01:14 
+
+01:14 how that happened in this one um right
+01:16 
+
+01:16 now first of all before we go into
+01:17 
+
+01:17 Photoshop let's look at what you can do
+01:19 
+
+01:19 in blender before bringing it into
+01:22 
+
+01:22 Photoshop because that's going to be the
+01:23 
+
+01:23 most important thing first of all to get
+01:25 
+
+01:25 it to look good in 3D
+01:28 
+
+01:28 so I would say Step Zero before you do
+01:30 
+
+01:30 anything is like work on the best render
+01:33 
+
+01:33 you can before worrying about any of
+01:35 
+
+01:35 this stuff uh just by you know doing
+01:38 
+
+01:38 your best to create a good environment
+01:39 
+
+01:39 or a good whatever you're making and you
+01:41 
+
+01:41 know that's what the rest that's what
+01:43 
+
+01:43 the rest of my videos are for if you are
+01:45 
+
+01:45 struggling with that go and watch that
+01:46 
+
+01:46 but once you've once you're at a place
+01:49 
+
+01:49 where it's like it's just missing
+01:51 
+
+01:51 something and you want to add that nice
+01:52 
+
+01:53 special look to it here are some
+01:55 
+
+01:55 settings you can try the first thing is
+01:58 
+
+01:58 volumetrics and lighting have a like
+02:00 
+
+02:00 that'll always make a huge difference so
+02:03 
+
+02:03 here are the volume settings I don't
+02:05 
+
+02:05 remember exactly what it was but it was
+02:06 
+
+02:06 something like this that I was using for
+02:08 
+
+02:08 most of the time I was working on this
+02:10 
+
+02:10 and then at the very end I switched it
+02:12 
+
+02:12 to these settings right here
+02:14 
+
+02:14 and so that isn't a huge difference but
+02:16 
+
+02:16 like I said it's it's a bunch of small
+02:18 
+
+02:18 things that we're going to do that add
+02:20 
+
+02:20 up together that come together to create
+02:22 
+
+02:22 that certain look and so each one on
+02:24 
+
+02:24 their own might not be that big of a
+02:25 
+
+02:25 difference but in the end it's going to
+02:26 
+
+02:26 make everything look a lot nicer so
+02:29 
+
+02:29 step one I guess it's not really steps
+02:31 
+
+02:31 but the first thing you can try is
+02:33 
+
+02:33 changing your volumetrics uh volumetric
+02:36 
+
+02:36 settings so in this case I just went
+02:38 
+
+02:38 from a density of 0.005 I just I just
+02:41 
+
+02:41 tripled that to
+02:42 
+
+02:42 0.015 so I just made it quite a bit
+02:45 
+
+02:45 thicker that just brings in a bit more
+02:48 
+
+02:48 atmosphere a bit more depth and that
+02:50 
+
+02:50 doesn't always look good to do that you
+02:52 
+
+02:52 know it's going to be these settings are
+02:54 
+
+02:54 not going to be Universal like you can't
+02:56 
+
+02:56 just apply this to yours and it's going
+02:58 
+
+02:58 to look immediately better like it might
+02:60 
+
+02:60 you might have to just change it to a
+03:01 
+
+03:01 different value it might it might look
+03:02 
+
+03:02 good lower for you even so
+03:04 
+
+03:04 just pick just mess around with the
+03:07 
+
+03:07 density and the anisotropy and just pick
+03:09 
+
+03:09 a value that looks good for the thing
+03:11 
+
+03:11 that you're working on and that a lot of
+03:14 
+
+03:14 times can help you just enhance the
+03:16 
+
+03:16 image quite a lot
+03:18 
+
+03:18 okay the next thing is this setting
+03:19 
+
+03:19 right here which I haven't talked about
+03:20 
+
+03:20 before which is volumetric light bounces
+03:24 
+
+03:24 if you have settings like this I
+03:26 
+
+03:26 recommend just if you want to instantly
+03:27 
+
+03:27 make it look
+03:28 
+
+03:28 uh better not all the time but sometimes
+03:31 
+
+03:31 it'll make it look better
+03:32 
+
+03:32 click this menu right here and just
+03:34 
+
+03:34 check uh this thing right here a full
+03:37 
+
+03:37 Global illumination
+03:40 
+
+03:40 what that does it's kind of hard to see
+03:42 
+
+03:42 in my viewport but
+03:44 
+
+03:44 this is what it does it just turns all
+03:46 
+
+03:46 of your light bounces all the way up to
+03:47 
+
+03:47 32 for all of them and also turns on
+03:49 
+
+03:49 reflective and refractive caustics so
+03:51 
+
+03:51 you can just do that manually if you
+03:53 
+
+03:53 want just go 32 for all these the most
+03:55 
+
+03:55 important thing like the biggest
+03:56 
+
+03:56 difference is the volume bounces down
+03:58 
+
+03:58 like if I switch that to zero you can
+04:00 
+
+04:00 see how big of a difference just even
+04:02 
+
+04:02 turning it up to one or two will make
+04:04 
+
+04:04 with uh you're just kind of letting the
+04:06 
+
+04:06 light bounce around the volume more I
+04:08 
+
+04:08 guess I don't know exactly what's going
+04:09 
+
+04:09 on there but let's turn it up to pack to
+04:12 
+
+04:12 zero which is the default which you
+04:14 
+
+04:14 probably have on right now that looks
+04:15 
+
+04:15 really nice a lot of the times and just
+04:17 
+
+04:17 helps like sometimes if you have um you
+04:19 
+
+04:20 might have had this issue where if you
+04:21 
+
+04:21 have a spotlight and it's shining
+04:23 
+
+04:23 through your volumetrics sometimes it
+04:25 
+
+04:25 looks very like cone shaped and it's
+04:27 
+
+04:27 it's very it's a very defined
+04:30 
+
+04:30 beam of light it's kind of ugly to look
+04:32 
+
+04:32 at so this turning up this volume uh
+04:37 
+
+04:37 like the amount of bounces light bounces
+04:39 
+
+04:39 for the volume that can just help soften
+04:42 
+
+04:42 out your volumetrics a little bit and
+04:43 
+
+04:43 make it seem a bit more natural and less
+04:45 
+
+04:45 less like stage lighting and less uh
+04:47 
+
+04:47 just harsh Spotlight type lighting so
+04:51 
+
+04:51 anyways that's that's there I don't
+04:52 
+
+04:52 think you need to go up to 32 but full
+04:54 
+
+04:54 full Global elimination is just the the
+04:56 
+
+04:56 preset I choose here sometimes that'll
+04:58 
+
+04:58 also again turn on reflective and
+04:59 
+
+04:59 refractive caustic so you can see
+05:01 
+
+05:01 refractive or reflective rather caustics
+05:05 
+
+05:05 doesn't make a huge difference but it
+05:07 
+
+05:07 does make a small difference and it's
+05:08 
+
+05:08 just you know when light bounces off of
+05:10 
+
+05:10 this thing here it's just spreading
+05:13 
+
+05:13 throughout the environment a little bit
+05:15 
+
+05:15 nicer and again all those little things
+05:16 
+
+05:16 are going to come together to create a
+05:19 
+
+05:19 much nicer image in the end
+05:21 
+
+05:21 um but again it's just small small
+05:23 
+
+05:23 things coming together there is a big
+05:24 
+
+05:24 thing I'll show you in a second which is
+05:25 
+
+05:25 the camera raw filter but yeah that's in
+05:28 
+
+05:28 blender those are the uh the things I
+05:31 
+
+05:31 kind of forget about to the very end and
+05:33 
+
+05:33 then when I check those it just makes
+05:34 
+
+05:34 everything look a lot better most of the
+05:35 
+
+05:35 time not always but most of the time
+05:38 
+
+05:38 by the way if uh I know I'm like talking
+05:42 
+
+05:42 about this I haven't even mentioned like
+05:43 
+
+05:44 the pile of like dead skeleton guys here
+05:46 
+
+05:46 if you want another video on this I can
+05:47 
+
+05:47 I can do a tutorial on that it's just
+05:49 
+
+05:49 like a model I bought and I just put
+05:51 
+
+05:51 skeletons around it's not anything crazy
+05:52 
+
+05:52 but if you want a video on that I can do
+05:54 
+
+05:54 it
+05:56 
+
+05:56 okay so that's it for tips in blender
+05:59 
+
+05:59 uh let's let's move to photoshop Okay so
+06:03 
+
+06:03 yeah you can see straight away uh yeah
+06:05 
+
+06:05 so let's just look at the beginning here
+06:07 
+
+06:07 and look at what happened so I'll go
+06:08 
+
+06:08 through layer by layer and kind of show
+06:10 
+
+06:10 you what went into creating that final
+06:13 
+
+06:13 look of this image so the first thing
+06:16 
+
+06:16 this is just that exact same thing I
+06:17 
+
+06:17 showed you straight up blender and the
+06:19 
+
+06:19 first thing I usually do is create this
+06:21 
+
+06:21 effect right here which is uh some
+06:24 
+
+06:24 people call it the origin effect some
+06:25 
+
+06:25 people call it
+06:26 
+
+06:26 the glare node in blender like you can
+06:28 
+
+06:28 do it with the glare node I guess I just
+06:30 
+
+06:30 call it adding a blur layer or a glow
+06:33 
+
+06:33 layer I don't know it doesn't really
+06:34 
+
+06:34 matter what you call it the point is
+06:36 
+
+06:36 this glow type effect the way you do
+06:38 
+
+06:38 this in Photoshop is you just take the
+06:40 
+
+06:40 background layer you duplicate it
+06:42 
+
+06:42 and then you blur it and then you change
+06:44 
+
+06:44 the blending mode over to screen or
+06:46 
+
+06:46 lighten and I'll show you what that
+06:47 
+
+06:47 looks like here so you just go filter
+06:49 
+
+06:49 blur uh this one gaussian gaussian I
+06:52 
+
+06:52 don't know how you say that I should
+06:53 
+
+06:53 know but anyways pick a value that's
+06:55 
+
+06:55 like something like this this amount of
+06:57 
+
+06:57 blur this the uh the numbers may be
+06:60 
+
+06:60 different depending on your render but
+07:02 
+
+07:02 something like that and then what we
+07:04 
+
+07:04 want to do is we have the original
+07:05 
+
+07:05 underneath it what you want to do is
+07:07 
+
+07:07 just switch the blending mode over to
+07:08 
+
+07:08 screen or lighten
+07:11 
+
+07:11 Sometimes Late in the school but most of
+07:13 
+
+07:13 the time screen will look better so if I
+07:15 
+
+07:15 just check that
+07:16 
+
+07:16 that's basically the glare node right
+07:18 
+
+07:18 there and if you want to adjust how like
+07:21 
+
+07:21 where this gets mixed in because it's a
+07:23 
+
+07:23 bit intense you can either just use a
+07:24 
+
+07:24 mask and brush it in or
+07:27 
+
+07:27 if you double click on the layer this
+07:29 
+
+07:29 will give you the blend if settings I'm
+07:32 
+
+07:32 not going to explain exactly how this
+07:34 
+
+07:34 works but it basically
+07:35 
+
+07:35 we're just telling it like blend like
+07:38 
+
+07:38 don't
+07:39 
+
+07:39 uh don't show up if it's below this
+07:42 
+
+07:42 level of brightness and you can fade it
+07:43 
+
+07:44 by just breaking this handle apart you
+07:46 
+
+07:46 hold alt to a break that handle and then
+07:47 
+
+07:47 you can get a nice gradual fall off
+07:50 
+
+07:50 there
+07:51 
+
+07:51 there's other videos explaining the
+07:52 
+
+07:52 blend if I'm not going to go into that
+07:53 
+
+07:53 but just point is use some kind of glow
+07:57 
+
+07:57 layer or like blur layer and brush it in
+07:60 
+
+07:60 to the areas that are bright and then
+08:02 
+
+08:02 that will just give you a nice uh I
+08:05 
+
+08:05 don't even know what you call it like a
+08:07 
+
+08:07 nice look to things I do this in almost
+08:09 
+
+08:09 all my renders and just I don't know
+08:11 
+
+08:11 always makes it again feel more
+08:13 
+
+08:13 whatever that is
+08:16 
+
+08:16 I'm also using the missed pass to brush
+08:18 
+
+08:18 in some clouds in the back it's not
+08:20 
+
+08:20 really making a huge difference I could
+08:22 
+
+08:22 honestly take that out and look pretty
+08:23 
+
+08:23 much the same so I'm not really gonna go
+08:25 
+
+08:25 over that
+08:27 
+
+08:27 um this here is just making
+08:29 
+
+08:29 some of the areas a bit brighter like I
+08:31 
+
+08:31 don't know if you can see the thumbnails
+08:33 
+
+08:33 are really small but
+08:34 
+
+08:34 um you can see kind of where that's
+08:35 
+
+08:35 brushed in at the bottom so I would have
+08:38 
+
+08:38 just made the whole thing brighter and
+08:39 
+
+08:39 then brushed in exactly that effect like
+08:41 
+
+08:41 where I wanted that effect to show up
+08:42 
+
+08:42 same thing with a burn layer so it's
+08:45 
+
+08:45 just I guess that's another another
+08:47 
+
+08:47 brighting there okay I made a brighter
+08:49 
+
+08:49 twice so that's cool
+08:51 
+
+08:51 but that's what that's doing just making
+08:53 
+
+08:53 that brighter but here is a big thing
+08:55 
+
+08:55 that is extremely important that you
+08:57 
+
+08:57 should use it 100 of the time no matter
+08:59 
+
+08:59 what and that is the camera raw filter
+09:02 
+
+09:02 so
+09:03 
+
+09:03 that is what it does so here's how this
+09:05 
+
+09:05 works
+09:06 
+
+09:06 this is basically Lightroom built into
+09:09 
+
+09:09 photoshop on a single layer so here's
+09:11 
+
+09:11 what you do to get the camera filter and
+09:13 
+
+09:13 I've showed this before but I'll show it
+09:15 
+
+09:15 again here so
+09:16 
+
+09:16 the way it works is it's a filter that
+09:18 
+
+09:18 you can apply to one layer in Photoshop
+09:21 
+
+09:21 so that's obviously a problem here but
+09:23 
+
+09:23 you'll have a bunch of layers that I
+09:24 
+
+09:24 want to apply to so the way you get it
+09:27 
+
+09:27 to only apply to one layer is just
+09:30 
+
+09:30 duplicate all the layers you have
+09:31 
+
+09:32 already created merge them all into one
+09:34 
+
+09:35 single layer and then apply it to that
+09:37 
+
+09:37 layer and that way
+09:38 
+
+09:38 you won't you can go back at any time
+09:41 
+
+09:41 and adjust things as you need it's not
+09:42 
+
+09:42 it's not a destructive workflow so the
+09:45 
+
+09:45 way you do that is I just click on the
+09:47 
+
+09:47 top layer of the stack so it's in this
+09:50 
+
+09:50 case all this stuff is hidden and you
+09:52 
+
+09:52 know while I was making this I wouldn't
+09:53 
+
+09:53 have had this stuff in here yet but
+09:56 
+
+09:56 just go to the top layer of the stack
+09:58 
+
+09:58 that you're currently working on so for
+09:59 
+
+09:59 me it's all this stuff I added here it
+10:01 
+
+10:02 would be this layer right here you're
+10:03 
+
+10:03 going to press this shortcut to
+10:05 
+
+10:05 duplicate and merge all layers into one
+10:07 
+
+10:07 you can you can do it manually by like
+10:08 
+
+10:08 selecting them all and duplicating and
+10:09 
+
+10:09 merging but there's a shortcut which I
+10:11 
+
+10:11 use which is control alt shift e I'm
+10:15 
+
+10:15 pressing all those keys all at once so
+10:17 
+
+10:17 Ctrl alt shift e all at once but the top
+10:19 
+
+10:19 layer selected
+10:20 
+
+10:20 we'll do that
+10:22 
+
+10:22 so we have all those layers duplicated
+10:24 
+
+10:24 and merged into one single layer now and
+10:27 
+
+10:27 that means I can go into the camera
+10:28 
+
+10:28 rough holder from here so before you do
+10:31 
+
+10:31 that make sure you convert it for smart
+10:32 
+
+10:32 filters and that means you can go back
+10:34 
+
+10:34 into the settings and change that later
+10:36 
+
+10:36 so I'll go filter convert for smart
+10:38 
+
+10:38 filters
+10:39 
+
+10:39 and then I'll go into the camera filter
+10:42 
+
+10:42 from there
+10:43 
+
+10:43 so once we're in here if you ever if
+10:45 
+
+10:45 you've ever used Lightroom or any photo
+10:47 
+
+10:47 editing program ever this will look very
+10:50 
+
+10:50 very familiar so it's not anything crazy
+10:53 
+
+10:53 it's like you just get adjustments of
+10:54 
+
+10:54 like exposure contrast highlights
+10:57 
+
+10:57 there's some fun like more powerful
+11:00 
+
+11:00 stuff in here like Clarity and color
+11:03 
+
+11:03 mixer and all that but
+11:05 
+
+11:05 here's what I do I just kind of go
+11:06 
+
+11:06 through slider by slider and you'll kind
+11:08 
+
+11:08 of get an intuitive feeling for what
+11:10 
+
+11:10 it's going to look good the more you use
+11:12 
+
+11:12 this tool but
+11:13 
+
+11:13 a lot of the times I still do this where
+11:15 
+
+11:15 I just go slider by slider move it a
+11:17 
+
+11:17 little bit each way if it looks better
+11:18 
+
+11:18 One Direction or the other I'll I'll
+11:20 
+
+11:20 move it in that direction if it doesn't
+11:22 
+
+11:22 look any better I'll just keep it where
+11:24 
+
+11:24 it was and you just do that for all
+11:26 
+
+11:26 these
+11:26 
+
+11:26 and you know by the end of this it's
+11:30 
+
+11:30 just going to look better like if you go
+11:32 
+
+11:32 through slider by slider and you just
+11:33 
+
+11:33 move each one until it looks a little
+11:35 
+
+11:35 bit better
+11:36 
+
+11:36 if you do that for all these sliders
+11:38 
+
+11:38 it's going to look a lot better in the
+11:39 
+
+11:39 end but the main thing is like increase
+11:43 
+
+11:43 um increase the clarity a little bit you
+11:45 
+
+11:45 know if you go too far it's going to
+11:46 
+
+11:46 wreck your image it's going to look
+11:47 
+
+11:47 weird and bad but
+11:50 
+
+11:50 I find that almost always clear it looks
+11:52 
+
+11:52 better in in my render so almost always
+11:54 
+
+11:54 take that up quite a good chunky amount
+11:56 
+
+11:56 right there like even like a lot of
+11:59 
+
+11:59 people don't go past 10 but I like to
+12:01 
+
+12:01 just crank it really really high
+12:03 
+
+12:03 obviously just use some judgment if it
+12:06 
+
+12:06 looks bad then don't do it you know
+12:08 
+
+12:08 saturation I always like to bring that
+12:10 
+
+12:10 up just for uh
+12:12 
+
+12:12 you know it you don't need to have it
+12:14 
+
+12:14 super saturated but I just find it's
+12:16 
+
+12:16 just more fun it's just like just making
+12:18 
+
+12:18 it more like eye candy and just more
+12:20 
+
+12:20 stimulating to look at so I don't know I
+12:22 
+
+12:22 like to Crank It Up
+12:24 
+
+12:24 sometimes contrast to school but a lot
+12:25 
+
+12:25 of times it's I find it's actually
+12:27 
+
+12:27 pretty contrasty coming out of blender
+12:29 
+
+12:29 already so I don't really like to touch
+12:30 
+
+12:30 that very much
+12:31 
+
+12:31 but
+12:33 
+
+12:33 bringing up the whites and bringing down
+12:35 
+
+12:35 the blacks is something I usually do
+12:36 
+
+12:36 the white slider and the black slider
+12:38 
+
+12:38 down so what I'm doing here is I'm
+12:40 
+
+12:40 holding alt I'm just moving this slider
+12:43 
+
+12:43 along holding Alt and that's going to
+12:45 
+
+12:45 show me where the white point is
+12:48 
+
+12:48 actually hitting right there and same
+12:49 
+
+12:49 thing with the black point where that is
+12:50 
+
+12:50 actually cutting it off fully and we're
+12:52 
+
+12:52 starting to lose information
+12:54 
+
+12:54 so I'll just bring it up to the point
+12:55 
+
+12:55 where it's like we have some white
+12:57 
+
+12:57 pixels in the image and we also have
+12:59 
+
+12:59 some black pixels in the image just for
+13:01 
+
+13:01 a full range of brightness full dynamic
+13:04 
+
+13:04 range as you would say
+13:05 
+
+13:05 the next thing is sharpening so I'll
+13:07 
+
+13:07 usually crank this decently high and
+13:09 
+
+13:09 then increase the masking decently high
+13:10 
+
+13:10 as well
+13:13 
+
+13:13 um just yeah to sharpen these areas
+13:15 
+
+13:15 again hold alt to see what this is doing
+13:17 
+
+13:17 so I don't need sharpening in the
+13:19 
+
+13:19 background where it's like nothing
+13:21 
+
+13:21 happening
+13:21 
+
+13:21 I just need it in the important areas
+13:23 
+
+13:23 and that's what this is doing here so
+13:25 
+
+13:25 that's cool it doesn't make a huge
+13:26 
+
+13:26 difference but when you zoom in
+13:28 
+
+13:28 it actually does so I like to have it on
+13:31 
+
+13:31 color grading sometimes it's cool to
+13:34 
+
+13:34 have a bit of blue in the shadows not
+13:36 
+
+13:36 always sometimes it just looks stupid
+13:37 
+
+13:37 and ruins your render but a little bit
+13:40 
+
+13:40 even like five ten percent can can make
+13:42 
+
+13:42 it look a bit more interesting sometimes
+13:45 
+
+13:45 and I usually don't usually don't touch
+13:47 
+
+13:47 that the mid tones or highlights but
+13:49 
+
+13:49 sometimes it does look cool to mess with
+13:50 
+
+13:50 that
+13:51 
+
+13:51 I feel like I have to give a disclaimer
+13:53 
+
+13:53 on every single thing like sometimes
+13:54 
+
+13:54 this Global Center is not but just be
+13:56 
+
+13:56 careful and like you get the point like
+13:58 
+
+13:58 here's the main settings I use and
+14:00 
+
+14:00 sometimes it's totally different than
+14:02 
+
+14:02 this and I use completely different
+14:03 
+
+14:03 settings but if I had to choose an
+14:06 
+
+14:06 average of all of my renders like that's
+14:07 
+
+14:08 what I'm showing you right here
+14:10 
+
+14:10 grain up always so
+14:13 
+
+14:13 it just you know when you're when you
+14:16 
+
+14:16 render an image and it comes straight
+14:17 
+
+14:17 out of blender it looks very rendery a
+14:19 
+
+14:19 lot of the times and adding grain like
+14:21 
+
+14:21 like you would see in an actual camera
+14:22 
+
+14:23 that helps to just reduce the rendery
+14:26 
+
+14:26 look a lot of times if it makes it feel
+14:28 
+
+14:28 more natural and like a real thing
+14:30 
+
+14:30 you're looking at versus like yeah
+14:32 
+
+14:32 computer generated so I always turn that
+14:35 
+
+14:35 up
+14:36 
+
+14:36 that's the rest of the settings here are
+14:37 
+
+14:38 fine just I usually just increase the
+14:39 
+
+14:39 grain slider itself to like 20 or 30.
+14:43 
+
+14:43 and then vignetting we can bring that
+14:44 
+
+14:44 down a bit and then the color
+14:46 
+
+14:46 calibration section this is kind of cool
+14:47 
+
+14:47 to just get really crazy colors
+14:50 
+
+14:50 sometimes I find that the saturation in
+14:52 
+
+14:52 in this section is I don't know exactly
+14:55 
+
+14:55 how this works but it's just a different
+14:57 
+
+14:57 way of of adding saturation and changing
+15:00 
+
+15:00 the Hue sometimes it looks really cool
+15:02 
+
+15:02 to mess with this sometimes so and I
+15:05 
+
+15:05 think in this one I don't remember what
+15:07 
+
+15:07 I did but something like this I don't
+15:08 
+
+15:08 know and so there we go we can hit OK
+15:10 
+
+15:10 and
+15:12 
+
+15:12 even that last thing I just did made a
+15:14 
+
+15:14 pretty pretty big difference
+15:16 
+
+15:16 so yeah so that there's just settings I
+15:19 
+
+15:19 just changed the original one looks like
+15:20 
+
+15:20 this so you know not a huge difference
+15:23 
+
+15:23 but I guess I would have changed some
+15:24 
+
+15:24 other sliders I guess didn't end up the
+15:26 
+
+15:26 exact same result but pretty similar ish
+15:29 
+
+15:29 the main thing is like
+15:31 
+
+15:31 contrast and saturation and clarity
+15:33 
+
+15:33 you know that makes a big difference and
+15:35 
+
+15:35 then the final thing I have here is just
+15:37 
+
+15:37 some other lighting adjustments I don't
+15:39 
+
+15:39 know I can't really explain what this is
+15:40 
+
+15:40 like
+15:41 
+
+15:41 just some random this is doing nothing
+15:43 
+
+15:43 basically but this is just making that
+15:46 
+
+15:46 section darker right there this is
+15:48 
+
+15:48 making the whole thing darker and this
+15:49 
+
+15:49 is making golfing darker again or I
+15:51 
+
+15:51 guess just the Shadows usually I don't
+15:53 
+
+15:53 have too many curves on top of
+15:54 
+
+15:54 everything like this but in this case I
+15:55 
+
+15:55 just kind of made this a bit darker for
+15:58 
+
+15:58 whatever reason
+16:00 
+
+16:00 but yeah you can see how
+16:03 
+
+16:03 this layer right here is extremely
+16:05 
+
+16:05 important like if there's one thing you
+16:07 
+
+16:07 take from this video is it's use the
+16:09 
+
+16:09 camera raw filter inside Photoshop or
+16:11 
+
+16:11 use Lightroom because Lightroom is
+16:13 
+
+16:13 basically just that
+16:16 
+
+16:16 um yeah
+16:17 
+
+16:17 but you can see that like
+16:19 
+
+16:19 something interesting to note here is
+16:21 
+
+16:21 you see how that that blur or that glow
+16:24 
+
+16:24 layer be added earlier
+16:26 
+
+16:26 it almost looks like it disappears when
+16:28 
+
+16:28 you run it through the camera raw filter
+16:29 
+
+16:29 like this the only thing I can say about
+16:31 
+
+16:31 that is it's
+16:32 
+
+16:32 like if you don't do that blur there and
+16:35 
+
+16:35 then you use the camera filter it looks
+16:37 
+
+16:37 different like if you go and try that
+16:38 
+
+16:38 you'll see you'll get a different result
+16:39 
+
+16:39 and it just doesn't look the same so I I
+16:42 
+
+16:42 would imagine it's the same thing with
+16:43 
+
+16:43 the volumetrics and the settings I
+16:45 
+
+16:45 changed in the blender and the
+16:46 
+
+16:46 reflective caustics and all that stuff
+16:49 
+
+16:49 it all comes together and the camera
+16:51 
+
+16:51 filter all it does is you know we're not
+16:54 
+
+16:54 we're not adding anything new here we're
+16:56 
+
+16:56 just bringing out all of the existing
+16:58 
+
+16:58 elements that we've already added we're
+16:60 
+
+16:60 bringing that aloe we're extracting it
+17:02 
+
+17:02 really hard out of the image that's what
+17:04 
+
+17:05 the camera raw filter is and so
+17:06 
+
+17:06 if you have
+17:08 
+
+17:08 flaws an image and you run it through
+17:10 
+
+17:10 here and you just smash it it's going to
+17:11 
+
+17:11 bring out those flaws so that's why it's
+17:13 
+
+17:13 very important to get it to look good in
+17:14 
+
+17:14 blender before running it through this
+17:16 
+
+17:16 because it's just going to accentuate
+17:18 
+
+17:18 whatever we've made before this
+17:20 
+
+17:20 so that's why I spent a bit of time
+17:22 
+
+17:22 going over all the stuff before that
+17:24 
+
+17:24 filter yeah hopefully that like gives
+17:26 
+
+17:26 you some ideas of some things you could
+17:27 
+
+17:27 try to just take your renders and like
+17:29 
+
+17:29 bring them to that next level and get
+17:31 
+
+17:31 that that special kind of look guys if
+17:33 
+
+17:33 you want to go really in depth into my
+17:35 
+
+17:35 process of creating environments and you
+17:37 
+
+17:37 also want asset packs of a bunch of 3D
+17:39 
+
+17:39 models that I use definitely go and
+17:41 
+
+17:41 check out the course I have linked below
+17:43 
+
+17:43 almost I think over 300 people are
+17:44 
+
+17:44 joined by now which is crazy so if you
+17:46 
+
+17:46 want to be part of that group join the
+17:47 
+
+17:47 Discord it's in there and if you're
+17:50 
+
+17:50 scared to try it there's um there's a
+17:52 
+
+17:52 money back guarantee so you can
+17:53 
+
+17:53 literally just buy it go through the
+17:55 
+
+17:55 entire course if you don't like it at
+17:57 
+
+17:57 the very end after a month you can still
+17:59 
+
+17:59 refund it and just get all your money
+18:01 
+
+18:01 back so
+18:02 
+
+18:02 pretty much no reason not to do it
+18:04 
+
+18:04 anyways that's there if you want to go
+18:06 
+
+18:06 check it out and hopefully that was
+18:07 
+
+18:07 video was useful and yeah going some
+18:09 
+
+18:09 cool some cool I will see you in
+18:12 
+
+18:12 some other video bye

@@ -1,0 +1,2425 @@
+00:00 okay in this one I'm going to show you
+00:01 
+
+00:01 how to make dark renders in blender so
+00:03 
+
+00:03 I'm going to go over five things that I
+00:04 
+
+00:04 do when I'm making these kinds of
+00:05 
+
+00:05 renders so that um I can have them dark
+00:08 
+
+00:08 and Moody and dramatic and have the
+00:09 
+
+00:09 feeling that I want without being
+00:11 
+
+00:11 actually too dark or too dramatic and
+00:14 
+
+00:14 I'll show you um B basically an overview
+00:16 
+
+00:16 is we're going to go over these five
+00:18 
+
+00:18 things here right so number one is
+00:20 
+
+00:20 having a main light source and how to
+00:22 
+
+00:22 pick that and how to use it number two
+00:24 
+
+00:24 is exposing the render properly so that
+00:26 
+
+00:26 you can pick a range that isn't too
+00:28 
+
+00:28 bright or too dark but finding the right
+00:31 
+
+00:31 balance number three is how to keep
+00:33 
+
+00:33 detail in the shadows so that it's not
+00:36 
+
+00:36 just fully engulfed in pure darkness and
+00:38 
+
+00:38 how to how to balance actually the
+00:40 
+
+00:40 bright with the dark and then number
+00:42 
+
+00:42 four is using Reflections to make the
+00:43 
+
+00:43 render more interesting number five is
+00:46 
+
+00:46 using um actually quite bright light
+00:48 
+
+00:48 sources but keeping them contained and
+00:50 
+
+00:50 how to do that so that it's not
+00:52 
+
+00:52 overpowering and then uh also some bonus
+00:54 
+
+00:54 tips to help you uh embrace the darkness
+00:57 
+
+00:57 so to speak okay so the first thing is
+00:60 
+
+01:00 let's talk about having a key light so
+01:02 
+
+01:02 here is the render that I'm talking
+01:04 
+
+01:04 about this is uh an enhanced version in
+01:06 
+
+01:06 Photoshop I've just boosted the
+01:08 
+
+01:08 saturation and things like that
+01:09 
+
+01:09 afterwards the actual blend file looks
+01:11 
+
+01:11 like uh this right here so let me show
+01:14 
+
+01:14 you what I mean by a key light I think
+01:17 
+
+01:17 I'll actually go into blender in one
+01:19 
+
+01:19 second but it's easier for me to explain
+01:21 
+
+01:21 this here and we'll jump into the actual
+01:23 
+
+01:23 scene in a minute and I'll show you the
+01:24 
+
+01:24 lighting breakdown fully there so in
+01:25 
+
+01:25 this case the brightest Point here of
+01:28 
+
+01:28 the thing that's getting lit up the most
+01:30 
+
+01:30 is a of course this kind of section
+01:32 
+
+01:32 right here of like this chunk of this uh
+01:34 
+
+01:34 little structure with this big bright
+01:38 
+
+01:38 light source coming this way and then
+01:40 
+
+01:40 hitting right here right so that would
+01:42 
+
+01:42 be a key light in this situation where
+01:44 
+
+01:44 it's one light source over there coming
+01:46 
+
+01:46 down hitting this and then that's kind
+01:47 
+
+01:47 of just like the main brightest point so
+01:50 
+
+01:50 there's also supporting lights in the
+01:51 
+
+01:51 background of like some other things
+01:53 
+
+01:53 going on of like little patches of light
+01:56 
+
+01:56 here and there there's a light in the
+01:57 
+
+01:57 foreground we're talk we'll talk about
+01:58 
+
+01:58 all that later but the the first step is
+02:01 
+
+02:01 just having one main light source and it
+02:03 
+
+02:03 doesn't just apply to renders like this
+02:05 
+
+02:05 this is quite a clear example but it
+02:07 
+
+02:07 could also apply to whether you're doing
+02:09 
+
+02:09 something that's like an emissive
+02:10 
+
+02:10 surface in some other weird context it
+02:13 
+
+02:13 doesn't seem like you'd apply this but
+02:14 
+
+02:14 it actually does so the main light
+02:17 
+
+02:17 source could be a glowing thing uh it
+02:20 
+
+02:20 could also be you know a big neon sign
+02:23 
+
+02:23 if you're in a city it doesn't matter
+02:25 
+
+02:25 really the context it just what matters
+02:27 
+
+02:27 is you have uh one main light source
+02:30 
+
+02:30 usually that's going to be doing all the
+02:31 
+
+02:31 heavy lifting and then you kind of want
+02:33 
+
+02:33 to refine that get it right and then you
+02:35 
+
+02:35 can move to all the supporting lights
+02:37 
+
+02:37 after so let's take a look at the blend
+02:39 
+
+02:39 file and I'll show you exactly how this
+02:40 
+
+02:40 is working in this case for example so
+02:42 
+
+02:42 I've kind of split up the lights into
+02:45 
+
+02:45 three um categories here we've got the
+02:47 
+
+02:47 key light supporting lights and then
+02:48 
+
+02:48 bounce lights we'll get to those later
+02:50 
+
+02:50 but if I hide if I hide the key light
+02:52 
+
+02:52 here the main light source you can see
+02:55 
+
+02:55 it gets a lot darker so if I just hide
+02:58 
+
+02:58 actually everything and I bring in only
+02:59 
+
+02:59 this light if I just turn on only that
+03:01 
+
+03:01 one Spotlight that's what that's doing
+03:03 
+
+03:03 right there so this is the the first
+03:07 
+
+03:07 light that I added in the scene and I
+03:10 
+
+03:10 spent a while moving it to different
+03:11 
+
+03:11 spots adjusting the brightness adjusting
+03:13 
+
+03:13 the angle until I was happy with it in
+03:16 
+
+03:16 this spot so how do you know how bright
+03:19 
+
+03:19 to actually make this well let me divide
+03:20 
+
+03:20 this by four again so this is at
+03:23 
+
+03:23 63,9 163 Watts right so still an
+03:26 
+
+03:26 absurdly high number that seems like it
+03:29 
+
+03:29 is way too bright but what you have to
+03:32 
+
+03:32 you just have to really not wor worry at
+03:33 
+
+03:33 all about this value in here you have to
+03:36 
+
+03:36 go just based off of what it looks like
+03:37 
+
+03:37 in the actual render so in this viewport
+03:40 
+
+03:40 here I'm I'm just looking at the actual
+03:43 
+
+03:43 lighting that's coming from this light
+03:45 
+
+03:45 and I I think everyone would agree this
+03:47 
+
+03:47 is just way too dark at this point right
+03:49 
+
+03:49 um even though it's at 60,000 Watts so
+03:51 
+
+03:51 if I um multiply this by say four okay
+03:55 
+
+03:55 it's a bit brighter but I still think if
+03:57 
+
+03:57 you zoom in here there's no there's no
+04:00 
+
+04:00 point in here which is reaching a value
+04:04 
+
+04:04 of like full fully white pixels anywhere
+04:08 
+
+04:08 so there's nothing in here that's even
+04:10 
+
+04:10 remotely that close to reaching the
+04:14 
+
+04:14 brightest point that it possibly could
+04:17 
+
+04:17 be what I'll aim for when I'm adjusting
+04:20 
+
+04:20 the brightness is I want to actually
+04:21 
+
+04:21 crank this number up as high as possible
+04:24 
+
+04:24 until it starts looking actually washed
+04:26 
+
+04:26 out and overly bright and then I'll dial
+04:29 
+
+04:29 it back from there there so for example
+04:31 
+
+04:31 if I were to just crank this way up say
+04:34 
+
+04:34 I do like um 8 million right 8 million
+04:38 
+
+04:38 Watts on this if I zoom in here now this
+04:40 
+
+04:40 is almost um getting like washed out to
+04:44 
+
+04:44 the point where it was a green surface
+04:46 
+
+04:46 before but this light is now so bright
+04:49 
+
+04:49 on here that it's almost just making the
+04:51 
+
+04:51 whole surface white now in blender you
+04:54 
+
+04:54 it's actually quite difficult to
+04:56 
+
+04:56 overexpose an image so even if I crank
+04:59 
+
+04:59 this up to like 880,000
+05:01 
+
+05:01 you have to push it very very very far
+05:04 
+
+05:04 before you're going to get to the point
+05:05 
+
+05:05 where you're actually fully clipping the
+05:07 
+
+05:07 highlights where you're just losing
+05:09 
+
+05:09 information because it's so bright and
+05:10 
+
+05:10 it's reaching a point where it's just
+05:12 
+
+05:12 pure white hitting a
+05:14 
+
+05:14 surface so you actually probably most of
+05:18 
+
+05:18 the time don't have to worry about
+05:20 
+
+05:20 overexposing the image what you probably
+05:22 
+
+05:22 have to worry about is and what I see
+05:24 
+
+05:24 way more often is uh drastically
+05:26 
+
+05:26 underexposing the image to where you're
+05:29 
+
+05:29 you're so far in the other direction
+05:31 
+
+05:31 that it's just uh not even close to
+05:32 
+
+05:32 hitting that point of reaching Pure
+05:35 
+
+05:35 White okay so what I'm looking for here
+05:38 
+
+05:38 is a a range of you know something
+05:42 
+
+05:42 that's bright but not too bright and
+05:44 
+
+05:44 it's kind of just um in blender you
+05:46 
+
+05:46 don't get a live histogram unfortunately
+05:49 
+
+05:49 but it's kind of just um you kind of
+05:52 
+
+05:52 just have to use your intuition and try
+05:54 
+
+05:54 pushing it to both extremes and then
+05:56 
+
+05:56 come to a middle point uh between those
+05:59 
+
+05:59 two extremes where looks pretty good so
+06:01 
+
+06:01 anywhere in here could work it doesn't
+06:03 
+
+06:03 have to you don't have to pick the exact
+06:05 
+
+06:05 right value it just has to be roughly
+06:07 
+
+06:07 sort of right okay so what I'm doing
+06:10 
+
+06:10 here is I'm I've increased it now to
+06:11 
+
+06:11 back up to 1 million and I'm looking
+06:12 
+
+06:12 around here and I'm just looking at are
+06:15 
+
+06:15 are the brightest highlights in this
+06:16 
+
+06:16 image getting too blown out uh well in
+06:20 
+
+06:20 this case not quite they're if I push it
+06:23 
+
+06:23 any higher than this they would maybe
+06:25 
+
+06:25 start reaching a point like if I double
+06:27 
+
+06:27 this where okay stuff is getting a
+06:30 
+
+06:30 little bit brighter than I'm comfortable
+06:32 
+
+06:32 with here where it's kind of washing
+06:33 
+
+06:33 this out to a point where we're uh just
+06:37 
+
+06:37 over brightening this section okay so
+06:40 
+
+06:40 could this work yeah it look it actually
+06:41 
+
+06:41 looks not that bad but from way out here
+06:44 
+
+06:44 to me it just that's it it's getting a
+06:46 
+
+06:46 little too washed out so that's where
+06:48 
+
+06:48 I'll turn it back a little bit right
+06:50 
+
+06:50 I'll bring back to 1 million so that is
+06:53 
+
+06:53 a level that I'm happy with for
+06:54 
+
+06:54 brightness for that specific section
+06:56 
+
+06:56 okay but the again the problem is the
+06:58 
+
+06:58 rest of the image is so dark that we
+07:01 
+
+07:01 that we're we're losing all the
+07:03 
+
+07:03 information now on the on the other side
+07:05 
+
+07:05 of the Spectrum in the shadows right so
+07:06 
+
+07:06 down here there's so much Darkness even
+07:09 
+
+07:09 though there's a bunch of detail that
+07:10 
+
+07:10 I've put in there with the textures and
+07:12 
+
+07:12 the the water and all that stuff you
+07:14 
+
+07:14 can't see any of it especially if you
+07:17 
+
+07:17 zoom out and look at the full image
+07:19 
+
+07:19 right same thing way back here there
+07:22 
+
+07:22 we're just there's stuff there but we're
+07:24 
+
+07:24 just not seeing it because we're not uh
+07:26 
+
+07:26 shining any light on it okay so here's
+07:29 
+
+07:29 how I'll kind of approach that without
+07:30 
+
+07:30 just making the whole thing fully bright
+07:32 
+
+07:32 and like daytime so the first thing I
+07:34 
+
+07:34 will usually try which is usually enough
+07:37 
+
+07:37 to kind of cover most ground when it
+07:40 
+
+07:40 comes to just bringing up the Shadows a
+07:42 
+
+07:42 little bit so that we can get some of
+07:43 
+
+07:43 that information back is I'll usually
+07:45 
+
+07:45 just throw in an area light so for
+07:46 
+
+07:46 example in this one I'll just turn this
+07:48 
+
+07:48 one
+07:48 
+
+07:48 on just that we we have only two lights
+07:51 
+
+07:51 in here right we got that one Spotlight
+07:52 
+
+07:52 and we've got this one area light that's
+07:54 
+
+07:54 already like 80% of what it was in the
+07:56 
+
+07:56 very beginning with all these other
+07:58 
+
+07:58 lights on here so that's why I like to
+07:60 
+
+07:60 start with the key light because that's
+08:01 
+
+08:01 going to be the most important thing
+08:03 
+
+08:03 then I'll move to an area light which
+08:04 
+
+08:04 I'll I'll show you the settings here in
+08:05 
+
+08:05 a second when why that's positioned up
+08:06 
+
+08:06 there but the area light is going to be
+08:09 
+
+08:09 the next thing that covers the most
+08:10 
+
+08:10 ground and gets the image closest to the
+08:14 
+
+08:14 result you're looking
+08:15 
+
+08:15 for and then once you're happy with that
+08:17 
+
+08:17 then move to the smaller stuff after
+08:19 
+
+08:19 which I'll show you in a second as well
+08:21 
+
+08:21 okay so let's take a look at this area
+08:22 
+
+08:22 light up here so just to kind of give
+08:24 
+
+08:24 you some context of what's Happening
+08:25 
+
+08:25 Here the camera is down here so that's
+08:27 
+
+08:27 where we are looking through in this
+08:30 
+
+08:30 here so there there's the camera there's
+08:33 
+
+08:33 that pillar right there you just to kind
+08:35 
+
+08:35 of let you get oriented in the scene
+08:37 
+
+08:37 here there's all these steps here that's
+08:38 
+
+08:38 this that main structure right uh right
+08:42 
+
+08:42 here just so you can see that's what
+08:43 
+
+08:43 that is so it all kind of makes sense in
+08:46 
+
+08:46 the viewport there so I've just put an
+08:49 
+
+08:49 area light way up here uh just kind of
+08:53 
+
+08:53 almost directly above the camera a
+08:54 
+
+08:54 little bit in front but relatively just
+08:56 
+
+08:56 above the camera and this one is fairly
+08:59 
+
+08:59 dim it's only 2,000 Watts okay so the my
+09:02 
+
+09:02 my goal on this area light is not to um
+09:06 
+
+09:06 make everything really bright it's just
+09:08 
+
+09:08 to bring it up to a point if I just
+09:10 
+
+09:10 bring this way down it's just to bring
+09:12 
+
+09:12 it up to a point where you can kind of
+09:15 
+
+09:15 see a little bit of detail in those
+09:17 
+
+09:17 really dark shadows so if I bring this
+09:19 
+
+09:19 up more and more you can see if I if I
+09:22 
+
+09:22 have it on 1,000 for example that's sort
+09:24 
+
+09:24 of working let's even start lower let's
+09:26 
+
+09:26 start 500 so there's off and then
+09:29 
+
+09:29 there's on
+09:30 
+
+09:30 500 it might be hard to see in the video
+09:32 
+
+09:32 but it's adding a little bit more detail
+09:34 
+
+09:34 in there or not adding detail but rather
+09:37 
+
+09:37 I guess revealing the detail that is
+09:39 
+
+09:39 already there um and then I'm going to
+09:41 
+
+09:41 bring let's just double that again so
+09:42 
+
+09:42 we'll just go up to a th000 okay so on
+09:46 
+
+09:46 and off and that that might be enough
+09:48 
+
+09:48 right there depends how dramatic you
+09:49 
+
+09:49 want to make it but that could be enough
+09:51 
+
+09:51 to just kind
+09:52 
+
+09:52 of just shine a little bit of light in
+09:55 
+
+09:55 here in a way that doesn't feel
+09:57 
+
+09:57 unnatural so what do you want to void
+09:60 
+
+09:60 here is going too bright with this to
+10:01 
+
+10:01 the point where you're just fully
+10:03 
+
+10:03 lighting up everything it actually looks
+10:05 
+
+10:05 kind of cool here I don't I actually
+10:06 
+
+10:06 don't mind this but in terms of a dark
+10:08 
+
+10:08 render it's no longer dark so that's
+10:10 
+
+10:10 probably too far 20,000 like the number
+10:13 
+
+10:13 up here by the way you kind of have to
+10:14 
+
+10:14 ignore this
+10:15 
+
+10:15 because when you try it in your own
+10:17 
+
+10:17 scene it'll be roughly the a similar
+10:20 
+
+10:20 range but it's not going to be the exact
+10:21 
+
+10:21 same and sometimes these values are way
+10:23 
+
+10:23 off so it really just depends on the
+10:25 
+
+10:25 context of the environment you're in how
+10:28 
+
+10:28 bright the textures are how far away it
+10:29 
+
+10:29 is is all that kind of stuff so the
+10:31 
+
+10:31 actual number here isn't what's
+10:33 
+
+10:33 important what's important is look at
+10:35 
+
+10:35 the actual render and look at what we're
+10:37 
+
+10:37 showing and hiding here okay
+10:40 
+
+10:40 so so that is too bright right say I say
+10:43 
+
+10:43 I went to 5,000 so a quarter of what
+10:46 
+
+10:46 that was again that's maybe like we're
+10:50 
+
+10:50 showing a lot of the information now of
+10:53 
+
+10:53 the foreground and lighting it up quite
+10:55 
+
+10:55 a lot it's still relatively dim compared
+10:58 
+
+10:58 to the main light source
+10:60 
+
+10:60 but um I I could go lower and still be
+11:02 
+
+11:02 okay with it right so if I drop it down
+11:04 
+
+11:04 two what we're doing here is we're just
+11:06 
+
+11:06 lifting the Shadows a little bit to the
+11:08 
+
+11:08 point where we can just see that detail
+11:11 
+
+11:11 that's in there without uh revealing too
+11:13 
+
+11:13 much so again it's kind of a feeling of
+11:15 
+
+11:15 just trying out both extremes trying
+11:18 
+
+11:18 with it fully all the way off and see
+11:19 
+
+11:19 what that looks like try turning it up
+11:21 
+
+11:21 too high and push it to the point where
+11:24 
+
+11:24 you're actually not happy with it
+11:25 
+
+11:25 because it's too bright and then dial it
+11:27 
+
+11:27 back to a middle point somewhere between
+11:29 
+
+11:29 two extremes where you're where you're
+11:31 
+
+11:31 okay with it so that's that right there
+11:33 
+
+11:33 and then um after that I'll usually
+11:36 
+
+11:36 probably duplicate that a couple of
+11:38 
+
+11:38 times so I could just take that put it
+11:41 
+
+11:41 way back in the scene kind of lighting
+11:42 
+
+11:42 up some other stuff back here you can
+11:44 
+
+11:44 see that there if I just turn this on
+11:45 
+
+11:45 and off and again this one is not that
+11:47 
+
+11:47 much brighter 3,000 WTS the size is way
+11:49 
+
+11:49 bigger so it's going to be very soft and
+11:52 
+
+11:52 W with these two you have to try and
+11:54 
+
+11:54 make it make sense in the context of the
+11:56 
+
+11:56 scene too this is basically we're kind
+11:58 
+
+11:58 of just simulating some general ambient
+12:01 
+
+12:01 light that's just sort of there from
+12:03 
+
+12:03 whatever from either Reflections from
+12:06 
+
+12:06 some other uh opening somewhere in this
+12:08 
+
+12:08 like Cave thing that's bouncing some
+12:10 
+
+12:10 light in so it has to kind of make sense
+12:12 
+
+12:12 but just use common sense and you'll be
+12:15 
+
+12:15 fine with it right so let's just keep
+12:17 
+
+12:17 adding these in here another uh
+12:18 
+
+12:18 Spotlight so I've actually duplicated
+12:20 
+
+12:20 the key light on this one the main light
+12:23 
+
+12:23 I've just duplicated that and made the
+12:25 
+
+12:25 brightness way lower so you can see it's
+12:27 
+
+12:27 uh 200,000 instead of instead of 1
+12:29 
+
+12:29 million this is a quarter of that
+12:32 
+
+12:32 um and that's just actually the the spot
+12:36 
+
+12:36 size is turned way down as well so it's
+12:38 
+
+12:38 not lighting up very much it's kind of
+12:39 
+
+12:39 like a narrow beam of light targeting a
+12:42 
+
+12:42 specific spot right there um and I'll do
+12:45 
+
+12:45 that usually a few times so there's
+12:46 
+
+12:46 another one just lighting up a specific
+12:48 
+
+12:48 spot that I thought was cool way back
+12:49 
+
+12:49 there again the brightness on these
+12:52 
+
+12:52 supporting lights is much lower than the
+12:54 
+
+12:54 key light I'm doing that intentionally
+12:57 
+
+12:57 to not kind of subtract the attention
+12:60 
+
+12:60 that I want to go towards this main
+13:02 
+
+13:02 area and not have it overwhelming and
+13:04 
+
+13:04 overly bright everywhere but it's just
+13:06 
+
+13:06 kind of there to support the main light
+13:08 
+
+13:08 and kind of let you know what's going on
+13:10 
+
+13:10 in some of these other areas right so
+13:12 
+
+13:12 again same thing uh just duplicating the
+13:14 
+
+13:14 key light lowering down the the spot
+13:16 
+
+13:16 size so it's kind of a narrow beam of
+13:18 
+
+13:18 light and then lowering down the
+13:19 
+
+13:19 brightness so it's nowhere near the full
+13:21 
+
+13:21 strength of the main light right and
+13:24 
+
+13:24 they're also shining through kind of
+13:25 
+
+13:25 like these really narrow uh Pockets here
+13:28 
+
+13:28 that are also blocking a lot of that
+13:30 
+
+13:30 light as well okay then the final layer
+13:33 
+
+13:33 that I have on here in terms of lighting
+13:34 
+
+13:34 is actually some bounce lights so bounce
+13:37 
+
+13:37 lighting is just light that's hitting
+13:39 
+
+13:39 one surface and then literally just
+13:41 
+
+13:41 bouncing off that surface and hitting
+13:42 
+
+13:42 something else so for example if I add a
+13:45 
+
+13:45 plane in here I'll just add a white
+13:48 
+
+13:48 plane and just kind of make that big and
+13:49 
+
+13:49 then I'll rotate it this
+13:51 
+
+13:51 way so this here is actually going to
+13:55 
+
+13:55 uh reflect a bunch of light so if I just
+13:58 
+
+13:58 start moving this around you can see a
+14:00 
+
+14:00 big white sheet is going to reflect tons
+14:03 
+
+14:03 of light off of off of that white
+14:05 
+
+14:05 surface onto other things nearby it
+14:07 
+
+14:07 right so that that's all bounce lighting
+14:09 
+
+14:09 is it's just literally bouncing light
+14:11 
+
+14:11 off the surface and it doesn't have to
+14:12 
+
+14:12 be a white plane it's it's happening
+14:14 
+
+14:14 here with this thing here naturally
+14:17 
+
+14:17 already right it's just that's how light
+14:20 
+
+14:20 works it bounces around right so that is
+14:22 
+
+14:22 H happening naturally in the scene but
+14:24 
+
+14:24 if you want to accentuate that you can
+14:27 
+
+14:27 kind of fake it a little bit with some
+14:29 
+
+14:29 extra lights here so that's what these
+14:30 
+
+14:30 are I'll show you how to set this up too
+14:31 
+
+14:31 but just if I hide this on and off here
+14:35 
+
+14:35 this is sort of tying it together in a
+14:37 
+
+14:37 way that you don't need to do but it's
+14:39 
+
+14:39 something that's could be it can be fun
+14:41 
+
+14:41 sometimes and makes it feel a bit more
+14:42 
+
+14:42 special sometimes um but definitely more
+14:44 
+
+14:44 optional than the last two things so
+14:47 
+
+14:47 what this is if I actually hide the uh
+14:49 
+
+14:49 supporting lights and I hide the key
+14:51 
+
+14:51 light these here is doing this right
+14:54 
+
+14:54 here so I've placed it in areas where it
+14:58 
+
+14:58 would make sense the bounce slighting
+14:59 
+
+14:59 would actually already exist naturally
+15:01 
+
+15:01 in the scene where there where there is
+15:04 
+
+15:04 actually light bouncing off of these
+15:05 
+
+15:05 surfaces already and I'm just enhancing
+15:08 
+
+15:08 that by placing these lights in here so
+15:10 
+
+15:10 what this actually is it's just a point
+15:11 
+
+15:11 light but with a couple of settings
+15:14 
+
+15:14 changed so uh the first setting is
+15:17 
+
+15:17 multiple importance if you have this on
+15:20 
+
+15:20 sometimes you'll just get a reflection
+15:21 
+
+15:21 of the light in like a puddle or
+15:22 
+
+15:22 something and it'll be like a glowing
+15:24 
+
+15:24 sphere in the puddle so I'll just turn
+15:26 
+
+15:26 off multiple importance take that off uh
+15:28 
+
+15:28 the other thing
+15:29 
+
+15:29 is if you go into this uh object
+15:32 
+
+15:32 properties tab here it's the orange
+15:33 
+
+15:33 Square go down to uh viewport sorry go
+15:37 
+
+15:37 down to
+15:38 
+
+15:38 visibility um I've actually got it
+15:40 
+
+15:40 unchecked on glossy and I've got it
+15:43 
+
+15:43 unchecked on volume scatter so it
+15:46 
+
+15:46 actually kind of cool here with this but
+15:47 
+
+15:47 it's not what I wanted so if I uncheck
+15:49 
+
+15:49 the glossy um Ray visibility for this
+15:53 
+
+15:53 point light it's not going to reflect
+15:55 
+
+15:55 anything uh any glossy surfaces so like
+15:58 
+
+15:58 water metal that kind of thing will not
+15:60 
+
+15:60 be reflecting it cuz it just looks kind
+16:01 
+
+16:01 of weird and unnatural if I have that on
+16:03 
+
+16:03 and then the volume scatter uh is also
+16:05 
+
+16:05 turned off so since I'm using volume
+16:07 
+
+16:07 over the entire scene I don't want it to
+16:09 
+
+16:09 be a glowing uh orb in the Middle with
+16:13 
+
+16:13 like radiating through the volume so
+16:15 
+
+16:15 I'll just take that off to make it feel
+16:16 
+
+16:16 a bit more natural like kind of Bounce
+16:18 
+
+16:18 lighting would be right so and then I've
+16:21 
+
+16:21 just duplicated that a couple more times
+16:22 
+
+16:22 in the back so same thing duplicated
+16:24 
+
+16:24 same thing duplicated back there and
+16:26 
+
+16:26 that's usually how I'll fake bounce
+16:27 
+
+16:27 lighting and then in combination with
+16:29 
+
+16:29 those those other lights it has to make
+16:30 
+
+16:30 sense right so you have to place these
+16:31 
+
+16:31 in an area that already has a lot of
+16:34 
+
+16:34 Bounce lighting um and then that can
+16:36 
+
+16:36 kind of just finalize the look but again
+16:39 
+
+16:39 more optional than the first two things
+16:40 
+
+16:40 we showed so that's the lighting setup
+16:42 
+
+16:42 for this one I want to move on now to
+16:44 
+
+16:44 some other just general tips for uh some
+16:47 
+
+16:47 things you can do to make your dark
+16:49 
+
+16:49 renders just more interesting overall
+16:52 
+
+16:52 the first thing is using Reflections so
+16:54 
+
+16:54 in this one there's there's an example
+16:56 
+
+16:56 of it right here so we've got these um
+16:58 
+
+16:58 puddles here if you want to know what
+16:59 
+
+16:59 this is it's actually just a um I think
+17:02 
+
+17:02 I just used a what did I even do so I've
+17:04 
+
+17:04 just weight painted this on here just
+17:06 
+
+17:06 you go uh shift sorry control tab into
+17:09 
+
+17:09 weight paint then you brush this in
+17:10 
+
+17:10 wherever and that's going to create a
+17:12 
+
+17:12 Vertex group you just um add the
+17:15 
+
+17:15 attribute node in here and then just
+17:18 
+
+17:18 name just put in the word group because
+17:20 
+
+17:20 that's going to be the default name for
+17:23 
+
+17:23 any new vertex Group which gets
+17:25 
+
+17:25 automatically added when you go into
+17:27 
+
+17:27 weight paint mode and start painting
+17:28 
+
+17:28 something you also have to have it
+17:30 
+
+17:30 subdivided a little bit so keep that in
+17:32 
+
+17:32 mind and then yeah you just run that you
+17:35 
+
+17:35 basically have a mask now so you can
+17:36 
+
+17:36 just control anything with this um as a
+17:38 
+
+17:38 black and white
+17:41 
+
+17:41 mask so in this case it's running into
+17:43 
+
+17:43 the roughness and then controlling where
+17:45 
+
+17:45 that gor texture comes in onto the bump
+17:47 
+
+17:47 node um I'm not going to go too into the
+17:48 
+
+17:48 technical stuff cuz it doesn't matter
+17:50 
+
+17:50 that much but and this is a onetime
+17:52 
+
+17:52 setup I've only ever used in this
+17:53 
+
+17:53 specific render too so it's not like
+17:55 
+
+17:55 that important of a technique but uh the
+17:57 
+
+17:57 point is I I have a bunch of other
+17:59 
+
+17:59 tutorials on like wet uh puddle floors
+18:02 
+
+18:02 and like stuff like that so um yeah just
+18:05 
+
+18:05 using Reflections whether it's metal
+18:07 
+
+18:07 whether it's um chains hanging which are
+18:09 
+
+18:09 a metallic texture incense burners
+18:12 
+
+18:12 hanging which are again a metallic
+18:13 
+
+18:13 texture I'll use that a lot whether it's
+18:15 
+
+18:15 um some something more abstract with
+18:16 
+
+18:16 like some metal rings or something
+18:18 
+
+18:18 whether it's puddles on the ground
+18:19 
+
+18:19 whether it's doesn't matter what it is
+18:21 
+
+18:21 just using some Reflections can really
+18:23 
+
+18:23 help um just bring it a bit more to life
+18:26 
+
+18:26 especially in a dark render
+18:27 
+
+18:27 because if you notice here I'm I'm
+18:30 
+
+18:30 placing these Reflections in the areas
+18:32 
+
+18:32 that that are like the darkest in the
+18:34 
+
+18:34 foreground and that's actually
+18:35 
+
+18:35 reflecting the bright part so you can
+18:37 
+
+18:37 kind of bring some of the light back
+18:40 
+
+18:40 into the dark by reflecting it and that
+18:41 
+
+18:41 just makes it more interesting in in
+18:43 
+
+18:43 some certain areas another example is
+18:45 
+
+18:45 one of the ones I showed here so in
+18:48 
+
+18:48 again a cityscape render like this um
+18:51 
+
+18:51 I've lowered the roughness of like the
+18:53 
+
+18:53 side of the building here so that is
+18:55 
+
+18:55 reflecting uh more of like a it's like a
+18:57 
+
+18:57 low roughness surface so it's just
+18:59 
+
+18:59 create more strong Reflections there
+19:01 
+
+19:01 whether it's that or the the windows
+19:02 
+
+19:02 reflecting the neon signs or whatever um
+19:05 
+
+19:05 just sort of I like um low roughness or
+19:08 
+
+19:08 metallic surface or glass surface um
+19:11 
+
+19:11 even stuff like on this like crane arm
+19:14 
+
+19:14 thing here just Reflections can really
+19:16 
+
+19:16 help in areas that are super dark in the
+19:19 
+
+19:19 render could just really help bring some
+19:21 
+
+19:21 more light into it without actually
+19:24 
+
+19:24 lighting up the scene more uh you're
+19:26 
+
+19:26 just kind of taking advantage of the
+19:27 
+
+19:27 light that's already there and keeping
+19:28 
+
+19:28 it dark the same level of Darkness but
+19:31 
+
+19:31 bringing some light that's already there
+19:33 
+
+19:33 kind of into some of the darker areas
+19:35 
+
+19:35 and making it more interesting in those
+19:36 
+
+19:36 areas okay the next tip that I want to
+19:38 
+
+19:38 mention here I've already kind of
+19:39 
+
+19:39 covered this but I just want to make it
+19:40 
+
+19:40 really clear here when I'm lighting a
+19:43 
+
+19:43 dark render like this I'll often have uh
+19:45 
+
+19:45 very concentrated spots of actually very
+19:48 
+
+19:48 bright light but keeping it uh very
+19:52 
+
+19:52 controlled and very contained in only
+19:54 
+
+19:54 the areas that I want so that the rest
+19:55 
+
+19:55 of the render stays dark if you look at
+19:58 
+
+19:58 these spotlights here
+19:59 
+
+19:59 um the the direction these are going
+20:02 
+
+20:02 like if you just look at the actual cone
+20:04 
+
+20:04 the actual cone of the light and the
+20:05 
+
+20:05 direction that is going it's not uh that
+20:10 
+
+20:10 like it's not spreading out that much
+20:12 
+
+20:12 right and the other thing too is that
+20:14 
+
+20:14 we're also containing it with all these
+20:17 
+
+20:17 Shadows so I have this uh plane here
+20:19 
+
+20:19 which is kind of like a noise texture on
+20:21 
+
+20:21 a plane running into the alpha so that's
+20:23 
+
+20:23 creating a little bit more shadows as
+20:25 
+
+20:25 well there's also these all these
+20:26 
+
+20:26 pillars and stuff that are in the way so
+20:28 
+
+20:28 if I take that out a lot more light is
+20:30 
+
+20:30 coming through and I'm just using random
+20:32 
+
+20:32 objects to block off a lot of the light
+20:34 
+
+20:34 in here so that's one thing is just um
+20:38 
+
+20:38 that there this all this stuff this
+20:41 
+
+20:41 pillar even all this stuff is blocking
+20:43 
+
+20:43 the light to keep it extremely
+20:45 
+
+20:45 controlled and contained in only the
+20:47 
+
+20:47 area that I want you can see now it's
+20:50 
+
+20:50 not even a dark render at this point it
+20:52 
+
+20:52 doesn't look terrible no but it's just
+20:53 
+
+20:53 it's not dark anymore so if I want it to
+20:55 
+
+20:55 be dark you have to control the light
+20:57 
+
+20:57 very intentionally and one really easy
+20:59 
+
+20:59 way to do that is just use natural
+21:01 
+
+21:01 objects that are already in your
+21:02 
+
+21:02 environment and just duplicate them off
+21:04 
+
+21:04 to the side and just put them in front
+21:06 
+
+21:06 of the the spotlight or the Sun or
+21:08 
+
+21:08 whatever is casting the light I just use
+21:10 
+
+21:10 that to block out light in in the areas
+21:13 
+
+21:13 that don't need it especially the really
+21:15 
+
+21:15 bright light another thing too is that I
+21:18 
+
+21:18 really like keeping the edges like the
+21:20 
+
+21:20 outside perimeter of the render in the
+21:23 
+
+21:23 actual frame um quite dark compared to
+21:26 
+
+21:26 everything else so that's something I do
+21:28 
+
+21:28 a lot is just that's something that can
+21:30 
+
+21:30 really make it feel darker even if there
+21:33 
+
+21:33 isn't um that much Darkness overall in
+21:36 
+
+21:36 the render it's something that can make
+21:37 
+
+21:37 it feel darker um whether that literally
+21:40 
+
+21:40 means like actually lower brightness or
+21:42 
+
+21:42 whe that means just like a darker tone
+21:44 
+
+21:44 and darker vibe to the image um just in
+21:48 
+
+21:48 terms of mood having a dark perimeter
+21:51 
+
+21:51 around the outside you can really help
+21:52 
+
+21:52 with that so that's why I've placed this
+21:55 
+
+21:55 pillar here for example that's just
+21:57 
+
+21:57 there because I found it was too bright
+21:59 
+
+21:59 on this side of the image and just
+22:01 
+
+22:01 having a dark outside frame there really
+22:04 
+
+22:04 help with that um same thing this this
+22:06 
+
+22:06 blocker right here I'm blocking out all
+22:09 
+
+22:09 the bright light that's lining up on
+22:11 
+
+22:11 kind of uh to balance out that pillar on
+22:14 
+
+22:14 the other side of the frame so they this
+22:16 
+
+22:16 pillar and that that blocker are kind of
+22:18 
+
+22:18 doing the same thing where we're just
+22:20 
+
+22:20 blocking light on that right side of the
+22:22 
+
+22:22 frame there and then on the left side of
+22:24 
+
+22:24 the frame here with this thing and then
+22:26 
+
+22:26 the same thing the foreground is quite
+22:28 
+
+22:28 dark so there's no direct light from
+22:31 
+
+22:31 this Spotlight the main light hitting
+22:32 
+
+22:32 there at all and all of that is just
+22:34 
+
+22:34 kind of a even the ceiling above it too
+22:37 
+
+22:37 like it's quite dark up
+22:38 
+
+22:38 there all all of that is creating kind
+22:41 
+
+22:41 of a natural vignette or a natural frame
+22:43 
+
+22:43 of Darkness around the entire image
+22:45 
+
+22:45 which definitely gives it a darker tone
+22:48 
+
+22:48 overall so that's something I'll do a
+22:50 
+
+22:50 lot again whether it's uh citycape
+22:53 
+
+22:53 render whether it's you know look at how
+22:54 
+
+22:54 dark it gets around the very very edges
+22:57 
+
+22:57 um and that's kind of just helping you
+23:00 
+
+23:00 kind of focus towards the middle and
+23:02 
+
+23:02 just make it feel darker overall so
+23:04 
+
+23:04 whether it's a forest scene I'm going to
+23:05 
+
+23:05 use like really dark uh tree branches
+23:07 
+
+23:07 around here or same thing in the
+23:09 
+
+23:09 foreground the the main light source
+23:11 
+
+23:11 isn't really reaching there as much I've
+23:13 
+
+23:13 intentionally made this kind of dimmer
+23:15 
+
+23:15 here um and I'm just placing objects in
+23:18 
+
+23:18 a way that it's going to naturally uh
+23:20 
+
+23:20 get like a a Darkness around the edge in
+23:23 
+
+23:23 blender and then you can enhance it in
+23:25 
+
+23:25 Photoshop by adding a vignette or
+23:27 
+
+23:27 whatever okay something I want you to
+23:29 
+
+23:29 notice here this is actually important
+23:30 
+
+23:30 right even in my darkest renders if you
+23:34 
+
+23:34 look at the darkest parts of those
+23:36 
+
+23:36 darkest renders in in those super dark
+23:38 
+
+23:38 areas there's not ever very much
+23:42 
+
+23:42 absolute uh black at all actually so if
+23:46 
+
+23:46 I zoom into like the very darkest parts
+23:48 
+
+23:48 of this render for example way down here
+23:51 
+
+23:51 you can still see detail in there and
+23:53 
+
+23:53 that comes from the tricks we did said
+23:55 
+
+23:55 earlier with the uh having an area light
+23:57 
+
+23:57 or some sort of ambient light around the
+24:00 
+
+24:00 scene to bring up those really dark
+24:02 
+
+24:02 shadows that also comes from not adding
+24:05 
+
+24:05 too much contrast in the image so um if
+24:07 
+
+24:07 you're using like agx or filming I guess
+24:10 
+
+24:10 too and you're using one of the view
+24:12 
+
+24:12 transforms where you're increasing it to
+24:14 
+
+24:14 like very high contrast uh Punchy like
+24:17 
+
+24:17 those those super high contrast modes on
+24:20 
+
+24:20 in blender that's tempting because it
+24:22 
+
+24:22 looks kind of cool in the viewport but
+24:24 
+
+24:24 it can often just crush your shadows to
+24:26 
+
+24:26 the point where you're just losing
+24:28 
+
+24:28 information in in this super dark areas
+24:30 
+
+24:30 what I mean is that you don't want it to
+24:33 
+
+24:33 look like this where all of a sudden
+24:36 
+
+24:36 you're just
+24:38 
+
+24:38 uh it's reaching black but then it's
+24:41 
+
+24:41 just it it's excessive to the point
+24:43 
+
+24:43 where you're just getting huge patches
+24:46 
+
+24:46 of lost information where it's this is a
+24:50 
+
+24:50 point where in my opinion is much
+24:51 
+
+24:51 obviously in this case is Extreme but
+24:54 
+
+24:54 like way too dark where you generally
+24:56 
+
+24:56 don't want a bunch of Pat of absolute
+25:00 
+
+25:00 Blackness um you kind of want to at
+25:03 
+
+25:03 least what I try to do is maintain
+25:06 
+
+25:06 detail approach black and have a few
+25:08 
+
+25:08 pixels in those areas that are maybe
+25:10 
+
+25:10 reaching absolute black um you can see
+25:14 
+
+25:14 like just it's it's approaching it but
+25:17 
+
+25:17 it's not like this where it's just
+25:19 
+
+25:19 completely swamped you know um you want
+25:21 
+
+25:21 to leave that detail in there and that's
+25:23 
+
+25:23 going to make it I I've just found that
+25:25 
+
+25:25 makes it look so much more professional
+25:26 
+
+25:26 if you can just
+25:27 
+
+25:27 um even just a little bit of detail in
+25:30 
+
+25:30 those darkest Shadows by either bringing
+25:34 
+
+25:34 it up and post by increasing the Shadows
+25:35 
+
+25:35 or just having ambient a tiny bit of
+25:37 
+
+25:37 ambient light you don't have to overdo
+25:39 
+
+25:39 it but just a little bit um so that
+25:41 
+
+25:41 you're not just getting totally crushed
+25:44 
+
+25:44 Shadows that's going to really help not
+25:46 
+
+25:46 make it feel like over contrasted overly
+25:49 
+
+25:49 dark um it just seems amateur when you
+25:52 
+
+25:52 when you just over contrast it so try
+25:54 
+
+25:54 and avoid that okay yeah so um for some
+25:57 
+
+25:57 bonus tips so so you kind of have to
+25:60 
+
+25:60 embrace this a little bit when I say
+26:01 
+
+26:01 embrace the darkness I literally mean
+26:03 
+
+26:03 that where you have to kind of just
+26:05 
+
+26:05 accept that okay the render is going to
+26:07 
+
+26:07 be dark so uh just kind of have to wrap
+26:10 
+
+26:10 your head around being okay with that um
+26:13 
+
+26:13 so it is actually kind of a positive
+26:16 
+
+26:16 thing to do a lot of the time where you
+26:18 
+
+26:18 can kind of just make everything feel
+26:20 
+
+26:20 higher quality by intentionally not
+26:23 
+
+26:23 shining light on the things that are
+26:26 
+
+26:26 like just bad in the render so
+26:29 
+
+26:29 if for example if I move this out of the
+26:31 
+
+26:31 way like let's just say I take this out
+26:35 
+
+26:35 this is um not great here it's basically
+26:39 
+
+26:39 cubes with a texture on it down there in
+26:41 
+
+26:41 the bottom left there same thing very up
+26:43 
+
+26:43 close here but if I kind of just make it
+26:46 
+
+26:46 dark enough it you don't really pay as
+26:49 
+
+26:49 much attention to it and see the flaws
+26:51 
+
+26:51 as much and that's something that's I've
+26:53 
+
+26:53 actually relied on quite heavily for my
+26:54 
+
+26:54 work uh for a long time it's just um L
+26:58 
+
+26:58 literally don't shine light on the
+26:59 
+
+26:59 things you don't want be to see uh and
+27:01 
+
+27:01 that can actually save you a lot of time
+27:02 
+
+27:02 in scene building as well and the other
+27:04 
+
+27:04 thing you have to remember too which is
+27:06 
+
+27:06 a bonus and kind of a positive of making
+27:08 
+
+27:08 dark renders is that your lighting is
+27:10 
+
+27:10 naturally going to be dramatic and just
+27:13 
+
+27:13 interesting to look
+27:14 
+
+27:14 at um you know half of half of lighting
+27:18 
+
+27:18 is uh actually the Shadows right and a
+27:21 
+
+27:21 nice balance of light and dark is just
+27:24 
+
+27:24 naturally interesting and just cool to
+27:26 
+
+27:26 look at I think so that's one thing that
+27:29 
+
+27:29 just naturally comes with making a dark
+27:30 
+
+27:30 render is you'll it's just going to be
+27:33 
+
+27:33 cool and dramatic and naturally kind of
+27:35 
+
+27:35 interesting when you light it this way
+27:36 
+
+27:36 and another tip here is that using
+27:38 
+
+27:38 volume will really help here if I turn
+27:40 
+
+27:40 off this volume you can see it's just um
+27:44 
+
+27:44 it's fine but it is just missing
+27:46 
+
+27:46 something and when I bring that back in
+27:47 
+
+27:47 it just really solidifies that
+27:49 
+
+27:49 atmosphere in here so this is anytime
+27:51 
+
+27:51 I'm making a dark render I pretty much
+27:53 
+
+27:53 always use this what this is it's just a
+27:57 
+
+27:57 cube uh like a Cube kind of stretched
+27:59 
+
+27:59 over the entire scene like this so it's
+28:02 
+
+28:02 just that there uh just shift a mesh
+28:04 
+
+28:04 Cube scale it up and then put this
+28:07 
+
+28:07 Shader on it so it's just a volume
+28:08 
+
+28:08 scatter running into the volume of that
+28:11 
+
+28:11 material output on this Cube lower the
+28:14 
+
+28:14 density we down and then increase the
+28:16 
+
+28:16 anisotropy a little bit and that's
+28:17 
+
+28:17 usually my setup and then in the
+28:19 
+
+28:19 properties for this object just go down
+28:22 
+
+28:22 to um viewport display and then choose
+28:25 
+
+28:25 display as bounds and that'll just get
+28:27 
+
+28:27 out of the way then the last tip for
+28:29 
+
+28:29 making these kinds of renders that this
+28:31 
+
+28:31 is actually a weird one but it's very I
+28:33 
+
+28:33 find it extremely helpful for accurately
+28:36 
+
+28:36 assessing whether you've made it too
+28:38 
+
+28:38 bright or too dark is actually render it
+28:41 
+
+28:41 uh edit it whatever finished the render
+28:43 
+
+28:43 and then actually send it to your phone
+28:45 
+
+28:45 and look at it on your phone and a lot
+28:47 
+
+28:47 of the time you'll just um it's almost
+28:50 
+
+28:50 kind of the same effect as if you take a
+28:51 
+
+28:51 long break from it and then look at it
+28:53 
+
+28:53 again it kind of does the same thing but
+28:55 
+
+28:55 without having to take a break where you
+28:56 
+
+28:56 can just send it to your phone and it
+28:58 
+
+28:58 immediately switches the context in
+28:60 
+
+28:60 which you're seeing this image and can
+29:02 
+
+29:02 give you a much more accurate sense of
+29:05 
+
+29:05 exactly how bright this thing is uh for
+29:07 
+
+29:07 some reason just every time I do that I
+29:09 
+
+29:09 I can
+29:11 
+
+29:11 really uh it's a lot easier to see the
+29:13 
+
+29:13 render for what it really is and whether
+29:16 
+
+29:16 you need to make adjustments just send
+29:17 
+
+29:17 it to your phone and look at it there
+29:18 
+
+29:18 and I found that really helpful okay so
+29:21 
+
+29:21 that's how to make dark renders in
+29:22 
+
+29:22 blender um if you found this video
+29:24 
+
+29:24 helpful you'll probably want to check
+29:25 
+
+29:25 out the new Cyber environments course I
+29:27 
+
+29:27 think all those renders are dark renders
+29:29 
+
+29:29 in that one so uh if you like dark
+29:31 
+
+29:31 renders that's probably a good place to
+29:34 
+
+29:34 go I'll leave a link below to that and
+29:36 
+
+29:36 yeah thank you for watching and I'll see
+29:38 
+
+29:38 you in the next one

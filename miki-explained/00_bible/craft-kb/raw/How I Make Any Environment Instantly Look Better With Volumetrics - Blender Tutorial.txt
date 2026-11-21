@@ -1,0 +1,126 @@
+00:01 okay what's up so I want to show you how
+adding volumetrics into your scene can
+00:05 completely transform the image it can
+make it look a lot better and I'll show
+00:08 you how to set it up
+um I'll show you the before and after
+00:11 how it changes things basically here's
+something I made
+00:15 um a couple days ago so here is the
+final thing I'll just put it up here
+00:19 so this is what it looks like after
+volumetrics enabled and I also ran this
+00:24 through Photoshop so the colors are kind
+of enhanced but
+00:28 straight out of blender this is what it
+looks like so this is with volumetrics
+00:33 again on it just hasn't been through
+Photoshop and then finally here's what
+00:37 it looks like with no volumetrics so
+rendered image just volume disabled so
+00:43 here is the scene so it's just
+this no volume just my setup of stuff
+00:50 here just a bunch of objects
+um so what I'm going to do to add volume
+00:54 to this is just first of all add a cube
+so shift a cube uh just scale that up
+01:00 over the entire scene that you can see
+like there's some stuff over here this
+01:04 is just extra assets I brought in uh
+they're not actually part of it so I'll
+01:08 just cover up the main thing which is
+just this stuff here
+01:12 Cube over everything
+um and then what we'll do is just create
+01:17 a new texture
+let's delete the principal Shader and
+01:20 then just add a volume scatter just drop
+that in plug that into the volume and if
+01:25 you don't see it you just have to scroll
+in and out on the render View and it'll
+01:28 update so now it's uh pitch black
+because the density is actually one the
+01:34 value of one for the density is pretty
+high so it's so thick that it's just
+01:39 completely black so if I just set that
+to like point zero one
+01:45 um that's a good starting point usually
+so that's what that looks like just
+01:49 default settings just .01 and then
+default and it's entropy
+01:53 so the density is just going to control
+how thick you want the fog to be
+01:59 I'll just leave it there for now but I
+want to talk about this uh the
+02:04 anisotropy however you say that
+basically when you take this up you can
+02:09 see the more I
+bring this up
+02:13 um you can see what it's doing like
+basically
+02:15 if you have a light source
+it's going to make the fog brighter
+02:20 closer towards that light source so yeah
+I kind of like bringing that up a little
+02:24 bit to like
+0.7 something like that if you go too
+02:28 high it's a bit weird but something like
+this in this range is kind of cool
+02:32 sometimes so and then if 0.01 is too
+thick you can always just cut that in
+02:36 half or quarter or whatever and there
+you go
+02:40 so that's it's just that it's just this
+one node with roughly these settings
+02:43 that I use most of the time so I want to
+talk about how you this is kind of in
+02:47 the way now so people are asking about
+how to display this has bounds really
+02:50 fast so you might have seen me do this
+to just quickly get it out of the way
+02:54 what that is is if you just go down to
+this tab right here the orange Square
+02:58 the object properties scroll down to
+this viewport display tab just open that
+03:04 up so viewport display and then where it
+says display as make sure you have the
+03:08 volume Cube that you added selected
+or it says display as textured in this
+03:14 case just click that and then just check
+balance right here so that'll just
+03:18 display it as its bounding box
+so
+03:22 if you want to do that faster and you
+want to assign a shortcut to this which
+03:25 is what I did here by doing this
+if you just right click this where it
+03:29 says display as textured just right
+click that and then hit for me it says
+03:34 change shortcut but for you it'll say
+assign shortcut if you don't already
+03:37 have one so press assign shortcut and
+then I just made mine d on the keyboard
+03:41 I just press D and then for display ads
+and then that pops open this menu so I
+03:45 can just press D bounds and then it's
+done and I don't have to find this thing
+03:49 every time
+okay so that's that just a quick one
+03:52 using the volume to make things better
+um I just want to mention that I
+03:57 probably use
+I use
+03:59 this exact setup of volume Cube over
+everything with this volume scatter on
+04:04 it and
+pretty much 99 of my artworks even if it
+04:09 doesn't really make sense to be like
+foggy in the artwork
+04:12 I always find it just looks so much
+better just having this in there just
+04:15 adding a bit of depth and um yeah just
+it looks good so
+04:19 is it the most realistic thing ever no
+but it looks cool so I use it a lot
+04:25 anyways hope that helps you just a quick
+one and um yeah I'll see in the next one

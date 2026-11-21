@@ -1,0 +1,1459 @@
+00:02 let's learn all about eye tracing and
+00:03 
+
+00:03 match cuts in motion graphics and how
+00:05 
+
+00:05 that makes your audience stick with the
+00:07 
+
+00:07 [Music]
+00:15 
+
+00:15 journey
+00:17 
+
+00:17 hello everybody and welcome back to
+00:19 
+
+00:19 tipta and today we're inside of after
+00:20 
+
+00:20 effects looking at some cool motion
+00:22 
+
+00:22 graphics techniques
+00:23 
+
+00:23 about uh eye tracing and match cuts now
+00:26 
+
+00:26 match cuts is a term from
+00:27 
+
+00:27 film which basically means that the
+00:29 
+
+00:29 content of your composition
+00:31 
+
+00:31 matches visually and in position and
+00:34 
+
+00:34 scale and things like that
+00:35 
+
+00:35 with the contents of the next shot in
+00:37 
+
+00:37 motion graphics we use this combined
+00:39 
+
+00:39 with eye tracing where the
+00:40 
+
+00:40 you the audience follows the movement of
+00:43 
+
+00:43 the
+00:44 
+
+00:44 mograph to lead them through the journey
+00:46 
+
+00:46 and to link otherwise
+00:48 
+
+00:48 unlinked visual assets like for here for
+00:50 
+
+00:50 example this yellow circle into the
+00:51 
+
+00:51 white square into the blue triangle into
+00:53 
+
+00:53 the eye
+00:54 
+
+00:54 into the text um there are two parts to
+00:56 
+
+00:56 this the eye itrace and the match cap
+00:58 
+
+00:58 so we'll talk about both of those in
+00:60 
+
+00:60 today's tutorial
+01:01 
+
+01:01 but firstly a word from this episode
+01:03 
+
+01:03 sponsor wondershare demo creator is a
+01:06 
+
+01:06 quick and easy screen recording and
+01:07 
+
+01:07 editing software
+01:08 
+
+01:08 perfect for capturing tutorials like
+01:10 
+
+01:10 this video gameplay footage
+01:12 
+
+01:12 or presentations just open the software
+01:15 
+
+01:15 hit record and off you go
+01:16 
+
+01:16 you can even annotate highlight content
+01:18 
+
+01:18 and your cursor during or after filming
+01:21 
+
+01:21 which gives great flexibility
+01:22 
+
+01:22 it also comes with a bunch of pre-made
+01:24 
+
+01:24 mograph transitions and title cards for
+01:26 
+
+01:26 quick editing
+01:27 
+
+01:27 and there's all sorts of great features
+01:29 
+
+01:29 to help elevate your creations past the
+01:31 
+
+01:31 usual screen recorded content
+01:35 
+
+01:35 so if that sounds like something you'd
+01:36 
+
+01:36 be interested in you can download the
+01:38 
+
+01:38 software for free
+01:39 
+
+01:39 now using the link in the description or
+01:41 
+
+01:41 comments and there's 20
+01:42 
+
+01:42 off the paid subscription for that so go
+01:45 
+
+01:45 check it out and get creating but for
+01:46 
+
+01:46 now
+01:47 
+
+01:47 back to the tutorial so the first part
+01:49 
+
+01:49 of this tutorial is
+01:50 
+
+01:50 eye tracing and what this essentially
+01:52 
+
+01:52 means is um
+01:54 
+
+01:54 your motion graphics should lead the
+01:55 
+
+01:55 audience's eye
+01:57 
+
+01:57 through the journey of the content
+01:58 
+
+01:58 that's on screen what i've done here is
+02:00 
+
+02:00 isolate the um mograph that we've done
+02:03 
+
+02:03 and use this kind of circle to indicate
+02:05 
+
+02:05 where the viewer's eye is being dragged
+02:07 
+
+02:07 by the content
+02:08 
+
+02:08 now you want basically a continuous path
+02:12 
+
+02:12 through your motion unless you're
+02:14 
+
+02:14 specifically trying to
+02:16 
+
+02:16 break that journey because if for
+02:19 
+
+02:19 example you
+02:20 
+
+02:20 suddenly jump from the top left to the
+02:21 
+
+02:21 bottom right corner it's going to make
+02:22 
+
+02:22 your audience stutter
+02:23 
+
+02:23 even if it's just subconscious it's
+02:25 
+
+02:25 going to make them break that flow
+02:27 
+
+02:27 so that is eye tracing you use match
+02:30 
+
+02:30 cuts to help with the eye tracing and
+02:32 
+
+02:32 what a match cut is
+02:33 
+
+02:33 is basically the the point where that
+02:35 
+
+02:35 content changes
+02:36 
+
+02:36 from the first to the second set of
+02:38 
+
+02:38 content here for example we have
+02:40 
+
+02:40 um our very simple beginning to our
+02:42 
+
+02:42 animation here
+02:45 
+
+02:45 the ball backs off slightly follows the
+02:48 
+
+02:48 path around so there already is our path
+02:50 
+
+02:50 of
+02:50 
+
+02:50 motion scaling down before cutting
+02:53 
+
+02:53 straight away to this white square so
+02:54 
+
+02:54 you can see that in this match cut
+02:56 
+
+02:56 i have placed the white square very
+02:58 
+
+02:58 closely to where the yellow circle ends
+02:60 
+
+02:60 and it continues this is important the
+03:02 
+
+03:02 momentum of that previous shot
+03:04 
+
+03:04 by ending very fast this frame starts
+03:07 
+
+03:07 very fast and slows out or eases out
+03:10 
+
+03:10 which means when you do whip through to
+03:12 
+
+03:12 that content
+03:13 
+
+03:13 it feels like a natural motion the same
+03:16 
+
+03:16 thing going from this square through
+03:17 
+
+03:17 this rectangle here when it cuts it
+03:19 
+
+03:19 stops spinning
+03:21 
+
+03:21 eases out and drops into that blue
+03:23 
+
+03:23 triangle
+03:24 
+
+03:24 the blue triangle then opens up with
+03:27 
+
+03:27 this path this wavy path behind it
+03:30 
+
+03:30 which then cuts to the shape of the
+03:31 
+
+03:31 triangle in the next shot
+03:33 
+
+03:33 but importantly the upwards motion of
+03:36 
+
+03:36 this blue triangle here
+03:38 
+
+03:38 although your eyes are more towards the
+03:40 
+
+03:40 top of the screen
+03:41 
+
+03:41 the opening of the triangle leads your
+03:43 
+
+03:43 view back to the center where the eye
+03:45 
+
+03:45 opens up
+03:46 
+
+03:46 but to aid that upwards motion i've also
+03:48 
+
+03:48 made the eye
+03:49 
+
+03:49 itself drift up entirely slightly as it
+03:52 
+
+03:52 goes up
+03:53 
+
+03:53 but also the pupil and iris inside of
+03:55 
+
+03:55 the eye goes up before moving down
+03:57 
+
+03:57 towards the center
+03:59 
+
+03:59 and cutting towards the next frame which
+04:01 
+
+04:01 then has the uh
+04:02 
+
+04:02 the word i in the exact same position so
+04:05 
+
+04:05 you can see
+04:07 
+
+04:07 three supporting movements there before
+04:10 
+
+04:10 it cuts to the next section
+04:11 
+
+04:11 this next part is very simple the path
+04:14 
+
+04:14 of the text
+04:15 
+
+04:15 changes and match cuts with the rest of
+04:18 
+
+04:18 it
+04:19 
+
+04:19 and then when it scales up and moves
+04:21 
+
+04:21 back to the center to bring the viewer's
+04:23 
+
+04:23 eyes back to the center
+04:24 
+
+04:24 it just changes and keeps that cuts
+04:26 
+
+04:26 right in the middle and then the last
+04:27 
+
+04:27 bit is just exactly the same another
+04:29 
+
+04:29 match cut
+04:30 
+
+04:30 where the full title um takes
+04:33 
+
+04:33 up the same space as the previous word
+04:35 
+
+04:35 cuts
+04:36 
+
+04:36 so let's talk about how to actually do
+04:38 
+
+04:38 this i have a tutorial composition here
+04:40 
+
+04:40 which is just a 19 1920 by 1080
+04:42 
+
+04:42 composition with a background in it
+04:44 
+
+04:44 uh this background is just a solid with
+04:46 
+
+04:46 the four color gradient effect
+04:48 
+
+04:48 applied on top and we're just going to
+04:49 
+
+04:49 do something to the similar to the first
+04:51 
+
+04:51 shot in this
+04:52 
+
+04:52 animation so i'm going to grab for
+04:54 
+
+04:54 example a circle
+04:56 
+
+04:56 and i'm just going to give it a fill
+04:57 
+
+04:57 this yellow fill that'll do nicely
+04:59 
+
+04:59 i'm going to drag it out like so and i'm
+05:02 
+
+05:02 going to pop it in the center of our
+05:03 
+
+05:03 screen using the align
+05:05 
+
+05:05 composition like so and we're going to
+05:08 
+
+05:08 want to animate position and scale for
+05:10 
+
+05:10 this so
+05:10 
+
+05:10 p shift s will bring up position and
+05:13 
+
+05:13 scale
+05:14 
+
+05:14 and we're just going to keyframe
+05:15 
+
+05:15 position first of all so let's move over
+05:17 
+
+05:17 say
+05:18 
+
+05:18 20 frames now obviously in the
+05:20 
+
+05:20 introduction this was synced to music as
+05:22 
+
+05:22 well which really helps with that
+05:23 
+
+05:23 punchiness of it but this just goes to
+05:24 
+
+05:24 show that you don't really need it
+05:26 
+
+05:26 um let's go to 20 frames and just move
+05:28 
+
+05:28 it up a little bit
+05:30 
+
+05:30 like so and now we've got this straight
+05:33 
+
+05:33 movement going from up to here but
+05:34 
+
+05:34 that's not really the path that we want
+05:36 
+
+05:36 so we can select the pen tool and click
+05:37 
+
+05:37 on our path which gives us a handle
+05:39 
+
+05:39 and we can use these handles to drag out
+05:42 
+
+05:42 the path of motion that we'd like
+05:44 
+
+05:44 okay so now we've got something like
+05:45 
+
+05:45 this
+05:48 
+
+05:48 we don't want it to start in the center
+05:51 
+
+05:51 i want it to start a little bit
+05:52 
+
+05:52 further over so i'm just going to grab
+05:53 
+
+05:53 my selection tool maybe have it start up
+05:55 
+
+05:55 here
+05:56 
+
+05:56 and it's going to then move around to
+05:58 
+
+05:58 the center so to do that we can just
+05:60 
+
+05:60 drag
+06:00 
+
+06:00 our handles
+06:04 
+
+06:04 until we get a path of motion that we're
+06:06 
+
+06:06 happy with and i wanted to end on a
+06:08 
+
+06:08 pretty much straight upwards movement
+06:10 
+
+06:10 there so now we've got
+06:12 
+
+06:12 boom something like this okay but
+06:14 
+
+06:14 principles of animation um our ball
+06:16 
+
+06:16 would anticipate this movement so i'm
+06:18 
+
+06:18 just gonna go over to say frame five
+06:20 
+
+06:20 and i'm going to grab my selection tool
+06:21 
+
+06:21 i'm actually just going to move it so it
+06:22 
+
+06:22 backs up
+06:23 
+
+06:23 slightly before it starts moving and if
+06:25 
+
+06:25 we zoom in
+06:26 
+
+06:26 again we can just adjust our handles
+06:30 
+
+06:30 so that it overshoots that just a touch
+06:36 
+
+06:36 so now we have our ball moving backwards
+06:38 
+
+06:38 anticipating and going but it's all on
+06:40 
+
+06:40 linear keyframes which looks
+06:41 
+
+06:41 absolutely rubbish frankly so let's just
+06:45 
+
+06:45 work on the position tweaking this a
+06:46 
+
+06:46 little bit
+06:49 
+
+06:49 bringing it down like so okay uh let's
+06:52 
+
+06:52 select all of our keyframes hit f9
+06:55 
+
+06:55 go to our graph editor by clicking here
+06:56 
+
+06:56 and if your class your graph doesn't
+06:58 
+
+06:58 look roughly like an
+06:59 
+
+06:59 m it's because you're on your value
+07:00 
+
+07:00 graph not your speed graph
+07:02 
+
+07:02 and we want it to go from fast to slow
+07:05 
+
+07:05 slow to fast as it anticipates this
+07:07 
+
+07:07 movement so as it backs off
+07:10 
+
+07:10 it's going to start off slowly
+07:14 
+
+07:14 but then speed up as it goes into the
+07:16 
+
+07:16 next movement
+07:18 
+
+07:18 okay so that already looks a little bit
+07:19 
+
+07:19 better
+07:21 
+
+07:21 we now want here this movement
+07:24 
+
+07:24 to kind of match that and then we've got
+07:28 
+
+07:28 that nice
+07:29 
+
+07:29 whipping into it motion and backing off
+07:31 
+
+07:31 and then
+07:32 
+
+07:32 whipping through okay so that's a nice
+07:35 
+
+07:35 bit of motion there let's add some scale
+07:36 
+
+07:36 to that whilst we're at it
+07:38 
+
+07:38 um let's start it off a bit smaller
+07:40 
+
+07:40 maybe say 70
+07:42 
+
+07:42 by the time it backs off to here let's
+07:43 
+
+07:43 have it grow to about
+07:46 
+
+07:46 90 as if it's like rearing up oops i
+07:49 
+
+07:49 haven't actually keyframed those that
+07:50 
+
+07:50 was my mistake sorry
+07:52 
+
+07:52 90 percent there 70 on our first
+07:54 
+
+07:54 keyframe
+07:56 
+
+07:56 have it back up as it rears and then as
+07:57 
+
+07:57 it whips around
+08:00 
+
+08:00 let's just keyframe 1990 again now
+08:03 
+
+08:03 squash and stretch another animation
+08:05 
+
+08:05 principle as this backs up
+08:07 
+
+08:07 um this probably wouldn't show too much
+08:09 
+
+08:09 squash and stretch but it definitely
+08:10 
+
+08:10 would as we're
+08:11 
+
+08:11 whipping through the fastest points here
+08:13 
+
+08:13 and you can see the dots and small dots
+08:15 
+
+08:15 on this um line here which indicate the
+08:17 
+
+08:17 frames
+08:18 
+
+08:18 so i know that from about here it starts
+08:20 
+
+08:20 to speed up so i'm going to unlink my
+08:22 
+
+08:22 scale
+08:23 
+
+08:23 and keyframe i'm going to find the point
+08:25 
+
+08:25 where it starts to slow down
+08:27 
+
+08:27 um which it doesn't of course because
+08:28 
+
+08:28 we're just going straight into a fast
+08:30 
+
+08:30 whip
+08:31 
+
+08:31 as we can see from our position
+08:32 
+
+08:32 keyframes
+08:34 
+
+08:34 in fact we can make it even faster by
+08:36 
+
+08:36 pushing it like that
+08:40 
+
+08:40 okay just to
+08:44 
+
+08:44 get that extra whip in there so it
+08:46 
+
+08:46 starts to speed up around
+08:48 
+
+08:48 here now and just continues to speed up
+08:52 
+
+08:52 so on this last keyframe i'm just going
+08:53 
+
+08:53 to stretch the vertical
+08:58 
+
+08:58 so that as it starts to move fast
+09:01 
+
+09:01 we've got um our ball stretching along
+09:03 
+
+09:03 that now you might need to
+09:05 
+
+09:05 rotate so that the top of your ball
+09:08 
+
+09:08 follows the path
+09:12 
+
+09:12 and then keyframe that so for example if
+09:14 
+
+09:14 we bring up rotation here
+09:17 
+
+09:17 because we're stretching the vertical
+09:19 
+
+09:19 section
+09:21 
+
+09:21 we're gonna have to make sure that it
+09:22 
+
+09:22 follows our path
+09:24 
+
+09:24 like this
+09:32 
+
+09:32 so by the time it reaches there we just
+09:36 
+
+09:36 got a little bit
+09:39 
+
+09:39 of the stretch moving in the right
+09:41 
+
+09:41 direction as it speeds up
+09:44 
+
+09:44 boom very nice okay now we've just got
+09:47 
+
+09:47 our ball here that just
+09:48 
+
+09:48 stops in mid-air at the moment but this
+09:50 
+
+09:50 is where our match cut comes in
+09:52 
+
+09:52 and i'm just going to use a null object
+09:55 
+
+09:55 for the sake of this tutorial and that
+09:56 
+
+09:56 was ctrl shift alt
+09:58 
+
+09:58 y as the shortcut there for this null
+09:60 
+
+09:60 object i'm just going to position that
+10:01 
+
+10:01 over the ball
+10:02 
+
+10:02 going to link this object to the null
+10:04 
+
+10:04 object uh just so that i can move this
+10:06 
+
+10:06 around
+10:07 
+
+10:07 as i please and it will just move
+10:10 
+
+10:10 everything that we've made
+10:11 
+
+10:11 okay and i've done that so that i can
+10:14 
+
+10:14 choose to reposition
+10:15 
+
+10:15 the ending point of this ball here
+10:19 
+
+10:19 and bosh looking pretty good so at this
+10:22 
+
+10:22 point we are just going to cut
+10:25 
+
+10:25 both of our layers with ctrl shift d
+10:27 
+
+10:27 which will split them and then just hit
+10:29 
+
+10:29 delete to get rid of them
+10:30 
+
+10:30 we can do the same thing ctrl shift d
+10:32 
+
+10:32 with our background
+10:33 
+
+10:33 but we're not going to delete it instead
+10:36 
+
+10:36 we're just going to change the
+10:37 
+
+10:37 colors now i could just do this quite
+10:38 
+
+10:38 simply with a hue shift
+10:40 
+
+10:40 i have a shortcut which allows me to
+10:42 
+
+10:42 press ctrl and
+10:43 
+
+10:43 space to open up a floating window
+10:47 
+
+10:47 which is just effects console by video
+10:48 
+
+10:48 code pilot if you'd like to download
+10:50 
+
+10:50 that
+10:50 
+
+10:50 all it does is stops me from having to
+10:52 
+
+10:52 click this panel wait for all of my
+10:53 
+
+10:53 effects to load and type it in there
+10:55 
+
+10:55 um so hue saturation and drag that onto
+10:59 
+
+10:59 our background
+11:00 
+
+11:00 and i'm just going to see what color
+11:03 
+
+11:03 looks best if we maybe he switched to a
+11:05 
+
+11:05 nice blue
+11:06 
+
+11:06 like so darken it up a bit and then we
+11:09 
+
+11:09 can see
+11:10 
+
+11:10 that match cut there okay
+11:13 
+
+11:13 now i'm just going to drag out our shape
+11:15 
+
+11:15 by one further frame
+11:19 
+
+11:19 and we're going to cut at this point
+11:21 
+
+11:21 here
+11:22 
+
+11:22 because we need that last
+11:26 
+
+11:26 frame on there as well okay so we're
+11:28 
+
+11:28 going to cut here i've dragged out a
+11:29 
+
+11:29 frame further than we need so that i can
+11:31 
+
+11:31 draw
+11:33 
+
+11:33 my rectangle and i'm going to make it a
+11:35 
+
+11:35 white rectangle
+11:36 
+
+11:36 and i'm just going to with no layers
+11:38 
+
+11:38 selected i'm just going to draw
+11:41 
+
+11:41 a rough shape that is in roughly the
+11:44 
+
+11:44 same place it doesn't have to be exactly
+11:45 
+
+11:45 the same place just roughly
+11:47 
+
+11:47 pressing open square bracket will push
+11:48 
+
+11:48 my layer over there and now that i've
+11:50 
+
+11:50 lined those up
+11:51 
+
+11:51 pretty much close enough we don't need
+11:52 
+
+11:52 those anymore so we can cut them off
+11:54 
+
+11:54 now we have our shape cutting into the
+11:56 
+
+11:56 next shape but we need to continue that
+11:58 
+
+11:58 momentum of movement
+11:59 
+
+11:59 so for that we'll need position first of
+12:01 
+
+12:01 all
+12:02 
+
+12:02 so i'm going to keyframe the position
+12:04 
+
+12:04 move over say 20 frames because that's
+12:06 
+
+12:06 how much we used in this initial
+12:08 
+
+12:08 movement here and i'm just going to pop
+12:10 
+
+12:10 it up a little bit
+12:12 
+
+12:12 like so let's grab those keyframes hit
+12:14 
+
+12:14 f9
+12:15 
+
+12:15 for easy ease go to our graph editor and
+12:17 
+
+12:17 we can just move these over so we've got
+12:20 
+
+12:20 complete 100 influence moving down to
+12:23 
+
+12:23 zero percent influence and speed and
+12:24 
+
+12:24 that's because the end of this
+12:26 
+
+12:26 graph's movement here was 100 influence
+12:29 
+
+12:29 or near enough i think we did about 90
+12:31 
+
+12:31 or so
+12:32 
+
+12:32 um if you wanted to you could push that
+12:34 
+
+12:34 all the way but you probably don't need
+12:35 
+
+12:35 to worry about that too much
+12:37 
+
+12:37 so let's take a look and there's our
+12:39 
+
+12:39 first match cut
+12:40 
+
+12:40 looking pretty good but we noticed we
+12:42 
+
+12:42 had this curve
+12:43 
+
+12:43 going in so if we were thinking about
+12:45 
+
+12:45 the momentum of movement here
+12:47 
+
+12:47 if it were to go straight up there'd
+12:48 
+
+12:48 still be some of that energy pushing it
+12:50 
+
+12:50 sideways which is why we have that
+12:51 
+
+12:51 square rotate
+12:52 
+
+12:52 out so if we now hit shift r on this
+12:55 
+
+12:55 layer
+12:56 
+
+12:56 which we want to rename now that we've
+12:57 
+
+12:57 got a couple of layers square
+12:60 
+
+13:00 circle and circle
+13:05 
+
+13:05 control on the square layer i'm just
+13:08 
+
+13:08 going to click
+13:08 
+
+13:08 rotation like so and i'm going to go
+13:12 
+
+13:12 over
+13:12 
+
+13:12 a few more keyframes i'm going to give
+13:14 
+
+13:14 it a full rotation
+13:16 
+
+13:16 plus 45 degrees i'm going to hit f9 on
+13:20 
+
+13:20 those and i'm just going to drag
+13:23 
+
+13:23 like so to see what that looks like
+13:27 
+
+13:27 good but it's rotating the wrong way so
+13:30 
+
+13:30 um we can go to
+13:33 
+
+13:33 negative
+13:35 
+
+13:35 one
+13:39 
+
+13:39 oops i did that to both the keyframes
+13:40 
+
+13:40 there my mistake
+13:43 
+
+13:43 and so on that to be negative 1 and 45
+13:46 
+
+13:46 which makes it spin
+13:47 
+
+13:47 in the opposite direction before coming
+13:49 
+
+13:49 to a stop
+13:51 
+
+13:51 which is great but i quite like when the
+13:54 
+
+13:54 rotation extends a little bit past the
+13:56 
+
+13:56 position
+13:58 
+
+13:58 just so that as it settles in and if you
+13:60 
+
+13:60 wanted to you could start having this
+14:01 
+
+14:01 come back down for your next
+14:03 
+
+14:03 match transition so again we'll come
+14:06 
+
+14:06 through to the keyframes here
+14:08 
+
+14:08 and we'll just push this one in a little
+14:10 
+
+14:10 bit so that the um
+14:14 
+
+14:14 influence is on the same so now it's
+14:16 
+
+14:16 going to go up
+14:17 
+
+14:17 really hold its position really out of
+14:18 
+
+14:18 position and then just start to speed up
+14:20 
+
+14:20 as it comes down
+14:21 
+
+14:21 but we'll push that rotation even
+14:24 
+
+14:24 further out and then
+14:26 
+
+14:26 like that perfect apart from we just
+14:28 
+
+14:28 need to quickly tweak this to remove
+14:30 
+
+14:30 all of its influence so that it starts
+14:33 
+
+14:33 at full speed slows down
+14:36 
+
+14:36 and then starts to drop and there you
+14:40 
+
+14:40 can see
+14:40 
+
+14:40 the power of a match cut it's a little
+14:42 
+
+14:42 bit slowly for my taste i'm just going
+14:44 
+
+14:44 to grab everything and hold alt
+14:46 
+
+14:46 whilst dragging these keyframes and
+14:48 
+
+14:48 that's just going to compress them
+14:49 
+
+14:49 and we can compress the whole thing down
+14:51 
+
+14:51 to 20 frames so that everything finishes
+14:53 
+
+14:53 in 20 frames worth of movement
+14:57 
+
+14:57 perfect okay let's trim that so we can
+14:59 
+
+14:59 watch it loop
+14:60 
+
+14:60 and as you can see now we've got our
+15:02 
+
+15:02 perfectly match cut
+15:03 
+
+15:03 and i traced movement and all we did in
+15:05 
+
+15:05 the original you saw the intro was more
+15:07 
+
+15:07 of the same yeah it goes from a triangle
+15:09 
+
+15:09 to a circle to an eyeball etcetera
+15:10 
+
+15:10 etcetera to text
+15:12 
+
+15:12 just to prove that this can work with
+15:13 
+
+15:13 pretty much whatever you want so
+15:14 
+
+15:14 hopefully you found this useful this is
+15:15 
+
+15:15 a really simple and powerful technique
+15:17 
+
+15:17 to help
+15:18 
+
+15:18 guide your audience through the journey
+15:19 
+
+15:19 of your motion graphics if you've
+15:20 
+
+15:20 enjoyed it make sure to like comment
+15:22 
+
+15:22 subscribe
+15:22 
+
+15:22 etcetera uh it really helps the channel
+15:24 
+
+15:24 and go check out some of my other works
+15:26 
+
+15:26 as well so thank you very much everybody
+15:28 
+
+15:28 for watching and i'll see you next time
+15:29 
+
+15:29 for another episode of tiptup
+15:31 
+
+15:31 a colossal thank you to my level 2 and
+15:33 
+
+15:33 above members wn 62
+15:35 
+
+15:35 memo sign melem hoover maybe sharma
+15:37 
+
+15:37 rallica m
+15:38 
+
+15:38 ian costello deshan singe lomol 16
+15:41 
+
+15:41 starry chichi katma
+15:43 
+
+15:43 wembembo rob v jason carl ruddy jk
+15:46 
+
+15:46 digital creations
+15:47 
+
+15:47 the sorcerer davinci goel mp
+15:50 
+
+15:50 dima zuev and vola furs you guys are
+15:53 
+
+15:53 super lovely people and i'm ever
+15:55 
+
+15:55 grateful
+15:55 
+
+15:55 for your patronage
+15:57 
+
+15:57 [Music]
+16:02 
+
+16:02 remember to subscribe for more tips
+16:04 
+
+16:04 tricks
+16:05 
+
+16:05 and tutorials thanks for watching

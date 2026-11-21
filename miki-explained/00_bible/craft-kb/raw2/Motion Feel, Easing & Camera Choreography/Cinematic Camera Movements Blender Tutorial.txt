@@ -1,0 +1,712 @@
+00:00 do you want a master cinematography and
+00:03 
+
+00:03 blender today I'll show you mind-blowing
+00:05 
+
+00:05 shots from Blockbuster films and how you
+00:07 
+
+00:07 can Implement these into your blender
+00:09 
+
+00:09 animations at the end of this video I'll
+00:11 
+
+00:11 use the skills we've learned to create a
+00:13 
+
+00:13 cinematic shot of my own and see if it
+00:14 
+
+00:14 Blends seamlessly with the opening scene
+00:16 
+
+00:16 of bike club the basics you to go
+00:19 
+
+00:19 through 18 different shots that you can
+00:20 
+
+00:20 add to your projects today the static
+00:22 
+
+00:22 shot this shot can be used to show
+00:24 
+
+00:24 suspense with the absent of movement or
+00:26 
+
+00:26 to enhance the focal point in the scene
+00:28 
+
+00:28 with no distractions inside blender
+00:30 
+
+00:30 click on your camera either in the
+00:31 
+
+00:31 outline or the viewport press n to bring
+00:33 
+
+00:33 out your transform panel and then press
+00:34 
+
+00:34 backspace while hovering over the
+00:36 
+
+00:36 location and rotation now change your X
+00:38 
+
+00:38 to 90 raise the camera a bit and you're
+00:40 
+
+00:40 done yes I know this isn't new
+00:42 
+
+00:42 information to you but over the course
+00:43 
+
+00:43 of this video each shot is going to get
+00:45 
+
+00:45 progressively harder we can get through
+00:47 
+
+00:47 these simple ones quickly though the
+00:48 
+
+00:48 panning shot when the camera stays
+00:50 
+
+00:50 mostly stationary but tilt horizontally
+00:53 
+
+00:53 press I to insert a key frame and then
+00:55 
+
+00:55 click rotation then scroll through your
+00:56 
+
+00:56 timeline press R and then Z move your
+00:59 
+
+00:59 camera to where you want it insert
+01:00 
+
+01:00 another key frame and there you go whip
+01:03 
+
+01:03 pan this one's fun famously used in la
+01:05 
+
+01:05 la land the way you are going to achieve
+01:07 
+
+01:07 this might be something you've never
+01:08 
+
+01:08 seen in blender before this blew my mind
+01:11 
+
+01:11 when I found this out in blender there's
+01:13 
+
+01:13 a built-in add-on for extra camera rigs
+01:15 
+
+01:15 after enabling this you can add a dolly
+01:17 
+
+01:17 camera and control where you want the
+01:18 
+
+01:18 camera to look with this tracking Point
+01:20 
+
+01:20 Key frame here key frame there and add
+01:23 
+
+01:23 another one in the middle to create an
+01:24 
+
+01:24 arc and boom push in and pull out method
+01:27 
+
+01:27 simply key framing the camera back and
+01:28 
+
+01:28 forth to make the audience feel more
+01:30 
+
+01:30 more connected to the subject or to show
+01:32 
+
+01:32 a sense of loneliness truck shot I love
+01:34 
+
+01:34 how they use this shot in the movie
+01:36 
+
+01:36 wargs when David is running through the
+01:37 
+
+01:37 town two ways to go about this key frame
+01:40 
+
+01:40 point a move the camera and key frame
+01:42 
+
+01:42 point B there's a couple of issues with
+01:44 
+
+01:44 doing it this way though if your subject
+01:46 
+
+01:46 is moving in a linear path meaning it's
+01:48 
+
+01:48 at the same speed throughout then you
+01:50 
+
+01:50 might see this when you're looking
+01:51 
+
+01:51 through your camera this is because our
+01:53 
+
+01:53 camera's movement is set to bezier which
+01:55 
+
+01:55 is done to smooth out the harsh stop of
+01:57 
+
+01:57 the camera to change this right click at
+01:59 
+
+01:59 the top of your timeline and click
+02:01 
+
+02:01 vertical split then change this to the
+02:03 
+
+02:03 graph editor now press T and click
+02:06 
+
+02:06 linear this St me the first time I use
+02:08 
+
+02:08 the graph Editor to navigate around hold
+02:10 
+
+02:10 down control and then use the middle
+02:12 
+
+02:12 Mouse button takes some getting used to
+02:14 
+
+02:14 your camera is now moving at one speed
+02:16 
+
+02:16 throughout the animation two what if our
+02:18 
+
+02:18 subject is moving unpredictably this
+02:20 
+
+02:20 method is so much easier click on your
+02:22 
+
+02:22 camera then hold shift and click on your
+02:24 
+
+02:24 subject then press crl p and parent
+02:27 
+
+02:27 object this will lck the camera's
+02:28 
+
+02:28 position to wherever it is and Main
+02:30 
+
+02:30 maintain that distance pedestal shot at
+02:33 
+
+02:33 first I didn't know what this meant but
+02:34 
+
+02:34 it's just the camera going up and down
+02:36 
+
+02:36 same as the truck shot but up and down
+02:38 
+
+02:38 tilting shot simply tilting the camera
+02:40 
+
+02:40 up and down to reveal the scale of
+02:41 
+
+02:41 something usually key frame point a
+02:43 
+
+02:43 rotate your camera up and add another
+02:45 
+
+02:45 key frame try and keep this one slow to
+02:47 
+
+02:47 add suspense and not to take the viewer
+02:49 
+
+02:49 away from what's really important in the
+02:51 
+
+02:51 shot Zoom the way the director used the
+02:53 
+
+02:53 zoom shot in the movie get out just ran
+02:55 
+
+02:55 a chill through my spine you can do
+02:57 
+
+02:57 something just like this slowly zooming
+02:59 
+
+02:59 in to build a Su spent or make it a
+03:01 
+
+03:01 practical Zoom like it was shot from an
+03:02 
+
+03:02 iPhone like this shot that
+03:05 
+
+03:05 D either way you can do this by pressing
+03:08 
+
+03:08 IE while hovering over your focal length
+03:10 
+
+03:10 then increasing it and making another
+03:11 
+
+03:11 key frame Dolly Zoom now that you know
+03:13 
+
+03:13 how to push in and zoom you can create
+03:15 
+
+03:15 the dolly Zoom this one can add a lot of
+03:17 
+
+03:17 emotion to a shot or just make it look
+03:19 
+
+03:19 silly excuse me the gist of the dolly
+03:21 
+
+03:21 Zoom is the act of moving the camera
+03:23 
+
+03:23 forward while zooming out or moving the
+03:25 
+
+03:25 camera backward while zooming in POV
+03:27 
+
+03:27 shot this one can be the most fun for
+03:29 
+
+03:29 blend
+03:30 
+
+03:30 especially horror ones there's a couple
+03:32 
+
+03:32 ways you can achieve this a super cool
+03:34 
+
+03:34 way to get realistic movement and
+03:36 
+
+03:36 blender is by going into your camera
+03:38 
+
+03:38 making sure it's selected then go to
+03:39 
+
+03:39 view navigation and then walk navigation
+03:43 
+
+03:43 or you can press shift Tilda now this is
+03:46 
+
+03:46 the cool part if you have a floor on
+03:48 
+
+03:48 your scene you can press G to enable
+03:49 
+
+03:49 gravity and now you can walk around just
+03:51 
+
+03:51 like it's a video game you might be
+03:53 
+
+03:53 asking yourself how do I animate this
+03:56 
+
+03:56 all you have to do is turn on automatic
+03:57 
+
+03:57 key framing press play then walk SL fly
+03:60 
+
+04:00 around do whatever and your camera
+04:02 
+
+04:02 movement is being key framed in real
+04:03 
+
+04:03 time just make sure the length of your
+04:05 
+
+04:05 scene is long enough handheld same as
+04:07 
+
+04:07 POV just keep in mind someone is holding
+04:09 
+
+04:09 the camera instead of their eyes being
+04:10 
+
+04:10 the camera so you can experiment around
+04:12 
+
+04:12 with the height of your camera tracking
+04:14 
+
+04:14 shot this shot is using almost every
+04:16 
+
+04:16 single movie I can think of it's a
+04:18 
+
+04:18 complex shot and usually goes unnoticed
+04:20 
+
+04:20 as a name suggests we are going to track
+04:22 
+
+04:22 our subject in the scene as it moves
+04:24 
+
+04:24 select our camera then go to object
+04:26 
+
+04:26 constraints and add a track to
+04:28 
+
+04:28 constraint now we can animate our camera
+04:30 
+
+04:30 camera location wherever you want but it
+04:31 
+
+04:31 will always look at our subject steady
+04:34 
+
+04:34 cam / gimbal shot this is just like the
+04:36 
+
+04:36 handheld shot but we're going to smooth
+04:38 
+
+04:38 out our animation use walk navigation in
+04:40 
+
+04:40 your camera view then after animating
+04:42 
+
+04:42 your motion we're going to open up our
+04:44 
+
+04:44 graph editor and select all the key
+04:46 
+
+04:46 frames by pressing a now listen closely
+04:48 
+
+04:48 to this part this will change how you
+04:50 
+
+04:50 animate forever make sure you have a key
+04:52 
+
+04:52 frame at the very start and end of your
+04:54 
+
+04:54 animation even if there's no movement
+04:56 
+
+04:56 then press alt shift o this will add a
+04:58 
+
+04:58 key frame in every frame now we're going
+04:60 
+
+04:60 to smooth these out by pressing alt o
+05:02 
+
+05:02 and you can just hold it down see how
+05:03 
+
+05:03 many times we can do this you don't want
+05:05 
+
+05:05 to go overboard though because
+05:06 
+
+05:06 eventually your animation will turn
+05:08 
+
+05:08 through just a straight line oh and if
+05:10 
+
+05:10 you want to tweak the key frames even
+05:12 
+
+05:12 more then go to key density and decimate
+05:14 
+
+05:14 ratio now the more you slide the mouse
+05:16 
+
+05:16 to the right the fewer key frames you
+05:18 
+
+05:18 have now you can edit these individually
+05:20 
+
+05:20 The Arc shot I always found the shot so
+05:22 
+
+05:22 cool famously used in Matrix when Neo is
+05:25 
+
+05:25 dodging bullets to create this in
+05:26 
+
+05:26 blender we're going to add a curve and
+05:28 
+
+05:28 make your camera move along it add a
+05:30 
+
+05:30 path and make this spiral motion now add
+05:33 
+
+05:33 a follow path constraint and choose your
+05:35 
+
+05:35 path make sure your camera starts at the
+05:36 
+
+05:36 beginning of the curve now you can
+05:38 
+
+05:38 animate the offset to move our camera
+05:40 
+
+05:40 just add a track constraint after to
+05:42 
+
+05:42 make sure your camera is always looking
+05:43 
+
+05:43 at your subject crane / jib shot this
+05:46 
+
+05:46 one breaks all rules of normal home
+05:47 
+
+05:47 filming and can usually only be done by
+05:50 
+
+05:50 huge movie productions with insane
+05:51 
+
+05:51 budgets but you're going to recreate it
+05:54 
+
+05:54 in blender add an a crane camera rig
+05:56 
+
+05:56 instead of a dolly one like before make
+05:58 
+
+05:58 sure you have the extra camera rig add
+05:59 
+
+05:59 on enable
+06:01 
+
+06:01 and now you can animate our camera just
+06:03 
+
+06:03 like it's on a huge moving crane crazy
+06:05 
+
+06:05 stuff here's a little animation I
+06:07 
+
+06:07 created with this technique by the way
+06:08 
+
+06:08 if you want to see how I made this whole
+06:10 
+
+06:10 scene I have a video about it going over
+06:11 
+
+06:11 my workflow and how you can create
+06:13 
+
+06:13 something just like this today this is a
+06:15 
+
+06:15 last shot type of the video this one can
+06:18 
+
+06:18 make almost any blender footage look
+06:20 
+
+06:20 that much more realistic and don't
+06:22 
+
+06:22 forget after this one I'll show you how
+06:24 
+
+06:24 I recreated a shot from the opening
+06:26 
+
+06:26 scene of Fight Club camera shake this is
+06:28 
+
+06:28 if you already have an animated camera
+06:30 
+
+06:30 and you want to add some extra camera
+06:31 
+
+06:31 shake to intensify the mood of your
+06:33 
+
+06:33 scene or to add some realism go into the
+06:35 
+
+06:35 graph editor of your camera and on the
+06:37 
+
+06:37 left hand side you can see the camera's
+06:38 
+
+06:38 transforms we're going to select each
+06:41 
+
+06:41 rotation at a time select the X rotation
+06:44 
+
+06:44 and then with the panel on the right go
+06:45 
+
+06:45 to modifiers now add a noise modifier
+06:48 
+
+06:48 this is a little much right now so
+06:50 
+
+06:50 increase the scale a bit and then bring
+06:51 
+
+06:51 down the strength I find 0.03 tends to
+06:55 
+
+06:55 be good but play around with it now just
+06:57 
+
+06:57 do this for the Y and Z rotation and you
+06:58 
+
+06:58 got some pretty awesome camera Shake now
+07:01 
+
+07:01 for what you've all been waiting for I'm
+07:03 
+
+07:03 going to recreate this scene from Fight
+07:06 
+
+07:06 Club we have front row seats for this
+07:08 
+
+07:08 theater of mass destruction the
+07:11 
+
+07:11 demolitions Committee of Project Mayhem
+07:13 
+
+07:13 wrapped the foundation Columns of a
+07:14 
+
+07:14 dozen buildings with blasting
+07:16 
+
+07:16 gel in 2 minutes primary charges will
+07:19 
+
+07:19 blow base charges and a few square
+07:21 
+
+07:21 blocks will be reduced to smoldering
+07:23 
+
+07:23 Rubble Here's the final result we have
+07:27 
+
+07:27 front row seats for this theater of mass
+07:29 
+
+07:29 destruction
+07:30 
+
+07:30 demolitions Committee of Project Mayhem
+07:32 
+
+07:32 wrapped the foundation Columns of a
+07:34 
+
+07:34 dozen buildings with blast and
+07:36 
+
+07:36 gelon 2 minutes primary charg base
+07:39 
+
+07:39 charges and a few square blocks will be
+07:41 
+
+07:41 reduced to smoldering
+07:43 
+
+07:43 Rubble if you guys like this video make
+07:45 
+
+07:45 sure to check out this video right here
+07:47 
+
+07:47 to see how I make this epic villain
+07:49 
+
+07:49 Chase in blender

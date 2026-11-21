@@ -1,0 +1,1372 @@
+00:03 [music]
+00:05 
+
+00:05 >> Hey there class creatives and in this
+00:07 
+
+00:07 video we'll dive into the unique hybrid
+00:09 
+
+00:09 3D 2D workflows of Arc System Works.
+00:12 
+
+00:12 Like always we read your comments and
+00:13 
+
+00:13 requests so we teamed up again with the
+00:15 
+
+00:15 legendary anime archivist Hob Sakuga to
+00:17 
+
+00:17 look into how they create their animated
+00:19 
+
+00:19 characters and how they specifically
+00:21 
+
+00:21 lean on 2D animation to ensure the
+00:23 
+
+00:23 animation never feels like 3D while
+00:25 
+
+00:25 prioritizing story and gameplay.
+00:28 
+
+00:28 We'll dive into how Arc System Works
+00:30 
+
+00:30 implements the art of 2D for the 3D
+00:32 
+
+00:32 animated characters and how the style is
+00:34 
+
+00:34 still being used today by the studio.
+00:36 
+
+00:36 Let's get into it.
+00:38 
+
+00:38 To understand how Arc System Works
+00:40 
+
+00:40 creates their signature look, it's
+00:41 
+
+00:41 important to understand the basics of
+00:43 
+
+00:43 their inverse whole method which to put
+00:45 
+
+00:45 it simply is a technique for creating
+00:47 
+
+00:47 tune-like outlines.
+00:49 
+
+00:49 The method has a history of over 20
+00:51 
+
+00:51 years and it remains to be a practical
+00:53 
+
+00:53 and effective method used in game
+00:55 
+
+00:55 development even in the modern day.
+00:57 
+
+00:57 Arc System Works has been using the
+00:59 
+
+00:59 technique for their flagship fighting
+01:00 
+
+01:00 games since Guilty Gear Xrd which is
+01:03 
+
+01:03 based on the Japanese Katakana Xyzado.
+01:06 
+
+01:06 You might recall the first games used
+01:07 
+
+01:07 this technique by Sega in 2000 on the
+01:10 
+
+01:10 now classic and iconic game Jet Set
+01:12 
+
+01:12 Radio. The overall goal of the technique
+01:15 
+
+01:15 was to achieve the look of 2D sprites
+01:17 
+
+01:17 using 3D while keeping the charm of 2D
+01:19 
+
+01:19 animation.
+01:20 
+
+01:20 Having everything in 3D also meant they
+01:22 
+
+01:22 could achieve much higher resolution for
+01:24 
+
+01:24 the game.
+01:25 
+
+01:25 The ability for them to have full
+01:27 
+
+01:27 control over the camera was huge as they
+01:29 
+
+01:29 could go as big as they wanted to with
+01:30 
+
+01:30 dramatic angles and perspectives during
+01:32 
+
+01:32 special attacks and finish sequences.
+01:35 
+
+01:35 One of the biggest reasons they also
+01:37 
+
+01:37 pivoted away from 2D sprites
+01:39 
+
+01:39 was that they felt they already had
+01:40 
+
+01:40 achieved the best results previously on
+01:42 
+
+01:42 Blazblue and had no real room for
+01:45 
+
+01:45 improvement. So this gave them a chance
+01:47 
+
+01:47 to do something different.
+01:49 
+
+01:49 As they started to explore ideas, they
+01:51 
+
+01:51 considered vector art, ultra high-res
+01:53 
+
+01:53 sprites among many others. But in the
+01:55 
+
+01:55 end they felt that 3D could capture
+01:57 
+
+01:57 their anime style best with all the
+01:59 
+
+01:59 benefits and potential 3D. Although the
+02:01 
+
+02:01 technique was developed for Unreal
+02:03 
+
+02:03 Engine, the implementation can be
+02:05 
+
+02:05 applicable to any modern engine or 3D
+02:07 
+
+02:07 software to achieve the look.
+02:10 
+
+02:10 They stated that they chose Unreal
+02:11 
+
+02:11 Engine as they needed to support
+02:12 
+
+02:12 multiple platforms.
+02:14 
+
+02:14 At the time, using it mixed with
+02:15 
+
+02:15 Autodesk Softimage gave them the perfect
+02:18 
+
+02:18 flexibility for modeling and animation
+02:20 
+
+02:20 to focus on high-quality output.
+02:22 
+
+02:22 The most important aspect they focused
+02:24 
+
+02:24 on was the characters. They knew that
+02:26 
+
+02:26 they had to ensure the character felt
+02:28 
+
+02:28 handcrafted, and anything that made a
+02:30 
+
+02:30 character feel 3D was killed off
+02:32 
+
+02:32 immediately.
+02:33 
+
+02:33 Having correct shaders was not good
+02:35 
+
+02:35 enough. They had to get a convincing 2D
+02:37 
+
+02:37 look, and every pixel on the screen had
+02:40 
+
+02:40 to be an intentional choice, not just an
+02:42 
+
+02:42 automated calculation.
+02:44 
+
+02:44 When modeling the characters, they made
+02:46 
+
+02:46 sure they were as high poly as possible,
+02:48 
+
+02:48 and they needed to have the resolution
+02:50 
+
+02:50 necessary for extreme close-ups.
+02:52 
+
+02:52 To keep their resolution high, they used
+02:54 
+
+02:54 vertex properties such as vertex
+02:56 
+
+02:56 normals, vertex colors, and UV
+02:59 
+
+02:59 coordinates to store the data.
+03:01 
+
+03:01 They needed to also ensure that they got
+03:02 
+
+03:02 the cell shading just right, so they
+03:04 
+
+03:04 broke it down to three simple components
+03:06 
+
+03:06 so they had full control.
+03:08 
+
+03:08 The threshold, the light vector, and the
+03:10 
+
+03:10 normal vector. Each character has its
+03:12 
+
+03:12 own dedicated light vector, and the
+03:14 
+
+03:14 lighting does not change frame by frame
+03:16 
+
+03:16 in a battle scene. But in cutscenes, it
+03:18 
+
+03:18 gets animated along with the character
+03:20 
+
+03:20 to get the best results of every frame.
+03:23 
+
+03:23 To get the colors just right, they use
+03:24 
+
+03:24 two textures. The base texture defining
+03:27 
+
+03:27 the color of the surface when it's lit,
+03:29 
+
+03:29 and the tint texture that defines how
+03:31 
+
+03:31 dark it gets when shaded. Perhaps what
+03:33 
+
+03:33 makes the look so distinguishable are
+03:35 
+
+03:35 the contour lines around the character
+03:37 
+
+03:37 that help make them pop from the
+03:38 
+
+03:38 background, allowing the user's eye to
+03:40 
+
+03:40 easily separate these different elements
+03:42 
+
+03:42 in a final shot versus if no lines were
+03:44 
+
+03:44 present.
+03:46 
+
+03:46 According to Arc System Works
+03:47 
+
+03:47 documentation, inverse hole uses vertex
+03:50 
+
+03:50 shaders to draw a duplicate of the mesh
+03:52 
+
+03:52 that is inverted and made slightly
+03:54 
+
+03:54 bigger to create the illusion of contour
+03:56 
+
+03:56 lines versus post-process outline
+03:58 
+
+03:58 methods that use post-process shaders to
+04:01 
+
+04:01 compare neighboring pixel data using
+04:03 
+
+04:03 parameters such as depth and normals to
+04:06 
+
+04:06 determine the edges which then are set
+04:08 
+
+04:08 with a color. Another advantage to
+04:10 
+
+04:10 inverse hull is the ability for modelers
+04:12 
+
+04:12 and animators to see real-time visual
+04:14 
+
+04:14 feedback while working so that the same
+04:17 
+
+04:17 render results for the artist are seen
+04:19 
+
+04:19 just as they are rendered from the game
+04:20 
+
+04:20 engine.
+04:21 
+
+04:21 Of course, the technique is not
+04:22 
+
+04:22 completely automatic. Fine-tuning
+04:24 
+
+04:24 details on face contours, different
+04:27 
+
+04:27 camera FOVs, and fabrics add a lot of
+04:29 
+
+04:29 complexity to get the look just right.
+04:32 
+
+04:32 It takes a lot of experience and a
+04:33 
+
+04:33 trained artist's eye to get the
+04:35 
+
+04:35 adjustments just right along with the
+04:37 
+
+04:37 shader artist to also understand the
+04:39 
+
+04:39 final visual requirements to get
+04:41 
+
+04:41 high-quality results. A challenge they
+04:43 
+
+04:43 also faced with the line work was for
+04:45 
+
+04:45 inner lines. They not only needed them
+04:47 
+
+04:47 to look great, but also hold up to
+04:49 
+
+04:49 higher resolutions.
+04:51 
+
+04:51 So, they came up with a technique that
+04:52 
+
+04:52 used special UV assignments to ensure
+04:55 
+
+04:55 they got super clear lines even during
+04:57 
+
+04:57 close-ups.
+04:58 
+
+04:58 The developer describes the technique
+04:60 
+
+04:60 like this. All the lines are drawn as
+05:02 
+
+05:02 axis aligned beams on the texture. And
+05:05 
+
+05:05 the UV is lined up alongside them. How
+05:08 
+
+05:08 much the UV overlaps the beams defines
+05:10 
+
+05:10 how thick that line becomes. As long as
+05:13 
+
+05:13 the pixels are aligned to an axis, they
+05:15 
+
+05:15 stay clean.
+05:16 
+
+05:16 We won't take the hours necessary to
+05:18 
+
+05:18 break down the exact details of this
+05:20 
+
+05:20 method in this video, but we'll link the
+05:22 
+
+05:22 documentation in case you want to do a
+05:24 
+
+05:24 deep dive for your own projects. When it
+05:26 
+
+05:26 came to animation, they took the
+05:27 
+
+05:27 approach of limited animation, which is
+05:30 
+
+05:30 often used in the Japanese animation
+05:32 
+
+05:32 industry that focuses on tricking the
+05:34 
+
+05:34 eye with less frames like that of
+05:36 
+
+05:36 Western animation from studios like
+05:38 
+
+05:38 Disney.
+05:39 
+
+05:39 We did a video discussing a bit more of
+05:41 
+
+05:41 this technique previously, so be sure to
+05:43 
+
+05:43 check that out if you haven't already.
+05:46 
+
+05:46 They revealed that they actually tried
+05:48 
+
+05:48 the full animation path in early
+05:50 
+
+05:50 development, but it didn't convey a
+05:52 
+
+05:52 sense of 2D. Having the poses
+05:54 
+
+05:54 interpolate between keyframes made it
+05:56 
+
+05:56 look smoother,
+05:57 
+
+05:57 but naturally also makes it look 3D.
+06:00 
+
+06:00 So, they removed the interpolations
+06:02 
+
+06:02 between keyframes so that every frame is
+06:04 
+
+06:04 a keyframe. And the animator poses the
+06:07 
+
+06:07 character as dynamically as possible,
+06:09 
+
+06:09 like that of a stop-motion animation, so
+06:11 
+
+06:11 the animator controls every single
+06:13 
+
+06:13 frame.
+06:14 
+
+06:14 The result is a look that is more true
+06:16 
+
+06:16 to old 2D sprites
+06:18 
+
+06:18 and makes the cutscenes much more
+06:19 
+
+06:19 2D-ish.
+06:20 
+
+06:20 When it came to the rigs, they ensured
+06:22 
+
+06:22 that the bone count was high, averaging
+06:24 
+
+06:24 around 500 per character, so every
+06:26 
+
+06:26 feature of the model could be animated.
+06:29 
+
+06:29 They used no simulation to ensure
+06:30 
+
+06:30 everything looked 2D. Scale was used a
+06:33 
+
+06:33 lot, so they could exaggerate actions,
+06:35 
+
+06:35 let things hide or appear, and apply
+06:37 
+
+06:37 traditional squash and stretch.
+06:39 
+
+06:39 As many game engines don't support
+06:40 
+
+06:40 animating scale, they had to build it
+06:42 
+
+06:42 into their rigs. Having this allowed
+06:44 
+
+06:44 them to ensure that the character's body
+06:46 
+
+06:46 did not remain the same shape at all
+06:48 
+
+06:48 times. Adding those imperfections in the
+06:50 
+
+06:50 body again gave the effect of 2D
+06:52 
+
+06:52 animation.
+06:53 
+
+06:53 For rigging, it was crucial that they
+06:55 
+
+06:55 had extensive knowledge of rigging
+06:56 
+
+06:56 characters specifically for fighting
+06:58 
+
+06:58 games.
+06:59 
+
+06:59 Their lead technical artist shared how
+07:01 
+
+07:01 the hip joint is typically the most
+07:03 
+
+07:03 common source of problems.
+07:05 
+
+07:05 Although the standing pose might look
+07:06 
+
+07:06 great, if the hip joint bone is too low,
+07:09 
+
+07:09 the legs appear shorter when they are
+07:11 
+
+07:11 spread wide. And if the position of the
+07:13 
+
+07:13 axis rotation is low, the amount of
+07:15 
+
+07:15 movement when the legs are spread is
+07:17 
+
+07:17 reduced, which also tends to result in
+07:20 
+
+07:20 the legs appearing shorter.
+07:21 
+
+07:21 They had to ensure that not just the
+07:23 
+
+07:23 fighting poses of the characters look
+07:24 
+
+07:24 great, but also had to ensure that the
+07:26 
+
+07:26 motion from the spine all the way to the
+07:28 
+
+07:28 ankles would work perfectly once
+07:30 
+
+07:30 animated. Prioritizing the fighting
+07:33 
+
+07:33 movement looking great versus it being
+07:35 
+
+07:35 anatomically accurate.
+07:37 
+
+07:37 But before any of these complex 3D rigs
+07:39 
+
+07:39 are built, the entire game relies on a
+07:40 
+
+07:40 massive visual planning phase. The
+07:43 
+
+07:43 reason Arc System Works pulls off this
+07:44 
+
+07:44 3D illusion isn't just because of their
+07:46 
+
+07:46 shaders, it's because of their rigorous
+07:48 
+
+07:48 2D pre-production pipeline before a
+07:51 
+
+07:51 single asset is touched.
+07:53 
+
+07:53 Whether you're planning a film shoot,
+07:54 
+
+07:54 designing a brand campaign, a 3D
+07:55 
+
+07:55 project, or building a video game, your
+07:57 
+
+07:57 concepts and designs must live in one
+07:59 
+
+07:59 organized place.
+08:00 
+
+08:00 If the foundation is disorganized, the
+08:02 
+
+08:02 3D will fail. For our own AAA pipelines
+08:05 
+
+08:05 and the exact proprietary studio
+08:07 
+
+08:07 simulation mentorships we run at Class
+08:09 
+
+08:09 Creatives, our lead 3D artist uses
+08:11 
+
+08:11 Milanote to build these early stages to
+08:13 
+
+08:13 communicate with the instructors later
+08:15 
+
+08:15 in the pipeline, just like in a real
+08:17 
+
+08:17 studio production environment.
+08:19 
+
+08:19 It feels less like rigid software and
+08:21 
+
+08:21 more like pinning ideas to a real studio
+08:23 
+
+08:23 wall. Watch how he organizes this
+08:25 
+
+08:25 reference for a sci-fi character asset.
+08:27 
+
+08:27 He starts with a blank canvas, imports
+08:29 
+
+08:29 his images, and double-clicks to create
+08:32 
+
+08:32 highly specific categories like shapes
+08:34 
+
+08:34 and forms and decals. Instead of
+08:36 
+
+08:36 downloading files manually, he uses the
+08:38 
+
+08:38 Milanote web clipper to instantly pull
+08:40 
+
+08:40 reference images from Pinterest directly
+08:42 
+
+08:42 into his workspace. But, here's the
+08:44 
+
+08:44 actual studio trick. He uses the
+08:45 
+
+08:45 built-in edit tool to crop the image,
+08:48 
+
+08:48 forcing the 3D modeler to focus only on
+08:50 
+
+08:50 a specific mechanical detail, like a
+08:52 
+
+08:52 visor or a headlight, and the one-click
+08:54 
+
+08:54 background removal tool to isolate
+08:56 
+
+08:56 character silhouettes. It cuts out the
+08:58 
+
+08:58 guessing entirely.
+08:60 
+
+08:60 When you're working with multiple
+09:01 
+
+09:01 teammates, having everything in one
+09:02 
+
+09:02 place is crucial. He sets up dedicated
+09:05 
+
+09:05 sub-boards for phase one and two of the
+09:07 
+
+09:07 concept art. He uses the board nesting
+09:09 
+
+09:09 feature to organize all the individual
+09:11 
+
+09:11 sub-boards cleanly into one master
+09:13 
+
+09:13 project board. From there, he creates a
+09:15 
+
+09:15 to-do list, assigning specific
+09:17 
+
+09:17 iterations directly to the artists, and
+09:19 
+
+09:19 checking them off the moment the
+09:20 
+
+09:20 orthographics are submitted. It
+09:22 
+
+09:22 completely removes the friction between
+09:24 
+
+09:24 the 2D and 3D departments. If you want
+09:26 
+
+09:26 to organize your creative projects and
+09:28 
+
+09:28 prep your pipeline like a real studio,
+09:30 
+
+09:30 try it yourself.
+09:32 
+
+09:32 One of the greatest aspects the
+09:33 
+
+09:33 community and our artists love is that
+09:35 
+
+09:35 you can get Milanote for free with no
+09:36 
+
+09:36 time limit. We'll drop a link in the
+09:38 
+
+09:38 description so you can check it out.
+09:40 
+
+09:40 When you look at how Arc System Works
+09:42 
+
+09:42 applied this level of intense 2D
+09:43 
+
+09:43 planning to all of their titles, they
+09:45 
+
+09:45 not only have to ensure that their games
+09:47 
+
+09:47 are fun, but also hit the bar to feel
+09:49 
+
+09:49 like traditional 2D animation.
+09:52 
+
+09:52 Arc System Works has created over 100
+09:53 
+
+09:53 distinct original titles, so we won't be
+09:56 
+
+09:56 able to dive into every single one. But,
+09:58 
+
+09:58 we hope that we're able to pull the
+09:59 
+
+09:59 curtain back a bit on how they created
+10:01 
+
+10:01 their iconic look with some of their
+10:02 
+
+10:02 current recent titles.
+10:04 
+
+10:04 Where they continue to add to the
+10:05 
+
+10:05 baseline of what they established on
+10:07 
+
+10:07 Guilty Gear Xrd. They continue the
+10:09 
+
+10:09 evolution of their techniques to Guilty
+10:11 
+
+10:11 Gear Strive in 2021.
+10:13 
+
+10:13 Although the overall technique remained
+10:15 
+
+10:15 mostly unchanged. Starting with a
+10:17 
+
+10:17 traditional pipeline with concept art to
+10:19 
+
+10:19 zero in on the finer details of the
+10:21 
+
+10:21 clothing, their battle mechanics, and
+10:23 
+
+10:23 then moving to storyboarding.
+10:26 
+
+10:26 During the 2D process, they'll focus on
+10:28 
+
+10:28 actual poses and in-game scenarios to
+10:31 
+
+10:31 ensure that the 2D designs will hold up
+10:32 
+
+10:32 in specific gameplay scenarios.
+10:35 
+
+10:35 Of course, if a design is impacted due
+10:37 
+
+10:37 to when the character is in movement,
+10:39 
+
+10:39 adjustments are made to the initial
+10:40 
+
+10:40 design to ensure it maintains the
+10:42 
+
+10:42 original concepts intentions. A great
+10:44 
+
+10:44 example of this was Asuka's cloak that
+10:46 
+
+10:46 started with a simple design, but later
+10:49 
+
+10:49 evolved into a cosmic line cloak to
+10:51 
+
+10:51 enhance the visuals in the final version
+10:53 
+
+10:53 of the game.
+10:54 
+
+10:54 Simultaneously, they'll start creating
+10:56 
+
+10:56 the 3D model, then moving to animation,
+10:58 
+
+10:58 effects, and sound. Since the
+11:00 
+
+11:00 storyboards were done in 2D, they'll
+11:02 
+
+11:02 draw things such as anime-like
+11:04 
+
+11:04 exaggerated expressions. During this
+11:06 
+
+11:06 process, they'll start to consider how
+11:08 
+
+11:08 specific actions will influence the way
+11:10 
+
+11:10 the materials of clothing are depicted
+11:13 
+
+11:13 and shown visually on the final 3D
+11:15 
+
+11:15 version to give the most impact to the
+11:17 
+
+11:17 player.
+11:18 
+
+11:18 They'll draw all the ways pants might
+11:19 
+
+11:19 stick to a character, all the wrinkles
+11:21 
+
+11:21 for the majority of specific motions and
+11:24 
+
+11:24 movements so that the modelers and
+11:26 
+
+11:26 animators can recreate a specific unique
+11:28 
+
+11:28 quality of fabric in 3D as accurately as
+11:31 
+
+11:31 possible to the director's vision.
+11:33 
+
+11:33 Characters like Venom took on very
+11:35 
+
+11:35 different final results than what was
+11:37 
+
+11:37 planned in the initial ideas. Once the
+11:39 
+
+11:39 fighting gameplay elements are
+11:40 
+
+11:40 implemented. So, they'll take
+11:42 
+
+11:42 significant changes to ensure the
+11:44 
+
+11:44 gameplay visually makes sense to the
+11:45 
+
+11:45 player versus prioritizing a specific
+11:48 
+
+11:48 storyline, which in his case was all
+11:50 
+
+11:50 around the concept of a billiard player.
+11:53 
+
+11:53 For Dear Me, I Was, they shot
+11:54 
+
+11:54 live-action reference footage, and based
+11:57 
+
+11:57 on that, the animators didn't just trace
+11:59 
+
+11:59 the movements and rotoscope it, but
+12:01 
+
+12:01 rather ensured that it matched the
+12:02 
+
+12:02 director's specific art style.
+12:04 
+
+12:04 Using actors helped give a more genuine
+12:06 
+
+12:06 performance to the animation. We can see
+12:09 
+
+12:09 their hand-drawn approach yet again,
+12:11 
+
+12:11 giving the human handmade element to the
+12:13 
+
+12:13 process. Is it your dream to someday
+12:15 
+
+12:15 work for a major animation studio or
+12:17 
+
+12:17 master the Japanese manga and anime
+12:19 
+
+12:19 pipelines? If not, feel free to skip
+12:21 
+
+12:21 ahead to the next section or stick
+12:22 
+
+12:22 around if you're just curious about how
+12:24 
+
+12:24 the masters build these worlds and what
+12:26 
+
+12:26 they look for in artists they want to
+12:27 
+
+12:27 hire. As Arc System Works proved to
+12:30 
+
+12:30 capture the true anime style in 3D, you
+12:32 
+
+12:32 have to treat every single pose like a
+12:34 
+
+12:34 2D drawing, removing automated computer
+12:37 
+
+12:37 interpolation so the artist controls
+12:39 
+
+12:39 every single frame. Mastering that level
+12:42 
+
+12:42 of precise pose-by-pose animation takes
+12:44 
+
+12:44 years of practice and research, and
+12:46 
+
+12:46 that's why we fast-track you on how to
+12:48 
+
+12:48 get that growth, quality, and speed in
+12:49 
+
+12:49 your own animations.
+12:51 
+
+12:51 We create videos like this to show you
+12:53 
+
+12:53 how top-tier 2D and 3D features and
+12:55 
+
+12:55 games are made and to give you the exact
+12:57 
+
+12:57 workflows you need for your own career
+12:59 
+
+12:59 or personal projects. Here in the west,
+13:01 
+
+13:01 traditional art schools often push anime
+13:03 
+
+13:03 and manga completely to the side. They
+13:05 
+
+13:05 skip the soul of the Japanese pipeline,
+13:07 
+
+13:07 things like specialized panel work,
+13:09 
+
+13:09 inking, screen tones, and the
+13:12 
+
+13:12 storytelling techniques used by Shonen
+13:13 
+
+13:13 Jump pros.
+13:15 
+
+13:15 That is exactly why Class Creatives
+13:16 
+
+13:16 partnered with GEO Japan to build our
+13:18 
+
+13:18 intro to manga, the Japan Experience
+13:20 
+
+13:20 Masterclass, taking you directly inside
+13:23 
+
+13:23 Tokyo's top pipelines. But the best
+13:25 
+
+13:25 anime relies on strong 2D and 3D
+13:27 
+
+13:27 fundamentals. That's why we don't just
+13:29 
+
+13:29 stop at manga. Several of our
+13:31 
+
+13:31 instructors have shipped projects from
+13:32 
+
+13:32 massive studios like Disney and Sony,
+13:35 
+
+13:35 and you can learn from them in our
+13:36 
+
+13:36 courses covering everything from
+13:37 
+
+13:37 animation and rigging to environment and
+13:39 
+
+13:39 game design and character creation.
+13:41 
+
+13:41 We'll have some links in the description
+13:43 
+
+13:43 if you're interested in taking your art
+13:44 
+
+13:44 in a new direction with us.
+13:46 
+
+13:46 For Marvel Tokon Fighting Souls, they
+13:48 
+
+13:48 were given the chance to show Marvel
+13:50 
+
+13:50 what they wanted to create. So, if you
+13:52 
+
+13:52 look at, say for example, the Iron Man
+13:53 
+
+13:53 designs, you'll notice the distinctive
+13:56 
+
+13:56 Japanese design with the Arc System
+13:57 
+
+13:57 Works stamp all over it. As always, it's
+13:60 
+
+13:60 not just the designs that matter, but
+14:01 
+
+14:01 the gameplay and storytelling elements
+14:03 
+
+14:03 combined to give the player the best
+14:05 
+
+14:05 experience.
+14:06 
+
+14:06 Well, that about wraps up this video on
+14:08 
+
+14:08 how Arc System Works creates 3D
+14:10 
+
+14:10 characters using traditional 2D
+14:12 
+
+14:12 approaches.
+14:13 
+
+14:13 While none of the techniques were
+14:14 
+
+14:14 necessarily new, it was simply the
+14:16 
+
+14:16 X-Factor of the artist's intention. By
+14:19 
+
+14:19 using their 2D knowledge, they were able
+14:20 
+
+14:20 to bring a new art style and
+14:22 
+
+14:22 differentiate it to their own previous
+14:24 
+
+14:24 projects like BlazBlue.
+14:26 
+
+14:26 They had just the right team with the
+14:27 
+
+14:27 exact skill sets necessary to create the
+14:29 
+
+14:29 look that started it all in Guilty Gear
+14:31 
+
+14:31 Xrd. Their desire to deviate away from
+14:34 
+
+14:34 photorealism allowed the studio and the
+14:37 
+
+14:37 team to create something unique that
+14:38 
+
+14:38 could stand the test of time.
+14:40 
+
+14:41 What is your favorite animated character
+14:42 
+
+14:42 and project from Arc System Works? And
+14:44 
+
+14:44 what else would you like to see from us
+14:45 
+
+14:46 next? Are you using these techniques in
+14:48 
+
+14:48 your professional and personal projects?
+14:50 
+
+14:50 Let us know your thoughts in the
+14:51 
+
+14:51 comments.
+14:57 
+
+14:57 And uh don't forget to like and
+14:58 
+
+14:58 subscribe and we'll see you in the next
+14:60 
+
+14:60 one.
+15:01 
+
+15:01 >> Perfect.

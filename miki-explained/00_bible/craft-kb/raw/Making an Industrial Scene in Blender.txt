@@ -1,0 +1,1612 @@
+00:00 okay so in this one I'm just going to do
+00:02 
+
+00:02 a quick scene breakdown of this one
+00:04 
+
+00:04 right here I don't know exactly where
+00:05 
+
+00:05 I'm going to start but I guess we'll
+00:06 
+
+00:06 just let's just open up blender and I'll
+00:08 
+
+00:08 kind of run you through my process of
+00:10 
+
+00:10 where I started how I made all these
+00:12 
+
+00:12 things how I put it all together and
+00:14 
+
+00:14 it's going to look a little complicated
+00:15 
+
+00:15 at first it's going to look a bit a bit
+00:16 
+
+00:16 messy and like there's just stuff
+00:18 
+
+00:18 everywhere I promise it's not that bad
+00:20 
+
+00:20 though and I'll try to break it down in
+00:21 
+
+00:21 a simple way so you can kind of
+00:23 
+
+00:23 understand uh that my workflow is
+00:25 
+
+00:25 actually not that complicated even
+00:27 
+
+00:27 though it might look like it if you just
+00:28 
+
+00:28 open up the blend file and look around
+00:30 
+
+00:30 so at first here's what everything looks
+00:33 
+
+00:33 like if I just turn on everything
+00:35 
+
+00:35 this is what the final thing looks like
+00:37 
+
+00:37 and by the way I'm just in solid view so
+00:40 
+
+00:40 this is not actually a material for you
+00:41 
+
+00:41 it's solid View and I just went up to
+00:43 
+
+00:43 this thing up here and turned on texture
+00:45 
+
+00:45 mode so this is the default
+00:47 
+
+00:47 if you switch it to texture it's
+00:48 
+
+00:48 actually it actually runs a lot smoother
+00:50 
+
+00:50 than material preview just something I
+00:52 
+
+00:52 learned recently anyways this is what
+00:54 
+
+00:54 that looks like uh so like I said it
+00:56 
+
+00:56 looks like a lot but I promise it's
+00:58 
+
+00:58 really not that bad and you'll see that
+00:59 
+
+00:59 once I break this down
+01:00 
+
+01:00 the first thing I did was a bit of
+01:02 
+
+01:02 modeling so I basically just took you
+01:04 
+
+01:04 can see there's these pillars on the
+01:06 
+
+01:06 side here let's go to render view so you
+01:07 
+
+01:07 can actually see and follow along with
+01:09 
+
+01:09 this you can kind of see there's there's
+01:10 
+
+01:10 these pillars on the side of uh the
+01:13 
+
+01:13 thing here so all of these big concrete
+01:16 
+
+01:16 things
+01:17 
+
+01:17 um that's pretty much the only modeling
+01:19 
+
+01:19 I did in this entire thing
+01:20 
+
+01:20 the all of the other models are um I I
+01:23 
+
+01:23 model them myself but I did them in
+01:25 
+
+01:25 other projects and just brought them in
+01:27 
+
+01:27 from there so anyways the first thing I
+01:30 
+
+01:30 would have started with was I think this
+01:32 
+
+01:32 one right here the inspiration from this
+01:34 
+
+01:34 came from mid-journey I just uh typed in
+01:38 
+
+01:38 like some sci-fi
+01:40 
+
+01:40 pillar thing and it just gave me a cool
+01:42 
+
+01:42 looking thing
+01:43 
+
+01:43 so I just modeled something that looked
+01:45 
+
+01:45 roughly like what mid Journey gave me so
+01:47 
+
+01:47 that was the reference that I was using
+01:48 
+
+01:48 but you can use any picture any cool
+01:51 
+
+01:51 looking thing when you're modeling like
+01:53 
+
+01:53 that as a reference
+01:55 
+
+01:55 so this even might look complicated to
+01:57 
+
+01:57 some of you like if it's if you don't
+01:59 
+
+01:59 have any idea how to even make something
+02:01 
+
+02:01 like this that's totally okay I have a
+02:03 
+
+02:03 video on modeling it's the last one I
+02:05 
+
+02:05 posted that goes very in-depth into uh
+02:08 
+
+02:08 it wasn't sci-fi but it was a fantasy
+02:09 
+
+02:09 Temple modeling and you can download a
+02:11 
+
+02:11 free pack from that video if you want to
+02:13 
+
+02:13 just download a bunch of stuff
+02:15 
+
+02:15 um but it goes very in depth and shows
+02:16 
+
+02:16 exactly how I do my modeling and that's
+02:19 
+
+02:19 it's the same exact thing here just in a
+02:21 
+
+02:21 Sci-Fi context versus a temple context
+02:25 
+
+02:25 so it's as usual it's just a bunch of
+02:27 
+
+02:27 separate uh pieces that are actually all
+02:29 
+
+02:29 pretty simple shaped it's basically just
+02:31 
+
+02:31 a bunch of cubes and some cylinders like
+02:33 
+
+02:33 half cylinders but that are stretched
+02:36 
+
+02:36 out and like basically just put a free
+02:38 
+
+02:38 texture on it from textures.com
+02:40 
+
+02:40 uh and that's it it's just that right
+02:42 
+
+02:42 there and then I did that one more time
+02:43 
+
+02:44 just repeated the same process with a
+02:45 
+
+02:45 different type of thing and then I
+02:47 
+
+02:47 actually just thought it looked cool if
+02:49 
+
+02:49 I combined those two things together so
+02:51 
+
+02:51 I'll just go to this one over here I
+02:52 
+
+02:52 think in here you can see yeah the
+02:53 
+
+02:53 individual pieces that this is made of
+02:55 
+
+02:56 so it's uh basically just a bunch of
+02:58 
+
+02:58 cubes and some some are like slanted
+03:01 
+
+03:01 it's really not anything that crazy but
+03:03 
+
+03:03 then when you put all these shapes
+03:04 
+
+03:04 together it becomes something that's
+03:05 
+
+03:05 more cool to look at
+03:07 
+
+03:07 so then once I do that I just join it
+03:09 
+
+03:09 together
+03:10 
+
+03:10 do it a couple more times to get
+03:11 
+
+03:11 different pieces and then you can
+03:12 
+
+03:12 combine those new pieces into even
+03:15 
+
+03:15 bigger Pieces by taking all the chunks
+03:17 
+
+03:17 you made combining them into like bigger
+03:19 
+
+03:19 chunks kind of like taking like bigger
+03:22 
+
+03:22 Lego pieces that you've made and like
+03:24 
+
+03:24 putting them all together to make an
+03:26 
+
+03:26 even bigger collection of Lego pieces if
+03:28 
+
+03:28 that makes sense so there's that thing
+03:30 
+
+03:30 that I made there there's that pillar in
+03:32 
+
+03:32 the middle and then some more of them
+03:33 
+
+03:33 down here and all together now we get
+03:35 
+
+03:35 some interesting thing to look at
+03:39 
+
+03:39 and so this was um I thought this would
+03:42 
+
+03:42 be like a good starting point to just
+03:43 
+
+03:43 use as some basic pillars to kind of
+03:45 
+
+03:45 outline everything so that's what I did
+03:46 
+
+03:46 over here so let me hide I've organized
+03:49 
+
+03:49 this uh just for this video normally
+03:51 
+
+03:51 like I before this before I ever started
+03:54 
+
+03:54 recording it was a complete mess like
+03:56 
+
+03:56 nothing was named at all
+03:58 
+
+03:58 um some of these had names just because
+03:59 
+
+03:59 I'm in the project about what I made
+04:01 
+
+04:01 them not in here they were I named them
+04:03 
+
+04:03 there properly but there were no
+04:05 
+
+04:05 collections at all so don't think you
+04:07 
+
+04:07 have to organize it like this you really
+04:08 
+
+04:08 don't
+04:09 
+
+04:09 so you can see what's underneath
+04:11 
+
+04:11 everything is just a bunch of those
+04:13 
+
+04:13 things that I made
+04:14 
+
+04:14 um just
+04:16 
+
+04:16 in a row right it's just that in a row I
+04:20 
+
+04:20 didn't even look at this this is messy
+04:22 
+
+04:22 it's not even in a straight line
+04:23 
+
+04:23 properly so
+04:25 
+
+04:25 um I don't know you don't need to like
+04:27 
+
+04:27 be that precise with things sometimes
+04:29 
+
+04:29 I guess that'd be better if I was in a
+04:31 
+
+04:31 straight line but whatever anyways
+04:33 
+
+04:33 um once you have a big chunk of models
+04:35 
+
+04:35 like that it's really easy to just throw
+04:37 
+
+04:37 like throw an outline together of like
+04:39 
+
+04:39 the kind of thing you want so I was kind
+04:42 
+
+04:42 of at first I was going for like a
+04:43 
+
+04:43 Sci-Fi Temple kind of thing but turn it
+04:45 
+
+04:45 into something else but
+04:47 
+
+04:47 you can see just by lining these up and
+04:49 
+
+04:49 then throwing on some lights which I'll
+04:50 
+
+04:50 talk about in a second all of a sudden
+04:52 
+
+04:52 now we're starting to have something
+04:54 
+
+04:54 that looks somewhat interesting that
+04:56 
+
+04:56 right there as soon as you see something
+04:58 
+
+04:58 that's like oh wow this is starting to
+04:60 
+
+04:60 look kind of cool
+05:01 
+
+05:01 it gets a lot easier to just keep
+05:03 
+
+05:03 working on it and all of a sudden you
+05:05 
+
+05:05 get motivated to like uh actually put
+05:08 
+
+05:08 more work in and it it starts flowing
+05:11 
+
+05:11 from this point once you have something
+05:13 
+
+05:13 to actually look at that it's cool
+05:16 
+
+05:16 so let's talk about the lights in here
+05:18 
+
+05:18 before anything else um
+05:20 
+
+05:20 actually let me bring in one more thing
+05:21 
+
+05:21 first and that is this right here so I
+05:25 
+
+05:25 just brought in a floor and two walls
+05:28 
+
+05:28 these are really uh very very basic it's
+05:31 
+
+05:31 just a like a flat plane that's extruded
+05:33 
+
+05:33 a tiny bit
+05:35 
+
+05:35 um you don't need to extrude it but I
+05:37 
+
+05:37 had some other lights that were like
+05:38 
+
+05:38 glitching out with it so I extruded it
+05:39 
+
+05:39 and it just looked better but literally
+05:42 
+
+05:42 a cube basically
+05:43 
+
+05:43 um just flattened out and then same
+05:45 
+
+05:45 thing free Texture from textures.com
+05:48 
+
+05:48 this looks it looks like there's a not a
+05:50 
+
+05:50 roughness map but if I go to a material
+05:52 
+
+05:52 preview there actually is I think I
+05:55 
+
+05:55 think this is running into the roughness
+05:56 
+
+05:56 yeah so it's textures.com I'll show you
+05:58 
+
+05:58 this this shading setup really quick
+06:01 
+
+06:01 it's it's a lot messier than it needs to
+06:02 
+
+06:02 be basically it's just this image right
+06:05 
+
+06:05 here this one of concrete going into the
+06:07 
+
+06:07 base color ignore pretty much all this
+06:10 
+
+06:10 it's kind of doing basically nothing uh
+06:13 
+
+06:13 this is
+06:14 
+
+06:14 basically doing nothing there's some
+06:15 
+
+06:15 ambient inclusion stuff and curves just
+06:17 
+
+06:17 making it darker basically that's not
+06:19 
+
+06:19 really important at all
+06:20 
+
+06:20 what is kind of important is this image
+06:23 
+
+06:23 right here this thing is also running
+06:25 
+
+06:25 uh into the roughness so that's how
+06:28 
+
+06:28 we're getting like that grungy feel and
+06:30 
+
+06:30 everything is the darker parts where
+06:32 
+
+06:32 it's like dark in this image here and
+06:34 
+
+06:34 grungy in the actual picture it's going
+06:36 
+
+06:36 to show up on the texture because the
+06:38 
+
+06:38 roughness is going to get influenced by
+06:39 
+
+06:39 that and I just have a color a color
+06:41 
+
+06:41 ramp on here in between where it's going
+06:43 
+
+06:43 into the roughness
+06:45 
+
+06:45 and that allows me to just dial in
+06:47 
+
+06:47 exactly where I want this to be really
+06:48 
+
+06:48 shiny and where I want it to be not so
+06:50 
+
+06:50 shiny and then I've just taken the
+06:52 
+
+06:52 specular down a little bit so it's not
+06:54 
+
+06:54 super intense
+06:55 
+
+06:55 and that's it and that's that texture is
+06:57 
+
+06:57 on like 90 of the objects that I made in
+06:59 
+
+06:59 here
+07:01 
+
+07:01 and I think there was maybe one more
+07:02 
+
+07:02 from textures.com but it's the exact
+07:04 
+
+07:04 same setup here
+07:06 
+
+07:06 okay so let's go back to Synology so it
+07:07 
+
+07:07 just runs smoothly and let's get out of
+07:09 
+
+07:09 here so now this is where it's like okay
+07:11 
+
+07:11 we've got lighting we've got a basic
+07:13 
+
+07:13 outline we've got a place to put things
+07:15 
+
+07:15 in everything kind of makes sense from
+07:17 
+
+07:17 this point and it gets pretty easy Once
+07:19 
+
+07:19 you have like
+07:20 
+
+07:20 a place with some lights and like some
+07:23 
+
+07:23 sort of guidance or like direction to go
+07:25 
+
+07:25 in like at this point it would be it's
+07:27 
+
+07:27 pretty easy to like make something that
+07:29 
+
+07:29 looks cool out of this because it's
+07:30 
+
+07:30 already at a place where it's like okay
+07:32 
+
+07:32 I I can see where this can go it already
+07:34 
+
+07:34 looks kind of cool maybe not finished
+07:35 
+
+07:35 but it looks kind of cool
+07:37 
+
+07:37 so after that
+07:40 
+
+07:40 uh I brought in some other stuff and was
+07:43 
+
+07:43 it this one
+07:44 
+
+07:44 yes okay so these are some industrial
+07:48 
+
+07:48 assets let me actually isolate this so
+07:50 
+
+07:50 you can see what this is
+07:52 
+
+07:52 so
+07:53 
+
+07:53 let's make this full screen
+07:55 
+
+07:55 so you can see here these are just some
+07:58 
+
+07:58 models I made for some other pieces
+07:60 
+
+08:00 uh so anyways in that one I made these
+08:03 
+
+08:03 staircases right here and this walkway
+08:05 
+
+08:05 and some other stuff but it's basically
+08:08 
+
+08:08 just if I isolate one at a time it's not
+08:11 
+
+08:11 anything that complicated it's just
+08:12 
+
+08:12 simple shapes repeated over and over
+08:14 
+
+08:14 again in a certain order so it's like
+08:17 
+
+08:17 basically just cylinders and cubes in
+08:19 
+
+08:19 the shape of what seems like a staircase
+08:22 
+
+08:22 and then that staircase duplicated and
+08:25 
+
+08:25 the shape of what seems like
+08:27 
+
+08:27 a staircase would be like shaped in if
+08:29 
+
+08:29 that makes sense so
+08:31 
+
+08:31 it's uh at the fundamental level it's
+08:33 
+
+08:33 just like
+08:34 
+
+08:34 basically cubes and cylinders all
+08:37 
+
+08:37 together and then once you just shape it
+08:39 
+
+08:39 in a certain way and repeat that shape
+08:40 
+
+08:40 in the shape of what stairs would be
+08:42 
+
+08:42 then it all of a sudden becomes
+08:44 
+
+08:44 something right so that's that
+08:47 
+
+08:47 let's look at some other things here
+08:48 
+
+08:48 same thing here just cubes and cylinders
+08:51 
+
+08:51 basically just with some are like
+08:53 
+
+08:53 obviously more rounded here uh but this
+08:55 
+
+08:55 is this is pretty messy if I look at
+08:57 
+
+08:57 this like this uh this is not like good
+09:01 
+
+09:01 quality here I could have done a lot
+09:02 
+
+09:02 better job with this but it's a
+09:05 
+
+09:05 background thing it doesn't need to be
+09:06 
+
+09:06 good and I didn't I did not put much
+09:08 
+
+09:08 time into this and I think it was a good
+09:10 
+
+09:10 thing because you can barely even see it
+09:11 
+
+09:11 in here like this doesn't matter at all
+09:13 
+
+09:13 here just the overall basic shape and
+09:15 
+
+09:15 colors kind of matter for this because
+09:16 
+
+09:16 it's going to be in the background okay
+09:17 
+
+09:17 so hopefully you're starting to see how
+09:19 
+
+09:19 once you bring things in piece by piece
+09:22 
+
+09:22 nothing is that crazy these pipes here
+09:25 
+
+09:25 you can download these for free
+09:26 
+
+09:26 um there's a big pack of them I made in
+09:28 
+
+09:28 this video I'll just link that here
+09:30 
+
+09:30 uh this here is some photo scanned
+09:34 
+
+09:34 um sand from I went to the beach and
+09:35 
+
+09:35 photo scanned yes sand so that's in here
+09:39 
+
+09:39 uh just for some extra grunge and dirt
+09:41 
+
+09:41 and stuff happening in the foreground
+09:44 
+
+09:44 and then let's talk about what's
+09:45 
+
+09:45 happening in the middle because I
+09:46 
+
+09:46 brought in some people here
+09:48 
+
+09:48 this is actually a photo scan of me uh
+09:51 
+
+09:51 that my friend did the face did not turn
+09:54 
+
+09:54 out well but uh it's just good for like
+09:56 
+
+09:56 a background thing like here you can't
+09:58 
+
+09:58 it looks fine from this far away so it
+09:60 
+
+09:60 you know it works but yes that is me I
+10:04 
+
+10:04 do not look like this in real life but
+10:07 
+
+10:07 um you know
+10:09 
+
+10:09 so that's in there uh that's my friend
+10:10 
+
+10:10 that I also photo scanned again not not
+10:12 
+
+10:12 great quality up close I just did it on
+10:14 
+
+10:14 my phone so um it's hard to do people up
+10:17 
+
+10:17 close on your phone where the photos can
+10:19 
+
+10:19 because it's like anything moving is
+10:21 
+
+10:21 going to be a bit bad but
+10:23 
+
+10:23 um yeah it's totally fine for like
+10:25 
+
+10:25 background stuff like this or as long as
+10:27 
+
+10:27 it's far away looks looks completely
+10:29 
+
+10:29 fine and then at this point it's
+10:31 
+
+10:31 starting to look not bad and
+10:34 
+
+10:34 you know the rest of the stuff if you
+10:35 
+
+10:35 compare this to what the final thing
+10:37 
+
+10:37 looks like is pretty much just filler
+10:39 
+
+10:39 wires and garbage and just filler
+10:43 
+
+10:43 warehousey techy cyberpunk stuff that
+10:47 
+
+10:47 just can kind of it could be anything it
+10:48 
+
+10:48 could be anything cool and intricate
+10:51 
+
+10:51 so I'll show you exactly what it is
+10:53 
+
+10:53 though so it's this antennas collection
+10:55 
+
+10:55 right here
+10:56 
+
+10:56 um what this is
+10:58 
+
+10:58 let me duplicate a couple of these out
+11:00 
+
+11:00 so you can actually see this let's clear
+11:02 
+
+11:02 the rotation
+11:03 
+
+11:03 uh this is
+11:06 
+
+11:06 from a pack of models that I have that
+11:08 
+
+11:08 will be available sometime soon again a
+11:10 
+
+11:10 lot more info on all that soon but
+11:12 
+
+11:12 there's a pack of antennas that I made
+11:13 
+
+11:14 that I've been using and uh it's just
+11:16 
+
+11:16 like rooftop stuff like this just a big
+11:19 
+
+11:19 big collection of
+11:21 
+
+11:21 uh antennas and
+11:23 
+
+11:23 just wires and stuff like that so I just
+11:25 
+
+11:25 took one of those it's I guess it's
+11:27 
+
+11:27 meant to be like used vertically upright
+11:29 
+
+11:29 like this like on a rooftop like you
+11:30 
+
+11:30 would be you'd have like the floor here
+11:32 
+
+11:32 and then this thing would be sitting on
+11:34 
+
+11:34 the floor like that uh but you don't
+11:36 
+
+11:36 have to use it that way so what I did is
+11:37 
+
+11:37 I just kind of slammed them in
+11:39 
+
+11:39 all over the place like you can see if I
+11:41 
+
+11:41 click on any one of these they're all
+11:43 
+
+11:43 the same like big chunk of just
+11:45 
+
+11:45 different antennas and so those are kind
+11:48 
+
+11:48 of just going and fitting into any place
+11:50 
+
+11:50 that seems cool it doesn't have to make
+11:53 
+
+11:53 sense at all like this looks crazy when
+11:54 
+
+11:54 you look at it from the side but then in
+11:57 
+
+11:57 this context
+11:58 
+
+11:58 um if I let's actually take off that
+11:60 
+
+11:60 textured thing here go back to material
+12:02 
+
+12:02 if I look at where those are let's
+12:04 
+
+12:04 actually select uh this right here
+12:07 
+
+12:07 so I know it's starting to get a bit
+12:08 
+
+12:08 messy but hopefully you can see
+12:10 
+
+12:10 uh kind of how this is all matching up
+12:14 
+
+12:14 so basically there's no real science to
+12:16 
+
+12:16 this I was just kind of chucking them
+12:17 
+
+12:17 like they're intersecting with all the
+12:20 
+
+12:20 other geometry here like it's really
+12:21 
+
+12:21 messy it's it's kind of just slapped in
+12:23 
+
+12:23 there
+12:25 
+
+12:25 um in any places that seem like they
+12:27 
+
+12:27 look cool so what I'm doing is literally
+12:29 
+
+12:29 just looking at the rendered view here
+12:32 
+
+12:32 and then while I was making this what I
+12:34 
+
+12:34 was doing is just looking at this and
+12:36 
+
+12:36 then moving these things around and just
+12:37 
+
+12:37 any any place where it seems like it
+12:39 
+
+12:39 looks cool I'll just leave it there and
+12:41 
+
+12:41 if it looks bad I'll just keep moving it
+12:42 
+
+12:42 until it until it kind of clicks into
+12:44 
+
+12:44 place and it looks just starts looking
+12:46 
+
+12:46 cool so you can see it's very this is
+12:49 
+
+12:50 pretty janky like having this just
+12:51 
+
+12:51 clipping through all of this and like
+12:53 
+
+12:53 not making any sense and like this is
+12:55 
+
+12:55 like sticking way out here but you can't
+12:57 
+
+12:57 see any of the bad stuff all you see is
+12:58 
+
+12:58 this little thing up here and it looks
+13:00 
+
+13:00 like this weird intricate thing and it's
+13:02 
+
+13:02 cool and it's fine it doesn't need to be
+13:04 
+
+13:04 good from all angles
+13:06 
+
+13:06 and so that's I just repeated that a
+13:08 
+
+13:08 bunch of times like you just take this
+13:09 
+
+13:09 duplicate it like let's rotate this 90
+13:12 
+
+13:12 or why 90.
+13:15 
+
+13:15 and then if it's like okay that looks
+13:18 
+
+13:18 kind of cool right here
+13:19 
+
+13:19 sure we'll just leave it like right
+13:21 
+
+13:21 there and then if you think it looks
+13:22 
+
+13:22 good you just place it and then if it
+13:24 
+
+13:24 looks bad you just move it and then
+13:25 
+
+13:25 there you go before you know it if you
+13:26 
+
+13:26 just do that enough times it'll be
+13:28 
+
+13:28 completely filled up with just stuff and
+13:30 
+
+13:30 it's going to be that just adds so much
+13:33 
+
+13:33 intricacy and so much extra detail and
+13:37 
+
+13:37 it's such an easy way to do it just
+13:38 
+
+13:38 because using using models that somebody
+13:40 
+
+13:40 or me I already made a long time ago
+13:44 
+
+13:44 it's like it's basically no effort at
+13:47 
+
+13:47 this point because it's just you drop
+13:48 
+
+13:48 the thing in and then just Spam it
+13:49 
+
+13:49 around wherever it seems like it would
+13:50 
+
+13:50 fit
+13:51 
+
+13:51 and then it works somehow it actually
+13:55 
+
+13:55 does so
+13:56 
+
+13:56 um that's all of these wires and
+13:58 
+
+13:58 little pieces sticking out that's all
+14:01 
+
+14:01 just slamming in these pieces and chunks
+14:04 
+
+14:04 of pre-made models
+14:06 
+
+14:06 um yeah
+14:07 
+
+14:07 and that's I saved that for last uh the
+14:10 
+
+14:10 order that I showed you things in in
+14:12 
+
+14:12 this video is kind of the order that I
+14:14 
+
+14:14 actually made it in when I was making it
+14:16 
+
+14:16 and
+14:18 
+
+14:18 I think that's
+14:20 
+
+14:20 um that is important to know because
+14:22 
+
+14:22 I wouldn't want to have this like look
+14:25 
+
+14:25 how messy this is like I this is pretty
+14:27 
+
+14:27 crazy to look at in solid view when it's
+14:29 
+
+14:29 just like stuff everywhere like if I go
+14:31 
+
+14:31 to wireframe especially it's like this
+14:32 
+
+14:32 is just not
+14:33 
+
+14:33 that is not nice to look at
+14:35 
+
+14:35 so you want to kind of save that for the
+14:38 
+
+14:38 end
+14:39 
+
+14:39 um and you don't it's just hard to work
+14:40 
+
+14:40 with all these little intricate pieces
+14:42 
+
+14:42 when if you don't have a solid
+14:44 
+
+14:44 foundation so that's why I showed you
+14:46 
+
+14:46 literally like creating a actual solid
+14:49 
+
+14:49 foundation of like this first and then
+14:51 
+
+14:51 once you have that you know adding in
+14:54 
+
+14:54 these
+14:56 
+
+14:56 um more like intricate pieces and all
+14:59 
+
+14:59 these different elements and that brings
+14:60 
+
+15:00 it all together but it doesn't work
+15:02 
+
+15:02 unless you have that really solid
+15:04 
+
+15:04 foundation most of the time
+15:06 
+
+15:06 um so yeah because if you if you just
+15:08 
+
+15:08 have all these pieces sticking around
+15:09 
+
+15:09 it's just it's a lot harder to work with
+15:11 
+
+15:11 it
+15:12 
+
+15:12 um because like you're like where is
+15:13 
+
+15:13 everything so if you can save that kind
+15:16 
+
+15:16 of thing to the very end and add those
+15:18 
+
+15:18 small details in the end that is
+15:20 
+
+15:20 generally a better workflow in my
+15:21 
+
+15:21 opinion
+15:22 
+
+15:22 not all the time but most of the time
+15:25 
+
+15:25 and then yeah it's just uh I'll show you
+15:27 
+
+15:27 the volumetrics here it's just a cube
+15:29 
+
+15:29 over everything uh display as bounds you
+15:32 
+
+15:32 go to this tab visibility display as
+15:34 
+
+15:34 bounds that's uh oh yeah recommend
+15:36 
+
+15:36 adding that to your shortcuts also if
+15:38 
+
+15:38 you right click this add to shortcuts so
+15:40 
+
+15:40 mine's uh D on the keyboard just
+15:41 
+
+15:41 displays bounds and that just gets out
+15:43 
+
+15:43 of the way so this is if you add a cube
+15:46 
+
+15:46 it's gonna look like that most of the
+15:47 
+
+15:47 time but that's annoying so display as
+15:48 
+
+15:48 bounds just gets it out of the way and
+15:50 
+
+15:50 then the texture on here is just a
+15:52 
+
+15:52 volume scatter
+15:53 
+
+15:53 I made the color a bit darker just to
+15:55 
+
+15:55 get uh it just makes it less thick
+15:57 
+
+15:57 basically kind of the same as lowering
+15:59 
+
+15:59 the density but whatever
+16:01 
+
+16:01 and it's attributes turned up a little
+16:02 
+
+16:02 bit just kind of makes uh you can see
+16:04 
+
+16:04 what it's doing when I move this up and
+16:06 
+
+16:06 down
+16:07 
+
+16:07 makes the bright part of this fog a bit
+16:09 
+
+16:09 closer to the light source so 0.5 is
+16:11 
+
+16:11 fine for this one
+16:13 
+
+16:13 density .0025 just happen to look good
+16:16 
+
+16:16 here just pick whatever looks good 0.01
+16:19 
+
+16:19 or 0.001 is usually a good starting
+16:21 
+
+16:21 place and that's it a couple of
+16:23 
+
+16:23 spotlights these are at uh
+16:25 
+
+16:25 whatever that is 245
+16:28 
+
+16:28 000 Watts and same with this one just
+16:31 
+
+16:31 kind of placed in the same direction to
+16:34 
+
+16:34 uh make it feel like it's just one light
+16:35 
+
+16:35 source this one isn't doing that much
+16:37 
+
+16:37 but it's in the back a little bit the
+16:40 
+
+16:40 main one is this right here if I take
+16:41 
+
+16:41 this out that's basically all the
+16:42 
+
+16:42 lighting right there this one light is
+16:45 
+
+16:45 basically all the lighting
+16:46 
+
+16:46 um just one Spotlight placed in the
+16:48 
+
+16:48 right place and you can do that by just
+16:50 
+
+16:50 trying different areas and finding the
+16:54 
+
+16:54 place that makes the most sense
+16:57 
+
+16:57 um so yeah that's it uh hopefully that
+16:59 
+
+16:59 was a useful breakdown I know it didn't
+17:01 
+
+17:01 go super in depth into any one area in
+17:04 
+
+17:04 particular but
+17:05 
+
+17:05 um hopefully that gives you just a
+17:06 
+
+17:06 better idea of like my overall workflow
+17:09 
+
+17:09 and how it looks complicated in the very
+17:11 
+
+17:11 end but then once you break it down
+17:12 
+
+17:12 piece by piece it's not actually that
+17:15 
+
+17:15 bad and again if this modeling stuff is
+17:18 
+
+17:18 confusing the last video I did was all
+17:20 
+
+17:20 about that
+17:21 
+
+17:21 um so I recommend watching that
+17:23 
+
+17:23 and yeah
+17:24 
+
+17:24 once you model something like this it's
+17:26 
+
+17:26 uh like this piece right here is I I've
+17:29 
+
+17:29 now saved this to my library and I can
+17:30 
+
+17:30 reuse this in future projects and that's
+17:32 
+
+17:32 how I build up a big asset library is
+17:34 
+
+17:34 you just model a thing here and there
+17:36 
+
+17:36 pull from your last projects uh any new
+17:39 
+
+17:39 any new thing you model you just save it
+17:41 
+
+17:41 to the rest of the stuff and then all of
+17:44 
+
+17:44 a sudden after a while of doing this you
+17:46 
+
+17:46 have like this big pile of chunks of
+17:48 
+
+17:48 stuff you can use in like these big like
+17:50 
+
+17:50 basic Lego pieces you can just drag and
+17:52 
+
+17:52 drop in and just create stuff really
+17:53 
+
+17:53 really fast
+17:55 
+
+17:55 anyways yeah I hope that was useful I
+17:57 
+
+17:57 think that's it for this one I will see
+17:59 
+
+17:59 you in the next one thanks for watching
+18:00 
+
+18:00 yeah bye

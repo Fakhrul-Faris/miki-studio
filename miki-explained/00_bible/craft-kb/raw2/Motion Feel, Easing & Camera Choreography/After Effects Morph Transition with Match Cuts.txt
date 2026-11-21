@@ -1,0 +1,913 @@
+00:00 let's turn this into this
+00:02 
+
+00:02 with the magic of match cuts
+00:07 
+
+00:07 when i first learned this technique it
+00:09 
+
+00:09 opened up a whole new world of
+00:10 
+
+00:10 possibilities i couldn't stop using it
+00:13 
+
+00:13 any opportunity i had i was using match
+00:15 
+
+00:15 cuts it was fantastic it gives you the
+00:18 
+
+00:18 god-like ability to smoothy transition
+00:20 
+
+00:20 between any object or scene it's a
+00:23 
+
+00:23 technique that's really close to my
+00:24 
+
+00:24 heart i use it all the time so i'm
+00:27 
+
+00:27 really happy to be able to share it with
+00:28 
+
+00:28 you today match cards are traditionally
+00:30 
+
+00:30 used in film to creatively cut from one
+00:33 
+
+00:33 scene to another by matching either the
+00:35 
+
+00:35 action or the subject matter some
+00:37 
+
+00:37 notable examples include 2001 a space
+00:40 
+
+00:40 odyssey
+00:46 
+
+00:46 [Music]
+00:53 
+
+00:53 they use this technique a lot and it's
+00:55 
+
+00:55 really great
+00:56 
+
+00:56 we can apply a similar technique in
+00:58 
+
+00:58 motion design to make our transitions
+01:01 
+
+01:01 pure satisfying silk i'll also show you
+01:04 
+
+01:04 some quality motion design examples
+01:06 
+
+01:06 later but for now let's learn the
+01:08 
+
+01:08 technique let's start with a basic shape
+01:10 
+
+01:10 morph we have a square and we have a
+01:12 
+
+01:12 circle and we're going to transform the
+01:14 
+
+01:14 one into the other so you may think that
+01:17 
+
+01:17 the smoothest way to transition between
+01:18 
+
+01:18 these two objects is to find a way to
+01:21 
+
+01:21 literally transform the one
+01:23 
+
+01:23 into the other
+01:24 
+
+01:24 so find some way to tween from a square
+01:26 
+
+01:26 into a circle so path animation or uh
+01:29 
+
+01:29 whatever solution you find so for
+01:31 
+
+01:31 example
+01:33 
+
+01:33 i could come to my square
+01:35 
+
+01:35 and i could
+01:36 
+
+01:36 drop in keyframes on
+01:39 
+
+01:39 position one second apart
+01:42 
+
+01:42 and i could just on the second keyframe
+01:45 
+
+01:45 move that
+01:47 
+
+01:47 to the position of the circle
+01:50 
+
+01:50 just easy ease it
+01:52 
+
+01:52 then i could add a round corners to this
+01:57 
+
+01:57 and animate the radius from zero
+01:59 
+
+01:59 [Music]
+02:01 
+
+02:01 to
+02:01 
+
+02:01 [Music]
+02:02 
+
+02:02 about
+02:04 
+
+02:04 200
+02:05 
+
+02:05 and ease that as well
+02:07 
+
+02:07 if i hide my circle now
+02:10 
+
+02:10 we have a perfectly
+02:12 
+
+02:12 tweened animation so with this animation
+02:14 
+
+02:14 we basically added in a whole bunch of
+02:17 
+
+02:17 extra frames to
+02:19 
+
+02:19 sell this more
+02:21 
+
+02:21 so quite literally it is transforming
+02:23 
+
+02:23 the square into the circle
+02:25 
+
+02:25 now if we were to look at this from the
+02:27 
+
+02:27 perspective of a match cut
+02:29 
+
+02:29 it's going to be totally different and
+02:31 
+
+02:31 what i'm suggesting is that
+02:34 
+
+02:34 all this information is really
+02:35 
+
+02:35 unnecessary because a match cut achieves
+02:38 
+
+02:38 the same thing but without all that
+02:40 
+
+02:40 extra information so let's give that a
+02:42 
+
+02:42 go
+02:43 
+
+02:43 i'm going to undo all of this and we're
+02:45 
+
+02:45 going to start from scratch
+02:47 
+
+02:47 but once again we're going to start with
+02:49 
+
+02:49 our square and we're going to hit p to
+02:52 
+
+02:52 open our position
+02:53 
+
+02:53 drop in keyframes
+02:55 
+
+02:55 at one second apart
+02:58 
+
+02:58 and i'm going to animate
+03:00 
+
+03:00 the square
+03:02 
+
+03:02 into the position of the circle but this
+03:04 
+
+03:04 time what i'm going to do
+03:06 
+
+03:06 is parent the circle to the square using
+03:09 
+
+03:09 this pick whip
+03:10 
+
+03:10 that'll move back in place with the
+03:12 
+
+03:12 square now
+03:14 
+
+03:14 if i add some easing to this
+03:17 
+
+03:17 and
+03:18 
+
+03:18 come into my graph editor
+03:21 
+
+03:21 this is the point in the animation i'm
+03:23 
+
+03:23 looking for with the match cut
+03:26 
+
+03:26 i'm looking for the fastest point so
+03:29 
+
+03:29 that i can either cut and effectively
+03:32 
+
+03:32 pull the eye so i'm going to come out
+03:34 
+
+03:34 and i'm going to use alt
+03:36 
+
+03:36 and right bracket to trim my square
+03:39 
+
+03:39 pull that in one more frame
+03:41 
+
+03:41 then i'm going to do alt left bracket
+03:43 
+
+03:43 with my circle just to trim it at that
+03:46 
+
+03:46 same point now if i play this
+03:48 
+
+03:48 essentially we've created
+03:50 
+
+03:50 exactly the same
+03:52 
+
+03:52 morph but with far less information
+03:55 
+
+03:55 and the eye is still completely fooled
+03:58 
+
+03:58 and that right there is the power of
+04:00 
+
+04:00 match cuts and we can take this
+04:04 
+
+04:04 much further this is really the basics
+04:06 
+
+04:06 from here let's dive into another
+04:08 
+
+04:08 example and see what else we can do so
+04:10 
+
+04:10 for this next example we're going to use
+04:12 
+
+04:12 match cuts to turn a matchstick into a
+04:15 
+
+04:15 sword and when i initially created this
+04:18 
+
+04:18 i thought i was being very clever using
+04:19 
+
+04:19 a match and a sword as a visual pun for
+04:22 
+
+04:22 a match cut but it turns out that
+04:25 
+
+04:25 i'm not the only one who's had this idea
+04:27 
+
+04:27 so shout out to ben marriott for getting
+04:29 
+
+04:29 there first you are the proud owner of
+04:31 
+
+04:31 the pun award congratulations but in all
+04:34 
+
+04:34 seriousness check out vayne merritt's
+04:36 
+
+04:36 youtube channel he's bringing tons of
+04:38 
+
+04:38 value in every tutorial enough beating
+04:41 
+
+04:41 around the bush let's get into how to
+04:43 
+
+04:43 transform the match into the sword so
+04:45 
+
+04:45 for starters i'm going to come up to
+04:47 
+
+04:47 layer new
+04:48 
+
+04:48 null object i'm going to change my color
+04:51 
+
+04:51 to
+04:52 
+
+04:52 green
+04:53 
+
+04:53 and i'm going to name this
+04:55 
+
+04:55 master match
+04:57 
+
+04:57 cut
+04:58 
+
+04:58 null
+04:59 
+
+04:59 now
+04:60 
+
+04:60 i'm going to click and drag my null and
+05:03 
+
+05:03 while holding control i'm going to snap
+05:05 
+
+05:05 it onto this matchstick anchor point now
+05:08 
+
+05:08 i'm going to
+05:09 
+
+05:09 click on my matchstick
+05:11 
+
+05:11 and parent that to our master match cut
+05:13 
+
+05:13 null then i'm going to hit p to open up
+05:15 
+
+05:15 the position property drop in keyframes
+05:18 
+
+05:18 at 4 and 5
+05:20 
+
+05:20 seconds
+05:22 
+
+05:22 come over to my second key frame and
+05:24 
+
+05:24 move the matchstick
+05:26 
+
+05:26 over
+05:27 
+
+05:27 to our sword and make sure that it's
+05:30 
+
+05:30 perfectly centered
+05:32 
+
+05:32 i also want to add some rotation to this
+05:35 
+
+05:35 so if i hold shift and r i'll open up
+05:37 
+
+05:37 the rotation property now i'll click to
+05:40 
+
+05:40 add a keyframe
+05:42 
+
+05:42 move one to four seconds and drop in
+05:45 
+
+05:45 another one at five
+05:47 
+
+05:47 i want the match to be rotated
+05:49 
+
+05:49 180 degrees at this point and now i can
+05:53 
+
+05:53 parent the sword cut to our match cut
+05:55 
+
+05:55 null
+05:57 
+
+05:57 add some quick easing
+05:60 
+
+05:60 now we're going to go back into our
+06:01 
+
+06:01 graph editor and we're going to find
+06:04 
+
+06:04 that
+06:05 
+
+06:05 point that fastest point in the graph
+06:08 
+
+06:08 so
+06:10 
+
+06:10 if your easing was different
+06:12 
+
+06:12 obviously that peak is going to change
+06:14 
+
+06:14 so no matter what your easing is
+06:16 
+
+06:16 look for that
+06:18 
+
+06:18 fast point that peak of the graph
+06:22 
+
+06:22 okay so let's go back so all we need to
+06:24 
+
+06:24 do at this point is trim our layers so
+06:27 
+
+06:27 that they cut at that peak
+06:29 
+
+06:29 [Music]
+06:31 
+
+06:31 if we preview this our eye is completely
+06:33 
+
+06:33 full
+06:34 
+
+06:34 look at that silky smooth transition
+06:37 
+
+06:37 with very little work
+06:41 
+
+06:41 now we're obviously not limited to these
+06:44 
+
+06:44 transform properties you can really use
+06:46 
+
+06:46 whatever you want scale for example
+06:51 
+
+06:51 just position on its own
+06:53 
+
+06:53 the world is really your oyster when it
+06:55 
+
+06:55 comes to this technique so play around
+06:57 
+
+06:57 with it and have fun
+06:59 
+
+06:59 so of course to really make those motion
+07:01 
+
+07:01 gains one example
+07:02 
+
+07:02 is just not going to cut it so here's
+07:04 
+
+07:04 another example so we can really
+07:07 
+
+07:07 understand this technique and show how
+07:09 
+
+07:09 we can even transform a whole scene
+07:12 
+
+07:12 using this technique so for starters
+07:14 
+
+07:14 let's slap a null onto the sphere
+07:18 
+
+07:18 that's a really hard thing to say snap
+07:20 
+
+07:20 slap and slap a null onto this sphere
+07:25 
+
+07:25 it's a mouthful anyway slap a note onto
+07:28 
+
+07:28 the sphere by coming up to layer new
+07:31 
+
+07:31 null object of course i like my nulls to
+07:33 
+
+07:33 be green
+07:35 
+
+07:35 and i also like my nulls to have the
+07:37 
+
+07:37 word master in them
+07:39 
+
+07:39 master match cut
+07:41 
+
+07:41 null
+07:43 
+
+07:43 2 now let's click and drag holding
+07:45 
+
+07:45 control so that we can snap onto the
+07:47 
+
+07:47 anchor point of our sphere let go now
+07:50 
+
+07:50 i'm going to parent our sphere to our
+07:52 
+
+07:52 master match cut null 2. now if i hit p
+07:55 
+
+07:55 to open up the position property i can
+07:58 
+
+07:58 click on position to add in a keyframe
+08:00 
+
+08:00 i'm going to come to about 4 seconds and
+08:03 
+
+08:03 12 frames and drop another keyframe and
+08:06 
+
+08:06 then 5 seconds and 12 frames and add in
+08:09 
+
+08:09 another keyframe
+08:11 
+
+08:11 then our final keyframe we're going to
+08:13 
+
+08:13 move our sphere right to the about the
+08:16 
+
+08:16 center of our cube and of course we're
+08:19 
+
+08:19 going to parent our cube onto our master
+08:21 
+
+08:21 match cardinal at this point so that
+08:24 
+
+08:24 they follow each other around making
+08:26 
+
+08:26 friends
+08:28 
+
+08:28 now i want to add a bit of anticipation
+08:30 
+
+08:30 to this animation to really emphasize
+08:32 
+
+08:32 this match cut so i'm going to leave
+08:34 
+
+08:34 this keyframe where it is and i'm going
+08:36 
+
+08:36 to come to the second keyframe and i'm
+08:38 
+
+08:38 going to drag that down to somewhere
+08:41 
+
+08:41 about there
+08:42 
+
+08:42 and if i hit control and alt you can see
+08:44 
+
+08:44 it brings up this convert vertex tool
+08:48 
+
+08:48 and if i click and drag that it adds
+08:50 
+
+08:50 these handles
+08:51 
+
+08:51 to this path and essentially that's
+08:54 
+
+08:54 going to control
+08:55 
+
+08:55 the direction that this cube animates so
+08:58 
+
+08:58 if i click
+08:59 
+
+08:59 control and alt again i can break the
+09:02 
+
+09:02 link between these two handles and
+09:04 
+
+09:04 control them individually
+09:06 
+
+09:06 so i'm going to do something like this
+09:09 
+
+09:09 now i'm going to just add some quick
+09:12 
+
+09:12 easing to this
+09:13 
+
+09:13 hit f9 to
+09:15 
+
+09:15 add an easy ease to this first keyframe
+09:18 
+
+09:18 now of course
+09:20 
+
+09:20 we're going to go into our graph editor
+09:22 
+
+09:22 find out where the fastest point is and
+09:24 
+
+09:24 because we've used very simple easing
+09:27 
+
+09:27 i can just find that middle point and
+09:30 
+
+09:30 alternate bracket on our cube
+09:32 
+
+09:32 and alt and right bracket on our sphere
+09:36 
+
+09:36 these are just snapping
+09:37 
+
+09:37 the final thing i want to do is add a
+09:40 
+
+09:40 bit of interest to this cube if i twirl
+09:42 
+
+09:42 this down and come to group 2 which is
+09:45 
+
+09:45 the square
+09:46 
+
+09:46 behind i can drop a position keyframe in
+09:50 
+
+09:50 and this is the internal position so if
+09:53 
+
+09:53 i animate it it'll only move this cube
+09:55 
+
+09:55 in the back
+09:56 
+
+09:56 then i'm going to come to this point
+09:58 
+
+09:58 where it cuts i'm going to drop in
+09:60 
+
+09:60 another keyframe and i'm going to move
+10:02 
+
+10:02 it to the other side and i'm gonna leave
+10:04 
+
+10:04 this linear
+10:06 
+
+10:06 and add a nice strong ease to match how
+10:08 
+
+10:08 he's above okay so let's close that down
+10:11 
+
+10:11 and let's preview
+10:13 
+
+10:13 what we've made
+10:15 
+
+10:15 there we have a nice snappy match cut so
+10:18 
+
+10:18 to really
+10:19 
+
+10:19 sell this animation and to really shift
+10:23 
+
+10:23 the entire scene using this technique we
+10:25 
+
+10:25 can add in a few extras so for starters
+10:28 
+
+10:28 we could add in a grid
+10:30 
+
+10:30 we could add in a new background
+10:33 
+
+10:33 and then finally we can add some
+10:35 
+
+10:35 embellishments to the second scene to
+10:37 
+
+10:37 really sell the animation and add some
+10:40 
+
+10:40 visual interest
+10:42 
+
+10:42 and at this point we basically
+10:43 
+
+10:43 transitioned between two completely
+10:45 
+
+10:45 different scenes
+10:46 
+
+10:46 using match cuts so you can hopefully
+10:49 
+
+10:49 start to see how powerful this tool is
+10:52 
+
+10:52 so it's often about using the direction
+10:54 
+
+10:54 and speed of an animation and simply
+10:57 
+
+10:57 matching that after a cut to sell your
+11:00 
+
+11:00 transition and this can be applied to
+11:03 
+
+11:03 backgrounds objects even full scenes so
+11:06 
+
+11:06 again the world really is your oyster
+11:09 
+
+11:09 when it comes to using this technique so
+11:11 
+
+11:11 have fun with it abusing and
+11:13 
+
+11:13 experimenting with this technique and i
+11:15 
+
+11:15 promise it will radically improve your
+11:17 
+
+11:17 transitions now as promised here are
+11:20 
+
+11:20 some great examples of match cuts in
+11:22 
+
+11:22 motion design
+11:25 
+
+11:25 [Music]
+11:51 
+
+11:51 i hope you're feeling inspired i would
+11:53 
+
+11:53 love to hear which match kit was your
+11:55 
+
+11:55 favorite so let me know in the comments
+11:57 
+
+11:57 and of course like if you learned
+11:58 
+
+11:58 something new and subscribe for more
+12:01 
+
+12:01 motion games

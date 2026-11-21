@@ -1,0 +1,8 @@
+https://www.youtube.com/watch?v=4Uy2SzB-Kuk
+
+Transcript:
+(00:00) Studio lighting is a very complicated topic. Here are a few tips to better understand it. You need a main light to sculpt the shape of your subject, a rim light that separates the background and creates depth in the image, and a large soft fill light to bring up the shadows of the whole image. [music] This is known as a three-point lighting setup and is very commonly used.
+(00:23) Let's take this concept and change it up a bit. To separate the background from our subject, let's put a plane and point a spotlight at it. Using the blend amount, we can create a nice gradient behind our subject to make it really stand out. For the key light, let's just place a plane light really close to the object.
+(00:42) I want the highlights to spread over the whole length of the coffee maker so that its shape is easily readable. For the fill light, we can create another soft box and try doing it that way, but there is a much easier way. [music] Just place a large plane opposite to the key light. That way, we'll use the bounce light to create the fill.
+(01:03) You can play with the size and how close the plane is to get the results you're after. And you'll get really nice gradients on your object. Also, some depth of field will help create the seamless background effect. One last tip, when making studio lighting setups, always make sure you have a pure black environment.
+(01:24) That will give you deep reflections and rich blacks. Subscribe for more tutorials and thanks for watching.

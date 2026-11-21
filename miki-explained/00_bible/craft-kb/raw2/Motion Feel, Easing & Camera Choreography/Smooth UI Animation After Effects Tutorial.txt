@@ -1,0 +1,721 @@
+00:00 Hey everyone. Today we're going to make
+00:02 
+
+00:02 this smooth UI animation from scratch.
+00:04 
+
+00:04 In this tutorial, you'll learn lots of
+00:06 
+
+00:06 new tips and tricks, so make sure to
+00:08 
+
+00:08 watch till the end. I've added the
+00:10 
+
+00:10 project file link in the description so
+00:12 
+
+00:12 you can follow along easily. And before
+00:14 
+
+00:14 we start, don't forget to like this
+00:15 
+
+00:15 video and subscribe to the channel. Now,
+00:18 
+
+00:18 let's get started.
+00:21 
+
+00:21 Open After Effects, create a new
+00:23 
+
+00:23 composition, and name it main comp. Set
+00:26 
+
+00:26 the size to a 16x9 ratio.
+00:30 
+
+00:30 Now I have this PSD file which you'll
+00:32 
+
+00:32 get in the project file. When importing,
+00:34 
+
+00:34 set the kind to composition retain layer
+00:37 
+
+00:37 sizes and check editable layer styles.
+00:40 
+
+00:40 Drag and drop this UI composition into
+00:42 
+
+00:42 the main comp. Set its scale to 25%.
+00:49 
+
+00:49 Next, go inside this UI comp. Here we
+00:52 
+
+00:52 have all the UI elements extracted from
+00:53 
+
+00:53 the design. These are the layers we'll
+00:56 
+
+00:56 animate. First, clear the guides. We'll
+00:59 
+
+00:59 start by animating this dashboard
+01:01 
+
+01:01 section. Go inside the dashboard comp.
+01:03 
+
+01:03 You'll see all the elements in their own
+01:05 
+
+01:05 layers.
+01:08 
+
+01:08 Select one layer and apply a transform
+01:10 
+
+01:10 effect.
+01:13 
+
+01:13 Make a key frame on position and opacity
+01:15 
+
+01:15 at the 1 second mark.
+01:24 
+
+01:24 At the beginning, move its position
+01:26 
+
+01:26 slightly and set opacity to zero.
+01:32 
+
+01:32 Then easy ease the key frames
+01:38 
+
+01:38 and adjust the graph like this.
+01:49 
+
+01:49 Now copy this transform effect using
+01:52 
+
+01:52 Ctrl + C and paste it on the other
+01:55 
+
+01:55 layers using Ctrl + V.
+01:59 
+
+01:59 Offset the layers by two or three frames
+02:01 
+
+02:01 to add overlapping.
+02:08 
+
+02:08 You'll get a nice smooth animation like
+02:10 
+
+02:10 this.
+02:15 
+
+02:15 Now go back to the UI comp.
+02:21 
+
+02:21 Next, we'll animate the performance
+02:23 
+
+02:23 section. Go under the performance comp.
+02:31 
+
+02:31 For this layer, copy and paste the same
+02:34 
+
+02:34 transform effect we used earlier.
+02:43 
+
+02:43 Now let's animate the chart.
+02:47 
+
+02:47 Select the circle tool. Set the fill to
+02:50 
+
+02:50 none and set the stroke to around 90 or
+02:53 
+
+02:53 100. Hold control plus shift to make a
+02:55 
+
+02:55 perfect circle.
+02:60 
+
+02:60 Position it properly so it covers the
+03:02 
+
+03:02 circle behind it.
+03:06 
+
+03:06 Apply a trim path effect.
+03:13 
+
+03:13 Add a key frame on the end value at 1
+03:15 
+
+03:15 second. At the beginning, set the end
+03:17 
+
+03:17 value to zero. Next, animate the
+03:20 
+
+03:20 rotation of the chart layer. At 1
+03:23 
+
+03:23 second, set a key frame and at the
+03:25 
+
+03:25 beginning, set its rotation to -200°.
+03:30 
+
+03:30 Easy ease both key frames and adjust the
+03:33 
+
+03:33 graph.
+03:53 
+
+03:53 Change the charts track mat to alpha mat
+03:55 
+
+03:55 using the parent tool.
+04:04 
+
+04:04 We'll also animate the icon scale. First
+04:07 
+
+04:07 offset the chart animation a little.
+04:14 
+
+04:14 Then animate the scale of the icon.
+04:29 
+
+04:29 Easy ease the key frames.
+04:40 
+
+04:40 This completes the animation for this
+04:42 
+
+04:42 part. Go back to the UI comp.
+04:45 
+
+04:45 For the rest of the UI layers, use the
+04:48 
+
+04:48 same transform effect. Copy and paste it
+05:02 
+
+05:02 and offset the layers. slightly to make
+05:04 
+
+05:04 the motion feel natural.
+05:07 
+
+05:07 Now, let's move on to the main section
+05:09 
+
+05:09 animation. Go under this comp and change
+05:13 
+
+05:13 all layer label colors for better
+05:15 
+
+05:15 understanding.
+05:19 
+
+05:19 Copy all the layers and paste them into
+05:21 
+
+05:21 the UI comp.
+05:23 
+
+05:23 Then hide this layer.
+05:30 
+
+05:30 Create a new null layer and call it
+05:32 
+
+05:32 controller.
+05:37 
+
+05:37 Add a slider control effect.
+05:41 
+
+05:41 Rename it to length.
+05:46 
+
+05:46 Duplicate it and rename the second one
+05:48 
+
+05:48 to range.
+05:51 
+
+05:51 Make sure both names match exactly.
+05:55 
+
+05:55 Now convert all layers to 3D layers by
+05:58 
+
+05:58 clicking the 3D icon.
+06:04 
+
+06:04 Select the PSD layer and press P for
+06:06 
+
+06:06 position. Hold Alt and click the
+06:08 
+
+06:08 stopwatch to add an expression.
+06:12 
+
+06:12 You'll get this expression in the
+06:13 
+
+06:13 project file.
+06:16 
+
+06:16 Copy the first one and paste it into the
+06:18 
+
+06:18 layers position property.
+06:25 
+
+06:25 Then go to edit, copy expression only,
+06:29 
+
+06:29 and paste it onto the other layers using
+06:32 
+
+06:32 Ctrl +V. Now, when you adjust the
+06:35 
+
+06:35 controller's length and range sliders
+06:42 
+
+06:42 and move its position, the layer's Z
+06:45 
+
+06:45 positions will react dynamically.
+06:51 
+
+06:51 Select this PSD layer again. Apply a
+06:54 
+
+06:54 drop shadow effect.
+07:01 
+
+07:01 Increase its softness.
+07:03 
+
+07:03 Add an expression to the drop shadow
+07:05 
+
+07:05 distance.
+07:11 
+
+07:11 Copy the second expression and paste it
+07:13 
+
+07:13 there.
+07:18 
+
+07:18 Do the same for opacity.
+07:21 
+
+07:21 Copy the third expression
+07:24 
+
+07:24 and paste it.
+07:28 
+
+07:28 Now copy the drop shadow effect and
+07:31 
+
+07:31 paste it onto all other layers.
+07:50 
+
+07:50 If the shadow looks too strong, open the
+07:53 
+
+07:53 distance expression and reduce the value
+07:55 
+
+07:55 to around 150.
+08:03 
+
+08:03 Then copy this updated expression and
+08:05 
+
+08:05 paste it to the rest of the layers.
+08:14 
+
+08:14 That looks better now. Um, you can also
+08:16 
+
+08:16 tweak the softness if needed it.
+08:24 
+
+08:24 Now, let's animate the controller's
+08:25 
+
+08:25 position. Make a key frame on it at the
+08:28 
+
+08:28 start.
+08:30 
+
+08:30 Move it outside the composition.
+08:34 
+
+08:34 At 15 frames, bring it to the center.
+08:44 
+
+08:44 At 1 second,
+08:46 
+
+08:46 move it back out.
+08:49 
+
+08:49 Repeat this movement for a loop.
+08:58 
+
+08:58 Easy ease the key frames.
+09:02 
+
+09:02 In the graph editor, select these two
+09:04 
+
+09:04 points.
+09:08 
+
+09:08 Right click on it and enable this
+09:10 
+
+09:10 continuous option
+09:12 
+
+09:12 and adjust the curve.
+09:24 
+
+09:24 We'll get a nice smooth animation like
+09:26 
+
+09:26 this.
+09:35 
+
+09:35 Offset the other layers slightly based
+09:37 
+
+09:37 on their position.
+09:52 
+
+09:52 Now that the animation is ready, let's
+09:53 
+
+09:53 add some camera movement. Before that,
+09:56 
+
+09:56 uncheck this option on this precoms.
+09:60 
+
+09:60 Now go to the main comp.
+10:07 
+
+10:07 Make the UI comp 3D and click the
+10:09 
+
+10:09 collapse transformations icon.
+10:13 
+
+10:13 Create a new null layer and parent the
+10:16 
+
+10:16 UI comp to it.
+10:19 
+
+10:19 Make this null 3D as well.
+10:23 
+
+10:23 Hold shift and press S and R to show
+10:25 
+
+10:25 scale and rotation. Add key frames for
+10:27 
+
+10:27 scale, X rotation, and Y rotation.
+10:31 
+
+10:31 Set the X rotation to minus 10.
+10:36 
+
+10:36 In the UI layer, ensure all layers are
+10:38 
+
+10:38 3D, otherwise the main comp animation
+10:41 
+
+10:41 won't work properly.
+10:46 
+
+10:46 Move the key frames to around 25 frames
+10:48 
+
+10:48 in the timeline.
+10:51 
+
+10:51 At the beginning, set scale to 30.
+10:55 
+
+10:55 X rotation to minus30 and Y rotation to
+10:58 
+
+10:58 minus 90.
+11:02 
+
+11:02 Easy ease and adjust the graph for
+11:05 
+
+11:05 smooth motion.
+11:22 
+
+11:22 Now make another null layer and parent
+11:24 
+
+11:24 it to the first one.
+11:29 
+
+11:29 Make it 3D too.
+11:31 
+
+11:31 Add key frames for X and Y rotation.
+11:34 
+
+11:34 Move ahead 20 frames.
+11:38 
+
+11:38 Set X rotation to minus 20 and Y
+11:41 
+
+11:41 rotation to 180.
+11:47 
+
+11:47 Easy ease
+11:50 
+
+11:50 and adjust the graph again.
+12:11 
+
+12:11 Duplicate the UI layer.
+12:14 
+
+12:14 Rotate its Y rotation to 180
+12:20 
+
+12:20 and move it slightly forward on the
+12:22 
+
+12:22 Z-axis.
+12:31 
+
+12:31 Adjust the no layer rotation graph for a
+12:33 
+
+12:33 seamless 3D rotation.
+12:54 
+
+12:54 Trim the comp using alt plus the closing
+12:56 
+
+12:56 bracket. Now create another null layer.
+13:02 
+
+13:02 Parent it to this one and make it 3D.
+13:10 
+
+13:10 Add key frames for orientation and
+13:12 
+
+13:12 position.
+13:14 
+
+13:14 Move a few frames ahead.
+13:19 
+
+13:19 Reduce Z position
+13:29 
+
+13:29 and adjust X orientation.
+13:34 
+
+13:34 Then two seconds later,
+13:38 
+
+13:38 move it downward.
+13:46 
+
+13:46 and set orientation to zero.
+13:52 
+
+13:52 Move a few frames ahead again and reset
+13:54 
+
+13:54 the position
+13:56 
+
+13:56 and set the X orientation to 10°.
+14:01 
+
+14:01 Select all the key frames, easy ease
+14:03 
+
+14:03 them, and refine the graph curves.
+14:23 
+
+14:23 Now adjust the UI elements in the UI
+14:25 
+
+14:25 comp based on this camera movement.
+14:44 
+
+14:44 Create a solid layer. Set its color to
+14:46 
+
+14:46 dark blue
+14:51 
+
+14:51 and name it BG for background.
+15:07 
+
+15:07 If the Z position looks too strong,
+15:09 
+
+15:09 reduce it slightly using the controller.
+15:30 
+
+15:30 Next, duplicate the UI comp and solo it.
+15:35 
+
+15:35 Apply CC light sweep effect.
+15:40 
+
+15:40 Increase width. Set sweep intensity to
+15:43 
+
+15:43 zero. Increase edge intensity.
+15:47 
+
+15:47 and set light reception to cutout. Add
+15:50 
+
+15:50 key frames for direction, width, and
+15:52 
+
+15:52 edge thickness.
+15:57 
+
+15:57 Move a few frames ahead.
+15:59 
+
+15:59 Set width to 200
+16:02 
+
+16:02 and thickness to eight.
+16:06 
+
+16:06 At the beginning and end, set both to
+16:09 
+
+16:09 zero.
+16:19 
+
+16:19 Set the final direction to minus 360.
+16:26 
+
+16:26 Easy ease.
+16:29 
+
+16:29 And adjust the graph.
+16:52 
+
+16:52 Then apply a fourcolor gradient.
+16:55 
+
+16:55 Keep the default colors for now.
+16:59 
+
+16:59 Apply deep glow.
+17:13 
+
+17:13 If the light sweep feels too fast, slow
+17:16 
+
+17:16 it down slightly for a smoother glow.
+17:20 
+
+17:20 Finally, make a new adjustment layer.
+17:23 
+
+17:23 Apply CC Force motion blur.
+17:27 
+
+17:27 Set blur samples to 10
+17:30 
+
+17:30 and shutter direction to 90 for a nice
+17:32 
+
+17:32 motion blur in the animation. And that's
+17:35 
+
+17:35 it. Our final UI animation is ready. And
+17:38 
+
+17:38 that's how we can create a smooth UI
+17:41 
+
+17:41 animation completely from scratch. You
+17:43 
+
+17:43 can use your own creativity to make
+17:45 
+
+17:45 something even cooler with it. If you
+17:47 
+
+17:47 enjoyed this tutorial, don't forget to
+17:49 
+
+17:49 hit like and subscribe. It really helps
+17:50 
+
+17:50 the channel and make sure you don't miss
+17:52 
+
+17:52 future tutorials. If you'd like to
+17:54 
+
+17:54 support my work and get access to the
+17:56 
+
+17:56 premium project file, check out my
+17:58 
+
+17:58 Kofhei page. The link is in the
+17:60 
+
+17:60 description. Thanks a lot for watching
+18:01 
+
+18:01 and I'll see you in the next tutorial.

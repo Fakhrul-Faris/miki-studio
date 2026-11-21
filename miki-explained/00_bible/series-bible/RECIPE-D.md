@@ -45,8 +45,9 @@ The user wants to see each stage before the next one is built. Skipping a gate c
 
 1. **Pick the story** and read the sources yourself (§2).
 2. **Script**: show it, wait for approval (§3).
-3. **Shot list**: one table row per setup. Show it, wait for "ok" (§4).
-4. **Art direction in five lines** (hero object, accent colour, what is grey, font, sets). Wait for "ok".
+3. **Shot list**: one table row per setup, with a `cards` column (craft-kb cards for its light, camera, motion; §5.1.9). Show it, wait for "ok" (§4).
+4. **Art direction in five lines** (hero object, accent colour, what is grey, font, sets) + a colour-script strip (one
+   key colour per setup). Wait for "ok".
 5. **Board**: one still per setup, each beside the reference frame it is modelled on (§7). Run the critic (§10). Show it.
 6. **Animated preview** with a scratch or final voice (§8). Run the critic. Show it.
 7. Voice from the user, sound, final render, cover: only after the preview is approved.
@@ -75,6 +76,9 @@ The user's technique (binding for this style):
 - A separate voice text for ElevenLabs v4: numbers as words, "…" for a pause, capitals for stress. The user records the
   voice. Do not generate a final voice yourself.
 
+Before showing the script (user OK 2026-11-21): write Frame 0 / Last frame and a Beats v0 outline first, then run
+`00_bible/checks/SCRIPT-CHECK.md`; paste the ticked list under the script in `episode.md`.
+
 Write lines that can be shown literally: "Imagine one bottle on that shelf" is easy to film; "the business model is
 efficient" is not.
 
@@ -93,6 +97,9 @@ Rules that made EX38 work:
 
 EX38's 27 rows are in its `episode.md` under "Shot list v2". Use them as the model for how specific a row must be.
 
+The `cards` column also names the row's join card (craft-kb § Edit & pacing) and, for UI rows, a § UI motion card.
+Run `00_bible/checks/SHOT-FRAME-CHECK.md` part A before showing the shot list.
+
 ## 5. The world: sets, hero, colour
 
 - **One accent colour**, the brand's own (Eco-Shop red `#c8202a`, emissive `#ff3b3b`). Everything else is near-black
@@ -110,6 +117,32 @@ EX38's 27 rows are in its `episode.md` under "Shot list v2". Use them as the mod
   aisle of two gondolas; four "voids" (a lit grey floor in darkness) for data moments; a quay with a container; a dot map
   from Natural Earth data. Each set brings its own lights.
 - A void still needs a floor that catches light and a red spill from the accent object, or it reads as a slide.
+
+### 5.1 Production materials — the main pipeline (user 2026-11-17)
+
+User: "from now on, this is our main pipeline … I don't mind you invest more on production material such as lighting,
+material, sound. We want this to be a real studio production." Proven on EX46 (`build/look_pass.py`, `make_maps.py`).
+Why things looked plastic: no reflections (HDRI at 0.08), one flat roughness per object, no surface detail, razor edges.
+
+1. **Assets fresh per episode** into `build/media/`, at 2k; list each one in `00_bible/ASSET-SOURCES.md` § 3 before the
+   episode's media is deleted. Pick sources from its § 1.
+2. **An HDRI per set** (`<Environment>`), matched to the place (a shop HDRI for shop sets, a studio for voids and macro),
+   intensity ≈ 0.2 with `rotation` set so the highlight falls on the hero; `AmbientLight` ≤ 3. Above ~0.3 the dark room
+   lifts (locked trait). `<AmbientOcclusion quality="high" />` now has light to shade.
+3. **No flat roughness anywhere.** Every material gets a roughness map with `perceptual_roughness` = wanted / map mean:
+   Poly Haven sets use their own `_rough`; metal and glossy plastic use `smudge_r.jpg` (fingerprints, mean 0.66); floors,
+   counters, marble use `scuff_r.jpg` (seamless scuffs, mean 0.6). Bare metal is `metallic={1}` (it has a panorama now).
+4. **Full PBR sets** on every textured surface: normal + roughness + AO at 2k.
+5. **Paper is paper**: every printed card, tag, receipt, document, bag uses ambientCG `Paper001` normal + roughness;
+   on untextured paper (bag, folder) tile it 2–3× so the grain is fine (once over 25 cm reads as stucco).
+6. **Bevel** every authored box that the camera sees: `manifold.roundedBox` (r 3–12 mm) as `<Mesh3d shape>`.
+7. **Hero object quality**: the hero is seen in macro, so it needs a 2k+ PBR model (Poly Haven, Fab at 2k, or built).
+   Scanned products (GSO) are background dressing only: their soft textures read waxy up close.
+8. Check at **1:1 crops**, before vs after, not at contact-sheet size: material changes vanish at thumbnail scale.
+9. **Pull craft cards** (user 2026-11-19): before the light/material pass and for each setup's camera, look up the
+   matching topics in `00_bible/craft-kb/INDEX.md` (master card first, ⚠ = read its `style_fit`) and write the card
+   paths in the shot list's `cards` column. Use the card's Style D pick from VALUES BY SOURCE as the starting value;
+   this recipe and WORKING-RULES win where they disagree. Every `RectLight` still gets `range`.
 
 ## 6. How the film file is built
 
@@ -192,6 +225,7 @@ Things appear by scaling from near zero on **all three axes**, or by being added
 - Everything belonging to a setup fades out 0.2 s before the next setup.
 
 ### 6.7 Look settings that worked
+(EX38 values below. Since 2026-11-17 the light and materials follow § 5.1: HDRI ≈ 0.2 per set, ambient ≤ 3.)
 
 ```tsx
 <DepthOfField mode="Gaussian" aperture_f_stops={fs} focal_distance={fd}
@@ -210,7 +244,8 @@ Key light per set: a warm `RectLight` above and in front of the subject plus one
 Render `--composition board`: frame k shows setup k at `ST[k+1] − 0.22 s`, when its events have landed.
 `build/board_sheets.py` makes the numbered sheet and the pairs beside the reference frames. Check every still for:
 subject in the 25–60 % band; nothing clipped by the frame edge; no text over the hero object; no two stills from the
-same angle; one accent; readable at phone size.
+same angle; one accent; readable at phone size; and `00_bible/checks/SHOT-FRAME-CHECK.md` part B (focal hierarchy,
+60-30-10 with the accent as the 10 %, squint test, readability, colour script).
 
 ## 8. Preview
 

@@ -1,0 +1,1741 @@
+00:08 Hey, I recently saw Apple's new Mac
+00:10 
+
+00:10 Studio ad and really like the style and
+00:12 
+
+00:12 animation. So, I made a few of the
+00:14 
+
+00:14 scenes in After Effects and in this
+00:15 
+
+00:15 video I'll show you how I made them. I
+00:17 
+
+00:17 split the video into five scenes. So,
+00:19 
+
+00:19 let's build them one by one. Starting
+00:21 
+
+00:21 with the first, let's create a
+00:22 
+
+00:22 composition with roughly these settings
+00:24 
+
+00:24 and then add some text. I'll be using
+00:27 
+
+00:27 Big Shoulders, which is a free variable
+00:29 
+
+00:29 font. I'll leave a link in the
+00:31 
+
+00:31 description. We can control the font
+00:33 
+
+00:33 with this slider and we'll use that
+00:35 
+
+00:35 later in the animation.
+00:37 
+
+00:37 To create this opening animation, let's
+00:39 
+
+00:39 start by animating the scale.
+00:44 
+
+00:44 Set a couple of key frames and make the
+00:45 
+
+00:45 text scale up slightly.
+00:49 
+
+00:49 Then set the animation curve like this
+00:50 
+
+00:50 with zero on the left and 100 on the
+00:53 
+
+00:53 right.
+00:56 
+
+00:56 Great. Now open the text properties and
+00:59 
+
+00:59 add a font weight control.
+01:02 
+
+01:02 Add key frames so the font starts out
+01:04 
+
+01:04 thin roughly like this.
+01:08 
+
+01:08 Then use the same curve again.
+01:13 
+
+01:13 Now let's add tracking and animate that
+01:14 
+
+01:14 as well.
+01:26 
+
+01:26 Use the same curve here and adjust the
+01:28 
+
+01:28 key frames a little.
+01:35 
+
+01:35 Nice. The first animation is done. Now
+01:38 
+
+01:38 let's add a null object,
+01:41 
+
+01:41 parent the text to it, and create the
+01:43 
+
+01:43 motion that will transition into the
+01:45 
+
+01:45 second scene.
+01:47 
+
+01:47 Let's take a look. You can see the
+01:49 
+
+01:49 animation speeds up here and the second
+01:52 
+
+01:52 scene continues the movement from the
+01:53 
+
+01:53 first one.
+01:55 
+
+01:55 This makes it feel like it's the same
+01:57 
+
+01:57 text even though these are two separate
+01:59 
+
+01:59 scenes.
+02:02 
+
+02:02 To do that, let's animate the null
+02:05 
+
+02:05 object using scale and position.
+02:16 
+
+02:16 Set the animation curve like this with
+02:18 
+
+02:18 100 on the left and zero on the right.
+02:21 
+
+02:21 Do the same for position.
+02:41 
+
+02:41 Now, let's create the metallic look from
+02:43 
+
+02:43 the original Apple video with this
+02:44 
+
+02:44 slightly rough texture and a subtle
+02:46 
+
+02:46 highlight.
+02:51 
+
+02:51 First, let's add fractal noise to the
+02:52 
+
+02:52 text.
+02:57 
+
+02:57 In transform, set the scale to one.
+03:01 
+
+03:01 Then, change the blending mode to hard
+03:03 
+
+03:03 light and adjust the contrast until it
+03:05 
+
+03:05 looks something like this.
+03:09 
+
+03:09 That looks good.
+03:11 
+
+03:11 Now, let's create the highlight. Add a
+03:13 
+
+03:13 new shape layer. Create an ellipse and
+03:15 
+
+03:15 add a fill. Make the ellipse larger.
+03:18 
+
+03:18 Then, tweak the rotation and scale until
+03:20 
+
+03:20 it looks something like this.
+03:24 
+
+03:24 Now add fill, fast box blur, and set
+03:26 
+
+03:26 matt. Set the color to something close
+03:29 
+
+03:29 to white.
+03:32 
+
+03:32 In set mat, choose our text layer and
+03:34 
+
+03:34 enable effects and masks.
+03:39 
+
+03:39 Then adjust the blur. And don't forget
+03:41 
+
+03:41 to set the layers blending mode to
+03:43 
+
+03:43 screen.
+03:45 
+
+03:45 Perfect. Now we just need to adjust the
+03:47 
+
+03:47 opacity.
+04:01 
+
+04:01 Great. Let's rename this layer to light
+04:03 
+
+04:03 and trim it.
+04:07 
+
+04:07 Now we can animate the highlight so it
+04:09 
+
+04:09 sweeps across the text as it opens up
+04:11 
+
+04:11 and then settles near the corner.
+04:14 
+
+04:14 Move it to its starting point, then
+04:15 
+
+04:15 animate it across the text.
+04:27 
+
+04:27 Adjust the curve like this to get the
+04:29 
+
+04:29 motion we want.
+04:32 
+
+04:32 Great. Duplicate the light layer and
+04:34 
+
+04:34 move the copy into this corner so we get
+04:36 
+
+04:36 a small highlight here as well.
+04:46 
+
+04:46 Perfect. Now let's create a master
+04:48 
+
+04:48 composition.
+04:50 
+
+04:50 Call it main and add our first scene.
+04:54 
+
+04:54 Extend the duration a little.
+05:00 
+
+05:00 By the way, if you want more readyto-use
+05:02 
+
+05:02 tools for your projects, check out
+05:03 
+
+05:03 bentomotion.com.
+05:05 
+
+05:05 That's where you can find all our packs
+05:07 
+
+05:07 in one place for After Effects, Premiere
+05:09 
+
+05:09 Pro, Da Vinci Resolve, and Final Cut
+05:11 
+
+05:11 Pro. You'll find a wide range of assets
+05:13 
+
+05:13 on the site, including graphics, titles,
+05:15 
+
+05:15 typography, transitions, UI elements,
+05:18 
+
+05:18 sound effects, and more. Everything is
+05:20 
+
+05:20 made to be easy to use, flexible, and
+05:22 
+
+05:22 simple to customize. And with a
+05:24 
+
+05:24 convenient extension workflow, you can
+05:25 
+
+05:25 apply everything in just a few clicks
+05:27 
+
+05:27 and quickly adjust it to fit your
+05:29 
+
+05:29 project. You'll also find both premium
+05:31 
+
+05:31 packs and free useful [music] resources
+05:32 
+
+05:32 there. So, there's plenty to explore.
+05:34 
+
+05:34 And if you want to grab anything, use
+05:36 
+
+05:36 the promo code bento5 to get 15% off all
+05:39 
+
+05:39 packs. You'll find the link in the
+05:41 
+
+05:41 description, or you can just head over
+05:42 
+
+05:42 to bentomotion.com.
+05:45 
+
+05:45 Now, let's move on to the second scene
+05:46 
+
+05:46 and create another composition. I've
+05:49 
+
+05:49 already laid out the text here. I split
+05:51 
+
+05:51 the first line into three separate text
+05:53 
+
+05:53 layers and the second line into two.
+05:54 
+
+05:54 Let's start with the main word and move
+05:56 
+
+05:56 the other layers out of the way for now.
+05:59 
+
+05:59 Let's animate the position
+06:08 
+
+06:08 and shape the curve like this.
+06:14 
+
+06:14 For a sharper jump, parent this text to
+06:16 
+
+06:16 a null object.
+06:19 
+
+06:19 Then place two key frames one frame
+06:21 
+
+06:21 apart to create this quick snappy
+06:23 
+
+06:23 movement.
+06:31 
+
+06:31 Great. Let's check the transition in the
+06:32 
+
+06:32 main composition.
+06:35 
+
+06:35 Add the second scene we just created.
+06:40 
+
+06:40 Let's see.
+06:42 
+
+06:42 The transition works nicely.
+06:45 
+
+06:45 Now, let's continue and animate the rest
+06:47 
+
+06:47 of the text layers.
+07:04 
+
+07:04 Let's animate this character using the
+07:06 
+
+07:06 variable font weight. Add the weight
+07:09 
+
+07:09 control and animate it.
+07:16 
+
+07:16 Then use a curve like this. Let's see
+07:18 
+
+07:18 how it looks.
+07:22 
+
+07:22 Now, let's animate the second line of
+07:24 
+
+07:24 text. Move these layers over here and
+07:27 
+
+07:27 animate their position.
+07:30 
+
+07:30 This text will move from left to right.
+07:34 
+
+07:34 Again, use a curve like this.
+07:45 
+
+07:45 Great. Now let's animate the remaining
+07:48 
+
+07:48 text layers.
+08:08 
+
+08:08 Now let's add the 3D model to the scene.
+08:10 
+
+08:10 I'll leave a download link in the
+08:12 
+
+08:12 description. Rotate it 180°.
+08:17 
+
+08:17 then adjust its size and position.
+08:20 
+
+08:20 To reduce the perspective distortion,
+08:22 
+
+08:22 let's create a new camera
+08:25 
+
+08:25 and set its Z position to minus 35,000.
+08:31 
+
+08:31 Then set the zoom to 35,000.
+08:35 
+
+08:35 Perfect.
+08:37 
+
+08:37 Now, let's set up the lighting.
+08:40 
+
+08:40 Add the first light and choose ambient.
+08:45 
+
+08:45 Set the intensity to 28%.
+08:50 
+
+08:50 Then add another light and make this one
+08:53 
+
+08:53 a spotlight.
+08:56 
+
+08:56 Set the radius to 5,000.
+08:59 
+
+08:59 Now position it over the model while
+09:00 
+
+09:00 holding control. Then while holding
+09:03 
+
+09:03 control, move the light's point of
+09:05 
+
+09:05 interest to the center as well.
+09:10 
+
+09:10 Now adjust the position so the light
+09:12 
+
+09:12 comes from above and slightly from the
+09:13 
+
+09:13 front.
+09:17 
+
+09:17 You can also fine-tune the intensity.
+09:21 
+
+09:21 Then duplicate this light and move the
+09:22 
+
+09:22 copy farther to the left.
+09:29 
+
+09:29 Duplicate it again and move this copy to
+09:31 
+
+09:31 the opposite side.
+09:35 
+
+09:35 Nice. We can lower the intensity a
+09:38 
+
+09:38 little.
+09:39 
+
+09:39 Duplicate the light one more time.
+09:43 
+
+09:43 Move it slightly lower. Then push it
+09:45 
+
+09:45 toward the edge of the scene to create a
+09:46 
+
+09:46 rim light along the side.
+09:54 
+
+09:54 Lower the intensity a little so the
+09:56 
+
+09:56 effect isn't too strong.
+09:58 
+
+09:58 Duplicate this light and move it to the
+09:60 
+
+09:60 opposite side.
+10:03 
+
+10:03 Great. We only need one more light.
+10:06 
+
+10:06 Create another one and choose point
+10:08 
+
+10:08 light.
+10:14 
+
+10:14 Place it underneath the model to add
+10:15 
+
+10:15 some soft light from below.
+10:23 
+
+10:23 Great. The lighting looks good.
+10:27 
+
+10:27 Now, let's animate the model to get
+10:28 
+
+10:28 something like this.
+10:32 
+
+10:32 Open the position and rotation
+10:34 
+
+10:34 properties
+10:40 
+
+10:40 and add the animation key frames.
+10:54 
+
+10:54 Don't forget to adjust the curve like
+10:55 
+
+10:55 this as well.
+11:01 
+
+11:01 Now let's work on the text. Pre-ompose
+11:04 
+
+11:04 it together with the null object.
+11:12 
+
+11:12 Next, let's make it match the look from
+11:14 
+
+11:14 the first scene. We can simply copy the
+11:16 
+
+11:16 effects from there and paste them onto
+11:18 
+
+11:18 our text composition.
+11:22 
+
+11:22 Great. Adjust them slightly for this
+11:24 
+
+11:24 scene.
+11:25 
+
+11:25 The only thing left is the highlight.
+11:28 
+
+11:28 Copy the highlight shapes from the first
+11:30 
+
+11:30 scene and paste them here.
+11:34 
+
+11:34 Let's trim the layers to fit this
+11:36 
+
+11:36 composition and remove the existing
+11:38 
+
+11:38 animation. We don't need to animate them
+11:40 
+
+11:40 this time, so just place them roughly
+11:42 
+
+11:42 here. For this setup, remove set mat.
+11:45 
+
+11:45 Duplicate the text composition and
+11:47 
+
+11:47 rename the copy mask.
+11:52 
+
+11:52 Then use that duplicate as the mat for
+11:54 
+
+11:54 the highlight.
+11:56 
+
+11:56 Perfect. Now adjust the position and
+11:58 
+
+11:58 opacity until it looks right.
+12:04 
+
+12:04 You can also duplicate it and move the
+12:06 
+
+12:06 copy slightly to the left.
+12:09 
+
+12:09 Here's the result. Let's preview it.
+12:16 
+
+12:16 Nice. Now let's create this transition
+12:19 
+
+12:19 into the next scene.
+12:22 
+
+12:22 Create a null object and place it
+12:24 
+
+12:24 roughly over the model.
+12:30 
+
+12:30 Parent the shape layers, the mask and
+12:32 
+
+12:32 the text composition to this null.
+12:35 
+
+12:35 Then animate its scale and position.
+12:42 
+
+12:42 Now set the curve like this with 100 on
+12:44 
+
+12:44 the left and zero on the right. That
+12:47 
+
+12:47 gives us this sharp transition.
+12:55 
+
+12:55 Next, let's animate the model.
+12:59 
+
+12:59 Before that, parent the bottom light to
+13:01 
+
+13:01 the model so it follows the model as it
+13:04 
+
+13:04 moves.
+13:06 
+
+13:06 Then, animate the position, scale, and
+13:09 
+
+13:09 rotation so the model gets larger and
+13:10 
+
+13:10 rotates slightly.
+13:22 
+
+13:22 Once the motion is set, apply the same
+13:23 
+
+13:23 curve.
+13:28 
+
+13:28 Great. Let's go back to the main comp,
+13:31 
+
+13:31 trim the composition, and see what we've
+13:32 
+
+13:32 got.
+13:40 
+
+13:40 Now, let's move on to scene three. For
+13:42 
+
+13:42 this scene, we only need the 3D model
+13:44 
+
+13:44 and a few lights to get this result.
+13:52 
+
+13:52 Go into the new composition and add the
+13:53 
+
+13:53 3D model. We can copy the camera from
+13:56 
+
+13:56 the previous scene.
+13:59 
+
+13:59 Now parent the model to a null object.
+14:02 
+
+14:02 Duplicate that null and parent the first
+14:05 
+
+14:05 null to the new one.
+14:09 
+
+14:09 Then adjust scale, rotation, and
+14:10 
+
+14:10 position to frame the scene.
+14:17 
+
+14:17 Great. The scene is framed, so let's set
+14:20 
+
+14:20 up the lighting. Create the first light
+14:22 
+
+14:22 and make it a spotlight.
+14:26 
+
+14:26 Set the radius to 9,000.
+14:30 
+
+14:30 Now, use the position to place the light
+14:32 
+
+14:32 where we need it.
+14:37 
+
+14:37 You can also adjust the intensity to
+14:38 
+
+14:38 avoid overexposing the model.
+14:42 
+
+14:42 Great. Duplicate the light and move the
+14:45 
+
+14:45 copy to the opposite side.
+14:59 
+
+14:59 to keep the light from reaching these
+15:00 
+
+15:00 ports. Reduce the radius.
+15:05 
+
+15:05 Now, duplicate the light again and move
+15:08 
+
+15:08 this copy down toward the bottom.
+15:17 
+
+15:17 Great. Let's add one more light, but
+15:19 
+
+15:19 this time use a point light to
+15:20 
+
+15:20 illuminate the lower part of the model.
+15:24 
+
+15:24 Move it down here and position it to
+15:26 
+
+15:26 light this area.
+15:28 
+
+15:28 Then lower the intensity a little.
+15:33 
+
+15:33 Now, let's animate the model. Before we
+15:35 
+
+15:35 do that, move the model's anchor point
+15:37 
+
+15:37 closer to the center of the screen.
+15:39 
+
+15:39 Select the 3D model. Press Y to switch
+15:42 
+
+15:42 to the anchor point tool and move the
+15:44 
+
+15:44 anchor point roughly to the center.
+15:48 
+
+15:48 Great. We'll build the animation with
+15:50 
+
+15:50 these two null objects.
+15:53 
+
+15:53 The first null will handle the sharp
+15:55 
+
+15:55 rotation at the beginning
+15:57 
+
+15:57 and the sharp rotation at the end.
+15:60 
+
+16:00 While the second null will control the
+16:02 
+
+16:02 linear movement.
+16:05 
+
+16:05 We'll also animate the model's scale.
+16:09 
+
+16:09 Let's start with the first null. Animate
+16:12 
+
+16:12 the rotation and animate the scale on
+16:14 
+
+16:14 the model.
+16:22 
+
+16:22 Use this curve for both zero on the left
+16:24 
+
+16:24 and 100 on the right. Great.
+16:29 
+
+16:29 Then add a small rotation at the end.
+16:34 
+
+16:34 This time use the opposite curve. 100 on
+16:37 
+
+16:37 the left and zero on the right.
+16:47 
+
+16:47 Now let's create the linear movement
+16:49 
+
+16:49 with the second null. Set the animation
+16:51 
+
+16:51 key frames and create the movement.
+17:04 
+
+17:04 Let's preview what we have.
+17:11 
+
+17:11 I'll make a small adjustment to the
+17:13 
+
+17:13 scale animation at the beginning.
+17:18 
+
+17:18 Great. Now add this scene to the main
+17:19 
+
+17:19 composition and let's see how everything
+17:21 
+
+17:21 works together.
+17:31 
+
+17:31 Perfect.
+17:33 
+
+17:33 Now, let's create scene 4. Before we
+17:36 
+
+17:36 start, I want to quickly show how this
+17:38 
+
+17:38 scene is built.
+17:40 
+
+17:40 As you can see, the final result is
+17:41 
+
+17:41 pretty dynamic.
+17:43 
+
+17:43 To get that feeling, I first made a much
+17:46 
+
+17:46 simpler animation with longer pauses
+17:48 
+
+17:48 between the movements.
+17:53 
+
+17:53 Then I pre-ompose the entire scene and
+17:55 
+
+17:55 cut it up here, removing the unnecessary
+17:58 
+
+17:58 pauses. That's what creates these quick
+17:60 
+
+17:60 dynamic jumps in the final animation.
+18:03 
+
+18:03 All right, let's build it. First, add
+18:06 
+
+18:06 the model to the scene and copy the
+18:07 
+
+18:07 camera from the previous scene.
+18:13 
+
+18:13 Great. Adjust the size of the model.
+18:16 
+
+18:16 Then create the first light.
+18:18 
+
+18:18 Make it a spotlight and set the radius
+18:20 
+
+18:20 to 9,000.
+18:22 
+
+18:22 Position it above the model.
+18:28 
+
+18:28 Lower the intensity slightly.
+18:32 
+
+18:32 Then duplicate the light and move the
+18:33 
+
+18:33 copy to the left.
+18:39 
+
+18:39 Duplicate it again and move this copy to
+18:41 
+
+18:41 the opposite side.
+18:46 
+
+18:46 Also add an ambient light with an
+18:47 
+
+18:47 intensity of around 18%.
+18:54 
+
+18:54 Then let's add a few more lights to
+18:55 
+
+18:55 create highlights along the edges of the
+18:57 
+
+18:57 model.
+19:05 
+
+19:05 Duplicate the light again and move it to
+19:06 
+
+19:06 the opposite side.
+19:10 
+
+19:10 Great. We only need one more light
+19:12 
+
+19:12 underneath the model to brighten the
+19:14 
+
+19:14 lower area.
+19:17 
+
+19:17 Duplicate the light again and move it
+19:19 
+
+19:19 down.
+19:30 
+
+19:30 Great. The scene is looking good. Let's
+19:32 
+
+19:32 add one small detail. I want to make the
+19:35 
+
+19:35 max power indicator a little more
+19:36 
+
+19:36 visible. So, let's create a cylinder.
+19:44 
+
+19:44 Open its settings.
+19:47 
+
+19:47 Turn all three of these controls off.
+19:53 
+
+19:53 Then in the material settings, make the
+19:55 
+
+19:55 cylinder white
+19:58 
+
+19:58 and make it a little flatter.
+20:05 
+
+20:05 Rotate it and move it into place.
+20:20 
+
+20:20 Scale it down until these two circles
+20:22 
+
+20:22 line up. Now adjust its position in 3D
+20:25 
+
+20:25 space. Since the model curves in this
+20:27 
+
+20:27 area, tweak the rotation slightly so it
+20:29 
+
+20:29 follows the surface.
+20:35 
+
+20:35 Parent it to the model and let's see how
+20:37 
+
+20:37 it looks.
+20:46 
+
+20:46 Now let's create the opening animation
+20:47 
+
+20:47 for the 3D model. Open the scale and
+20:51 
+
+20:51 rotation properties and set the key
+20:52 
+
+20:52 frames
+20:60 
+
+20:60 at the beginning. Make the model scale
+21:01 
+
+21:01 down slightly and rotate a little.
+21:15 
+
+21:15 Use this curve with zero on the left and
+21:18 
+
+21:18 100 on the right. You can shift the key
+21:20 
+
+21:20 frames a little to fine-tune the timing.
+21:26 
+
+21:26 This animation will help connect the
+21:27 
+
+21:27 previous scene to this one. Let's check
+21:30 
+
+21:30 the transition right away by adding this
+21:32 
+
+21:32 scene to the main composition.
+21:40 
+
+21:40 Nice. That works perfectly.
+21:46 
+
+21:46 Let's go back into the composition and
+21:48 
+
+21:48 create this text animation.
+21:53 
+
+21:53 First, parent the model to a null object
+21:57 
+
+21:57 and make sure the null is a 3D layer.
+22:03 
+
+22:03 Also, parent all of the lights to this
+22:04 
+
+22:04 null object.
+22:08 
+
+22:08 Move a couple of seconds past the
+22:10 
+
+22:10 opening animation
+22:12 
+
+22:12 and animate the null.
+22:24 
+
+22:24 Use a curve with 100 on both sides.
+22:30 
+
+22:30 Now create the first text layer.
+22:35 
+
+22:35 For this one, I'll use a font called
+22:37 
+
+22:37 Anybody. It's another free variable
+22:39 
+
+22:39 font, so we can control both its weight
+22:42 
+
+22:42 and width.
+22:47 
+
+22:47 Adjust it until it looks like this. And
+22:49 
+
+22:49 rename the layer text A. Let's make this
+22:53 
+
+22:53 text appear right at the peak of the
+22:54 
+
+22:54 movement.
+22:56 
+
+22:56 To find that point, take a look at the
+22:58 
+
+22:58 animation curve.
+23:01 
+
+23:01 And you can see the peak is right here.
+23:05 
+
+23:05 Trim the text layer at that point. And
+23:07 
+
+23:07 let's see how it looks.
+23:12 
+
+23:12 Great. Now add a subtle position
+23:14 
+
+23:14 animation so the text moves slightly
+23:16 
+
+23:16 upward and use the same curve as before.
+23:25 
+
+23:25 Now add controls for font weight and
+23:27 
+
+23:27 tracking.
+23:32 
+
+23:32 Then animate both using the same curve.
+23:51 
+
+23:51 Next, create another null object. Make
+23:54 
+
+23:54 it 3D. Then, parent the previous null
+23:57 
+
+23:57 and text A to this new null.
+24:03 
+
+24:03 Now, let's animate this null as well.
+24:14 
+
+24:14 Use a curve with 100 on both sides.
+24:20 
+
+24:20 Also add some rotation animation to the
+24:22 
+
+24:22 model.
+24:31 
+
+24:31 And again, use a curve with 100 on both
+24:34 
+
+24:34 sides.
+24:36 
+
+24:36 We don't need the power indicator
+24:38 
+
+24:38 anymore because it won't be visible from
+24:40 
+
+24:40 this point. So, trim that layer here.
+24:52 
+
+24:52 Now create another text layer.
+24:58 
+
+24:58 For this one, I'll use big shoulders
+24:60 
+
+24:60 again.
+25:05 
+
+25:05 Adjust the style
+25:07 
+
+25:07 and rename it text B.
+25:11 
+
+25:11 Parent text B to the latest null object
+25:13 
+
+25:13 and make it appear at the peak of this
+25:14 
+
+25:14 movement as well.
+25:21 
+
+25:21 right here.
+25:29 
+
+25:29 Let's add a little animation to this
+25:31 
+
+25:31 text by animating the font weight and
+25:33 
+
+25:33 position.
+25:48 
+
+25:48 Use the same curve here.
+25:54 
+
+25:54 Then fine-tune the key frames a little.
+25:56 
+
+25:56 Great. Here's what we have so far.
+26:00 
+
+26:00 Now create one more null object and
+26:02 
+
+26:02 parent the previous null to it.
+26:08 
+
+26:08 Animate this one as well.
+26:15 
+
+26:15 And use a curve with 100 on both sides.
+26:22 
+
+26:22 Great. Add another rotation animation to
+26:24 
+
+26:24 the model and [music] use the same curve
+26:25 
+
+26:25 with 100 on both sides.
+26:37 
+
+26:37 Now let's add the third text layer. This
+26:39 
+
+26:39 time I'll use arivo.
+26:47 
+
+26:47 It's also a free variable font and I'll
+26:49 
+
+26:49 leave a link in the description.
+26:53 
+
+26:53 Rename this layer text C.
+26:59 
+
+26:59 Then parent it to our latest null
+27:00 
+
+27:00 [music] object.
+27:05 
+
+27:05 Trim the layer again so it appears right
+27:07 
+
+27:07 at the peak of the animation.
+27:19 
+
+27:19 Now let's animate it by adding a font
+27:21 
+
+27:21 weight control.
+27:32 
+
+27:32 Set the curve like this with zero on the
+27:34 
+
+27:34 left and 100 on the right.
+27:40 
+
+27:40 Next, let's style the text and add the
+27:41 
+
+27:41 same kind of highlight we used in the
+27:43 
+
+27:43 earlier compositions.
+27:47 
+
+27:47 Go back to scene one and copy the
+27:49 
+
+27:49 effects from the text layer.
+27:56 
+
+27:56 Now, let's create the highlight for text
+27:58 
+
+27:58 A.
+27:60 
+
+27:60 Copy the light shape we made in the
+28:01 
+
+28:01 first scene.
+28:05 
+
+28:05 Move it so it starts at the same time as
+28:07 
+
+28:07 text A.
+28:11 
+
+28:11 Parent it to text A. And in set mat,
+28:14 
+
+28:14 choose text A as the mat source.
+28:18 
+
+28:18 Remove the old position animation. Then
+28:21 
+
+28:21 adjust the rotation, scale, and
+28:22 
+
+28:22 position.
+28:27 
+
+28:27 Adjust the opacity as well.
+28:32 
+
+28:32 Now add a small position animation.
+28:38 
+
+28:38 and use the same curve here.
+28:45 
+
+28:45 Next, let's work on text B. Duplicate
+28:47 
+
+28:47 the light layer, move it over the text.
+28:50 
+
+28:50 Remove the existing animation and adjust
+28:52 
+
+28:52 the scale and position. Then, set the
+28:55 
+
+28:55 set mat source to text B.
+28:59 
+
+28:59 Before animating it, parent the light to
+29:01 
+
+29:01 text B so it follows the text as it
+29:03 
+
+29:03 moves. Then create the animation
+29:10 
+
+29:10 again. Use the same curve.
+29:16 
+
+29:16 Now let's add one more small animation.
+29:18 
+
+29:18 When the third text layer appears,
+29:27 
+
+29:27 we'll shift the lighting slightly from
+29:29 
+
+29:29 right to left. as text C comes in.
+29:32 
+
+29:32 Use a curve with 100 on both sides.
+29:39 
+
+29:39 Now let's create the highlight for text
+29:41 
+
+29:41 C.
+29:43 
+
+29:43 Duplicate the light shape again. Place
+29:45 
+
+29:45 it above text C and remove the old
+29:47 
+
+29:47 animation.
+29:50 
+
+29:50 In set mat, choose text C.
+29:54 
+
+29:54 Now let's animate the position.
+29:60 
+
+29:60 and set the graph like this.
+30:06 
+
+30:06 The last thing we need is the ending
+30:07 
+
+30:07 animation where the whole scene scales
+30:10 
+
+30:10 down slightly while the model rotates.
+30:14 
+
+30:14 Use the last null object and animate its
+30:17 
+
+30:17 scale and position again.
+30:21 
+
+30:21 For this animation, use the opposite
+30:23 
+
+30:23 curve, 100 on the left and zero on the
+30:26 
+
+30:26 right. This creates the transition to
+30:28 
+
+30:28 the next scene. Don't forget to animate
+30:30 
+
+30:30 the model as well.
+30:35 
+
+30:35 And use the same opposite curve for the
+30:37 
+
+30:37 model.
+30:42 
+
+30:42 Now pre-ompose the entire scene.
+30:46 
+
+30:46 Then we can make it more dynamic like
+30:48 
+
+30:48 the version you see here.
+30:54 
+
+30:54 To do that, cut the scene into pieces
+30:56 
+
+30:56 and remove the unnecessary pauses.
+31:16 
+
+31:16 Here's
+31:32 
+
+31:32 the result.
+31:36 
+
+31:36 Let's make the transitions between these
+31:38 
+
+31:38 sections more dynamic. For this, let's
+31:41 
+
+31:41 animate the scale. Set the graph like
+31:44 
+
+31:44 this with 100 on the left and zero on
+31:46 
+
+31:46 the right.
+31:51 
+
+31:51 Now animate this section and use the
+31:52 
+
+31:52 opposite graph.
+32:02 
+
+32:02 And let's animate this section as well.
+32:18 
+
+32:18 Great. Now let's see how the whole scene
+32:19 
+
+32:19 looks inside the main composition.
+32:36 
+
+32:36 Looks really good. Now, let's move on to
+32:38 
+
+32:38 the final scene. Create a new
+32:40 
+
+32:40 composition and call it logo.
+32:43 
+
+32:43 Add the logo to the timeline. Set it up.
+32:48 
+
+32:48 Then place the logo composition into the
+32:50 
+
+32:50 final scene.
+32:53 
+
+32:53 Adjust the size and let's animate it
+32:55 
+
+32:55 right away. Animate the scale so the
+32:57 
+
+32:57 logo slowly moves away from the camera.
+33:03 
+
+33:03 Use the same curve here.
+33:08 
+
+33:08 Now, let's add a little more energy.
+33:10 
+
+33:10 Select these two key frames and move
+33:11 
+
+33:11 them one frame to the right. Then, make
+33:13 
+
+33:13 the first frame slightly larger.
+33:21 
+
+33:21 Nice. That makes the animation feel a
+33:23 
+
+33:23 bit sharper. To style the logo, go back
+33:26 
+
+33:26 to scene one and copy the fill and
+33:28 
+
+33:28 fractal noise effects from the text.
+33:34 
+
+33:34 then paste them onto the logo.
+33:38 
+
+33:38 Adjust the settings slightly if needed.
+33:41 
+
+33:41 Now for the highlight, go back to the
+33:42 
+
+33:42 first scene and copy the light shape
+33:44 
+
+33:44 again.
+33:48 
+
+33:48 Fit it to this composition. Remove its
+33:51 
+
+33:51 existing animation and remove set mat.
+33:55 
+
+33:55 This time we'll use a duplicate of the
+33:56 
+
+33:56 logo as the mat. Duplicate the logo.
+33:60 
+
+33:60 Rename the copy mask and use it as the
+34:02 
+
+34:02 mat for the highlight.
+34:06 
+
+34:06 Then adjust the shape size, blur, and
+34:08 
+
+34:08 opacity.
+34:14 
+
+34:14 Duplicate the highlight shape and move
+34:15 
+
+34:15 the copy to the opposite side. Parent
+34:18 
+
+34:18 both shapes to the logo. Then animate
+34:20 
+
+34:20 them so they move slightly.
+34:27 
+
+34:27 You can use the same curve here as well.
+34:29 
+
+34:29 Let the second highlight move for a
+34:31 
+
+34:31 little longer.
+34:37 
+
+34:37 And to create a subtle effect where the
+34:39 
+
+34:39 metal seems to shimmer, just animate the
+34:42 
+
+34:42 evolution parameter in fractal noise.
+34:48 
+
+34:48 Set a key frame and add a small amount
+34:50 
+
+34:50 of animation.
+34:53 
+
+34:53 Use the same curve here too.
+34:57 
+
+34:57 And now you can see that subtle metallic
+34:59 
+
+34:59 shimmer as the light moves across the
+35:01 
+
+35:01 surface.
+35:04 
+
+35:04 Great. Let's see how this looks in the
+35:05 
+
+35:05 full sequence. Add scene 5 to the main
+35:08 
+
+35:08 composition.
+35:12 
+
+35:12 This turned out really well. Hope you
+35:14 
+
+35:14 enjoyed the video. You can find the full
+35:16 
+
+35:16 project file on my Patreon. The link is
+35:19 
+
+35:19 in the description. Also, feel free to
+35:21 
+
+35:21 visit our website, benttoamotion.com,
+35:24 
+
+35:24 where you'll find more awesome packs and
+35:26 
+
+35:26 useful free items. And don't forget to
+35:28 
+
+35:28 like and subscribe. It really [music]
+35:29 
+
+35:29 helps a lot. Thanks for watching and see
+35:32 
+
+35:32 you soon. [bell]

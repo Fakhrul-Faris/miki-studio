@@ -1,0 +1,2929 @@
+00:00 A lot of artists, whether new to 3D, new
+00:02 
+
+00:02 to Blender, or just new to animation in
+00:04 
+
+00:04 general, [music] have a big scary
+00:05 
+
+00:05 monster that's hiding under their bed.
+00:07 
+
+00:07 And that monster's name is the graph
+00:08 
+
+00:08 editor. The mathematic look and the
+00:10 
+
+00:10 spaghetti [music] appendages lead a lot
+00:12 
+
+00:12 of people to the misconception that the
+00:13 
+
+00:13 graph editor is some impossible beast to
+00:15 
+
+00:15 [music] tame. And that's just simply not
+00:16 
+
+00:16 the case. The graph editor, while it
+00:18 
+
+00:18 requires a little bit of patience and
+00:19 
+
+00:19 some understanding, is actually pretty
+00:21 
+
+00:21 simple. It is very powerful and
+00:22 
+
+00:22 necessary for creating complex,
+00:24 
+
+00:24 compelling animations. So, by the end of
+00:25 
+
+00:25 this video, you're going to fully
+00:27 
+
+00:27 understand it or your money back.
+00:39 
+
+00:39 My name is Elijah Sheffield. I go by
+00:41 
+
+00:41 Sweet Boy in a lot of different spheres
+00:42 
+
+00:42 of [music] influence. I make tutorials
+00:43 
+
+00:43 just like this one teaching all the
+00:44 
+
+00:44 skills necessary to use Blender to
+00:46 
+
+00:46 create stylized art. So, if that sort of
+00:47 
+
+00:47 thing is of general interest to you, be
+00:49 
+
+00:49 sure you subscribe to the channel so you
+00:50 
+
+00:50 don't miss anything. Today, we are
+00:51 
+
+00:51 tackling the widespread fear of the
+00:53 
+
+00:53 graph editor. Before we can offer a
+00:54 
+
+00:54 salvage the wounds caused by graph
+00:56 
+
+00:56 editor intimidation, [music] we first
+00:57 
+
+00:57 must understand what caused the holdups
+00:59 
+
+00:59 in the first place. From what I've
+01:00 
+
+01:00 gathered speaking to different artists
+01:02 
+
+01:02 of various different experience levels,
+01:04 
+
+01:04 some of the main pain points include
+01:05 
+
+01:05 stuff like unfamiliarity with terms, not
+01:07 
+
+01:07 really understanding what an F-curve is
+01:09 
+
+01:09 or understanding what interpolation is.
+01:11 
+
+01:11 Another one is inconsistent behavior.
+01:13 
+
+01:13 So, if you're coming from something like
+01:14 
+
+01:14 After Effects with a speed curve, you
+01:16 
+
+01:16 don't really understand how uh the curve
+01:17 
+
+01:17 editor works in Blender. Another is lack
+01:19 
+
+01:19 of context. Not really understanding why
+01:21 
+
+01:21 things work. Maybe they can make it work
+01:23 
+
+01:23 correctly, but they don't really know
+01:24 
+
+01:24 why it works that way. And it seems like
+01:25 
+
+01:25 there's just a general difficulty
+01:27 
+
+01:27 navigating the graph editor in Blender.
+01:28 
+
+01:28 Blender is not exactly forthright with
+01:30 
+
+01:30 where it stashes its buttons and [music]
+01:31 
+
+01:31 menus. So, understanding all of these
+01:33 
+
+01:33 hesitations, I've laid out a path for
+01:34 
+
+01:34 you today, tackling all these
+01:36 
+
+01:36 trepidations head-on. [music] We'll
+01:37 
+
+01:37 start with a clear, thorough tour and
+01:39 
+
+01:39 implementation of the graph editor.
+01:40 
+
+01:40 We'll then cover some neat modifiers
+01:41 
+
+01:41 that we can put on the key frames that
+01:43 
+
+01:43 act kind of like filters. And finally,
+01:44 
+
+01:44 we'll close it out with a demonstration
+01:46 
+
+01:46 of how I go about animating just about
+01:47 
+
+01:47 [music] everything I make. Before we do
+01:49 
+
+01:49 get started though, be sure you download
+01:50 
+
+01:50 the project file so you can follow
+01:51 
+
+01:51 along. That'll be linked below [music]
+01:52 
+
+01:52 in the description. And as always, this
+01:54 
+
+01:54 tutorial is meant to teach you some
+01:55 
+
+01:55 lasting skills. You can always follow
+01:57 
+
+01:57 along mindlessly and end up with a nice
+01:58 
+
+01:58 product. But if you engage with the
+01:60 
+
+01:60 material and actually test your own
+02:01 
+
+02:01 boundaries, you'll actually learn
+02:02 
+
+02:02 something that will last far outside the
+02:04 
+
+02:04 boundaries of this video demonstration.
+02:05 
+
+02:05 [music]
+02:06 
+
+02:06 This video is sponsored by Invato, a
+02:08 
+
+02:08 tool that I use pretty much daily. But
+02:09 
+
+02:09 more on that later.
+02:12 
+
+02:12 All right, in our first chapter here,
+02:13 
+
+02:13 we're going to start with the absolute
+02:14 
+
+02:14 [music] basics of Blender animation.
+02:16 
+
+02:16 very rudimentary, very high level stuff.
+02:18 
+
+02:18 We'll then take a comprehensive tour of
+02:19 
+
+02:19 the graph editor and then put it to use
+02:21 
+
+02:21 with some practical application. But I
+02:22 
+
+02:22 think the first and most important thing
+02:24 
+
+02:24 to do [music] is to discuss what even is
+02:26 
+
+02:26 a graph editor. Now, we'll get into it
+02:27 
+
+02:27 more specifically and kind of a little
+02:29 
+
+02:29 bit more hands-on demonstration, but
+02:31 
+
+02:31 just as a highle [music] view. The graph
+02:32 
+
+02:32 editor is essentially just a
+02:34 
+
+02:34 visualization of your key frames. It
+02:36 
+
+02:36 provides you with the tools to edit your
+02:37 
+
+02:37 animation curves, which if you don't
+02:38 
+
+02:38 know what those are, we'll get into
+02:39 
+
+02:39 those later on, and to fine-tune your
+02:41 
+
+02:41 timing and easing. So, go ahead, open up
+02:43 
+
+02:43 the provided project file. Again, it's
+02:45 
+
+02:45 linked below. and let's get our hands
+02:46 
+
+02:46 dirty. All right, when we pop our
+02:48 
+
+02:48 Blender file open right here, the first
+02:49 
+
+02:49 thing you'll see is our nice little fish
+02:51 
+
+02:51 and our pan here. Uh, but we're not
+02:53 
+
+02:53 going to need our fish quite yet. We
+02:55 
+
+02:55 won't really touch the fish until the
+02:56 
+
+02:56 third chapter. So, we can just go up to
+02:58 
+
+02:58 the top here, and we can just toggle
+02:60 
+
+02:60 that off. Now, we are left with the pan.
+03:02 
+
+03:02 And the pan is comprised of uh three
+03:04 
+
+03:04 different pieces of geometry here, and
+03:06 
+
+03:06 they each have their own individual
+03:07 
+
+03:07 origin points. So, everything is then
+03:09 
+
+03:09 parented to this little controller right
+03:11 
+
+03:11 here. uh just this little uh ball and
+03:13 
+
+03:13 we're going to be using this to actually
+03:15 
+
+03:15 flip the pan. So to start out, we're
+03:17 
+
+03:17 going to go ahead and just go forward to
+03:19 
+
+03:19 like frame 12 maybe and we can change
+03:21 
+
+03:21 the start frame down here to 12. I like
+03:23 
+
+03:23 to just give myself a little bit of room
+03:25 
+
+03:25 when I'm animating. And we're going to
+03:27 
+
+03:27 set a key frame. Now you can do that
+03:28 
+
+03:28 very easily by hitting in to open the
+03:30 
+
+03:30 side panel over here. And we can go to
+03:32 
+
+03:32 the item tab and we will just uh
+03:34 
+
+03:34 rightclick uh in the X rotation value
+03:37 
+
+03:37 right here and we're going to insert a
+03:39 
+
+03:39 single key frame. And uh that way when
+03:41 
+
+03:41 we animate in the xaxis uh it will
+03:45 
+
+03:45 change that value right there. You can
+03:46 
+
+03:46 see that uh happening up here. So one
+03:48 
+
+03:48 more thing we're going to need to do is
+03:50 
+
+03:50 turn on our auto keying. It'll be this
+03:52 
+
+03:52 little button down here. And uh once
+03:54 
+
+03:54 that's red, that just lets you know
+03:55 
+
+03:55 anytime you change a value, it will
+03:57 
+
+03:57 automatically add a key frame in there.
+03:60 
+
+03:60 So we set our first frame at 12. Let's
+04:02 
+
+04:02 go forward to like frame 20. We'll go
+04:04 
+
+04:04 forward uh eight frames. And let's just
+04:07 
+
+04:07 go ahead and increase this value. Uh
+04:09 
+
+04:09 actually we need to decrease the value
+04:11 
+
+04:11 to a negative uh number because it's
+04:13 
+
+04:13 moving in a counterclockwise motion. So
+04:15 
+
+04:15 let's uh change it to maybe like -30
+04:19 
+
+04:19 something like that. And then we can go
+04:21 
+
+04:21 forward another eight frames let's say
+04:23 
+
+04:23 and we will change it to back to zero.
+04:26 
+
+04:26 Now we have our three frames here. So if
+04:28 
+
+04:28 we play this back
+04:30 
+
+04:30 uh it looks terrible. It looks genuinely
+04:32 
+
+04:32 awful. And the reason for that is
+04:34 
+
+04:34 there's no weight. There's no
+04:36 
+
+04:36 anticipation. There's no uh ease of it.
+04:38 
+
+04:38 It's just a linear animation. So, let's
+04:40 
+
+04:40 go ahead and open up a graph editor. And
+04:42 
+
+04:42 I can kind of show you and demonstrate
+04:44 
+
+04:44 why that is. So, let's go ahead and go
+04:46 
+
+04:46 down to the bottom here where the little
+04:47 
+
+04:47 crosshair is. And we'll just drag out a
+04:49 
+
+04:49 graph editor to about halfway. And we'll
+04:52 
+
+04:52 go up to the top left of our right side
+04:54 
+
+04:54 window and we'll change this to graph
+04:56 
+
+04:56 editor. It'll be right here in the
+04:57 
+
+04:57 animation column. We can click that. And
+04:60 
+
+04:60 uh we don't have a lot of screen real
+05:01 
+
+05:01 estate here, so I'll go ahead and hit in
+05:03 
+
+05:03 to close down that side panel right
+05:04 
+
+05:04 there. Now, uh we'll get into navigation
+05:06 
+
+05:06 here in a moment. Uh but right now this
+05:08 
+
+05:08 is just kind of a watch and listen and
+05:10 
+
+05:10 understand type of a portion rather than
+05:12 
+
+05:12 follow along. So you don't necessarily
+05:14 
+
+05:14 need to recreate my keystrokes here. So
+05:16 
+
+05:16 let's take a look at our key frames
+05:17 
+
+05:17 here. Uh again, we will get into yours
+05:20 
+
+05:20 in just a moment and I'll show you how
+05:21 
+
+05:21 to do everything that I'm doing, but I'm
+05:22 
+
+05:22 just demonstrating with what I have
+05:24 
+
+05:24 here. So uh as you can see, we have a V
+05:27 
+
+05:27 that has very sharp lines. And the way
+05:29 
+
+05:29 that a graph editor works, uh it's
+05:31 
+
+05:31 exactly that. It is a graph. The x-axis
+05:33 
+
+05:33 is representative of time and the yaxis
+05:36 
+
+05:36 which would be up and down is
+05:37 
+
+05:37 representative of a value or in this
+05:40 
+
+05:40 case a transform of the rotation value
+05:42 
+
+05:42 in the xaxis. So as it's combined into
+05:45 
+
+05:45 this graph, it visualizes an object's
+05:47 
+
+05:47 timing and its spacing. So a straight
+05:49 
+
+05:49 line right here is going to equate to
+05:51 
+
+05:51 linear animation. So that just means as
+05:53 
+
+05:53 we go along in our timeline, every
+05:55 
+
+05:55 single frame will be equally spaced out.
+05:56 
+
+05:56 You can see that really uh well, if we
+05:58 
+
+05:58 go here and just kind of scrub through
+05:60 
+
+05:60 our frames, we can see that every single
+06:02 
+
+06:02 frame is exactly the same distance. And
+06:04 
+
+06:04 that means the same amount of time is
+06:06 
+
+06:06 spent on the same amount of rotation
+06:08 
+
+06:08 value. Now, this is a little bit
+06:09 
+
+06:09 confusing maybe, but uh you can see that
+06:11 
+
+06:11 as we play it back, it goes straight up
+06:14 
+
+06:14 and straight back down. There's no ease,
+06:16 
+
+06:16 there's no finesse on it. It's just very
+06:18 
+
+06:18 linear. So, if I change this to bezier
+06:21 
+
+06:21 and played it back, um now you can see
+06:23 
+
+06:23 there's a little bit more curve. And you
+06:25 
+
+06:25 can see in this dotted line we have a
+06:27 
+
+06:27 very uh straight line here which would
+06:28 
+
+06:28 be the linear interpolation. And then as
+06:31 
+
+06:31 we changed everything to bezier we can
+06:32 
+
+06:32 see that the curves change. So it spends
+06:34 
+
+06:34 quite a bit of time up here at the uh
+06:37 
+
+06:37 top end of the uh graph. And then it
+06:39 
+
+06:39 also spends quite a bit of time down
+06:41 
+
+06:41 here at the bottom end of the graph. But
+06:43 
+
+06:43 it really doesn't spend as much time as
+06:44 
+
+06:44 it would in the linear interpolation
+06:46 
+
+06:46 here in the middle of the graph. So it
+06:48 
+
+06:48 eases out of the first frame, eases in
+06:50 
+
+06:50 to the next key frame, and then eases
+06:52 
+
+06:52 out of that key frame, and eases back in
+06:54 
+
+06:54 to the next key frame. So you get this
+06:56 
+
+06:56 nice kind of little bezier curve right
+06:58 
+
+06:58 here. And I'm going to change this back
+06:59 
+
+06:59 to linear. That way, it looks just like
+07:01 
+
+07:01 yours. So that's just the gist of what a
+07:03 
+
+07:03 graph editor is. It's nothing
+07:05 
+
+07:05 groundbreaking. It's probably not even
+07:06 
+
+07:06 the best explanation of it out there,
+07:08 
+
+07:08 but that's the general overview of it.
+07:10 
+
+07:10 Um, just enough information to wrap your
+07:12 
+
+07:12 head around it, hopefully. And if it
+07:14 
+
+07:14 doesn't quite make sense as we continue
+07:16 
+
+07:16 to go on, hopefully it will start to
+07:17 
+
+07:17 click with you. So, just some general
+07:18 
+
+07:18 navigation inside the graph editor here.
+07:21 
+
+07:21 Uh it works very similarly to the
+07:23 
+
+07:23 viewport. Uh you can middle mouse button
+07:25 
+
+07:25 to move around. You can zoom in and out.
+07:28 
+
+07:28 You can also zoom in and out uh and kind
+07:30 
+
+07:30 of stretch it up or squash it down. Uh
+07:32 
+
+07:32 do the same thing horizontally by
+07:34 
+
+07:34 holding uh command and then using the
+07:36 
+
+07:36 middle mouse button. And that will allow
+07:37 
+
+07:37 me to change all of this. Um, if you
+07:39 
+
+07:39 want to square up on it, if you are
+07:41 
+
+07:41 still confused and can't find your own
+07:43 
+
+07:43 curve, I'll go like way over here where
+07:45 
+
+07:45 you might be. You can of course hit A
+07:47 
+
+07:47 and that uh just like in the viewport
+07:49 
+
+07:49 will grab all of your key frames. And
+07:50 
+
+07:50 then you can hold the tilda key just
+07:52 
+
+07:52 like you would over here in the viewport
+07:54 
+
+07:54 to frame up on something. And you can
+07:56 
+
+07:56 frame all, which will just frame all of
+07:58 
+
+07:58 your key frames. Or again, if you have
+07:60 
+
+07:60 something selected, it will frame on the
+08:02 
+
+08:02 selected. So let's say I wanted to just
+08:04 
+
+08:04 view these uh two key frames right here.
+08:06 
+
+08:06 I could go like this and frame selected
+08:07 
+
+08:07 and that would just kind of frame up on
+08:09 
+
+08:09 these. So that's how you find uh your
+08:11 
+
+08:11 key frames if you happen to if they
+08:13 
+
+08:13 happen to go missing or if you happen
+08:14 
+
+08:14 to, you know, go way off into one
+08:16 
+
+08:16 direction. Now I'm going to add in
+08:17 
+
+08:17 another channel here just for the sake
+08:19 
+
+08:19 of demonstration. We won't be using a
+08:20 
+
+08:20 location value, but I'm going to go
+08:22 
+
+08:22 ahead and insert a single key frame in
+08:24 
+
+08:24 the ZV valueue. Uh and I can just
+08:26 
+
+08:26 actually set this back down to my zero
+08:29 
+
+08:29 value. And then I will set a key frame
+08:31 
+
+08:31 to uh 28. And I'll just move it up to
+08:34 
+
+08:34 here. And now we have two different
+08:35 
+
+08:35 channels. But because uh the ZV valueue
+08:38 
+
+08:38 only goes up to about seven, we'll just
+08:40 
+
+08:40 make this eight to make it a round
+08:42 
+
+08:42 number. And this uh key frame, which is
+08:45 
+
+08:45 our X rotation, actually goes all the
+08:47 
+
+08:47 way down to -30. Uh they're not really
+08:49 
+
+08:49 aligned. You can't really see them in
+08:50 
+
+08:50 relation to one another. So something
+08:52 
+
+08:52 you can do pretty easily is to just go
+08:54 
+
+08:54 up to normalize. And we'll just click
+08:55 
+
+08:55 that. And now rather than it being a
+08:58 
+
+08:58 graph of the actual uh values the -30
+09:01 
+
+09:01 and the positive 8 it's now on a scale
+09:04 
+
+09:04 of negative 1 which is going to be uh
+09:06 
+
+09:06 your absolute bottom extreme and
+09:08 
+
+09:08 positive one which will be your absolute
+09:10 
+
+09:10 top extreme and then zero being no
+09:13 
+
+09:13 transformation at all. So now we can see
+09:14 
+
+09:14 it within relative scale. So to manage
+09:16 
+
+09:16 your different channels, that's what
+09:17 
+
+09:17 it's called when you have uh multiple
+09:19 
+
+09:19 different uh pieces of animation,
+09:21 
+
+09:21 multiple different key frames on
+09:22 
+
+09:22 different values, that'll be called
+09:23 
+
+09:23 different channels. And you can do that
+09:25 
+
+09:25 in the uh side panel over here to the
+09:27 
+
+09:27 left, kind of a bit of an outliner in
+09:29 
+
+09:29 the graph editor. And we can drop this
+09:31 
+
+09:31 down to the bottom of the hierarchy. And
+09:33 
+
+09:33 we can see that we have X rotation and Z
+09:36 
+
+09:36 location. So uh you have a few little
+09:38 
+
+09:38 toggles here. The top one is for
+09:40 
+
+09:40 modifiers. the the wrench there is going
+09:42 
+
+09:42 to be for modifiers just like it would
+09:43 
+
+09:43 be in the side panel. If we were to grab
+09:46 
+
+09:46 one of these uh objects over here, you
+09:48 
+
+09:48 can see we have a modifiers panel there.
+09:50 
+
+09:50 So, if you uh have this, you can turn on
+09:52 
+
+09:52 and off modifiers. That doesn't really
+09:53 
+
+09:53 matter right now. It'll matter later on
+09:55 
+
+09:55 when we use modifiers. You can also
+09:57 
+
+09:57 toggle on and off the actual
+09:59 
+
+09:59 contribution of the F curve. So, uh with
+10:01 
+
+10:01 it toggled off, it will not rotate
+10:03 
+
+10:03 anymore. If I toggle this off, it will
+10:05 
+
+10:05 not move anymore. And then you have
+10:06 
+
+10:06 lock. So, you can change that. So now I
+10:09 
+
+10:09 can't uh move my X values at all. I
+10:11 
+
+10:11 can't accidentally select it or change
+10:13 
+
+10:13 it at all. Something to note, uh the hot
+10:15 
+
+10:15 key to lock and unlock is going to be
+10:17 
+
+10:17 tab. Uh when you have something
+10:19 
+
+10:19 selected, it'll be tab. Uh I have
+10:21 
+
+10:21 accidentally locked my animation before
+10:23 
+
+10:23 and had to troubleshoot for like 10 15
+10:25 
+
+10:25 minutes before I figured out what the
+10:27 
+
+10:27 culprit was. So if you can't figure out
+10:28 
+
+10:28 why you're not able to manipulate your
+10:30 
+
+10:30 key frames, go ahead and hit tab in the
+10:31 
+
+10:31 graph editor and maybe that'll fix it.
+10:33 
+
+10:33 Now, as far as transforming the
+10:35 
+
+10:35 different key frames in here, you can
+10:37 
+
+10:37 just click and drag and move them
+10:38 
+
+10:38 around, like you could like a node in
+10:40 
+
+10:40 the node editor, but you can also hit G
+10:42 
+
+10:42 to move them around, and it will work
+10:43 
+
+10:43 like moving something in the viewport.
+10:45 
+
+10:45 You can also rotate frames. So, if I
+10:47 
+
+10:47 were to grab everything here and rotate
+10:49 
+
+10:49 it, you can see that it rotates from
+10:50 
+
+10:50 that middle point there. And you can hit
+10:52 
+
+10:52 S and scale it, and it will scale from
+10:54 
+
+10:54 uh its bounding box center. So that's
+10:57 
+
+10:57 really helpful especially when you have
+10:58 
+
+10:58 bezier curves and you can change the
+10:60 
+
+10:60 handles and manipulate all of that uh
+11:02 
+
+11:02 with the transformation keys just like
+11:04 
+
+11:04 you can inside the viewport which I find
+11:06 
+
+11:06 incredibly helpful and I really really
+11:08 
+
+11:08 like that feature. Now another cool
+11:09 
+
+11:09 thing kind of in line with that you can
+11:11 
+
+11:11 actually change where the pivot point
+11:12 
+
+11:12 is. So if I go up to the top middle here
+11:15 
+
+11:15 you can change the pivot point just like
+11:16 
+
+11:16 you could uh over here in the uh
+11:19 
+
+11:19 viewport and you can change it to
+11:21 
+
+11:21 bounding box center which is what we
+11:22 
+
+11:22 have. Uh but you can also change it to a
+11:24 
+
+11:24 2D cursor which is actually going to be
+11:26 
+
+11:26 our playhead here. Uh and then change
+11:28 
+
+11:28 this to individual centers. So what this
+11:30 
+
+11:30 will do is uh just like you can in the
+11:33 
+
+11:33 uh viewport here if you scale something
+11:35 
+
+11:35 or rotate it rather than uh rotating the
+11:38 
+
+11:38 whole thing together it will rotate from
+11:40 
+
+11:40 its individual axis axes rather and in
+11:43 
+
+11:43 this case that would be the key frames.
+11:45 
+
+11:45 So I'm going to take my Z location here
+11:46 
+
+11:46 and just hit X to delete it. And now I'm
+11:49 
+
+11:49 going to select all my keys here. Here I
+11:50 
+
+11:50 can just click and drag or hit A. And we
+11:52 
+
+11:52 can go up to key and go down to
+11:54 
+
+11:54 interpolation mode. Or you can hit T on
+11:56 
+
+11:56 the keyboard for the hotkey. And we're
+11:58 
+
+11:58 just going to change this to bezier. And
+11:59 
+
+11:59 this will now give us um just some
+12:02 
+
+12:02 easing. So this works very similar uh in
+12:04 
+
+12:04 After Effects to just adding easy ease
+12:06 
+
+12:06 to everything. And if I play it back,
+12:08 
+
+12:08 it's not great, but h you know it it
+12:10 
+
+12:10 works. So I'm going to close my side
+12:11 
+
+12:11 panel here. And we're going to go ahead
+12:13 
+
+12:13 and using the bezier handles here, we're
+12:16 
+
+12:16 going to edit our animation so that it
+12:18 
+
+12:18 just feels a little bit weightier and
+12:19 
+
+12:19 has a little bit more dynamicism. So, if
+12:22 
+
+12:22 you have ever held a pan, which I'm
+12:23 
+
+12:23 assuming you have if you're not a child,
+12:25 
+
+12:25 uh if you've ever held a pan, uh it has
+12:27 
+
+12:27 a little bit of weight to it. And if you
+12:29 
+
+12:29 were going to flip something like a fish
+12:30 
+
+12:30 in our case, you would have a little bit
+12:32 
+
+12:32 of what's called anticipation. So, you
+12:34 
+
+12:34 would drop it down a little bit, then
+12:36 
+
+12:36 you would fling it up. And so it would
+12:37 
+
+12:37 spend a lot of time on the come up
+12:39 
+
+12:39 because it's uh requiring some some
+12:41 
+
+12:41 effort to hoist it into the air. And
+12:43 
+
+12:43 then you would flick it and then it
+12:45 
+
+12:45 would come right back down and it would
+12:46 
+
+12:46 have overshoot as the fish lands back in
+12:49 
+
+12:49 it. So what we're going to do is just
+12:51 
+
+12:51 add in a couple more key frames so we
+12:52 
+
+12:52 can add in that anticipation and that
+12:54 
+
+12:54 overshoot on the back end. So let's
+12:56 
+
+12:56 start by going to frame like 15 maybe
+12:58 
+
+12:58 and we're going to hit I. And this will
+12:60 
+
+12:60 allow us to add in a key frame. Now, we
+13:03 
+
+13:03 only have one channel, so it doesn't
+13:04 
+
+13:04 really matter. But if we had multiple
+13:06 
+
+13:06 channels, if we still had that Z uh
+13:08 
+
+13:08 location channel, then it would be
+13:09 
+
+13:09 important to choose only selected
+13:11 
+
+13:11 channels, just like this. So, now we can
+13:13 
+
+13:13 grab this and we can move it up. And
+13:15 
+
+13:15 because these are automatically aligned,
+13:17 
+
+13:17 and you can change that by hitting V and
+13:19 
+
+13:19 change the uh handle type here. But
+13:22 
+
+13:22 because these are uh by default uh
+13:24 
+
+13:24 automatic, um we don't really need to
+13:26 
+
+13:26 change anything. It will just kind of
+13:27 
+
+13:27 align to what we're doing here. So, with
+13:29 
+
+13:29 this selected, I'm actually going to
+13:31 
+
+13:31 scale it out a little bit and rotate it
+13:33 
+
+13:33 up. Like I said, you can uh manipulate
+13:35 
+
+13:35 the transformation of the key frame with
+13:37 
+
+13:37 its handle, which is super cool. And I'm
+13:39 
+
+13:39 just going to kind of move this out so
+13:41 
+
+13:41 that it kind of feels like it's just
+13:42 
+
+13:42 going to uh go down a little bit and
+13:45 
+
+13:45 spring back up. It's very important to
+13:47 
+
+13:47 keep your curves kind of smooth, uh not
+13:49 
+
+13:49 have any uh harsh lines or any uh you
+13:52 
+
+13:52 know, sharp pivots because we want it to
+13:54 
+
+13:54 feel really smooth. So, additionally,
+13:56 
+
+13:56 I'm going to come down here and I might
+13:57 
+
+13:57 just drag this out. Again, I want to
+13:59 
+
+13:59 spend a lot of time uh on the come up of
+14:04 
+
+14:04 the uh pan, but not so much time with it
+14:07 
+
+14:07 flicked up in the air. So, I can play
+14:09 
+
+14:09 this back and just kind of see how it
+14:10 
+
+14:10 feels. And it feels okay, but I want it
+14:12 
+
+14:12 to be a little more dramatic. So, I'm
+14:14 
+
+14:14 going to pull this up even further
+14:15 
+
+14:15 because I'm going to move the value uh
+14:18 
+
+14:18 up higher than what it was. So, uh
+14:20 
+
+14:20 remember, positive is going to be
+14:22 
+
+14:22 clockwise, negative is going to be
+14:24 
+
+14:24 counterclockwise. So, I'm going to move
+14:25 
+
+14:25 this up. And there we go. That feels
+14:27 
+
+14:27 about right. And now we need to add in a
+14:29 
+
+14:29 key frame here, maybe at frame 25 or so.
+14:33 
+
+14:33 And we'll do only selected channels. And
+14:35 
+
+14:35 I'm going to crank this up. And we're
+14:36 
+
+14:36 going to use this as our overshoot. So,
+14:39 
+
+14:39 this is going to be where the fish slaps
+14:41 
+
+14:41 back down in the pan and kind of yanks
+14:43 
+
+14:43 the pan down a little bit so we can see
+14:45 
+
+14:45 how this feels on playback. It feels all
+14:48 
+
+14:48 right. We might have it a little bit
+14:51 
+
+14:51 like this.
+14:53 
+
+14:53 Rotate it up. And again, I think I want
+14:56 
+
+14:56 it to be a little more dramatic. So on
+14:58 
+
+14:58 the flick, actually, I don't want it to
+14:59 
+
+14:59 spend as much time as it is here. It
+15:01 
+
+15:01 kind of levels out here. You can see
+15:03 
+
+15:03 there's not much difference uh in the
+15:05 
+
+15:05 value from uh frame 19 to frame 20 to
+15:08 
+
+15:08 frame 18. Uh and so what I want to do is
+15:11 
+
+15:11 just rotate this down a little bit.
+15:14 
+
+15:14 Maybe pull this key frame handle out so
+15:16 
+
+15:16 that as it comes up and flicks up, it
+15:18 
+
+15:18 spends precious little time in the air
+15:21 
+
+15:21 before coming back down. So, we'll play
+15:23 
+
+15:23 this back. And that feels about right.
+15:27 
+
+15:27 I want to talk to you for a second about
+15:28 
+
+15:28 today's sponsor, Invato. Invato is a
+15:31 
+
+15:31 massive asset library service that I use
+15:33 
+
+15:33 for literally all of my projects. They
+15:34 
+
+15:34 have stock photos, they have stock
+15:35 
+
+15:35 [music] videos, they have sound effects,
+15:37 
+
+15:37 music, design templates, fonts,
+15:38 
+
+15:38 graphics, practically everything that
+15:40 
+
+15:40 you would need for a project. And with
+15:42 
+
+15:42 unlimited downloads, [music] you have
+15:43 
+
+15:43 plenty of room to play around with
+15:44 
+
+15:44 different ideas completely uninhibited
+15:46 
+
+15:46 by a pesky credit system. With over 22
+15:48 
+
+15:48 [music] million assets, if you need it,
+15:50 
+
+15:50 Invato's probably got it for you. And in
+15:52 
+
+15:52 the off chance that they don't, you can
+15:53 
+
+15:53 just as easily generate it using their
+15:54 
+
+15:54 Gen AI engine, an AI tool that allows
+15:57 
+
+15:57 you to create images, videos, [music]
+15:58 
+
+15:58 music, VO, and more with the speed of
+16:01 
+
+16:01 coming up with a prompt. Gen AI
+16:02 
+
+16:02 harnesses all the power of models like
+16:04 
+
+16:04 Google's [music] VO3, seed dance, and
+16:06 
+
+16:06 cling to get you amazing results for
+16:08 
+
+16:08 whatever you're trying to generate. They
+16:10 
+
+16:10 even have a feature to let AI enhance
+16:11 
+
+16:11 the prompt that you come up with. All
+16:13 
+
+16:13 you have to do is poorly articulate
+16:14 
+
+16:14 [music] whatever strange idea you have
+16:16 
+
+16:16 and let their enhanced prompt tool beef
+16:17 
+
+16:17 it up for you. Now, AI is obviously a
+16:20 
+
+16:20 very hot button issue right now, and
+16:21 
+
+16:21 it's kind of tough to weigh in fully on
+16:23 
+
+16:23 how to use it ethically. But, however
+16:25 
+
+16:25 you line up, utilizing tools to improve
+16:27 
+
+16:27 your workflow and lessen your barriers
+16:28 
+
+16:28 to create is a net positive. [music]
+16:30 
+
+16:30 Now, you can get a monthly subscription
+16:31 
+
+16:31 where you can save 50% by doing a yearly
+16:33 
+
+16:33 plan. And the amount of assets that you
+16:35 
+
+16:35 get for the price tag is an absolute
+16:37 
+
+16:37 [music] steal. All of my B-roll, my
+16:39 
+
+16:39 sound effects, lots of my textures, they
+16:41 
+
+16:41 were all sourced from Inbato. And the
+16:42 
+
+16:42 music playing right now generated using
+16:44 
+
+16:44 Invato's Gen AI. So, click the link in
+16:46 
+
+16:46 my description and check it out. [music]
+16:47 
+
+16:47 Today,
+16:50 
+
+16:50 now that we understand the absolute
+16:51 
+
+16:51 basics of the graph editor, we can
+16:53 
+
+16:53 graduate on to something a little bit
+16:54 
+
+16:54 more advanced. We're going to play
+16:56 
+
+16:56 around with animation modifiers and
+16:57 
+
+16:57 learn how to use them in a practical
+16:59 
+
+16:59 setting. Animation modifiers are super
+17:00 
+
+17:00 cool. They're basically non-destructive
+17:02 
+
+17:02 tools that allow for automation on
+17:04 
+
+17:04 curves. Think like looping, adding
+17:06 
+
+17:06 [music] noise, changing the
+17:07 
+
+17:07 interpolation type, all without having
+17:09 
+
+17:09 to touch the actual key frames. It works
+17:10 
+
+17:10 almost like a filter that you can put
+17:12 
+
+17:12 [music] on top of the key frames that
+17:13 
+
+17:13 will change their behavior. It's not too
+17:15 
+
+17:15 dissimilar from using a modifier stack
+17:16 
+
+17:16 while you're modeling. Now, let's just
+17:18 
+
+17:18 start by going over the absolute basics
+17:20 
+
+17:20 of modifiers. So, the best way to start
+17:22 
+
+17:22 with a modifier is to add a modifier.
+17:25 
+
+17:25 So, we're going to go ahead and select
+17:26 
+
+17:26 just one of our key frames here. Uh
+17:28 
+
+17:28 don't don't hit A and select all of them
+17:30 
+
+17:30 because uh these are technically
+17:32 
+
+17:32 inactive. You have to have an active key
+17:34 
+
+17:34 frame similar to how you would in the
+17:36 
+
+17:36 viewport to add a modifier to it. So,
+17:38 
+
+17:38 we're just going to select one of our
+17:39 
+
+17:39 key frames here. And then we'll hit N to
+17:41 
+
+17:41 open the side panel, the thing that we
+17:42 
+
+17:42 closed previously. I'll just drag this
+17:44 
+
+17:44 out so we have a little bit more screen
+17:45 
+
+17:45 real estate here and we're going to go
+17:47 
+
+17:47 down to the modifiers tab right here.
+17:50 
+
+17:50 Now we have a drop down here and we can
+17:51 
+
+17:51 add in a modifier. So we'll just go
+17:53 
+
+17:53 ahead and start with the cycles
+17:55 
+
+17:55 modifier. As you can see this added some
+17:57 
+
+17:57 stuff to it and we'll get into that
+17:58 
+
+17:58 momentarily. But before we do uh it's
+18:00 
+
+18:00 important to note you can copy a
+18:02 
+
+18:02 modifier right here and then you can
+18:04 
+
+18:04 paste it onto another set of key frames.
+18:06 
+
+18:06 And if you need to just toggle this on
+18:08 
+
+18:08 and off of course you can toggle it with
+18:10 
+
+18:10 uh this little guy right here. But if
+18:12 
+
+18:12 you don't happen to have it uh selected,
+18:14 
+
+18:14 it obviously will not show up. So you
+18:16 
+
+18:16 can change that by turning on and off
+18:18 
+
+18:18 the modifiers either uh in the entire
+18:20 
+
+18:20 transform data right here or you can
+18:22 
+
+18:22 turn it off by just clicking the wrench
+18:24 
+
+18:24 down here individually. All right, so
+18:26 
+
+18:26 let's get into actually cycles. Now,
+18:28 
+
+18:28 that's a little bit confusing because
+18:29 
+
+18:29 obviously cycles is the name of uh the
+18:32 
+
+18:32 render engine inside Blender, but uh
+18:34 
+
+18:34 cycles the modifier works very similarly
+18:37 
+
+18:37 to something like loop in or loop out uh
+18:39 
+
+18:39 inside of After Effects if you're
+18:41 
+
+18:41 familiar with that. So, as you can see
+18:42 
+
+18:42 here, uh it just loops our animation
+18:44 
+
+18:44 over and over again uh with repeat
+18:46 
+
+18:46 motion. So you can actually change this
+18:49 
+
+18:49 if you had a value that was just let's
+18:51 
+
+18:51 say uh kind of how our uh Z location
+18:54 
+
+18:54 value was in the previous chapter where
+18:55 
+
+18:55 you have a key frame down here and a key
+18:57 
+
+18:57 frame up here. Uh you could change this
+18:59 
+
+18:59 to repeat with offset and it would just
+19:01 
+
+19:01 go on forever infinity. So that's the uh
+19:05 
+
+19:05 general overview of cycles. It's not too
+19:06 
+
+19:06 terribly complicated. You can restrict
+19:08 
+
+19:08 the frame range right here if you want
+19:10 
+
+19:10 it to start or stop at a certain time.
+19:12 
+
+19:12 You can also tell it how many times you
+19:14 
+
+19:14 want it to repeat. So I can change this
+19:15 
+
+19:15 to no cycles so that it's only uh
+19:18 
+
+19:18 looping out as it were. And then I can
+19:20 
+
+19:20 change the count to like two or three
+19:23 
+
+19:23 right there. And so it will cycle itself
+19:24 
+
+19:24 three times and then it will stop. Uh
+19:26 
+
+19:26 this is very similar to how it works
+19:27 
+
+19:27 with the NLA if you've ever used that.
+19:29 
+
+19:29 Uh but this is just a quick way to add
+19:31 
+
+19:31 that on there. So I'm going to go ahead
+19:32 
+
+19:32 and delete this. And even though we'll
+19:34 
+
+19:34 probably come back and use this
+19:35 
+
+19:35 momentarily, I'm just going to delete it
+19:36 
+
+19:36 so that we have kind of a clean slate
+19:38 
+
+19:38 every time. We'll now cover our next
+19:40 
+
+19:40 modifier here which is called noise. So,
+19:42 
+
+19:42 we can go to add modifier and click
+19:43 
+
+19:43 noise. And you'll see it kind of looks
+19:45 
+
+19:45 like an EKG machine. And that's because
+19:47 
+
+19:47 it's adding a noise texture on top of
+19:48 
+
+19:48 this. So, if I were to uh let me close
+19:51 
+
+19:51 this down a little bit and give myself
+19:53 
+
+19:53 some more room here. If I play this
+19:54 
+
+19:54 back, we can see uh it freaks out and it
+19:57 
+
+19:57 makes the pan go crazy. And that's
+19:59 
+
+19:59 because the scale and the strength are
+20:00 
+
+20:00 set pretty high for what we need. So,
+20:02 
+
+20:02 the scale helps in changing uh the
+20:05 
+
+20:05 frequency in the x-axis or the time
+20:08 
+
+20:08 axis. and the strength value changes uh
+20:11 
+
+20:11 the uh frequency in the y value or the
+20:14 
+
+20:14 uh transform value. So by tweaking the
+20:17 
+
+20:17 scale and making this longer like this.
+20:20 
+
+20:20 So I'll set the scale to 10 and by
+20:22 
+
+20:22 changing the strength to something much
+20:24 
+
+20:24 uh more mild like maybe 05. Uh I get
+20:27 
+
+20:27 just a little bit of organic move on
+20:30 
+
+20:30 this and it just kind of feels a little
+20:31 
+
+20:31 bit jittery. uh still feels a little bit
+20:33 
+
+20:33 more organic, but it doesn't feel like a
+20:36 
+
+20:36 uh you know, coked out lunatic of a pan.
+20:39 
+
+20:39 All right, so we'll delete that and
+20:40 
+
+20:40 let's add in our next modifier that
+20:42 
+
+20:42 we're going to cover here. Again, there
+20:43 
+
+20:43 are more modifiers than just the three
+20:45 
+
+20:45 we're covering today, but these three
+20:46 
+
+20:46 are kind of the most uh important and
+20:48 
+
+20:48 maybe the most widely used. So, we're
+20:50 
+
+20:50 going to add in stepped interpolation.
+20:52 
+
+20:52 And what this does is it changes it to
+20:54 
+
+20:54 feel like a stop motion uh piece of
+20:57 
+
+20:57 animation. I use this a lot in my
+20:58 
+
+20:58 animation. And I just like the way that
+20:59 
+
+20:59 it feels and the way that it kind of
+21:01 
+
+21:01 adds this kind of handcrafted look. But
+21:03 
+
+21:03 uh this allows you to change the the
+21:06 
+
+21:06 interpolation. So So if we scrub through
+21:08 
+
+21:08 our animation here, we can see it only
+21:10 
+
+21:10 changes every two frames. It changes
+21:12 
+
+21:12 this as though it was um a constant
+21:14 
+
+21:14 interpolation, but you still get the
+21:16 
+
+21:16 ability to change things with uh the
+21:19 
+
+21:19 graph editor and change the bezier
+21:21 
+
+21:21 handles, which is really cool. So you
+21:22 
+
+21:22 can of course uh change the step size
+21:24 
+
+21:24 here. Um, you can make it, you know, 10
+21:27 
+
+21:27 and then it plays back only one movement
+21:29 
+
+21:29 every 10 frames. Uh, and so on and so
+21:32 
+
+21:32 forth. But changing the step size to two
+21:35 
+
+21:35 takes a 24 frames per second animation
+21:38 
+
+21:38 and makes it feel like a 12 frames per
+21:39 
+
+21:39 second animation. Uh, kind of aping that
+21:42 
+
+21:42 of handdrawn animation or claymation
+21:44 
+
+21:44 even. So, we'll just delete that to just
+21:46 
+
+21:46 give ourselves a clean frame. And the
+21:48 
+
+21:48 orientation or the stack order really
+21:50 
+
+21:50 matters here. So, we need to start with
+21:52 
+
+21:52 a cycles modifier. Again, we're going to
+21:54 
+
+21:54 create kind of this looping animation.
+21:55 
+
+21:55 So, I'm going to set the count of repeat
+21:58 
+
+21:58 uh after mode to three because I just
+22:01 
+
+22:01 want three flips. And before I actually
+22:05 
+
+22:05 set my end frame, I want to go ahead and
+22:07 
+
+22:07 copy this value right here.
+22:10 
+
+22:10 And then I'm going to go forward to
+22:11 
+
+22:11 maybe frame 40 and paste that value so
+22:14 
+
+22:14 that when it resets itself, it has a
+22:17 
+
+22:17 little bit of a break so that it's not
+22:18 
+
+22:18 just flipping the fish over and over
+22:20 
+
+22:20 again like a lunatic. uh it actually has
+22:23 
+
+22:23 a little bit of uh break between there
+22:26 
+
+22:26 so it can kind of reset the animation
+22:27 
+
+22:27 and it feels a little bit more natural.
+22:29 
+
+22:29 You could probably even move that up to
+22:30 
+
+22:30 50 or 60 if you wanted to, but I'm just
+22:32 
+
+22:32 going to keep it at 40 to keep it
+22:34 
+
+22:34 concise. So now I'm going to add another
+22:36 
+
+22:36 modifier and I'll choose stepped
+22:39 
+
+22:39 interpolation. And that by default is
+22:40 
+
+22:40 going to be good. So I can play this
+22:42 
+
+22:42 back now. And that feels nice. It feels
+22:45 
+
+22:45 like a stop motion pan that now needs a
+22:47 
+
+22:47 fish to flip.
+22:50 
+
+22:50 We're now armed with all the tools
+22:51 
+
+22:51 necessary to finish out this animation
+22:53 
+
+22:53 and make something really cool. In this
+22:54 
+
+22:54 final chapter, I'll show you how to do
+22:56 
+
+22:56 some frame by frame animation utilizing
+22:57 
+
+22:57 some of the tools that we just learned.
+22:59 
+
+22:59 Now, this is the typical workflow that I
+23:01 
+
+23:01 use for a lot of my animations,
+23:02 
+
+23:02 including character work. I have an
+23:03 
+
+23:03 affinity for the kind of stop motion
+23:05 
+
+23:05 Leicaesque type animation, and this
+23:07 
+
+23:07 really lends itself to it. The
+23:09 
+
+23:09 employment of this aesthetic, though,
+23:10 
+
+23:10 takes a little bit of setup. So, let's
+23:11 
+
+23:11 go ahead and hop back into Blender and
+23:13 
+
+23:13 finish out our animation really strong.
+23:15 
+
+23:15 Okay, for our last chapter here, we're
+23:17 
+
+23:17 going to turn back on our fish
+23:19 
+
+23:19 collection right here. Uh it'll be
+23:21 
+
+23:21 labeled fish just for your own
+23:23 
+
+23:23 convenience there. And uh if you've
+23:25 
+
+23:25 never used a rig before, I rigged up the
+23:27 
+
+23:27 fish for you. If you've never used it
+23:28 
+
+23:28 before, it's very simple. We're going to
+23:30 
+
+23:30 go up to object mode and change this to
+23:32 
+
+23:32 pose mode. Just like that. And uh now we
+23:35 
+
+23:35 have some bones to to move around. Now,
+23:36 
+
+23:36 if you want to get fancy later on, uh
+23:39 
+
+23:39 you have some fin controllers here. the
+23:41 
+
+23:41 uh fish is is uh segmented out so you
+23:44 
+
+23:44 can kind of flip him around a little
+23:45 
+
+23:45 bit, add some some secondary motion to
+23:47 
+
+23:47 him. Uh but really what we're going to
+23:49 
+
+23:49 focus on today is just this main
+23:51 
+
+23:51 controller right here, uh the center of
+23:53 
+
+23:53 gravity controller. So with this
+23:55 
+
+23:55 controller selected, let's go ahead and
+23:56 
+
+23:56 go to the beginning of our play head
+23:58 
+
+23:58 right here, frame 12. And we're just
+24:00 
+
+24:00 going to add in a key frame by hitting
+24:02 
+
+24:02 K. And we're going to do location and
+24:05 
+
+24:05 rotation. If you want to add in scale,
+24:06 
+
+24:06 if you plan on animating the scale at
+24:08 
+
+24:08 all, uh you can add that in. But I'm
+24:10 
+
+24:10 just going to do location and rotation.
+24:12 
+
+24:12 So now I can go forward to frame 13 and
+24:15 
+
+24:15 I can just start animating. So because
+24:17 
+
+24:17 the pan is now down there, again, this
+24:20 
+
+24:20 is kind of a stop motiony kind of
+24:21 
+
+24:21 handcrafted feel. So it doesn't have to
+24:23 
+
+24:23 be perfect. We don't actually have to
+24:24 
+
+24:24 rig it to the pan necessarily. So we're
+24:27 
+
+24:27 just going to drag this down to here.
+24:29 
+
+24:29 And we're going to have it moving
+24:31 
+
+24:31 forward just a little bit. Now, if
+24:33 
+
+24:33 you'll remember, the pan itself is set
+24:35 
+
+24:35 to uh stepped interpolation. So it only
+24:38 
+
+24:38 moves every two frames. But if we start
+24:40 
+
+24:40 to go back two frames, we can see that
+24:42 
+
+24:42 the fish is actually moving at 24 frames
+24:45 
+
+24:45 per second. So what we need to do is hit
+24:47 
+
+24:47 command comma or we can go up to uh I
+24:49 
+
+24:49 think edit. Yep, edit and preferences.
+24:51 
+
+24:51 And under animation, we can go to our
+24:54 
+
+24:54 default interpolation right here under
+24:55 
+
+24:55 F- curves and we can change the default
+24:57 
+
+24:57 to constant. And now when we add in new
+25:00 
+
+25:00 key frame, it will go ahead and act like
+25:02 
+
+25:02 stop frame animation. So now uh just to
+25:05 
+
+25:05 remedy the problems that we caused uh
+25:07 
+
+25:07 without setting that up beforehand, we
+25:09 
+
+25:09 can hit A to select both of these key
+25:10 
+
+25:10 frames. We can hit T and change this to
+25:13 
+
+25:13 constant. And that will just change the
+25:15 
+
+25:15 interpolation type. And we can see here
+25:17 
+
+25:17 we now no longer have that problem. Now
+25:20 
+
+25:20 the fin here is going to really bother
+25:21 
+
+25:21 me. So I'm going to go ahead and rotate
+25:23 
+
+25:23 this up and just stick that into the
+25:24 
+
+25:24 body because we don't really need it
+25:26 
+
+25:26 right now. And I'll go back to the
+25:28 
+
+25:28 center of gravity here. Now, uh, this is
+25:31 
+
+25:31 gonna rotate down a little bit with the
+25:33 
+
+25:33 pan, we can see it starts a little bit
+25:35 
+
+25:35 above the pan here. And I think it can
+25:38 
+
+25:38 go maybe right there.
+25:40 
+
+25:40 Okay. And so, as it the pan kind of
+25:44 
+
+25:44 flips down a little bit, uh, the fish is
+25:46 
+
+25:46 going to slide out towards the edge.
+25:48 
+
+25:48 We'll go forward two frames again. He's
+25:49 
+
+25:49 going to go a little bit further. Maybe
+25:51 
+
+25:51 he's rotating up a little bit. He's
+25:53 
+
+25:53 going up the edge of the pan. And right
+25:55 
+
+25:55 here is when we actually start to uh go
+25:59 
+
+25:59 up. So we need to kind of follow the pan
+26:01 
+
+26:01 a little bit
+26:03 
+
+26:03 like that. Okay. And this is where he's
+26:06 
+
+26:06 going to get flipped into the air. So at
+26:09 
+
+26:09 this point, uh he has some momentum,
+26:11 
+
+26:11 some trajectory with the pan actually
+26:13 
+
+26:13 flipping him. So uh the fish is going to
+26:15 
+
+26:15 start to rotate like this. I'll fix the
+26:16 
+
+26:16 fin. That's a mess, but it's okay. We
+26:18 
+
+26:18 we'll leave it for now. And then frame
+26:21 
+
+26:21 21, the pan is starting to return to
+26:23 
+
+26:23 normaly. And we know that we need to uh
+26:26 
+
+26:26 be able to get back down to the pan by
+26:30 
+
+26:30 frame 24. So we have about a frame to
+26:33 
+
+26:33 really do something else here. So uh
+26:35 
+
+26:35 we'll go forward to frame 22. He'll flip
+26:38 
+
+26:38 around a little bit more and maybe start
+26:40 
+
+26:40 to come back down. And then frame 24 is
+26:44 
+
+26:44 maybe when he can come and return to the
+26:47 
+
+26:47 pan here. This is where he's kind of
+26:49 
+
+26:49 hitting the pan really hard. And then
+26:51 
+
+26:51 frame 26, he's back at the default,
+26:54 
+
+26:54 maybe like this. And then frame 27,
+26:59 
+
+26:59 maybe he's back at his original pose. So
+27:02 
+
+27:02 we'll copy and paste the frame from from
+27:04 
+
+27:04 the key frame from frame 12. We can just
+27:07 
+
+27:07 kind of see how it looks. And it feels a
+27:09 
+
+27:09 little bit off. It doesn't feel super
+27:11 
+
+27:11 good. So what we need to do is actually
+27:12 
+
+27:12 kind of diagnose some of these problems.
+27:14 
+
+27:14 Now you can see what's happening over
+27:16 
+
+27:16 here in the graph editor. If I were to
+27:18 
+
+27:18 uh open this up, we can see we have all
+27:20 
+
+27:20 of our location and rotation values
+27:22 
+
+27:22 here. But what I find a little bit more
+27:25 
+
+27:25 helpful is to uh go to pose again in
+27:28 
+
+27:28 pose mode with a bone selected here. We
+27:31 
+
+27:31 can go to pose and we can go down to
+27:33 
+
+27:33 motion paths and we can calculate. Now
+27:35 
+
+27:35 you can see I have the calculate and
+27:37 
+
+27:37 clear set to a key frame, but we can
+27:39 
+
+27:39 just hit calculate. All the defaults are
+27:40 
+
+27:40 fine and we can just hit go and this
+27:43 
+
+27:43 will give us uh our motion path here and
+27:44 
+
+27:44 we can actually see where our object is
+27:47 
+
+27:47 moving in the 3D space which is really
+27:49 
+
+27:49 really helpful. So we can come through
+27:51 
+
+27:51 here and see how it's moving. So it's
+27:53 
+
+27:53 going forward a little bit which is what
+27:54 
+
+27:54 we want.
+27:56 
+
+27:56 And then at frame
+27:58 
+
+27:58 20 it's getting flipped up into the air.
+28:01 
+
+28:01 Maybe we could go to frame 22 and make
+28:04 
+
+28:04 that
+28:06 
+
+28:06 start to kind of almost arc back. So, as
+28:10 
+
+28:10 he's coming up, he should be flipping
+28:12 
+
+28:12 over himself at this point. Yep. Like
+28:14 
+
+28:14 this. And then, yeah, maybe frame 24,
+28:17 
+
+28:17 he's not quite there yet. But frame 26,
+28:21 
+
+28:21 he's here. He hits the pan. And then
+28:24 
+
+28:24 frame 28,
+28:27 
+
+28:27 maybe he slides forward a little bit
+28:30 
+
+28:30 before coming back. And that's the
+28:31 
+
+28:31 beauty of having that much space that we
+28:33 
+
+28:33 created uh with our loop. We now have
+28:35 
+
+28:35 some space to kind of play around. So we
+28:37 
+
+28:37 don't want something too crazy. And
+28:40 
+
+28:40 maybe we can try that now. So we can
+28:42 
+
+28:42 play this back. I'll uh turn off my the
+28:44 
+
+28:44 overlay by going up here and turning
+28:46 
+
+28:46 that off. So we can just kind of see our
+28:48 
+
+28:48 fish. And that is not bad for a fish
+28:51 
+
+28:51 flip. But now we have the same kind of
+28:53 
+
+28:53 problem that we had before. We have the
+28:55 
+
+28:55 fish flipping up and it looks really
+28:56 
+
+28:56 great. Uh but when it lands back down,
+28:59 
+
+28:59 uh the pan continues to flip and clips
+29:02 
+
+29:02 through our fish here. So we need to add
+29:04 
+
+29:04 in uh a cycles modifier so he can loop
+29:08 
+
+29:08 uh over and over again. So let's go
+29:09 
+
+29:09 ahead and select one of our values.
+29:11 
+
+29:11 Doesn't matter which one. We'll just
+29:12 
+
+29:12 choose the X. And I'll hit shift H to uh
+29:16 
+
+29:16 solo that. You can solo, hide, or reveal
+29:18 
+
+29:18 things just like you can in the
+29:20 
+
+29:20 viewport. And I'll hit N to open my side
+29:22 
+
+29:22 panel here. And we'll just add in our uh
+29:24 
+
+29:24 cycles modifier. We can click no cycles
+29:27 
+
+29:27 and then repeat motion three times.
+29:30 
+
+29:30 Three. There we go. And uh just like
+29:33 
+
+29:33 before, we actually need to make sure
+29:35 
+
+29:35 that we have another key frame set right
+29:37 
+
+29:37 here at frame 40. So I'm going to copy
+29:39 
+
+29:39 this with this little copy button. And
+29:41 
+
+29:41 then I'll select the rest of these right
+29:43 
+
+29:43 here. And we can hit paste. And that
+29:44 
+
+29:44 will paste uh that value onto all of
+29:47 
+
+29:47 them. So you can see here now it's
+29:48 
+
+29:48 looping correctly. And uh you can tell
+29:51 
+
+29:51 that they all have uh cycles modifier
+29:53 
+
+29:53 because they all have this little wrench
+29:55 
+
+29:55 lit up. And if you ever want to turn
+29:56 
+
+29:56 that off or on, you can just of course
+29:58 
+
+29:58 toggle the wrench on or off. Now, this
+30:00 
+
+30:00 works great except we have the same kind
+30:02 
+
+30:02 of problem. Uh we need to change our our
+30:06 
+
+30:06 point uh for the looping cuz as of now,
+30:09 
+
+30:09 it just starts to cycle as soon as we're
+30:11 
+
+30:11 done with the animation cycle, which is
+30:12 
+
+30:12 at frame 32. So, I'm going to go ahead
+30:14 
+
+30:14 and make sure I have a key frame set for
+30:17 
+
+30:17 all the values at frame 32. I'm going to
+30:19 
+
+30:19 hit K and choose location and rotation.
+30:22 
+
+30:22 Oops, I don't need scale. Rotation and
+30:24 
+
+30:24 location. Just like that. I can then uh
+30:26 
+
+30:26 duplicate this by hitting uh command C
+30:29 
+
+30:29 to copy and commandV to paste. And now
+30:32 
+
+30:32 you can see by this uh orange line in
+30:34 
+
+30:34 between these two key frames, they're
+30:35 
+
+30:35 the same value. And now the loop points
+30:39 
+
+30:39 should be perfect. All right, there we
+30:41 
+
+30:41 go. We have our nice looping fish. In
+30:43 
+
+30:43 fact, let's find where the last loop is
+30:46 
+
+30:46 right here. Uh we can set our in frame
+30:48 
+
+30:48 here. Uh we'll do 116. Uh so I can copy
+30:52 
+
+30:52 this 116 + 8 because that's where the uh
+30:55 
+
+30:55 loop point is out and it should loop
+30:58 
+
+30:58 perfectly now.
+31:00 
+
+31:00 See, there's absolutely nothing scary
+31:02 
+
+31:02 about the graph editor or just animation
+31:04 
+
+31:04 in Blender. By taking some time to
+31:06 
+
+31:06 explore and acclimate to the logic of
+31:08 
+
+31:08 the graph editor, we were able to
+31:10 
+
+31:10 dynamically animate the pan, modify its
+31:12 
+
+31:12 behavior non-destructively, and add some
+31:14 
+
+31:14 cool frame by frame animation to the
+31:15 
+
+31:15 fish.
+31:16 
+
+31:16 Mastering the graph editor is essential
+31:18 
+
+31:18 to taking your animation to the next
+31:20 
+
+31:20 level. So, put in the effort and learn
+31:21 
+
+31:21 the tool. As I said at the beginning,
+31:23 
+
+31:23 this tutorial and really just all of my
+31:24 
+
+31:24 tutorials [music] in general is more of
+31:26 
+
+31:26 a template for a bigger picture. Will
+31:27 
+
+31:27 you be animating a fish every time you
+31:28 
+
+31:28 pop open the graph editor? Probably not,
+31:30 
+
+31:30 unless you're in the very specific field
+31:32 
+
+31:32 of fish viz, but the general approach,
+31:34 
+
+31:34 the tools, and the implementation of
+31:36 
+
+31:36 logic, they all should apply in most
+31:38 
+
+31:38 situations. So, use this demonstration
+31:40 
+
+31:40 as a springboard and continue getting in
+31:41 
+
+31:41 your reps [music] just animating and
+31:43 
+
+31:43 using the graph editor and eventually it
+31:44 
+
+31:44 will feel like a second nature to you.
+31:46 
+
+31:46 If you like the fish that we used here
+31:47 
+
+31:47 and you want to learn to make your own
+31:48 
+
+31:48 characters, be sure you check out my
+31:50 
+
+31:50 four-part character design series.
+31:51 
+
+31:51 [music] I'll have it linked up somewhere
+31:53 
+
+31:53 here. Don't forget to like this video,
+31:54 
+
+31:54 subscribe to the channel, and comment
+31:56 
+
+31:56 your favorite species of fish. If you
+31:58 
+
+31:58 want to support the channel, you can
+31:58 
+
+31:58 pick up my plug-in, Sweet Buttons
+31:60 
+
+31:60 [music] Pro. It's just a little add-on
+32:01 
+
+32:01 that gives you a panel of easy buttons.
+32:03 
+
+32:03 It'll be linked down below. Thank you
+32:04 
+
+32:04 very much to our sponsor, Invato, and
+32:06 
+
+32:06 thank you for [music] watching.

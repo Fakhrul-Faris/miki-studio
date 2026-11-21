@@ -1,0 +1,649 @@
+00:00 for
+00:15 
+
+00:15 [Music]
+00:32 
+
+00:32 [Music]
+00:35 
+
+00:35 these types of renders look great until
+00:37 
+
+00:37 you have to create your own human
+00:39 
+
+00:39 character in blender you have to learn
+00:41 
+
+00:41 all of these things in animating it is
+00:43 
+
+00:43 another challenge but in this video I
+00:46 
+
+00:46 will tell my workflow of getting
+00:47 
+
+00:47 photorealistic humans in blender and
+00:50 
+
+00:50 animating them using Daz and some other
+00:52 
+
+00:52 tools I have mentioned free Alternatives
+00:54 
+
+00:54 of every add-on and plug-in I have used
+00:56 
+
+00:56 to make it easy for you guys to test it
+00:58 
+
+00:58 out I have also attached some and
+01:00 
+
+01:00 animated rigs that can help you to light
+01:02 
+
+01:02 and animate your characters
+01:08 
+
+01:08 faster first of all you will need
+01:10 
+
+01:10 blender I am going to use the latest
+01:12 
+
+01:12 version which is 4.2 second you will
+01:15 
+
+01:15 need Daz Studio it is completely free
+01:18 
+
+01:18 you will also need these plugins and
+01:20 
+
+01:20 assets for Daz for skin you will need
+01:22 
+
+01:22 the global skin or humany add-on and you
+01:25 
+
+01:25 will need 3D hairbrush for hair for
+01:28 
+
+01:28 animation you will need Roco add-on
+01:35 
+
+01:35 on let's set up the daz Studio first go
+01:38 
+
+01:38 to the daz website sign up and download
+01:40 
+
+01:40 it you will need to add these products
+01:42 
+
+01:42 in your cart and checkout while using
+01:44 
+
+01:44 the same account you created all the
+01:47 
+
+01:47 links are in the description open Daz
+01:49 
+
+01:49 Central download the daz Studio go into
+01:52 
+
+01:52 this tab and search the assets you got
+01:54 
+
+01:54 right now download these
+01:58 
+
+01:58 two let's set up blender go to the
+02:01 
+
+02:01 blender website and download the latest
+02:03 
+
+02:03 release you can also install it from the
+02:06 
+
+02:06 Microsoft store or steam you can also
+02:09 
+
+02:09 use the old versions by going into
+02:11 
+
+02:11 releases and downloading the portable
+02:14 
+
+02:14 version to install an add-on go into
+02:17 
+
+02:17 preferences open this and install from
+02:19 
+
+02:19 local Drive I am going to install the
+02:21 
+
+02:21 Roco add-on for now do this for all
+02:23 
+
+02:23 add-ons that you will use
+02:30 
+
+02:30 let's start by creating the character
+02:32 
+
+02:32 open da and skip this
+02:35 
+
+02:35 menu go into this tab and you will find
+02:37 
+
+02:37 your characters
+02:40 
+
+02:40 here I do have some paid ones but you
+02:42 
+
+02:42 can use the free ones as they are
+02:44 
+
+02:44 similar make sure you are under Genesis
+02:46 
+
+02:46 9 cuz those are the most realistic ones
+02:49 
+
+02:49 I would recommend you to add
+02:52 
+
+02:52 mat after that click this button and
+02:55 
+
+02:55 select your character make sure all is
+02:57 
+
+02:57 selected here
+03:00 
+
+03:00 now you can change the proportions of
+03:02 
+
+03:02 your character by searching here such as
+03:07 
+
+03:07 head my goal was to create a similar
+03:10 
+
+03:10 face like this and these are the
+03:12 
+
+03:12 settings I have
+03:13 
+
+03:13 changed you can also change the eye
+03:16 
+
+03:16 color go into the smart content and
+03:18 
+
+03:18 search eyes select anyone you like you
+03:21 
+
+03:21 can also do this with the eyebrows make
+03:23 
+
+03:23 sure you are changing the material don't
+03:25 
+
+03:25 add hair in Dazz it does not work we
+03:28 
+
+03:28 will add hair later in blender with an
+03:30 
+
+03:30 add-on let's export it to blender first
+03:33 
+
+03:33 make sure to save the daz file so you
+03:35 
+
+03:35 can animate it
+03:41 
+
+03:41 later to export it go into this tab and
+03:44 
+
+03:44 under this option click Send to blender
+03:47 
+
+03:47 this menu will pop up click advanced
+03:50 
+
+03:50 settings and change this option to
+03:53 
+
+03:53 custom click install
+03:57 
+
+03:57 plug-in go into scripts addon and click
+04:01 
+
+04:01 okay if you get any other message here
+04:04 
+
+04:04 make sure that you selected the correct
+04:05 
+
+04:05 file path click export and you are good
+04:08 
+
+04:08 to
+04:16 
+
+04:16 go in blender open this tab and find Daz
+04:22 
+
+04:22 add-on if you do not find it here go
+04:25 
+
+04:25 into preferences and search Daz make
+04:27 
+
+04:27 sure it's checked open this panel scroll
+04:30 
+
+04:30 scroll down and uncheck these options
+04:32 
+
+04:32 now click import and you will get your
+04:34 
+
+04:34 character in
+04:37 
+
+04:37 blender delete this collection and you
+04:40 
+
+04:40 are good to
+04:45 
+
+04:45 go for the skin you can use Global skin
+04:48 
+
+04:48 which is a paid add-on it has tons of
+04:51 
+
+04:51 options which can create realistic skin
+04:55 
+
+04:55 I am still experimenting with it so I am
+04:57 
+
+04:57 not going to use that in the video
+04:59 
+
+04:59 however ever it also has an alternative
+05:02 
+
+05:02 which is humany I have used it so many
+05:04 
+
+05:04 times and I still use it it works just
+05:07 
+
+05:07 like Global skin but it's limited with
+05:10 
+
+05:10 the customizations select the character
+05:12 
+
+05:12 and choose the skin you want click apply
+05:15 
+
+05:15 and you are good to go I usually use
+05:17 
+
+05:17 this skin from humany and I use these
+05:20 
+
+05:20 settings to make it look good all the
+05:22 
+
+05:22 links are in the description if you
+05:24 
+
+05:24 don't want to buy any of these you can
+05:26 
+
+05:26 use the skin that comes with Dazz it is
+05:28 
+
+05:28 not good but it will do the work
+05:31 
+
+05:31 work now if you notice most of the
+05:33 
+
+05:33 character's Nails have a weird color you
+05:35 
+
+05:35 can change that go into the fingernails
+05:37 
+
+05:37 material and add a color ramp here I
+05:40 
+
+05:40 have used these settings for the nails
+05:42 
+
+05:42 it will be different for every character
+05:44 
+
+05:44 so play with these until you get the
+05:46 
+
+05:46 best
+05:50 
+
+05:50 result another thing you can remove this
+05:52 
+
+05:52 glow from the eyebrows select the
+05:54 
+
+05:54 eyebrow and change this value to some
+05:56 
+
+05:56 like minus 0.5
+06:08 
+
+06:08 for hair I am using this add-on it has a
+06:10 
+
+06:10 free version with four presets the link
+06:13 
+
+06:13 is in the description you can get the
+06:15 
+
+06:15 free one from
+06:20 
+
+06:20 here open this tab by clicking on this
+06:23 
+
+06:23 little arrow icon find the add-on and
+06:25 
+
+06:25 open it click the load base button
+06:30 
+
+06:30 and you will get this hat type thing try
+06:32 
+
+06:32 to match it with your character
+06:39 
+
+06:39 head when you are done just select your
+06:42 
+
+06:42 character head in this box and click
+06:43 
+
+06:43 this
+06:47 
+
+06:47 button now just choose which preset you
+06:49 
+
+06:49 want and click switch
+06:55 
+
+06:55 preset you can bind it with your
+06:58 
+
+06:58 character head go into pose mode select
+07:00 
+
+07:00 the
+07:02 
+
+07:02 headbone and select the hair and press
+07:05 
+
+07:05 control plus P select this option and
+07:07 
+
+07:07 you
+07:12 
+
+07:12 done I will talk about I blink animation
+07:15 
+
+07:15 but let's start with the basics you can
+07:17 
+
+07:17 transfer animation from one rig to
+07:19 
+
+07:19 another with Roco go to Mamo or any
+07:22 
+
+07:22 other place you know where you can get
+07:23 
+
+07:23 animated rigs you have to make sure that
+07:26 
+
+07:26 the rig is in same pose as your
+07:28 
+
+07:28 character mostly Daz characters are a
+07:30 
+
+07:30 POS by default go into pose mode and
+07:33 
+
+07:33 rotate these bones to make a t pose go
+07:36 
+
+07:36 into object mode and select the
+07:37 
+
+07:37 character apply the Armature
+07:42 
+
+07:42 modifier add another drag it to the top
+07:45 
+
+07:45 and select the
+07:50 
+
+07:50 rig go into pose mode go under this
+07:53 
+
+07:53 option and click apply now you can use
+07:55 
+
+07:55 the Roco to transfer animation select
+07:58 
+
+07:58 the animated rig here and select the
+08:00 
+
+08:00 character rig here which is Genesis 9
+08:03 
+
+08:03 click build bone list and click this
+08:06 
+
+08:06 button animating eyes is also easy open
+08:09 
+
+08:09 Daz load the character file open this
+08:12 
+
+08:12 timeline here change these
+08:18 
+
+08:18 settings go under this tab animate the
+08:21 
+
+08:21 eye blinking
+08:23 
+
+08:23 value add a key frame and leave one
+08:26 
+
+08:26 frame and add another with close eyes
+08:30 
+
+08:30 move one frame further and add another
+08:32 
+
+08:32 with open eyes now export the mesh in
+08:34 
+
+08:34 fbx format use these
+08:40 
+
+08:40 settings import it in blender build the
+08:43 
+
+08:43 bone
+08:45 
+
+08:45 list clear everything and fill the
+08:48 
+
+08:48 eyelid options
+08:51 
+
+08:51 only just make sure these are in the
+08:53 
+
+08:53 same place click retarget and here you
+08:56 
+
+08:56 have
+08:57 
+
+08:57 it you can rotate the eyes go into pose
+09:01 
+
+09:01 mode and select this part you can move
+09:03 
+
+09:03 it left or right and you can animate it
+09:05 
+
+09:05 you can also use motion capture to
+09:07 
+
+09:07 animated I don't have a motion capture
+09:10 
+
+09:10 suit and most of you also won't have the
+09:12 
+
+09:12 suit what you can do is use deep motion
+09:15 
+
+09:15 or Rococo Vision which uses a video to
+09:18 
+
+09:18 generate a rig I have used deep motion
+09:20 
+
+09:20 because Rococo wasn't working for me the
+09:22 
+
+09:22 process is simple just upload your video
+09:26 
+
+09:26 make sure to use these settings download
+09:28 
+
+09:28 the fbx format change these settings to
+09:31 
+
+09:31 get the rig
+09:33 
+
+09:33 correctly import the T pose file in
+09:36 
+
+09:36 blender now this part is a little tricky
+09:39 
+
+09:39 Roco doesn't match these two rigs you
+09:42 
+
+09:42 have to manually select every bone I
+09:45 
+
+09:45 have already done that and you can get
+09:47 
+
+09:47 the file from this bundle if you want to
+09:49 
+
+09:49 do it manually go into pose mode and
+09:51 
+
+09:51 check the names for each bone and try to
+09:53 
+
+09:53 match it here
+10:00 
+
+10:00 I have also added some animated rigs
+10:02 
+
+10:02 which are compatible with the daz
+10:04 
+
+10:04 characters you will also find some
+10:06 
+
+10:06 camera lighting setups which will help
+10:08 
+
+10:08 you to create cinematic renders faster
+10:11 
+
+10:11 if I had access to facial capture I
+10:13 
+
+10:13 would have also included that in the
+10:15 
+
+10:15 video one final word before ending the
+10:18 
+
+10:18 video try to use Optics to render as it
+10:21 
+
+10:21 has no artifacts or glitches and try to
+10:23 
+
+10:23 avoid Cuda it might be different for you
+10:25 
+
+10:25 but it was giving me artifacts
+10:30 
+
+10:30 thanks for watching and if you want to
+10:32 
+
+10:32 support the channel check out my
+10:33 
+
+10:33 cinematic starter pack

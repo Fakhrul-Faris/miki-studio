@@ -1,0 +1,326 @@
+[Music]
+Hey there, my name is Cameron. Welcome
+to 3D camera techniques. Today you are
+going to learn pro skills and become a
+master of the 3D camera inside of After
+Effects. Without these techniques, your
+motion design will lack dimension. And
+no one wants flat motion design. So
+let's dive in and get started. This is
+motion science.
+Let's begin with the 3D camera setup.
+Start with a new camera by going to
+layer new camera
+or use the shortcut commandoption
+shift C if you're on a Mac. In the
+camera settings window, there are two
+areas that need to be focused on. The
+first area is the camera type dropdown.
+In this dropdown, either a one node or a
+two node camera can be selected. The
+only difference between these two types
+of cameras is the way they orient. A one
+node camera orients around itself.
+[Music]
+A two node camera orients around a point
+of interest.
+[Music]
+You may be asking yourself, which camera
+mode should I use? The answer is simple.
+Start with the camera type that feels
+most comfortable to you. Camera settings
+can be changed at any time to fit the
+needs of evolving motion design, so
+you're never locked into one set camera.
+[Music]
+[Music]
+The second area of importance in the
+setup window are the presets. Presets
+are named according to focal lengths.
+Each one is meant to represent the
+behavior of a realworld camera.
+[Music]
+Each camera preset has different
+variables.
+The preset sets the angle of view,
+zoom,
+focus distance,
+focal length,
+and aperture values.
+Each camera preset has different
+variables. For example, the 15
+millimeter preset has a very wide field
+of view,
+[Music]
+whereas the 80 mm preset has a very
+narrow field of view.
+[Music]
+[Music]
+The best way to navigate the camera
+inside After Effects's 3D space is to
+utilize the view layouts. In the view
+layouts, there are multiple options for
+viewing a scene. two views horizontal
+and vertical,
+four views,
+four views left,
+right, and so on.
+Once inside a view layout, a 3D popup is
+chosen for the angle of view. 3D pop-up
+views can be from the front,
+left,
+top, and so on. Also, there are three
+custom 3D pop-up views that display a
+bird's eye perspective.
+In any view, the camera can be tracked
+on X,
+Y,
+or Z
+to fine-tune the perspective.
+But in the custom views, the camera can
+also be oriented in addition to tracked.
+A pro tip is to use the active camera
+view to create cuts within the scene.
+[Music]
+With two or more different cameras in
+the same timeline, the active camera
+view tells After Effects to cut to
+whatever camera the time indicator is
+above.
+[Music]
+To control the 3D camera, go to the tool
+window where the camera controls are
+located. The first camera tool is called
+the unified camera tool. It replicates
+the camera controls found in popular 3D
+programs where a three-b button mouse is
+used.
+The left,
+center,
+and right button each have individual
+camera controls assigned to them.
+Without a three-b button mouse, use the
+additional camera tools found beneath
+the unified camera tool. By selecting
+each of these tools and holding down the
+mouse button, the camera can orbit,
+track on X and Y,
+and track on Z.
+[Music]
+[Music]
+[Music]
+[Music]
+Each of these camera tools can be
+accessed more quickly by using the
+shortcut C on the keyboard. Each press
+of the C key will cycle through the next
+camera tool.
+[Music]
+Every property of the 3D camera can be
+animated by setting key frames. To set a
+key frame, click on the stopwatch of the
+desired property and then add two or
+more key frames to that property for the
+camera to move in between.
+By key framing the position and rotation
+properties, the 3D camera can emulate
+real world camera techniques like seen
+in the following examples.
+[Music]
+[Music]
+[Music]
+[Music]
+[Music]
+to have more individual control over the
+position properties of the camera. A pro
+tip is to control-click the position
+property and then select separate
+dimensions. By doing this, each position
+property is now a separate property and
+can be independently keyframed.
+[Music]
+The path between key frames that the 3D
+camera follows is called a motion path.
+Motion paths default to a linear line,
+but can be adjusted to be more
+interesting by simply adding bezier
+curves. By going to the tool window and
+selecting the pin tool drop- down menu,
+the convert vertex tool can be selected.
+With this tool, click and drag on any
+key frame and bezier handles will
+appear.
+Adjusting the bezier handles can help
+create more interesting motion paths for
+the camera to follow.
+A pro tip is to use the autoorient
+function found under layer transform
+autoorient.
+The camera will orient its perspective
+along the motion path that it follows.
+motion paths between key frames default
+to a constant rate of speed. The graph
+editor in After Effects represents this
+constant rate of speed as a straight
+line. Key frame assistance can slow down
+the rate of speed in relation to key
+frames. To make camera motion less
+jarring, select the position property
+key frames and go to animation key frame
+assistant easy ease.
+An alternative shortcut is to
+control-click the key frames and select
+key frame assistant easy ease. The
+motion between key frames is now
+represented as an arc in the graph
+editor instead of a straight line. The
+speed is no longer constant and the
+motion is less jarring.
+The camera's speed starts at zero,
+quickly builds up to 100%.
+To a speed of zero.
+[Music]
+By clicking on a key frame handle and
+dragging left
+or right, the speed arc can be refined
+even more.
+[Music]
+From four simple modes of key frame
+assistant easing, multiple interesting
+speed variations can be made.
+[Music]
+Nolles can be used as camera rigs to add
+secondary motion to already established
+key frames. With the camera selected, go
+to layer, camera, create orbit null. The
+camera is now parented to a null located
+in the center of the scene.
+Key frame the camera to rotate on its
+Z-axis.
+[Music]
+Also key frame the orbit null to rotate
+on its Yaxis.
+[Music]
+The camera movement is getting
+interesting.
+To make the camera movement even more
+exciting, add a wiggle expression. To
+add this expression, optionclick on the
+position property of the camera and type
+the text wiggle parentheses 5,
+25 parenthesis. Press enter on the
+numeric keypad or click outside the
+expression box to enable the expression.
+The camera now has a handheld feel to it
+on top of its already established
+motion.
+A pro tip is to take this one step
+further by controlling when the
+expression effect happens.
+Add another null layer to the timeline
+by going to layer, new, null. Then with
+the null layer selected, add the effect
+expression controls, slider control. Add
+another instance of the slider control.
+Rename the first slider frequency
+and the second slider amplitude.
+[Music]
+Now highlight the number five and pick
+whip it to the first slider.
+Highlight the number 25 and pick whip it
+to the amplitude.
+By key framing the frequency and
+amplitude sliders, the expression can be
+controlled.
+If you're asking yourself, can any
+number be plugged into this expression?
+The answer is yes. Lower numbers will
+have more subtle shake, while higher
+numbers will create more intense shake.
+[Music]
+motion blur in After Effects simulates
+the blur found when real world cameras
+capture on film. Computergenerated
+imagery or CG can have a very hardedge
+look to it. Motion blur is a subtle but
+very effective technique that helps to
+soften the hard edge and add realism.
+Add motion blur by first enabling the
+switch set for all layers in the
+timeline. Then activate the motion blur
+button just above the layers in the
+timeline.
+A pro tip is to increase or decrease the
+amount of motion blur in a composition
+by going to composition settings and
+clicking the advanced tab.
+Under this tab, settings can be adjusted
+for shutter angle,
+shutter phase,
+samples per frame,
+and adaptive sample limit.
+Each motion blur example seen here has
+slightly different settings and has a
+unique motion blur.
+[Music]
+The 3D camera has many options available
+to it. Zoom, like in a real camera,
+makes the image appear closer or further
+away.
+Depth of field brings the image pixels
+in and out of focus.
+Enable depth of field by switching it on
+under the options drop-down or by
+doubleclicking on the camera and
+enabling it in the settings window.
+Focus distance is the distance from the
+camera to the focus plane.
+Aperture helps to bring more or less
+dimension to a scene by increasing or
+decreasing it.
+Blur level is the amount of blur in the
+depth of field. 100% is a natural blur
+based on the camera preset.
+The iris shape defaults to fast
+rectangle. A pro tip is to stick with
+the fast rectangle whenever possible.
+The other iris shapes do have
+interesting characteristics, but render
+much slower than the fast rectangle.
+All of the iris settings are options for
+fine-tuning the shape of the iris
+and highlight gain, threshold, and
+saturation. All have to do with boosting
+luminosity on out of focus pixels.
+A second pro tip is to use the preset
+expressions found under layer camera.
+The first link focus to point of
+interest does just that.
+The expression sets the camera's focus
+distance to its point of interest.
+Link focus distance to layer sets the
+focus to the distance between the
+camera's position and another layer. Or
+in other words, this expression creates
+autofocus.
+[Music]
+And set focus distance to layer sets the
+focus distance at the current time to
+the distance at the current time.
+In this lesson, we explored how to set
+up the 3D camera, how to control the 3D
+camera, how to add first and secondary
+motion, and how to adjust the numerous
+options that help make the camera work
+for you.
+Now that you know the techniques to
+master the 3D camera, it's time to put
+that knowledge into action. Practice
+makes perfect, and the more you
+practice, the better you will become as
+a motion designer. I would love to hear
+your thoughts about this lesson, so
+please make sure to leave a comment
+below. Thanks for taking the time to
+watch and until next time, I'm Cameron
+and this is Motion Science.

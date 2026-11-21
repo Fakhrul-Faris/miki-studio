@@ -1,0 +1,373 @@
+00:00 have you ever wondered how you can do
+00:02 
+
+00:02 complex but still smooth camera
+00:04 
+
+00:04 animations or how you can add some extra
+00:06 
+
+00:06 realism to it besides that I will also
+00:09 
+
+00:09 go over most important things you need
+00:11 
+
+00:11 to know to master your next camera
+00:13 
+
+00:13 animation
+00:14 
+
+00:14 first I will show you the fundamentals
+00:16 
+
+00:16 of camera animations then I will go over
+00:18 
+
+00:18 the different methods and in the end I
+00:20 
+
+00:20 will show you an additional trick how
+00:22 
+
+00:22 you can add some realism to your camera
+00:24 
+
+00:24 animations
+00:25 
+
+00:26 let's start with the basics if you feel
+00:28 
+
+00:28 in real life there are different camera
+00:29 
+
+00:29 moves you can make like holding the
+00:31 
+
+00:31 camera in your hands run with it film
+00:33 
+
+00:33 from a car do a drone shot or in 3D you
+00:37 
+
+00:37 can also do complex fly-through
+00:38 
+
+00:38 animations or another thing you can do
+00:40 
+
+00:40 is attach your camera to a moving object
+00:43 
+
+00:43 or to a person to get a POV look so to
+00:46 
+
+00:46 find out what fits your scene and Story
+00:48 
+
+00:48 the best make sure to get inspiration
+00:50 
+
+00:50 from movies and short films and other
+00:53 
+
+00:53 people you look up to to learn when and
+00:56 
+
+00:56 which type fits the best and what is the
+00:58 
+
+00:58 most pleasing for the eye
+00:60 
+
+00:60 for example the movie Dune is known for
+01:03 
+
+01:03 its static camera which makes it very
+01:05 
+
+01:05 grounded and real in contrast to that
+01:07 
+
+01:07 many superhero movies use more Dynamic
+01:10 
+
+01:10 and crazy camera movements which again
+01:12 
+
+01:12 achieves a different look so in the end
+01:14 
+
+01:14 you just have to find out which camera
+01:16 
+
+01:16 move fits your scene the best another
+01:19 
+
+01:19 good rule is to keep it more wide angle
+01:21 
+
+01:21 if your camera is moving rapidly and for
+01:23 
+
+01:23 the close-up shots and higher focal
+01:25 
+
+01:25 length keep the movement slower because
+01:27 
+
+01:27 else it's really hard to follow what
+01:29 
+
+01:29 happens and just a little reminder I
+01:32 
+
+01:32 won't go into focal length and
+01:34 
+
+01:34 composition and all this stuff because
+01:35 
+
+01:35 in this video we will focus more on the
+01:37 
+
+01:37 animation itself
+01:41 
+
+01:41 okay so now let's get to the Practical
+01:44 
+
+01:44 stuff the first method and the method I
+01:46 
+
+01:46 use the most is to just use a few
+01:49 
+
+01:49 keyframes
+01:50 
+
+01:50 a trick I like to use to move around my
+01:52 
+
+01:52 camera very easily is to use the walk
+01:55 
+
+01:55 navigation mode with that you can just
+01:57 
+
+01:57 fly around with wasd and move your view
+02:01 
+
+02:01 onto the object with the mouse which is
+02:04 
+
+02:04 like in a game and it's really easy for
+02:06 
+
+02:06 me and you can access that by going into
+02:08 
+
+02:08 the camera mode and then press F3 and
+02:11 
+
+02:11 search for walk navigation or use the
+02:14 
+
+02:14 shortcut for it or set your own shortcut
+02:16 
+
+02:16 in the preferences
+02:18 
+
+02:18 let's continue
+02:20 
+
+02:20 set a start position to the camera set a
+02:23 
+
+02:23 keyframe then go to the end position and
+02:25 
+
+02:25 set another keyframe if you have a more
+02:28 
+
+02:28 complex animation you can also add more
+02:29 
+
+02:29 keyframes and keyframes in between
+02:32 
+
+02:32 what is important here is to activate
+02:34 
+
+02:34 and if needed to adjust the base of your
+02:36 
+
+02:36 curves for that just open up the graphs
+02:39 
+
+02:39 editor and press t on the keyboard and
+02:42 
+
+02:42 select bezier now the whole movement is
+02:44 
+
+02:44 smooth
+02:45 
+
+02:45 you can adjust the best here to fine
+02:47 
+
+02:47 tune the movement even more
+02:52 
+
+02:52 the second method is to animate the
+02:54 
+
+02:54 camera with a curve for that add in a
+02:57 
+
+02:57 curve and transform it to the camera
+02:59 
+
+02:59 path
+03:00 
+
+03:00 and then select the camera which should
+03:02 
+
+03:02 be at the world origin right now and
+03:05 
+
+03:05 then add a follow path constraint
+03:08 
+
+03:08 now keyframe the offset and it should
+03:10 
+
+03:10 follow the curve now you can also add a
+03:12 
+
+03:12 track 2 constraint to make sure the
+03:15 
+
+03:15 camera always faces the main object
+03:18 
+
+03:18 or just add a few rotation keyframes
+03:24 
+
+03:24 so let's get to the third method this is
+03:27 
+
+03:27 to attach the camera to an object or a
+03:29 
+
+03:29 person
+03:30 
+
+03:30 for the object just move the camera in
+03:32 
+
+03:32 place and parent it with Ctrl p and make
+03:35 
+
+03:35 sure to keep transformation now the
+03:37 
+
+03:37 camera should follow the object even if
+03:39 
+
+03:39 it's animated
+03:41 
+
+03:41 if you want to add it to the head or
+03:43 
+
+03:43 chest or arm or whatever animated
+03:45 
+
+03:45 character to get the POV look add a
+03:48 
+
+03:48 child of constraint and select the rig
+03:50 
+
+03:50 and now you can also select the right
+03:52 
+
+03:52 bone and now it's parented to deadbones
+03:54 
+
+03:54 animation
+03:56 
+
+03:56 and now you just have to move the camera
+03:58 
+
+03:58 in place
+04:03 
+
+04:03 now let's get to the promise trick so in
+04:06 
+
+04:06 some camera movements you will get some
+04:08 
+
+04:08 camera Shake in real life for example if
+04:10 
+
+04:10 you film from a car or if you film
+04:12 
+
+04:12 handheld for that download the shakeify
+04:14 
+
+04:14 addon from Ian Hubert I have the link in
+04:16 
+
+04:16 the description and after installing you
+04:18 
+
+04:18 can customize the camera shake and add
+04:20 
+
+04:20 it on top of the already existing camera
+04:22 
+
+04:22 animation I hope I could help you and
+04:25 
+
+04:25 that you could learn something valuable
+04:26 
+
+04:26 from this video make sure to like the
+04:29 
+
+04:29 video if you liked it and dislike it if
+04:31 
+
+04:31 you don't and let me know in the
+04:32 
+
+04:32 comments if you have any questions
+04:34 
+
+04:34 make sure to check out my patreon
+04:36 
+
+04:36 channel and claim your 7 day free trial
+04:38 
+
+04:38 to get more exclusive tutorials and many
+04:41 
+
+04:41 other things I wish you all a great week
+04:43 
+
+04:43 goodbye
+04:47 
+
+04:47 foreign

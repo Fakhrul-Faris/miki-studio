@@ -1,0 +1,592 @@
+00:01 [music]
+00:07 
+
+00:07 [music]
+00:10 
+
+00:10 >> Let me start with a question. How many
+00:12 
+
+00:12 transitions do you think a high-end SaaS
+00:14 
+
+00:14 video actually needs? 10? 20? A whole
+00:17 
+
+00:17 plugin pack full of them? No. You just
+00:19 
+
+00:19 need three. [music] In this video, I'll
+00:21 
+
+00:21 explain each transition one by one with
+00:24 
+
+00:24 examples and how each transition works
+00:26 
+
+00:26 with examples from real client work. So,
+00:28 
+
+00:28 SaaS video transitions have evolved. The
+00:31 
+
+00:31 days of buying a motion row pack or
+00:33 
+
+00:33 relying on animation composer just to
+00:35 
+
+00:35 glue two scenes together, that era is
+00:37 
+
+00:37 over. Now, we're starting with the first
+00:39 
+
+00:39 one. So, make sure you stick around till
+00:41 
+
+00:41 the end because the last one is special.
+00:44 
+
+00:44 First up, morphic. This is the hardest
+00:47 
+
+00:47 of the three and also the most
+00:49 
+
+00:49 satisfying to pull off. Morphing happens
+00:51 
+
+00:51 when one shape or scene physically
+00:53 
+
+00:53 transforms into another to push the idea
+00:55 
+
+00:55 forward. Think of it like those clay
+00:57 
+
+00:57 shaping videos you have seen on
+00:59 
+
+00:59 Instagram or YouTube Reels. You have to
+01:01 
+
+01:01 structure it properly for it to not only
+01:03 
+
+01:03 work, but also look good. So, here's a
+01:06 
+
+01:06 clean example from my own work, my
+01:08 
+
+01:08 Realty Pro video. I morphed and moved
+01:11 
+
+01:11 circles to transition between scenes.
+01:13 
+
+01:13 One circle splits into two, they come
+01:16 
+
+01:16 apart, and that moment reveals the next
+01:18 
+
+01:18 scene underneath. Smooth, intentional,
+01:20 
+
+01:20 and it doesn't feel like a transition at
+01:22 
+
+01:22 all. It feels like the story just
+01:24 
+
+01:24 continued. So, you may ask, "What's the
+01:26 
+
+01:26 blueprint for morphing?" It's very
+01:28 
+
+01:28 simple. You just need to look for
+01:30 
+
+01:30 shapes. A circle into a square, that's
+01:32 
+
+01:32 morphing. A square into a rectangle,
+01:34 
+
+01:34 that's morphing. A rectangle into a 3D
+01:37 
+
+01:37 cylinder, still morphing. Shapes are the
+01:40 
+
+01:40 building blocks in a morphing
+01:41 
+
+01:41 transition. Let me show you step by step
+01:43 
+
+01:43 how this works. So, here we have two
+01:46 
+
+01:46 scenes. In the first one, there's a
+01:48 
+
+01:48 square, and the second one, there's a
+01:49 
+
+01:49 rectangle. So, first, I will hide all
+01:52 
+
+01:52 the other elements. I then morph the
+01:54 
+
+01:54 square into rectangle, animate the other
+01:56 
+
+01:56 elements around it, and boom, we have
+01:58 
+
+01:58 transition without the viewer even
+02:00 
+
+02:00 noticing it was a transition. Now,
+02:02 
+
+02:02 morphing doesn't always go shape to
+02:04 
+
+02:04 shape in a straight line. Sometime it
+02:06 
+
+02:06 takes a creative detour.
+02:09 
+
+02:09 Let me explain with an example. This
+02:10 
+
+02:10 scene morphed into a pill-like shape
+02:12 
+
+02:12 that evolved into a chain design. But if
+02:14 
+
+02:14 you zoom out, you'll realize that this
+02:16 
+
+02:16 series of document is essentially a
+02:18 
+
+02:18 square, and that square is morphing into
+02:20 
+
+02:20 a pill, and that pill is an element of a
+02:23 
+
+02:23 chain shape, which I used in the next
+02:24 
+
+02:24 scene. So, it wasn't a direct morph, but
+02:27 
+
+02:27 still a morph. Same idea, but different
+02:29 
+
+02:29 execution. Here's another example that
+02:31 
+
+02:31 doesn't involve shapes at all, and it's
+02:33 
+
+02:33 from the Google Gemini Canvas video. To
+02:36 
+
+02:36 communicate the idea of collaboration,
+02:37 
+
+02:37 they scatter an entire sentence across
+02:39 
+
+02:39 the screen, morph it into a completely
+02:41 
+
+02:41 different sentence, and then bring
+02:43 
+
+02:43 everything back together to form the
+02:44 
+
+02:44 word collaboration.
+02:46 
+
+02:46 Next step is overlay transition.
+02:48 
+
+02:48 Honestly, this one is borderline unfair
+02:51 
+
+02:51 because of how simple it is and how good
+02:54 
+
+02:54 it looks. An overlay transition happen
+02:56 
+
+02:56 when you place one element on top of
+02:57 
+
+02:57 another. Either bring a new element up
+02:59 
+
+02:59 from the bottom or top to cover the
+03:01 
+
+03:01 screen, or moving the existing element
+03:04 
+
+03:04 away to reveal what's hiding behind it.
+03:06 
+
+03:06 And that's it. No complex path
+03:08 
+
+03:08 animation, no shape wizardry, just one
+03:10 
+
+03:10 thing sliding over another. Here's how I
+03:13 
+
+03:13 used it in a recent client video.
+03:15 
+
+03:15 >> [music]
+03:15 
+
+03:15 >> In this video, I open with a logo
+03:17 
+
+03:17 animation, and for the next scene, it
+03:19 
+
+03:19 was required to show the app interface.
+03:21 
+
+03:21 So, instead of a hard cut or dissolve,
+03:23 
+
+03:23 which would have looked generic, brought
+03:25 
+
+03:25 a smartphone up from the bottom of the
+03:26 
+
+03:26 screen. It rose up, covered the entire
+03:29 
+
+03:29 frame, and boom, we are inside the app.
+03:32 
+
+03:32 Simple and straightforward. In another
+03:35 
+
+03:35 sequence, I overlaid a single UI element
+03:37 
+
+03:37 directly over some text. That way, I
+03:39 
+
+03:39 transitioned smoothly without breaking
+03:42 
+
+03:42 the flow or changing the scene. And this
+03:44 
+
+03:44 is exactly what makes this transition
+03:46 
+
+03:46 work so well. It never breaks the flow.
+03:49 
+
+03:49 It never feels like something has
+03:50 
+
+03:50 changed. The viewer just feel like they
+03:52 
+
+03:52 have moved forward. You can use it
+03:54 
+
+03:54 multiple time in a single video, but
+03:56 
+
+03:56 make sure it never gets repetitive. To
+03:58 
+
+03:58 avoid that, give every overlay a
+03:60 
+
+03:60 slightly different execution. There's
+04:02 
+
+04:02 another way to use the overlay
+04:03 
+
+04:03 transition through a connecting element.
+04:05 
+
+04:05 In the $950 breakdown video, I used a
+04:07 
+
+04:07 swallow as a connecting element between
+04:09 
+
+04:09 two different scenes to create a
+04:11 
+
+04:11 transition. With the right timing, it
+04:13 
+
+04:13 feels completely seamless.
+04:16 
+
+04:16 Now, it's time to talk about the finite
+04:18 
+
+04:18 transition, my personal favorite, the
+04:20 
+
+04:20 one I use in almost every single video I
+04:22 
+
+04:22 make, and it's called the cut
+04:24 
+
+04:24 transition. A cut transition is a
+04:26 
+
+04:26 deliberate flow breaker. You know those
+04:27 
+
+04:27 moments in a video where everything is
+04:29 
+
+04:29 running smoothly, the music is nice, the
+04:31 
+
+04:31 animations are flowing, and sometimes
+04:33 
+
+04:33 during these moments, you must have
+04:35 
+
+04:35 noticed that the viewers has mentally
+04:36 
+
+04:36 checked out. The cut transition is how
+04:39 
+
+04:39 you snap them back. An abrupt,
+04:41 
+
+04:41 intentional cut, when executed
+04:43 
+
+04:43 correctly, jolts the viewer attention
+04:45 
+
+04:45 back to the screen. But, here's where it
+04:47 
+
+04:47 gets interesting. Just like the other
+04:49 
+
+04:49 transitions, the cut transition has
+04:51 
+
+04:51 evolved. It now has more depth than
+04:53 
+
+04:53 ever. It works in two directions, and I
+04:55 
+
+04:55 call them same motion and same design.
+04:58 
+
+04:58 Let me explain with an example. In the
+04:60 
+
+04:60 same client video I showed you earlier,
+05:02 
+
+05:02 I had two scenes that were completely
+05:03 
+
+05:03 different. Different colors, different
+05:05 
+
+05:05 layout, totally different energy. There
+05:07 
+
+05:07 was no way I could use morphing here.
+05:10 
+
+05:10 There's nothing to morph into, and
+05:11 
+
+05:11 overlay transition may not be very
+05:13 
+
+05:13 helpful just because a transition here
+05:16 
+
+05:16 that could build intensity right before
+05:18 
+
+05:18 the product reveal. So, here's what I
+05:20 
+
+05:20 did. In the first scene, I animated the
+05:22 
+
+05:22 text entering from left to right. Then,
+05:24 
+
+05:24 I cut to the second scene and applied
+05:26 
+
+05:26 that exact same left-to-right motion to
+05:28 
+
+05:28 the text there. The eyes were locked on
+05:31 
+
+05:31 the text, and that motion was playing
+05:33 
+
+05:33 subtly in the back of the viewer's mind.
+05:35 
+
+05:35 >> only to have them disappear or leave
+05:37 
+
+05:37 jobs unfinished. Every month, it's the
+05:40 
+
+05:40 same chaos.
+05:42 
+
+05:42 >> But, as you can see, the cut now feels
+05:45 
+
+05:45 intentional. It feels powerful, and the
+05:47 
+
+05:47 shared motion makes your brain feel that
+05:49 
+
+05:49 this is one continuous sequence instead
+05:51 
+
+05:51 of two unrelated scenes. Looks cool,
+05:53 
+
+05:53 right? The second way to use a cut
+05:55 
+
+05:55 transition is when both scenes share a
+05:57 
+
+05:57 similar visual design. The same UI
+05:59 
+
+05:59 element, a similar layout, even matching
+06:02 
+
+06:02 color blocks. You can see here, both
+06:04 
+
+06:04 scenes had similar UI elements. I
+06:06 
+
+06:06 dropped in a cut, and it landed
+06:07 
+
+06:07 perfectly. And the best part, when you
+06:10 
+
+06:10 can combine both approaches, same motion
+06:12 
+
+06:12 and same design in a single cut, the
+06:14 
+
+06:14 result is mind-blowing. Just like here.
+06:18 
+
+06:18 So, now you have seen all three
+06:20 
+
+06:20 transitions, morphing, overlay, and cut.
+06:22 
+
+06:22 I'm going to show you two scenes. You
+06:24 
+
+06:24 have 10 seconds. Use your own brain to
+06:26 
+
+06:26 figure out which transition fits, and
+06:28 
+
+06:28 how you would execute it. Here are the
+06:30 
+
+06:30 two scenes.
+06:41 
+
+06:41 If you have figured out, write the name
+06:43 
+
+06:43 of the transition and a short note on
+06:45 
+
+06:45 how you would execute it. And I'll make
+06:47 
+
+06:47 sure to share my feedback in the
+06:49 
+
+06:49 comments. So, all you need are these
+06:51 
+
+06:51 three transitions to build seamless
+06:53 
+
+06:53 high-end SaaS videos. Master these
+06:55 
+
+06:55 three, and you'll stop asking how do I
+06:57 
+
+06:57 get from scene A to scene B, and start
+06:59 
+
+06:59 asking which of these three fits best
+07:02 
+
+07:02 here, which is a much better question to
+07:04 
+
+07:04 be asking. See you in the next one. Take
+07:06 
+
+07:06 care. Bye-bye.
+07:08 
+
+07:08 >> [music]
+07:12 
+
+07:12 [music]

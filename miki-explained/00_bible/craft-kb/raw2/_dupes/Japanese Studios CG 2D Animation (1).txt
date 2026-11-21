@@ -1,0 +1,1135 @@
+00:04 Good day, class creatives. And in this
+00:06 
+
+00:06 video, we're going to look into the
+00:07 
+
+00:07 hidden 3D pipeline behind some of
+00:09 
+
+00:09 anime's best shots. To look into how the
+00:11 
+
+00:11 top studios in Japan create high-end 2D
+00:13 
+
+00:13 animation and the secret workflows
+00:16 
+
+00:16 hidden in 2D and CG workflows. We'll
+00:18 
+
+00:18 talk about how top Japanese studios
+00:20 
+
+00:20 utilize CG to push their handcrafted 2D
+00:22 
+
+00:22 frames, taking advantage of modern-day
+00:24 
+
+00:24 3D tech, intense dedication poured into
+00:27 
+
+00:27 every sequence, and some detailed
+00:29 
+
+00:29 insights into Genga and 2D pencil tests.
+00:32 
+
+00:32 We'll also look at unique composition
+00:34 
+
+00:34 techniques and the incredible process of
+00:36 
+
+00:36 background paintings that push these
+00:38 
+
+00:38 masterpieces over the top. Let's get
+00:40 
+
+00:40 into it.
+00:43 
+
+00:43 Japanese anime is known for its
+00:44 
+
+00:44 incredible action and stylized 2D
+00:46 
+
+00:46 animation, but it also uses CG in ways
+00:49 
+
+00:49 that enhance those handcrafted 2D
+00:51 
+
+00:51 animations.
+00:53 
+
+00:53 Let's look at some of the seamless
+00:54 
+
+00:54 integrations of how these 2D characters
+00:56 
+
+00:56 and environments are built and combined
+00:57 
+
+00:57 with 3D assets for final backgrounds and
+00:60 
+
+00:60 layout planning phases.
+01:02 
+
+01:02 Take a look at how Jujutsu Kaisen uses
+01:04 
+
+01:04 Blender to plan out their patterns for a
+01:06 
+
+01:06 3D asset to plan out some of the
+01:08 
+
+01:08 storytelling elements and enhance their
+01:09 
+
+01:09 character storytelling.
+01:11 
+
+01:11 Shooting video reference is not just for
+01:13 
+
+01:13 Western American style of animation.
+01:15 
+
+01:15 Japanese animation also heavily uses
+01:18 
+
+01:18 video reference to plan out motions,
+01:19 
+
+01:19 storyboards, layout, and the whole
+01:21 
+
+01:21 planning process.
+01:23 
+
+01:23 Using an iPhone to map movements to a 3D
+01:25 
+
+01:25 character is becoming more of a common
+01:27 
+
+01:27 practice these days.
+01:29 
+
+01:29 And Japan is adopting technology to get
+01:31 
+
+01:31 to the finish line faster, so they can
+01:33 
+
+01:33 focus on the art rather than the
+01:34 
+
+01:34 technical details.
+01:36 
+
+01:36 In this case, Move AI's app is being
+01:38 
+
+01:38 used to send the animation data over to
+01:40 
+
+01:40 a 3D character in Blender.
+01:42 
+
+01:42 This doesn't have to be perfect motion,
+01:44 
+
+01:44 as it's being used for previous
+01:46 
+
+01:46 planning.
+01:47 
+
+01:47 This modern-day technology helps the
+01:48 
+
+01:48 team focus on what matters most, the
+01:50 
+
+01:50 soul and art of anime.
+01:52 
+
+01:52 Japanese anime has always been using 3D
+01:54 
+
+01:54 technology in in movies, all the way
+01:56 
+
+01:56 back to classics like Pat Labor, to
+01:59 
+
+01:59 create some sweeping camera animations
+02:00 
+
+02:00 that could take tons of time and money
+02:02 
+
+02:02 to do by hand.
+02:03 
+
+02:03 Mixing 2D sketches into 3D environment
+02:06 
+
+02:06 is also a common technique used in the
+02:08 
+
+02:08 planning layout phases that can then
+02:10 
+
+02:10 directly be used for the pencil test and
+02:12 
+
+02:12 final 2D animation. Elements of the
+02:14 
+
+02:14 backgrounds were placed on layers to
+02:16 
+
+02:16 give depth to the shot. In 3D, the 2D
+02:19 
+
+02:19 elements are placed to give a multiplane
+02:20 
+
+02:20 camera style effect. CG with tune
+02:23 
+
+02:23 shaders animated in 3D work incredibly
+02:25 
+
+02:25 well for inanimate objects that might be
+02:27 
+
+02:27 challenging to animate in accurate
+02:29 
+
+02:29 perspective.
+02:30 
+
+02:30 And when the paint overs are applied,
+02:32 
+
+02:32 the animation blends seamlessly into the
+02:34 
+
+02:34 hand-painted backgrounds.
+02:35 
+
+02:35 The goal is for the user to not focus on
+02:37 
+
+02:37 the tech, but the storytelling and a
+02:39 
+
+02:39 cohesive viewing experience with both 2D
+02:42 
+
+02:42 and 3D combined perfectly.
+02:45 
+
+02:45 Just like in the US, Japan uses motion
+02:47 
+
+02:47 captures. And in this case, we can see
+02:49 
+
+02:49 real-life martial artists performing on
+02:51 
+
+02:51 the mocap stage, so the 2D fight
+02:53 
+
+02:53 choreography looks believable and
+02:55 
+
+02:55 authentic.
+02:56 
+
+02:56 It also helps them plan out the best
+02:58 
+
+02:58 camera angles for the sequences.
+03:00 
+
+03:00 Although it was not used in the final
+03:02 
+
+03:02 movie, Japan artists even experimented
+03:04 
+
+03:04 with VR to paint virtually in 3D space.
+03:07 
+
+03:07 This proves how Japan is always
+03:09 
+
+03:09 experimenting with new tech for their
+03:10 
+
+03:10 productions to see how they can push the
+03:13 
+
+03:13 medium in new ways.
+03:14 
+
+03:14 Speaking of bridging the gap between 2D
+03:16 
+
+03:16 and 3D to save on production time, the
+03:18 
+
+03:18 technology studios are using to generate
+03:20 
+
+03:20 3D base meshes right now is evolving
+03:22 
+
+03:22 incredibly fast. And that brings us to
+03:25 
+
+03:25 one of the most powerful 3D asset
+03:26 
+
+03:26 generators on the market today, who is
+03:28 
+
+03:28 the sponsor of this segment, Tripo AI.
+03:31 
+
+03:31 Currently, there is a massive
+03:32 
+
+03:32 misconception out there right now that
+03:34 
+
+03:34 AI 3D generators are going to completely
+03:36 
+
+03:36 replace artists. Our lead 3D architect,
+03:39 
+
+03:39 Dave Arredondo, will tell you firsthand,
+03:41 
+
+03:41 they absolutely aren't. What they are
+03:43 
+
+03:43 doing though is completely eliminating
+03:45 
+
+03:45 that tedious initial blocking phase.
+03:47 
+
+03:47 The biggest kryptonite for generative 3D
+03:49 
+
+03:49 is ambiguity, but when a studio feeds a
+03:51 
+
+03:51 really clean, precise 2D hand-painted
+03:54 
+
+03:54 concept into an engine like Tripo with
+03:56 
+
+03:56 orthographic views, the pipeline just
+03:58 
+
+03:58 accelerates massively. In a very short
+04:00 
+
+04:00 period of time, Tripo interprets that 2D
+04:03 
+
+04:03 concept and generates a highly accurate
+04:05 
+
+04:05 3D volumetric block-in.
+04:07 
+
+04:07 It nails the exact silhouette
+04:08 
+
+04:08 established in your hand-painted
+04:10 
+
+04:10 concept. But, here's the reality of the
+04:12 
+
+04:12 professional industry. This is a rapid
+04:14 
+
+04:14 base mesh,
+04:16 
+
+04:16 just like the one you use inside ZBrush.
+04:18 
+
+04:18 It's not a final production-ready
+04:20 
+
+04:20 optimized asset.
+04:22 
+
+04:22 That raw topology still requires a
+04:23 
+
+04:23 master technical artist to take it into
+04:25 
+
+04:25 ZBrush to clean up the artifacts, and
+04:27 
+
+04:27 then into software like Maya or Blender
+04:30 
+
+04:30 to establish proper edge flow and
+04:31 
+
+04:31 optimization before it ever gets dropped
+04:33 
+
+04:33 into a game engine.
+04:35 
+
+04:35 But, by using Tripo to translate your
+04:37 
+
+04:37 hand-drawn 2D concepts directly into 3D
+04:39 
+
+04:39 volume, studios are now bypassing that
+04:41 
+
+04:41 initial sculpting block-in phase and
+04:44 
+
+04:44 saving critical days of R&D. Tripo is
+04:46 
+
+04:46 rapidly becoming the new standard for
+04:48 
+
+04:48 converting 2D concepts into 3D space.
+04:51 
+
+04:51 Click the link down in the description
+04:52 
+
+04:52 to try Tripo for yourself and see how it
+04:54 
+
+04:54 can accelerate your own base mesh pro
+04:56 
+
+04:56 workflows.
+04:57 
+
+04:57 It's not uncommon for Japanese directors
+04:59 
+
+04:59 to be hands-on with the final
+05:01 
+
+05:01 composition of 2D and 3D elements to get
+05:03 
+
+05:03 shots just right and exactly how they
+05:06 
+
+05:06 envisioned it.
+05:07 
+
+05:07 Something as simple as a turn of the
+05:08 
+
+05:08 head has to be just right.
+05:11 
+
+05:11 Through compositing, this is where the
+05:12 
+
+05:12 magic happens so that all of the
+05:14 
+
+05:14 elements are blended seamlessly
+05:16 
+
+05:16 together.
+05:17 
+
+05:17 Tracking arcs ensures that the polish is
+05:19 
+
+05:19 dialed in to perfection.
+05:21 
+
+05:21 It's the compositing's lighting and
+05:23 
+
+05:23 effects that gives that extra dimension
+05:25 
+
+05:25 to the final product.
+05:27 
+
+05:27 Adding subtle details like paper
+05:28 
+
+05:28 textures to the 2D flat shaders gives
+05:31 
+
+05:31 that extra dimension that can be felt
+05:33 
+
+05:33 rather than seen at first glance.
+05:35 
+
+05:35 Here we can see how the normal 2D shader
+05:37 
+
+05:37 looks compared to the final special
+05:39 
+
+05:39 effects that are applied in Photoshop.
+05:41 
+
+05:41 The added textures and brush strokes
+05:43 
+
+05:43 give extra nuance to the painted cell.
+05:46 
+
+05:46 They even have their own personal stock
+05:48 
+
+05:48 of textures to get it just right.
+05:50 
+
+05:50 By combining these textures, the artist
+05:52 
+
+05:52 can get a unique effect that makes the
+05:54 
+
+05:54 assets look realistic but stylized at
+05:56 
+
+05:56 the same time, which gives it that extra
+05:58 
+
+05:58 soul that we come to love with anime
+06:00 
+
+06:00 food shots.
+06:02 
+
+06:02 Compositing is the bridge that connects
+06:03 
+
+06:03 the 2D with effects and CG elements.
+06:06 
+
+06:06 It's also not uncommon for animators to
+06:08 
+
+06:08 break up parts of the character so that
+06:10 
+
+06:10 they can be moved in separate parts,
+06:12 
+
+06:12 speeding up the production process.
+06:15 
+
+06:15 Let's look at the creative way that a
+06:16 
+
+06:16 sticker pack was scanned and used to
+06:18 
+
+06:18 create a rainbow effect on the
+06:20 
+
+06:20 animation. The effect amazingly gives
+06:22 
+
+06:22 the shimmer and highlights that the
+06:24 
+
+06:24 stickers give in the final composite.
+06:27 
+
+06:27 Background paintings are equally if not
+06:29 
+
+06:29 more important than the 2D animation as
+06:31 
+
+06:31 it's often what gives the hand crafted
+06:33 
+
+06:33 effect to anime.
+06:34 
+
+06:34 For Ghost in the Shell, the art team
+06:36 
+
+06:36 went to Hong Kong and took reference
+06:38 
+
+06:38 photos for the setting. Many of these
+06:40 
+
+06:40 photos were used as direct reference by
+06:42 
+
+06:42 background artists.
+06:43 
+
+06:43 Haruhiko Higami took the black and white
+06:46 
+
+06:46 photos and art director Hiromasa Ogura
+06:49 
+
+06:49 took color photos. The comparisons
+06:52 
+
+06:52 between the photos shot for reference
+06:53 
+
+06:53 and the sketches are incredible to look
+06:55 
+
+06:55 at. From initial sketch to rough paint,
+06:58 
+
+06:58 we can see exactly how the photo
+06:59 
+
+06:59 references gave that extra layer of
+07:01 
+
+07:01 realism and cinematic appeal that made
+07:04 
+
+07:04 the movie a classic masterpiece.
+07:06 
+
+07:06 The cinematic realism is directly
+07:08 
+
+07:08 achieved by the team's research during
+07:10 
+
+07:10 pre-production.
+07:11 
+
+07:11 Extra details like how humidity affects
+07:14 
+
+07:14 the contrast of the buildings were all
+07:16 
+
+07:16 considered using the reference material
+07:18 
+
+07:18 to craft the final production background
+07:20 
+
+07:20 paintings.
+07:21 
+
+07:21 When it comes to environment, sometimes
+07:23 
+
+07:23 the animator will draw the layout or
+07:24 
+
+07:24 they might copy the background. Before
+07:27 
+
+07:27 layout or storyboards are even drawn,
+07:29 
+
+07:29 background artists draw the background
+07:30 
+
+07:30 settings as line art for animators to
+07:32 
+
+07:32 use. Like this room drawing scene here.
+07:35 
+
+07:35 The animators take that drawing and
+07:37 
+
+07:37 create the storyboards or layout while
+07:39 
+
+07:39 referencing the background setting.
+07:41 
+
+07:41 It's common for the modern Japanese
+07:42 
+
+07:42 artists to use both digital and
+07:44 
+
+07:44 traditional methods. Although it's rare
+07:46 
+
+07:46 to see traditional painting methods used
+07:47 
+
+07:47 today,
+07:48 
+
+07:48 when it is used, it really hits hard to
+07:50 
+
+07:50 the viewer since it's starting to become
+07:52 
+
+07:52 a less common practice in modern day
+07:54 
+
+07:54 anime. Check out this awesome cutout
+07:56 
+
+07:56 shot of how a moving cloud was
+07:57 
+
+07:57 composited under a puddle layer in
+07:59 
+
+07:59 Akira. There's something magical that
+08:01 
+
+08:01 happens when the curtain is pulled back
+08:03 
+
+08:03 on some of these Macross Plus
+08:04 
+
+08:04 hand-painted cells and backgrounds.
+08:07 
+
+08:07 Even as the user's camera is just
+08:08 
+
+08:08 filming the paintings casually, they
+08:10 
+
+08:10 look incredibly cinematic when zoomed in
+08:12 
+
+08:12 on them. Something that was done even in
+08:15 
+
+08:15 the days of old Disney classics is still
+08:17 
+
+08:17 used today with 2D animation in Japan,
+08:19 
+
+08:19 the art of rotoscoping.
+08:21 
+
+08:21 The film video reference locks in the
+08:22 
+
+08:22 timing and helps the artist push the
+08:24 
+
+08:24 silhouette and plan the cinematic camera
+08:26 
+
+08:26 angle. You might not realize something
+08:28 
+
+08:28 was completely planned out and shot in
+08:30 
+
+08:30 live action at first glance. Since
+08:32 
+
+08:32 silhouette plays such a huge role in
+08:33 
+
+08:33 strong animation and cinematography, the
+08:36 
+
+08:36 actor shot might even wear a wig to
+08:38 
+
+08:38 simulate exactly how the shot frames for
+08:40 
+
+08:40 the final animation.
+08:41 
+
+08:41 Special filming methods unique to the
+08:43 
+
+08:43 rotoscope technique can be seen here and
+08:45 
+
+08:45 there throughout Japanese anime.
+08:47 
+
+08:47 Not only are the characters used for the
+08:49 
+
+08:49 rotoscope, but the camera movements as
+08:51 
+
+08:51 well.
+08:52 
+
+08:52 Once the video footage has been shot,
+08:54 
+
+08:54 it's transferred to a still image that
+08:55 
+
+08:55 is then traced to generate the pencil
+08:57 
+
+08:57 test.
+08:58 
+
+08:58 With this technique, the artist can
+08:59 
+
+08:59 focus entirely on the art itself.
+09:02 
+
+09:02 For complex shots like playing a piano
+09:04 
+
+09:04 or handling food prep, rotoscoping can
+09:06 
+
+09:06 be extremely useful to capture the exact
+09:08 
+
+09:08 movements of masters of their craft for
+09:11 
+
+09:11 visual accuracy.
+09:13 
+
+09:13 But whether you use rotoscoping or not,
+09:14 
+
+09:14 one thing remains true is that the best
+09:16 
+
+09:16 anime and manga relies on strong
+09:18 
+
+09:18 fundamentals of drawing skills and
+09:20 
+
+09:20 composition.
+09:21 
+
+09:21 Anatomy, proportions, and perspectives.
+09:24 
+
+09:24 But sometimes people have not clear
+09:26 
+
+09:26 vision about perspective. So, like for
+09:29 
+
+09:29 instance, beginners all this
+09:33 
+
+09:33 panel and angles, one vanishing point,
+09:36 
+
+09:36 it's very simple, stiff,
+09:39 
+
+09:39 and monotonous. That was now sensei, a
+09:42 
+
+09:42 professional manga instructor in Tokyo.
+09:44 
+
+09:44 Here in the West, art schools often push
+09:46 
+
+09:46 anime and manga completely to the side.
+09:49 
+
+09:49 They might teach you the basic rules of
+09:50 
+
+09:50 art, but they don't teach the soul of
+09:52 
+
+09:52 the Japanese pipeline. Things like
+09:54 
+
+09:54 specialized panel work, inking, screen
+09:56 
+
+09:56 tones, and the storytelling techniques
+09:58 
+
+09:58 used by Shonen Jump pros.
+10:00 
+
+10:00 For the longest time, the biggest hurdle
+10:02 
+
+10:02 for Western artists has been the locked
+10:04 
+
+10:04 door to those industry secrets. That is
+10:06 
+
+10:06 exactly why Class Creatives have
+10:07 
+
+10:07 partnered with DIL Japan. We wanted to
+10:09 
+
+10:09 unlock that door for you.
+10:11 
+
+10:11 We put together the Intro to Manga: The
+10:13 
+
+10:13 Japan Experience course, and we made it
+10:15 
+
+10:15 completely free. If you want to become
+10:17 
+
+10:17 the manga artist of your dreams, it's
+10:19 
+
+10:19 linked in the description.
+10:20 
+
+10:20 This free program takes you inside
+10:22 
+
+10:22 Tokyo's top academy to learn these exact
+10:24 
+
+10:24 techniques.
+10:25 
+
+10:25 Even better, you can share your goals
+10:27 
+
+10:27 with us inside the course, and we'll put
+10:29 
+
+10:29 your student profile directly in front
+10:30 
+
+10:30 of the school's director. Click the link
+10:32 
+
+10:32 to grab your free access and start
+10:34 
+
+10:34 learning from the masters. If you're not
+10:36 
+
+10:36 familiar with the term genga, or the
+10:38 
+
+10:38 literal meaning original pictures, it
+10:40 
+
+10:40 refers to the key animation drawings in
+10:42 
+
+10:42 the animation production process. In
+10:44 
+
+10:44 particular, it's also our favorite part
+10:47 
+
+10:47 of anime to watch. To see exactly the
+10:49 
+
+10:49 detailed rough drawings that were done
+10:51 
+
+10:51 for the key poses, acting, and rough
+10:52 
+
+10:52 sketches for the animated characters.
+10:55 
+
+10:55 Genga is not to be confused with pencil
+10:57 
+
+10:57 tests, as that is more of the rougher
+10:59 
+
+10:59 earlier stages of 2D animation.
+11:01 
+
+11:01 There's just something that draws our
+11:03 
+
+11:03 attention here at Class Creatives to
+11:04 
+
+11:04 genga when it comes to 2D anime. The
+11:07 
+
+11:07 rough, raw nature of it just feels like
+11:09 
+
+11:09 nothing else when it comes to other
+11:10 
+
+11:10 types of animation in the world.
+11:13 
+
+11:13 So, let's take a few moments to look and
+11:14 
+
+11:14 admire in awe at some of these amazing
+11:16 
+
+11:16 genga cinematic sequences that we can
+11:19 
+
+11:19 never get enough of.
+11:20 
+
+11:20 Notice how each one has its own unique
+11:22 
+
+11:22 style, flare, and technique. They are
+11:25 
+
+11:25 literal works of art in motion. Every
+11:27 
+
+11:27 single one unique to itself and
+11:29 
+
+11:29 perfectly matched to the storytelling.
+11:31 
+
+11:31 This is what gives that soul to Japanese
+11:33 
+
+11:33 anime and why it's heavily referenced in
+11:35 
+
+11:35 Western animation productions of today
+11:38 
+
+11:38 like Arcane, Spider-Verse, and other
+11:40 
+
+11:40 push mediums blending the 3D and 2D art
+11:42 
+
+11:42 forms.
+11:43 
+
+11:43 But even with those, there's still
+11:44 
+
+11:44 something unmatched to these
+11:45 
+
+11:45 hand-crafted, raw, animated cinematic
+11:48 
+
+11:48 clips that we could watch over and over
+11:50 
+
+11:50 again.
+11:51 
+
+11:51 Well, that about wraps up this video on
+11:53 
+
+11:53 how the hidden pipeline behind anime's
+11:55 
+
+11:55 best shots and how the top studios in
+11:57 
+
+11:57 Japan break the rules of 2D animation
+11:60 
+
+11:60 compared to traditional Western
+12:01 
+
+12:01 standards.
+12:02 
+
+12:02 We hope you enjoyed this detailed look
+12:04 
+
+12:04 at the secrets of how 2D and 3D
+12:06 
+
+12:06 animation are merged together in anime
+12:08 
+
+12:08 compositing techniques.
+12:10 
+
+12:10 So, we can share with you exactly what
+12:11 
+
+12:11 happens behind the scenes when 2D and 3D
+12:13 
+
+12:13 animation is created in Japanese anime.
+12:17 
+
+12:17 We'll be doing a lot more of these
+12:18 
+
+12:18 videos together, so let us know your
+12:20 
+
+12:20 favorite techniques Japanese anime uses
+12:22 
+
+12:22 and what you'd like to see from us next
+12:24 
+
+12:24 in the comments.
+12:30 
+
+12:30 And uh don't forget to like and
+12:32 
+
+12:32 subscribe and we'll see you in the next
+12:33 
+
+12:33 one. Perfect.

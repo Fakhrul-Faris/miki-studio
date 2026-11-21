@@ -1,0 +1,105 @@
+00:00 It happens to every animator.
+00:02 There's one keyframe and the other keyframe.
+00:05 But where do you put the in-between?
+00:12 My name is Florian and this is Amazing Animation Analysis.
+00:16 In-betweening can be tricky business.
+00:18 Even long time animation
+pros still have problems with in-betweening.
+00:22 That's why Japanese studios love them so much.
+00:26 So today I want to talk about a technique
+00:28 that will help YOU and improve your animations drastically.
+00:31 And that technique is called thirds.
+00:33 To explain, I'll be using two circles, like so.
+00:36 Circle A is the first position 
+and circle B the second.
+00:39 A is on frame one and B is on frame two.
+00:42 Right now, the circle just goes from A to B.
+00:44 We don't know if the circle slowing down, speeding
+up, or in what way it moves.
+00:49 It just sort of teleports.
+00:50 Now we're going to add some frames in between the poses.
+00:53 Say you want the circle to start at A and slow down to B.
+00:56 And we don't want to use too many frames.
+00:58 If it needs to slow down.
+00:59 We need the next circle to be closer to B.
+01:01 That way the distance the circle travels shrinks.
+01:04 Now that's easy when it's just a circle.
+01:06 But what about when it's a detailed figure going from point
+A to B?
+01:09 You wouldn't know exactly where to put the lines.
+01:11 And further frames would just get messier and messier.
+01:14 because of this,
+01:14 What most people do is they put a frame smack dab
+in the middle of A and B.
+01:18 Then they put a frame in the middle
+ of the new frame and frame B 
+01:22 and keep going until they're satisfied 
+with the amount of circle has slowed down.
+01:25 I call this using halves, because you 
+keep halving the distance between the frames,
+01:29 which makes in-betweening detailed figures a lot easier.
+Because you just draw the lines right in the middle.
+01:35 Now, for simplicity's
+sake, let's keep our example at four frames.
+01:38 When we play the animation,
+we see the circle slowing down.
+01:41 The distance the circle 
+travels keeps getting shorter.
+01:43 But there's a problem using halves.
+01:45 There is indeed a slowdown.
+01:47 When the circle goes from position
+A to the first in between.
+01:50 On to the second.
+01:51 But what's that?
+01:52 There's no slowdown between the first in-between
+the second and frame B, the distance is the same.
+01:57 And no matter how many times
+you put the frame in the middle, the last three frames
+02:01 will never experience a slowdown.
+02:02 The circle never actually slows down in the end.
+02:05 So what should we do?
+02:06 We could put a circle really close to frame B that way
+there's a slowdown.
+02:10 But this method can get sloppy.
+02:12 And remember, this example is just whith circles.
+02:15 So here's the solution.
+02:16 We put the circle in two thirds of the way
+between frame A and B and just look at it.
+02:21 The circle slows down.
+02:23 It slows down with just one frame in between A and B.
+02:26 Now, I'll admit, putting a line in between two other lines
+is easier than dividing them in thirds.
+02:31 But with practice, this can be done,
+and it becomes a lot less complicated.
+02:35 You can even give the circle a constant speed
+by putting it on a third and two thirds of the way.
+02:40 Now the distance is the same.
+02:41 I'm not saying just only use thirds.
+02:43 I'm not just some kind of evil third advocate.
+02:47 You should add it to your arsenal
+and combine it with putting frames in the middle.
+02:50 Here's an example.
+02:51 Let's say we want the circle to start slowly
+moving from A, pick up the speed and ease in on B.
+02:56 On detailed figures I’d first make positions A and B.
+02:59 After that, I put an in-between in the middle of A
+and B, then I create an in-between one thirds of the way
+03:04 between A and the first in between,
+then two thirds between, the first in-between and B,
+03:09 there's a speed up and a slow down
+halves in thirds together at last.
+03:13 If you add this in your arsenal and keep practicing,
+one day you could become an anime in-betweener.
+03:19 And you'll also be saying things like,
+03:21 One time I lived on just coffee milk 
+for a week and came down with a fever.
+03:25 And!
+03:26 In my time as an in-betweener,
+there was a period of about two years
+03:30 where I lived on flour mixed 
+with water and fried in a pan.
+03:33 Seriously Japan, pay your animators.
+03:36 That's it for this episode.
+03:37 Amazing Animation Analysis
+ is sponsored by these lovely patrons.
+03:41 Thanks for watching and see on Friday.

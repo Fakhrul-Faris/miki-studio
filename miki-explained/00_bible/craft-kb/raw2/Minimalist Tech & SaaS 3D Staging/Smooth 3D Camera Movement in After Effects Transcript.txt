@@ -1,0 +1,300 @@
+You ever see those crazy smooth edits
+and think to yourself, "How the hell do
+they even make this?" The secret is 3D
+camera movement. And today, I'm going to
+break it down step by step so you can
+finally start making edits that actually
+hit hard. All right, so here's the game
+plan for today's tutorial. I'm going to
+show you exactly how to set up 3D camera
+so your edits have that insane depth.
+The secret of working with 3D camera
+efficiently and save time in the
+process. Why null layers are your new
+best friend for buttery smooth
+transitions. how to master the graph
+editor to get that smooth motion. The
+trick to adding depth of field that
+makes your edit look next level. And for
+bonus, I'll show you how I use 3D camera
+to make this edit. Stick around because
+by the end you will know how to turn
+basic clips into eyepopping in 3D scenes
+that will make you the LeBron James of
+editing. Yo, who wrote this? All right,
+so I'm going to make a scene now just to
+explain how 3D camera works. I'm going
+to get my clips which is a background
+and few images. And you don't have to
+recreate this scene. I'm just doing it
+to demonstrate. Initially, I thought I
+was going to keep this scene simple and
+minimal. But y'all know that's not how
+we do things here. So instead, I made
+this 3D newspaper thing. Let me give you
+a quick overview. Firstly, I built this
+dynamic newspaper layout using assets
+from Aju, who are actually sponsoring
+today's video. I grabbed this from their
+newspaper construct pack. Change the
+image and text and boom, we got this.
+Just like that. They have this huge
+library of packs you can use and some of
+them are free, too. Personally, I use
+them all the time and they literally got
+everything you need. So, yeah, they
+already have a sale going on where you
+can get this pack for extremely low, but
+I hooked you all up for 10 more% off.
+Check description for both free and paid
+packs. And thank you AUJ for sponsoring
+this video. After the background, I made
+these paper cutouts by looking inside
+the project and using my comprehensive
+abilities to learn. Yeah, so I just
+copied what they did. I mean, see, I
+looked at how they made their own
+layout. I broke it down and made my own
+version. That takes skills, right? Now
+that all the pieces are ready, let's
+make some smooth 3D camera movement.
+Right click and add a camera. Choose the
+preset. I use 50 mm cuz that looks right
+to me. Then add a null layer over camera
+and enable 3D. I'm going to explain
+later on video why we're using this
+null, but for now, just just add it.
+Enable 3D of layers you want to move in
+3D. You can do it one by one like a
+dumbass or just hold left click and move
+your cursor down like this. Now your
+clips are three-dimensional which means
+you can move them in X, Y, and Z axis.
+At this point, most people will tell you
+to open position and use this value
+slider to make movements like a stupid
+caveman. But come on
+now. Instead, you're going to click here
+and click on two views. Then click here
+and choose custom view one. And now you
+can move in 3D space. And while holding
+Alt, use left click to rotate, right
+click to zoom in, and middle button to
+move in 3D space. Instead of using that
+tiny stupid slider, just grab the blue
+arrow, which is called Z-axis handle,
+and drag it. Drag it here, drag it
+there, move it back and forth, do
+whatever. But you can move it like that.
+It's faster, makes way more sense
+visually, and you can literally see
+which clip is closer to the camera and
+which one is pushed back. I'm going to
+go ahead and arrange these layers in 3D
+space. Push them back. pull some forward
+and stuff. You can see in 3D view how
+thug is closest to camera. Then Drake
+and then whatever that is and then
+background. Grab this whip thing and
+link it to the null that we added
+earlier. Now the camera is linked to
+null. Which means if I move the null,
+the camera will move. And since the
+camera is the one controlling the clips
+which are in 3D which means uh my images
+and the background my whole thing will
+move because clips are controlled by
+camera and the camera is controlled by
+null. Push P for position. Key frame the
+starting point move it forward few
+frames and then make the movement in Z
+position. Mind you we are using Z
+position here instead of scale because
+scaling won't give you that real 3D
+feel. Zosition will actually move
+through space. You know what I mean?
+Easy ease the key frames. Right click on
+position and separate dimensions. So
+each dimension has their own key frames
+providing more controllability. I don't
+even know if that would exist. Is is
+that over? Then remove unused key frames
+for me. That's X and Y because I didn't
+use X and Y. Is it necessary to remove
+those key frames? No. Could I have lived
+a normal life without deleting those?
+Yes. Will I still remove them?
+Absolutely. When we talk about smooth
+movement, we mean fluent movement. Not
+constant but fluent. For example, when I
+play this, you can see the motion starts
+pretty fast and then it slows down by
+the end. That's what you call smooth
+movement. Think of it as driving a car.
+You don't want to make sudden start or a
+sudden stop. Usually, you want to start
+slowly and then stop slowly. And please
+do not make your graphs like this cuz
+they start all of a sudden. That's just
+ass. That's trash. Do not make that. It
+doesn't look smooth. So, make them
+something like this. And they will look
+so much better and smoother. If your
+clip has multiple transitions, make sure
+there is no movement stop in between or
+else it's going to look really, really
+bad. Make sure it's not stiff. For
+example, let's say I want to zoom onto
+Drake. To make that movement, you're
+going to add a new null. Link the
+previous null to the new null and now
+make the movement. You are not going to
+make more than one movement on the same
+null because that defeats the whole
+purpose of using nulls. We use nulls
+because with nulls we can overlap the
+movement. We cannot do that normally.
+Okay. Now I'm going to make another Z
+position movement and then in this one
+I'm going to go to graph editor, right
+click and choose speed graph. The best
+practice is to use speed graph when the
+movement comes in between of your clip.
+It's not in the starting, it's not at
+the end because in the starting you're
+going to use the other graph in the end
+you are going to use the other graph but
+when it comes in between for example
+here because I'm zooming in but it's not
+the start or the end of my scene. So I'm
+going to use speed graph and then make
+your graph something like this. Make
+sure it's not too sharp or else the
+movement won't be smooth. And remember
+that the more space you have between
+your key frames, the smoother your
+movement will be. And also whenever you
+are using speed graphs, you are always
+going to get better result if you
+overlap the key frames of different
+nerves. Like I said earlier, that is why
+we use nerves. Not complete overlap but
+partially. I'm going to make some more
+zoom in and zoom out. And we got
+this. By the way, you can also rotate
+the layers or the images to make them
+look more dynamic. The best way to make
+your 3D camera look better is to add
+depth of field. And not many people know
+about this, but the camera in After
+Effects has same properties as real
+camera, which means it has a depth of
+field option built in. Just click on
+this arrow, go to camera option, and
+turn on depth of field. If you move
+around the focus distance, you can see
+the new box on the camera view. That's
+the visual representation of the focus
+point. Move it wherever you want to
+focus. And also increase the aperture to
+increase the strength of the blur. And
+obviously, you can key frame the focus
+distance and aperture as well. In my
+case, I used it when I zoom in onto any
+picture. For example, when I zoom into
+Drake, while I'm zooming in, I'm going
+to make a key frame and then move a few
+frame forward and then adjust the focus
+distance so that it focuses on my
+picture. And you can also key frame the
+aperture and turn it down. So it looks
+like that the blur is slowly fading
+[Music]
+away. Now that you know how 3D camera
+works, let's put that into practice.
+This tutorial is about 3D camera. So I'm
+going to focus on explaining how I made
+the smooth 3D camera and not the other
+stuff. But if you want, I can make a
+video on that. Okay, I guess the video
+is getting too long and I know your
+attention span cannot handle that.
+Neither can mine. So I'm just going to
+give you a quick overview of what I did
+but because of this I'm also going to
+provide the project file of this edit
+and and for the I'm also going to
+provide the project file of the thing
+that we made in the s come on now that
+that's a good here I have my base clip
+ready with camera and null on top I'm
+going to link the camera to the null
+like I did earlier then I'm going to
+make a zoom out type of effect using
+zosition and then I'm going to make my
+graph like this basic stuff that I
+already told
+After that, I'm going to add a new null.
+Link it to the previous null and make it
+3D.
+Again, make a key frame which is little
+ahead of previous key frame and zoom it
+out a lot. I'm going to add motion dial
+on the background layer so there's no
+empty space around it. And then I got
+this card image. I separated the card
+and photograph by masking them out. Make
+both of them 3D. And then select both of
+them and move them on Z-axis. move them
+so much that our zoom out looks like the
+camera is passing through the image
+because it it literally is. Add a
+gradient wipe on the photograph to make
+this effect. Add another null layer.
+Link it to previous null layer and make
+it 3D. Then I'm going to make this
+little zoom in like this. And then move
+the key frames apart because if they
+have more space, it will be smoother.
+We're going to add some text here. I'm
+going to choose this text animation from
+a juice vintage titles. Now, could I
+make that animation by myself? Yes.
+Would that take all of my day and also
+my sanity also? Yes. I use this because
+it's actually time-saving and easy to
+use. So yeah, I'm going to add the
+effect, change the colors, and then
+change the text. That's all. Then I'll
+add this Spotify player screenshot and
+make it 3D. And then I'm going to set it
+up like this. I'm going to go to custom
+view so I can align the screenshot with
+the card better. Then make opacity
+transition so the background appears
+slowly. And then add another null. Link
+it and open position. and then move it
+down like
+this. After that make that similar
+graph. Notice that every key frame and
+movement is actually overlapping each
+other. This creates very fluent and
+smooth motion. Then add text animation
+and you are done with all your stuff.
+Now enable depth of field and adjust the
+focus distance however you like. I'll
+first keep it at Tyler. But as we zoom
+out to the card, I'm going to move the
+focus to the card. And that's how you
+use 3D camera movement to take your
+edits from boring to insane. Big thanks
+to channel
+members member for supporting this
+channel. I hope this helped and if it
+did, drop a comment or even better send
+me what you made on my Discord server
+and tag me. If there's anything else you
+want me to cover, then feel free to ask
+in the comments. And of course, thanks
+to Aju for sponsoring this video. I'll
+catch youall in the next one.

@@ -1,0 +1,498 @@
+00:08 ity is class creatives and in this video
+00:10 we'll discuss how onreal engine is used
+00:12 to create some truly insane workflows
+00:14 for movies television shows animated
+00:16 shorts Tech demos concerts interactive
+00:19 3D Billboards and of course some of the
+00:21 hottest video game titles such as
+00:23 fortnite we've been getting a ton of
+00:24 requests from our students and
+00:26 subscribers who are curious about the
+00:27 software and techniques that are used in
+00:30 conjunction with Unreal Engine to
+00:31 revolutionize the 3D asset production
+00:33 workflow pipeline throughout the
+00:35 industry we'll take a look at how these
+00:37 critically acclaimed Oscar Emmy and Game
+00:39 of the Year winning projects utilize
+00:40 state-of-the-art 3D techniques in their
+00:42 own unique ways to enhance the artistic
+00:45 vision from the creators in this video
+00:47 we'll discuss how these award-winning
+00:49 projects are made by the best visual
+00:50 effects and game studios in the world
+00:52 paired with state-of-the-art tools such
+00:54 as integrating live actors with 3D
+00:56 assets and practical sets using virtual
+00:58 production how unreal is changing the
+01:01 way visual effects pre-production is
+01:03 done in the modern day and how all of
+01:05 the new software features are utilized
+01:07 to assemble the most groundbreaking
+01:09 visuals ever seen using a game
+01:12 engine Unreal Engine has been used to
+01:14 create some of the biggest visual
+01:16 effects TV shows revolutionizing the
+01:18 entire creation process while catering
+01:20 to the faster turnaround times necessary
+01:22 to create television content whether
+01:25 it's through Cutting Edge virtual
+01:26 production procedural World building
+01:28 real-time animation or ground
+01:30 groundbreaking visual effects Unreal
+01:32 Engine continues to push the boundaries
+01:34 of what's possible in
+01:35 graphics from Blockbuster films to
+01:37 highend TV series its unparalleled
+01:39 capabilities make it the go-to solution
+01:41 for achieving breathtaking visuals that
+01:43 Captivate audiences worldwide for The
+01:46 Last of Us TV series Unreal Engine was
+01:48 used for a tight 3we location shoot
+01:50 schedule unreal was used in previous
+01:52 animatics to plan the action scenes
+01:54 timing and pacing the animatic was then
+01:56 used to block in the scene in Maya using
+01:59 stage motion capture
+02:00 the scenes utilize virtual cameras in
+02:02 their capture lab to keep the Cinematic
+02:04 consistency with the liveaction shots
+02:07 motion capture animation was cleaned up
+02:09 set dressing was added and additional
+02:11 virtual camera work was implemented this
+02:13 allowed the team to get an extremely
+02:15 close resemblance to the previous
+02:16 planning technical artists set up the
+02:19 scenes with two different lighting
+02:20 setups for the pre- and post versions of
+02:22 the shots crowdwork was also integrated
+02:24 to complete the shot storytelling
+02:26 elements blur Studio was tasked by epic
+02:29 games to bring the world of unreal
+02:30 tournament to life in one episode for
+02:32 Amazon's secret level animated series
+02:34 under the condition that everything had
+02:36 to be done entirely in Unreal Engine 5
+02:38 this would Mark the first time the
+02:40 studio used unreal for production the
+02:42 brand new pipeline would include over
+02:44 550 shots medum mix with zbrush was the
+02:48 base for the sculpting and facial
+02:49 rigging system which was then driven and
+02:51 paired with Autodesk Maya assets were
+02:53 assembled in blueprints using nanite for
+02:55 transformable objects to maintain High
+02:57 frame rates additional custom functions
+02:60 were created for variations in materials
+03:02 and lighting animations were created
+03:04 using Unreal engines control rig with a
+03:07 custom character picker to make the
+03:08 transition from Maya easier for the
+03:10 animators Unreal Engine was used to
+03:12 build virtual sets for the Fallout
+03:14 television series The filmmakers could
+03:17 then virtually Scout the sets and block
+03:18 out scenes in VR which helped them plan
+03:21 and visualize the shoot the virtual sets
+03:23 are also used to create a one toone
+03:25 scale of the 3D model of the entire set
+03:27 even the pieces that were only ever
+03:29 meant to be physical
+03:30 installations this allowed the
+03:32 filmmakers to block out scenes without
+03:34 being limited to just the virtual assets
+03:37 the virtual sets were also used to
+03:38 create a heat map of the environment
+03:40 which helped the team identify which
+03:42 areas of the sets were most critical to
+03:44 the story and ensure that they focused
+03:46 their creative attention there Lumen and
+03:48 unreal allowed the production team to
+03:50 make the virtual lighting just as useful
+03:52 as the physical lighting was on set
+03:54 Lumen was the most critical piece of
+03:56 unreal that made Fallout come together
+03:58 the team experienced a significant drop
+04:00 and onset downtime after moving away
+04:02 from baked lighting and could iterate on
+04:04 lighting changes in real time with the
+04:06 DP which compounded the effectiveness of
+04:09 their creative review turnaround
+04:11 times in HBO's Westworld a 3D map of the
+04:14 Westworld facility was created using
+04:16 twin 4K projectors it was a practical
+04:19 effect that looked incredibly realistic
+04:21 in later Seasons they wanted to expand
+04:23 the dimensions of the facility even
+04:25 further so they built their own
+04:27 supercomputer and developed new
+04:29 technology that allowed them to render
+04:30 backgrounds in real time as the camera
+04:32 moved they took direct inspiration from
+04:34 John fav's work on the Mandalorian and
+04:37 they were able to adapt those techniques
+04:39 to create even more realistic artificial
+04:41 environments if you want to see more
+04:43 about the mandalorian's usage of Unreal
+04:45 Engine be sure to check out our
+04:46 dedicated behind the- scenes video on
+04:48 the entire production using a
+04:50 combination of on location shooting and
+04:52 led screens they were able to create a
+04:54 seamless blend of real and artificial
+04:56 worlds mixed with the scene shot on Film
+04:58 It gave the show a more atic experience
+05:01 to the viewer the battle of the bastard
+05:03 scene in The Game of Thrones TV series
+05:05 was a massive undertaking similar to
+05:07 something you might expect from a
+05:09 Hollywood production so to meet the
+05:11 challenges new tools were developed in
+05:13 Unreal Engine to allow the filmmakers to
+05:15 explore scenes and environments
+05:17 virtually sets were recreated entirely
+05:19 and unreal the massive battles were
+05:22 populated within huge worlds at the
+05:23 click of a button the workflow became
+05:26 critical for not only pre-production but
+05:28 a foundational collaborative process
+05:30 that made a huge impact on the show's
+05:32 creation process the Lego fortnite
+05:34 Edition was fully rigged and animated in
+05:36 Unreal Engine with no external DCC tools
+05:40 this allowed the artist to create
+05:42 everything in context iterate in real
+05:44 time and make changes on the Fly for the
+05:46 final assets the procedural contact
+05:48 generation PCG framework gives artists
+05:51 the ability to build massive worlds
+05:53 efficiently with an art directable
+05:56 approach PCG was used extensively in
+05:59 Lego fortnite night the team built their
+06:01 own world creation system with it
+06:03 generating countless unique tiles that
+06:05 assemble into a different world for
+06:07 every player unreal's control rig is a
+06:10 solution for animators who want to
+06:11 animate and rig their characters
+06:13 directly inside Unreal Engine instead of
+06:15 using external software such as autod
+06:17 disk Maya or even blender the nobas
+06:19 control rig is aimed to be a highly
+06:21 flexible tool that enables procedural
+06:23 animation rigging that can be tweaked on
+06:25 the Fly and dynamic control mechanisms
+06:27 directly inside the engine it's designed
+06:29 for complex characters with unique
+06:31 Anatomy non-humanoid Rigs and custom
+06:33 control setups for fine-tune animation
+06:36 needs quick pause to tell you a little
+06:38 bit about class creatives will help you
+06:40 take your 3D and 2D art to the next
+06:42 level learn from industry professionals
+06:44 with experience teaching at accredited
+06:46 universities land that new job receive
+06:48 higher pay and stand out from the
+06:49 competition the great thing about class
+06:51 creatives is the ability to learn at
+06:53 your own pace and your own schedule get
+06:55 started today for free with a link in
+06:56 the description what have collaborated
+06:59 directly with epic games to develop a
+07:00 new real-time strand-based hair system
+07:02 for the engine the short helped showcase
+07:05 the power of unreal's realtime fur
+07:07 rendering capabilities achieving
+07:09 realistic fur and feather effects in
+07:11 real time was a significant challenge
+07:13 but with sophisticated shading models
+07:15 and optimized techniques the team
+07:17 delivered breathtaking visuals that
+07:18 blurred the line between CGI and reality
+07:21 epic games real effects and Netflix
+07:23 collaborated on a series called super
+07:25 giant robot Brothers to create a
+07:27 flexible animation Pipeline with motion
+07:29 capture
+07:30 all shots were planned like a liveaction
+07:32 shoot with map as a starting point
+07:35 lighting and animation was done
+07:36 simultaneously to speed up production
+07:38 turnaround times virtual cameras mixed
+07:41 with custom code and Tool development
+07:43 allow the ability for the studio to
+07:45 customize the engine to specific
+07:46 workflows necessary to bring the project
+07:48 to completion Oscar winning shorts such
+07:51 as the war is over used performance
+07:53 capture with editors on set to bypass
+07:55 the traditional storyboarding process
+07:58 asset creation modeling and animation
+08:00 mixed with Autodesk Maya and proprietary
+08:03 tools were all brought together and
+08:04 unreal for the final lighting rendering
+08:06 and effects to achieve the painterly
+08:09 style depicted in the concept art tools
+08:11 were built and unreal for the line work
+08:13 combining pre-model ribbons Houdini for
+08:15 dynamic lines based on characters's
+08:17 forms and Fring likee outlines to pop
+08:20 the figures everything was controlled
+08:22 through unreal which gave the artist
+08:23 tons of control
+08:25 individuals several Netflix series also
+08:27 use unreal taking advantage of its real
+08:30 time collaboration tools allowing teams
+08:32 to iterate quickly and maintain
+08:34 highquality visual output under tight
+08:36 deadlines this balance of speed and
+08:38 quality is one of the reasons unreal
+08:40 continues to dominate the industry the
+08:42 ability to work across multiple teams
+08:44 and make real-time changes ensured that
+08:47 every aspect of production met the
+08:48 highest standards for Netflix love death
+08:51 and robots a team of 45 artists with no
+08:54 real-time experience successfully
+08:56 transform their traditional pipeline to
+08:58 real-time rendering and Unreal Engine
+09:00 assets built in pre-production for
+09:02 layout were the same assets used in the
+09:04 final piece improving progressively
+09:06 throughout the process a complete
+09:08 15-minute framework was built within 2
+09:10 weeks allowing for simultaneous
+09:12 refinement of the entire piece leading
+09:14 up to the shoot Unreal Engine shifted
+09:16 the role of asset artists to World
+09:18 Builders empowering them to organically
+09:20 develop ideas and explore different
+09:22 fidelities rapidly using available
+09:24 libraries this shifted from focusing on
+09:26 character turntables to live inshot
+09:29 visualization enhancing storytelling and
+09:31 creative shaping performance capture was
+09:34 integrated with real-time assets
+09:36 enabling actors to see themselves as
+09:37 avatars within the virtual environment
+09:40 which was vital for informing their
+09:41 performances particularly in
+09:43 understanding spatial relationships
+09:45 within virtual sets unlike traditional
+09:48 workflows where motion capture data
+09:50 processing delays layout Unreal Engine
+09:52 provided near instant feedback this
+09:54 allowed for editing with footage
+09:55 resembling the final project early in
+09:57 the process directly influencing motion
+09:59 capture selections and cut patterns the
+10:02 team utilized many humans for three of
+10:04 the six photorealistic human characters
+10:07 which are crucial for managing the
+10:08 ambitious project scope involving
+10:11 multiple complex characters with
+10:12 dialogue and varying degrees of digital
+10:15 modification metahumans change the game
+10:17 for their production and facial rigging
+10:19 which is typically resource intensive
+10:21 and custombuilt for
+10:22 Productions many human rigs proved as
+10:25 powerful as their in-house rigs freeing
+10:27 artists to focus on storytelling in just
+10:29 four months they produce photorealistic
+10:31 human characters animated fight
+10:33 sequences dialogue mutilation effects
+10:36 four diverse environments and a cthulu
+10:38 monster this project significantly
+10:40 changed Sony Pictures image work's
+10:42 production workflow for the future
+10:44 Unreal Engine has changed how visual
+10:45 effect studios are able to produce rapid
+10:47 iterations and near instant feedback
+10:50 allowing for more creative exploration
+10:52 instead of showing clients grayscale
+10:54 renders near final images are ready
+10:56 almost immediately in 2020 Unreal Engine
+10:59 introduced Nite technology and its lumen
+11:02 in the land of Nite demo for
+11:04 PS5 this virtualized geometry system
+11:07 allows artists to create scenes with
+11:08 Millions even billions of polygons
+11:10 without sacrificing performance
+11:12 traditional game engines require
+11:14 simplified models but with nanite every
+11:16 intricate detail is preserved bringing
+11:18 us closer to photo realism than ever
+11:21 before Quicks soulle highresolution Mega
+11:23 scan assets can be used without having
+11:25 to worry about generating normal maps on
+11:27 low resolution proxies this allows
+11:30 artists to load in full movie quality
+11:31 assets straight into the game engine and
+11:33 then there's Lumen unreal's fully
+11:35 Dynamic Global illumination system
+11:37 unlike pre-baked lighting solutions
+11:39 Lumen reacts in real time to every
+11:41 environmental change whether it's
+11:43 sunlight pouring through a window or
+11:44 flickering Neon Lights Lumen ensures
+11:47 that light behaves exactly as it would
+11:49 in the real world this is what gives
+11:51 unreal its unparalleled level of
+11:53 immersion unreal's real-time visual
+11:55 effects system Niagara allows for fully
+11:57 programmable particle effects giving giv
+11:59 artists an option that is no longer
+12:01 constrained by a fixed function
+12:02 simulation artists can create stunning
+12:04 visuals like fire smoke and explosions
+12:07 with complete control making every frame
+12:09 feel alive megga lights a groundbreaking
+12:11 feature in Unreal Engine 55 allows for
+12:14 an unprecedented number of highquality
+12:16 Lights and Shadows opening up creative
+12:18 possibilities that were previously
+12:20 limited by Hardware performance Mega
+12:22 lights removes limitations on Direct
+12:24 lighting and shadows textured area
+12:26 lights can be used in real time spilling
+12:29 vibrant color and casting soft Shadows
+12:31 just like in offline rendering every
+12:33 light in a scene can have casting
+12:35 shadows in real time in addition to
+12:37 point lights and spotlights areal lights
+12:39 can also be used with crisp or soft
+12:41 Shadows with any imaginable
+12:43 configuration virtual production is
+12:45 another area where the Unreal Engine is
+12:47 making huge strides in the industry for
+12:50 example in Jackson W's music video two
+12:52 massive environments were created using
+12:53 Unreal Engine utilizing assets from the
+12:56 marketplace and built within their own
+12:58 custom Library with Inside Out tracking
+13:01 and full ceiling resolution filmmakers
+13:03 had complete freedom to move the camera
+13:05 in ways that were previously impossible
+13:07 combining camera movement with Dynamic
+13:09 environment adjustments eliminates the
+13:11 need for complex rigging showcasing the
+13:14 engine's flexibility several virtual
+13:16 systems are built for production and
+13:18 unreal including James gun's movie The
+13:20 Suicide Squad they built a one toone
+13:23 virtual set of the aquarium and James
+13:25 could explore the space with the king
+13:26 shark stunt double and unreal all live
+13:29 in real time time he could test ideas
+13:31 and refine his vision before shooting
+13:33 with the actor James even designed an
+13:36 elaborate car chase with custom vehicle
+13:38 physics simulations matching the virtual
+13:40 car to the real stunt car with weight
+13:42 and suspension GPU based light baking
+13:45 software allows virtual Productions to
+13:47 deliver incredible results in minutes
+13:49 rather than days GPU texture sharing
+13:52 allows virtual Productions to render
+13:54 high resolution content in camera and
+13:57 share it across multiple gpus coming
+13:59 Studios to achieve stunning visuals with
+14:01 fewer systems even for complex setups
+14:04 with multiple cameras switchboard is
+14:06 used for stage management to keep LED
+14:09 wall devices in sync level snapshot lets
+14:12 you save and recall entire scenes stage
+14:14 monitor tracks performance and alerts
+14:16 for any hitches or issues for smooth
+14:18 playback and for ultimate onset control
+14:21 remote control is used which is a
+14:23 customizable web interface that lets you
+14:25 adjust Unreal Engine parameters from any
+14:28 mobile device allowing professionals to
+14:30 change the sky or trigger animations
+14:32 from an iPad unal engine is constantly
+14:35 pushing the boundaries of believable
+14:37 digital humans advancements in real-time
+14:39 facial capture paired with performance
+14:41 capture the lines are blurring with each
+14:43 step becoming closer to the point where
+14:45 people won't be able to tell the
+14:47 difference between a real person and a
+14:48 digital human for the Matrix awakens
+14:51 demo all aspects of the game engine's
+14:53 capabilities were implemented including
+14:55 nanite for virtualized geometry
+14:57 procedural World building Lumen for
+14:60 Global illumination to create stunning
+15:01 High Fidelity visuals chaos physics
+15:04 adding realistic destruction and many
+15:07 humans allowed for lifelike digital
+15:09 characters produced through digital
+15:10 scans and performance captures the team
+15:13 was able to recreate characters with
+15:15 Incredible accuracy blurring the lines
+15:17 between reality and the digital world
+15:20 the digital assets were even used in the
+15:22 unreal Game Dev Community to create a
+15:24 viral Superman rendition with the
+15:26 digital assets from the demo Unreal
+15:28 Engine is used Beyond the gaming and
+15:30 visual effect space changing
+15:32 visualization in airports theme parks
+15:35 concerts from some of the biggest
+15:37 entertainers and more unreal is used to
+15:39 plan elaborate Live Events including
+15:41 sets lights and effects for entire
+15:44 venues virtual shows are brought into
+15:46 the real world and interactive
+15:49 experiences blur the lines between the
+15:50 two 3D immersive Billboards in New York
+15:53 Korea and Tokyo are all created entirely
+15:56 with Unreal Engine making advertisements
+15:59 more engaging Innovative and
+16:01 entertaining the attention grabbing ad
+16:04 campaigns are completely changing how
+16:06 Brands can be creative with their
+16:07 content and the real world Within These
+16:10 densely populated cities Unreal Engine
+16:12 has made huge strides over the years
+16:14 with classic games such as Gears of War
+16:16 I Paving the way with Innovative
+16:18 workflows such as their 40 cinematics
+16:21 motion capturing performances in a
+16:23 volume with LED walls creating a virtual
+16:26 environment for the actors to interact
+16:28 with naturally the motion capture
+16:30 workflow allowed artists and directors
+16:32 the ability to experiment with different
+16:34 ideas and camera angles creating a truly
+16:37 immersive experience well that about
+16:39 wraps up this video on how the best
+16:40 studios in the world are using Unreal
+16:42 Engine paired with professional software
+16:45 such as Autodesk Maya and zbrush to not
+16:47 only enhance visuals further but to
+16:49 rapidly increase their production
+16:51 turnaround times pushing the limits of
+16:53 animation for television and feature
+16:55 films Unreal Engine is revolutionizing
+16:57 Studio workflows with virtual production
+16:60 and adding new features annually to
+17:02 optimize performance giving artists more
+17:04 control although the production workflow
+17:06 remains widely unchanged the future of
+17:09 3D within unreal is advancing with each
+17:11 update as directors and artists look to
+17:14 push the engine to its limits it's also
+17:16 great to see how onreal engine is making
+17:18 new strides Beyond just the gaming
+17:20 engine to produce updated workflows and
+17:23 techniques in all aspects of the
+17:24 industry are you using Unreal Engine for
+17:27 your personal projects or is a working
+17:28 professional your studio let us know
+17:31 your thoughts in the
+17:32 comments and don't forget to like And
+17:35 subscribe and we'll see you in the next
+17:37 one perfect

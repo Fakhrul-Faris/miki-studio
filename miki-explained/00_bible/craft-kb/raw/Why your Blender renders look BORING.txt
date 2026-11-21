@@ -1,0 +1,1099 @@
+00:00 okay I'm going to tell you the top three
+00:01 
+
+00:01 reasons why I think your renders might
+00:03 
+
+00:03 feel boring and how to fix that so that
+00:05 
+
+00:05 people find your work more interesting
+00:06 
+
+00:06 to look at so that people can actually
+00:08 
+
+00:08 connect with your art work on a deeper
+00:09 
+
+00:09 level and so that people might become
+00:11 
+
+00:11 inspired by what you create so really
+00:13 
+
+00:13 quick my name is Max here are some of my
+00:15 
+
+00:15 renders that I've made that I think are
+00:17 
+
+00:17 interesting just so that you can see
+00:18 
+
+00:18 what I'm talking about and decide
+00:20 
+
+00:20 whether you want to actually listen to
+00:21 
+
+00:21 my advice or not okay so number one the
+00:23 
+
+00:23 first reason is technical skill SL
+00:27 
+
+00:27 photorealism this is especially
+00:28 
+
+00:28 important in 3D rendering because if you
+00:31 
+
+00:31 miss this your your render will end up
+00:33 
+
+00:33 looking like a render the goal of
+00:36 
+
+00:36 rendering is actually not to make it
+00:37 
+
+00:37 look like a render is actually usually
+00:38 
+
+00:38 to make it look like not a render and
+00:41 
+
+00:41 all the Advanced Techniques that you see
+00:42 
+
+00:42 people showing here are ways to avoid
+00:46 
+
+00:46 that rendery like 3D bad Graphics type
+00:50 
+
+00:50 of look the best thing to learn here
+00:52 
+
+00:52 just a general blanket skill to cover
+00:54 
+
+00:54 all of this is if you learn photo
+00:57 
+
+00:57 realism that kind of takes care of most
+00:59 
+
+00:59 of the technical side of it because if
+01:01 
+
+01:01 you can make things look photo real that
+01:03 
+
+01:03 means at a general level you understand
+01:05 
+
+01:05 the rules and then you can go on and
+01:07 
+
+01:07 break them from there however if you
+01:09 
+
+01:09 don't understand the rules it's very
+01:10 
+
+01:10 hard to actually get a pleasing image in
+01:11 
+
+01:11 the first place so this you know my work
+01:14 
+
+01:14 is not really photo realistic I would
+01:15 
+
+01:15 say it definitely not um but there are
+01:18 
+
+01:18 aspects of photo realism in the picture
+01:21 
+
+01:21 so that I can accurately represent
+01:23 
+
+01:23 certain parts of it whether that's
+01:25 
+
+01:25 certain 3D models whether that's just
+01:27 
+
+01:27 the textures I want you know my
+01:29 
+
+01:29 materials to feel like that ual material
+01:31 
+
+01:31 and not just a 3D representation of it
+01:33 
+
+01:33 in a bad Graphics kind of way the camera
+01:35 
+
+01:35 settings and the camera angles that I
+01:36 
+
+01:36 choose are generally based on uh they're
+01:40 
+
+01:40 meant to look like pictures that could
+01:42 
+
+01:42 actually be taken by a real person all
+01:44 
+
+01:44 these things are ways that I include
+01:46 
+
+01:46 aspects of photo realism in my image
+01:48 
+
+01:48 that make the the technical side of the
+01:51 
+
+01:51 the image uh just better overall and
+01:54 
+
+01:54 basically the goal of all this is to
+01:55 
+
+01:55 hide that
+01:58 
+
+01:58 blendery bad graphics
+02:00 
+
+02:00 uh just you know plasticky rendery look
+02:05 
+
+02:05 uh because if the second that illusion
+02:07 
+
+02:07 breaks and you start to see it as a
+02:08 
+
+02:08 render it just makes it a lot less nice
+02:11 
+
+02:11 to look at overall so the easiest way to
+02:13 
+
+02:13 improve photo realism if I'm just going
+02:15 
+
+02:15 to give you one technique here is just
+02:17 
+
+02:17 use reference images uh so a reference
+02:19 
+
+02:19 image is just is literally just an image
+02:23 
+
+02:23 of something that is already made that
+02:25 
+
+02:25 you reference or look at as you're
+02:28 
+
+02:28 making your render so so if you're going
+02:30 
+
+02:30 to make um an ancient Temple render for
+02:34 
+
+02:34 example go and look at pictures of
+02:37 
+
+02:37 actual ancient temples or go and look at
+02:39 
+
+02:39 um other artists work that you like of
+02:43 
+
+02:43 their renderings of ancient temples um
+02:46 
+
+02:46 and if you just go and look at a bunch
+02:48 
+
+02:48 of versions of that thing your your
+02:51 
+
+02:51 representation of it that you're trying
+02:53 
+
+02:53 to create will come across much more
+02:55 
+
+02:55 accurately and look much better and much
+02:57 
+
+02:57 more photorealistic if you have
+02:59 
+
+02:59 reference images to look at if you're
+03:01 
+
+03:01 just um you can either tab back and
+03:04 
+
+03:04 forth between just the Google page if
+03:06 
+
+03:06 you're going to do it that way that's
+03:07 
+
+03:07 what I used to do or more recently I've
+03:09 
+
+03:09 been using this free software called
+03:11 
+
+03:11 Pure ref you might have seen this before
+03:13 
+
+03:13 it's just a free mood board software
+03:15 
+
+03:15 which is really nice to have I'll just
+03:17 
+
+03:17 put it on the side of my screen and then
+03:18 
+
+03:18 have blender taking out most of the
+03:20 
+
+03:20 space in my Monitor and then just you
+03:22 
+
+03:22 can just drag and drop images directly
+03:24 
+
+03:24 from Google or ar station or wherever
+03:26 
+
+03:26 drag and drop it directly into pure and
+03:28 
+
+03:28 there you go you can really easily build
+03:29 
+
+03:29 up a mood board and have a lot of
+03:31 
+
+03:31 reference images to look at and that
+03:33 
+
+03:33 will translate to better renders okay
+03:37 
+
+03:37 reason number two why your renders might
+03:38 
+
+03:38 feel boring is story or lack thereof so
+03:43 
+
+03:43 what what do I actually mean when I say
+03:45 
+
+03:45 this I want to explain this in a way
+03:46 
+
+03:46 that is as clear as possible because I
+03:48 
+
+03:48 feel like when people talk about story
+03:50 
+
+03:50 it just doesn't come across that clear
+03:52 
+
+03:52 to me and I've only realized this
+03:54 
+
+03:54 recently what this actually means uh at
+03:56 
+
+03:56 least what it means to me so there's
+03:58 
+
+03:58 kind of two two sides to this coin one
+03:60 
+
+04:00 side is the what you've probably already
+04:02 
+
+04:02 heard which is strategic placement of
+04:05 
+
+04:05 props and just random objects around the
+04:07 
+
+04:07 scene which hint at a greater narrative
+04:10 
+
+04:10 or provide context for uh quote unquote
+04:12 
+
+04:12 the story of the picture so that could
+04:15 
+
+04:15 be something like if your render is
+04:18 
+
+04:18 takes place in a mine inside of a mine
+04:21 
+
+04:21 you might uh have like a tipped over
+04:25 
+
+04:25 mine cart in the mine uh and that's an
+04:28 
+
+04:28 object that you would place in there
+04:29 
+
+04:29 intentionally to hint at the fact that
+04:31 
+
+04:31 maybe it's abandoned you know that could
+04:34 
+
+04:34 that would be an object that you placed
+04:35 
+
+04:35 in there to hint at what the picture is
+04:37 
+
+04:37 about so that is one aspect of it and
+04:39 
+
+04:39 that is something you can do and that is
+04:41 
+
+04:41 a powerful technique to just make the
+04:43 
+
+04:43 image more interesting but I don't think
+04:45 
+
+04:45 it's the most important part of what
+04:48 
+
+04:48 makes a story in an a a good story in an
+04:50 
+
+04:50 artwork so what I think is more
+04:53 
+
+04:53 important than that which is pretty easy
+04:54 
+
+04:54 to
+04:55 
+
+04:55 do is
+04:57 
+
+04:57 actually posing questions to the viewer
+05:00 
+
+05:00 through your environment without
+05:02 
+
+05:02 revealing the answer so you want to make
+05:05 
+
+05:05 the viewer curious about what is
+05:07 
+
+05:07 happening in the
+05:08 
+
+05:08 picture and you don't want to tell them
+05:11 
+
+05:11 all of those answers or even any of the
+05:13 
+
+05:13 answers so the goal here is not to
+05:15 
+
+05:15 confuse people the goal is to Intrigue
+05:18 
+
+05:18 them and let them come to their own
+05:19 
+
+05:19 conclusion as to what the image is about
+05:22 
+
+05:22 so for example in this image here uh I
+05:25 
+
+05:25 this is not this isn't necessarily the
+05:27 
+
+05:27 best example ever I'm just choosing this
+05:28 
+
+05:28 one to go off of but if we look at what
+05:31 
+
+05:31 is going on here we are in some sort of
+05:34 
+
+05:34 ancient place we're using some aspects
+05:36 
+
+05:36 of the the first method which I just
+05:37 
+
+05:37 talked about which is just strategic
+05:39 
+
+05:39 placement of props to hint at the
+05:41 
+
+05:41 greater narrative so that's things like
+05:43 
+
+05:43 there's incense burners up here which
+05:44 
+
+05:44 could hint at okay it's probably
+05:46 
+
+05:46 something to do with like something
+05:48 
+
+05:48 religious or spiritual um there's random
+05:52 
+
+05:52 treasure chests down here which could
+05:54 
+
+05:54 hint at uh you know this being in a
+05:57 
+
+05:57 place of importance or you know place
+05:60 
+
+05:60 where you keep valuable stuff there's
+06:03 
+
+06:03 stairs which hint at other places you
+06:07 
+
+06:07 can walk to in this environment uh the
+06:09 
+
+06:09 the Engravings all these kinds of like
+06:11 
+
+06:11 things are like uh Str strategic
+06:13 
+
+06:13 placement of props I guess but more
+06:17 
+
+06:17 importantly the answer to the question
+06:20 
+
+06:20 what is this place is not revealed in
+06:22 
+
+06:22 this picture it's maybe semi- revealed
+06:25 
+
+06:25 in the sense that you get an idea that
+06:27 
+
+06:27 it's an ancient place it's maybe a place
+06:29 
+
+06:29 of War or something spiritual or
+06:31 
+
+06:31 religious or something like that but
+06:33 
+
+06:33 there is no direct answer there's no
+06:35 
+
+06:35 answer of who made it who was here why
+06:37 
+
+06:37 is this guy here we're kind of seems
+06:40 
+
+06:40 like we're discovering this or this guy
+06:42 
+
+06:42 is discovering this in this picture but
+06:44 
+
+06:44 it's not clear why they're here what
+06:47 
+
+06:47 this place is anything like that and
+06:51 
+
+06:51 very often people will comment on my
+06:52 
+
+06:52 work and they'll actually tell me
+06:54 
+
+06:54 they'll actually in their comment they
+06:55 
+
+06:55 will like write what that thing is about
+06:59 
+
+06:59 uh or like what the that I made is about
+07:01 
+
+07:01 and it's something that I've never heard
+07:02 
+
+07:02 before and it actually adds up and makes
+07:05 
+
+07:05 sense but that's an answer that they
+07:07 
+
+07:07 came up with in their own head and is
+07:09 
+
+07:09 not an answer that I provided to them if
+07:11 
+
+07:11 you can create a sense of intrigue and
+07:13 
+
+07:13 let people actually come to their own
+07:15 
+
+07:15 conclusions they might actually talk
+07:17 
+
+07:17 with other people about it and that's
+07:18 
+
+07:18 kind of what makes an interesting image
+07:20 
+
+07:20 in my opinion is if it's clearly
+07:22 
+
+07:22 something important but you don't really
+07:24 
+
+07:24 know what and um yeah if you let people
+07:28 
+
+07:28 come to their own conclusions as to
+07:31 
+
+07:31 exactly what it's about that in my
+07:33 
+
+07:33 opinion is good environmental
+07:35 
+
+07:35 storytelling okay the number three
+07:37 
+
+07:37 reason why your renders might feel
+07:39 
+
+07:39 boring is your composition choices so
+07:44 
+
+07:44 very simply put composition is just the
+07:47 
+
+07:47 arrangement of visual elements or in
+07:51 
+
+07:51 other words things just anything in the
+07:55 
+
+07:55 picture the arrangement of things in the
+07:57 
+
+07:57 picture usually with the goal of
+08:00 
+
+08:00 guiding the viewer through the image in
+08:02 
+
+08:02 a way that is pleasing and also easy to
+08:05 
+
+08:05 understand so when I say easy to
+08:07 
+
+08:07 understand I'm not talking about the
+08:09 
+
+08:09 story again that can kind of be vague
+08:11 
+
+08:11 and be the story can be kind of set in a
+08:14 
+
+08:14 way that doesn't reveal the answers and
+08:17 
+
+08:17 kind of makes people interested but when
+08:19 
+
+08:19 I say easy to understand in terms of
+08:20 
+
+08:20 composition I mean the visual all the
+08:23 
+
+08:23 visual data that you are taking in
+08:25 
+
+08:25 through your eyes when you see the
+08:26 
+
+08:26 picture should be clear and easy to
+08:29 
+
+08:29 interpret and not um uncomfortable to
+08:32 
+
+08:32 look at and I'll get to that in a second
+08:34 
+
+08:34 I think the reason that this exists as a
+08:36 
+
+08:36 concept in the first place composition I
+08:38 
+
+08:38 think the reason that this is actually
+08:39 
+
+08:39 important at all is because of partially
+08:42 
+
+08:42 because of the way that our eyes work so
+08:44 
+
+08:44 if you think about a camera imagine a
+08:46 
+
+08:46 landscape you can just point the camera
+08:47 
+
+08:47 at the landscape hit the shutter it'll
+08:49 
+
+08:49 take the picture and the camera will
+08:51 
+
+08:51 just capture all of the data crystal
+08:53 
+
+08:53 clear that is in that general direction
+08:54 
+
+08:54 that it's looking that is not how your
+08:57 
+
+08:57 eyes work um if you are looking at the
+08:59 
+
+08:59 same same landscape you have you can you
+09:02 
+
+09:02 can see all of it in like the general
+09:04 
+
+09:04 area that you're looking but you have an
+09:08 
+
+09:08 intentional Spotlight so to speak where
+09:10 
+
+09:10 you have a peripheral vision that is low
+09:12 
+
+09:12 resolution around the outside of your
+09:14 
+
+09:14 field of view and you have a small
+09:17 
+
+09:17 Spotlight in the middle which is the
+09:19 
+
+09:19 direct point that you're looking at so
+09:22 
+
+09:22 for example if you make eye contact with
+09:24 
+
+09:24 someone that you you were focusing on a
+09:26 
+
+09:26 very small point which is their eyes and
+09:29 
+
+09:29 everything else are around it is going
+09:30 
+
+09:30 to be uh low resolution information that
+09:33 
+
+09:33 you're taking in so that means to see a
+09:36 
+
+09:36 full picture of something your eyes
+09:37 
+
+09:37 actually have to be moving around the
+09:39 
+
+09:39 whole picture and that's the only way
+09:41 
+
+09:41 that you're going to see the whole thing
+09:42 
+
+09:42 in full resolution and understand all
+09:44 
+
+09:44 the data that you're taking in so that
+09:46 
+
+09:46 means that if we're looking at an
+09:47 
+
+09:47 artwork for the first time if every
+09:50 
+
+09:50 single thing seems just as important in
+09:52 
+
+09:52 the picture and there's no sense of
+09:55 
+
+09:55 guiding you through the image there's no
+09:56 
+
+09:56 sense of what is more important what is
+09:58 
+
+09:58 less important uh there's no sense of
+09:60 
+
+09:60 composition you're going to be trying to
+10:02 
+
+10:02 intake all that information all at once
+10:04 
+
+10:04 and that's where you get an image that
+10:06 
+
+10:06 is unpleasant or in other words uh takes
+10:09 
+
+10:09 effort to try and understand the data
+10:11 
+
+10:11 that you're actually seeing so you want
+10:13 
+
+10:13 to try and avoid that because people
+10:16 
+
+10:16 don't like having to use effort to try
+10:18 
+
+10:18 and understand your artwork so the point
+10:20 
+
+10:20 of composition is to remove that barrier
+10:22 
+
+10:22 of effort and make it effortless to
+10:25 
+
+10:25 understand the data that you're intaking
+10:27 
+
+10:27 so you can do that with things like uh
+10:29 
+
+10:29 light and dark so things like if you uh
+10:32 
+
+10:32 intentionally make the non-important
+10:33 
+
+10:33 parts of the image darker that's
+10:35 
+
+10:35 something I'll do a lot and you can use
+10:36 
+
+10:36 things like framing in the picture to
+10:39 
+
+10:39 make it very clear and obvious where
+10:41 
+
+10:41 you're supposed to look or you can use
+10:43 
+
+10:43 things like leading lines to to guide
+10:46 
+
+10:46 people on a path through the image and
+10:49 
+
+10:49 that attentional Spotlight that people
+10:51 
+
+10:51 have you will naturally take control of
+10:54 
+
+10:54 that and guide them to exactly where
+10:56 
+
+10:56 they're supposed to look in the picture
+10:57 
+
+10:57 or the focal point you can make the more
+10:60 
+
+10:60 high contrast a focal point is just uh
+11:03 
+
+11:03 the most important part of the picture
+11:06 
+
+11:06 uh or in other words the reason that the
+11:09 
+
+11:09 picture was captured in the first place
+11:12 
+
+11:12 something I see a lot in more beginners
+11:14 
+
+11:14 work is you might actually be good at
+11:16 
+
+11:16 the all the technical stuff you might go
+11:19 
+
+11:19 and create an environment that actually
+11:20 
+
+11:20 follows all the technical rules it looks
+11:22 
+
+11:22 good overall there's literally nothing
+11:23 
+
+11:23 wrong with the environment except in the
+11:27 
+
+11:27 image that they've captured in the
+11:28 
+
+11:28 render it feels like there's nothing
+11:30 
+
+11:30 happening and there was no reason for
+11:31 
+
+11:31 the picture and that generally happens
+11:34 
+
+11:34 because there is no focal point in other
+11:36 
+
+11:36 words there is no one thing in the
+11:39 
+
+11:39 picture that stands out above the other
+11:41 
+
+11:41 things that makes it clear why that
+11:43 
+
+11:43 picture was captured in the first place
+11:45 
+
+11:45 so the focal point does not have to be
+11:46 
+
+11:46 something that is exceptionally wildly
+11:49 
+
+11:49 interesting if it is it it can be and
+11:51 
+
+11:51 that's great if it is but it does not
+11:53 
+
+11:53 have to be that it just has to look like
+11:56 
+
+11:56 one thing is more important than the
+11:58 
+
+11:58 other things in the picture that's
+11:59 
+
+11:59 that's all it is okay so um yeah there's
+12:03 
+
+12:03 many different compositional techniques
+12:04 
+
+12:04 I don't want to get into all these
+12:05 
+
+12:05 different compositional techniques here
+12:07 
+
+12:07 if I'm going to recommend one thing I
+12:08 
+
+12:08 would go and say blender Guru has a very
+12:10 
+
+12:10 good video on composition that is meant
+12:12 
+
+12:12 for 3D artists to understand so just
+12:14 
+
+12:14 look up blender Guru composition he has
+12:16 
+
+12:16 a good video on that if you want to
+12:18 
+
+12:18 understand more of the specific
+12:19 
+
+12:19 techniques but yeah the the point of it
+12:22 
+
+12:22 is to make it pleasing and easy to
+12:24 
+
+12:24 understand the data of the picture
+12:25 
+
+12:25 that's that's what I think okay so quick
+12:27 
+
+12:27 summary number one technical skill in
+12:29 
+
+12:29 photo realism I actually think this is
+12:31 
+
+12:31 the least important part though it is
+12:33 
+
+12:33 still very important but um use
+12:35 
+
+12:35 reference images to improve your
+12:36 
+
+12:36 photorealism skills and make the image
+12:38 
+
+12:38 just technically better overall number
+12:40 
+
+12:40 two story this is what makes the image
+12:43 
+
+12:43 just interesting and what will keep
+12:46 
+
+12:46 people thinking about the picture even
+12:47 
+
+12:47 after they're not seeing it anymore and
+12:49 
+
+12:49 you can do that you can make the story
+12:50 
+
+12:50 more interesting by uh intriguing the
+12:54 
+
+12:54 viewer by posing questions through your
+12:55 
+
+12:55 environment that are not explicitly
+12:57 
+
+12:57 revealed in the picture
+12:60 
+
+12:60 and number three composition which is
+13:01 
+
+13:01 basically how you direct the viewer's
+13:03 
+
+13:03 attention how you make the image easy to
+13:05 
+
+13:05 understand and um how you make it just
+13:08 
+
+13:08 appear more pleasing to the human eye so
+13:11 
+
+13:11 if you use those three things your
+13:12 
+
+13:12 images will be a lot more interesting a
+13:15 
+
+13:15 lot less boring and uh hopefully that
+13:16 
+
+13:16 was helpful if you enjoyed this video
+13:18 
+
+13:18 you might want to go and check out my
+13:19 
+
+13:19 environments course link to that below
+13:22 
+
+13:22 and yeah thank you for watching
+13:23 
+
+13:23 hopefully this was helpful and bye

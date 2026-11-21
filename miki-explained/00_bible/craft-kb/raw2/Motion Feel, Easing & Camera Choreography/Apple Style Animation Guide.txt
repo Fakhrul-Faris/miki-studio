@@ -1,0 +1,637 @@
+00:00 In this video, I'm going to teach you
+00:01 
+
+00:01 how to create clean Apple style visuals
+00:04 
+
+00:04 like these. But before we start, we need
+00:07 
+
+00:07 to go back to where the style came from.
+00:08 
+
+00:08 This
+00:09 
+
+00:09 >> is one device and we are calling it
+00:12 
+
+00:12 [applause]
+00:13 
+
+00:13 iPhone.
+00:14 
+
+00:14 [music]
+00:15 
+
+00:15 >> Apple has always been known for its
+00:17 
+
+00:17 design. Some people love their products.
+00:19 
+
+00:19 >> Out of control lines, people waiting
+00:21 
+
+00:21 hours, even days. Things in LA even
+00:24 
+
+00:24 turning violent.
+00:26 
+
+00:26 >> [music]
+00:26 
+
+00:26 >> Check out this brawl that broke out
+00:27 
+
+00:27 after one man discovered someone had
+00:30 
+
+00:30 been paying homeless people to hold
+00:32 
+
+00:32 places in line. [music]
+00:33 
+
+00:33 >> And some people criticize Apple and
+00:35 
+
+00:35 instantly take it to social media.
+00:36 
+
+00:36 >> It's only been 2 days since Apple
+00:38 
+
+00:38 released their iPhone pocket. And it's
+00:40 
+
+00:40 already becoming the most controversial
+00:42 
+
+00:42 product of the year.
+00:43 
+
+00:43 >> Do you spend a penny on the iPhone
+00:46 
+
+00:46 Pocket?
+00:48 
+
+00:48 >> But regardless of opinions, Apple became
+00:50 
+
+00:50 the most successful company in the world
+00:52 
+
+00:52 for a reason. The Apple Pocket just sold
+00:54 
+
+00:54 out [music] in all 14 colors.
+00:55 
+
+00:55 >> I take a redeyed flight to New York to
+00:57 
+
+00:57 be first in line for the Apple Pocket
+00:59 
+
+00:59 just to find out. It instantly sold out.
+01:02 
+
+01:02 >> It is $229.95.
+01:05 
+
+01:05 It was just released yesterday.
+01:07 
+
+01:07 >> And recently, one part of Apple's
+01:08 
+
+01:08 identity has been blowing up on social
+01:10 
+
+01:10 media. The animation style. Clean UI
+01:13 
+
+01:13 motions, smooth animations, minimal
+01:15 
+
+01:15 layouts. This look has been trending
+01:17 
+
+01:17 everywhere and a lot of creators have
+01:18 
+
+01:18 been making their own inspired versions,
+01:20 
+
+01:20 including me. And now you want to create
+01:22 
+
+01:22 visuals like these. Apple's look starts
+01:25 
+
+01:25 with color. They usually use white or
+01:27 
+
+01:27 black backgrounds. Both give that clean,
+01:29 
+
+01:29 modern, minimal look. In After Effects,
+01:30 
+
+01:30 just create a solid layer and set your
+01:32 
+
+01:32 background to either white, black, or a
+01:34 
+
+01:34 very light gray. Apple rarely uses loud
+01:36 
+
+01:36 or complimented colors. Also, I put
+01:38 
+
+01:38 together a free Apple style color
+01:39 
+
+01:39 palette with the exact hex codes. Link
+01:41 
+
+01:41 in bio if you want to download it. And
+01:42 
+
+01:42 with the palette done, let's move on to
+01:44 
+
+01:44 the second piece of the Apple style, the
+01:46 
+
+01:46 font. Apple uses their own font family
+01:49 
+
+01:49 called SF Pro Display. Bold is used for
+01:51 
+
+01:51 titles or headings. Regular or medium is
+01:53 
+
+01:53 used for subheadings and smaller text. A
+01:55 
+
+01:55 white background with this font already
+01:56 
+
+01:56 makes it look like Apple. And actually,
+01:58 
+
+01:58 these Apple UI animations are the number
+01:60 
+
+01:60 one style businesses and content
+02:01 
+
+02:01 creators use for the ads and content. If
+02:03 
+
+02:03 you know how to do it properly, you'll
+02:04 
+
+02:04 be able to track clients on command,
+02:06 
+
+02:06 just like how I did with my recent
+02:08 
+
+02:08 challenge where I landed a client in 2
+02:09 
+
+02:09 weeks using the naughty Hua method that
+02:11 
+
+02:11 I've been gatekeeping for a while now.
+02:12 
+
+02:12 But now, I'm actually finally opening
+02:14 
+
+02:14 slots for my one-on-one mentorship. This
+02:16 
+
+02:16 isn't cheap and I'm only taking on a
+02:18 
+
+02:18 limited number of students, but if you
+02:19 
+
+02:19 want to apply to see if you're a good
+02:21 
+
+02:21 fit, click the first link in the
+02:22 
+
+02:22 description. But now, let's talk about
+02:24 
+
+02:24 shape layers. You can use shape layers
+02:26 
+
+02:26 to create Apple style UI panels, and
+02:28 
+
+02:28 you're able to morph one shape to
+02:29 
+
+02:29 another using one layer and key frames.
+02:31 
+
+02:31 It really is that simple. Make sure you
+02:33 
+
+02:33 keep that clean color palette we talked
+02:35 
+
+02:35 about, and always use rounded corners to
+02:37 
+
+02:37 match Apple's design style. From here,
+02:39 
+
+02:39 you should be able to start adding
+02:40 
+
+02:40 shapes, icons, numbers, or other things,
+02:43 
+
+02:43 and use nles to control everything. But
+02:45 
+
+02:45 now, let's talk about spacing because
+02:46 
+
+02:46 this is where the design actually
+02:47 
+
+02:47 becomes Appleike. Apple always leaves
+02:50 
+
+02:50 breathing room. Nothing feels cramped.
+02:51 
+
+02:51 Nothing feels accidental. That space is
+02:53 
+
+02:53 what makes everything feel intentional,
+02:55 
+
+02:55 simple, and easy to understand, no
+02:56 
+
+02:56 matter who's watching. So, whatever
+02:58 
+
+02:58 you're working on, strip it down and set
+02:60 
+
+02:60 it up in the simplest way possible. Your
+03:02 
+
+03:02 main layout should almost always stay
+03:03 
+
+03:03 centered. That's how you lock the viewer
+03:05 
+
+03:05 in. If things are offbalance, people
+03:06 
+
+03:06 don't know where to look and confusion
+03:08 
+
+03:08 kills attention. And only after your
+03:10 
+
+03:10 layout feels clean, that's when
+03:12 
+
+03:12 animations brings it to life. Apple
+03:13 
+
+03:13 animations are subtle, smooth, and
+03:15 
+
+03:15 quick. Nothing is flashy or dramatic.
+03:17 
+
+03:17 Some of the most common Apple style
+03:18 
+
+03:18 animations are text slide up animation.
+03:21 
+
+03:21 In After Effects, add key frames for
+03:22 
+
+03:22 position. Go to the start and position
+03:24 
+
+03:24 it either up, down, or left and right.
+03:27 
+
+03:27 In this case, we're going to position it
+03:28 
+
+03:28 going up. Add easing or graph to your
+03:30 
+
+03:30 key frames and use a square mask so it
+03:33 
+
+03:33 reveals clean. The next animation is
+03:34 
+
+03:34 word by word reveal. In After Effects,
+03:36 
+
+03:36 add your text and separate the words
+03:38 
+
+03:38 into their own layer and then use
+03:39 
+
+03:39 position to key frame them like we did
+03:41 
+
+03:41 earlier. And as an option, you can also
+03:43 
+
+03:43 add opacity key frames and then stagger
+03:45 
+
+03:45 them so they reveal word by word. Here's
+03:47 
+
+03:47 how to make this Apple style text
+03:48 
+
+03:48 animation in 30 seconds. Add your text.
+03:51 
+
+03:51 Go to your text layer. Click animate.
+03:53 
+
+03:53 Add opacity and position. Set position
+03:55 
+
+03:55 to 100 and opacity to zero. Go to range
+03:58 
+
+03:58 selector. Then advance. Change
+03:60 
+
+04:00 characters to words and shape to ramp
+04:03 
+
+04:03 up. Set the ease high to -50 and the
+04:05 
+
+04:05 ease low to 100. Then add a key frame to
+04:08 
+
+04:08 the offset from 100 to 100. And boom.
+04:12 
+
+04:12 Also, to make this easier for you, I put
+04:14 
+
+04:14 together a small Apple style animation
+04:16 
+
+04:16 pack and it includes the shakes,
+04:18 
+
+04:18 bounces, and micro animations that I use
+04:20 
+
+04:20 in my own edits. So, if you want these
+04:22 
+
+04:22 exact movements without building them
+04:23 
+
+04:23 from scratch and want to support the
+04:24 
+
+04:24 channel, link in description. Moving on,
+04:26 
+
+04:26 we have effects. Here are a few examples
+04:29 
+
+04:29 Apple uses. Bevel and emboss in After
+04:31 
+
+04:31 Effects. Right click on your clip, go to
+04:33 
+
+04:33 layer styles, and here there's some cool
+04:35 
+
+04:35 options, but the one we're looking for
+04:36 
+
+04:36 is bevel and emboss. It works for text,
+04:39 
+
+04:39 logos, and basically any other layer.
+04:40 
+
+04:40 Just play around with it. Next is
+04:42 
+
+04:42 [music] the glass morphism effect.
+04:43 
+
+04:43 Create a shape layer. Activate
+04:45 
+
+04:45 adjustment layer mode and add the fast
+04:46 
+
+04:46 box blur effect. Then increase the blur
+04:48 
+
+04:48 radius to your liking. Then I like to
+04:50 
+
+04:50 duplicate the layer, disable fill, and
+04:52 
+
+04:52 add a white stroke. Remove adjustment
+04:54 
+
+04:54 layer mode and remove the box blur
+04:56 
+
+04:56 effect. And change the blend mode to
+04:57 
+
+04:57 overlay. Then lower the opacity to
+04:59 
+
+04:59 around 30. It just gives it a nice
+05:01 
+
+05:01 border. Then you can link the stroke to
+05:03 
+
+05:03 the main shape or new so you can move it
+05:05 
+
+05:05 around easier. Now this effect works
+05:06 
+
+05:06 best when there's a cool background
+05:08 
+
+05:08 since technically it's only blur. So on
+05:10 
+
+05:10 a solid background, it'll basically just
+05:12 
+
+05:12 be transparent. Next is drop shadow.
+05:14 
+
+05:14 Drop shadow can really make your visuals
+05:16 
+
+05:16 stand out, but it needs to be very
+05:17 
+
+05:17 subtle if you want it to be apple-like.
+05:19 
+
+05:19 The last touch is sound effects. They
+05:21 
+
+05:21 add even more to the visuals. Sound
+05:23 
+
+05:23 effects make your visuals feel alive. In
+05:25 
+
+05:25 fact, I've been using sound effects this
+05:26 
+
+05:26 whole video, and by now I'm pretty sure
+05:28 
+
+05:28 you think this video is super high
+05:29 
+
+05:29 quality. If your animation is smooth,
+05:31 
+
+05:31 then your sound should be smooth, too.
+05:32 
+
+05:32 There are many places you can find sound
+05:34 
+
+05:34 effects and usually the best ones are
+05:36 
+
+05:36 going to be on the subscriptionbased
+05:37 
+
+05:37 websites where you can search up these
+05:39 
+
+05:39 terms. Honorable mention, but Apple also
+05:41 
+
+05:41 does 3D animations. If you want a
+05:43 
+
+05:43 tutorial on how to make 3D animations
+05:45 
+
+05:45 with cool camera motions like these that
+05:46 
+
+05:46 I've made and make sure to subscribe and
+05:48 
+
+05:48 most importantly give this video a
+05:49 
+
+05:49 thumbs up. It really helps out the
+05:51 
+
+05:51 channel and is free. But yeah, those are
+05:52 
+
+05:52 some of the many things that are part of
+05:54 
+
+05:54 the Apple style. Best to start simple
+05:56 
+
+05:56 and work your way out to more complex
+05:57 
+
+05:57 animations. But once you understand the
+05:59 
+
+05:59 colors, the spacing, the smooth motion,
+06:01 
+
+06:01 and the subtle interactions, everything
+06:03 
+
+06:03 you make starts to feel more intentional
+06:05 
+
+06:05 and more premium. And if you want to
+06:06 
+
+06:06 become [music] my student and start
+06:07 
+
+06:07 easily lending high-paying clients in
+06:09 
+
+06:09 the next 60 to 90 days, and learn from
+06:11 
+
+06:11 someone who's generated over $200
+06:13 
+
+06:13 million views online and charges over
+06:15 
+
+06:15 $6,000 for a 30-second video. Click the
+06:18 
+
+06:18 first link in the description, and we'll
+06:19 
+
+06:19 see if you're a good fan. I hope this
+06:21 
+
+06:21 video helped you understand the Apple
+06:22 
+
+06:22 style a lot better. Let me know other
+06:24 
+
+06:24 videos you want to see. Thanks for
+06:25 
+
+06:25 watching, and I'll see you in the next
+06:26 
+
+06:26 one. Deuces.

@@ -1,0 +1,62 @@
+You've probably seen those smooth camera
+animations where the camera moves from
+point A to B, giving your scene that
+amazing sense of depth, and it might
+look complicated, but it's really not.
+Today, I'll show you how to do it in
+After Effects in just five simple steps.
+Step one, make your layers 3D. Select
+your layers and click the 3D cube icon.
+And if you can't see it, just press F4.
+Now, you can adjust the Z position,
+which is the third value in the position
+property. What this does is higher
+values will push the layer back while
+lower values will bring it forward. You
+can spread things out to create Zdepth.
+This gives you that parallax effect
+where closer objects move faster than
+the ones in the back. And if you're just
+using a simple composition, you can just
+pre-ompose it and make the composition
+3D. Step two, add a camera. Right click
+on your timeline, new camera. Set the
+focal length to 35 mm. It's a great
+middle ground for smooth perspective.
+Hit okay and you're done. Step three,
+add a null object. Right click, new,
+null object. Make it 3D and parent the
+camera to it. This gives you easy
+control over your animation without
+messing with the camera settings
+directly. Step four, animate the camera.
+Go to the starting point in your
+timeline and key frame the position and
+scale of the no. Then move to the end
+point and adjust both values to define
+your camera move. Try to keep it simple
+and effective. Step five, we're going to
+smooth it out and add motion blur. So,
+select your key frames and hit F9 to
+easy ease. Now, open the graph editor by
+clicking on this icon. Right click,
+switch to value graph since it's easier
+for beginners to visualize and pull the
+handles to create a curve like this.
+Then, turn on motion blur by clicking
+this icon on your layers. Now, your
+animation will look way more cinematic.
+Also, bonus tip. Once you're confident
+with position and scale, try adding
+rotation, zdepth, or even lighting to
+take things further. I'll put this exact
+project file in the description for you
+to download for free so you can practice
+and reverse engineer what we have done
+here. And that's it. Now you know all
+the fundamentals of smooth camera
+movement. Also, real quick, we took this
+channel from zero to a,000 subs in just
+4 days and especially with just one
+video. So, if you make content, you
+don't want to miss the next video.

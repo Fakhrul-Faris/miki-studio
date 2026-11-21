@@ -1,0 +1,1111 @@
+00:00 okay what's up so I want to show you
+00:01 
+
+00:01 some cool stuff here so real quick
+00:03 
+
+00:03 before we even get started I I'll just
+00:04 
+
+00:04 put some images up on the screen of like
+00:06 
+
+00:06 the stuff that we're going to be doing
+00:07 
+
+00:07 but let me tell you about why this is
+00:10 
+
+00:10 actually very important so when I
+00:12 
+
+00:12 started blender like total Noob uh when
+00:15 
+
+00:15 I was first starting out I had the
+00:17 
+
+00:17 problem that most people have which is
+00:19 
+
+00:19 it's hard to make things that actually
+00:21 
+
+00:21 look good because you know you get the
+00:22 
+
+00:22 software you want to create cool things
+00:24 
+
+00:24 but it's you don't really know how to
+00:25 
+
+00:25 make things look realistic or fit
+00:27 
+
+00:27 together and look cool so I was
+00:29 
+
+00:29 struggling to make anything that was
+00:31 
+
+00:31 good what happened was I actually
+00:33 
+
+00:33 discovered ducky 3D's YouTube channel
+00:35 
+
+00:35 and I think this was a really big
+00:38 
+
+00:38 inspiration for this technique that I'm
+00:39 
+
+00:39 about to show you he had a video on
+00:41 
+
+00:41 particle systems and I watched that and
+00:43 
+
+00:43 I realized that there was a lot that I
+00:45 
+
+00:45 could do without actually making
+00:47 
+
+00:47 something that had to be super realistic
+00:49 
+
+00:49 so when I started using this technique I
+00:51 
+
+00:51 went from just really bad renders that
+00:53 
+
+00:53 didn't make any sense at all to actually
+00:55 
+
+00:55 interesting images that weren't
+00:57 
+
+00:57 realistic but they don't they didn't
+00:58 
+
+00:58 need to be so I could make tons of cool
+01:01 
+
+01:01 stuff and it was kind of like the
+01:03 
+
+01:03 possibilities of what I could do just
+01:06 
+
+01:06 all of a sudden expanded because of this
+01:07 
+
+01:07 one technique and uh I've used it in
+01:09 
+
+01:09 client work now I I still use it all the
+01:11 
+
+01:11 time um so yeah let me let me show you
+01:13 
+
+01:13 what this actually is basically a quick
+01:16 
+
+01:16 overviews we're just going to be using
+01:19 
+
+01:19 particle
+01:20 
+
+01:20 systems to create complex shapes that
+01:23 
+
+01:23 would be really hard to model by
+01:25 
+
+01:25 ourselves and we're going to use that
+01:26 
+
+01:26 and just Spam it around and just make a
+01:28 
+
+01:28 cool environment using
+01:31 
+
+01:31 um kind of clusters of particles like
+01:33 
+
+01:33 this so I'll show you exactly what I'm
+01:36 
+
+01:36 going to do here this will be very
+01:38 
+
+01:38 specific example but you can just you
+01:41 
+
+01:41 can model whatever you want and swap it
+01:43 
+
+01:43 for different different pieces you don't
+01:44 
+
+01:44 have to follow exactly step bystep what
+01:46 
+
+01:46 I'm doing but I'll just show you um an
+01:48 
+
+01:48 example of how this works so let's take
+01:51 
+
+01:51 a
+01:52 
+
+01:52 cylinder and just make sure the I I'll
+01:55 
+
+01:55 take the vertices down to like six or
+01:57 
+
+01:57 something because I kind of like this
+01:58 
+
+01:58 hexagonal type of thing so something
+02:00 
+
+02:00 like this will be a good starting point
+02:02 
+
+02:02 and basically my goal at this point is
+02:04 
+
+02:04 just to get some cool type of shape
+02:07 
+
+02:07 that's that's it like doesn't matter
+02:08 
+
+02:08 what it is so I like these uh hexagonal
+02:12 
+
+02:12 cluster type of things so I'll just
+02:13 
+
+02:13 really quick model um just a really
+02:17 
+
+02:17 basic type of little thing here which
+02:19 
+
+02:19 will be scattered everywhere so doesn't
+02:22 
+
+02:22 matter what it is just take some Edge
+02:23 
+
+02:23 Loops bevel extrude Parts really doesn't
+02:27 
+
+02:27 matter you could use a a square shape it
+02:29 
+
+02:29 I'm just using this as a an example
+02:32 
+
+02:32 we'll just um inset certain faces
+02:36 
+
+02:36 extrude that boom delete those and maybe
+02:39 
+
+02:39 just take this down a little bit okay
+02:43 
+
+02:43 good enough for now okay so let's take
+02:46 
+
+02:46 that and you can see if I go into render
+02:48 
+
+02:48 view it's just white so let's put a
+02:50 
+
+02:50 basic texture on this basic model so
+02:52 
+
+02:52 I'll just hit new let me go to my folder
+02:56 
+
+02:56 of stuff from textures.com so I'll just
+02:59 
+
+02:59 open this up
+03:00 
+
+03:00 and something kind of grungy I think is
+03:02 
+
+03:02 going to work well so something like
+03:04 
+
+03:04 this so this is just if you go on to
+03:06 
+
+03:06 textures.com go to the concrete section
+03:08 
+
+03:08 of the like regular photo section this
+03:10 
+
+03:10 isn't a PBR texture this is just a
+03:12 
+
+03:12 regular image of concrete um so you
+03:14 
+
+03:14 could go and photograph your own if you
+03:15 
+
+03:15 wanted to or just download one from
+03:17 
+
+03:17 textures.com
+03:18 
+
+03:18 something with a nice amount of detail
+03:21 
+
+03:21 and grunginess I think is going to work
+03:24 
+
+03:24 well for this you don't have to do this
+03:25 
+
+03:25 if you want a cleaner look go for
+03:27 
+
+03:27 something cleaner but for this example
+03:28 
+
+03:28 here's what I'm going to use
+03:30 
+
+03:30 so let's take that drop it in here and
+03:33 
+
+03:33 I'll just run that straight into the
+03:34 
+
+03:34 base color uh let's apply the scale and
+03:37 
+
+03:37 then select all vertices unwrap it with
+03:41 
+
+03:41 a cube projection and I'll just pull up
+03:43 
+
+03:43 the UV editor so I can see what I'm
+03:45 
+
+03:45 doing just move that roughly like there
+03:49 
+
+03:49 or something doesn't really matter I
+03:52 
+
+03:52 could take certain parts of this and
+03:53 
+
+03:53 scale them up and align them but I I'm
+03:56 
+
+03:56 not going to spend too much time doing
+03:58 
+
+03:58 this so something like that good enough
+04:00 
+
+04:00 for now you can see just some basic
+04:02 
+
+04:02 grunge is all we need so what I'll do
+04:06 
+
+04:06 now is actually just take the same image
+04:10 
+
+04:10 run that into the roughness take a color
+04:13 
+
+04:13 amp drop it in there and something like
+04:16 
+
+04:16 that will be fine just so there's some
+04:17 
+
+04:17 variation in the roughness doesn't
+04:18 
+
+04:18 really matter let's quickly uh bevel
+04:22 
+
+04:22 that so just quick bevel that will be
+04:25 
+
+04:25 fine just
+04:27 
+
+04:27 something and maybe let's make a couple
+04:29 
+
+04:29 variations of this so let's take this if
+04:32 
+
+04:32 you go to edit mode go to options on the
+04:34 
+
+04:34 top right check this box right here
+04:36 
+
+04:36 correct face attributes but that means
+04:38 
+
+04:38 is now when I move these vertices around
+04:40 
+
+04:40 it won't stretch the texture as opposed
+04:42 
+
+04:42 to if that's off it will stretch it so
+04:45 
+
+04:45 let turn that on uh just make some quick
+04:48 
+
+04:48 variations of this it doesn't really
+04:49 
+
+04:49 matter what I'm doing just as long as we
+04:53 
+
+04:53 have some different kind of sizes and
+04:55 
+
+04:55 maybe I'll move the texture along so
+04:56 
+
+04:56 it's different too um yeah just basic
+04:59 
+
+04:59 basic very viations doesn't really
+05:02 
+
+05:02 matter okay good enough for now so let's
+05:04 
+
+05:04 move these to a collection now and um so
+05:08 
+
+05:08 just hit select all those things you
+05:10 
+
+05:10 just made hit M new collection doesn't
+05:12 
+
+05:12 matter what it's
+05:14 
+
+05:14 called and now what I'm going to do is
+05:16 
+
+05:16 take these and scatter them onto an
+05:18 
+
+05:18 object so we get sort of a cluster of
+05:21 
+
+05:21 these
+05:22 
+
+05:22 pillars um and then I'll use those
+05:24 
+
+05:24 clusters to form some type of cool
+05:28 
+
+05:28 environment so
+05:31 
+
+05:31 I'm rushing through this but I would
+05:34 
+
+05:34 suggest spending a little bit more time
+05:35 
+
+05:35 getting these to look a little bit nicer
+05:37 
+
+05:37 than I am here but just you get the
+05:40 
+
+05:40 point here okay so I'm going to use
+05:42 
+
+05:42 geometry nodes to scatter these but you
+05:43 
+
+05:43 don't have to use this you can use you
+05:45 
+
+05:45 could also use a particle system like a
+05:48 
+
+05:48 hair particle system um the only reason
+05:50 
+
+05:50 I'm using geometry nodes is because it's
+05:52 
+
+05:52 just a bit easier to scatter stuff with
+05:54 
+
+05:54 it I find but if you don't like it you
+05:55 
+
+05:55 can just use a hair particle system
+05:57 
+
+05:57 doesn't matter okay so let's go to the
+06:00 
+
+06:00 geometry node section press
+06:04 
+
+06:04 new and this is I'm going to kind of
+06:06 
+
+06:06 speed through this because this is the
+06:08 
+
+06:08 basic like uh super basic geometry notes
+06:11 
+
+06:11 setup that you've probably already seen
+06:12 
+
+06:12 before if you haven't I'll just link to
+06:14 
+
+06:14 a video of somebody else explaining in
+06:15 
+
+06:15 depth of what this actually is but
+06:17 
+
+06:17 basically like it's just like a particle
+06:20 
+
+06:20 system just randomly scattering these
+06:21 
+
+06:21 objects onto another object so
+06:24 
+
+06:24 distribute points on faces so now we uh
+06:28 
+
+06:28 just get a bunch of random points let's
+06:30 
+
+06:30 take a instances on points so we want to
+06:33 
+
+06:33 instance these things onto those points
+06:36 
+
+06:36 we just made and we can take a
+06:37 
+
+06:37 collection info instead of an object
+06:40 
+
+06:40 info collection info because we have all
+06:42 
+
+06:42 these objects inside of a collection
+06:44 
+
+06:44 choose the stuff collection that I just
+06:46 
+
+06:46 made run that into the
+06:49 
+
+06:49 instances and then there's three boxes
+06:51 
+
+06:51 we need to check for this to work those
+06:53 
+
+06:53 three things are these right here so
+06:56 
+
+06:56 separate children reset children and
+06:58 
+
+06:58 pick instance check all the boxes and or
+07:00 
+
+07:00 else it will not work okay so now we
+07:04 
+
+07:04 have these objects being scattered onto
+07:07 
+
+07:07 this plane and you can see if I scale up
+07:09 
+
+07:09 the plane it's going to scatter more of
+07:11 
+
+07:11 those objects um you can see as I scale
+07:14 
+
+07:14 it up it's going to do that that's in
+07:15 
+
+07:15 edit mode by the way if I scale it in
+07:16 
+
+07:16 object mode it's not going to do that
+07:18 
+
+07:18 unless I apply the scale same thing as
+07:21 
+
+07:21 doing
+07:22 
+
+07:22 this um so now what I want to do is I
+07:26 
+
+07:26 want Randomness I want Randomness in the
+07:29 
+
+07:29 rotation as as well as the scale kind of
+07:31 
+
+07:31 like you would get in a particle system
+07:34 
+
+07:34 so if I turn this up it's going to
+07:35 
+
+07:35 rotate all of them same with the scale
+07:37 
+
+07:37 but um I want it I want some bigger and
+07:40 
+
+07:40 some smaller so you could do that with a
+07:42 
+
+07:42 random value if you just if you just
+07:44 
+
+07:44 search for random value plug that into
+07:47 
+
+07:47 the scale um so let's do like the
+07:50 
+
+07:50 minimum
+07:51 
+
+07:51 maybe2
+07:53 
+
+07:53 maximum something like that doesn't
+07:55 
+
+07:55 matter and then same thing for the
+07:57 
+
+07:57 rotation we'll just take a a the random
+08:00 
+
+08:00 value switch it over to Vector so that
+08:02 
+
+08:02 we get uh controls for the X Y and Zed
+08:06 
+
+08:06 because we only want to add Z rotation
+08:08 
+
+08:08 not X and Y so just plug that into the
+08:10 
+
+08:10 rotation zero everything out and let's
+08:13 
+
+08:13 just turn up the Zed so we're just
+08:15 
+
+08:15 getting random randomness on the Zed I
+08:18 
+
+08:18 could snap this so if I take a vector
+08:21 
+
+08:21 math and plug that in here between where
+08:25 
+
+08:25 the the random value is going into the
+08:27 
+
+08:27 rotation if you change this to snap
+08:30 
+
+08:30 and this is there's probably a better
+08:32 
+
+08:32 way to do this but this is just a quick
+08:34 
+
+08:34 quick way
+08:37 
+
+08:37 um as I turn this
+08:40 
+
+08:40 up it's it doesn't really seem like it's
+08:43 
+
+08:43 adding any order to this but eventually
+08:45 
+
+08:45 it you will actually land on a value
+08:48 
+
+08:48 that snaps them to the proper angle and
+08:52 
+
+08:52 you'll see what I mean like right here
+08:54 
+
+08:54 for example so
+08:57 
+
+08:57 2.95 and it's close enough not perfect
+08:59 
+
+08:59 but but it's close enough and a little
+09:01 
+
+09:01 bit of subtle variation is going to be
+09:02 
+
+09:02 fine so basically the point of that
+09:04 
+
+09:04 versus just having them all rotated the
+09:07 
+
+09:07 same is now they're going to be randomly
+09:10 
+
+09:10 rotated but um it'll snap to like the
+09:13 
+
+09:13 proper uh angle that it should be at so
+09:15 
+
+09:15 it's still in line but it's still
+09:17 
+
+09:17 randomly rotated if that makes sense if
+09:18 
+
+09:18 I take that out you can see yeah or if I
+09:21 
+
+09:21 have no rotation now they're all lined
+09:22 
+
+09:22 up the exact same but if I use this then
+09:26 
+
+09:26 they're they're lining up and they're
+09:28 
+
+09:28 like snapping to these uh like they're
+09:32 
+
+09:32 lining up with each other but then it's
+09:35 
+
+09:35 uh we're still getting
+09:37 
+
+09:37 Randomness okay you don't have to do
+09:39 
+
+09:39 that but it's just a bit of random
+09:41 
+
+09:41 ration is always
+09:42 
+
+09:42 nice okay so now that I have this let's
+09:45 
+
+09:45 go to rendered View and you can see
+09:47 
+
+09:47 right away like Cycles just makes this
+09:49 
+
+09:49 look so much better with adding shadows
+09:50 
+
+09:50 and stuff so there's a lot you can do
+09:52 
+
+09:52 with this you can just scale it down
+09:53 
+
+09:53 like this and kind of spam it around or
+09:56 
+
+09:56 you can um you know expand this a lot
+09:60 
+
+09:60 have tons of stuff like this um yeah
+10:02 
+
+10:02 there's there's really unlimited things
+10:04 
+
+10:04 you can go you can do from here so I'll
+10:06 
+
+10:06 just show you an example of what you
+10:07 
+
+10:07 could do let's go to render view over
+10:10 
+
+10:10 here just go to the camera perspective I
+10:12 
+
+10:12 go back to solid here so maybe let's
+10:15 
+
+10:15 take some water I'm going to also add a
+10:18 
+
+10:18 plane down here just for a a base
+10:21 
+
+10:21 underneath it like a floor it's actually
+10:24 
+
+10:24 scale those down maybe let's do it in
+10:26 
+
+10:26 edit mode so the texture stretches with
+10:28 
+
+10:28 it so yeah I'm I'm just going to spam
+10:30 
+
+10:30 these around a little bit and get some
+10:32 
+
+10:32 cool
+10:33 
+
+10:33 stuff um so you can see just by taking
+10:37 
+
+10:37 the same exact cluster moving it around
+10:39 
+
+10:39 in different places and changing the
+10:42 
+
+10:42 scale you can get a lot of variation
+10:44 
+
+10:44 really really fast um so let's just do
+10:47 
+
+10:47 this maybe take another one of these
+10:49 
+
+10:49 over here over
+10:53 
+
+10:53 here maybe another one like up here
+10:56 
+
+10:56 that's kind of cool having some above
+11:03 
+
+11:03 and look how much complexity we're
+11:05 
+
+11:05 getting with just a couple of basic
+11:08 
+
+11:08 models that we made so let's do some uh
+11:11 
+
+11:11 some just quick lighting just to get
+11:13 
+
+11:13 this to look good so maybe let's do a
+11:16 
+
+11:16 sky if you haven't seen my uh tutorial
+11:19 
+
+11:19 on making skies I recommend you go watch
+11:21 
+
+11:21 that so that's I'm just using the exact
+11:23 
+
+11:23 thing that I showed you there so let's
+11:25 
+
+11:25 just take any image of yeah nice sky so
+11:28 
+
+11:28 just boom unsplash
+11:31 
+
+11:31 um let's see I have a folder for this SK
+11:35 
+
+11:35 let's
+11:36 
+
+11:36 take this one looks cool okay take that
+11:39 
+
+11:39 run it into the emission run into the
+11:41 
+
+11:41 base color and maybe the alpha as
+11:45 
+
+11:45 well and we could actually take this and
+11:47 
+
+11:47 just duplicate it around so we get uh
+11:49 
+
+11:49 Reflections from the environment this is
+11:51 
+
+11:51 kind of like a janky hdri but it's it's
+11:53 
+
+11:53 kind of cool that's kind of
+11:56 
+
+11:56 nice and then let's also line this up a
+11:59 
+
+11:59 little little bit better so right there
+12:03 
+
+12:03 yeah okay cool okay yeah so you can see
+12:06 
+
+12:06 by just taking this one model that we
+12:08 
+
+12:08 made literally just spamming it around a
+12:10 
+
+12:10 bunch of
+12:11 
+
+12:11 times um with random rotation and scale
+12:14 
+
+12:14 you can get some really crazy stuff uh
+12:17 
+
+12:17 Without Really knowing what you're doing
+12:21 
+
+12:21 um so let's just do something like that
+12:24 
+
+12:24 boom let's just give this a quick test
+12:26 
+
+12:26 rener just see what it looks
+12:28 
+
+12:28 like and there's a more that I'd want to
+12:30 
+
+12:30 do here to get this to actually look
+12:32 
+
+12:32 good but this is a nice starting point
+12:34 
+
+12:34 for um like this is how a lot of my
+12:37 
+
+12:37 stuff starts just like messiness but
+12:39 
+
+12:39 still cool
+12:40 
+
+12:40 idea and it's too bright right now so
+12:42 
+
+12:42 I'm just going to take down the
+12:43 
+
+12:43 environment so it's just cool so let's
+12:45 
+
+12:45 do some quick volume so just Cube over
+12:48 
+
+12:48 this uh new texture take a quick volume
+12:51 
+
+12:51 scatter 0.01 and point uh8 on the this
+12:56 
+
+12:56 on the anisotropy um display as bounds
+12:59 
+
+12:59 and then you can see what that's doing
+13:02 
+
+13:02 maybe let's take a quick Point light and
+13:05 
+
+13:05 just take that way up make it like
+13:09 
+
+13:09 yellow uh that's that's too much let's
+13:12 
+
+13:12 do a little bit less Co that's pretty
+13:15 
+
+13:15 nice looks like a
+13:17 
+
+13:17 sun and yeah cool maybe we could even
+13:21 
+
+13:21 zoom out to like 16 mm that's kind of
+13:24 
+
+13:24 sick actually so let's try
+13:27 
+
+13:27 that yeah yeah I'm just messing with
+13:30 
+
+13:30 like the positioning of these to find uh
+13:33 
+
+13:33 just a cool composition that works well
+13:35 
+
+13:35 with this anyways you get the point um
+13:37 
+
+13:37 I'm not going to make this into an
+13:38 
+
+13:38 actual finished thing but you get the
+13:40 
+
+13:40 point of how this could be super useful
+13:42 
+
+13:42 um I I'll show you again here are some
+13:44 
+
+13:44 examples of where I've used this in like
+13:47 
+
+13:47 my actual artwork so you can see you can
+13:50 
+
+13:50 instead of scattering it onto a plane
+13:52 
+
+13:52 you could actually scatter this onto any
+13:54 
+
+13:54 object so here's one with like um
+13:56 
+
+13:56 scattering it onto a skull model kind of
+13:58 
+
+13:58 the same technique but just instead of a
+14:00 
+
+14:00 putting it onto a plane just putting it
+14:02 
+
+14:02 onto a face or a skull so you can do
+14:05 
+
+14:05 that um but then once you have this cool
+14:07 
+
+14:07 shape it just comes down to like finding
+14:10 
+
+14:10 cool lighting and a cool composition to
+14:12 
+
+14:12 to set things up
+14:13 
+
+14:13 with that's really it like you can
+14:16 
+
+14:16 there's so much stuff you can do with
+14:17 
+
+14:17 this that's that I think that's
+14:19 
+
+14:19 everything I wanted to cover so yeah go
+14:21 
+
+14:21 out make some cool with this show
+14:23 
+
+14:23 me if you want send me send it to me on
+14:24 
+
+14:24 Instagram I always love seeing that and
+14:27 
+
+14:27 um yeah see you around peace

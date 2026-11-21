@@ -1,0 +1,291 @@
+00:00 This video is brought to you by Envato.
+00:02 Motion design is the beautiful love child
+of two mighty disciplines,
+00:07 graphic design and animation.
+00:09 In this short course, I'll show you how to
+harness the principles of both to make
+00:13 you a master motion designer in no time.
+00:16 I'm Jess from Envato Tuts Plus, and I'm a
+professional graphic and motion designer.
+00:21 We'll start with a very quick
+historical aside for the nerds.
+00:25 While graphic design and animation as
+specific art forms have been around for
+00:29 about a British years, motion
+graphics is fairly new.
+00:33 In the 1940s, artists and filmmakers like
+Norman McLaren and Mary Ellen Butte began
+00:38 making experimental animations
+by drawing on film stock.
+00:42 In the '50s, Saul Bas already a
+well-established American graphic
+00:46 designer, pioneered the combining of
+graphics and animation with his titles for
+00:50 films like Cowboy and North by Northwest.
+00:53 John Whitney plays around with ex-World
+War II anti-aircraft technology, and we
+00:57 get the first computer-powered animation.
+00:60 Scannermate is born and TV takes off.
+01:03 Fast forward through the '70s, '80s, '90s
+as computer power gets better and new
+01:07 software develops and plugins and scripts
+are written and installed and debugged and
+01:12 installed, and we invent the Internet and
+3D animation and we get GIFs and VR and AR
+01:18 and projection mapping and Instagram, and
+we get an entire field of people working
+01:23 on exciting and experimental ways of
+moving things around the screen that is
+01:27 just continuing to grow and
+get broader every a year.
+01:31 It is a fantastically enthralling
+and very friendly world to get into.
+01:36 And you might think that in all this,
+there could never be a thread
+01:40 holding it all together.
+01:41 But two sets of guiding principles exist
+at the heart of pretty much every piece of
+01:45 motion graphics, the principles of graphic
+design and the principles of animation.
+01:50 In this video, I'm going to cherry-pick
+the ones that I use and see the most often
+01:54 in the field of motion graphics,
+and I'll show you how to
+01:56 use them to your advantage.
+01:58 I've linked the project files in the
+description of this video, so if you want
+02:02 to grab those and follow along, please do.
+02:04 Having an unlimited subscription within
+Bardo and being able to jump back and
+02:08 forward between my project and a huge
+library of downloadable assets
+02:12 is really great for trying out new
+ideas quickly and seeing what sticks.
+02:19 There is no good motion design
+without first good graphic design.
+02:23 So I have distilled what I think the most
+important graphic design principles
+02:27 are when relating to motion design.
+02:30 Hierarchy is the order in which your brain
+digests information, controlled by the
+02:36 weighting of elements in the design
+through the use of some of our other
+02:39 principles, things like
+scale, color, and alignment.
+02:42 Balance and tension is the relationship
+between elements in a design that
+02:47 provides the overall structure.
+02:49 This really drives a mood.
+02:51 Layouts can be purposefully balanced and
+in harmony, or they can be dynamic
+02:55 and invite tension between elements.
+02:58 Contrast is using opposing
+elements for greater distinction.
+03:03 For example, dark and light,
+warm and cool, sharp and soft.
+03:07 Color really comes into it here.
+03:08 So when choosing a palette, look to have a
+good amount of contrast in light
+03:12 and darkness and in saturation.
+03:14 Negative
+space considers the space around your
+03:19 elements to be as important as the element
+itself, allowing elements room to
+03:23 breathe, or you can overcrowd on purpose.
+03:26 Utilizing negative space is really
+important in creating
+03:29 that sense of tension.
+03:30 Lastly, repetition or rhythm is using the
+same fonts, colors, styles over and over
+03:36 again to maintain
+consistency and tell a story.
+03:40 You want to keep the audience engaged,
+not confuse them by switching the
+03:43 font halfway through your project.
+03:45 I'll keep these in a list on my desktop,
+and whenever I'm designing anything, if
+03:49 something's falling flat or just doesn't
+seem right, I'll evaluate my
+03:52 frames against these principles.
+03:55 See if you can use them or break them to
+make your design more
+03:58 interesting or appealing.
+03:60 Now, Our set of animation principles was,
+of course, developed by the good
+04:03 folks at Disney, Frank and Ollie.
+04:05 I think for some versions of motion
+graphics, these can all be relevant.
+04:09 But for today, we're going to focus on
+five that I think make the most impact.
+04:13 I'll show you how we use these in my
+native program, After Effects, with this
+04:17 little animated sequence
+that I've made to explain.
+04:20 The big difference between graphic design
+and animation is that
+04:24 animation is physical.
+04:25 Things have mass and weight, and most
+importantly, happen in the
+04:29 fourth dimension of time.
+04:32 So block your animation first.
+04:35 Timing is essentially hierarchy
+in the fourth dimension.
+04:38 We can change the hierarchy over time to
+tell a story, to engage, and to surprise.
+04:44 Changing the The need of our action and
+the flow of our action changes the way our
+04:48 audience understands it, brings a
+different mood, and can be make or break
+04:52 in terms of the legibility
+of your animation.
+04:55 So it's really important to
+block out your animation first.
+04:58 Storyboard.
+04:59 Figure out what your keyframes are, the
+main moments of action, before you
+05:04 decide what happens in between them.
+05:06 That's why these things are
+actually called keyframes.
+05:09 I have this little animation
+of a dodgeball game.
+05:12 It's five scenes with a
+bit of a twist at the end.
+05:14 I brought everything into After Effects,
+pre-comped each scene, and added
+05:19 in each scene's key frames.
+05:20 For example, the main throw
+action, the ball hitting his nose.
+05:24 Let's pop all of these into a main
+comp and see how they flow together.
+05:28 If they're all exactly the same
+length, there's There's not much story.
+05:31 We can change a lot about the feel of this
+animation just by changing how
+05:35 long each scene is on the screen.
+05:37 I think we need to give the fourth frame
+lots of time for the audience to have a
+05:41 bit of a, huh, moment before we reveal
+the size difference in our characters.
+05:52 This step may seem uninfluential, and you
+will need to continue to tweak timing as
+05:57 you go, but a bit of prep
+here makes all the difference.
+06:00 Also, think about your frame rate.
+06:02 Changing the frame rate gives a really
+different feel depending
+06:04 on what you go with.
+06:07 Our next one is easing.
+06:08 It's the velocity at which
+things move over time.
+06:11 The best advice I've ever received is to
+get super comfy with the Graph
+06:15 Editor and control your curves.
+06:18 Easing is how we refine our timing, adding
+character, and showing
+06:21 things like mass and weight.
+06:23 In the Graph Editor, you can edit
+the curves based on speed or value.
+06:28 I like to use a mix of both as it gives me
+the most control roll, but essentially,
+06:32 the steeper the curve, the faster we go,
+the shallower the curve, the slower we go.
+06:37 Right now, I've just blocked in these main
+keyframes as hold frames, but let's add
+06:41 some easing to them and see what happens.
+06:52 Now onto our third
+principle, anticipation.
+06:55 Anticipation primes your
+audience for the next movement.
+06:59 Imagine you're playing dodgeball.
+07:00 The moment you see your opponent recoil
+their arm to chuck the ball in your
+07:04 direction, you know that ball is coming
+your way, if you've been paying attention.
+07:09 You can do this by adding a few frames of
+opposite animation before you
+07:13 launch into your main action.
+07:17 If
+we are thinking of our elements as having
+07:21 mass, it might also look good to add a
+little bit of squash and stretch, in
+07:25 certain cases, to show how that mass
+is being affected by the movement.
+07:29 Our fourth principle, follow through.
+07:31 Follow through is the
+reverse of anticipation.
+07:34 When that ball hits you, the energy
+released by your opponent's
+07:37 throw doesn't just disappear.
+07:39 Where it goes is the follow through.
+07:41 The ball bounces off you.
+07:43 Maybe you fall backwards as a result.
+07:46 Follow-through can be as simple as
+something sliding slowly into place,
+07:50 or maybe it's more of a snap-back action,
+depending on how you want
+07:53 your animation to feel.
+07:55 And lastly, secondary animation.
+07:58 It's the final flourish that
+really makes all the difference.
+08:01 It's anything you can add that
+enhances that main action.
+08:05 So think about what that main action might
+cause other elements in your scene to do,
+08:09 or how is the environment around
+your elements affecting them?
+08:13 Our character's head is probably going
+to move offset to the main arm swing.
+08:18 The ball is going to rotate in the air.
+08:20 Maybe we could add some flair by giving
+some smoke trails to enhance that main
+08:24 action and show just how hard
+this ball is going to hit.
+08:27 That's all secondary animation.
+08:30 And now, here is a super secret bonus tip.
+08:35 Lean into styling.
+08:36 When the client asks you to make it pop,
+or for when you just maybe want to get a
+08:40 little bit funky, After Effects has a
+really powerful set of effects,
+08:44 layer effects, and of course, an unlimited
+herd of people releasing handy and
+08:49 experimental new plugins
+and scripts every day.
+08:52 Speaking of styling, for this section, I
+grabbed this volleyball asset off of
+08:56 Envato, popped on a color arm or effect to
+bring it into the style
+08:59 of my project, and bam.
+09:01 So designing your initial animation with
+these tools in mind or experimenting with
+09:06 them as you go can be
+really, really fun and weird.
+09:09 It can get pretty wild.
+09:10 So use with caution and remember
+your graphic design principles.
+09:14 Some of my favorite effects to play with
+are inner glow, displacement, and CC lens.
+09:20 You can make some really cool stuff
+with these effects, so have a play.
+09:24 Now you know all the
+rules, you can break them.
+09:26 Play around and see what feels right.
+09:28 Maybe your idea is to be super flowy and
+abstract, and you barely use
+09:32 any easing or anticipation.
+09:34 Or maybe you want a really clean graphic
+result, and squash and stretch
+09:38 looks too realistic or cartoonish.
+09:41 Maybe you want your piece to feel
+overwhelming and busy, so you
+09:45 remove all the negative space.
+09:46 It's really up to you.
+So there you go.
+09:48 That is the principles of motion design.
+09:51 It's graphic design, but over time.
+09:53 I hope you found this enlightening, and
+I really can't wait to see what you make.
+09:57 Drop me a comment and show it off.
+09:59 Don't forget to check
+out the linked below.
+10:01 And until next time, keep on moving.

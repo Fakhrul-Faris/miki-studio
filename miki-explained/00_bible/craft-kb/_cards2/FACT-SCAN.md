@@ -1,0 +1,27 @@
+# FACT-SCAN — worked-example fact-check (examples_early.md + examples_rest.md)
+
+Scope: read all 142 examples in `_cards2/examples_early.md` and all 410 examples in `_cards2/examples_rest.md`
+in full. Flagged only real-world mechanism/law/fee/app-feature claims that are false or unconfirmable in
+Malaysia, unverified real-company factual claims, script examples ending on a follow/subscribe request, and
+arithmetic that doesn't add up. Numbers already marked "illustrative" plus plain count×price/addition arithmetic
+were left alone per the scan brief.
+
+| path | problem | category | fix |
+|---|---|---|---|
+| cards/06_Art_Direction/milk-it-extra-story-layer--4-steps-powerful-visuals.md | Worked example has "a RM 1 coin" rising out of the coffee — RM1 coins have not been legal tender in Malaysia since 2005 (RM1 is a banknote, not a coin). | (a) false real-world product/currency fact | Changed to "two 50 sen coins" (sums to the RM1 the line names; 50 sen is a real circulating coin). |
+| cards/07_Script_Story/canal-wall-fresh-language--johnny-harris-writes.md | Worked example topic header: "why a RM1 coin matters to a vending-machine owner" — same nonexistent-coin error. | (a) false real-world product/currency fact | Changed topic to "why loose change matters to a vending-machine owner" (the script line itself only ever says generic "syiling", so only the header needed the fix). |
+| cards/08_Edit_Pacing/peak-velocity-pass-through-hides-impossible-move--three-mograph-techniques.md | Worked example: "macro top-down on one RM1 coin on a wooden counter" — same nonexistent-coin error. | (a) false real-world product/currency fact | Changed to "one 50 sen coin on a wooden counter". |
+| cards/08_Edit_Pacing/match-cut-at-the-fastest-frame--ae-morph-match-cuts.md | Worked example BEFORE/AFTER rows both say "Korang masuk syiling RM1…" (inserting an "RM1 coin" into a machine) — same nonexistent-coin error, appears twice in the one card. | (a) false real-world product/currency fact | Changed both occurrences to "Korang masuk syiling 50 sen…". |
+| masters/08_Edit_Pacing/peak-velocity-cut.md | Master copy of the same worked example carries both errors from the two cards above: "Korang masuk syiling RM1…" (×2) and "one RM1 coin on a wooden counter". | (a) false real-world product/currency fact | Applied the same fixes as the two member cards (syiling RM1 → syiling 50 sen, ×2; RM1 coin → 50 sen coin). |
+
+## Not flagged (checked and cleared)
+- All script-example lines ending "Follow untuk tips lagi" / "Follow untuk part dua" / "Follow untuk lagi" (examples_early.md lines ~383, 420, 563, 595; examples_rest.md lines ~1490, 1622, 1767 and the masters copy ~2465) appear only inside explicitly-rejected **BEFORE** blocks, each paired with an **AFTER** that already ends on a question per house rule. Not a live example of the banned pattern.
+- `masters/06_Art_Direction/gradient-phase-loop.md`'s "Follow Meikigo for more" end-card topic (examples_rest.md ~495) is a background-glow animation technique applied to the house end card, not a script-ending worked example — left as is.
+- Malaysian-specific real-mechanism claims that are accurate and already caveated as real: cash rounds to the nearest 5 sen (`cards/04_Shading_Lighting/finishing-glint-extra-light--apple-commercial-breakdown.md`), RON95 pump price is government-set and identical at every station (`cards/06_Art_Direction/break-physics-for-clarity--animated-movies-lighting.md`), card-present merchant fees are real with the rate marked illustrative (`cards/07_Script_Story/decide-whats-essential-for-this-viewer--explain-complex-things.md`), DuitNow QR is a real national standard (`hero-product-shots-carry-the-film`, `seven-tools-one-point-stack-check`, and others) — all correctly described, no edits needed.
+- Checked every plain-arithmetic worked example (counts × price, sums of parts, percentage splits, unit-price divisions, instalment totals) across both files by hand — all add up correctly (e.g. 1.20+1.50+1.30+1=5 in `courier-run-follow-one-object`; 8.50÷5=1.70 and 3.20÷2=1.60 in `stated-vs-implied-contrast-curiosity-loop`; 417×12=5,004 in `prediction-pop-quiz-knowledge-gap`; etc.). No arithmetic errors found.
+- No real-company sales/margin/ownership/store-count claims found stated as fact; every named real brand (Shopee, Mr DIY, Meikigo, DuitNow) appears either as a generic platform reference with no specific numeric claim, or explicitly marked "illustrative"/"generic", or is the channel's own brand.
+
+## Unsure / flag for the user
+- `cards/07_Script_Story/and-but-therefore-structure--abt-science-writing.md` and its master `masters/07_Script_Story/and-but-therefore-not-and-then.md` have a kedai runcit owner say "dia buka QR — caj RM0" (QR fee is RM0). This is plausible — DuitNow QR is widely marketed as fee-free for small/micro merchants under Bank Negara's push — but the card doesn't mark the RM0 fee claim itself as illustrative, and merchant fee treatment can vary by bank/volume/scheme. Left unflagged because I could not find it to be clearly false, but it is the one claim in the whole scan I'm not fully confident about; worth a second look if a fee-accuracy pass is run later.
+
+| cards/07_Script_Story/and-but-therefore-structure--abt-science-writing.md (+ master) | "QR — caj RM0" states DuitNow merchant fee is zero; varies by bank/scheme | (a) | replaced with "duit masuk akaun, app kira sendiri" (main session, 2026-11-21) |

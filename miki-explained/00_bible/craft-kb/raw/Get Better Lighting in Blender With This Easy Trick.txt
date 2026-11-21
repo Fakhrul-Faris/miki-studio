@@ -1,0 +1,1114 @@
+00:00 okay so I want to show you a pretty easy
+00:02 
+
+00:02 lighting trick that I use sometimes when
+00:04 
+
+00:04 I'm in this kind of situation where the
+00:06 
+
+00:06 lighting that I have is kind of going in
+00:08 
+
+00:08 the right direction but it's just
+00:09 
+
+00:09 missing a whole bunch of pieces where
+00:11 
+
+00:11 I'm pulling this example from is a
+00:12 
+
+00:12 render I did recently this one where I
+00:14 
+
+00:14 was in this situation and I ended up
+00:16 
+
+00:16 doing the thing I'm about to show you to
+00:18 
+
+00:18 get this result right here so here's the
+00:19 
+
+00:19 before and the after so the basic idea
+00:23 
+
+00:23 here is just faking indirect or bounce
+00:27 
+
+00:27 lighting with just some normal lights
+00:29 
+
+00:29 but I'll show you EX how this works and
+00:31 
+
+00:31 when to use it and um when not to use it
+00:34 
+
+00:34 so in this case it is highlighting quite
+00:37 
+
+00:37 an extreme version of this effect so
+00:39 
+
+00:39 it's not always going to be this extreme
+00:41 
+
+00:41 and most of the time when I use it it's
+00:42 
+
+00:42 a lot more subtle than this but it can
+00:44 
+
+00:44 still all uh usually when I use it it it
+00:46 
+
+00:46 adds just a really nice touch where it's
+00:48 
+
+00:48 visible and just kind of gives it that
+00:50 
+
+00:50 more special kind of feeling that you
+00:51 
+
+00:51 can see here so how exactly do you do
+00:54 
+
+00:54 this let me show you um so here we are
+00:57 
+
+00:57 in this scene we have just some
+00:59 
+
+00:59 spotlights up here which are the main
+01:01 
+
+01:01 lights that are casting kind of this
+01:03 
+
+01:03 direct uh kind of Faking sunlight I
+01:05 
+
+01:05 guess so the direct light is just coming
+01:07 
+
+01:07 the kind of the main lighting is already
+01:09 
+
+01:09 done here so the light is just coming
+01:10 
+
+01:10 from the top from these uh three
+01:12 
+
+01:12 spotlights up here and that's just
+01:13 
+
+01:13 shining down there and you can see that
+01:15 
+
+01:15 kind of just that's what that is there
+01:17 
+
+01:17 so the problem is there's all these
+01:19 
+
+01:19 surrounding areas which are silhouetted
+01:21 
+
+01:21 and I want more light to be kind of
+01:23 
+
+01:23 radiating from that bright point into
+01:25 
+
+01:25 all these other areas so there's a bunch
+01:27 
+
+01:27 of ways to do that you could do things
+01:28 
+
+01:28 like increase the exposure um but that
+01:31 
+
+01:31 might not always give you the look you
+01:33 
+
+01:33 want you could also do something like
+01:35 
+
+01:35 increase the brightness of the floor
+01:37 
+
+01:37 again just might not give you the look
+01:39 
+
+01:39 you want because say I say I do this I
+01:40 
+
+01:40 increase the brightness of the floor it
+01:42 
+
+01:42 does kind of increase the amount of
+01:44 
+
+01:44 light reflecting off the floor but the
+01:46 
+
+01:46 problem is the floor is really bright
+01:47 
+
+01:47 now and there all the tiles look kind of
+01:48 
+
+01:48 weird so that might not be a desirable
+01:51 
+
+01:51 solution either so something you'll see
+01:53 
+
+01:53 pretty often in 3D is kind of just
+01:56 
+
+01:56 faking this effect by adding in lights
+01:58 
+
+01:58 so here are all the lights that we going
+01:60 
+
+01:60 to be adding in I'll show you kind of
+02:01 
+
+02:01 one by one what this is doing but if I
+02:03 
+
+02:03 just toggle this on and off you can see
+02:05 
+
+02:05 that kind of accentuates the bounce
+02:07 
+
+02:07 lighting that's already there and just
+02:09 
+
+02:09 makes it feel nicer but still natural so
+02:13 
+
+02:13 let's go let's go through this one by
+02:15 
+
+02:15 one and I'll show you where this starts
+02:16 
+
+02:16 so the first one I added was this one
+02:18 
+
+02:18 right here so this is just an area light
+02:20 
+
+02:20 and the reason I like using area lights
+02:23 
+
+02:23 instead of spot or point or anything is
+02:25 
+
+02:25 because it gives you a very easy
+02:28 
+
+02:28 directional control so it's shining
+02:31 
+
+02:31 right in the direction that I want and
+02:33 
+
+02:33 not Illuminating areas that I don't want
+02:36 
+
+02:36 this in uh and it also is really easy to
+02:38 
+
+02:38 make this it's it's just soft lighting
+02:40 
+
+02:40 by default cuz it's already a meter in
+02:42 
+
+02:42 diameter by default so that's why I like
+02:45 
+
+02:45 using that and then you can also control
+02:46 
+
+02:46 the spread on this as well so you can
+02:49 
+
+02:49 make this a direct beam or you can make
+02:51 
+
+02:51 it all the way up to like 180° outwards
+02:54 
+
+02:54 uh so mine has turned down a little bit
+02:56 
+
+02:56 but basically the the key that I want to
+02:59 
+
+02:59 show you here is you have to add these
+03:00 
+
+03:00 lights in areas that make sense for
+03:02 
+
+03:02 there to be light okay so you can see
+03:05 
+
+03:05 that there's all this direct light kind
+03:07 
+
+03:07 of this fake you could say sunlight
+03:09 
+
+03:09 coming in the scene here so the sunlight
+03:12 
+
+03:12 is hitting the ground and then there's
+03:14 
+
+03:14 already actually indirect light in here
+03:16 
+
+03:16 if you look at this the indirect light
+03:18 
+
+03:18 is just the light that bounces off of
+03:20 
+
+03:20 something onto something else so for
+03:21 
+
+03:21 example the light that's hitting the
+03:23 
+
+03:23 floor is bouncing up onto like the
+03:25 
+
+03:25 underside of this ring you can see all
+03:27 
+
+03:27 that there uh up here the bright part of
+03:30 
+
+03:30 this the top of this ring underneath
+03:32 
+
+03:32 here that's all indirect light that's
+03:34 
+
+03:34 bouncing off of the floor bouncing
+03:36 
+
+03:36 upwards hitting this thing and that's
+03:38 
+
+03:38 what is lighting that up right there so
+03:41 
+
+03:41 this effect is not uh something that is
+03:43 
+
+03:43 always faked right like it there's
+03:45 
+
+03:45 always indirect Lighting in the scene no
+03:47 
+
+03:47 matter what but if you want to
+03:49 
+
+03:49 accentuate that you have to add the
+03:51 
+
+03:51 lights in areas where it makes sense for
+03:53 
+
+03:53 there to be indirect lighting so
+03:55 
+
+03:55 basically what I look for when I'm doing
+03:57 
+
+03:57 this is where are the areas that there's
+03:59 
+
+03:59 already some indirect light but maybe
+04:01 
+
+04:01 not enough and maybe some uh areas that
+04:03 
+
+04:03 I can beef it up a little bit so if you
+04:06 
+
+04:06 add an area light let's just look at
+04:07 
+
+04:07 this first one um the power is very low
+04:10 
+
+04:10 so it's only at 160 Watts which is this
+04:13 
+
+04:13 effect is already quite extreme what I'm
+04:15 
+
+04:15 showing you so I'd probably go lower
+04:17 
+
+04:17 even than that uh in a in something
+04:20 
+
+04:20 that's not an example of this uh like
+04:23 
+
+04:23 just in some other random render that I
+04:24 
+
+04:24 would do I'd probably go lower than 160
+04:26 
+
+04:26 but just to show you exactly what's
+04:28 
+
+04:28 really happening I'll I'll keep it on
+04:29 
+
+04:29 high here and this was actually the the
+04:31 
+
+04:31 value that I used in the render but most
+04:33 
+
+04:33 renders aren't this extreme okay so we
+04:36 
+
+04:36 have this area light and if you notice
+04:37 
+
+04:37 if I just go to where this light
+04:39 
+
+04:39 actually is and I rotate around it it's
+04:41 
+
+04:41 pretty much in the spot where there is
+04:43 
+
+04:43 light already ref reflecting right so
+04:45 
+
+04:45 it's kind of like right around here in
+04:46 
+
+04:46 this patch of sunlight that's kind of
+04:48 
+
+04:48 where roughly where I've placed it and
+04:51 
+
+04:51 so it's just shining the light right up
+04:52 
+
+04:52 on there just again enhancing where the
+04:55 
+
+04:55 light should already be coming from just
+04:58 
+
+04:58 kind of pushing that effect a little bit
+04:59 
+
+04:59 further in the direction that I I want
+05:01 
+
+05:01 it to go so the next one I have this
+05:03 
+
+05:03 areir light here uh let's just see what
+05:05 
+
+05:05 this one is doing I added this one just
+05:07 
+
+05:07 for this video just to kind of make the
+05:08 
+
+05:08 walls a little bit brighter just to
+05:10 
+
+05:10 really show what this is doing there's
+05:11 
+
+05:11 an and same thing here it's not very
+05:13 
+
+05:13 bright uh this one sorry this one
+05:15 
+
+05:15 actually is quite a bit brighter um and
+05:19 
+
+05:19 sometimes you just have to turn it up
+05:20 
+
+05:20 for it to kind of reach the wall if it's
+05:22 
+
+05:22 bit further away um but anyways the next
+05:26 
+
+05:26 one is this one over here so this is
+05:29 
+
+05:29 adding again same same exact thing I'm
+05:31 
+
+05:31 just going to keep showing you this so
+05:33 
+
+05:33 we have this one right down here where
+05:35 
+
+05:35 there's uh this patch of sunlight where
+05:37 
+
+05:37 it kind of makes sense where it would be
+05:40 
+
+05:40 lots of light bouncing out of that area
+05:42 
+
+05:42 onto other objects and so that's
+05:44 
+
+05:44 bouncing up onto
+05:45 
+
+05:45 there and uh again this one's very low I
+05:48 
+
+05:48 have this uh size just kind of stretched
+05:51 
+
+05:51 out over here now something you want to
+05:52 
+
+05:52 be careful of is if you notice here uh
+05:55 
+
+05:55 this object is this light rather is
+05:57 
+
+05:57 intersecting on these chains right here
+05:60 
+
+05:60 do you want to be careful of that
+06:01 
+
+06:01 because sometimes you get a a really
+06:02 
+
+06:02 harsh line on your objects so just be
+06:05 
+
+06:05 aware that you can decrease the realism
+06:07 
+
+06:07 if you're not careful with this so uh I
+06:10 
+
+06:10 don't think it matters in this one you
+06:11 
+
+06:11 can't really see it but just be careful
+06:12 
+
+06:12 of that because it will ruin everything
+06:14 
+
+06:14 if you accidentally leave that like
+06:17 
+
+06:17 intersecting with an object in the wrong
+06:18 
+
+06:18 spot okay so the next one I have another
+06:21 
+
+06:21 light which is actually pointing towards
+06:23 
+
+06:23 the camera in this one which is kind of
+06:25 
+
+06:25 highlighting the floor so this I still
+06:27 
+
+06:27 think this actually does make sense
+06:29 
+
+06:29 because if you think about where the
+06:30 
+
+06:30 light would be going you just have to
+06:31 
+
+06:31 kind of trace it back right so the
+06:33 
+
+06:33 light's coming from the top hitting the
+06:34 
+
+06:34 floor hitting this ring and it would
+06:37 
+
+06:37 probably make sense this whole it could
+06:38 
+
+06:38 either be bouncing off of that or it
+06:40 
+
+06:40 could be bouncing off of just the whole
+06:41 
+
+06:41 bright area behind all this stuff so it
+06:44 
+
+06:44 kind of makes sense for there to be some
+06:46 
+
+06:46 light coming from from that direction
+06:47 
+
+06:47 anyways so I'm okay kind of enhancing
+06:50 
+
+06:50 that and and faking it a little bit with
+06:52 
+
+06:52 an area light that's pointing in that
+06:53 
+
+06:53 direction cuz again it's bright coming
+06:55 
+
+06:55 from that way so it's okay to just kind
+06:57 
+
+06:57 of fake that a little bit right we have
+06:60 
+
+06:60 another one over here um an area light
+07:02 
+
+07:02 which is just pointing up in this
+07:04 
+
+07:04 opposite direction this is a this is
+07:07 
+
+07:07 another one that I added specifically
+07:08 
+
+07:08 for this video just to kind of um make
+07:11 
+
+07:11 the thumbnail look better but that's
+07:12 
+
+07:12 just kind of it was really dark over
+07:14 
+
+07:14 there so I just wanted to lighten it up
+07:15 
+
+07:15 a little bit so that's what that's doing
+07:17 
+
+07:17 and then the final one is this big Point
+07:20 
+
+07:20 light in the middle of the scene which
+07:21 
+
+07:21 just kind of tops it all off so one
+07:24 
+
+07:24 thing that was happening was I just felt
+07:26 
+
+07:26 like there wasn't quite enough light
+07:28 
+
+07:28 coming from that back the the room kind
+07:30 
+
+07:30 of behind the ring there and so adding
+07:32 
+
+07:32 one point light which I'll show you here
+07:35 
+
+07:35 one big Point light in the middle this
+07:37 
+
+07:37 one's very bright at 12,500 Watts uh
+07:40 
+
+07:40 that's much much higher than I would
+07:42 
+
+07:42 usually go with this but in this case
+07:43 
+
+07:43 you know it kind of makes a bit of sense
+07:46 
+
+07:46 it just looks better um you can see how
+07:48 
+
+07:48 much bright light is hitting this spot
+07:50 
+
+07:50 behind here so it you know it kind of
+07:52 
+
+07:52 makes sense that this one it would have
+07:53 
+
+07:53 to be brighter to actually be visible um
+07:56 
+
+07:56 so that's there and normally I would use
+07:59 
+
+07:59 actually a bigger radius like minimum a
+08:01 
+
+08:01 meter so I would recommend turn that up
+08:04 
+
+08:04 just because you want it to be quite big
+08:06 
+
+08:06 and soft if you're trying to um enhance
+08:09 
+
+08:09 a big and soft reflection like this
+08:12 
+
+08:12 would be this is kind of going to cause
+08:14 
+
+08:14 a really soft reflection right here this
+08:16 
+
+08:16 big patch of light it's almost like
+08:19 
+
+08:19 another light itself uh a big patch of
+08:21 
+
+08:21 reflecting light that's a trick you see
+08:23 
+
+08:23 a lot in photography where if you're
+08:24 
+
+08:24 taking a portrait of someone you you
+08:26 
+
+08:26 might literally hold a piece of paper on
+08:29 
+
+08:29 the opposite side of their face where
+08:30 
+
+08:30 the sun's coming from and that can be
+08:31 
+
+08:31 this exact same effect uh instead of an
+08:34 
+
+08:34 area light it's just a piece of paper
+08:35 
+
+08:35 which is reflecting the sunlight so it's
+08:37 
+
+08:37 the same kind of thing anyways um yeah
+08:40 
+
+08:40 the key here is make sure it makes sense
+08:43 
+
+08:43 like think about where the direction of
+08:45 
+
+08:45 light is actually coming from and then
+08:47 
+
+08:47 Place light Strate strategically in
+08:49 
+
+08:49 those areas you want to color match it
+08:51 
+
+08:51 so if the light is going to be um you
+08:54 
+
+08:54 know like everything's kind of warm
+08:56 
+
+08:56 tones in here so I want to match the
+08:57 
+
+08:57 light to be a little bit warm to match
+08:59 
+
+08:59 match that so it makes sense um you can
+09:03 
+
+09:03 see if I make it white it looks a little
+09:04 
+
+09:04 bit strange as soon as it gets warm it
+09:06 
+
+09:06 kind of fits in a little bit better so
+09:08 
+
+09:08 obviously just color match it to
+09:09 
+
+09:09 whatever other objects in in you're
+09:10 
+
+09:10 scene and then try to keep it subtle as
+09:14 
+
+09:14 well because if you overdo it the
+09:16 
+
+09:16 realism breaks really really fast so for
+09:18 
+
+09:18 example if I just crank this one uh
+09:20 
+
+09:20 let's just find one that's pointing this
+09:22 
+
+09:22 way and let's just like 10 x this um you
+09:25 
+
+09:25 can see it starts to look interesting
+09:28 
+
+09:28 but pretty fake uh quickly right and if
+09:30 
+
+09:30 I go really really extreme with it it
+09:33 
+
+09:33 just completely destroys everything so
+09:35 
+
+09:35 um it's you'll hit this point of it
+09:38 
+
+09:38 ruining everything probably faster than
+09:40 
+
+09:40 you'll expect so keep it subtle if you
+09:43 
+
+09:43 can because this isn't uh how light
+09:45 
+
+09:45 behaves in real life you're not going to
+09:47 
+
+09:47 have invisible lights which are are
+09:49 
+
+09:49 doing this um so we're kind of enhancing
+09:52 
+
+09:52 what's already there is the idea here
+09:54 
+
+09:54 okay one more thing that I want to
+09:56 
+
+09:56 mention is you might get this problem
+09:58 
+
+09:58 here where you can kind of see a big
+10:00 
+
+10:00 glow coming from your light so that
+10:02 
+
+10:02 happens because if we're using
+10:04 
+
+10:04 volumetrics in the scene so we're using
+10:05 
+
+10:05 a big uh fog over everything right so
+10:08 
+
+10:08 we're using uh just a volume scat excuse
+10:11 
+
+10:11 me just a volume scatter on this Cube
+10:14 
+
+10:14 which is just volumetric lighting over
+10:16 
+
+10:16 everything so if you start placing
+10:18 
+
+10:18 lights like bright lights in that you
+10:21 
+
+10:21 might get this effect where it's like
+10:22 
+
+10:22 just glowing everywhere the way you deal
+10:25 
+
+10:25 with that is just uncheck you can
+10:27 
+
+10:27 certainly see me doing it here but
+10:28 
+
+10:28 uncheck the uncheck excuse me the volume
+10:31 
+
+10:31 scatter check boox here so you go just
+10:33 
+
+10:33 click on the light uh the light you want
+10:35 
+
+10:35 to be affecting go over to Ray
+10:37 
+
+10:37 visibility and then just where it says
+10:40 
+
+10:40 volume scatter uh if I just pull this
+10:42 
+
+10:42 out volume scatter uncheck that and I'll
+10:45 
+
+10:45 just do it on this one as well uncheck
+10:47 
+
+10:47 that and now we can use lights as bright
+10:49 
+
+10:49 as we want without uh just having it
+10:51 
+
+10:51 emit into the volume so we're basically
+10:53 
+
+10:53 just saying hey light up everything but
+10:55 
+
+10:55 don't affect the volume at all that's
+10:58 
+
+10:58 what happens when you uncheck that
+10:60 
+
+10:60 one other thing too is if you have some
+11:02 
+
+11:02 reflective surfaces I'll just add an
+11:04 
+
+11:04 example of a reflective surface right
+11:06 
+
+11:06 here so if I just have this on um yeah
+11:08 
+
+11:08 so you might run into this problem where
+11:10 
+
+11:10 you can see uh the actual light itself
+11:15 
+
+11:15 in the reflection of something so for
+11:16 
+
+11:16 example if I have a point light here we
+11:18 
+
+11:18 can't see the actual light in the scene
+11:20 
+
+11:20 but in the reflection we can see the
+11:22 
+
+11:22 light which is the problem if you have a
+11:24 
+
+11:24 water or glass or something like that
+11:26 
+
+11:26 where the reflection of the light shows
+11:28 
+
+11:28 a big white circle or Square the way you
+11:30 
+
+11:30 can deal with that uh the first thing
+11:32 
+
+11:32 you could try is just uncheck this
+11:34 
+
+11:34 checkbox called multiple importance so
+11:36 
+
+11:36 that's in the light settings underneath
+11:37 
+
+11:37 where you adjust the power and
+11:39 
+
+11:39 everything multiple importance if you
+11:40 
+
+11:40 just take that off that will reduce that
+11:43 
+
+11:43 or actually just remove it the other
+11:45 
+
+11:45 thing you can do is uh uncheck if I just
+11:48 
+
+11:48 turn this back on if you uncheck uh the
+11:51 
+
+11:51 glossy aray visibility that can help
+11:55 
+
+11:55 this as well if it's uh like giving you
+11:57 
+
+11:57 too much glossy reflections
+11:60 
+
+11:60 and you kind of want to tone that down a
+12:02 
+
+12:02 little bit or remove it that's a way to
+12:04 
+
+12:04 do that so in in uh this scene what I
+12:07 
+
+12:07 did for all these lights I think was
+12:08 
+
+12:08 just take the glossy completely off so
+12:11 
+
+12:11 it's just not yeah you can see there um
+12:14 
+
+12:14 it's just not using that at all right
+12:16 
+
+12:16 there and that just makes it fit in a
+12:17 
+
+12:17 little bit better in this case I don't
+12:19 
+
+12:19 always do that I usually don't but uh in
+12:21 
+
+12:21 this case it just made it work a lot
+12:22 
+
+12:22 better I maybe could have just done this
+12:24 
+
+12:24 where I turned the power way down um
+12:27 
+
+12:27 let's just see what that looks like
+12:30 
+
+12:30 yeah like same kind of thing it just
+12:32 
+
+12:32 doesn't give quite the same effect uh
+12:34 
+
+12:34 but it's it's a different look you can
+12:36 
+
+12:36 go for that if you want but uh I opted
+12:38 
+
+12:38 for just turning the glossy off and kind
+12:41 
+
+12:41 of going for this more rough look so
+12:42 
+
+12:42 yeah that's it for this one so by the
+12:44 
+
+12:44 way a bunch of the Assets in this render
+12:46 
+
+12:46 are from the new fantasy course like the
+12:48 
+
+12:48 floor chest uh debris piles arches and
+12:51 
+
+12:51 stuff like that a lot of this stuff is
+12:53 
+
+12:53 from the the new fantasy environments
+12:55 
+
+12:55 course so I'll leave a link below to
+12:56 
+
+12:56 that if you want to check out the new
+12:57 
+
+12:57 course and other that thanks for
+12:60 
+
+12:60 watching and I'll see you in the next
+13:01 
+
+13:01 one bye

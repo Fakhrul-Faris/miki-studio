@@ -1,0 +1,856 @@
+00:03 all right so I'm going to show you a few
+00:05 
+
+00:05 of my techniques for how I light my
+00:06 
+
+00:06 scenes so we're going to go through
+00:08 
+
+00:08 three different pieces I'll just put
+00:09 
+
+00:09 them up on the screen here um so yeah
+00:12 
+
+00:12 the first one is this kind of temple one
+00:14 
+
+00:14 the next one's going to be this outdoor
+00:15 
+
+00:15 like sunlight environment then the last
+00:17 
+
+00:17 one is this sci-fi kind of thing I'll
+00:19 
+
+00:19 show you how I uh did the lighting
+00:21 
+
+00:21 exactly what I did for each one um and
+00:24 
+
+00:24 it's all like really simple um simple
+00:27 
+
+00:27 techniques and hopefully you'll see that
+00:29 
+
+00:29 lighting it can doesn't have to be very
+00:31 
+
+00:31 complicated you can you can get by with
+00:33 
+
+00:33 just like usually I'll show you here
+00:35 
+
+00:35 like one light in the whole scene um so
+00:38 
+
+00:38 let's let's do this so I have this uh
+00:41 
+
+00:41 file open here so I just moved all the
+00:43 
+
+00:43 lights that I'm using into this one
+00:45 
+
+00:45 collection here so um if I just isolate
+00:49 
+
+00:49 this you can
+00:50 
+
+00:50 see these are all the lights that are
+00:52 
+
+00:52 actually coming in from the left side
+00:54 
+
+00:54 here there is like there's one more
+00:57 
+
+00:57 thing in the middle here but it's not
+00:59 
+
+00:59 this this isn't doing anything if I just
+01:01 
+
+01:01 hide all these you can see it's there's
+01:03 
+
+01:03 just this one thing in the middle so
+01:05 
+
+01:05 yeah if I take these just isolate them
+01:08 
+
+01:08 you can see there's this one here uh
+01:10 
+
+01:10 just this one million watt light bulb
+01:13 
+
+01:13 right here that's doing pretty much all
+01:15 
+
+01:15 the heavy lifting this extra stuff is
+01:17 
+
+01:17 kind of useless uh let's actually turn
+01:19 
+
+01:19 this off um so you can see this one
+01:22 
+
+01:22 right here is just doing like basically
+01:24 
+
+01:24 nothing this one is doing again like a
+01:27 
+
+01:27 little bit but basically nothing and
+01:30 
+
+01:30 then this one is doing a lot here um so
+01:33 
+
+01:33 if I if I deleted all of the lights in
+01:34 
+
+01:34 the scene except for this one here it
+01:36 
+
+01:36 would basically look 99% as good and
+01:40 
+
+01:40 that's the way I like to approach this
+01:41 
+
+01:41 is you add one light in here and you
+01:46 
+
+01:46 just move it around into um you just try
+01:49 
+
+01:49 a bunch of different angles and
+01:50 
+
+01:50 locations for it and find one that works
+01:53 
+
+01:53 with the scene that you're using and one
+01:56 
+
+01:56 that just hits the
+01:59 
+
+01:59 hardest yeah so let me show you exactly
+02:01 
+
+02:01 how I would have done this so I'll just
+02:02 
+
+02:02 hide all these and add a new one so
+02:05 
+
+02:05 let's say you're working on your scene
+02:06 
+
+02:06 here um and you've got like some sort of
+02:10 
+
+02:10 idea here and then you want to light it
+02:11 
+
+02:11 and it looks something like this you
+02:13 
+
+02:13 have maybe it's all black maybe it's
+02:14 
+
+02:14 like just one little thing in the corner
+02:16 
+
+02:16 whatever so at this stage I would just
+02:19 
+
+02:19 add um so in this case I ended up with a
+02:21 
+
+02:21 spotlight but um so let's just add this
+02:25 
+
+02:25 in I'll just crank it up to something
+02:28 
+
+02:28 crazy and then I'll just start moving it
+02:30 
+
+02:30 around around into different places and
+02:31 
+
+02:31 kind of just play around with it and see
+02:34 
+
+02:34 what might work
+02:36 
+
+02:36 here so you can see this is kind of the
+02:38 
+
+02:38 angle that I chose for the final one but
+02:41 
+
+02:41 you just kind of I like to keep um the
+02:43 
+
+02:43 the rendered view from the camera's
+02:45 
+
+02:45 point of view so that I can see what the
+02:47 
+
+02:47 actual image is going to look like as
+02:49 
+
+02:49 I'm moving this around so I'll just put
+02:51 
+
+02:51 it there um and yeah you just move move
+02:55 
+
+02:55 this around and and find different um
+02:57 
+
+02:57 angles that might work one thing that
+02:59 
+
+02:59 makes this easier is if you set your uh
+03:02 
+
+03:02 your pivot point here to the 3D cursor
+03:05 
+
+03:05 and then just put this put the cursor
+03:07 
+
+03:07 around like the middle of your image now
+03:10 
+
+03:10 you can just rotate the light around
+03:11 
+
+03:11 like this and um it makes it just really
+03:13 
+
+03:13 easy to try different angles so
+03:15 
+
+03:15 something like that might be kind of
+03:16 
+
+03:16 cool too so you can see there's a lot of
+03:19 
+
+03:19 different options we could go with here
+03:21 
+
+03:21 um and it's just about finding the one
+03:22 
+
+03:22 that works best with the the like the
+03:25 
+
+03:25 scene that you're working with so yeah
+03:26 
+
+03:26 there's something else that could uh
+03:28 
+
+03:28 might be cool maybe let's add another Z
+03:30 
+
+03:30 in here
+03:33 
+
+03:33 um and yeah so
+03:35 
+
+03:35 that's there's really not much more to
+03:37 
+
+03:37 it than that like these other lights
+03:38 
+
+03:38 that I added in here um I kind of just
+03:41 
+
+03:41 duplicated the main one and then lowered
+03:43 
+
+03:43 this uh intensity down a bit but um if
+03:48 
+
+03:48 you're going to do that just make sure
+03:49 
+
+03:49 they're all pointing in the same sort of
+03:50 
+
+03:50 Direction so it looks like they're
+03:52 
+
+03:52 coming from the same light source from
+03:54 
+
+03:54 the same
+03:56 
+
+03:56 thing but
+03:58 
+
+03:58 um yeah that's it for that one
+04:00 
+
+04:00 one other thing that's important here is
+04:02 
+
+04:02 having volume metrics so or having
+04:04 
+
+04:04 volume here so you can see this is just
+04:07 
+
+04:07 if I go to the Shader editor I just put
+04:09 
+
+04:09 a cube over the entire scene here and I
+04:11 
+
+04:11 just put a volume scatter um in there
+04:15 
+
+04:15 all right so the next one here is going
+04:16 
+
+04:16 to be this piece so um this one's even
+04:18 
+
+04:18 more simple than the last one basically
+04:20 
+
+04:20 we're just using the sky texture from uh
+04:24 
+
+04:24 from blender you can also just use a
+04:26 
+
+04:26 sunlamp so what we're doing here is um
+04:29 
+
+04:29 if I take this out
+04:31 
+
+04:31 it's just pure black um there is a sky
+04:35 
+
+04:35 that I added in the back here I'll show
+04:36 
+
+04:36 you how I did that um so together it's
+04:38 
+
+04:38 this is the final piece so let's just uh
+04:41 
+
+04:41 I'm just going to hide the sky here and
+04:43 
+
+04:43 and just go through this so the way you
+04:46 
+
+04:46 do this is by default you're going to
+04:48 
+
+04:48 have a background in here right so this
+04:51 
+
+04:51 is going to be it's going to be
+04:52 
+
+04:52 something like that all you have to do
+04:54 
+
+04:54 is just take that out search for Sky
+04:56 
+
+04:56 texture and just add that in if you
+04:59 
+
+04:59 don't if you're in a different software
+05:00 
+
+05:00 you don't have this um just a a sun lamp
+05:04 
+
+05:04 will work the same okay so yeah what you
+05:06 
+
+05:06 do here is you just add this in and then
+05:09 
+
+05:09 um you can tweak the elevation and
+05:11 
+
+05:11 rotation from here so yeah same thing as
+05:13 
+
+05:13 last time just play with different
+05:14 
+
+05:14 angles and find something that works for
+05:16 
+
+05:16 the scene that you're working with here
+05:17 
+
+05:17 and yeah one thing I'd like to do here
+05:19 
+
+05:19 is you can see in the final one the
+05:21 
+
+05:21 angle of the sun is sort of coming from
+05:23 
+
+05:23 the side um of the scene so that just
+05:26 
+
+05:26 gives it some nice interesting Shadows
+05:27 
+
+05:27 rather than if the sun's pointed uh like
+05:30 
+
+05:30 if it's coming from behind the camera um
+05:33 
+
+05:33 or right in front of the camera
+05:35 
+
+05:35 everything's going to be kind of
+05:36 
+
+05:36 silhouetted so if it's coming from the
+05:37 
+
+05:37 side I I usually like that just to
+05:39 
+
+05:39 create nice Shadows on everything so one
+05:41 
+
+05:41 more thing you can do here uh when
+05:43 
+
+05:43 you're using a sun lamp or the sky
+05:45 
+
+05:45 texture here is if you add an image
+05:47 
+
+05:47 plane in the back of the scene that just
+05:48 
+
+05:48 has a picture of a nice sky on it um
+05:51 
+
+05:51 it's kind of like a substitute for an
+05:53 
+
+05:53 hdri but I'd like to use this cuz it
+05:55 
+
+05:55 just gives me a bit more control so what
+05:57 
+
+05:57 this is is um just a giant plane that I
+06:00 
+
+06:00 chucked way in the back uh just a
+06:03 
+
+06:03 principal Shader here and then um
+06:06 
+
+06:06 there's just an image of a sky this is
+06:08 
+
+06:08 from unsplash and then it's just running
+06:11 
+
+06:11 into the emission color here and it's
+06:14 
+
+06:14 also running into the base color so it's
+06:16 
+
+06:16 reflecting a bit of light from the color
+06:18 
+
+06:18 of the sky texture but then it's also
+06:20 
+
+06:20 emitting a bit of its own light uh just
+06:22 
+
+06:22 based on the colors of this image
+06:24 
+
+06:24 here if you don't want to do that you
+06:26 
+
+06:26 can also just run it straight into an
+06:28 
+
+06:28 emission node and then run that out uh
+06:31 
+
+06:31 that can work just as well yeah and then
+06:33 
+
+06:33 just add that into your scene and that's
+06:35 
+
+06:35 how you get really natural realistic
+06:38 
+
+06:38 looking Skies is cuz you're using a
+06:40 
+
+06:40 picture of an actual
+06:42 
+
+06:42 sky okay so here's the last one I want
+06:44 
+
+06:44 to show you um so in in sci-fi scenes
+06:48 
+
+06:48 like this this is where things can get a
+06:50 
+
+06:50 little bit trickier with lighting so in
+06:52 
+
+06:52 a lot of sci-fi scenes like this it's
+06:54 
+
+06:54 really easy to like end up with just a
+06:57 
+
+06:57 bunch of different lights in your scene
+06:59 
+
+06:59 and it gets really cha IC and it's it's
+07:01 
+
+07:01 hard to like have um a focal point of
+07:04 
+
+07:04 your scene because everything is just
+07:06 
+
+07:06 bright and neon and glowing all over the
+07:07 
+
+07:07 place so if you can try to use the same
+07:11 
+
+07:11 tips as last time it's like as you know
+07:13 
+
+07:13 try to minimize the amount of light
+07:15 
+
+07:15 sources uh that you have that is one of
+07:18 
+
+07:18 the best ways that I found to just kind
+07:20 
+
+07:20 of clean that up and make it easy to
+07:22 
+
+07:22 look at so you can see here if I hide
+07:24 
+
+07:24 all the lights here um there's a few
+07:26 
+
+07:26 extra random emission like vending
+07:28 
+
+07:28 machine things in here uh um but these
+07:31 
+
+07:31 aren't really like casting a lot of
+07:33 
+
+07:33 light onto things they're not super
+07:34 
+
+07:34 bright so I I don't think there's really
+07:36 
+
+07:36 a problem here so let's just go through
+07:39 
+
+07:39 this uh one by
+07:41 
+
+07:41 one so the main thing here is this neon
+07:45 
+
+07:45 sign in the front so it's just um a
+07:47 
+
+07:47 couple of emissive planes here okay so
+07:50 
+
+07:50 let's look at these things right here if
+07:52 
+
+07:52 I just isolate this um you can see it's
+07:55 
+
+07:55 just a couple of uh planes here and then
+07:58 
+
+07:58 this is just some
+08:00 
+
+08:00 random image I downloaded from like
+08:02 
+
+08:02 unsplash uh same with this one so then
+08:05 
+
+08:05 what's happening is I'm just taking that
+08:07 
+
+08:07 image that I downloaded here running it
+08:10 
+
+08:10 into the emission color here but we're
+08:13 
+
+08:13 doing some stuff in between so the main
+08:16 
+
+08:16 one is this red one down here um so it's
+08:18 
+
+08:18 just going to this this uh here this one
+08:22 
+
+08:22 so this is just running into this curves
+08:24 
+
+08:24 note here it's just making it a bit
+08:26 
+
+08:26 brighter um just to kind of give it a
+08:28 
+
+08:28 more like blown out kind of look
+08:30 
+
+08:30 and then that's running into this Hue
+08:31 
+
+08:31 saturation node here so it's running
+08:34 
+
+08:34 into the value socket here on this node
+08:36 
+
+08:36 so that means any color that I pick at
+08:38 
+
+08:38 the bottom um the entire image is just
+08:40 
+
+08:40 going to be that color and then the
+08:42 
+
+08:42 value here is going to determine which
+08:44 
+
+08:44 parts are bright and which parts are
+08:45 
+
+08:45 dark um so if I just look at these signs
+08:48 
+
+08:48 here it just looks like this it's just
+08:51 
+
+08:51 yeah and then that's just running into
+08:53 
+
+08:53 the emission color and the strength has
+08:55 
+
+08:55 turned up pretty high on this one the
+08:56 
+
+08:56 one above it here you can see I'm doing
+08:58 
+
+08:58 the same thing just running it into um
+09:01 
+
+09:01 it's this other image and it's running
+09:03 
+
+09:03 into uh this one it's just making it
+09:06 
+
+09:06 blue but the interesting thing here is
+09:08 
+
+09:08 that if we look at the strength here
+09:10 
+
+09:10 this one is at 66 and this one's at uh
+09:13 
+
+09:13 1/10th of that so what happens when you
+09:17 
+
+09:17 when you start adding a bunch of um like
+09:19 
+
+09:19 colorful lights in your scene that are
+09:21 
+
+09:21 all really bright like if I turn this up
+09:23 
+
+09:23 um it looks cool but it's it's just a
+09:27 
+
+09:27 bit too much for me um so I think when
+09:30 
+
+09:30 you start having a bunch of Lights in
+09:31 
+
+09:31 your scene that are all really bright
+09:32 
+
+09:32 and they're like multiple different
+09:35 
+
+09:35 intense colors it's really easy to for
+09:38 
+
+09:38 those to kind of clash and it just gets
+09:40 
+
+09:40 really messy really fast so you can have
+09:43 
+
+09:43 those different colors but I like to
+09:45 
+
+09:45 just keep that a bit more um subtle on
+09:47 
+
+09:47 the second one so that I just wanted one
+09:50 
+
+09:50 main kind of light here to uh one main
+09:57 
+
+09:57 color so yeah if I hide those um again
+09:60 
+
+09:60 it's just all black except for there's
+10:02 
+
+10:02 just one light in the back which I'll
+10:03 
+
+10:03 show you uh just one point light which
+10:07 
+
+10:07 is so yeah there's just this one point
+10:09 
+
+10:09 light over here try not to worry too
+10:11 
+
+10:11 much about the actual uh values uh like
+10:15 
+
+10:15 of the intensity of the lights cuz it's
+10:16 
+
+10:16 going to change so much depending on uh
+10:19 
+
+10:19 like different scenes and how big things
+10:20 
+
+10:20 are and how far away it is but it's uh
+10:24 
+
+10:24 this bright right here if you can just
+10:26 
+
+10:26 see that not doing a ton but it's just
+10:29 
+
+10:29 um kind of kind of balancing things out
+10:30 
+
+10:30 a little bit in the back so if I get rid
+10:32 
+
+10:32 of that you can see um it's not doing a
+10:35 
+
+10:35 ton but it just kind of fills in some
+10:38 
+
+10:38 empty space in the back there okay so I
+10:41 
+
+10:41 think that's everything I wanted to show
+10:42 
+
+10:42 you so hopefully that kind of shows how
+10:45 
+
+10:45 um lighting doesn't have to be super
+10:47 
+
+10:47 complicated if you just kind of find the
+10:49 
+
+10:49 right place to put things in um you
+10:51 
+
+10:51 don't have to do too much else other
+10:53 
+
+10:53 than that um yeah follow me on Instagram
+10:56 
+
+10:56 subscribe if you want peace

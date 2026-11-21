@@ -1,0 +1,710 @@
+00:00 I'm going to show you the best way to approach a 
+super smooth and satisfying morphing transition   animation all using shape layers in After Effects 
+we'll do that by breaking down exactly how I made  
+00:10 this animation in extreme detail and we'll 
+be covering the first two of these morphs in   this video now this is a small section from my 
+course Master motion design but you can enjoy  
+00:19 it as a free preview don't worry I'm not going to 
+leave you on a cliffhanger in between and edit on   the graph editor or anything like that enjoy 
+it uninterrupted and I'll give you some more  
+00:28 information at the end all right in this chapter 
+we will be animating the transition from Spade to  
+00:34 heart and we'll be able to do that with everything 
+we have already in our After Effects project now  
+00:39 if we look back at our thumbnail we're going to 
+approach this by having our Spade sort of don't   say unravel unfurl sort of expand and open up 
+becoming a more rounded shape and then closing  
+00:51 back in as a heart but all of this is going to 
+happen very quick the fastest motion is going to   be you know these three frames in the middle and 
+then Ease Into the Heart and of course easing out  
+01:00 of the Spade at the very beginning so let's get 
+stuck in and make that now looks like we have way   more layers than we need for this I do want to 
+keep our Spade full and a Heart full layers as  
+01:11 reference at the very least but for our Spade 
+I think all we need is the Spade half so let's   delete the other layers and let's turn down the 
+transparency of our Spade full layer as well so  
+01:21 we can see a faint outline which will be our 
+reference and we can delete that after we're   done same for the heart we can delete everything 
+except for the heart half and all the transparency  
+01:31 of Heart full and we're only animating half of 
+course because this is completely symmetrical  
+01:36 so why animate it twice when we can animate it 
+once and then flip it over um I'm going to show   you some neat ways we can do that flipping over 
+as well later so we don't have to wait until the  
+01:45 very final moment and then in the middle of 
+this action we are going to swap over to the   heart so it'll be kind of like a match cut in 
+the middle we're going to do whatever we can to  
+01:55 get these sort of two frames in between these two 
+shapes to be as identical as possible but why are   we doing it has two shapes and not just the one 
+shape path and that is because well we're going  
+02:04 to be animating their path so let's open up The 
+Path property on both of them and just add some   key frames to start with might also be useful to 
+lock the Heart full and Spade full references as  
+02:16 well so we don't accidentally click them and we 
+can see in our hard layer we've got one 2 three  
+02:21 four vertices in the shape layer but on our 
+Spade fall we have got a lot more we've got   1 2 3 4 five six and that's going to be tricky 
+if we copy and paste the path from their heart  
+02:33 onto our spade and actually I'm going to show you 
+that very quickly let's copy this key frame and  
+02:38 let's select our Spades path and paste that into 
+the same area okay so now we've got a transition   between spade and heart but how does that look 
+that is not a pleasing transition or morph at all  
+02:51 and why is it doing that because after effects 
+doesn't know that we want it to sort of unfold   and become a nice elegant in between shape before 
+we go to our heart it is just taking these points  
+02:60 that the least possible distance to arrive at this 
+next series of points in our heart artifact does   not care about our ideas or our plans unless 
+we put it in the data in the key frame so it  
+03:09 knows what to do and also we run into the problem 
+here of the first vertex of our shape and that is  
+03:15 a common mistake people run into when morphing 
+especially using this technique where it's all   on the shape path and I will show you that in a 
+new layer now just with a pencil I am going to  
+03:25 draw a rough square shape and you can see as I'm 
+drawing on each vertex there is a box a square  
+03:32 but on the first one we drew there is two squares 
+and that means that that is the first vertex and  
+03:37 the first vertex is how after decides what order 
+these vertexes should be in at the next transition  
+03:43 so let me show you by key framing this path here 
+and then a few seconds later we rotate this 90°  
+03:50 and push it over a bit so now our box rotates 
+because this first vertex is on the top left   here and on the right it is on the top right so 
+every other vertex just follows the the path of  
+04:00 least resistance and this one in the bottom right 
+corner moves barely anything at all because it is  
+04:06 so close to its final position but we can change 
+the first vertex and we can do that by selecting  
+04:11 another point and then right clicking and going 
+to mask and shape path and set first vertex so  
+04:16 now this bottom right point is the first vertex 
+but on our first key frame it's still on the top   left so now this is going to change our animation 
+it's not going to rotate 90° to the right it is  
+04:26 going to shrink down and flip back over because 
+each of these points are trying to get to another   place on the Square our top right is going to 
+the bottom left our bottom right is going to  
+04:36 the top left and our bottom left is going to 
+the top right so we get this very unpleasant  
+04:41 sort of shrinking down and expanding and you can 
+see how that gets a bit more complicated to deal   with when you have more and more complex paths 
+like in our spade and in our heart so that is  
+04:52 one method to troubleshoot your Mor if it is not 
+happening how you would expect check where your   first vertex is and that might be the culprit 
+okay let's get rid of the shape layer let's get  
+05:01 rid of this heart key frame on our spade and get 
+into animating so let's set this first key frame   on our Spade at the very start of this 1 second 
+and we only leaving one second available before  
+05:10 our workspace just because this comp is going to 
+Loop and when we have looping elements when we  
+05:16 want our last position to sync up with our first 
+position it's going to be pretty convenient to  
+05:21 be able to move this over to the start and match 
+things up there outside of this work area so it   just Loops seamlessly we'll get more to that 
+at the very end of this lesson and let's look  
+05:30 at our thumbnail for what rough shape we want 
+this in between shape to be I think something   along these lines maybe not so circular but a sort 
+of more rounded Blobby heart shape so let's move  
+05:40 these points around to create something roughly 
+that shape with the points at the very center I   am going to hold shift and drag to make sure they 
+don't you know cross into either too far to the  
+05:49 left or right we want that definitely to keep 
+in the exact center for when we flip it let's   move these other points outwards oh we can see 
+we've got way too many points here here we don't  
+06:01 need that many points more points are going to get 
+in our way so the easiest thing to do is to just  
+06:07 delete these with penol go to the delete vertex 
+tool that might mess up our first key frame and  
+06:13 it does but luckily enough we have our guide layer 
+here so we can go in and adjust that I'll grab the  
+06:20 convert vertex tool and just draw some handles 
+on this vertex and get them to line up as nicely  
+06:27 as I can there now let's transform this second 
+shape into that blob making sure we've got our  
+06:32 penal back selected again let's have this point 
+come down because that will you know become this  
+06:37 rough heart shape but we don't want it pointing 
+inwards yet let's have it sort of pointing outwards and then move these around to make 
+that shape a bit rounder all right that is  
+06:54 looking pretty good let's move this key frame to 
+the very end of that layer and it's extended out  
+06:59 of frame so we can see it underneath our heart 
+then let's open up our heart half property we   can move this key frame to the very right and 
+the very start at 1 second where this heart  
+07:09 begins we're just going to move these vertices 
+and line them up to this shape and again we  
+07:14 have too many points this area here this must be 
+from an illustrator where we joined our circle  
+07:21 to the bottom of the heart and it's created 
+to many vertexes okay let's get rid of that  
+07:26 key frame go to our finished heart key frame 
+let's drag these points out and get rid of a  
+07:33 couple of them and get rid of two of them 
+and then redraw it so it lines up with our
+07:39 guide there okay and this is a very 
+common issue so you might run into  
+07:46 this with a lot of your shape so I thought 
+I might leave this in and show you another   way to troubleshoot editing your shape 
+layers because animating on shape path  
+07:53 is something I love to do but I'm not going 
+to say there isn't a lot of difficulties and  
+07:58 troubleshooting and and things that might not 
+go to plan on your first attempt okay back to   the middle to our transition key frames 
+now we can drag these out and match this
+08:08 shape okay that's not looking great just yet let's 
+do a few things to make that a little easier on  
+08:15 the eyes straight away first let's reduce our work 
+area so it's just going between these two shapes  
+08:21 and we could probably hide these guide lays as 
+well because we don't really need those and also  
+08:26 another thing I'm going to do is add a fill effect 
+to this side of the heart and I'm going to ey drop   our dark blue color so they appear to be the same 
+and that's just so we don't get that jarring split  
+08:37 of the colors when this transition happens now 
+after we've done this transition I'm going to   turn off this fill effect to get it back to the 
+red because once the transition looks seamless it  
+08:46 changing color won't be noticeable at all but at 
+the moment it takes away and is distracting from   our actual purpose which is getting the animation 
+smooth so again I like to just reduce the amount  
+08:56 of elements that we don't need on screen for this 
+to happen and this is pretty simple composition   where we just got two layers if the background was 
+really busy I might hide the background or I just  
+09:05 might solo both of these layers do anything you 
+can to remove the Clutter of the scene and just  
+09:11 focus on your task at hand and also I use the fill 
+effect rather than um changing the fill up here  
+09:16 just because it is one less click to get to the 
+eye dropper that's all nothing too fancy about it   you can change the color however you want okay now 
+let's add some eating cuz that is going to really  
+09:24 help a lot so let's select both End Key frames 
+press F9 to easy ease them and that's going to  
+09:29 look a whole lot better yeah even just doing that 
+makes it look much better now let's increase the  
+09:36 easing on these key frames and we can do that 
+in the speed graph editor because of course in   a shape path there is no value it is just a path 
+shape so let's create as much easing as possible  
+09:46 drag out this handle to the right and then drag 
+this handle to the right as well to make it as   pointy as possible excellent let's do that on 
+our heart half as well great how does that go  
+09:60 that is excellent one thing I am noticing is that 
+it is far too slow even with all that easing this  
+10:06 go for a second I think about half a second 
+is probably where we want so let's go to 12   frames in let's trim this layer to finish at 12 
+frames and our heart to start and we can extend  
+10:17 our heart layer because the heart layer will need 
+to stick around for it to next transition anyway   and move this end key frame to 2 seconds so now 
+the animation takes place over 1 second all right  
+10:27 that is looking good that's looking much better 
+now there's still a fair bit we can do to refine   this and make this look much smoother and elegant 
+but now I think it's a good time to duplicate this  
+10:36 layer and flip it and there are of course a bunch 
+of ways we can do this we can simply duplicate   this half of our layer go up to layer transform 
+flip horizontal move that over to the left line  
+10:47 it up in the middle and then we have it perfectly 
+symmetrical and what flipping it horizontally   essentially does is really just alter the scale 
+so if we look at our scale on this property the  
+10:57 scale width is minus 100% so that is just being 
+being flipped and then locked again so another   way you can do this is unlock this property 
+adjust the scale width and then lock it again  
+11:06 now this does have the disadvantage because now 
+we have two key frames with identical property so   when we edit our right side we're going to have 
+to edit our left side but we can avoid that and  
+11:15 that is just by linking these with expression so 
+let's rename these first let's call the Spade half   left and Spade half right let's also unlock this 
+Spade full and Shrink that down because that is  
+11:25 getting in the way in our timeline okay back 
+to duplicating the path animation so with spay   left we can just delete these key frames and at 
+the moment it has no key frames no animation but  
+11:35 if we alt or option click on the stop watch that 
+brings up our expression window and we can grab  
+11:40 our P Whip and drag that onto our speed half right 
+path when we release it on there it will take all  
+11:46 the details from these key frames and put them in 
+this layer and because it is that scale property   that's causing the flip to happen it maintains its 
+Symmetry and being flipped we don't just have two  
+11:55 duplicate right side shapes now there is another 
+Technique we can do to flip it and I'll show you   that on our heart and that is by using the effect 
+mirror and with the mirror effect we can drag the  
+12:05 reflection Center or just place that in the very 
+middle of our comp and adjust the reflection angle  
+12:12 to 180 and again we have our layer perfectly 
+mirrored there is a slight Gap in the middle  
+12:18 just because of where we've placed our Center but 
+we can adjust that and this is a fine technique as  
+12:24 well the only issue with this say if this was a 
+pre-comp element and we needed to scale up what   was in side or rotate it or make adjustments 
+to it the center and the angle do come off at  
+12:33 a certain point so I much prer the first method 
+that we showed using the duplicate shape layers   so I'll do that for our heart that just a little 
+more secure a little more sturdy and safe okay now  
+12:44 we've got our shape symmetrical and it's looking 
+pretty close let's go add some more Nuance detail   to make this looking as good as possible so one 
+thing I'm noticing is our middle sort of shape  
+12:54 is probably bulging out a bit too much it is much 
+wider than both our spade and our heart so maybe  
+12:60 let's push it in a little bit and adjust the other 
+points to still make it look smooth and we can see   that updating real time on our left half as well 
+which is Handy and I think we barely want it to be  
+13:10 wider than our initial shapes at all there and now 
+when we go to edit our first half of the animation  
+13:18 our Spade right half we'll notice the key frame 
+is in the exact same position as our heart and  
+13:24 we can't really edit it at this position because 
+we can't see it and really what's the point of   having this key frame here if it's not going to be 
+visible besides being useful to trace over for our  
+13:33 first half here but really there's no point these 
+shapes being exactly identical in the middle so   let's move it over one frame to the left and here 
+let's make some the same adjustments let's get it  
+13:43 much skinnier and there I think that matches it a 
+bit better the motion isn't going outwards so more  
+13:49 it's more going downwards and sort of breathing 
+so it expands at the bottom and then Rises more to  
+13:55 the top and I think we can play with that a little 
+bit more at the moment if we follow that across   both shapes it starts well hypothetically at the 
+top of this Spade here really we're just following  
+14:05 what this point the Apex of both of our shapes 
+is doing so itally just Falls and then continues  
+14:10 falling so it's just making one downwards motion 
+throughout the whole transition but what if it   went down a little bit further so what if we move 
+these top points a little bit lower same with our  
+14:21 Spade half there I think that's a little more 
+interesting so instead of moving a pretty linear  
+14:26 path is from the top to the bottom it moves down 
+and when it gets to this point it's almost as if   it has a little impact here like it hits the the 
+ground Like a Rock falling and then that sort of  
+14:35 warps the environment like let's say you were to 
+drop you know a rock on a plate of jelly where the   rock enters it would sort of Pierce and go down 
+into the jelly and the outside edges would sort  
+14:44 of roll up same with water and it just makes 
+it feel like the other parts of this shape are   reacting to its motion of course let's go into 
+this Frame and round out these edges so it looks  
+14:53 prettier there that is looking good and the main 
+other thing I'm not liking is the negative space  
+14:60 in this shape here these pointy elements that make 
+up the sort of top of the stem in the spade and I  
+15:06 don't really like that they create sort of pretty 
+unattractive shapes around this point here and it   really just looks like this nice sort of curved 
+moon shape is just being crushed into this flat  
+15:15 shape which you know really it is but what would 
+be nicer if this shape was to just move outwards  
+15:20 and get skinnier as a sort of cresant moon shape 
+yeah that might be a little hard to explain so  
+15:25 I'm going to have to show it so in this last 
+frame here before we become our heart layer we   have those vertexes that make up that Cresent Moon 
+shape and they're all flat against the wall well  
+15:36 they're all making up the round the edge of the 
+heart and they don't need to because that gives   a pretty harsh transition between the frame before 
+it where there's still this sort of cresant moon  
+15:45 looking more like a shark fin and then we've got 
+essentially two frames of it being this rounded   shape at its most extreme State one on our heart 
+and one on our Spade so it might look nicer if we  
+15:55 create that Cent moon shape that we want here 
+and we can make it as thin as we like like so   let's move this vertex inwards and then we can 
+move our anchor points like this even and we can  
+16:06 move our anchor points we can flip this one over 
+now the shape to me is just a little more elegant  
+16:14 than the shape we had before when these three 
+vertexes were all just mashed to the side here   raising to be as close to the edge as possible 
+but now if we play it back that Cresent closes  
+16:22 up a little more organically I think and let's 
+see how that looks in context there I think that  
+16:29 is looking great now the only thing we have to do 
+is remove the fill effect from our heart oh from  
+16:34 both sides of our heart actually and let's see how 
+that plays that's looking much better and now that  
+16:40 color change isn't nearly as distracting because 
+these shapes flow so nicely into one another now   this in between shape that we've created I call 
+it a rounded heart but it kind of looks more like  
+16:49 a bean here you can use any shape that you want 
+for this this in between shape between these two   states could be anything it could be really long 
+and skinny it could be really pointy and that is  
+16:58 going going to change significantly the flavor 
+of this animation as long as the start and the   end point are the same you're going to go from a 
+spade to a heart but we've got one full second of  
+17:06 motion here where we've got all these in between 
+shapes so deciding what this middle shape should   be is pretty important because that's going to 
+be the majority of the animation and I think  
+17:15 like I said before change a bit of the flavor 
+or change the mood of how this animation feels   one thing I do think you should keep in mind 
+is repeating shapes and curves that are in the  
+17:24 final and original positions now the design 
+of these suits are fairly sort of geometric  
+17:29 and pointy we've got a lot of Curves there's 
+not many right angles I think the only right  
+17:35 angle is in our Diamond actually no no right 
+angles in there but I think the only straight  
+17:40 lines so I wouldn't have a middle position that 
+is you know a perfect square cuz straight lines   and Corners just don't appear in these shapes 
+in these designs so keeping that visual language  
+17:48 consistent even between shapes like this even in 
+the middle when it's moving so fast will really   help your animation feel like it suits the design 
+because not all animation will suit the design if  
+17:58 you have pretty elegantly designed suits like 
+these with lots of Curves and lots of points  
+18:04 and then you have this blocky chunky animation 
+where it just clunks clunks clunks around the   screen that's not going to look appropriate and 
+this animation but if you animating boxes moving  
+18:12 around a scene some nice clunky linear straight 
+animation would look great so just another thing   to be aware of and that is why I spent that extra 
+time refining this shape here that I even want to  
+18:21 spend even more time getting it a little nicter 
+even though you don't really see this when you   watch the animation you barely see the that frame 
+but you can definitely feel it especially when  
+18:31 you're working with such few key frames like we 
+are here that is going to impact not just this   Frame but all these frames in between it there we 
+are that is our first transition next we are going  
+18:41 to change this heart into our clubs now like our 
+transition between the spade and the Heart there  
+18:46 will be a little in between State a transitional 
+period with some separate elements and that'll be  
+18:51 when it splits into these three circles which 
+are of course separated on their own layer and  
+18:56 part of the reason you might want to do this is 
+to make make the transition a little easier so   let's just bring these three circles out and trim 
+them here trim out hard to their start again okay  
+19:06 so now we go from the heart to these three circles 
+to the clubs and the heart to these three circles   is looking a little bit easier now we don't have 
+to deal with the stem at the bottom and we can see  
+19:15 that our heart is made up of really two circles 
+at the top and then this sort of pointy shape at   the bottom so if we were to rotate the heart we 
+would end up with two circles on the bottom and  
+19:24 a point at the top and the rotation is just one of 
+several ways that you could get between these two  
+19:29 objects and we are going to use the rotation as 
+the sort of lead Motion in this section because   this one will have far more moving elements than 
+our first morph so breaking it down into have a  
+19:38 little hierarchy of the motion will be helpful so 
+we'll animate the rotation first make sure that   is feeling good and then we're going to add our 
+extra bits on top of that so let's get all of our  
+19:48 layers in the right order our heart full I don't 
+think we need that layer anymore cuz we've got our  
+19:53 full heart let's trim down our heart sections I 
+don't think they need to go that far and and then   we're going to have the circles for our clubs and 
+then the stem and the middle aren't going to come  
+20:02 on until later and then we have our clubs full as 
+well and we can push that towards the back of our  
+20:08 timeline and maybe hide that as well so let's 
+start with that rotation movement and because   we have got so many elements that we all really 
+want to really stay connected as one main piece  
+20:19 we're going to animate the rotation on a new null 
+so let's pressol alt shift y to create a new null  
+20:26 and I'll call it null Club rotate for now that 
+seems like an adequate description and at the  
+20:32 moment this is in the very center of our comp but 
+I think we need to push it to the center of our   clubs which will be slightly different and that 
+looks pretty accurate so from there let's parent  
+20:42 everything to that null our heart and our club 
+components so now this null controls everything  
+20:48 now for the rotation now this is the point where 
+our rotation will be finished because that's when   all of our club components have now come back 
+in we've got all the circles and the stem and  
+20:56 this middle part as well so let's key frame it's 
+rotation here and then a little earlier we want to   rotate it - 180° actually that will make a problem 
+for our heart which is now flipped let's undo that  
+21:11 rotation and unparent the heart the heart does 
+not need to be parented to that null just yet  
+21:16 okay let's go to minus 180° on that rotation 
+and there we go and we can see that's already  
+21:21 looking a lot closer to our heart here the main 
+difference between these circles and the Heart Is   that they're red so one thing we'll need to do is 
+adjust the color of them and again we can use the  
+21:31 fill effect let's ey drop that specific red there 
+we are and I am going to apply that to all of  
+21:36 these circles but I'm not just going to copy and 
+paste them I'm going to use a special copy to edit  
+21:42 and selecting copy with relative property links so 
+what this will do is copy this effect but when I  
+21:48 paste it it actually has Expressions inside here 
+so if we open up the effect and to down to the  
+21:53 color you can see that this color is now linked 
+to the fill effect applied to this layer so if   we change the color of this layer with the fill 
+effect it changes the color on all the others and  
+22:02 that'll just make it slightly handier when we go 
+to change the color a very useful technique the   copy with property links and relative property 
+links and the difference between property link  
+22:11 and relative property links is copy with property 
+links will link those effects to this exact effect  
+22:17 here whereas if I copy with relative property 
+links it will copy them relative to what this  
+22:22 layer is in that pre comp so if we were to make 
+a duplicate of this comp and we didn't choose   relative property links all of these circles in 
+that other comp would still be linked to this one  
+22:31 layer in this comp not to the layer in their own 
+comp so I tend to use relative property links cuz  
+22:36 I work more often with a lot of duplicate comps to 
+you know try things out and test things and don't   want to end up with an unused comp somewhere 
+that's controlling colors of some layers and  
+22:45 some other comps if I can help it I like to avoid 
+that so now this is looking really close and even   as we scrub through the timeline we can see our 
+clubs getting attached and it's looking a lot more  
+22:54 like clubs so now it's looking a bit more easy to 
+deal with so first let easy ease these key frames  
+22:59 do that with F9 and we'll jump into the graph 
+editor and I think we should make this pretty   Snappy let's have a lot of easing in this so we 
+want a fair bit of easing in here so it gets up  
+23:08 to quite a fast speed in the middle which is 
+where we can hide some of these other objects   revealing on like our stem and the middle of our 
+club that's looking good great now let's work on  
+23:18 our heart and it's transition into these three 
+circles now this is similar to a matchup all like   the motion we did here before we need to have a 
+little bit of motion a little bit of anticipation  
+23:26 before this cut to these three shapes to make 
+the transition look believable now our heart is   splitting in pieces so I'm thinking a motion 
+that looks like it's tearing away and moving  
+23:36 outwards I don't mean that to sound as violent as 
+it does but I think it will look great if we have   a bit of anticipation in our heart maybe sort of 
+shrinking going inwards Contracting and then sort  
+23:45 of bursting out and that bursting out point will 
+be into these circles so these circles will change   in their position and just move outward slightly 
+let's create some anticipation at the end of this  
+23:54 layer so where this last key frame is is oh that 
+almost lines up to 2 seconds seconds let's move it   to 2 seconds let's animate it scale property so we 
+want the whole heart to shrink down very slightly  
+24:05 let's move the Anchor Point to the very center 
+of the heart we just grab with that move Anchor   Point tool and then let's parent the left half of 
+the heart which should be labeled let's label that  
+24:15 right now okay so they're both parented to this 
+heart and the Anchor Point in the middle so let's  
+24:20 animate the scale and we need to shrink a little 
+bit but not too much maybe 90% that might seem  
+24:26 like a lot actually that's not too bad 9% and we 
+want to easy ease this key frame cuz this motion  
+24:31 is going to be the faster so we can leave that 
+like this and then we can increase that easing   going into our graph editor that looks good and 
+maybe it's not that slow maybe that's a bit faster  
+24:44 there now for the position of our circles let's 
+open up p on our keyboard let's key frame them  
+24:49 all at the very start and we want to make sure 
+by this point they all need to be back in the  
+24:55 same position so let's key frame them again at the 
+end and and then a few frames after this animation   they need to be out wide and am going to line up 
+with this key frame just because it seems a little  
+25:03 neater to keep your project file like this rather 
+than putting the key frame here it won't matter   too much this is a bit of a you know finicky thing 
+and consideration I like to have is where possible  
+25:13 keep my animation looking as tidy as possible but 
+want your project to be as neat as possible but   not so much that it compromises your animation 
+okay so around here we need our cires bursting  
+25:22 outwards from the center now I'm just going to 
+eyeball this by clicking and dragging moving   its position f out from the center and I'll do 
+that with all of the circles and I'm just trying  
+25:34 to make these lines in the motion path the same 
+length for all of these and that should be close   enough and if you can't see the motion path if you 
+go to edit preferences and display you might have  
+25:45 no motion path selected so if you can't see any of 
+this stuff that's why or you might not have your   toggle mask and shape path visibility on okay so 
+now they're moving out let's see how that plays in  
+25:55 animation oh okay that's not looking too bad this 
+is little section with that small anticipation of  
+25:60 the heart scaling down and then expanding with 
+the circles looks good even before our easing   and they weren't even lined up with this key frame 
+so now you know how it really doesn't matter and  
+26:09 actually let's move these further across now 
+I'm noticing they're a bit too far out where   our club middle let's move them a bit further 
+back maybe a bit too far and now we need to  
+26:18 add easing to these key frames I'm going to go 
+into this first one let's do this in the speed
+26:24 graph just maximize the ease at the very start 
+and then we can copy the easing with ease copy  
+26:34 let's copy these and paste them to our other 
+layers and that looks great this separation  
+26:41 between the hearten to the pieces I think is 
+looking really good and then we've got them   coming back after the club rotates and that's not 
+quite as smooth one thing that I do notice is this  
+26:52 middle part here that needs to come on once all 
+of these circles touch because once they touch we  
+26:58 don't really have any edges to deal with it's 
+a nice enclosed space that we can fill in now   we really want this middle piece and this stamp 
+to pop on in the middle of this rotation where  
+27:06 it's going the fastest where it will be easiest 
+to hide so the middle of the rotation is looks  
+27:12 like this Frame here so this Frame here we need 
+our circles to be back in the middle so what we  
+27:18 can do is copy and paste these key frames from the 
+back resting position and then maybe push them in  
+27:25 a little further as well a bit more towards the 
+center not too far because I think a bit of extra  
+27:31 motion might be helpful for two reasons one reason 
+is that the Gap that we'll need to fill in is much  
+27:37 smaller with our club middle piece really barely 
+a gap at all so when they come together this is  
+27:43 pretty much filled up I'm going to nudge it just 
+a few more pixels each circle to actually fill  
+27:49 it up then I Club middle turns on and then we 
+get a bit more motion as these circles sort of  
+27:54 pull out and we finish that rotation now how does 
+that look okay that's looking much better let's  
+27:60 improve the easing on all of these because our 
+circles don't even ease out to these positions   yet and maybe we these key frames we move a bit 
+forward as well okay let's go into our graph
+28:10 editor and add some easing like this and remember 
+we're only applying this eting to one Circle as  
+28:18 well so so we kind of have to make our brain 
+only look at this one Circle that starts to   the top left and ends in the bottom right well I 
+think that's looking pretty good good let's go and  
+28:29 copy and paste that easing onto our other layers 
+okay I think that's looking good uh Club middle  
+28:35 probably needs to pop on a little bit later 
+maybe we move these key frames back a little
+28:42 more okay that's looking pretty good I'm going 
+to do some sound effects now we have a heart  
+28:55 going and then we get a whoosh and then it comes 
+to rest so there's sort of two motions in this  
+29:02 transition we get a one two excellent okay now 
+let's finish up how our club resolves in so we  
+29:10 need to resolve on this little stem now I think 
+this should just fold out of The Ether so we're  
+29:15 going to do that with scale let's unlink our scale 
+properties key frame it here which will be its  
+29:20 final position and then in the middle in the the 
+big heat of battle in the middle of this rotation  
+29:26 we want it to appear on so let's key frame this 
+at zero so it will unfold and we can copy and  
+29:33 paste the easing from our other layers and that's 
+looking pretty good now one thing you might want   to think about is do we need this to be at zero 
+pixels at 0% scale because if we're at 0% scale  
+29:45 it's invisible so we have one frame of nothing 
+happening here and we've trimmed this layer here   anyway so it's not going to be visible beforehand 
+so if you do want it to be a bit more of a gradual  
+29:54 scale up you might put this at 10% so now we have 
+a frame of it being very very thin that we didn't  
+29:59 have before and the rest of easing will pretty 
+much be the same but it might just look a little   bit smoother because now we have one more frame of 
+this being visible in the transition and I think  
+30:08 that's looking pretty good and now the color of 
+our circles and we can change that with this fill  
+30:13 effect so we can just animate this color property 
+by clicking the stopwatch which will bring it up   down here and then when we get to the very middle 
+of the frame where all our stuff Pops in we can  
+30:22 grab the eye dropper tool and eye drop the other 
+colors excellent now this does leave a transition   of color which you might like which will be you 
+know smoother for the red going to the blue we  
+30:31 go through this sort of dark purple color but I 
+really want these to be hold frames nowhere else  
+30:37 in the design is there any gradients it's only 
+the three colors the background the blue or the   black and the red and apologies if I refer to this 
+color as both black and blue it's it's a very dark  
+30:46 blue but it's pretty much black okay so I don't 
+want there to be any sort of gradients in between  
+30:51 so I'm going to turn these into hold frames by 
+pressing control and ALT and clicking on them and   then I might move this first one to the start not 
+that it makes any difference but it just gets out  
+30:59 of the way so these are red until it hits this 
+key frame and they all turn blue and when I do  
+31:06 play that back there is this little flash of this 
+white triangle in the middle here and even though  
+31:11 that would appear if this motion was natural 
+it catches our eye and if it catches our eye   and looks out of place it shouldn't be there or if 
+it looks better by removing it why not do that so  
+31:21 let's just grab our club middle layer if we move 
+that forward where we've got the other color h H  
+31:28 maybe if we split this layer with control shift d 
+and then on this first frame we fill it in the red  
+31:35 color we've created an extra layer but let's see 
+if it works okay I think that's looking a little   better now somehow our stem has gotten off center 
+I don't know what happened here it probably wasn't  
+31:45 noticeable when our circles were red but oh okay 
+it looks like its rotation has moved one degree   let's turn that back to zero okay dead center 
+don't know how that rotation happened but these  
+31:54 things do okay our transition is looking pretty 
+smooth and almost complete now one thing I do  
+31:60 want to do is just add a bit more of anticipation 
+With This Heart here and because we've already got  
+32:05 the heart path key framed it's already open in our 
+timeline what better place to do it than that and   we're just going to move this shape of the heart 
+slightly more towards these circles and I think  
+32:15 the best place to do that is just add the bottom 
+here so if we select our pen tool now if we select   that layer select the path I know it's very hard 
+to see because my my vertices and handles are red  
+32:24 against a red layer but we can drag this handle I 
+can out a little bit to make it just a bit rounder   at the bottom and maybe scooch it upwards a little 
+bit let's see how that looks now that looks pretty  
+32:35 good and we just get a few tiny frames before this 
+motion happens but it just makes it feel like it's  
+32:40 all the one object even though it isn't just one 
+object this hard is two objects and then a club is   1 2 3 4 5 six layers but because all the motion 
+is considered the main motion is happening on  
+32:50 this large null and everything is timed so that 
+these additions of new layers happen during the   fastest motion it looks canit ing now you might 
+want to remove or change the easing on this key  
+32:60 frame maybe let's just move it one frame to the 
+right there we go so it's just a little bit less   rounded we've hidden that final more rounded key 
+frame which I think works okay and let's add a bit  
+33:10 more flavor to the motion on this null object just 
+a bit more motion to the whole sort of scene which  
+33:17 is you know just this object or these two objects 
+that'll help reinforce these moments of change of  
+33:23 the transition and I like to do that mainly with 
+position so let's open up position of course we  
+33:28 want to separate Dimensions because we only want 
+to work with the Y position for this one and what  
+33:33 kind of motion do we want in here actually when 
+this first transition happens we've got a bit   of a downward motion we can see our Spade moves 
+downwards and then our heart kind of moves upwards  
+33:43 what if we start at this position here and then 
+maybe our heart gets a little bit higher closer  
+33:49 to the top of the comp oh we haven't parented to 
+our null okay let's go back and parent this back  
+33:54 to our null like we did before preemptively 
+earlier here and let's move its height up a  
+33:59 little so at the start it sort of moves upward 
+slightly and then I think it should dip during   this motion so it goes down a little bit so it 
+goes up and that dip kind of happens at the same  
+34:10 time and same Pace that the anticipation of the 
+heart sort of moving and swelling is happening   and then this next key frame was the um the start 
+and end position let's move this to the end and  
+34:19 then after it dips here let's copy and paste that 
+key a little later so it maybe stays low and then  
+34:25 as it spins maybe it dips down again so it goes 
+dip and then dip as it spins and then comes up to  
+34:35 its resting position where it all started okay 
+let's move these key frames around now I think  
+34:40 when we add some easing these will look okay well 
+first of all we can copy and paste the rotation  
+34:45 easings from here so let's copy and paste the 
+easing of these two positions paste them there  
+34:54 so at least they ease into their final position 
+correctly now we can go in to the graph editor  
+34:60 and add some e to all them let's see how this 
+looks make sure we are in the value gra editor  
+35:06 of course and let's start from the beginning 
+where we want this first motion to be pretty sharp so most of that motion happens during 
+this fastest point of this transition here  
+35:17 again the moment of change being very fast 
+so we want fast motion we want vertical nice   vertical handles during this point and then 
+at this point the sort of peak of this sort  
+35:26 of breath the heart takes it goes we want 
+to ease out of that at this very drop here  
+35:32 we want to ease in so again we want nice 
+vertical handles and then we want to ease   out of that position and for this dip we 
+should ease into that as well so that's  
+35:43 nice and rounded what does that look like if 
+we go much much lower let's go even lower I think there I like that I like that as these 
+circles sort of dip down and sort like they're  
+35:56 collect ing one another so we have two motions 
+we have the rotation and the position that both   indicate you know something is happening to these 
+objects they're both moving down and rotating and  
+36:06 then as the rotation gets fast it kind of whips 
+it back up into the air back into its sort of   main position and then I think we've got our 
+second morph done two morphs down halfway to  
+36:16 go and I think it's looking pretty smooth and if 
+you found this section of the course useful this   is just one section this is two chapters out of 
+a seven chapter lesson and there are nine lessons  
+36:26 in this course this is from Master motion design 
+which is my intermediate course motion Foundation  
+36:31 is for those not yet confident in After Effects 
+and want a solid foundation of skills Master   motion design is for if you know what you're 
+doing in After Effects but you don't quite  
+36:39 know how to take your motion to that next level 
+I cover in- depth a lot of broader techniques   to make sure an animation is working and give 
+it structure that communicates your message  
+36:48 effectively and a lot of the subtler details 
+that elevate that final product to look smooth   and Polished to a high level more information is 
+on my website of Ben Mar .c and you can see just  
+36:58 some of the amazing student work to come out 
+of the course in this student collab [Music]
+37:14 project
+37:27 [Music] [Applause]
+37:40 [Music]
+37:47 [Music] w [Music]
+37:57 [Music] a

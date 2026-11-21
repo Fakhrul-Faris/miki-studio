@@ -1,0 +1,191 @@
+00:00 a 3D camera is more than just a tool it's how you tell a story it allows you
+00:05 to show the unimaginable but directing them can often feel like your camera is
+00:09 just floating through space it's time to take control in this video I'll walk you
+00:14 through how to set up a professional camera and blender that will put the
+00:17 power back in your hands and level up your
+00:20 cinematography imagine doing a shot like this in real life it would be
+00:24 practically impossible and even if you could get it to work it would probably
+00:28 require more money than Bezos musk and Zuckerberg have combined yet in blender
+00:32 we can do something like this for the mindboggling total of $0 this is what
+00:37 makes 3D cameras so incredibly powerful versatile and is exactly why you need to
+00:43 learn how to do this yourself but before you do let's talk about what lies at the
+00:47 basis of this all camera rigs in liveaction footage camera rigs
+00:53 are used to control movement stabilize shots and Achieve cinematic motion that
+00:58 would be hard or impossible to do handheld stuff like Smooth Dolly shots
+01:02 dramatic crane sweeps or even shaky handheld footage for intense action
+01:07 scenes but it also includes all the add-ons that make them look crazy and
+01:11 why they always kind of remind me of one of those Power Ranger Robo toys I had as
+01:15 a kid think of stuff like battery packs microphones external monitors
+01:20 stabilizers controllers sensors and so much more honestly these cameras pack a
+01:24 punch and automate a lot of the guess work that was involved with early
+01:28 cinematography which kind kind of makes sense if you look at the priz tag
+01:32 luckily in blender we need none of that fancy hoo-ha but just like in real life
+01:37 moving the camera and controlling its settings without a rig can feel awkward
+01:41 unstable and hard to do camera rigs aim to solve this problem they let you
+01:45 control the camera with a lot more precision and ease of use but require
+01:49 you to set up certain things like constraints Target empties and paths
+01:53 that will help make guiding the camera as easy as possible so let's build the
+01:57 only camera rig You'll Ever Need from now on let's begin by setting up the
+02:02 workspace click on the right border and select vertical split add a new window
+02:07 and in this window press numbat zero to go into the camera view and home on your
+02:11 keyboard to size it to the window this is now effectively the external monitor
+02:16 that would be available on a real camera rig and here's a pretty cool thing that
+02:19 I learned not that long ago if you open the fu Port shading tab you can enable
+02:23 depth of field and get that working even in solid view which is amazing for if
+02:28 you don't have the hardware turn this window to rendered view if you do I'd
+02:32 recommend doing that however and just enabling viewport D noising for a
+02:36 decently fast and responsive render preview can go quite a long way next in
+02:40 the camera's object data properties there's a few things to go over and set
+02:44 up first of all in the camera tab there's a menu icon that's called camera
+02:48 presets these will let you choose from a range of standard camera sensor sizes
+02:52 like for example the re and IMAX cameras which are very famous Cinema cameras
+02:56 which is great for when you're working with real footage and blender because if
+03:00 not the footage perspective won't match your sort of blender 3D scene you can
+03:04 leave it on default now since we're not working with external footage but it's
+03:08 good to know that this option is there next we have the viewport display
+03:12 settings I personally like to enable limits so I can see the camera limits
+03:16 which you can change with the clip start and end values here as well as the focus
+03:20 distance which is this cross shape here you can move the focus Distance by click
+03:24 dragging it but we'll set up a smarter system for that in a bit I also enable
+03:29 name so in the monitor window I can see the name of the camera I'm working with
+03:33 which is especially handy if you have multiple cameras finally I set the pass
+03:37 part two to one so the monitor window has no distractions outside of the
+03:40 camera bounds and I remove the left toolbar with t and the gizmos with the
+03:44 button up here for a clean look now let's continue the camera setup by
+03:48 adding two empties I like to use different empty types so I can visually
+03:52 tell the difference between them but do whatever you like here as long as
+03:55 there's two I'll rename one to focal Target or ft for short and one to focal
+04:00 point or FP forget about their locations for now and reselect the camera in the
+04:05 data properties tab we can find the depth of field setting enable it and
+04:09 select the focal point FB empty as the target this empty is now the control for
+04:14 the focus distance and you can simply put it on a location in your scene to
+04:17 have the focus distance match that automatically this would be similar to
+04:21 adjusting the focus wheel on an actual camera to have the part of the image
+04:25 that you want be in Focus finally add a copy location constraint to this empty
+04:29 set the focal Target is the Target and enable offset this will make it so that
+04:33 whenever you move the focal Target which is wherever the camera is looking at the
+04:37 focus distance will move with it which makes sense looking at real cameras next
+04:42 we'll set up the focal Target itself which is used to have the camera
+04:45 automatically point at whatever subject you want and to do it we'll add a damped
+04:50 track constraint to the camera set the Ft Mt as the Target and set the track
+04:55 AIS to negative Z to get it to look correct what's really cool is that we
+04:58 now have two ways to control the camera already first of all whatever point we
+05:02 move the focal Target empty to the camera will remain pointed to it and
+05:06 second we have the depth of field point that allows control over the part of the
+05:10 Target that we want to have in Focus do note that the depth of field does depend
+05:14 on your focal length sensor size and above all the aperture settings this
+05:18 gives us a very functional and easy to ous camera rig that's not dissimilar
+05:23 from an actual camera now since I can be bothered to redo this for every camera
+05:27 in every project I'll move the camera and the empties to a new collection and
+05:32 save the file in my personal libraries folder so I can append this collection
+05:35 into any other project and have it work there now let's dive into how to use
+05:39 this basic setup in a more advanced rig whether it's a circle a spiral or a
+05:44 complex path you can have a camera follow along it and use these curves for
+05:48 simple and advanced 3D camera motion that would make any real camera operator
+05:53 jealous so let's begin with a simple Circle as an example with our previously
+05:57 made camera setup selected let's add a follow path constraint to the camera and
+06:01 Target the circle curve object by default the forward axis is Y which
+06:06 works most of the time but if it isn't it's worth checking the other axes to
+06:10 see if those work adding the constraint also moves the camera as it takes the
+06:14 camera's original position into consideration too so if you want the
+06:19 camera to directly travel along the path make sure to zero out all location data
+06:23 for the camera the Target still is invisible in the monitor here though and
+06:26 that has to do with something called the order of op operations this is a common
+06:31 thing when dealing with constrained or modifier stacks and it means that
+06:34 blender will calculate everything in a top to bottom order in this case the dam
+06:39 track first and the follow path second which is resulting in the camera not
+06:43 aiming at the fdmt to fix this simply move the follow path above the dam track
+06:48 with just one click on this button here and animation is added to change the
+06:52 length or speed of the animation along its path select the curve and go into
+06:56 the object data properties here there's a tab called path animation which is set
+07:01 to 100 frames by default this means the camera will follow the entire path
+07:05 length in 100 frames by increasing the amount of frames the animation will be
+07:10 slower and by decreasing it faster it's also worth noting that there's something
+07:14 called resolution preview for curve objects and blender this is the path
+07:18 resolution which by default is set to 12 it's okay for a circle like this but on
+07:22 more complex paths it can create Jagged edges which the camera will follow
+07:27 precisely resulting in a sort of weird bumpy look in your animation to be safe
+07:31 I usually just bump this up to the max amount for each curve just so I don't
+07:35 have to worry about it anymore finally if the camera is behaving weird and
+07:39 rotating funny you can try enabling follow curve in the follow path
+07:43 constraint as that will usually fix this issue it's honestly quite versatile and
+07:47 now gives us four methods of control for the camera rig the path in its
+07:51 transforms the camera location the focal Target and the focus distance this was
+07:56 still a relatively simple example what if you want a crazy shot like I showed
+08:00 you in the intro or what if you want the camera to not travel in a constant speed
+08:05 along a path but instead have it speed up and slow down well let's add the
+08:09 final layers of control to do just that but before we do that let's talk about
+08:13 rendering out whatever you create in blender blender built-in render
+08:17 estimations aren't very usable and provide little to no Insight in how long
+08:21 a render is going to take that's why I'd like to introduce you to the render time
+08:24 estimation add-on created by Zim Zim Studio this add-on provides a
+08:28 userfriendly interface face in the image editor end panel that not only shows you
+08:32 how long your render has been going when it began and the time remaining but also
+08:36 gives you fun little details like the current longest and shortest frame
+08:39 render time the average frame render time and a readable progress bar and if
+08:44 you're not a fan of the end panel a status message is also shown in the
+08:47 status bar down below render time estimation is the perfect sidekick for
+08:52 any animation project allowing you to see if you just need to watch one of my
+08:55 videos while waiting for your render to finish or actually go on a vacation
+08:59 instead with its lightweight performance and high usability render time
+09:03 estimation is an amazing blender add-on if you're serious about animation and
+09:07 rendering you can get render time estimation right now through blend the
+09:10 market for just $5.99 so make sure to check that out through the link in the
+09:14 description and thank you to Zim Zim studio for sponsoring this video let's
+09:18 get back to our camera rig the awesome thing about the follow path constraint
+09:22 is that any curve object can be the Target and here's a great example of
+09:26 that where there's a spaceship flying along an asteroid field doing some
+09:29 evasive maneuvers before flying off at high speed this is the perfect scenario
+09:33 for a dynamic action camera that sort of follows the spaceship but also does its
+09:38 own thing and for example moves around the asteroids to make it feel like you
+09:42 as the audience are part of this dangerous maneuver yourself but that
+09:46 sounds quite hard to do right in the real world it would be impossible but in
+09:50 blender with the Rick setup we just made it's literally a couple minutes of work
+09:54 for this shot I just added another path curve object moved around the points
+09:58 extruded them and basically tried to find a somewhat interesting route for
+10:02 the camera to take and a simple basis was enough here as I would need to tweak
+10:07 it after the camera setup had been done so I could actually see the impact of
+10:10 the path shape on the animation now let's import the camera rig and change
+10:14 some stuff up first of all I want to make sure that the focal Target whatever
+10:18 the camera is looking at is always the spaceship I could technically key frame
+10:23 the position of the empty to match the spaceship position but that is a lot of
+10:27 work and usually won't look that that good instead let's just take the Ft
+10:31 empty and add a copy location constraint and set the spaceship as the target
+10:36 voila the camera will now follow the spaceship's every move but it's not
+10:40 traveling along its own path just yet so with the camera selected I'll add a
+10:44 follow path constraint again and set the camera path as the target again making
+10:49 sure the constraints are in the right order which means follow path first now
+10:54 I can click the magic animate button on the path and everything should come
+10:57 together nicely the camera will follow the path while at the same time keeping
+11:01 the spaceship in frame since I can now actually see the animation on the right
+11:05 side happening in real time it's time to tweak the path for the final animation
+11:09 just so I can get the most interesting result awesome okay so we now have even
+11:13 more control but I want to add one final layer to spice things up remember the
+11:18 path animation tab for curve objects yeah well in that same tab is something
+11:22 called evaluation time this is the parametric position of the object along
+11:27 the curve no yeah wasn't for me either let's say we have a path with a 100
+11:33 frame animation for the object to travel along the path in 100 frames blender has
+11:37 to divide the length of the path by that same number so each frame the object
+11:42 will move one 100th of the path length makes sense so far well the speed with
+11:47 which the object travels along the path is determined by the evaluation Time by
+11:51 default it's set to go from 1 to 100 as well meaning that the animation speed is
+11:56 linear and the object travels at a constant rate but we can actually
+12:00 animate the evaluation Time by deleting the automatically added key frames and
+12:05 creating our own for a custom animation speed for example in this second path
+12:09 here I can say on frame one we start at one evaluation time but on frame 20 I
+12:14 want 50 so in 20 frames the object here has already traveled along half of the
+12:19 path then after it goes back to normal speed meaning that initially it's a lot
+12:24 faster and then slows down compared to the normal animation it's a basic
+12:28 example but I think it shows you how you can use this to your advantage in the
+12:32 spaceship animation I've done this a bunch and you can see clearly as the
+12:36 camera initially falls behind then catches up fast and so on anyways this
+12:41 is our last point of control for the camera rig which brings the total to
+12:45 five the camera location the focal Target the focus Point animation paths
+12:51 and finally the path animation control through the evaluation time allowing you
+12:56 to directly control the speed at which your camera moves across your scene and
+13:00 with this final method of control the power is back in your hands and you can
+13:04 become a master of 3D animation and blender but not before you know some of
+13:08 the most iconic camera techniques out there used by Hollywood Professionals
+13:12 for decades so make sure to check out this video here where I'll show you how
+13:15 to perform these camera moves directly in blender
+13:19 [Music]

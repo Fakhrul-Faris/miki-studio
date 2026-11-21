@@ -1,0 +1,369 @@
+00:00 Understanding the camera is like
+00:02 unlocking a superpower in After Effects.
+00:04 Most editors stay stuck in 2D, sliding
+00:06 layers left and right, scaling things
+00:08 up, adding motion blur, and that's it.
+00:10 But the moment you learn After Effects
+00:12 camera, you're no longer just moving
+00:14 layers. You're moving through them. You
+00:16 turn a flat design into a full-blown
+00:18 cinematic scene. Whether you're flying
+00:20 through text, orbiting around 3D
+00:22 graphics, or simulating real world
+00:24 depth, and much more. But it will only
+00:26 happen if you know how to use the
+00:27 camera. And if you think After Effects
+00:29 camera is way too advanced for you, then
+00:31 give me some minutes and I will prove
+00:33 you wrong. So without crashing the After
+00:35 Effects, let's get started. If you ever
+00:37 collected enough courage to create a
+00:38 camera in After Effects, something pops
+00:40 up on the screen like this and most of
+00:42 the people will hit okay and thinks why
+00:45 the hell this camera is not listening to
+00:46 me. So if you don't want this to happen
+00:48 with you, then listen this video very
+00:50 carefully. First of all, you have the
+00:52 opportunity to choose the camera type.
+00:54 To explain this, let's let's suppose
+00:56 your head is a camera. And if you rotate
+00:58 your head, then you will see different
+00:59 things depending on your surroundings.
+01:01 But the main restrictions is this. You
+01:04 can't control your eyeball. And the
+01:06 ability to control your eyeball to view
+01:07 different things without changing your
+01:09 position or rotation is called point of
+01:11 interest. The main difference between a
+01:13 node camera and a two node camera is the
+01:15 one node camera rotates around itself.
+01:18 But the two node camera follows its
+01:20 point of interest and you can create
+01:21 stunning camera movement with both of
+01:23 them. Just imagine you can look at
+01:25 various things through your eye without
+01:27 rotation your head or changing your
+01:29 position. And the two node camera does
+01:31 exactly the same thing. It gives an
+01:33 additional property called point of
+01:35 interest to view at different objects.
+01:37 Now the ultimate question is which one
+01:39 is better. Now the next important thing
+01:41 in camera is its preset. There's a lot
+01:44 of options to choose from starting from
+01:46 15 mm goes all the way to 200 mm. And
+01:49 let me show you why your camera lens
+01:51 matters and which one you should choose
+01:53 to get the best results. But before
+01:55 this, I'm going to ask you a simple
+01:57 question. Did you ever seen these kind
+01:59 of scene in movies? This is called dolly
+02:01 zoom and it is achieved by changing the
+02:03 focal length of the camera. And you can
+02:05 see how the field of view is changing
+02:07 with change in the focal length. Just
+02:09 look at this. These are some photos shot
+02:11 with different camera lenses. And in the
+02:13 beginning, it feels like the field of
+02:14 view is increasing as we are shifting
+02:16 towards smaller lenses. to confirm this
+02:18 statement. This is a scene setup. And if
+02:20 I double click on the camera and change
+02:22 the camera preset to a smaller number,
+02:24 you can see we can see more objects in
+02:26 on the screen. Now let's hit okay to
+02:28 create the camera. And the first thing
+02:30 which you have to do is convert all the
+02:32 layers into 3D. So we will select all
+02:34 the key frames and press F4 to reveal
+02:36 the cube button and then press it to
+02:38 make every layer 3D. Now when we are
+02:40 going to work in 3D spaces, let's see to
+02:43 arrange layers in 3D spaces. And this is
+02:45 one of the challenging things which
+02:47 scares most of the people. Okay. So
+02:49 first off let's understand how to work
+02:51 with 3D spaces. So first we we will
+02:53 place our mouse on preview panel and
+02:55 then press tilda key to go full screen.
+02:57 And first of all we will click on this
+02:59 button called draft 3D. And if nothing
+03:01 crazy happens at your side then press
+03:03 these both buttons and this will create
+03:06 X and Y plane and you will be able to
+03:08 place your layers with precision. And if
+03:10 you want to control the transparency of
+03:11 the axis planes then hold this button
+03:13 and you will be able to control the
+03:15 transparency of the planes outside the
+03:17 composition with this slider. Now with
+03:19 this button you can view your view your
+03:20 scenes with lot of angles. Currently we
+03:23 are seeing through the camera which is
+03:24 also known as active camera but you can
+03:26 switch to whatever angle you want. For
+03:28 example, this is a 2D shape and we can
+03:31 only see it from the front view and on
+03:33 the back view because even though it's
+03:35 3D, but it's acting like it's drawn on a
+03:38 paper and we can't see anything from the
+03:40 any other view. But if we add some
+03:42 rotation to some elements, then you can
+03:44 see we are able to see something on each
+03:46 view. But here's a problems that we
+03:48 can't see where our camera is located.
+03:50 So to see our camera, we will change the
+03:53 one view to two view or even four view.
+03:56 But I would recommend to keep it at two
+03:57 view only unless you have extra monitor
+03:60 to work with. On the left hand side we
+04:02 have the active camera and this is the
+04:04 view which will be rendered. And on the
+04:05 right side we can switch to any of the
+04:07 view we want. To change the view first
+04:10 we have to click on the right side to
+04:11 select this. And you can see these four
+04:13 blue corner which are telling us that we
+04:15 are working on this view. You can choose
+04:17 custom view 1 2 3 and orbit around to
+04:21 inspect your scene from any angle. Very
+04:23 useful for positioning layers, lights or
+04:25 cameras accurately in 3D. It ignores
+04:27 what the actual camera sees. Just gives
+04:30 you a flexible workspace. Now you can
+04:32 see where is your camera is and as well
+04:34 as what's the view from the camera on
+04:36 the left side. One node cam versus two
+04:38 node cam. A one node camera doesn't have
+04:41 point of interest as two node camera
+04:42 has. And when you rotate a one node
+04:44 camera, it rotates around itself. But if
+04:47 you do the same with a two- node camera,
+04:49 then it feels like it's automatically
+04:51 orienting itself towards the point of
+04:53 interest. And you can adjust the point
+04:54 of interest in a two-node camera by
+04:56 clicking on the camera. And this
+04:58 straight line determines the point of
+04:60 interest. And you can adjust it by
+05:01 dragging it at any point as you wish.
+05:03 There are many ways to move the camera.
+05:05 So let's discuss each one of them one by
+05:07 one. First of all, we will click on this
+05:09 button called orbit around cursor tool
+05:12 and it's used to rotate the camera.
+05:17 The next button is pan camera and by
+05:20 this button you can move sideways or up
+05:22 and down. The last button is a dolly
+05:25 button and can be used to zoom in and
+05:27 out. You can cycle between each one of
+05:29 these buttons by pressing C. But if you
+05:31 want to quickly switch between these
+05:33 three buttons in a blink of an eye then
+05:35 I would suggest to use unified camera
+05:37 tool and you can do it by holding alt
+05:40 key and while holding if you click left
+05:42 button of the mouse you can switch to
+05:44 orbit tool and if you again clicked to
+05:46 right button of the mouse then it will
+05:48 switch to dolly tool and if you press
+05:51 the middle button of the mouse wheel
+05:52 then you can select the pan tool to move
+05:54 the camera. Now remember one thing that
+05:57 these buttons can't be used to move the
+05:59 camera on custom view or any other view.
+06:02 It will only move the view within the 3D
+06:04 space. You can use these buttons to go
+06:06 whatever angle you want in 3D space. To
+06:09 animate the camera, first you have to
+06:10 add key frames on the position property.
+06:16 If you animate the camera from one point
+06:18 to another, it follows the boring linear
+06:21 motion by default, which lacks physics
+06:24 because when a thing starts, it usually
+06:26 starts from zero acceleration and goes
+06:28 all the way to max speed and then it
+06:30 slowly stops to the end. So, always make
+06:33 sure to add proper smoothness to the key
+06:36 frames. Now, you could find yourself in
+06:38 a situation where you have to add more
+06:39 than two key frames on camera property.
+06:42 And if you watch the animation then you
+06:44 can notice the camera stops completely
+06:45 for a moment which doesn't feels good.
+06:48 And there are three ways to prevent
+06:49 this. The first thing which you can do
+06:51 is separate the dimensions and animate
+06:53 the each property separately so that
+06:56 movement doesn't stop. But this creates
+06:58 restrictions to move the camera freely.
+07:00 And this is the why everyone parent the
+07:03 camera to the null. Because when we
+07:05 parent the camera to the null, we get
+07:07 access to manipulate the camera position
+07:09 or rotation without using the camera
+07:11 layer.
+07:16 And by parenting multiple nulls to the
+07:18 one who's above it, we can create as
+07:20 many camera movement as we want without
+07:23 stopping the camera.
+07:27 Depth of fields. In real life when we
+07:30 use smartphone the background becomes
+07:32 blur and if we focus our eye on the
+07:34 subject then our smartphone becomes blur
+07:37 and this can also achieved in real world
+07:39 camera from the depth of field. Depth of
+07:41 field is like deciding what part of the
+07:43 scene gets your full attention and what
+07:45 gets ignored in a blur. To activate the
+07:48 depth of field you have to open the
+07:50 camera options and activate the depth of
+07:52 field. We can control the depth of field
+07:54 using these three properties. So let's
+07:56 see what each one of them does. Focus
+07:58 distance is used to tell the after
+07:60 effects where the focus should be or
+08:02 which layer should be in focus. You can
+08:04 see where your focus is if you switch
+08:06 the view to any one view and if you
+08:09 change the focus distance then it will
+08:11 update in the real time.
+08:17 You can see that if it changed the focus
+08:19 distance to the behind text layer then
+08:21 our camera is able to focus on both
+08:23 texts at a time. But let's say we want
+08:26 to blur the first text then we have to
+08:28 use the aperture property. The aperture
+08:30 controls the amount of light passes
+08:31 through the camera and somehow it also
+08:34 controls the amount of blur. Here's are
+08:36 some shot with different aperture
+08:37 values. In simple terms, if you increase
+08:40 the aperture then it will decrease the
+08:42 f-stop value and you will get a shallow
+08:44 depth of field. And if I want to blur
+08:46 the subject and focus my camera on the
+08:48 object, first we need to make sure our
+08:50 focus distance is reaching towards the
+08:52 object or background and then slowly
+08:55 increase the aperture value and you will
+08:57 start to see the subject is being blurry
+08:59 as we are increasing the aperture. You
+09:01 can also do this by increasing the blur
+09:03 level. Imagine you are sitting on a
+09:05 moving vehicle and enjoying the
+09:07 beautiful motion blur while watching the
+09:09 roads. But if you see sideways then you
+09:11 can notice the object which are closer
+09:13 to you are moving much muster than the
+09:15 object which are far from us. And this
+09:17 is called a parallax effect. For
+09:19 example, this is a simple scene setup.
+09:22 And if I move the camera then it looks
+09:23 like I'm moving of image which doesn't
+09:25 have any depth even though our layers
+09:27 are 3D. So to fix this we will position
+09:30 our layers in the Z-axis. And you can
+09:32 notice now it's much smaller.
+09:35 And now if we move the camera then you
+09:37 can notice the background layer is
+09:39 moving very slowly as compared to the
+09:41 subject. Now you want to make it move
+09:43 even more slower. Then place the layer
+09:46 even more in the Z-axis. Now let's
+09:48 discuss some pro tips while using the
+09:50 camera animation. So in this scene I've
+09:52 animated my camera and now I want to add
+09:54 some more layers in my scene. So when I
+09:57 dragged this layer and made it 3D it
+09:59 suddenly disappeared. And this might
+10:02 frustrate you in the beginning, but
+10:04 let's know why this happened and how to
+10:06 fix this. So when we animated our camera
+10:08 from the starting point, it was first
+10:10 seeing at the origin. And where we moved
+10:12 the camera in 3D space, it's no longer
+10:14 looking at the origin. And when we made
+10:16 our layer 3D, it basically moves towards
+10:18 the origin. And to confirm this, you can
+10:21 see the position of the layer.
+10:25 Now if you want to make it appear in
+10:26 front of the camera then what you have
+10:28 to do is press Ctrl + Alt + home key and
+10:32 this will centers the anchor point of
+10:33 the layer and then we will simply press
+10:35 Ctrl + Homekey and suddenly we are able
+10:38 to see the layer in front of the camera
+10:40 and you can also see the position of the
+10:42 layer is changed now to fit the camera
+10:44 view. While working with the camera in
+10:46 After Effects, always try to use the one
+10:48 node camera because a two- node camera
+10:50 automatically orients itself to the
+10:51 point of interest and you have to key
+10:53 frames point of interest in order to
+10:55 look at any other layer. And if you use
+10:57 a one node camera, you can look wherever
+10:59 you want freely. Both cameras are used
+11:01 for different scenarios. So choose the
+11:03 camera wisely depending on your need.
+11:06 One more thing which I want to tell you
+11:08 is when you appearance the camera to the
+11:10 null object then simply just duplicate
+11:13 it four to five times depending on your
+11:15 need and parents them to the one above
+11:18 it and this will help you to save your
+11:20 time in animating the camera. Next, I've
+11:23 seen many people bang their head while
+11:25 working with camera. So let me give you
+11:27 some tips so you don't. So first hold
+11:29 this button and select 3D reference
+11:32 axis. And here you can see the red,
+11:34 green, blue represents X, Y, Z axis
+11:38 respectively. And this will help you to
+11:40 move the layers with ease. And when you
+11:42 want to rotate the later, then don't use
+11:44 this. And go all the way in the fourth
+11:47 dimension instead. See this pink link
+11:49 and rotate it in circle. And you can see
+11:51 it's working perfectly. And let's say if
+11:54 you want to move it 90° them, use shift
+11:57 key and it will snap the points in
+11:59 multiple of five and you can snap it
+12:01 easily. Now if you want to see where
+12:03 your camera is then first change this
+12:06 view from active view to another view
+12:08 and select this camera and you will be
+12:11 able to see it. And if you want to see
+12:12 the camera all the time without pressing
+12:14 it every time then just select this
+12:17 hamburger icon and then click view
+12:19 options and then change the camera
+12:21 wireframe to on and then hit okay. And
+12:24 now we can see our camera without
+12:26 touching it and this gives the idea
+12:28 what's it seeing through. Next thing
+12:30 which I noticed in beginner user is they
+12:33 use orbit around tool. They don't use it
+12:35 correctly and think it's hard to them
+12:37 but you just point your mouse on the
+12:39 point where you want to rotate then it
+12:41 will just work fine. You can also zoom
+12:43 in a little bit in order to move the
+12:45 camera even more smoother. See this how
+12:47 smoothly it's working. Just remember to
+12:49 take your mouse on the point where you
+12:51 want to rotate. And if you want to
+12:53 rotate in a specific axis, then hold
+12:56 shift while doing it and you will fall
+12:58 in love with camera in After Effects.
+12:60 All right, guys. This was it for today.
+13:02 I hope you learned something new in this
+13:03 video. And if you don't want to miss
+13:05 this kind of informative tutorials, then
+13:07 hit that bell icon to stay notified. And
+13:09 if you want to know how to edit
+13:10 subtitles like a pro, then watch this
+13:13 video and you will be amazed to know
+13:15 secrets to make viral subtitles.

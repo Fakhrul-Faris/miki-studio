@@ -1,0 +1,3088 @@
+00:00 You've probably seen those software as a
+00:02 
+
+00:02 service product launch videos. They're
+00:03 
+
+00:03 smooth, minimalistic, and you can make a
+00:05 
+
+00:05 lot of money by making them. And today,
+00:07 
+
+00:07 I will show you exactly how to create
+00:09 
+
+00:09 one. I came up with a fake software as a
+00:10 
+
+00:10 service, and this is what we're going to
+00:12 
+
+00:12 create today. If you've ever hired a
+00:14 
+
+00:14 video editor, you know the pain.
+00:15 
+
+00:15 Feedback scattered across emails,
+00:17 
+
+00:17 WhatsApp, Slack, and Frame without a
+00:19 
+
+00:19 clear overview. Edit from solves this by
+00:20 
+
+00:20 bringing everything into one place.
+00:22 
+
+00:22 Projects, feedback, files, [music] and
+00:25 
+
+00:25 communication. Now, to make it easy, I'm
+00:27 
+
+00:27 going to divide this in three scenes.
+00:29 
+
+00:29 And throughout the video I will show you
+00:30 
+
+00:30 the secret technique to transition
+00:32 
+
+00:32 between these scenes. Now let's start up
+00:34 
+
+00:34 with the first scene. I'm here in After
+00:35 
+
+00:35 Effects and I have this voice over
+00:38 
+
+00:38 already software as a service tutorial.
+00:40 
+
+00:40 Let's import that and you can actually
+00:41 
+
+00:41 download this in description. If you
+00:43 
+
+00:43 want the full voice over the deep dive
+00:45 
+
+00:45 and also the tutorial on this subject
+00:48 
+
+00:48 then do join the full stack editor club.
+00:49 
+
+00:49 Link of that is also in the description.
+00:51 
+
+00:51 In this video I'm just going to go over
+00:52 
+
+00:52 a part of this otherwise this video will
+00:54 
+
+00:54 also become way too long. So do check
+00:57 
+
+00:57 out the deep dive in the fullstack
+00:59 
+
+00:59 editor club. Check it down. Now let's
+01:00 
+
+01:00 create a new composition. And I'm going
+01:02 
+
+01:02 to create a 4K 25 frames per second
+01:05 
+
+01:05 composition. Duration I'm already going
+01:07 
+
+01:07 to set quite high cuz I know the voice
+01:10 
+
+01:10 over is a bit longer. So I'm going to
+01:11 
+
+01:11 set it to around 1 minute. That's fine.
+01:14 
+
+01:14 We can change it later. And just hit
+01:16 
+
+01:16 okay. Now I'm going to move in the
+01:17 
+
+01:17 audio. And let's drag that in the
+01:20 
+
+01:20 composition. So the first sentence is if
+01:22 
+
+01:22 you ever hired a video editor, you know
+01:24 
+
+01:24 the pain. And I'm thinking of an emoji
+01:26 
+
+01:26 with maybe a higher button that gets
+01:28 
+
+01:28 clicked by a cursor. I'm first going to
+01:30 
+
+01:30 create a background. So I'm going to go
+01:32 
+
+01:32 to layer, new solid. The color doesn't
+01:35 
+
+01:35 matter cuz what I'm going to do is I'm
+01:37 
+
+01:37 going to add a four color gradient. Go
+01:39 
+
+01:39 to the effects and presets panel and
+01:41 
+
+01:41 type in four color gradient. Double
+01:44 
+
+01:44 click on it while having the black solid
+01:46 
+
+01:46 selected. And let's change the colors. I
+01:48 
+
+01:48 want this to be a bit like off white.
+01:51 
+
+01:51 I'm going to color pick the other color.
+01:53 
+
+01:53 And I'm going to do the same here. And
+01:54 
+
+01:54 then this blue I'm going to make a bit
+01:56 
+
+01:56 less bluish. Maybe something like this.
+01:59 
+
+01:59 I'm going to turn the blend up by a lot.
+02:02 
+
+02:02 And I'm going to change the blue to be a
+02:04 
+
+02:04 bit more like this. Maybe move it a bit.
+02:06 
+
+02:06 There we go. As you can see, we have
+02:07 
+
+02:07 this really nice soft gradient. I'm
+02:10 
+
+02:10 going to set the jitter to 100% to make
+02:12 
+
+02:12 sure that I don't have any bending. This
+02:14 
+
+02:14 will also add a bit of noise to it,
+02:16 
+
+02:16 which I actually like. Now, let's make a
+02:18 
+
+02:18 quick UI. I'm going to go to the rounded
+02:20 
+
+02:20 rectangle tool. I'm going to set the
+02:22 
+
+02:22 fill to fully white. And I'm going to
+02:25 
+
+02:25 add a stroke to it, too. I'm going to
+02:28 
+
+02:28 make this really like light grayish.
+02:31 
+
+02:31 Maybe something like this. Press okay.
+02:33 
+
+02:33 And now let's make a UI, which we can
+02:35 
+
+02:35 later on change, of course, but for now
+02:37 
+
+02:37 I'm just going to make it something like
+02:39 
+
+02:39 this. Let's change the roundness to be
+02:42 
+
+02:42 nice and high. Not too high, but
+02:45 
+
+02:45 something around 60. That already looks
+02:48 
+
+02:48 really nice. I'm also going to add a
+02:49 
+
+02:49 drop shadow to this already. So, right
+02:51 
+
+02:51 click, layer styles, and then drop
+02:54 
+
+02:54 shadow. In the drop shadow, I'm going to
+02:56 
+
+02:56 make it really soft. So, I'm going to
+02:58 
+
+02:58 increase the size by a lot. Maybe
+03:01 
+
+03:01 something like this. I'm going to change
+03:02 
+
+03:02 the angle to be 90°. And I'm going to
+03:06 
+
+03:06 increase the distance. So, it's a bit
+03:08 
+
+03:08 below it. And then I'm going to change
+03:10 
+
+03:10 the opacity so it's really nice and
+03:13 
+
+03:13 soft. It literally only has to be like
+03:14 
+
+03:14 5%. And to make sure there's a bit of
+03:16 
+
+03:16 separation in the background, I'm also
+03:18 
+
+03:18 going to change the stroke color to be a
+03:20 
+
+03:20 bit more light. I think it's a bit too
+03:22 
+
+03:22 noticeable. Something like this is nice.
+03:23 
+
+03:23 Great. Now, I'm going to import a mmoji.
+03:26 
+
+03:26 This can be a custom one that you
+03:28 
+
+03:28 created yourself if you have a Apple
+03:30 
+
+03:30 iPhone or you can just find one in
+03:31 
+
+03:31 Google or you can even create one using
+03:33 
+
+03:33 JGBT. Now, let's uh import this. I'm
+03:36 
+
+03:36 going to put it around here. Now, let's
+03:38 
+
+03:38 press S for scale. I'm going to scale
+03:40 
+
+03:40 this person down a bit. Something like
+03:43 
+
+03:43 this. Then I'm going to go to the
+03:45 
+
+03:45 ellipse tool. I'm going to turn my
+03:47 
+
+03:47 stroke to none. And I'm going to add a
+03:51 
+
+03:51 gradient fill to this. Linear gradient
+03:53 
+
+03:53 is fine. Okay. And I'm just going to
+03:56 
+
+03:56 drag it like this. Hold shift. And this
+03:59 
+
+03:59 looks really ugly. I want to change this
+04:01 
+
+04:01 gradient really quick. So click on the
+04:03 
+
+04:03 gradient color. And I'm going to use the
+04:05 
+
+04:05 same colors that we used in the
+04:07 
+
+04:07 background. Maybe a bit of like a light
+04:09 
+
+04:09 bluish. Something like this. Okay. Press
+04:12 
+
+04:12 V for selection. And let's make sure
+04:14 
+
+04:14 that this is nice and smooth. There we
+04:18 
+
+04:18 go. Now I want to drag this below our
+04:21 
+
+04:21 image. Move this a bit. If you hold
+04:23 
+
+04:23 command, it might snap in place, which
+04:25 
+
+04:25 it does. It's nice. We can do that.
+04:27 
+
+04:27 Control on Windows. I'm going to move
+04:28 
+
+04:28 this guy a bit. And what I'm actually
+04:30 
+
+04:30 going to do is I'm going to make sure
+04:31 
+
+04:31 that it's cropped off. So let's scale it
+04:33 
+
+04:33 up so the bottom hits the bottom of this
+04:36 
+
+04:36 ellipse. Then I'm going to use the
+04:38 
+
+04:38 ellipse as a trackmat. And I'm going to
+04:41 
+
+04:41 turn it back on. Now I'm going to parent
+04:42 
+
+04:42 it to the shape and I'm going to press S
+04:45 
+
+04:45 for scale and I'm going to scale it down
+04:47 
+
+04:47 a bit. Just want to make sure that's
+04:49 
+
+04:49 nice and small. Something like this
+04:51 
+
+04:51 looks really clean. Now let's add some
+04:52 
+
+04:52 text to this. I'm going to just go to
+04:54 
+
+04:54 the text tool and I'm just going to type
+04:56 
+
+04:56 here video editor. Let's make the color
+04:60 
+
+04:60 a bit of black. Maybe something like
+05:02 
+
+05:02 this. Let's move this text. Make it a
+05:04 
+
+05:04 bit smaller. Now I'm going to duplicate
+05:05 
+
+05:05 it. Command D. Control D on Windows. And
+05:08 
+
+05:08 I'm going to add some subtitle here.
+05:10 
+
+05:10 maybe specialized
+05:13 
+
+05:13 in making VSSLs and e-commerce VSSLs
+05:19 
+
+05:19 explainers and e-commerce ads something
+05:21 
+
+05:21 like that. Now this looks really ugly
+05:24 
+
+05:24 and that is because this is a subtitle.
+05:26 
+
+05:26 So we either need to make this a bit
+05:28 
+
+05:28 smaller maybe a bit more thin. So for
+05:30 
+
+05:30 example, I can make this into light and
+05:34 
+
+05:34 I can also regular and can change the
+05:38 
+
+05:38 color of the text to be a bit more light
+05:40 
+
+05:40 and then also make it smaller. Something
+05:43 
+
+05:43 like this. Move this a bit. Now I'm
+05:45 
+
+05:45 going to change the shape a bit because
+05:47 
+
+05:47 I want to have it a bit more longer so I
+05:49 
+
+05:49 can fit a button under it. So let's
+05:52 
+
+05:52 click on the shape and unlink it. Make
+05:54 
+
+05:54 it bigger. Maybe something like this.
+05:57 
+
+05:57 And I'm also going to make it a bit more
+05:58 
+
+05:58 thin. we have a bit less space around
+06:01 
+
+06:01 it. Then select all of our elements,
+06:03 
+
+06:03 click on the first one, then on the last
+06:05 
+
+06:05 one while holding shift and let's move
+06:06 
+
+06:06 this to maybe something like this. And
+06:08 
+
+06:08 then I want a nice higher button under
+06:11 
+
+06:11 it. And I do that by going to the
+06:13 
+
+06:13 rounded rectangle tool. This fill might
+06:15 
+
+06:15 even be nice that we already have. Uh
+06:17 
+
+06:17 let's see, let's drag this. And I
+06:19 
+
+06:19 actually quite like it. Uh so let's go
+06:21 
+
+06:21 to the selection tool, V, and let's drag
+06:24 
+
+06:24 this handle. So it's a nice soft
+06:27 
+
+06:27 gradient. What we can even do is right
+06:29 
+
+06:29 click on this layer styles and then
+06:31 
+
+06:31 inner glow and let's set this to normal
+06:34 
+
+06:34 and then the color white and then
+06:38 
+
+06:38 increase the size by a lot and then
+06:40 
+
+06:40 decrease the opacity by a lot and this
+06:42 
+
+06:42 will just generate this soft glowy look
+06:45 
+
+06:45 which in my opinion looks really nice.
+06:47 
+
+06:47 Now I actually like the roundness. I
+06:49 
+
+06:49 don't like how this is aligned. So let's
+06:51 
+
+06:51 center this first so everything is nice
+06:54 
+
+06:54 and centered. We might have to move this
+06:57 
+
+06:57 circle shape. And I just want to make
+06:60 
+
+06:60 sure that this is all aligned properly.
+07:02 
+
+07:02 Then I'm going to select this text or
+07:04 
+
+07:04 this title, duplicate it, and move that
+07:07 
+
+07:07 here. Let's move this above the button.
+07:10 
+
+07:10 And let's change this to higher. Now,
+07:13 
+
+07:13 one thing is really important. It's now
+07:15 
+
+07:15 black. And as you can see, that looks a
+07:16 
+
+07:16 bit cheap. I want to change this to
+07:18 
+
+07:18 white. So, let's change the fill to
+07:21 
+
+07:21 fully white. As you can see, we have a
+07:23 
+
+07:23 nice clean cart. I'm really happy with
+07:25 
+
+07:25 it. Now, let's get animating. Uh, what I
+07:27 
+
+07:27 want to do is I want to have it zoom out
+07:29 
+
+07:29 from this card. So, I'm just going to
+07:31 
+
+07:31 create a new null object first. So,
+07:33 
+
+07:33 layer, new null object. Let's drag this
+07:35 
+
+07:35 up. Let's select all of our layers
+07:37 
+
+07:37 except the PNG because that one is
+07:40 
+
+07:40 already linked to the shape. And let's
+07:42 
+
+07:42 parent that to the null. Now, I'm going
+07:44 
+
+07:44 to press S for scale, set a key frame,
+07:46 
+
+07:46 drag this out. Then, I'm going to zoom
+07:48 
+
+07:48 it in by a lot. Just making sure that
+07:50 
+
+07:50 cart is fully filling the screen. There
+07:54 
+
+07:54 we go. Then of course, I'm going to easy
+07:56 
+
+07:56 ease these key frames. Key frame
+07:57 
+
+07:57 assistant, easy ease. Go into the graph
+07:59 
+
+07:59 editor. Let's select the last key frame.
+08:02 
+
+08:02 Let's drag that out. Maybe even drag
+08:04 
+
+08:04 that first key frame to the left. Maybe
+08:06 
+
+08:06 drag it out a bit so it's a bit more
+08:08 
+
+08:08 quick. A really steep graph as you can
+08:11 
+
+08:11 see. Now, let's already enable motion
+08:13 
+
+08:13 blur. And then enable motion blur on all
+08:16 
+
+08:16 of our layers. That will already make it
+08:18 
+
+08:18 look nice. And let's animate the
+08:20 
+
+08:20 elements. I want to start with top left
+08:22 
+
+08:22 with the guy. And what I'm going to do
+08:24 
+
+08:24 is I'm just going to press S for scale.
+08:27 
+
+08:27 Set a key frame. Go a bit further to the
+08:29 
+
+08:29 beginning and set it to zero. Now, of
+08:31 
+
+08:31 course, you can easy ease this. In this
+08:33 
+
+08:33 case, I want it to bounce. And to make
+08:34 
+
+08:34 it bounce, you can use an expression or
+08:36 
+
+08:36 you can use a plugin like motion tools,
+08:39 
+
+08:39 but we can even do it manually. And to
+08:40 
+
+08:40 do it manually, it's not that crazy. We
+08:42 
+
+08:42 just hit F9 on our keyboard to make this
+08:45 
+
+08:45 east. So we have this nice graph and
+08:47 
+
+08:47 let's drag this out and then I'm going
+08:49 
+
+08:49 to set this to a bit larger. So it comes
+08:51 
+
+08:51 in and as you can see it already has a
+08:53 
+
+08:53 bounce. However, it's not as smooth. So
+08:56 
+
+08:56 let's go into this. Can drag this out a
+08:58 
+
+08:58 bit. The last key frame. Let's drag that
+08:59 
+
+08:59 out like that. So it goes like this.
+09:01 
+
+09:01 Maybe a bit too much. Can dial it down a
+09:04 
+
+09:04 bit. And then what I want to do is I
+09:06 
+
+09:06 want to move him into the screen too. So
+09:08 
+
+09:08 let's press P for position. Drag him
+09:11 
+
+09:11 down. And let's easy ease this. So, we
+09:13 
+
+09:13 already have this cool animation. Then,
+09:15 
+
+09:15 of course, the text, we also want to
+09:17 
+
+09:17 animate that. And to animate it, I'm
+09:18 
+
+09:18 just going to go into the text. I'm
+09:20 
+
+09:20 going to go to animate and then hit
+09:23 
+
+09:23 position. Then, I'm going to go to add
+09:25 
+
+09:25 and then property opacity. Let's move
+09:27 
+
+09:27 the position to 50 and opacity to zero.
+09:31 
+
+09:31 Open the range selector and then go into
+09:34 
+
+09:34 the advanced tab. Let's change the base
+09:36 
+
+09:36 on to words because I want the words to
+09:38 
+
+09:38 animate, not the characters. Set the
+09:40 
+
+09:40 shape to ramp up the ease low to 100%.
+09:44 
+
+09:44 And then let's key frame the offset by
+09:46 
+
+09:46 clicking on the stopwatch next to
+09:48 
+
+09:48 offset. Set it to minus 100%. Go a bit
+09:51 
+
+09:51 further. And let's set this to 100%. So
+09:54 
+
+09:54 we have this nice smooth animation. We
+09:56 
+
+09:56 can even drag this out a bit. And of
+09:58 
+
+09:58 course, we can save this as a preset by
+09:60 
+
+09:60 just dragging this to our preset folder.
+10:03 
+
+10:03 Or we can, of course, copy this over and
+10:05 
+
+10:05 paste it onto our text. So we now have
+10:08 
+
+10:08 it pasted on the rest of the text. And
+10:09 
+
+10:09 as you can see, it already looks really
+10:11 
+
+10:11 cool. Now, we can of course offset it
+10:13 
+
+10:13 too. So, for example, that this text
+10:15 
+
+10:15 comes in a bit later and then the higher
+10:17 
+
+10:17 also comes in later. I actually also
+10:19 
+
+10:19 want to animate the shape anyway. Uh so,
+10:22 
+
+10:22 let's select the shape, go into the
+10:24 
+
+10:24 shape rectangle, then into the rectangle
+10:26 
+
+10:26 path. Let's animate the size and also
+10:29 
+
+10:29 the roundness. And lastly, I'm also
+10:31 
+
+10:31 going to press S for scale and set a key
+10:33 
+
+10:33 frame. Now, press U to see all your key
+10:35 
+
+10:35 frames. And what I'm going to do is I'm
+10:37 
+
+10:37 going to drag these out. So, I'm going
+10:39 
+
+10:39 to drag these out maybe like 1 second.
+10:41 
+
+10:41 I'm going to unlink the size. I'm going
+10:43 
+
+10:43 to make it square. And I do so by just
+10:46 
+
+10:46 copying over the second value and
+10:48 
+
+10:48 pasting that in the first value. So, we
+10:50 
+
+10:50 have a nice square. Then, I'm going to
+10:51 
+
+10:51 make it really round, somewhere like
+10:53 
+
+10:53 this. So, we have a nice circle. And I'm
+10:56 
+
+10:56 going to set a key frame for the scale.
+10:58 
+
+10:58 And then, I'm going to go a bit further
+10:59 
+
+10:59 down and I'm going to set another key
+11:02 
+
+11:02 frame for the scale. This time I'm going
+11:03 
+
+11:03 to set it to zero. So, it zooms to 100%.
+11:08 
+
+11:08 and then drags out like that. Now, this
+11:10 
+
+11:10 is really ugly because there's no
+11:11 
+
+11:11 smoothness on it. And that's really
+11:14 
+
+11:14 simple to do. We just need to select
+11:16 
+
+11:16 everything, hit F9 on our keyboard.
+11:18 
+
+11:18 Let's go to the graph editor and let's
+11:20 
+
+11:20 make this nice and smooth. I'm first
+11:21 
+
+11:21 going to select the scale key frame and
+11:23 
+
+11:23 I want to easy ease this. So, it goes
+11:26 
+
+11:26 smooth like that. And then I want it to
+11:30 
+
+11:30 easy ease just like this. A nice smooth
+11:32 
+
+11:32 graph just like that. And we can even
+11:35 
+
+11:35 offset this a bit by changing the scale.
+11:37 
+
+11:37 So basically it it skills and already
+11:40 
+
+11:40 moves out. So maybe even move this a bit
+11:42 
+
+11:42 more to the front. Now the overall
+11:44 
+
+11:44 timing isn't great because it all
+11:46 
+
+11:46 happens a bit too slow. Now one more
+11:48 
+
+11:48 thing I want to spice it up a bit. You
+11:49 
+
+11:49 see this a lot in SAS animations where
+11:52 
+
+11:52 there's basically some shapes around
+11:54 
+
+11:54 your shape. And to do so I'm just going
+11:56 
+
+11:56 to duplicate the shape once. Press S for
+11:58 
+
+11:58 scale to scale it up. We're going to
+12:00 
+
+12:00 press T for transparency. And let's dial
+12:03 
+
+12:03 this down to a really low number.
+12:06 
+
+12:06 something like five. And then we can
+12:08 
+
+12:08 just do this again. Command D, press S
+12:10 
+
+12:10 for scale. Scale it up. Command D, press
+12:13 
+
+12:13 S for scale. Scale it up. And I'm just
+12:16 
+
+12:16 going to do this a few more times till
+12:18 
+
+12:18 I'm at the edge. There we go. Now it's
+12:20 
+
+12:20 really not that visible. So select all
+12:22 
+
+12:22 of them. Press T for transparency. And
+12:24 
+
+12:24 let's increase the opacity a bit. Not
+12:27 
+
+12:27 too much. Maybe to 15% or something.
+12:30 
+
+12:30 That is really dope. And of course, what
+12:32 
+
+12:32 we can even do is select all of them.
+12:35 
+
+12:35 Uh, press S for scale. Set a key frame.
+12:37 
+
+12:37 Go to the front and then scale it down.
+12:40 
+
+12:40 Let's select all of these key frames,
+12:42 
+
+12:42 right click, key frame assistant, easy
+12:44 
+
+12:44 ease. Can even go into the graph editor
+12:46 
+
+12:46 and make them all nice and eased.
+12:49 
+
+12:49 However, what I also want to do is make
+12:51 
+
+12:51 sure they're offset a bit. So, so we can
+12:53 
+
+12:53 just select all of these key frames and
+12:55 
+
+12:55 use a offset tool like motion tools. Or
+12:57 
+
+12:57 you can manually do it by just selecting
+12:59 
+
+12:59 them, moving them like maybe one key
+13:01 
+
+13:01 frame further, one key frame further,
+13:03 
+
+13:03 one key frame further, and one key frame
+13:05 
+
+13:05 further. And let's select them all, and
+13:07 
+
+13:07 then move them a bit. So there's a bit
+13:09 
+
+13:09 of movement in the background. As you
+13:11 
+
+13:11 can see, it's a cool effect. And you can
+13:12 
+
+13:12 do this with any shape. You can also do
+13:14 
+
+13:14 it with a circle or a blob. Now I have
+13:16 
+
+13:16 this cursor, which you can just find
+13:18 
+
+13:18 online. I just drag it in. And we'll use
+13:20 
+
+13:20 this to click on the higher button. So
+13:23 
+
+13:23 I'm just going to press P for position,
+13:24 
+
+13:24 set a key frame. I'm also going to press
+13:26 
+
+13:26 S for scale. And I'm going to scale it
+13:28 
+
+13:28 down for now. And I want to have it end
+13:31 
+
+13:31 here. So, let's press U to see our key
+13:33 
+
+13:33 frames. And let's drag this out. And I
+13:35 
+
+13:35 want to move it from maybe around here.
+13:37 
+
+13:37 And to make it more natural, let's go
+13:39 
+
+13:39 into the convert vertex tool. And you do
+13:42 
+
+13:42 this by clicking and holding your mouse
+13:43 
+
+13:43 down on the pen tool. So, we can make
+13:45 
+
+13:45 this into a nice organic path. Maybe a
+13:48 
+
+13:48 bit like this. Of course, we also want
+13:50 
+
+13:50 to easy ease this again. And go into
+13:53 
+
+13:53 your graph editor. Make sure that this
+13:54 
+
+13:54 is really nice and ease. Let's drag
+13:57 
+
+13:57 these key frames. And let's see the
+13:59 
+
+13:59 timing a bit. Maybe just like that. So
+14:01 
+
+14:01 it comes in nice and smooth. And then
+14:02 
+
+14:02 once it's here, I want it to click. And
+14:04 
+
+14:04 to make it click, just press S for scale
+14:06 
+
+14:06 and go uh set a key frame. Go a bit
+14:09 
+
+14:09 further and scale it down. And of
+14:12 
+
+14:12 course, copy this key frame over and
+14:14 
+
+14:14 paste it so it clicks. There we go. And
+14:17 
+
+14:17 if we want to be really fancy, we also
+14:18 
+
+14:18 adjust the button. And a mistake that a
+14:20 
+
+14:20 lot of editors and motion designers make
+14:22 
+
+14:22 is they scale the button up once it gets
+14:24 
+
+14:24 clicked or they make it lighter. It
+14:26 
+
+14:26 needs to be darker and it needs to go
+14:28 
+
+14:28 in. So what you can do is you can just
+14:30 
+
+14:30 press S for scale. Make sure the higher
+14:33 
+
+14:33 text is linked to this shape because we
+14:36 
+
+14:36 want to have that move with it. Let's
+14:38 
+
+14:38 set a key frame. And then basically once
+14:41 
+
+14:41 it clicks we also want to make the
+14:43 
+
+14:43 button scale down a bit and make it go
+14:45 
+
+14:45 back up. And to make it darker, we can
+14:47 
+
+14:47 add a exposure, brightness, and
+14:49 
+
+14:49 contrast. It doesn't really matter what
+14:51 
+
+14:51 you use. Or we can also key frame the
+14:53 
+
+14:53 colors. In this case, I'm going to add
+14:55 
+
+14:55 an exposure effect. So, we can just go
+14:57 
+
+14:57 to the effects and presets, and we can
+14:59 
+
+14:59 add an exposure. And if you just double
+15:01 
+
+15:01 click on that, it will add it to it. And
+15:03 
+
+15:03 then we can set a key frame for the
+15:04 
+
+15:04 exposure. Press U on our keyboard. Make
+15:07 
+
+15:07 sure that this is at the start of the
+15:09 
+
+15:09 click. [music] And then let's make it so
+15:12 
+
+15:12 it goes really dark. And then it goes
+15:15 
+
+15:15 light again. So now it should click and
+15:19 
+
+15:19 be really realistic as you can see. And
+15:21 
+
+15:21 we can of course also select all of
+15:23 
+
+15:23 these key frames. And if you hold alt,
+15:25 
+
+15:25 you can even drag these key frames out a
+15:27 
+
+15:27 bit so it all goes a bit slower. Great.
+15:29 
+
+15:29 Now let's go to the next scene. I'm
+15:31 
+
+15:31 super excited. And for this next scene,
+15:32 
+
+15:32 we're going to of course use a cool
+15:34 
+
+15:34 transition. And what you see a lot is
+15:35 
+
+15:35 match cut where basically emotion that
+15:37 
+
+15:37 happens in this first scene will
+15:39 
+
+15:39 transfer to the next scene. And in this
+15:41 
+
+15:41 case, I'm going to do that, too. I'm
+15:42 
+
+15:42 going to make sure that everything in
+15:44 
+
+15:44 this scene moves to the left and then
+15:46 
+
+15:46 the next scene cuts really hard and
+15:48 
+
+15:48 comes from the right. So, let's start
+15:50 
+
+15:50 out with the transition first. I'm going
+15:51 
+
+15:51 to just use our null that we already
+15:54 
+
+15:54 have. Press P for position and set a key
+15:56 
+
+15:56 frame. Now, what I notice is that my
+15:58 
+
+15:58 cursor is not linked to the null. Let's
+16:01 
+
+16:01 do that first. So, make sure that every
+16:03 
+
+16:03 layer except your background, which I'm
+16:05 
+
+16:05 going to unlink, is linked to this null.
+16:08 
+
+16:08 And now I'm just going to go a bit
+16:09 
+
+16:09 further. Maybe something like half a
+16:11 
+
+16:11 second to a second. And I'm going to
+16:13 
+
+16:13 move everything to the left. Something
+16:16 
+
+16:16 like this. Now, of course, we want to
+16:18 
+
+16:18 easy ease these key frames. So, hit F9
+16:20 
+
+16:20 on your keyboard. Go into the graph
+16:22 
+
+16:22 editor and make a nice graph that is
+16:24 
+
+16:24 nice and pointy. Maybe something like
+16:26 
+
+16:26 this. And we can quickly preview it just
+16:28 
+
+16:28 to see what that looks like. That is
+16:30 
+
+16:30 nice. I want it to have a bit more
+16:33 
+
+16:33 movement. So, let's change it so it's
+16:35 
+
+16:35 more to the left. This is nice. And now
+16:37 
+
+16:37 I also want to create depth to it. So,
+16:39 
+
+16:39 I'm going to add 3D layers. In this
+16:41 
+
+16:41 case, I'm just going to make sure that
+16:43 
+
+16:43 the cursor is 3D. And I'm also going to
+16:45 
+
+16:45 make sure the null is 3D. Let's press P
+16:48 
+
+16:48 for position on the cursor. Make sure we
+16:51 
+
+16:51 click on position and make sure your
+16:54 
+
+16:54 playhead is on one of the key frames.
+16:56 
+
+16:56 What we can do now is we can move it
+16:58 
+
+16:58 more towards the camera. I would say
+16:60 
+
+16:60 maybe something like minus 2,000. And
+17:02 
+
+17:02 what will happen now also in the
+17:03 
+
+17:03 movement, you will see that there will
+17:05 
+
+17:05 be a bit more depth. the cursor will go
+17:07 
+
+17:07 quicker than the rest. That's exactly
+17:09 
+
+17:09 what I want. Now, as you can see, the
+17:11 
+
+17:11 cursor did become a bit too big and also
+17:13 
+
+17:13 the location is not perfect anymore. So,
+17:15 
+
+17:15 let's move the location first and then
+17:17 
+
+17:17 press S for scale. What I want to make
+17:19 
+
+17:19 sure is to select the scale and scale it
+17:23 
+
+17:23 down. Something like this. That is very
+17:25 
+
+17:25 nice. So, it goes like this. It moves
+17:27 
+
+17:27 all the layers to the left. Perfect.
+17:29 
+
+17:29 Now, the trick is to cut it all off
+17:31 
+
+17:31 right on the moment where it goes the
+17:33 
+
+17:33 quickest. So if you look to our graph
+17:35 
+
+17:35 editor when we clicked on our nulls
+17:38 
+
+17:38 position basically I want to cut
+17:40 
+
+17:40 everything off right at the peak. So if
+17:43 
+
+17:43 you go out of the graph editor I can
+17:44 
+
+17:44 select all of my layers excluding the
+17:46 
+
+17:46 background. So hold shift hit alt right
+17:49 
+
+17:49 bracket and then here we want to have
+17:52 
+
+17:52 our next scene. Now for the next scene
+17:54 
+
+17:54 we have feedback scattered across
+17:56 
+
+17:56 emails, WhatsApp, Slack and frame
+17:58 
+
+17:58 without a clear overview. Basically,
+17:59 
+
+17:59 what I want to do is I want to have all
+18:01 
+
+18:01 of these feedback windows floating
+18:03 
+
+18:03 around. And for this, I'm going to reuse
+18:05 
+
+18:05 this shape that we already created. Just
+18:07 
+
+18:07 saves a bit of time. So, let's find our
+18:09 
+
+18:09 original shape. Let's unlink this for
+18:11 
+
+18:11 now or unparent it. And then, let's move
+18:14 
+
+18:14 this to the right. And let's move this
+18:18 
+
+18:18 on top of everything. Now, I'm also
+18:19 
+
+18:19 going to do the same with the text. Uh,
+18:22 
+
+18:22 command D to duplicate this and unlink
+18:25 
+
+18:25 it. Let's go to here. Make sure it's
+18:28 
+
+18:28 active and drag this above. I'm not
+18:30 
+
+18:30 going to link it yet to our null. We can
+18:32 
+
+18:32 do this later. But for now, I have the
+18:34 
+
+18:34 text. Let's make sure that this is
+18:36 
+
+18:36 animated at the right time. That works.
+18:38 
+
+18:38 I just, of course, need to change the
+18:40 
+
+18:40 positioning and stuff like that. So, for
+18:42 
+
+18:42 example, what I'm going to do is I'm
+18:44 
+
+18:44 going to type here uh Gmail. I'm going
+18:46 
+
+18:46 to change this text into a paragraph by
+18:49 
+
+18:49 going to the text tool and then right
+18:51 
+
+18:51 clicking convert to paragraph text. I
+18:54 
+
+18:54 also have some feedback here. This is
+18:55 
+
+18:55 fake feedback that I generated using Jet
+18:58 
+
+18:58 GPT. Maybe something like this. Can now
+18:60 
+
+18:60 move this over nicely. Maybe move this
+19:02 
+
+19:02 around here. Let's import some icons
+19:04 
+
+19:04 that I downloaded. They're not all
+19:06 
+
+19:06 perfect, but that's fine. Start out with
+19:08 
+
+19:08 Gmail. So, press S for scale. Way too
+19:11 
+
+19:11 big. And I'm going to make this nice and
+19:14 
+
+19:14 small to make it nice and luxurious.
+19:16 
+
+19:16 Maybe something like this. This works.
+19:18 
+
+19:18 Nice first feedback message. I'm going
+19:20 
+
+19:20 to, of course, make sure that this is a
+19:22 
+
+19:22 bit more thin by clicking on the shape
+19:25 
+
+19:25 and changing the size here. Now, I also
+19:28 
+
+19:28 want to move it a bit so it's nicely
+19:30 
+
+19:30 aligned. There we go. And to make this
+19:32 
+
+19:32 even nicer, we can also add a bit of a
+19:35 
+
+19:35 feathering to this by going to the
+19:38 
+
+19:38 rectangle tool, selecting the text, and
+19:40 
+
+19:40 then just dragging a rectangle,
+19:42 
+
+19:42 something like this, pressing F for
+19:44 
+
+19:44 feather, and then feathering it by quite
+19:47 
+
+19:47 a lot. make it look a bit more luxurious
+19:51 
+
+19:51 and it also makes it look like there's
+19:53 
+
+19:53 more text at the bottom. Maybe a bit too
+19:55 
+
+19:55 much feedback, but I think it also works
+19:57 
+
+19:57 fine. Now, we don't even need much
+19:58 
+
+19:58 animation because the text is already
+20:00 
+
+20:00 animated. I do want to, however, uh make
+20:03 
+
+20:03 the logo appear nicely. So, what I'm
+20:07 
+
+20:07 going to do is I'm going to cut this
+20:08 
+
+20:08 off. I'm going to press P for position,
+20:11 
+
+20:11 set a key frame, and then T for
+20:14 
+
+20:14 transparency. Set a key frame. Press U.
+20:16 
+
+20:16 Drag these out. And why I do this just
+20:18 
+
+20:18 to make sure that it's matching the text
+20:21 
+
+20:21 a bit. I can also of course like make it
+20:23 
+
+20:23 bounce, scale up, things like that. But
+20:25 
+
+20:25 it sometimes doesn't have to be that
+20:27 
+
+20:27 crazy. We can just keep it minimalistic.
+20:29 
+
+20:29 And that's also the nice thing about
+20:30 
+
+20:30 these software as a service product
+20:33 
+
+20:33 videos is that a lot of them, they are
+20:34 
+
+20:34 nice and minimalistic anyway. So having
+20:37 
+
+20:37 it like this can just work really well.
+20:39 
+
+20:39 Cool. And now that we made our first
+20:41 
+
+20:41 one, we have three more to go. In terms
+20:43 
+
+20:43 of placement, what I'm going to do is
+20:44 
+
+20:44 I'm going to just make sure that all of
+20:46 
+
+20:46 these layers are nicely cut off. So, I'm
+20:48 
+
+20:48 going to select them and I'm going to
+20:49 
+
+20:49 cut them off and I'm going to make them
+20:51 
+
+20:51 3D. And now we have our animation as you
+20:54 
+
+20:54 can see. What I'm going to do now is I'm
+20:56 
+
+20:56 going to link the text and the Gmail
+20:58 
+
+20:58 logo. Let's move this down so it's all
+20:60 
+
+21:00 together. Let's select them all and link
+21:02 
+
+21:02 it to the shape. And because they're all
+21:04 
+
+21:04 3D now, we can just move the shape in 3D
+21:07 
+
+21:07 space. Let's move the Gmail logo below
+21:09 
+
+21:09 the null object just to make sure that
+21:12 
+
+21:12 these are all nice together. So we have
+21:14 
+
+21:14 the Gmail logo text and we have the
+21:16 
+
+21:16 Gmail and then we have the shape layer.
+21:18 
+
+21:18 I want to basically link this all to the
+21:20 
+
+21:20 shape layer and because the shape layer
+21:22 
+
+21:22 is 3D and the rest is also 3D. We can
+21:25 
+
+21:25 now move it more towards the camera and
+21:27 
+
+21:27 this is important later on. Now I can
+21:30 
+
+21:30 move this a bit to the left for example.
+21:32 
+
+21:32 Move this maybe a bit up and we can even
+21:34 
+
+21:34 scale it down if it's too big. So,
+21:36 
+
+21:36 pressing S for scale, we can also scale
+21:38 
+
+21:38 that down. Cool. Now that we made our
+21:40 
+
+21:40 first one, I'm going to go to the next
+21:42 
+
+21:42 one. And this is really simple. We can
+21:43 
+
+21:43 just select all of these layers, hit
+21:45 
+
+21:45 command D, R, control D on Windows, and
+21:48 
+
+21:48 then move this above it. We can select
+21:51 
+
+21:51 the shape layer, move this maybe towards
+21:53 
+
+21:53 the right, move this down a bit, maybe
+21:56 
+
+21:56 press P for position, and then move it a
+21:58 
+
+21:58 bit more to the back. Then go to the
+21:60 
+
+21:60 text tool and we can change the Gmail to
+22:02 
+
+22:02 Slack. Then we just need the Slack icon.
+22:05 
+
+22:05 make the 3D, turn it on, and it's way
+22:08 
+
+22:08 too big. Now, a trick to get it to the
+22:09 
+
+22:09 same spot. We can just go to the Gmail
+22:12 
+
+22:12 logo, open this, and copy the transform.
+22:16 
+
+22:16 So, I'm just going to copy that. Going
+22:18 
+
+22:18 to go to the start. And before we paste
+22:20 
+
+22:20 it, uh, just make sure that this is also
+22:22 
+
+22:22 linked to that shape layer, and then
+22:24 
+
+22:24 paste it. And as you can see, it will be
+22:26 
+
+22:26 on the exact same location. Maybe it's
+22:30 
+
+22:30 not big enough. Let's see. Actually,
+22:32 
+
+22:32 this is perfect. If it is not big enough
+22:34 
+
+22:34 because you have a different icon,
+22:35 
+
+22:35 that's totally fine. Then we have to go
+22:37 
+
+22:37 into S for scale and scale it up a bit.
+22:39 
+
+22:39 In this case, I can just delete the
+22:40 
+
+22:40 Gmail logo. And there we go. We have
+22:42 
+
+22:42 slack. The only thing I now want to do
+22:44 
+
+22:44 is replace this feedback. I have another
+22:46 
+
+22:46 feedback line. So I can just copy over
+22:49 
+
+22:49 this feedback. Let's paste that in
+22:51 
+
+22:51 there. There we go. Now I am also going
+22:53 
+
+22:53 to change the shape so it's a bit more
+22:56 
+
+22:56 thin. Maybe something like this. Just so
+22:58 
+
+22:58 it fits the scene a bit. Let's move the
+23:00 
+
+23:00 slack also so it's nicely tucked
+23:04 
+
+23:04 together. Select all of these and I'm
+23:05 
+
+23:05 going to move this down a bit so it's
+23:07 
+
+23:07 nicely centered in that shape. Look at
+23:10 
+
+23:10 the padding. Two more to go. So again,
+23:12 
+
+23:12 I'm going to use the select one now. So
+23:14 
+
+23:14 let's select those. Command D. Drag it
+23:17 
+
+23:17 up. Bloop. Get the shape layer. Press P
+23:19 
+
+23:19 for position. Let's move this a bit.
+23:21 
+
+23:21 Maybe down here. Maybe a bit more
+23:23 
+
+23:23 towards the camera. This one is going to
+23:25 
+
+23:25 be WhatsApp. Let's get the WhatsApp
+23:28 
+
+23:28 logo. There we go. And same thing that
+23:29 
+
+23:29 we did before, we can just drag this
+23:31 
+
+23:31 down so it's nicely tucked together,
+23:33 
+
+23:33 make it 3D, link it to the shape, and
+23:37 
+
+23:37 then copy the transform. This is a bit
+23:39 
+
+23:39 the same as the Slack logo. And let's
+23:41 
+
+23:41 paste in some more fake feedback. There
+23:43 
+
+23:43 we go. Nice. One more to go. Uh, again,
+23:46 
+
+23:46 command D. You know the drill. Now, as
+23:48 
+
+23:48 you can see, it's quite boring. And
+23:49 
+
+23:49 that's because we still need to add the
+23:51 
+
+23:51 animation. And the cool thing is is that
+23:53 
+
+23:53 we created that null, right? And we have
+23:54 
+
+23:54 a transition on this already. So, what
+23:57 
+
+23:57 we can do now is we can select all of
+23:59 
+
+23:59 the shape layers. So, shape 1 2 3 4.
+24:03 
+
+24:03 We've selected them all. We're going to
+24:05 
+
+24:05 link them to the null while making sure
+24:07 
+
+24:07 that we're a bit further in the
+24:09 
+
+24:09 timeline. You just need to make sure
+24:10 
+
+24:10 that you're behind this key frame. And
+24:12 
+
+24:12 then once we go back to the front, you
+24:15 
+
+24:15 will see that they will all move with
+24:18 
+
+24:18 the motion. So, if we play this
+24:19 
+
+24:19 transition, as you can see, we have this
+24:21 
+
+24:21 really nice match cut. Now, what is
+24:23 
+
+24:23 missing is continuous motion. This is a
+24:25 
+
+24:25 mistake that a lot of editors make. It
+24:27 
+
+24:27 just makes it really boring. We're just
+24:29 
+
+24:29 looking at a static frame. Nothing is
+24:30 
+
+24:30 happening here. And to do so, what I'm
+24:32 
+
+24:32 going to do is I'm going to go to layer,
+24:34 
+
+24:34 new null object. I'm going to link the
+24:36 
+
+24:36 current null to this other null. And we
+24:39 
+
+24:39 can also make the 3D. It doesn't have to
+24:41 
+
+24:41 be, but we can now press P for position.
+24:44 
+
+24:44 Set a key frame. Drag this to the center
+24:46 
+
+24:46 of this other transition. Go a bit
+24:49 
+
+24:49 further and then move it. And basically
+24:51 
+
+24:51 what this will do, it will make sure
+24:53 
+
+24:53 that even after this transition has
+24:55 
+
+24:55 happened, we will still have some
+24:57 
+
+24:57 movement in our image. I'm even going to
+24:59 
+
+24:59 adjust our transition a bit so it's more
+25:02 
+
+25:02 dragged out like this. The only thing we
+25:04 
+
+25:04 need to make sure is that that peak is
+25:06 
+
+25:06 still at this center point. So let's go
+25:08 
+
+25:08 into the graph editor and let's make
+25:10 
+
+25:10 sure that peak is indeed in the center.
+25:12 
+
+25:12 There we go. Now I'm not sure about the
+25:14 
+
+25:14 placement. I'm going to make sure that
+25:16 
+
+25:16 this Gmail is set a bit more to the
+25:18 
+
+25:18 right so it it doesn't fall out of the
+25:21 
+
+25:21 screen yet and maybe this slack a bit
+25:23 
+
+25:23 more to the top. Now I'm also going to
+25:25 
+
+25:25 offset everything a bit because now
+25:26 
+
+25:26 everything comes in the screen at the
+25:28 
+
+25:28 same time and that always is a bit
+25:30 
+
+25:30 boring. So to do so I'm just going to
+25:32 
+
+25:32 select a few layers. For example, I'm
+25:34 
+
+25:34 going to select the frame one which is
+25:36 
+
+25:36 this image and this text. Let's move
+25:38 
+
+25:38 this a bit so this comes in a bit later.
+25:41 
+
+25:41 Same thing with WhatsApp. Just like
+25:42 
+
+25:42 that. again, just so there's a bit of
+25:44 
+
+25:44 visual variety in there. Now, let's go
+25:46 
+
+25:46 to the last scene, and that is scene
+25:48 
+
+25:48 three. And as you can see, edit from
+25:50 
+
+25:50 solves this by bringing everything into
+25:52 
+
+25:52 one place. Project feedback files and
+25:54 
+
+25:54 communication design specifically for
+25:57 
+
+25:57 working with video editors. I want to
+25:58 
+
+25:58 basically have maybe a circle or maybe
+26:01 
+
+26:01 an element in the center with all of
+26:03 
+
+26:03 these points. So, projects, feedback,
+26:05 
+
+26:05 files, communication, have that linked
+26:07 
+
+26:07 to it. But before we do, I want of
+26:10 
+
+26:10 course another transition. Now, I'm
+26:11 
+
+26:11 going to already set up the next
+26:13 
+
+26:13 transition, and that is a skill
+26:14 
+
+26:14 transition. I want to basically zoom
+26:16 
+
+26:16 through this. And to do so, I'm going to
+26:17 
+
+26:17 create another null. Let's go to layer,
+26:20 
+
+26:20 new, null object. Link this null 2 to
+26:22 
+
+26:22 null 3. Make a 3D. And we're going to
+26:25 
+
+26:25 press P for position. Set a key frame.
+26:27 
+
+26:27 And let's go a bit further. Uh, also
+26:29 
+
+26:29 make sure that all of these layers are
+26:31 
+
+26:31 not cut off. Alt right bracket. There we
+26:33 
+
+26:33 go. And I'm going to zoom through it.
+26:35 
+
+26:35 And the cool thing is because these are
+26:37 
+
+26:37 3D already, there will be some motion.
+26:40 
+
+26:40 And because we created a new null, we
+26:42 
+
+26:42 can even start this motion a bit
+26:43 
+
+26:43 earlier. So maybe move this key frame to
+26:46 
+
+26:46 around here. And of course, like always,
+26:48 
+
+26:48 hit F9 on your keyboard. Make sure there
+26:51 
+
+26:51 is a nice graph to this. Nice and
+26:53 
+
+26:53 smooth. And again, right at the peak,
+26:56 
+
+26:56 I'm going to select all of the layers
+26:58 
+
+26:58 that we don't want anymore, which is our
+27:00 
+
+27:00 which are these. So let's cut them off.
+27:03 
+
+27:03 I don't want to see them anymore. And
+27:05 
+
+27:05 actually, what I also want to do is I
+27:06 
+
+27:06 want to change the background. So in
+27:08 
+
+27:08 this case, we have a nice light
+27:10 
+
+27:10 background. I want to change it to a bit
+27:12 
+
+27:12 of a darker scene. So I also want to cut
+27:14 
+
+27:14 this off. However, there's a trick for
+27:16 
+
+27:16 this. Basically, I want to go to the
+27:18 
+
+27:18 peak again. As you can see, all of these
+27:20 
+
+27:20 layers are cut off. I'm going to hit
+27:21 
+
+27:21 command shift D, control shift D on
+27:23 
+
+27:23 Windows. So this will become a different
+27:26 
+
+27:26 layer. Now we can go into the effect
+27:27 
+
+27:27 controls and change the colors to
+27:30 
+
+27:30 something dark. Maybe like this. And
+27:32 
+
+27:32 let's use the eyropper tool on the other
+27:36 
+
+27:36 ones. There we go. So, we have this
+27:38 
+
+27:38 really nice elegant background. So, once
+27:40 
+
+27:40 it zooms in, we have this next
+27:42 
+
+27:42 background. Now, I actually generated
+27:44 
+
+27:44 this fake logo that I want to use. Now,
+27:46 
+
+27:46 I might want to include this icon, too.
+27:49 
+
+27:49 But for now, I just want to have a text
+27:51 
+
+27:51 animation. So, let's just use the text
+27:54 
+
+27:54 tool. I'm going to type here edit from.
+27:56 
+
+27:56 Let's turn off the image for now. Let's
+27:58 
+
+27:58 make this a bit bigger. And let's select
+28:01 
+
+28:01 the from. And I want to change this fill
+28:03 
+
+28:03 to black. Press okay. and then right
+28:05 
+
+28:05 click on the text layer styles gradient
+28:08 
+
+28:08 overlay. Change the blending mode to
+28:10 
+
+28:10 screen. So now the gradient will just be
+28:12 
+
+28:12 applied to the black text and let's
+28:14 
+
+28:14 click on edit gradient and I'm going to
+28:16 
+
+28:16 change this to a nice light blue that we
+28:19 
+
+28:19 had to maybe something like this. That
+28:22 
+
+28:22 already looks really clean. I really
+28:24 
+
+28:24 like that. Now what I do want to of
+28:26 
+
+28:26 course make sure that it's aligned in
+28:28 
+
+28:28 the center. So let's align that nicely.
+28:31 
+
+28:31 And for the animation I'm going to use a
+28:33 
+
+28:33 cool technique. Hit animate and then
+28:35 
+
+28:35 position and then again on animate
+28:38 
+
+28:38 enable per character 3D. So we can
+28:40 
+
+28:40 change the 3D position of this. And this
+28:43 
+
+28:43 will all make sense in a bit. We can go
+28:44 
+
+28:44 now into the position and move that a
+28:46 
+
+28:46 bit towards the back. Maybe something
+28:48 
+
+28:48 like 1700. Then I'm going to add
+28:51 
+
+28:51 property opacity. Set this to zero. And
+28:54 
+
+28:54 then we're going to do the same thing
+28:56 
+
+28:56 that we did before. We're going to go
+28:57 
+
+28:57 into the range selector. I'm going to go
+28:59 
+
+28:59 into advanced and I'm going to change
+29:01 
+
+29:01 the shape to ramp up ease low 100%. And
+29:05 
+
+29:05 then I'm going to animate the offset. So
+29:07 
+
+29:07 let's set a key frame for the offset
+29:09 
+
+29:09 minus 100 to 100%. Now let's close the
+29:13 
+
+29:13 text. And let's of course make sure that
+29:14 
+
+29:14 this is nicely aligned. So basically
+29:16 
+
+29:16 once this starts, we want to also have
+29:18 
+
+29:18 this start. This looks nice. Now I want
+29:21 
+
+29:21 a circle around this. And let's go to
+29:23 
+
+29:23 the ellipse tool. Let's change the fill
+29:25 
+
+29:25 to a radial gradient. Okay. Go into the
+29:29 
+
+29:29 radial gradient and I'm going to make it
+29:32 
+
+29:32 so it goes from really dark something
+29:34 
+
+29:34 like this to maybe bit more light bluish
+29:38 
+
+29:38 or really dark bluish. We can always
+29:40 
+
+29:40 adjust this later on. Press okay. And
+29:42 
+
+29:42 then lastly I'm going to add a stroke to
+29:44 
+
+29:44 this. So click on the stroke and let's
+29:47 
+
+29:47 see if we can use this same bluish
+29:49 
+
+29:49 color. Maybe it's a bit too bright but
+29:52 
+
+29:52 we can adjust it later on. And then
+29:53 
+
+29:53 let's drag our ellipse. Hold shift to
+29:56 
+
+29:56 make sure that it's nice and round.
+29:58 
+
+29:58 There we go. Press V for the gradient.
+30:02 
+
+30:02 And then I want to adjust that a bit to
+30:04 
+
+30:04 be something like this. And as you can
+30:05 
+
+30:05 see, we already have a nice cool
+30:07 
+
+30:07 ellipse. I want to make sure that this
+30:09 
+
+30:09 is below our text. And of course, I want
+30:11 
+
+30:11 to also make sure that this is aligned
+30:13 
+
+30:13 in the center. Now, we can even make
+30:14 
+
+30:14 this a bit more transparent just so it
+30:16 
+
+30:16 blends a bit better in the background.
+30:18 
+
+30:18 And now we have four keywords, right?
+30:20 
+
+30:20 Project, feedback, files, and
+30:22 
+
+30:22 communication. I'm just going to keep it
+30:24 
+
+30:24 minimal. I'm just going to add some
+30:25 
+
+30:25 circles to this. So, let's go to the
+30:27 
+
+30:27 ellipse tool and let's turn the stroke
+30:30 
+
+30:30 off. So, I'm going to turn that to none.
+30:32 
+
+30:32 And for the fill, we can also keep it a
+30:35 
+
+30:35 radial gradient, but I want to change it
+30:38 
+
+30:38 to linear. It's just a bit easier to
+30:40 
+
+30:40 work with. And let's make some nice blue
+30:42 
+
+30:42 balls. I'm going to make it so it's
+30:45 
+
+30:45 they're a bit more light. Maybe
+30:47 
+
+30:47 something like this. And the trick here
+30:49 
+
+30:49 is also to go to brightness. B for
+30:52 
+
+30:52 brightness. And then we can increase the
+30:54 
+
+30:54 brightness. And we can go to S for
+30:57 
+
+30:57 saturation and decrease the saturation a
+30:59 
+
+30:59 bit. There we go. Press okay. Let's just
+31:01 
+
+31:01 make one just to see what this will look
+31:03 
+
+31:03 like. Hold shift. I don't want my blue
+31:05 
+
+31:05 balls to be too big. Uh something like
+31:07 
+
+31:07 this. So let's go into the selection
+31:09 
+
+31:09 tool. Change this gradient. And I want
+31:11 
+
+31:11 it nice and light cuz it looks nice and
+31:13 
+
+31:13 fresh. Cool. Let's move this. And if you
+31:16 
+
+31:16 hold command, it will snap into place,
+31:18 
+
+31:18 which is really nice. That's what we
+31:20 
+
+31:20 want. Now, once you align this
+31:21 
+
+31:21 perfectly, I'm going to show you a nice
+31:22 
+
+31:22 trick. Basically, what I'm going to do
+31:24 
+
+31:24 is I'm going to duplicate the shape
+31:25 
+
+31:25 layer uh three more times. So, one, two,
+31:28 
+
+31:28 three. So, we have four balls. And we're
+31:31 
+
+31:31 going to link the first one to our
+31:33 
+
+31:33 ellipse that we made, which is this
+31:35 
+
+31:35 background orb. We're going to press R
+31:37 
+
+31:37 for rotation. And I'm going to set this
+31:38 
+
+31:38 to 90°. That's one. And then link the
+31:42 
+
+31:42 next one. Set this to 180°. There we go.
+31:45 
+
+31:45 Link the next one. Set it to 270. And
+31:48 
+
+31:48 link the next one. There we go. So now
+31:50 
+
+31:50 they're perfectly aligned, which is
+31:52 
+
+31:52 really nice. Now what we can do, we can
+31:54 
+
+31:54 already link this shape now to the null
+31:56 
+
+31:56 that we created before. And I'm just
+31:58 
+
+31:58 going to link it to the null one, which
+31:60 
+
+31:60 is the easiest. And as you can see, it
+32:02 
+
+32:02 will now move with it. I want to, of
+32:04 
+
+32:04 course, like before, cut this off. So
+32:07 
+
+32:07 select all of the layers in the new
+32:09 
+
+32:09 scene, hit alt left bracket to cut it
+32:12 
+
+32:12 off. So now we have a really cool match
+32:14 
+
+32:14 cut, as you can see. However, what I
+32:16 
+
+32:16 don't like is the edit from the
+32:17 
+
+32:17 animation goes way too quick. I want to
+32:20 
+
+32:20 change this so it goes a bit slower.
+32:23 
+
+32:23 That will make it a bit more elegant. I
+32:25 
+
+32:25 want to make the shape or the ellipse
+32:28 
+
+32:28 smaller. Something like this. And then,
+32:30 
+
+32:30 of course, we can make it rotate on the
+32:32 
+
+32:32 Z axis. So, let's also do that. Maybe
+32:35 
+
+32:35 set this to something like 212 to 270.
+32:40 
+
+32:40 Let's ease this nicely. go to the graph
+32:43 
+
+32:43 editor and let's drag this something
+32:44 
+
+32:44 like this. I'm even going to start this
+32:46 
+
+32:46 rotation already a bit earlier. So, it's
+32:48 
+
+32:48 already rotating. As you can see, you
+32:50 
+
+32:50 have this really nice match cut. And
+32:52 
+
+32:52 then once the animation is stationary,
+32:54 
+
+32:54 as you can see, there's no movement
+32:56 
+
+32:56 anymore. I'm going to add one more
+32:58 
+
+32:58 transition. And since everything is
+32:59 
+
+32:59 linked to this last null anyway, we can
+33:01 
+
+33:01 just use this null for that. I'm going
+33:03 
+
+33:03 to set a key frame for the position and
+33:05 
+
+33:05 a key frame for the scale. I'm going to
+33:06 
+
+33:06 go one frame further and I'm gonna press
+33:09 
+
+33:09 S for scale. Again, going to scale it up
+33:11 
+
+33:11 by a lot. Let's move this. Now, your
+33:13 
+
+33:13 text might be acting weird. That is
+33:15 
+
+33:15 because we're using that enable per
+33:17 
+
+33:17 character 3D. Now, to fix this, we can
+33:19 
+
+33:19 just go into the text, press P for
+33:21 
+
+33:21 position, and just make sure that it's
+33:24 
+
+33:24 moved more towards the camera. So, in
+33:26 
+
+33:26 this case, I'm just going to set the P
+33:27 
+
+33:27 from position on the text to zero. And
+33:30 
+
+33:30 then I'm going to press S for scale. I'm
+33:32 
+
+33:32 going to scale it down a bit. Uh,
+33:35 
+
+33:35 something like this. Nice and small.
+33:37 
+
+33:37 Let's center this a bit. So, as you can
+33:39 
+
+33:39 see, we now have that null movement. And
+33:41 
+
+33:41 now it's perfect. What I also want to do
+33:43 
+
+33:43 is press U on our keyboard, select these
+33:45 
+
+33:45 first two key frames, right click,
+33:48 
+
+33:48 toggle hold key frame, and that is
+33:50 
+
+33:50 important if we're going to add motion
+33:51 
+
+33:51 blur later on, which I do also want to
+33:53 
+
+33:53 add to all of our layers. And once it's
+33:55 
+
+33:55 here, I want it to have continuous
+33:58 
+
+33:58 movement. So, I'm going to go a bit
+33:59 
+
+33:59 further and I'm going to move it from
+34:02 
+
+34:02 left to right. Something like this.
+34:03 
+
+34:03 Let's also make sure it's a bit higher.
+34:05 
+
+34:05 Copy this over. Go a bit later. paste
+34:08 
+
+34:08 this. Let's move it even further. So,
+34:10 
+
+34:10 there's just a a nice smooth motion. We
+34:13 
+
+34:13 can even turn this in a normal key
+34:15 
+
+34:15 frame. So, right click, key frame
+34:17 
+
+34:17 interpolation, and let's change this
+34:19 
+
+34:19 back to linear. So, it's a linear key
+34:22 
+
+34:22 frame. So, we have a nice slow movement.
+34:25 
+
+34:25 Same with this one. Key frame
+34:27 
+
+34:27 interpolation, linear. So, if you play
+34:29 
+
+34:29 this now, we'll have this really smooth
+34:32 
+
+34:32 motion. Now, I'm going to add the text.
+34:35 
+
+34:35 But before I do, I also want to make
+34:37 
+
+34:37 sure that the rotation of the shape
+34:40 
+
+34:40 doesn't end that soon. I still wanted to
+34:42 
+
+34:42 animate a bit while we're here. So,
+34:45 
+
+34:45 let's drag this out. So, really that
+34:47 
+
+34:47 last animation happens here. There we
+34:50 
+
+34:50 go. And then it's really simple. I'm
+34:51 
+
+34:51 just going to add a text. We can even
+34:53 
+
+34:53 duplicate this text that we already have
+34:55 
+
+34:55 here. So, duplicate that. Move that to
+34:58 
+
+34:58 the right. And we can change this to
+35:00 
+
+35:00 projects. Now, this is way too thick and
+35:02 
+
+35:02 way too big. So, let's select this. Make
+35:04 
+
+35:04 this a bit smaller in terms of font
+35:06 
+
+35:06 size. Let's move this. Make sure it's
+35:08 
+
+35:08 aligned nicely somewhere around here.
+35:11 
+
+35:11 And then in terms of animation, let's go
+35:13 
+
+35:13 into the text. Open the text. And I can
+35:16 
+
+35:16 just use the same animator. However, I
+35:18 
+
+35:18 do want to change the position. Now,
+35:20 
+
+35:20 it's using 3D depth. I think that's a
+35:22 
+
+35:22 bit too much. Let's set this to zero.
+35:24 
+
+35:24 And let's make sure it comes from the
+35:26 
+
+35:26 top. And let's make sure the alignment
+35:28 
+
+35:28 is so it starts here. So, we have this
+35:30 
+
+35:30 nice text. Just like that. It's like
+35:33 
+
+35:33 project. I think it looks really clean.
+35:35 
+
+35:35 It also aligns with this motion of this
+35:37 
+
+35:37 rotation. I'm just going to do this
+35:39 
+
+35:39 again for the other three. And to do so,
+35:41 
+
+35:41 I'll show you another trick. So, what we
+35:43 
+
+35:43 can do now, we can link this to the
+35:45 
+
+35:45 shape layer. And that is, of course, the
+35:46 
+
+35:46 circle that we've been animating. If you
+35:48 
+
+35:48 now set a key frame for that Z rotation,
+35:51 
+
+35:51 we go a bit further and and we set this
+35:54 
+
+35:54 to zero, it will go to the next circle
+35:57 
+
+35:57 as you can see and we set this to one
+35:59 
+
+35:59 rotation and then 0° it will animate to
+36:03 
+
+36:03 the next circle and it will look a bit
+36:05 
+
+36:05 lame because the projects will move with
+36:07 
+
+36:07 it and I think that looks a bit stupid.
+36:10 
+
+36:10 But we can work with this. We just need
+36:11 
+
+36:11 to drag this key frame out. Go into the
+36:14 
+
+36:14 graph editor. Make sure this is nice and
+36:16 
+
+36:16 smooth so it eases in and eases out. So
+36:19 
+
+36:19 let's just drag this out. And then what
+36:21 
+
+36:21 I'm going to do is I'm gonna just fade
+36:22 
+
+36:22 out the project. So let's press T for
+36:26 
+
+36:26 transparency. Set a key frame and just
+36:28 
+
+36:28 fade it out once it goes down. And once
+36:30 
+
+36:30 we enable motion blur with this, it will
+36:33 
+
+36:33 also look way nicer. So it just looks
+36:35 
+
+36:35 like this. And then we go to the next
+36:37 
+
+36:37 one. And to get the next one, it's
+36:39 
+
+36:39 really simple. We just go back here
+36:41 
+
+36:41 where we can still see our text. We
+36:43 
+
+36:43 duplicate the project for now. We're
+36:45 
+
+36:45 going to unlink it. So, let's set this
+36:48 
+
+36:48 to none. We can go a bit further till
+36:51 
+
+36:51 it's right here. And then I'm going to
+36:53 
+
+36:53 link it again. And I'm also going to
+36:55 
+
+36:55 drag it out so it aligns nicer with the
+36:58 
+
+36:58 animation. So, now we have our next
+36:60 
+
+36:60 text. I'm going to make sure it's starts
+37:02 
+
+37:02 a bit later. Might have to move it a bit
+37:04 
+
+37:04 to the left. So, we have the first one.
+37:06 
+
+37:06 Second one. And we can put the text
+37:08 
+
+37:08 here. Feedback. Maybe have to align it a
+37:11 
+
+37:11 bit different. and so forth so forth and
+37:13 
+
+37:13 let's do this with the others too. Now,
+37:15 
+
+37:15 one more thing. I'm going to select
+37:16 
+
+37:16 everything and enable motion blur. And
+37:18 
+
+37:18 then you get something like this. Again,
+37:19 
+
+37:19 if you want the full deep dive, the
+37:20 
+
+37:20 project fell, learn more about
+37:22 
+
+37:22 minimalistic SAS product videos and the
+37:24 
+
+37:24 whole ideation process, then do join the
+37:27 
+
+37:27 full stack editor club. Link is in the
+37:29 
+
+37:29 description. People in the club have
+37:30 
+
+37:30 been getting amazing results. Do also
+37:32 
+
+37:32 drop a comment what you want to see
+37:33 
+
+37:33 next. Don't forget to subscribe and then
+37:35 
+
+37:35 I'll see you in the next one. Bye-bye.

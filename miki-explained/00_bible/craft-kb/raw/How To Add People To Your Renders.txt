@@ -1,0 +1,442 @@
+00:00 right so one of the most common
+00:02 
+
+00:02 questions that I've ever gotten actually
+00:03 
+
+00:03 is how do you add people to your renders
+00:06 
+
+00:06 so I don't know why I haven't done a
+00:07 
+
+00:07 video on this yet but here's how you do
+00:08 
+
+00:08 this here's an example of what I'm going
+00:11 
+
+00:11 to show you so here is a render I just
+00:13 
+
+00:13 finished there's a bunch of people in
+00:14 
+
+00:14 here I'll just show you like what I did
+00:16 
+
+00:16 to get this so there's two main ways of
+00:18 
+
+00:18 doing this that I use the first one is
+00:21 
+
+00:21 just get models and I'll show you where
+00:22 
+
+00:22 to get that in a second and then the
+00:23 
+
+00:23 second one is use my favorite technique
+00:26 
+
+00:26 slapping a picture of a person onto an
+00:28 
+
+00:28 image plane or a picture of whatever
+00:29 
+
+00:29 onto an image plane to the result so
+00:32 
+
+00:32 let's just jump into the blend file and
+00:33 
+
+00:33 I'll kind of just show you what's going
+00:34 
+
+00:34 on here so here's the file it's a little
+00:37 
+
+00:37 bit messy but there's a lot of stuff
+00:39 
+
+00:39 outside the camera view that doesn't
+00:40 
+
+00:40 really matter so don't worry about that
+00:42 
+
+00:42 what I want to show you is uh this stuff
+00:45 
+
+00:45 down here so if we look at
+00:48 
+
+00:48 this these guys on the right uh not me
+00:52 
+
+00:52 look this is actually a picture of me in
+00:53 
+
+00:53 the middle uh ignore that one for now
+00:55 
+
+00:55 I'll get to that later but all all these
+00:57 
+
+00:57 guys around here are just models that
+00:59 
+
+00:59 I've bought from CG Trader so all you do
+01:03 
+
+01:03 is go to this site right here CG Trader
+01:05 
+
+01:05 or Turbo squid they're kind of the
+01:07 
+
+01:07 sameish thing so yeah you literally just
+01:10 
+
+01:10 type in the word people in the search
+01:12 
+
+01:12 bar and you'll see there's a bunch of
+01:13 
+
+01:13 stuff that comes up here some of them
+01:15 
+
+01:15 are like pretty expensive and then some
+01:16 
+
+01:16 are cheaper so you know I I always find
+01:20 
+
+01:20 that the ones that are uh static like
+01:22 
+
+01:22 don't that aren't uh or aren't rigged
+01:25 
+
+01:25 the ones that are just completely still
+01:27 
+
+01:27 and you can't really move them those
+01:28 
+
+01:28 ones are going to be a lot cheaper and
+01:29 
+
+01:29 that's just usually what what I like to
+01:31 
+
+01:31 use anyways cuz you don't have to pose
+01:32 
+
+01:32 them you can find stuff for pretty cheap
+01:34 
+
+01:34 here uh if you don't want to spend any
+01:35 
+
+01:35 money there are some free ones if you do
+01:37 
+
+01:37 use the free ones though you will start
+01:39 
+
+01:39 to notice that like a lot of people use
+01:41 
+
+01:41 those free ones and you'll kind of see
+01:42 
+
+01:42 them everywhere but uh they're fine to
+01:43 
+
+01:43 use if you find them and then what I've
+01:46 
+
+01:46 been doing recently is just buying packs
+01:48 
+
+01:48 of or I guess only bought one pack of
+01:50 
+
+01:50 just crowds of people so this just makes
+01:53 
+
+01:53 it a lot nicer to instantly drag and
+01:55 
+
+01:55 drop uh like let's see here drag and
+01:57 
+
+01:57 drop just a thing like this so if you
+01:59 
+
+01:59 want like this P comes with a bunch of
+02:01 
+
+02:01 regular standard models these ones are
+02:04 
+
+02:04 all low poly but you can get nicer ones
+02:06 
+
+02:06 or you just drag and drop one of these
+02:07 
+
+02:07 CBDs in you can see you just put that in
+02:09 
+
+02:09 and then boom instantly there's just a
+02:11 
+
+02:11 crowd of people so that's exactly what I
+02:13 
+
+02:13 did in here like with all these just
+02:16 
+
+02:16 pre-made crowds perfect for just really
+02:19 
+
+02:19 quickly filling up a city street or
+02:21 
+
+02:21 something like that this is the kind of
+02:22 
+
+02:22 thing where the the more you spend the
+02:24 
+
+02:24 better stuff you're going to get
+02:25 
+
+02:25 generally uh but like I said there are
+02:27 
+
+02:27 free ones if you don't want to spend any
+02:28 
+
+02:28 money I'm not I will leave a link to
+02:31 
+
+02:31 this one below I'm not like Affiliated
+02:32 
+
+02:32 or anything with these guys I'm just
+02:34 
+
+02:34 this is just the one that I happen to
+02:35 
+
+02:35 buy um yeah and then also I've just
+02:39 
+
+02:39 bought a bunch of individual models as
+02:41 
+
+02:41 well so like um a bit higher poy just
+02:43 
+
+02:43 more detail nicer just get whatever
+02:46 
+
+02:46 makes sense for you like most of the
+02:47 
+
+02:47 time you don't need anything extremely
+02:49 
+
+02:49 high detailed or super crazy but just
+02:51 
+
+02:51 something that's okay and least that's
+02:53 
+
+02:53 what this pack is it's perfect for that
+02:55 
+
+02:55 just low poly stuff okay so let me show
+02:57 
+
+02:57 you this thing in the middle here so uh
+02:60 
+
+02:60 uh that's this guy right here which is
+03:02 
+
+03:02 actually me so if I just go to render
+03:05 
+
+03:05 View and just show you what this is okay
+03:07 
+
+03:07 so this is literally just a picture of
+03:08 
+
+03:08 me that I just randomly took really
+03:10 
+
+03:10 quick and just slapped it on a plane so
+03:12 
+
+03:12 that's where this technique is really
+03:13 
+
+03:13 nice because you know you don't have to
+03:15 
+
+03:15 get a a photo scan of yourself or photo
+03:17 
+
+03:17 scan of like some random thing or buy a
+03:19 
+
+03:19 model or whatever just get any picture
+03:21 
+
+03:21 and just slap it onto a plane uh in
+03:24 
+
+03:24 Photoshop just remove the background
+03:25 
+
+03:25 there's I think there's a new button now
+03:27 
+
+03:27 where you just literally click like
+03:28 
+
+03:28 select subject and it just does it and
+03:30 
+
+03:30 then you can just delete the background
+03:32 
+
+03:32 prettyy easy um and then all you do is
+03:34 
+
+03:34 you take that if you've deleted the
+03:36 
+
+03:36 background and it's just transparent
+03:37 
+
+03:37 you'll have now the alpha Channel and
+03:40 
+
+03:40 then just take the alpha run that into
+03:41 
+
+03:41 the alpha of the principal jader and
+03:43 
+
+03:43 then that'll just cut out if this is a
+03:44 
+
+03:44 transparent background it'll just cut it
+03:46 
+
+03:46 out and then there you go and you just
+03:47 
+
+03:47 all you do is put it on a plane make it
+03:49 
+
+03:49 facing the camera this you know this one
+03:52 
+
+03:52 only works if the camera's kind of
+03:54 
+
+03:54 directly facing the person so uh
+03:57 
+
+03:57 obviously if you start like moving
+03:58 
+
+03:58 around it's not going to be uh like
+04:01 
+
+04:01 you're going to be able to tell that
+04:02 
+
+04:02 it's just a 2d plane so just don't have
+04:05 
+
+04:05 the camera at like a a weird angle or
+04:06 
+
+04:06 anything and you'll be fine as long as
+04:08 
+
+04:08 it's like facing head on it's it's
+04:10 
+
+04:10 totally good um yeah and then I so
+04:13 
+
+04:13 usually I try not to do this because
+04:16 
+
+04:16 it's uh it doesn't always match up with
+04:17 
+
+04:17 the camera but once in a while I do
+04:20 
+
+04:20 usually I'll just take a a model of like
+04:22 
+
+04:22 One Singular person like this and just
+04:24 
+
+04:24 drop that in and then have that there
+04:25 
+
+04:25 instead so uh yeah just go to CG Trader
+04:29 
+
+04:29 or Turbo squid or whatever other 3D site
+04:31 
+
+04:31 you want just download some cheapish
+04:33 
+
+04:33 models and then there you go just throw
+04:35 
+
+04:35 them in the AET browser and then any
+04:37 
+
+04:37 anytime you need a person you just go in
+04:39 
+
+04:39 here make a folder and then you're good
+04:41 
+
+04:41 to go and I don't think I need to say
+04:44 
+
+04:44 anything else I have a course available
+04:46 
+
+04:46 uh it comes with three asset packs you
+04:48 
+
+04:48 probably seen it if you want to check
+04:49 
+
+04:49 that out link below and that's it I
+04:51 
+
+04:51 think okay hopefully yeah hopefully that
+04:53 
+
+04:53 was useful and I'll see you around bye

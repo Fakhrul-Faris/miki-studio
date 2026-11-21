@@ -1,0 +1,2200 @@
+00:00 now we are going to take a deep dive
+00:02 
+
+00:02 into the animation principles of
+00:05 
+
+00:05 drag follow-through and overlap these
+00:08 
+
+00:08 principles will allow you
+00:09 
+
+00:09 to create physically believable action
+00:12 
+
+00:12 sequences
+00:13 
+
+00:13 where characters are jumping holding on
+00:16 
+
+00:16 to something trying to catch themselves
+00:18 
+
+00:18 pushing each other around but you also
+00:20 
+
+00:20 need them to create cool little details
+00:23 
+
+00:23 like a cloth a cape a scarf following
+00:26 
+
+00:26 behind
+00:27 
+
+00:27 the character if a bunny has floppy ears
+00:30 
+
+00:30 you also need to have them flop around
+00:33 
+
+00:33 in a way that looks physically
+00:35 
+
+00:35 believable
+00:35 
+
+00:35 i'm ferdinand englander for animator
+00:37 
+
+00:37 island bringing you tips tricks
+00:39 
+
+00:39 and tutorials to help you become a
+00:41 
+
+00:41 better animator
+00:50 
+
+00:50 in a previous video of this animation
+00:52 
+
+00:52 class we talked about
+00:54 
+
+00:54 physics you can watch that by clicking
+00:55 
+
+00:55 the link up there or in the video
+00:57 
+
+00:57 description and
+00:58 
+
+00:58 one of the things that is very important
+01:01 
+
+01:01 for getting physics right
+01:03 
+
+01:03 is that elements are resistant
+01:06 
+
+01:06 to start stop or change
+01:09 
+
+01:09 direction this resistance is called
+01:11 
+
+01:11 inertia
+01:12 
+
+01:12 and it is behind all the things that
+01:16 
+
+01:16 we're talking about
+01:17 
+
+01:17 in this video here we have an apple in a
+01:19 
+
+01:19 pot and if i move the pot
+01:21 
+
+01:21 really quickly the apple at first is
+01:24 
+
+01:24 staying in place this is similar to when
+01:27 
+
+01:27 you are standing in a subway train
+01:30 
+
+01:30 or a bus and the bus starts driving but
+01:33 
+
+01:33 you are not accelerating yet so you hold
+01:36 
+
+01:36 on to elements of the vehicle so
+01:38 
+
+01:38 you experience the same acceleration and
+01:41 
+
+01:41 this happens to the apple
+01:42 
+
+01:42 when it hits the side of the pot
+01:46 
+
+01:46 because then it definitely gets
+01:48 
+
+01:48 accelerated
+01:49 
+
+01:49 to the speed that the pot has something
+01:51 
+
+01:51 else interesting is happening when the
+01:53 
+
+01:53 part
+01:53 
+
+01:53 slows down the moment it goes slower the
+01:56 
+
+01:56 apple
+01:57 
+
+01:57 shoots further because it still has the
+01:60 
+
+01:60 same
+02:00 
+
+02:00 momentum it was charged with momentum
+02:03 
+
+02:03 when it was pushed by the side of the
+02:06 
+
+02:06 pot and
+02:07 
+
+02:07 now that the pot is getting slower the
+02:10 
+
+02:10 apple still has that same momentum so it
+02:13 
+
+02:13 goes further to the right until it once
+02:17 
+
+02:17 again
+02:18 
+
+02:18 bumps into the side of the pot and has
+02:20 
+
+02:20 to get rid of that energy
+02:22 
+
+02:22 by bouncing in the opposite direction
+02:25 
+
+02:25 for animation it can be useful to keep
+02:27 
+
+02:27 three phases in mind first we have
+02:30 
+
+02:30 drag this happens as soon as a
+02:33 
+
+02:33 leading element starts moving loose
+02:36 
+
+02:36 attached parts are just being dragged
+02:40 
+
+02:40 behind
+02:41 
+
+02:41 as you might remember the whole thing
+02:42 
+
+02:42 with resistance is that things
+02:44 
+
+02:44 would like to stay in place and things
+02:47 
+
+02:47 that are being
+02:48 
+
+02:48 dragged behind well they are pointing
+02:51 
+
+02:51 towards the direction
+02:53 
+
+02:53 that they came from as you can see here
+02:56 
+
+02:56 when i'm pulling this
+02:57 
+
+02:57 string the sections of the string that
+02:59 
+
+02:59 are further back
+03:01 
+
+03:01 only start moving when they absolutely
+03:03 
+
+03:03 have to
+03:04 
+
+03:04 when they are being dragged by the
+03:06 
+
+03:06 portion that is directly in front of
+03:08 
+
+03:08 them now we get to the second phase
+03:11 
+
+03:11 follow through this happens when the
+03:13 
+
+03:13 leading element
+03:15 
+
+03:15 stops moving or changes direction as we
+03:18 
+
+03:18 saw
+03:18 
+
+03:18 with the apple the attached loose
+03:20 
+
+03:20 element is
+03:21 
+
+03:21 now charged with momentum that was
+03:24 
+
+03:24 put into it by tugging on it by pulling
+03:28 
+
+03:28 on it
+03:29 
+
+03:29 and this momentum is still there so
+03:32 
+
+03:32 while the leading element is getting
+03:34 
+
+03:34 slower or even
+03:35 
+
+03:35 stopped there's still the same momentum
+03:39 
+
+03:39 in the part that is being dragged behind
+03:42 
+
+03:42 it now has to follow through with that
+03:45 
+
+03:45 momentum it has
+03:46 
+
+03:46 to flip over until it can no longer go
+03:49 
+
+03:49 in that direction
+03:50 
+
+03:50 and swing back again and then maybe
+03:53 
+
+03:53 eventually get into a stopping position
+03:55 
+
+03:55 so let's assume our leading element is
+03:57 
+
+03:57 coming to a stop then our attached
+03:59 
+
+03:59 element is
+04:00 
+
+04:00 coming to a stop a little bit later
+04:02 
+
+04:02 because it has to lose
+04:04 
+
+04:04 the momentum first this is called
+04:07 
+
+04:07 overlap
+04:08 
+
+04:08 when you have different elements of your
+04:10 
+
+04:10 character
+04:11 
+
+04:11 coming to a stop at different
+04:14 
+
+04:14 times and as you can see this is based
+04:16 
+
+04:16 in physics inertia
+04:18 
+
+04:18 and momentum so if you have your
+04:21 
+
+04:21 character
+04:22 
+
+04:22 moving it's unrealistic that all the
+04:24 
+
+04:24 body parts
+04:25 
+
+04:25 come to a stop at the same time it's
+04:28 
+
+04:28 usually you know if your
+04:29 
+
+04:29 character takes a step and now stands
+04:31 
+
+04:31 still then
+04:32 
+
+04:32 the foot reaches that position first
+04:35 
+
+04:35 then the leg then the hips then the
+04:36 
+
+04:36 upper body and maybe you also have a
+04:38 
+
+04:38 little bit of a dip
+04:40 
+
+04:40 in the head and this is all drag
+04:43 
+
+04:43 overlap follow through in action i will
+04:46 
+
+04:46 show you two methods
+04:48 
+
+04:48 to create very smooth and believable
+04:51 
+
+04:51 looking
+04:52 
+
+04:52 drag follow-through and overlapping
+04:54 
+
+04:54 actions
+04:55 
+
+04:55 one method i will show you in this video
+04:57 
+
+04:57 and the other one
+04:58 
+
+04:58 i'll tell you all about in the video
+05:00 
+
+05:00 next week
+05:01 
+
+05:01 but first if you like this tutorial so
+05:04 
+
+05:04 far please consider giving it a like
+05:06 
+
+05:06 and subscribing to the channel so you
+05:08 
+
+05:08 don't miss animation tutorials like this
+05:10 
+
+05:10 one
+05:11 
+
+05:11 so here i have an animation already
+05:13 
+
+05:13 prepared it's just a ball
+05:15 
+
+05:15 speeding up with an ease out and then
+05:18 
+
+05:18 easing into a position at the right
+05:21 
+
+05:21 if you're animating something that is
+05:23 
+
+05:23 just being dragged behind like a piece
+05:25 
+
+05:25 of cloth
+05:26 
+
+05:26 a scarf a skirt stuff like this this is
+05:29 
+
+05:29 just an additional
+05:31 
+
+05:31 detail an additional layer on top of
+05:33 
+
+05:33 your main animation
+05:34 
+
+05:34 so i would really recommend doing the
+05:37 
+
+05:37 main animation
+05:38 
+
+05:38 first like we have done here i have that
+05:40 
+
+05:40 completed motion
+05:42 
+
+05:42 of the ball and then you can add the
+05:43 
+
+05:43 elements that are doing the
+05:45 
+
+05:45 overlap and the follow-through as an
+05:47 
+
+05:47 extra layer
+05:48 
+
+05:48 on top of it the other thing that i can
+05:50 
+
+05:50 recommend to you don't draw the complete
+05:52 
+
+05:52 scarf
+05:53 
+
+05:53 at once don't draw the skirt with all
+05:55 
+
+05:55 the wrinkles and that
+05:57 
+
+05:57 instead you should simplify it and
+05:60 
+
+05:60 maybe just have a rough
+06:03 
+
+06:03 scribbled animation first let's say we
+06:06 
+
+06:06 want to give this ball
+06:07 
+
+06:07 a little cape behind it so instead of
+06:10 
+
+06:10 drawing like a
+06:12 
+
+06:12 cape like this with wrinkles and you
+06:14 
+
+06:14 know
+06:15 
+
+06:15 uh maybe maybe it has a fold here or
+06:18 
+
+06:18 something like that
+06:19 
+
+06:19 instead of doing that i will make a
+06:21 
+
+06:21 scribble layer
+06:22 
+
+06:22 that simplifies it so i'll just put one
+06:26 
+
+06:26 two segments here and just animating
+06:28 
+
+06:28 this as
+06:29 
+
+06:29 two segments as two elements in a chain
+06:33 
+
+06:33 is a lot easier than trying to grasp the
+06:36 
+
+06:36 full
+06:36 
+
+06:36 curvy flowy shape at once the first
+06:38 
+
+06:38 animation method that i want to show to
+06:40 
+
+06:40 you is a post to pose approach
+06:42 
+
+06:42 where we tie down the most important
+06:45 
+
+06:45 phases
+06:46 
+
+06:46 of the animation first and then later
+06:49 
+
+06:49 add the in betweens that will make it
+06:52 
+
+06:52 really smooth
+06:53 
+
+06:53 but what are these important poses that
+06:55 
+
+06:55 we need to hit
+06:56 
+
+06:56 to create a believable drag and follow
+06:60 
+
+06:60 through
+07:00 
+
+07:00 animation i think we can identify the
+07:03 
+
+07:03 important poses
+07:04 
+
+07:04 by this guideline whenever there's
+07:07 
+
+07:07 something
+07:08 
+
+07:08 new happening whenever there's a change
+07:11 
+
+07:11 that is a new keyframe a new drawing
+07:15 
+
+07:15 that we need to have in our rough
+07:18 
+
+07:18 post to post animation the first
+07:20 
+
+07:20 keyframe is of course
+07:21 
+
+07:21 the starting position that we already
+07:23 
+
+07:23 drew and then
+07:25 
+
+07:25 we can go in a couple frames and the new
+07:27 
+
+07:27 action that is happening here
+07:29 
+
+07:29 is that the first element the first
+07:32 
+
+07:32 section
+07:32 
+
+07:32 of our cape is being dragged behind
+07:36 
+
+07:36 notice how it is pointing in the
+07:39 
+
+07:39 direction that it came from
+07:41 
+
+07:41 and the second element in the chain
+07:44 
+
+07:44 is doing the same but it's still
+07:46 
+
+07:46 pointing
+07:47 
+
+07:47 down so this is the moment where the
+07:50 
+
+07:50 first
+07:51 
+
+07:51 element is already being dragged behind
+07:53 
+
+07:53 to the right
+07:54 
+
+07:54 but the second element is just being
+07:57 
+
+07:57 pulled up
+07:58 
+
+07:58 because it has to stay connected here
+08:00 
+
+08:00 but it didn't experience
+08:02 
+
+08:02 any drag to the right yet let's collect
+08:05 
+
+08:05 the important keyframes down here so we
+08:08 
+
+08:08 can see them in a row the next new big
+08:10 
+
+08:10 thing that is happening
+08:12 
+
+08:12 is that the second element is also going
+08:14 
+
+08:14 to be tilting to the right
+08:16 
+
+08:16 so let's go another two frames in
+08:19 
+
+08:19 and here we have this frame where
+08:23 
+
+08:23 both sections are pointing backwards
+08:27 
+
+08:27 so let's record that down here then we
+08:30 
+
+08:30 should go into the moment
+08:32 
+
+08:32 where the leading element is the fastest
+08:36 
+
+08:36 and you can see that in the spacing that
+08:39 
+
+08:39 the ball
+08:40 
+
+08:40 reached a point where it has
+08:44 
+
+08:44 the two largest spacings here so at this
+08:47 
+
+08:47 point the ball was going at its fastest
+08:49 
+
+08:49 speed
+08:50 
+
+08:50 and this would also lift the direct
+08:53 
+
+08:53 behind elements
+08:54 
+
+08:54 up as far as they will go we can have it
+08:57 
+
+08:57 be
+08:58 
+
+08:58 like this maybe even a bit bit more than
+09:01 
+
+09:01 it was
+09:01 
+
+09:01 in the previous drawing if this was
+09:04 
+
+09:04 underwater or in zero gravity
+09:06 
+
+09:06 the drag behind element tends to be
+09:10 
+
+09:10 exactly on the motion path
+09:11 
+
+09:11 which for this animation would be
+09:14 
+
+09:14 completely straight
+09:16 
+
+09:16 because the motion path is going
+09:18 
+
+09:18 straight
+09:19 
+
+09:19 from left to right this is what would
+09:21 
+
+09:21 happen
+09:22 
+
+09:22 in outer space or underwater fairly
+09:24 
+
+09:24 quickly but because on land
+09:26 
+
+09:26 we have gravity and this cape also has
+09:29 
+
+09:29 some weight to it
+09:31 
+
+09:31 it will probably be dipped down a little
+09:34 
+
+09:34 towards
+09:34 
+
+09:34 the ground of course if you are
+09:38 
+
+09:38 swinging a flag really fast it will also
+09:42 
+
+09:42 follow along the motion path completely
+09:46 
+
+09:46 now the next interesting thing that is
+09:47 
+
+09:47 happening in our animation is that the
+09:49 
+
+09:49 ball is slowing down
+09:51 
+
+09:51 right before we had these big spacings
+09:54 
+
+09:54 which indicate a fast speed
+09:56 
+
+09:56 and then we have smaller and smaller
+09:58 
+
+09:58 spacings which
+09:60 
+
+09:60 indicate less and less speed and as you
+10:02 
+
+10:02 know from the example with the apple
+10:05 
+
+10:05 the main element the part might be
+10:07 
+
+10:07 slowing down
+10:08 
+
+10:08 but the following element the apple is
+10:11 
+
+10:11 not
+10:12 
+
+10:12 it's now catching up with the leading
+10:14 
+
+10:14 element because it is still going
+10:16 
+
+10:16 at the same speed or approximately the
+10:19 
+
+10:19 same speed that it had during the
+10:21 
+
+10:21 fastest part of the motion
+10:23 
+
+10:23 one way to think about it is that here
+10:25 
+
+10:25 the ball had this big spacing
+10:27 
+
+10:27 it now has this small spacing but the
+10:30 
+
+10:30 element
+10:30 
+
+10:30 following behind still wants to do
+10:34 
+
+10:34 that bigger spacing maybe already lost a
+10:37 
+
+10:37 little bit because you know there is
+10:38 
+
+10:38 some resistance here
+10:40 
+
+10:40 but that's why the
+10:43 
+
+10:43 following element is now overshooting in
+10:46 
+
+10:46 that direction
+10:47 
+
+10:47 so in reality this would happen now
+10:50 
+
+10:50 that the first following element
+10:54 
+
+10:54 is flipping over but because we are in
+10:57 
+
+10:57 animation
+10:57 
+
+10:57 we can exaggerate things a little bit we
+11:00 
+
+11:00 could for example
+11:02 
+
+11:02 hold the flip over for like one
+11:05 
+
+11:05 more drawing or just make this go down a
+11:10 
+
+11:10 little bit
+11:11 
+
+11:11 this dip down happens because this ball
+11:14 
+
+11:14 is going slower but the second element
+11:17 
+
+11:17 following
+11:18 
+
+11:18 it's still just pointing into the
+11:21 
+
+11:21 direction that it is coming from
+11:23 
+
+11:23 also starting to dip down because it has
+11:26 
+
+11:26 to stay connected at that joint and now
+11:28 
+
+11:28 here is the frame where we really see it
+11:31 
+
+11:31 clearly where the first element
+11:33 
+
+11:33 has to dip down by a lot the second
+11:36 
+
+11:36 element
+11:37 
+
+11:37 is just following the first
+11:41 
+
+11:41 one trying to stay connected at the
+11:43 
+
+11:43 connection
+11:44 
+
+11:44 down there notice how we're starting to
+11:46 
+
+11:46 get this nice
+11:47 
+
+11:47 arc here that's very important for a
+11:49 
+
+11:49 good looking
+11:50 
+
+11:50 follow-through animation so let's put
+11:53 
+
+11:53 that moment in
+11:54 
+
+11:54 our collection we have this moment where
+11:56 
+
+11:56 the first
+11:57 
+
+11:57 element is tilting down and the second
+12:00 
+
+12:00 one is just following behind
+12:03 
+
+12:03 for the segment settling after the main
+12:06 
+
+12:06 element came to a stop
+12:08 
+
+12:08 we can look at another very important
+12:11 
+
+12:11 beginner exercise
+12:13 
+
+12:13 in animation as guidance and that
+12:16 
+
+12:16 is the pendulum the swinging pendulum if
+12:19 
+
+12:19 you think about it this is exactly what
+12:21 
+
+12:21 is happening here
+12:22 
+
+12:22 we have something being dragged behind
+12:25 
+
+12:25 and then when it comes to a stop it just
+12:28 
+
+12:28 swings over
+12:28 
+
+12:28 back and forth until it is still and
+12:32 
+
+12:32 a good pendulum animation of course
+12:33 
+
+12:33 looks like this we have
+12:35 
+
+12:35 the starting keyframe and the end
+12:37 
+
+12:37 keyframe
+12:38 
+
+12:38 in the middle we have the breakdown this
+12:41 
+
+12:41 frame is what makes us see clearly
+12:43 
+
+12:43 that this pendulum is moving along an
+12:45 
+
+12:45 arc and then to complete that animation
+12:48 
+
+12:48 we can have some ease frames here the
+12:51 
+
+12:51 pendulum is picking
+12:52 
+
+12:52 up speed gradually by easing
+12:55 
+
+12:55 out of the first position to the left
+12:58 
+
+12:58 and on the other side
+12:60 
+
+13:00 the pendulum is easing into the position
+13:03 
+
+13:03 at the right so this is something that
+13:05 
+
+13:05 is also happening to our
+13:07 
+
+13:07 cape dangling from the main element
+13:11 
+
+13:11 so now let's add what we just learned
+13:13 
+
+13:13 about the pendulum
+13:14 
+
+13:14 in our animation with the added
+13:17 
+
+13:17 difficulty
+13:18 
+
+13:18 that we have two pendulums stuck
+13:20 
+
+13:20 together
+13:21 
+
+13:21 so the first thing we have here is the
+13:23 
+
+13:23 first element
+13:24 
+
+13:24 swinging all the way to the right this
+13:27 
+
+13:27 of course is the
+13:28 
+
+13:28 right most position of our pendulum
+13:32 
+
+13:32 now here i'm always keeping a couple of
+13:34 
+
+13:34 frame frames open
+13:36 
+
+13:36 to do some in-betweens later let's just
+13:39 
+
+13:39 go to our next most important drawing
+13:42 
+
+13:42 and that of course is the breakdown
+13:45 
+
+13:45 of our first pendulum element
+13:49 
+
+13:49 then a couple frames later we have the
+13:52 
+
+13:52 leftmost position of the pendulum
+13:55 
+
+13:55 we're already making the swings not as
+13:57 
+
+13:57 wide because with
+13:58 
+
+13:58 every swing we're losing momentum let's
+14:01 
+
+14:01 make this a little
+14:02 
+
+14:02 smaller so we have a more clearly
+14:05 
+
+14:05 defined arc
+14:07 
+
+14:07 then we have our next breakdown
+14:11 
+
+14:11 and finally this is coming to a
+14:15 
+
+14:15 stop now just this so far it's not
+14:17 
+
+14:17 looking that bad
+14:18 
+
+14:18 it is a bit choppy because we haven't
+14:20 
+
+14:20 drawn all the in-betweens yet
+14:22 
+
+14:22 but you can already see how it will come
+14:25 
+
+14:25 together
+14:26 
+
+14:26 the second pendulum is offset from
+14:29 
+
+14:29 the first one as the first element is
+14:32 
+
+14:32 going
+14:33 
+
+14:33 through the breakdown we have
+14:36 
+
+14:36 the key of the second element and when
+14:39 
+
+14:39 the first
+14:40 
+
+14:40 section is in a key pose the second
+14:43 
+
+14:43 section is just going through the
+14:44 
+
+14:44 breakdown
+14:45 
+
+14:45 so here we have a breakdown this of
+14:47 
+
+14:47 course is still heavily influenced by
+14:49 
+
+14:49 being dragged so much by
+14:52 
+
+14:52 this element down here but this kind of
+14:55 
+
+14:55 is the extreme pose
+14:57 
+
+14:57 for this section now we have an extreme
+14:60 
+
+14:60 here
+15:00 
+
+15:00 which means that the other pendulum is
+15:03 
+
+15:03 just
+15:04 
+
+15:04 going through a breakdown on the way
+15:07 
+
+15:07 already
+15:08 
+
+15:08 over to here because as this first
+15:10 
+
+15:10 element is reaching its extreme position
+15:13 
+
+15:13 it already slowed down
+15:15 
+
+15:15 which causes this second element
+15:18 
+
+15:18 to start passing it in that direction
+15:21 
+
+15:21 because it's being dragged so heavily
+15:24 
+
+15:24 there's a drag in that direction
+15:26 
+
+15:26 and that whole pendulum system what we
+15:29 
+
+15:29 have
+15:30 
+
+15:30 you know with the swing left to right
+15:33 
+
+15:33 and the breakdown this whole thing is
+15:36 
+
+15:36 rotated over because this whole system
+15:40 
+
+15:40 is being dragged behind so
+15:43 
+
+15:43 the breakdown is here and now for the
+15:46 
+
+15:46 next frame just remember
+15:48 
+
+15:48 our chart the first section is going
+15:50 
+
+15:50 through the breakdown phase
+15:52 
+
+15:52 which means that the second section must
+15:55 
+
+15:55 be
+15:55 
+
+15:55 doing the extreme key to the right now
+15:58 
+
+15:58 the difficult thing is that this whole
+15:60 
+
+15:60 system can influence
+16:01 
+
+16:01 other segments let's say if
+16:04 
+
+16:04 this end is extremely heavy it will also
+16:08 
+
+16:08 cause this whole
+16:12 
+
+16:12 thing to lag behind because this weight
+16:15 
+
+16:15 is pulling it to the right a little bit
+16:18 
+
+16:18 more
+16:19 
+
+16:19 than it would be if there would just be
+16:21 
+
+16:21 one pendulum but for now let's see if we
+16:23 
+
+16:23 can
+16:24 
+
+16:24 simplify it a bit this should still be
+16:27 
+
+16:27 kind of believable now the first section
+16:30 
+
+16:30 is reaching an extreme key
+16:31 
+
+16:31 which means that the second section is
+16:33 
+
+16:33 already on its way over in a breakdown
+16:36 
+
+16:36 slightly tilted to the right
+16:38 
+
+16:38 on its way over to the left now the
+16:40 
+
+16:40 first section is doing another breakdown
+16:42 
+
+16:42 the second section
+16:44 
+
+16:44 is flipping over the first section
+16:46 
+
+16:46 reached is its extreme point
+16:48 
+
+16:48 which means that the second section is
+16:51 
+
+16:51 in its breakdown
+16:52 
+
+16:52 on the way over and then last but not
+16:54 
+
+16:54 least we have the moment
+16:56 
+
+16:56 where the first section was already
+16:59 
+
+16:59 still and the second section is now
+17:03 
+
+17:03 reaching its extreme key one moment
+17:06 
+
+17:06 later and this is how that looks
+17:09 
+
+17:09 let's look at our chart again and what
+17:11 
+
+17:11 we can now see very clearly is how this
+17:14 
+
+17:14 is always a chain reaction
+17:16 
+
+17:16 look at how it starts the first element
+17:18 
+
+17:18 starts moving to the right
+17:19 
+
+17:19 and four to eight frames later the
+17:21 
+
+17:21 second element does the same thing
+17:23 
+
+17:23 then the leading element comes to a stop
+17:25 
+
+17:25 which causes the first element
+17:27 
+
+17:27 to flip over the second element is not
+17:30 
+
+17:30 doing that yet
+17:31 
+
+17:31 but it's doing that next four to eight
+17:35 
+
+17:35 frames later
+17:36 
+
+17:36 now the first element is swinging back
+17:38 
+
+17:38 the second element
+17:39 
+
+17:39 is not swinging back yet but
+17:43 
+
+17:43 four to eight frames later it is
+17:45 
+
+17:45 swinging back this could repeat a couple
+17:47 
+
+17:47 of times
+17:48 
+
+17:48 because from here on the first element
+17:51 
+
+17:51 can swing
+17:52 
+
+17:52 to the right again and this is basically
+17:56 
+
+17:56 the same constellation as here the whole
+17:58 
+
+17:58 thing starts over
+17:60 
+
+18:00 the first element swung to the right so
+18:02 
+
+18:02 a little later the second element
+18:04 
+
+18:04 also swings to the right do you see how
+18:07 
+
+18:07 this is a chain that repeats again and
+18:09 
+
+18:09 again
+18:09 
+
+18:09 in our example animation we come to a
+18:11 
+
+18:11 stop relatively quickly
+18:13 
+
+18:13 but in reality things can swing back and
+18:16 
+
+18:16 forth
+18:16 
+
+18:16 a lot of times before they come to a
+18:20 
+
+18:20 stop
+18:20 
+
+18:20 but it's just repeating what we just
+18:22 
+
+18:22 wrote down
+18:23 
+
+18:23 just with amplitudes that are getting
+18:26 
+
+18:26 smaller and smaller
+18:27 
+
+18:27 you might notice that our animation is
+18:29 
+
+18:29 looking kinda tame
+18:31 
+
+18:31 it's not like super exaggerated cartoony
+18:34 
+
+18:34 animation
+18:35 
+
+18:35 and that is because we went so close to
+18:38 
+
+18:38 how reality is
+18:40 
+
+18:40 of course in animation you can always
+18:42 
+
+18:42 bend reality
+18:43 
+
+18:43 and put a little bit extra on top of it
+18:46 
+
+18:46 you could hold the extremes longer the
+18:48 
+
+18:48 moment where it flopped over completely
+18:51 
+
+18:51 to the other side
+18:52 
+
+18:52 we could have delayed the entire tape
+18:55 
+
+18:55 going to the right even longer those are
+18:58 
+
+18:58 some things that you can
+18:59 
+
+18:59 play with and if you just have a couple
+19:02 
+
+19:02 of frames like these
+19:03 
+
+19:03 it's very easy to retime them and
+19:07 
+
+19:07 add some more frames here and there and
+19:09 
+
+19:09 we also have another opportunity to
+19:11 
+
+19:11 add some extra punch during
+19:14 
+
+19:14 the in-betweening because depending on
+19:17 
+
+19:17 how we do
+19:18 
+
+19:18 the in-betweens we can stress
+19:22 
+
+19:22 some extremes a little more let me show
+19:25 
+
+19:25 you
+19:25 
+
+19:25 what i mean but first i want to tell you
+19:27 
+
+19:27 that we have
+19:28 
+
+19:28 some premium tutorials that you can
+19:30 
+
+19:30 purchase if you want to learn even more
+19:33 
+
+19:33 do more exercises to become a better
+19:35 
+
+19:35 animator
+19:36 
+
+19:36 even faster and it will of course really
+19:39 
+
+19:39 support this channel and help me to make
+19:42 
+
+19:42 more tutorials
+19:43 
+
+19:43 another great way to support us is on
+19:45 
+
+19:45 patreon
+19:46 
+
+19:46 and we also have a group mentoring tier
+19:50 
+
+19:50 over there so if you want
+19:51 
+
+19:51 feedback for your illustration animation
+19:54 
+
+19:54 story idea whatever you're currently
+19:56 
+
+19:56 working on you can join the group
+19:58 
+
+19:58 mentoring tier
+19:59 
+
+19:59 and hop on a group mentoring call every
+20:02 
+
+20:02 month there you will get feedback from
+20:05 
+
+20:05 the other members and from a
+20:06 
+
+20:06 professional mentor
+20:08 
+
+20:08 like me i'll draw over your work give
+20:10 
+
+20:10 you annotations and advice on how to
+20:13 
+
+20:13 improve it
+20:14 
+
+20:14 so if that sounds interesting to you if
+20:16 
+
+20:16 you want to have like a
+20:17 
+
+20:17 more of a classroom mentoring experience
+20:20 
+
+20:20 then the group mentoring tier
+20:21 
+
+20:21 on patreon might be the thing for you so
+20:24 
+
+20:24 as you can see in the timeline i
+20:26 
+
+20:26 always left some space here between the
+20:29 
+
+20:29 frames oh
+20:30 
+
+20:30 this could be one more and this is like
+20:33 
+
+20:33 the minimum amount of frames
+20:35 
+
+20:35 on twos that i would leave to put in
+20:38 
+
+20:38 some in betweens here untwos
+20:40 
+
+20:40 just means that i'm holding one frame
+20:42 
+
+20:42 for two frames so i don't have to draw a
+20:44 
+
+20:44 bazillion frames on 24 frames per second
+20:47 
+
+20:47 so let's see what in in between could
+20:50 
+
+20:50 mean for our animation
+20:51 
+
+20:51 here we have a moment where the first
+20:54 
+
+20:54 element is on the breakdown and the
+20:55 
+
+20:55 second element
+20:57 
+
+20:57 is on the extreme plus
+20:60 
+
+20:60 being dragged behind a lot so how does
+21:02 
+
+21:02 the moment
+21:03 
+
+21:03 look between here now if you remember
+21:06 
+
+21:06 our swinging pendulum animation from
+21:08 
+
+21:08 earlier
+21:09 
+
+21:09 we always want to ease out and ease
+21:13 
+
+21:13 into the extreme positions and this will
+21:15 
+
+21:15 also add some
+21:16 
+
+21:16 emphasis to these extreme keyframes that
+21:19 
+
+21:19 can help to make our animation a lot
+21:22 
+
+21:22 more readable and a bit more cartoony
+21:24 
+
+21:24 so what i would do here is this is the
+21:27 
+
+21:27 extreme that we need to hit
+21:29 
+
+21:29 so we know that the first pendulum
+21:32 
+
+21:32 is easing into here this is a little
+21:34 
+
+21:34 difficult because the main element is
+21:36 
+
+21:36 also still moving
+21:37 
+
+21:37 if we would layer this on top of it
+21:41 
+
+21:41 see this this is just an ease into that
+21:44 
+
+21:44 extreme position
+21:45 
+
+21:45 but we put it a little more over here
+21:48 
+
+21:48 this of course
+21:49 
+
+21:49 also adds some drag i think we could
+21:51 
+
+21:51 make it a little
+21:52 
+
+21:52 further to the left but to emphasize
+21:54 
+
+21:54 things let's let's have it a bit like
+21:56 
+
+21:56 this
+21:57 
+
+21:57 now the thing that you need to be
+21:60 
+
+21:60 careful with
+22:01 
+
+22:01 now is to keep in mind
+22:04 
+
+22:04 that for the first element we are
+22:06 
+
+22:06 favoring
+22:07 
+
+22:07 with our ease frame the extreme to the
+22:11 
+
+22:11 right
+22:11 
+
+22:11 but for the second element we are
+22:14 
+
+22:14 favoring
+22:15 
+
+22:15 because this was just the extreme of the
+22:17 
+
+22:17 second element
+22:18 
+
+22:18 we are favoring the extreme to the left
+22:21 
+
+22:21 so what you shouldn't do under no
+22:23 
+
+22:23 circumstances
+22:24 
+
+22:24 is to draw a frame that is just kind of
+22:27 
+
+22:27 like in the middle of everything
+22:29 
+
+22:29 that will just look dull we could draw a
+22:32 
+
+22:32 frame
+22:33 
+
+22:33 where the whole pendulum is still
+22:36 
+
+22:36 very far up very far to the left
+22:39 
+
+22:39 so again if we see that in relation
+22:43 
+
+22:43 this is not even close to being an e so
+22:46 
+
+22:46 let's draw that one
+22:47 
+
+22:47 over here so you know this would be an
+22:50 
+
+22:50 ease for this
+22:51 
+
+22:51 pendulum system that is happening over
+22:54 
+
+22:54 here and now we attach that here
+22:57 
+
+22:57 ah maybe we should mellow it a little
+22:59 
+
+22:59 bit maybe like this
+23:01 
+
+23:01 so let's do this one more time now the
+23:03 
+
+23:03 first element is swinging over to the
+23:05 
+
+23:05 left
+23:06 
+
+23:06 which means we need to favor the extreme
+23:08 
+
+23:08 position that we just had
+23:10 
+
+23:10 so we draw a frame where it's closer to
+23:13 
+
+23:13 the red onion skin like this because we
+23:16 
+
+23:16 are favoring
+23:17 
+
+23:17 this extreme for the second element we
+23:20 
+
+23:20 are favoring
+23:21 
+
+23:21 the extreme to the right which is the
+23:24 
+
+23:24 one that
+23:25 
+
+23:25 we'll have in the next frame this one so
+23:27 
+
+23:27 again
+23:28 
+
+23:28 we could draw relative pretend that our
+23:32 
+
+23:32 pendulum is connected here and we can
+23:36 
+
+23:36 build our
+23:37 
+
+23:37 ease frame into the right
+23:41 
+
+23:41 most extreme and then just attach that
+23:44 
+
+23:44 whole thing to the first element
+23:46 
+
+23:46 and you know what we could exaggerate it
+23:48 
+
+23:48 even more
+23:49 
+
+23:49 this is the thing that you could also
+23:50 
+
+23:50 try you could try to have the extreme
+23:53 
+
+23:53 now while the first element is doing the
+23:56 
+
+23:56 ease
+23:57 
+
+23:57 this is also something that can look
+23:59 
+
+23:59 really good
+23:60 
+
+23:60 and stresses the left and right motions
+24:03 
+
+24:03 even more
+24:04 
+
+24:04 now let's do it one more time the first
+24:06 
+
+24:06 element is
+24:07 
+
+24:07 easing into the extreme position to the
+24:11 
+
+24:11 left
+24:11 
+
+24:11 the second element is just coming from
+24:14 
+
+24:14 the position to the right
+24:18 
+
+24:18 so this would be like that let's move it
+24:21 
+
+24:21 over if you want to emphasize the drag
+24:23 
+
+24:23 even more
+24:24 
+
+24:24 you could even pull it up
+24:27 
+
+24:27 which technically would make this one
+24:30 
+
+24:30 the extreme now
+24:32 
+
+24:32 and this is how we continue ease out of
+24:35 
+
+24:35 the first is into the extreme
+24:41 
+
+24:41 and on the last frame all we have to do
+24:44 
+
+24:44 is ease into
+24:48 
+
+24:48 the last extreme of the second element
+24:51 
+
+24:51 and this is how it looks we have some
+24:53 
+
+24:53 in-betweens
+24:54 
+
+24:54 to fill here at the beginning so let's
+24:57 
+
+24:57 do that real quick
+24:58 
+
+24:58 but this is more of a painting by number
+25:00 
+
+25:00 game
+25:01 
+
+25:01 because you know we already know where
+25:03 
+
+25:03 this is moving towards
+25:05 
+
+25:05 and there we have our completed post to
+25:08 
+
+25:08 post animation
+25:09 
+
+25:09 with all in betweens now i understand
+25:12 
+
+25:12 that this
+25:13 
+
+25:13 constantly jumping back and forth
+25:15 
+
+25:15 between frames
+25:16 
+
+25:16 and you know keeping things in mind
+25:18 
+
+25:18 maybe even writing things down
+25:20 
+
+25:20 like what is a breakdown what is an ease
+25:23 
+
+25:23 feels a bit unintuitive and
+25:26 
+
+25:26 removed from the spontaneous motion
+25:29 
+
+25:29 because
+25:30 
+
+25:30 it is mostly planning it gives you a
+25:32 
+
+25:32 decent result
+25:33 
+
+25:33 but you don't really feel the motion as
+25:37 
+
+25:37 you're animating because you're
+25:38 
+
+25:38 constantly jumping back and forth and
+25:40 
+
+25:40 thinking
+25:40 
+
+25:40 oh this is an ease this is a breakdown i
+25:43 
+
+25:43 need to push the ease a little bit more
+25:44 
+
+25:44 it's a very cognitive approach so this
+25:47 
+
+25:47 is why i want to show you
+25:48 
+
+25:48 another method where we animate straight
+25:51 
+
+25:51 ahead
+25:51 
+
+25:51 and feel out the drag and the
+25:54 
+
+25:54 follow-through action
+25:55 
+
+25:55 frame by frame for a lot of people this
+25:57 
+
+25:57 feels a lot more intuitive
+25:59 
+
+25:59 and easier so if you want to learn this
+26:02 
+
+26:02 stick around check out the video next
+26:05 
+
+26:05 week don't forget we have premium
+26:06 
+
+26:06 tutorials if you
+26:08 
+
+26:08 want to learn even more right now and
+26:10 
+
+26:10 practice more and become an even better
+26:12 
+
+26:12 animator
+26:13 
+
+26:13 and i have to thank my patrons for
+26:16 
+
+26:16 supporting me on patreon
+26:18 
+
+26:18 you can join them and help me make more
+26:20 
+
+26:20 videos like this
+26:21 
+
+26:21 and there's also the group mentoring
+26:23 
+
+26:23 that i mentioned earlier where you can
+26:25 
+
+26:25 get feedback for your animation
+26:27 
+
+26:27 every month in any case thank you so
+26:29 
+
+26:29 very much for
+26:30 
+
+26:30 watching and i hope you'll be back for
+26:33 
+
+26:33 the tutorial
+26:34 
+
+26:34 about the other follow through and drag
+26:37 
+
+26:37 animation method have a great day and
+26:39 
+
+26:39 keep on animating

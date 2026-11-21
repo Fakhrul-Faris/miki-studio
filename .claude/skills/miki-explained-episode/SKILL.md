@@ -20,7 +20,8 @@ Also remark that **X1** is available and ask whether this episode tests it (§ 9
 1. **Facts** → `claim-ledger` skill. Read every source at the page itself; if the angle needs a number nobody published,
    stop and propose an angle the sources carry (EX45). Keep "Not claimed" and the ⚠ before-posting list.
 2. **Script** (RECIPE-D § 3 + `script-formula`, plain language): frame-0 text ≤ 8 words stating a contradiction, ~11 lines,
-   ~3.4 words/s, end text ≤ 7 words as a question, loop back to frame 0. Run `tools/x1/copy_check.py`.
+   ~3.4 words/s, end text ≤ 7 words as a question, loop back to frame 0. Run `tools/x1/copy_check.py` and
+   `00_bible/checks/SCRIPT-CHECK.md` (Frame 0 / Last frame + Beats v0 first; paste the ticked list in `episode.md`).
    **Voice text** for Eleven v3 in a separate column: numbers as words, ≤ 2 tags per line, `…` and `—`, no CAPS; Malay
    lines open with `[Malaysian accent]`; letters spelled for the reader ("Q R", "ai si"). See EX44 § Recording guide.
 3. **Voice in** (user's takes in Downloads → `audio/raw/`): `build/voice_fix.py 1.25` (energy pause trim, Rubber Band
@@ -29,8 +30,10 @@ Also remark that **X1** is available and ask whether this episode tests it (§ 9
    `tools/x1/voice_check.py` and **one full listen**. Never FFT-denoise Eleven takes (metallic); never trim by Whisper word
    edges (cuts words). Captions follow what was actually said (check `episode.md` — the user may edit the voice text).
 4. **Shot list** (RECIPE-D § 4): rows with words, camera, what changes on which word; whole camera vocabulary; ≤ 4 s per
-   setup unless something builds; return to the hero. Art direction in five lines + accent from the brand's own file.
-5. **Board**: `film --composition board` (one still per setup at its landed moment) → `still-qc` → `fresh-critic`
+   setup unless something builds; return to the hero. Art direction in five lines + accent from the brand's own file +
+   a colour-script strip. Run `00_bible/checks/SHOT-FRAME-CHECK.md` part A (join cards in the `cards` column).
+5. **Board**: `film --composition board` (one still per setup at its landed moment) → `SHOT-FRAME-CHECK.md` part B →
+   `still-qc` → `fresh-critic`
    (max 5 rounds) → show the contact sheet.
 6. **Camera map + animatic** (RECIPE-D § 8.1): `--composition cammap`; `tools/raea/animatic.sh film.tsx ../audio/mix.wav
    ../out/animatic.mp4` (yellow S·time tags for notes).

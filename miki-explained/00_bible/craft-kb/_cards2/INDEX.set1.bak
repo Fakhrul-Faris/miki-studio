@@ -1,0 +1,414 @@
+# Craft KB — index
+
+Look up a technique by bucket. **M** = master card (merges 2+ videos; values compared side by side). Otherwise the link is the
+single source card. `use when` = the episode moment it serves. ⚠ = the card carries a house-rule adaptation — read its `style_fit` first.
+
+Contents: [Animation & motion](#animation--motion) · [Geometry Nodes](#geometry-nodes) · [Modeling & modifiers](#modeling--modifiers) · [Shading & lighting](#shading--lighting) · [Camera, composition & raea pipeline](#camera-composition--raea-pipeline)
+
+## Animation & motion
+
+51 topics.
+
+| topic | use when | card |
+|---|---|---|
+| [Additive layer for pose variation](cards/01_Animation_Motion/additive-layer-variation--dinosaur-run-cycle.md) | twin/mirrored objects (two doors, two coins) share timing but must not look cloned |  |
+| [Alternating pop / tip / slide choreography](cards/01_Animation_Motion/pop-tip-slide-alternating-choreography--product-animation-masterclass.md) | a sequence of items (products, steps) entering one after another |  |
+| [Boids flock to a goal](cards/01_Animation_Motion/boids-flock-goal-leader--renders-instantly-cooler.md) ⚠ | a swarm of coins/parcels/notifications flowing to one account or shop |  |
+| [Camera catches up with a moving hero (not locked)](cards/01_Animation_Motion/camera-relative-motion-not-locked--car-animation.md) ⚠ | tracking a travelling token, scooter or parcel so it feels fast |  |
+| [Camera on a Follow Path curve](cards/01_Animation_Motion/follow-path-camera-constraint-order--blender-camera-rig.md) | a camera flight along a designed route between setups |  |
+| [Copy Location / Copy Rotation constraints](cards/01_Animation_Motion/copy-location-rotation-constraints--constraints.md) | mirrored parts (double doors, twin flaps) driven from one control |  |
+| [Copy Scale with negative Power](cards/01_Animation_Motion/copy-scale-power-constraint--constraints.md) | one bar/pile grows while another shrinks on the word (money moving from A to B) |  |
+| [Curve modifier path deform](cards/01_Animation_Motion/curve-modifier-path-deform--modifiers.md) | an arrow, ribbon or receipt strip flowing along a path between objects |  |
+| [Drop in, hang, slide into place](cards/01_Animation_Motion/drop-in-then-slide--product-animation-masterclass.md) | secondary products arriving beside the hero object |  |
+| [Edge-pivot tilt and recover](cards/01_Animation_Motion/edge-pivot-tilt-and-recover--product-animation-masterclass.md) ⚠ | a box/phone tipping on its edge as a beat accent |  |
+| [F-Curve Noise micro wobble on objects](cards/01_Animation_Motion/fcurve-noise-modifier-micro-wobble--product-animation-masterclass.md) | a hovering/held hero object that must never look frozen |  |
+| [Falling leaves particles with wind/turbulence](cards/01_Animation_Motion/falling-leaves-particles-wind-turbulence--renders-instantly-cooler.md) | ambient leaves or paper scraps drifting through a shot |  |
+| [Floating dust / debris with turbulence](cards/01_Animation_Motion/floating-dust-debris-turbulence-particles--animate-still-renders.md) ⚠ | dust motes in the top-light cone of a dark-room macro shot |  |
+| [Graph Editor free-handle easing (S-curve, fast-out, slow-in)](cards/01_Animation_Motion/graph-editor-free-handle-easing--product-animation-masterclass.md) | shaping the ease of any object or camera move so it feels physical |  |
+| [Handheld camera shake (rotation noise layers / Shakify)](masters/01_Animation_Motion/handheld-camera-shake.md) ⚠ | adding life to a held macro shot or a close pass, scaled by proximity | **M** (5) |
+| [Impact bump: fast drop, slow recovery](cards/01_Animation_Motion/impact-bump-asymmetric-recovery--cg-cine-ch3-nuke.md) ⚠ | a stamp, coin or box landing on the word |  |
+| [In-place cycle to travel (cycle with offset)](cards/01_Animation_Motion/treadmill-to-travel-cycle-offset--dinosaur-run-cycle.md) | a rolling/walking cycle that must actually advance across the set |  |
+| [Lagging pan: subject pulls the camera](cards/01_Animation_Motion/lagging-pan-subject-pulls-camera--cg-cine-ch4-chase.md) | following a moving token so the subject seems to drag the frame |  |
+| [Layered animation, root first](cards/01_Animation_Motion/layered-animation-root-first--dinosaur-run-cycle.md) | animating a multi-part object (lid, drawer, body) without chaos |  |
+| [Limit Distance / Rotation / Scale constraints](cards/01_Animation_Motion/limit-distance-rotation-scale--constraints.md) ⚠ | door/lid swing ranges and fixed orbits that must not overshoot |  |
+| [Linear spans inside eased moves for contact](cards/01_Animation_Motion/constant-speed-contact-spans--dinosaur-run-cycle.md) ⚠ | an object riding a conveyor/belt or rolling while touching a surface |  |
+| [Linear vs eased keys (move already under way on frame 1)](masters/01_Animation_Motion/linear-vs-eased-interpolation.md) ⚠ | an odd moving first frame, or continuing a flight across a setup join | **M** (2) |
+| [Maintain Volume constraint](cards/01_Animation_Motion/maintain-volume-squash--constraints.md) ⚠ | a soft object (pouch, cushion) squashing under a press |  |
+| [Mantaflow liquid splash on a product](cards/01_Animation_Motion/mantaflow-liquid-splash-on-product--product-animation-masterclass.md) ⚠ | a drink or sauce splashing against an F&B hero product |  |
+| [Mirror the art style in the motion style](cards/01_Animation_Motion/mirror-art-and-motion-style-then-bleed--illusion-of-animation.md) | setting how realistic vs stylised Style D motion should feel |  |
+| [Motion continuity across cuts](cards/01_Animation_Motion/motion-continuity-across-cuts--cinematography-next-level.md) | joining two setups so direction and speed carry over |  |
+| [Motion-style axis: squash/stretch and spacing](cards/01_Animation_Motion/motion-style-axis-squash-spacing--illusion-of-animation.md) ⚠ | deciding how stylised an object's move can be |  |
+| [Occluder reveal: sliding object hides appearance](cards/01_Animation_Motion/occluder-reveal-slide-across--product-animation-masterclass.md) | new items appearing behind a passing receipt, card or phone |  |
+| [Off-screen pre-positioning, reveal by perspective](cards/01_Animation_Motion/offscreen-preposition-reveal-by-perspective--eevee-animation-blender5.md) ⚠ | set pieces arriving where the camera can't see, revealed by the flight |  |
+| [Operated zoom with slight overshoot and correction](cards/01_Animation_Motion/zoom-overshoot-correct-settle--cg-cine-ch4-chase.md) ⚠ | a documentary-style lens adjustment (check against no-crash-zoom rule) |  |
+| [Overlap / drag down a chain (frame-offset cascade)](masters/01_Animation_Motion/drag-overlap-chain.md) ⚠ | a strap, cable, receipt roll or stacked items following a lead part | **M** (2) |
+| [Path Evaluation Time speed ramps](cards/01_Animation_Motion/path-evaluation-time-speed-ramps--blender-camera-rig.md) | slowing a token or camera along a path to land on a word |  |
+| [Pre-rolled spark particles](cards/01_Animation_Motion/preroll-spark-particles--beautiful-fire.md) | sparks or embers already moving on frame 1 (fire, welding, payoff glints) |  |
+| [Procedural wind sway without simulation](cards/01_Animation_Motion/procedural-wind-sway-no-sim--realistic-environments.md) | plants, banners or hanging tags moving subtly in a held shot |  |
+| [Reality-stylized-abstract triangle](cards/01_Animation_Motion/reality-stylized-abstract-style-map--illusion-of-animation.md) ⚠ | choosing where the episode's look sits and avoiding the failure zones |  |
+| [Reuse and flip a curve for counter-motion](cards/01_Animation_Motion/copy-flip-curve-counter-motion--dinosaur-run-cycle.md) ⚠ | a lid or ring countering its object's tilt so the hero feels alive |  |
+| [Scale objects in/out to appear (keyframe any property)](masters/01_Animation_Motion/scale-in-appear.md) ⚠ | a label, coin or prop growing in over ~0.4 s instead of popping | **M** (2) |
+| [Seamless loops with the Cycles F-modifier](masters/01_Animation_Motion/cycles-fmodifier-loops.md) ⚠ | spinning coin, turning fan, looping flap or idle cycle under a held shot | **M** (3) |
+| [Silhouette reveal: camera and rim rise together](cards/01_Animation_Motion/silhouette-reveal-rising-camera-and-rim--perfect-product-animations.md) ⚠ | hero object's first reveal out of the dark |  |
+| [Simple Deform Twist/Bend/Taper/Stretch](cards/01_Animation_Motion/simple-deform-twist-bend-taper-stretch--modifiers.md) | object morphs on the word (a bill curling, a bar bending into a chart) |  |
+| [Slide-in with friction stop and edge rock](cards/01_Animation_Motion/product-slide-in-friction-stop--product-animation-masterclass.md) ⚠ | a product sliding onto the counter on its word |  |
+| [Slow drift then quick connect](cards/01_Animation_Motion/slow-descent-then-connect--perfect-product-animations.md) ⚠ | a card meeting a terminal, a lid closing, a plug connecting |  |
+| [Slow rotation drift through a hold](cards/01_Animation_Motion/hold-drift-rotation-after-landing--product-animation-masterclass.md) | a hero object resting after landing while the voice explains it |  |
+| [Smooth camera curves (auto-slope, retime by spacing)](cards/01_Animation_Motion/graph-editor-smooth-auto-slope--cg-cine-ch3-nuke.md) | cleaning a camera path so in/out stays smooth under the speed check |  |
+| [Staggered appearance order](cards/01_Animation_Motion/staggered-pop-in-sequence--product-animation-masterclass.md) | hero first, supporting labels/objects offset on the beat |  |
+| [The gutter: information density between frames](cards/01_Animation_Motion/gutter-principle-information-density--illusion-of-animation.md) | deciding how much change a fast setup cut can carry |  |
+| [Transformation constraint as Map Range](cards/01_Animation_Motion/transformation-constraint-map-range--constraints.md) | mechanisms: a slider moving turns a dial, a handle lifts a flap |  |
+| [Transformation modes for ideas (X becomes Y ...)](cards/01_Animation_Motion/transformation-modes-ideation--product-animation-masterclass.md) | designing how an object changes state on a line |  |
+| [Two-keyframe camera move (slow push/pull, flight)](masters/01_Animation_Motion/two-keyframe-camera-move.md) | the simplest setup-to-setup push or flight on a still subject | **M** (2) |
+| [Wave modifier ripple](masters/01_Animation_Motion/wave-modifier-ripple.md) | a one-shot ripple when a coin/drop hits a surface | **M** (2) |
+| [Weight through asymmetric spacing](cards/01_Animation_Motion/weight-spacing-fast-drop-slow-apex--dinosaur-run-cycle.md) ⚠ | a heavy object being lifted or landing so it reads heavy |  |
+
+## Geometry Nodes
+
+21 topics.
+
+| topic | use when | card |
+|---|---|---|
+| [Carve a silhouette by deleting fracture chunks](cards/02_Geometry_Nodes/fracture-chunk-carving-silhouette--houdini-volumes-masterclass.md) ⚠ | a broken/chipped object or a crumbling block as a metaphor |  |
+| [Condensation droplets on a product](cards/02_Geometry_Nodes/gn-water-droplets-on-product--product-animation-masterclass.md) | a cold drink can/bottle in an F&B macro |  |
+| [Density x clamped noise to carve holes](cards/02_Geometry_Nodes/volume-density-noise-multiply--houdini-volumes-masterclass.md) ⚠ | eroded/porous volumes (rare) |  |
+| [Edge/curvature masks for wear and scratches](masters/02_Geometry_Nodes/edge-curvature-wear-mask.md) ⚠ | worn edges on a metal till, tin or tool in macro | **M** (2) |
+| [Expose material controls on a GN modifier](cards/02_Geometry_Nodes/exposed-material-controls-gn-modifier--pro-materials.md) | one reusable material tweaked per episode without opening nodes |  |
+| [GN array with Mesh Line / Mesh Circle](cards/02_Geometry_Nodes/gn-array-mesh-line-circle-instance-on-points--modifiers.md) | rows or rings of coins, stools, shelves |  |
+| [Gradient-directed volume displacement](cards/02_Geometry_Nodes/gradient-directed-volume-displacement--houdini-volumes-masterclass.md) ⚠ | rock/terrain detail built procedurally (rare for us) |  |
+| [Layered noise stack for faceted rock](cards/02_Geometry_Nodes/layered-noise-stack-faceted-rock--houdini-volumes-masterclass.md) ⚠ | stylised rock or stone surfaces |  |
+| [Mask by dot(N, up) and height](cards/02_Geometry_Nodes/normal-up-height-mask-blend--houdini-volumes-masterclass.md) ⚠ | detail only on top faces (dust, moss, wear) |  |
+| [Noise masks for scatter density and scale](cards/02_Geometry_Nodes/noise-mask-density-and-scale--realistic-environments.md) | natural clumping of scattered props |  |
+| [Per-piece noise offset to open cracks](cards/02_Geometry_Nodes/per-piece-noise-offset-cracks--houdini-volumes-masterclass.md) ⚠ | a cracked object as a metaphor (cracked margin, broken wall) |  |
+| [Proximity exclusion mask for scatter](cards/02_Geometry_Nodes/proximity-exclusion-mask--realistic-environments.md) | keeping scatter off the hero object and paths |  |
+| [Random per-instance scale and rotation](masters/02_Geometry_Nodes/instance-random-scale-rotation.md) ⚠ | making scattered coins, tiles or debris look non-repeated | **M** (2) |
+| [Random rotation per piece about its centroid](cards/02_Geometry_Nodes/per-piece-centroid-rotation--houdini-volumes-masterclass.md) ⚠ | tilting tiles/pieces of a broken object believably |  |
+| [Rockifier: Worley terrain fractal + cellular cracks](cards/02_Geometry_Nodes/unified-noise-rockifier-cellular-cracks--houdini-volumes-masterclass.md) ⚠ | procedural rock (rare) |  |
+| [Scatter a cluster of one asset and morph it into place](cards/02_Geometry_Nodes/scatter-hero-cluster-hide-intersections--serene-render.md) | a pile of one item (coins, boxes) assembling |  |
+| [Scatter variety: many asset types, never one](cards/02_Geometry_Nodes/multi-species-scatter-variety--realistic-environments.md) | dressing a street/market so it doesn't look copy-pasted |  |
+| [Scatter with Distribute Points on Faces -> Instance on Points](masters/02_Geometry_Nodes/gn-scatter-instance-on-points.md) ⚠ | dressing a surface with props, pebbles or debris around the hero | **M** (2) |
+| [Volume displacement by offset sampling](cards/02_Geometry_Nodes/volume-sample-offset-displacement--houdini-volumes-masterclass.md) ⚠ | procedural volume detail (rare) |  |
+| [Voronoi plate ground breakup](cards/02_Geometry_Nodes/voronoi-plate-ground-breakup--houdini-volumes-masterclass.md) ⚠ | cracked paving or tiled ground |  |
+| [World-space anisotropic erosion streaks](cards/02_Geometry_Nodes/world-space-erosion-streak-noise--houdini-volumes-masterclass.md) ⚠ | weathered walls/stone streaks |  |
+
+## Modeling & modifiers
+
+47 topics.
+
+| topic | use when | card |
+|---|---|---|
+| [Array modifier set dressing](cards/03_Modeling_Modifiers/array-modifier-set-dressing--car-animation.md) | repeating lights, shelves, street lamps along a run |  |
+| [Arrayed background towers in fog](cards/03_Modeling_Modifiers/arrayed-arch-towers-background-depth--eevee-animation-blender5.md) | distant depth layers behind a scene |  |
+| [Arrayed roof tiles, Boolean-trimmed, radial copies](cards/03_Modeling_Modifiers/arrayed-tile-strip-boolean-radial-copies--cyber-japan-breakdown.md) | tiled roofs on a model shop |  |
+| [Bevel miters (Outer Arc / Inner Sharp)](cards/03_Modeling_Modifiers/bevel-miter-inner-outer--manual-bevels.md) | clean rounded corners on hard-surface props |  |
+| [Bevel modifier Angle vs Weight limit](cards/03_Modeling_Modifiers/bevel-modifier-angle-vs-weight-limit--manual-bevels.md) | bevelling a library or CAD prop so edges catch the top light |  |
+| [Bevel segment count (even numbers, 2 under SubD)](cards/03_Modeling_Modifiers/bevel-segments-even-count--manual-bevels.md) | prop topology that subdivides cleanly |  |
+| [Bevel tool operator settings and custom profile](cards/03_Modeling_Modifiers/bevel-tool-operator-settings--manual-bevels.md) | hand-bevelling edges/vertices, stair profiles |  |
+| [Beveled tile clusters as foreground dressing](cards/03_Modeling_Modifiers/beveled-tile-cluster-foreground-dressing--eevee-animation-blender5.md) | foreground floor detail in a low shot |  |
+| [Blockout (and hero object) first, then detail](masters/03_Modeling_Modifiers/blockout-first.md) | starting any new set or episode build | **M** (3) |
+| [Boolean cuts + Weighted Normal fix](cards/03_Modeling_Modifiers/boolean-booltool-weighted-normal-fix--modifiers.md) | cutting slots/holes in a hard-surface prop (card reader, till) |  |
+| [Boolean grid cutter for square-cell relief](cards/03_Modeling_Modifiers/boolean-grid-cutter-carve--serene-render.md) | a gridded/pixelated relief surface |  |
+| [Break repetition: variants, messy offsets, bridges](masters/03_Modeling_Modifiers/break-repetition-kit-dressing.md) ⚠ | dressing shelves/stacks so kit pieces don't read as copies | **M** (2) |
+| [Build kit modules/clusters once, reuse as instances](masters/03_Modeling_Modifiers/kitbash-module-reuse.md) ⚠ | building a set fast from reusable pieces | **M** (4) |
+| [Can body from a cylinder profile](cards/03_Modeling_Modifiers/can-body-from-cylinder-profile--product-animation-masterclass.md) | modelling a drink can or tin hero object |  |
+| [Clip a volume with another volume](cards/03_Modeling_Modifiers/volume-boolean-clip--houdini-volumes-masterclass.md) ⚠ | trimming a fog/volume shape (rare) |  |
+| [Cylinder wall with Checker Deselect + extrude](cards/03_Modeling_Modifiers/cylinder-wall-checker-deselect-extrude--serene-render.md) | a regular relief backdrop wall |  |
+| [Detail flat, then warp with proportional editing](cards/03_Modeling_Modifiers/detail-flat-then-warp-proportional-editing--cyber-japan-breakdown.md) | upswept roofs or curved signage |  |
+| [Detail module from one cube](cards/03_Modeling_Modifiers/simple-shape-detail-module--detail-isnt-hard.md) | quick detail pieces (vents, panels) for props |  |
+| [Displace an SDF instead of a fog volume](cards/03_Modeling_Modifiers/sdf-surface-volume-displacement--houdini-volumes-masterclass.md) ⚠ | procedural volume surfaces (rare) |  |
+| [Displaced ground plane](cards/03_Modeling_Modifiers/adaptive-subdivision-displacement-ground--detailed-foregrounds.md) | a real-surface ground under the macro object |  |
+| [Edge-only displacement by tangent sliding](cards/03_Modeling_Modifiers/edge-displacement-tangent-slide--houdini-volumes-masterclass.md) ⚠ | procedural edge breakup (rare) |  |
+| [Fog-volume round trip (mesh -> voxels -> mesh)](cards/03_Modeling_Modifiers/fog-volume-roundtrip-iso-surface--houdini-volumes-masterclass.md) ⚠ | remeshing messy geometry into one skin (rare) |  |
+| [Foundation first, clutter last, dressed through the camera](cards/03_Modeling_Modifiers/camera-only-clutter-dressing--industrial-scene.md) ⚠ | final set dressing of a shot |  |
+| [Fuse overlapping pieces via a volume](cards/03_Modeling_Modifiers/fuse-overlapping-pieces-via-volume--houdini-volumes-masterclass.md) ⚠ | merging overlapping chunks into one surface (rare) |  |
+| [Kit piece variants with Correct Face Attributes](cards/03_Modeling_Modifiers/kit-piece-variants-correct-face-attributes--crazy-renders-geo-nodes.md) | resizing kit pieces without stretching their texture |  |
+| [Lathe glassware with the Screw modifier](cards/03_Modeling_Modifiers/screw-lathe-vase-glass--modifiers.md) | cups, bottles, bowls for F&B shots |  |
+| [Lattice regional deform](cards/03_Modeling_Modifiers/lattice-regional-deform--modifiers.md) | bulging/pinching part of an object on a word |  |
+| [Layered slab wall before any volume pass](cards/03_Modeling_Modifiers/base-geometry-first-clipped-slab-wall--houdini-volumes-masterclass.md) ⚠ | rock/stone walls (rare) |  |
+| [Low-poly layout proxies and obstacles](cards/03_Modeling_Modifiers/low-poly-layout-proxies-and-obstacles--cg-cine-ch4-chase.md) | grey-box motion layout before detail |  |
+| [Medium-chunk piles from duplicated models](cards/03_Modeling_Modifiers/pile-layering-medium-chunks--detailed-foregrounds.md) ⚠ | a pile of boxes/sacks/coins |  |
+| [Mirror -> Solidify -> SubD -> Weighted Normal stack](cards/03_Modeling_Modifiers/mirror-solidify-subd-weighted-normal-stack--modifiers.md) | fast hard-surface props |  |
+| [Modifier stack order and applying](cards/03_Modeling_Modifiers/modifier-stack-order-and-apply--modifiers.md) | fixing a modifier result / preparing GLB export |  |
+| [One-segment chamfer + Weighted Normal for background props](cards/03_Modeling_Modifiers/chamfer-weighted-normal-lowpoly--manual-bevels.md) | cheap background props that still catch light |  |
+| [Panelled walls via inset + extrude along normals](cards/03_Modeling_Modifiers/wall-panel-inset-extrude-detail--add-tons-of-detail.md) | detailed walls/shutters behind the hero |  |
+| [Per-edge manual bevels in a size hierarchy](cards/03_Modeling_Modifiers/per-edge-manual-bevel-hierarchy--manual-bevels.md) | macro hero props where every edge is seen |  |
+| [Pipe-cluster kit piece with linked data](cards/03_Modeling_Modifiers/pipe-cluster-kit-linked-data--add-tons-of-detail.md) | pipes/cables on walls and back rooms |  |
+| [Pull tab: half-model with Mirror + Clipping](cards/03_Modeling_Modifiers/pull-tab-mirror-clipping-from-plane--product-animation-masterclass.md) | a can pull tab or small symmetric part |  |
+| [Railing from separated faces + Array](cards/03_Modeling_Modifiers/array-railing-from-separated-faces--add-tons-of-detail.md) | railings/balustrades on shophouses |  |
+| [Reference board -> repeating trim piece with Mirror](cards/03_Modeling_Modifiers/reference-repeat-shapes-mirror-trim--cyber-japan-breakdown.md) | architectural trim from a mood board |  |
+| [Remesh text to quads](cards/03_Modeling_Modifiers/remesh-text-to-quads--modifiers.md) | 3D text/numbers that must deform or bevel cleanly |  |
+| [Ridge/border tile strip on a 45° view](cards/03_Modeling_Modifiers/ridge-border-strip-45-degree-view-align--cyber-japan-breakdown.md) | roof ridges and border trims |  |
+| [Seamless sweep backdrop](cards/03_Modeling_Modifiers/sweep-backdrop-plane-extrude-bevel--product-animation-masterclass.md) ⚠ | a studio-sweep stage under the hero object |  |
+| [Simple shapes + a good texture](cards/03_Modeling_Modifiers/simple-shapes-good-texture-arch--five-ways-environments.md) | background architecture that only needs to read |  |
+| [Structural bracket + Snap Base assembly](cards/03_Modeling_Modifiers/structural-bracket-and-snap-combined-variants--add-tons-of-detail.md) | shelf brackets, frames, joined kit pieces |  |
+| [Terraced steps descending into water](cards/03_Modeling_Modifiers/terraced-steps-into-water-depth--serene-render.md) | showing levels/depth (tiers of a number) |  |
+| [Three-tier foreground detail](cards/03_Modeling_Modifiers/three-tier-foreground-detail--detailed-foregrounds.md) | a low macro shot where the ground fills the frame |  |
+| [Wireframe modifier wire model](cards/03_Modeling_Modifiers/wireframe-modifier-wire-model--modifiers.md) | an x-ray/blueprint state of the hero object on the word |  |
+
+## Shading & lighting
+
+126 topics.
+
+| topic | use when | card |
+|---|---|---|
+| [Accent lights parented to the moving hero](cards/04_Shading_Lighting/lights-parented-to-hero--car-animation.md) | keeping a travelling object's shape lit through a flight |  |
+| [AO node as a proximity dirt mask](cards/04_Shading_Lighting/ao-node-dirt-mask--pro-materials.md) ⚠ | grime in the crevices of a well-used object |  |
+| [Backlight with the source just out of frame](cards/04_Shading_Lighting/backlight-sun-just-out-of-frame--backlight-everything.md) | glowing edges on an object against the dark |  |
+| [Backlit disk rim light in the accent colour](cards/04_Shading_Lighting/backlit-disk-rim-light--perfect-product-animations.md) | the brand accent on what the line is about |  |
+| [Balance each light; remove unmotivated lights](cards/04_Shading_Lighting/light-intensity-per-light-group-remove-unmotivated--advanced-comp-nuke-wk1.md) | checking a light rig for fake-looking sources |  |
+| [Balance exposure to the brightest thing you can't control](cards/04_Shading_Lighting/balance-to-what-you-cant-control--backlight-everything.md) | a shot with a bright screen or sign in frame |  |
+| [Black world + soft key/edge lights (low-key reveal)](masters/04_Shading_Lighting/black-world-low-key-reveal.md) ⚠ | the opening dark-room reveal of the hero object | **M** (2) |
+| [Blend textures with an image-derived (Color Ramp) mask](masters/04_Shading_Lighting/texture-self-masked-mix.md) ⚠ | grunge or painted-wood variation on a surface | **M** (2) |
+| [Blockers / off-screen casters to contain light](masters/04_Shading_Lighting/light-blockers-flags.md) ⚠ | keeping a bright light only where the line needs it | **M** (2) |
+| [Bounce light in a real-time engine (SSGI / irradiance)](cards/04_Shading_Lighting/eevee-gi-workarounds--power-of-lighting.md) | raea scenes that look flat without GI |  |
+| [Brushed aluminium from noise on Object coords](cards/04_Shading_Lighting/brushed-aluminium-noise-object-coords--product-animation-masterclass.md) | a can/tin/appliance hero in macro |  |
+| [Build lights from black, one layer at a time](masters/04_Shading_Lighting/light-stack-one-at-a-time.md) ⚠ | starting any lighting pass | **M** (2) |
+| [Camera-parented backdrop with a light gradient](cards/04_Shading_Lighting/camera-locked-backdrop-gradient--perfect-product-animations.md) | a clean gradient behind the hero that follows every setup |  |
+| [Cheated rim spot in the source's colour](cards/04_Shading_Lighting/cheated-rim-spot--ten-cinematic-tips.md) | separating the hero from the dark background |  |
+| [Checkerboard lighting (alternate contrast)](cards/04_Shading_Lighting/checkerboard-lighting-alternating-contrast--lighting-characters.md) | making layered objects read against each other |  |
+| [Colour psychology of hues and light tints](masters/04_Shading_Lighting/colour-psychology.md) ⚠ | choosing the accent/light tint for a line's meaning | **M** (2) |
+| [Colour-match library assets (Hue/Sat + Multiply)](masters/04_Shading_Lighting/colour-match-library-assets.md) ⚠ | making a downloaded model sit in the episode palette | **M** (2) |
+| [Colour-rich texture + coloured key](cards/04_Shading_Lighting/colorful-texture-plus-colored-key--nice-colors.md) | adding natural colour without a saturated grade |  |
+| [Colour-wheel palette schemes (complementary, mono, tetradic...)](masters/04_Shading_Lighting/colour-wheel-palette-schemes.md) ⚠ | picking the episode palette around the brand accent | **M** (5) |
+| [Colourway variants via the label's alpha as mix factor](cards/04_Shading_Lighting/colourway-variants-alpha-mask-mix--product-animation-masterclass.md) | showing the same product in several colours |  |
+| [Darken/leave unlit what doesn't matter](masters/04_Shading_Lighting/darkness-guides-the-eye.md) ⚠ | hiding weak areas and steering the eye to the subject | **M** (2) |
+| [Day-to-night transition (sky ramp + light fades)](cards/04_Shading_Lighting/sky-and-light-fade-day-to-night-transition--eevee-animation-blender5.md) | time passing on a line (opening hours, a day's sales) |  |
+| [Dim fill to lift shadow detail (keep the dark)](masters/04_Shading_Lighting/dim-fill-lift-shadows.md) ⚠ | dark-room macro where blacks crush on the phone | **M** (3) |
+| [Displacement maps as glowing emissive patterns](cards/04_Shading_Lighting/displacement-map-emissive-pattern--emission-textures.md) | sci-fi/tech glowing patterns on a screen or surface |  |
+| [DIY softbox: translucent plane before an area light](cards/04_Shading_Lighting/translucent-plane-softbox--power-of-lighting.md) | softening a light's quality |  |
+| [Dramatic spotlight key + faint area fill](cards/04_Shading_Lighting/dramatic-spot-plus-area-fill--good-lighting-environments.md) | a motivated hard pool of light on the subject |  |
+| [Dust / light-ray / fog image cards on alpha planes](masters/04_Shading_Lighting/image-atmosphere-cards.md) ⚠ | cheap god rays or dust in the top-light cone | **M** (2) |
+| [Fake bounce lights (soft point/area where bounce is plausible)](masters/04_Shading_Lighting/fake-bounce-lights.md) ⚠ | lifting dark corners believably in real-time (no path tracing) | **M** (4) |
+| [Film palettes and selective colour pop](cards/04_Shading_Lighting/film-palettes-selective-colour-pop--key-to-realistic-renders.md) | one saturated accent in a neutral frame (Style D) |  |
+| [Fog sprites as camera-facing particles](cards/04_Shading_Lighting/fog-sprite-particle-billboards--renders-instantly-cooler.md) | ground fog patches in a wide |  |
+| [Gaffer mindset: intentional story lighting](cards/04_Shading_Lighting/gaffer-intentional-story-lighting--key-to-realistic-renders.md) | deciding what the light says on each line |  |
+| [Glowing lantern: emission core in translucent shell](cards/04_Shading_Lighting/emissive-lantern-inner-core-translucent-shell--cyber-japan-breakdown.md) ⚠ | lanterns, lamps, lit signs |  |
+| [Gobos: alpha planes for patterned/moving shadows](masters/04_Shading_Lighting/gobo-shadow-patterns.md) ⚠ | window blinds, leaves or drifting cloud shadows across the set | **M** (4) |
+| [Golden-hour low sun](cards/04_Shading_Lighting/golden-hour-low-sun--good-lighting-environments.md) ⚠ | warm late-day street/exterior shots |  |
+| [Gradient-alpha atmosphere planes between depth layers](cards/04_Shading_Lighting/gradient-alpha-atmosphere-planes--renders-instantly-cooler.md) | 2D depth haze between layers of a wide |  |
+| [Gradient-falloff emissive plane softbox](masters/04_Shading_Lighting/gradient-emissive-softbox.md) ⚠ | soft reflection strips on glass/gloss instead of hard rectangles | **M** (3) |
+| [Grunge/imperfection image into roughness](masters/04_Shading_Lighting/grunge-image-roughness.md) ⚠ | wear and fingerprints on a macro surface | **M** (3) |
+| [Hard raking side key so shadows reveal form](masters/04_Shading_Lighting/form-revealing-raking-key.md) ⚠ | showing texture/relief of the hero object | **M** (3) |
+| [HDRI for bright scenes, plain world for dark](cards/04_Shading_Lighting/hdri-for-bright-plain-world-for-dark--lighting-characters.md) | choosing the world lighting for a set |  |
+| [Hidden emission planes for interior light](cards/04_Shading_Lighting/hidden-emission-planes-interior-light--10-blender-tricks.md) | lighting a shop interior or box interior |  |
+| [Hide a light's shape in reflections (Glossy visibility off)](masters/04_Shading_Lighting/hide-light-in-reflections.md) | glossy hero showing a fake CG light rectangle | **M** (2) |
+| [IES light profiles](cards/04_Shading_Lighting/ies-light-profiles--power-of-lighting.md) | real fixture light shapes (downlights on a counter) |  |
+| [Image-textured light (photo/caustics in the light)](masters/04_Shading_Lighting/image-textured-light.md) | natural uneven light pools, water caustics near glass | **M** (2) |
+| [Image/photo-textured area lights for realistic reflections](masters/04_Shading_Lighting/photo-textured-light-shapers.md) ⚠ | glossy hero whose reflection shows a fake rectangle | **M** (2) |
+| [Inverse-square falloff: near light steers, high light evens](masters/04_Shading_Lighting/light-falloff-distance.md) ⚠ | controlling where attention falls by light distance | **M** (2) |
+| [Keep fake fills out of volumetric fog](cards/04_Shading_Lighting/exclude-fill-lights-from-volume--better-lighting-trick.md) | fills making the haze glow everywhere (washout) |  |
+| [Keep fill lights clear of geometry](cards/04_Shading_Lighting/fill-light-geometry-intersection-artifact--better-lighting-trick.md) | fixing light-intersection lines |  |
+| [Key-position patterns (butterfly, loop, Rembrandt, split)](cards/04_Shading_Lighting/key-position-patterns-butterfly-loop-rembrandt-split--lighting-characters.md) | lighting faces/figures (rare; figures hold poses) |  |
+| [Keyframed emission colour as a state change](cards/04_Shading_Lighting/emission-colour-state-change-keys--perfect-product-animations.md) ⚠ | an object lighting up in the accent on its word |  |
+| [Large area key for metal reflections + tinted uplight](cards/04_Shading_Lighting/area-key-reflections-plus-colored-uplight--add-tons-of-detail.md) ⚠ | metallic hero (till, coin, tin) in the dark room |  |
+| [Light colour in Kelvin (Blackbody) vs free colour](masters/04_Shading_Lighting/kelvin-light-colour.md) ⚠ | warm practical vs cool ambient light colour choices | **M** (2) |
+| [Light Falloff colour gradient with distance](cards/04_Shading_Lighting/light-falloff-color-gradient--lighting-secrets.md) | warm-to-cool shift across a light pool |  |
+| [Light linking (light only chosen objects)](masters/04_Shading_Lighting/light-linking.md) | rim on the product but not the reflective floor | **M** (4) |
+| [Light pools separate depth layers](cards/04_Shading_Lighting/light-pools-separate-depth-layers--add-depth-renders.md) | midground hero lit, fore/background left dark |  |
+| [Light through openings for shadow play](cards/04_Shading_Lighting/light-through-openings-shadow-play--lighting-characters.md) | light streaks through a shutter or window |  |
+| [Light trails by squashing UVs](cards/04_Shading_Lighting/uv-squash-light-trails--emission-textures.md) | speed/flow streaks (payments moving) |  |
+| [Light types and their multipliers](cards/04_Shading_Lighting/light-types-and-multipliers--power-of-lighting.md) | picking point/sun/spot/area and per-light multipliers |  |
+| [Lighting ratio: high key vs low key](cards/04_Shading_Lighting/lighting-ratio-high-key-low-key--lighting-characters.md) | setting calm vs dramatic contrast per episode |  |
+| [Lights with jobs: top base, side spots carve, back points silhouette](cards/04_Shading_Lighting/form-light-rig-top-area-side-spots-backlight-silhouette--cyber-japan-breakdown.md) ⚠ | a full set light plan for a shop/diorama |  |
+| [Low-key build starting from the back light](cards/04_Shading_Lighting/back-light-first-hair-rim-halo--lighting-characters.md) | a silhouette-first hero reveal in haze |  |
+| [Masked dodge/burn after render](cards/04_Shading_Lighting/masked-dodge-burn-local-light--special-look.md) | brightening or darkening one region in post |  |
+| [Match light direction from the plate's shadows](cards/04_Shading_Lighting/match-light-direction-per-frame-position--advanced-comp-nuke-wk1.md) ⚠ | integrating a CG object into a photo/footage plate |  |
+| [Material variant keeping normal/roughness, swap colour](cards/04_Shading_Lighting/material-variant-shared-normal-roughness--add-tons-of-detail.md) | colour variants of one PBR material |  |
+| [Metallic flake speckle via Voronoi normal](cards/04_Shading_Lighting/voronoi-flake-normal-detail--pro-materials.md) | car paint / sparkly packaging |  |
+| [Mist pass depth fog](masters/04_Shading_Lighting/mist-pass-fog.md) ⚠ | background fog without render cost | **M** (2) |
+| [Mix Shader with a noise-masked dirt layer](cards/04_Shading_Lighting/mix-shader-masked-dirt-layer--pro-materials.md) | a second material layer (dirt, rust) on a surface |  |
+| [Moody overcast: sky + denser volume + soft area](cards/04_Shading_Lighting/moody-overcast-sky-volume-area--good-lighting-environments.md) | a grey, sombre beat (loss, closure) |  |
+| [Motivated lighting with the fewest lights](cards/04_Shading_Lighting/motivated-lighting-fewest-lights--lighting-characters.md) | every light must have a believable source |  |
+| [Near-black rough ground plane](cards/04_Shading_Lighting/dark-ground-plane-silhouette--fundamentals-of-lighting.md) | silhouette and bounce control under the hero |  |
+| [Negative fill (black blocker) for contrast](masters/04_Shading_Lighting/negative-fill.md) ⚠ | carving contrast on the hero's shadow side | **M** (2) |
+| [Nudge the key so adjacent faces differ in value](cards/04_Shading_Lighting/nudge-key-for-face-separation--fundamentals-of-lighting.md) | boxy objects whose faces merge into one tone |  |
+| [Off-screen motivated light and up-lighting](cards/04_Shading_Lighting/offscreen-motivated-light--ten-cinematic-tips.md) ⚠ | ominous scale (a looming cost, a giant bill) |  |
+| [One dominant emissive colour, others at a tenth](cards/04_Shading_Lighting/one-dominant-neon-colour-tenth-strength--use-lighting-in-renders.md) | many glowing signs without competing with the accent |  |
+| [One dominant light does almost everything](masters/04_Shading_Lighting/one-dominant-light.md) ⚠ | the Style D single soft top light | **M** (4) |
+| [One library texture + Cube Projection UV on everything](masters/04_Shading_Lighting/library-texture-cube-projection.md) ⚠ | texturing many kit pieces/props fast | **M** (2) |
+| [Orbit/sweep lights around the subject with a 3D-cursor pivot](masters/04_Shading_Lighting/light-orbit-3d-cursor-pivot.md) | finding the key angle on the hero object fast | **M** (2) |
+| [Pair every emissive practical with a real light](masters/04_Shading_Lighting/emissive-practical-plus-light.md) ⚠ | a glowing sign/screen that must light its surroundings | **M** (2) |
+| [Parallel spotlights as broken sunlight](cards/04_Shading_Lighting/parallel-spotlights-fake-sunbeams--detail-isnt-hard.md) ⚠ | patches of light picking out only what should be seen |  |
+| [Per-light range cutoff (light the subject only)](masters/04_Shading_Lighting/light-range-cutoff.md) ⚠ | keeping fills off the floor/background | **M** (2) |
+| [Photo -> emission + alpha cut-out planes (neon signs)](masters/04_Shading_Lighting/photo-emissive-neon-cutouts.md) ⚠ | glowing shop signs or neon in the background | **M** (3) |
+| [Photo sky/backdrop on an emissive plane](masters/04_Shading_Lighting/photo-sky-backdrop-plane.md) ⚠ | a window view or sky behind a set, also lighting it | **M** (6) |
+| [Photo/video fire on an emissive keyed plane](masters/04_Shading_Lighting/fire-on-emissive-plane.md) ⚠ | a stove or flame in an F&B shot without simulation | **M** (2) |
+| [Practical lights inside objects/instances](masters/04_Shading_Lighting/practical-light-inside-object.md) ⚠ | an object glowing from within (lit drawer, lit windows) | **M** (2) |
+| [Principled BSDF preset finishes](cards/04_Shading_Lighting/principled-preset-finishes--pro-materials.md) | plastic, thin-film, coated paint surfaces |  |
+| [Printed metal can surface (metallic + anisotropy + coat)](cards/04_Shading_Lighting/coated-metal-can-principled-settings--product-animation-masterclass.md) | a drink can or printed tin as the hero |  |
+| [Procedural LED wall (Wave + Gradient + Modulo)](cards/04_Shading_Lighting/procedural-led-wall-wave-modulo--car-animation.md) ⚠ | an animated LED/screen backdrop |  |
+| [Product lighting with many hidden lights](cards/04_Shading_Lighting/product-lighting-many-hidden-lights--key-to-realistic-renders.md) | a commercial-grade product hero |  |
+| [Product rig: back highlight, sharp side, soft fill](cards/04_Shading_Lighting/back-sharp-soft-product-rig--realistic-product-lighting.md) | glossy product hero shot |  |
+| [Push the backdrop away to kill spill](cards/04_Shading_Lighting/backdrop-distance-controls-light-spill--perfect-product-animations.md) | keeping the background black behind a lit object |  |
+| [Real-time render polish: AO, bloom, soft shadows](masters/04_Shading_Lighting/realtime-polish-ao-bloom-soft-shadows.md) ⚠ | base raea look settings for every episode | **M** (2) |
+| [Recolour an emissive image (Hue/Sat + Multiply)](cards/04_Shading_Lighting/recolour-emission-hue-sat-multiply--emission-textures.md) | matching a glowing texture to the brand accent |  |
+| [Reference images for photoreal materials and camera](cards/04_Shading_Lighting/reference-images-for-photoreal-materials--renders-look-boring.md) | grounding a material/camera in reality |  |
+| [Reflective surfaces carry light into dark areas](cards/04_Shading_Lighting/reflections-carry-light-into-dark-areas--dark-environments.md) | bringing life to dark zones without adding light |  |
+| [Reliable god rays (hard light + complex shadow + volume)](cards/04_Shading_Lighting/reliable-god-rays--lighting-secrets.md) | beams through a shutter or window in haze |  |
+| [Remap texture range with Color Ramp / Map Range](cards/04_Shading_Lighting/remap-texture-range-colorramp-maprange--pro-materials.md) | bringing a texture into sane roughness/bump values |  |
+| [Rim light placed for an edge reflection](cards/04_Shading_Lighting/rim-light-edge-reflection--fundamentals-of-lighting.md) ⚠ | catching bevels on the hero's top edge |  |
+| [Seamless mirror floor with animated noise bump](cards/04_Shading_Lighting/mirror-water-floor-noise-bump--perfect-product-animations.md) | a reflective surface under the hero |  |
+| [Second UV map: symbol layered under text](cards/04_Shading_Lighting/second-uv-map-masked-symbol-under-text--product-animation-masterclass.md) | a logo/symbol on a label with embossing |  |
+| [Sell glow: reflective floor, volume, bloom](cards/04_Shading_Lighting/sell-glow-volume-bloom-reflective-floor--emission-textures.md) | making an emissive sign/screen feel bright |  |
+| [Shadow softness from light size and distance](masters/04_Shading_Lighting/light-softness-size-distance.md) ⚠ | choosing the soft top light's size for the macro look | **M** (2) |
+| [Short vs broad key side](cards/04_Shading_Lighting/short-vs-broad-key-side--lighting-characters.md) | drama vs openness on a subject |  |
+| [Side strip lights for reflection lines](cards/04_Shading_Lighting/side-strip-reflection-lights--perfect-product-animations.md) | the 'product ad' highlight down a glossy body |  |
+| [Silhouette: dense fog + one coloured backlight](cards/04_Shading_Lighting/silhouette-dense-fog-single-backlight--lighting-characters.md) ⚠ | a mysterious/hook silhouette beat |  |
+| [Soft neutral foreground vs hard-lit subject](cards/04_Shading_Lighting/soft-neutral-foreground-vs-hard-lit-subject--improve-compositions.md) | separating subject from foreground by light quality |  |
+| [Soft sky, no hard sun, for reflective products](cards/04_Shading_Lighting/soft-sky-for-reflective-product--backlight-everything.md) | shiny product in daylight |  |
+| [Soften the key on tight shots](cards/04_Shading_Lighting/soften-key-on-tight-shots--backlight-everything.md) | close macro where hard light looks harsh |  |
+| [Split colour/alpha for layered see-through emitters](cards/04_Shading_Lighting/split-colour-alpha-layered-emitters--emission-textures.md) | holographic or layered glowing graphics |  |
+| [Stacked over-bright transparent water layers](cards/04_Shading_Lighting/stacked-bright-transparent-water-layers--serene-render.md) ⚠ | clear water look (Cycles-only; flag for raea) |  |
+| [Start with points, convert to spots to cut spill](cards/04_Shading_Lighting/point-to-spot-cull-spill--fundamentals-of-lighting.md) ⚠ | containing lights once positions are found |  |
+| [Steal lighting setups from real photography](cards/04_Shading_Lighting/steal-real-photo-lighting-setups--power-of-lighting.md) | recreating a real product/car photo look |  |
+| [Story texture on the ground, crushed dark](cards/04_Shading_Lighting/rgb-curves-crush-ground-texture--fundamentals-of-lighting.md) | a ground that tells story but keeps the silhouette |  |
+| [Sun wrap: upstage bounce as key, no sandwich](cards/04_Shading_Lighting/sun-wrap-bounce-upstage-not-sandwich--backlight-everything.md) | exterior subject lit from behind with wrap |  |
+| [Sun/HDRI from the side or behind, never from the camera](masters/04_Shading_Lighting/sun-side-or-behind.md) ⚠ | exterior or daylight setups | **M** (3) |
+| [Support lights = duplicated key at lower power](masters/04_Shading_Lighting/duplicate-key-support-lights.md) | adding light without breaking the one-source read | **M** (2) |
+| [Three questions before lighting](cards/04_Shading_Lighting/three-questions-before-lighting--lighting-characters.md) ⚠ | starting the light plan for a line |  |
+| [Three-point key / fill / rim](masters/04_Shading_Lighting/three-point-lighting.md) ⚠ | a standard lit subject with warm key, cool back | **M** (3) |
+| [Tiny background point light fills empty space](cards/04_Shading_Lighting/tiny-back-point-light-fills-empty-space--use-lighting-in-renders.md) | a dead black hole in the background |  |
+| [Top light mood (pleasing vs sinister)](cards/04_Shading_Lighting/top-light-mood--ten-cinematic-tips.md) | the Style D top light, and a sinister beat |  |
+| [Track To constraint to aim lights](cards/04_Shading_Lighting/track-to-constraint-aim-lights--key-to-realistic-renders.md) | lights that stay on a moving/rotating hero |  |
+| [Tune key brightness by overshooting then dialling back](cards/04_Shading_Lighting/single-key-light-tuned-past-overexposure--dark-environments.md) | setting the one key light's power |  |
+| [Two material slots + seam unwrap for a cylinder label](cards/04_Shading_Lighting/material-slots-seam-unwrap-cylinder-label--product-animation-masterclass.md) | a label on a can/bottle hero |  |
+| [Use library textures with only light adjustments](cards/04_Shading_Lighting/library-texture-light-touch--beautiful-environments.md) | applying fresh 2k PBR sets per episode |  |
+| [Volume bounces to soften a hard spot cone](cards/04_Shading_Lighting/volume-bounces-soften-spot-cone--special-look.md) | a harsh cone in the haze |  |
+| [Volume haze cube (low-density Volume Scatter over the scene)](masters/04_Shading_Lighting/volume-haze-cube.md) ⚠ | making the top light read in the air of the dark room | **M** (15) |
+| [Warm vs cool colour moods (light + grade)](masters/04_Shading_Lighting/warm-cool-mood.md) | cosy vs corporate mood on a line | **M** (2) |
+| [Wet-floor puddles from noise roughness/normal](cards/04_Shading_Lighting/noise-roughness-normal-wet-floor--detailed-foregrounds.md) | a rainy street or wet counter |  |
+
+## Camera, composition & raea pipeline
+
+127 topics.
+
+| topic | use when | card |
+|---|---|---|
+| [A/B lighting comparison (collections / render slots)](masters/05_Camera_Raea_Pipeline/lighting-ab-compare.md) ⚠ | choosing between two light setups | **M** (2) |
+| [Adjust set dressing to the composition](cards/05_Camera_Raea_Pipeline/set-dressing-along-guides--ten-cinematic-tips.md) ⚠ | final per-setup dressing through camera |  |
+| [Aim target glued to a moving subject](cards/05_Camera_Raea_Pipeline/aim-target-follows-moving-subject--blender-camera-rig.md) | camera on its own path while always looking at the token |  |
+| [Align a background by vanishing points](cards/05_Camera_Raea_Pipeline/vanishing-point-alignment-corner-pin--advanced-comp-nuke-wk1.md) ⚠ | placing a photo backdrop |  |
+| [Anamorphic bokeh (oval, cat-eye, fringe)](cards/05_Camera_Raea_Pipeline/anamorphic-bokeh-cat-eye-barn-doors--advanced-comp-nuke-wk1.md) | a filmic bokeh character on highlights |  |
+| [Art-directed bokeh highlight pops](cards/05_Camera_Raea_Pipeline/bokeh-highlight-pops-luma-mask--advanced-comp-nuke-wk1.md) ⚠ | sparkle in the defocused background |  |
+| [Audio first: time shots to the beat](masters/05_Camera_Raea_Pipeline/audio-first-beat-timing.md) ⚠ | locking setup changes to voice/music beats | **M** (2) |
+| [Blending-mode detail masked by an extracted matte](cards/05_Camera_Raea_Pipeline/blending-mode-detail-masked-by-extracted-matte--advanced-comp-nuke-wk1.md) | comp texture on bright areas |  |
+| [Bokeh: aperture blades, ratio, focus distance](masters/05_Camera_Raea_Pipeline/bokeh-blades-shape.md) ⚠ | shaping bokeh on the shallow-DoF macro look | **M** (2) |
+| [Camera body vs lens settings in Blender](cards/05_Camera_Raea_Pipeline/camera-body-vs-lens-dynamic-range--cinematography-next-level.md) | mapping real camera knowledge to raea camera props |  |
+| [Camera driven by the subject's transform + correction layer](cards/05_Camera_Raea_Pipeline/camera-driven-by-subject-transform--cg-cine-ch4-chase.md) | a camera riding along with a travelling token |  |
+| [Camera height, lens and roll set the viewer's relationship](masters/05_Camera_Raea_Pipeline/camera-height-psychology.md) ⚠ | low angle for a big cost, high for overview | **M** (2) |
+| [Camera markers to switch cameras on frames](cards/05_Camera_Raea_Pipeline/camera-markers-bound-cuts--car-animation.md) ⚠ | hard cuts between setups on words |  |
+| [Camera monitor viewport / workspace](masters/05_Camera_Raea_Pipeline/camera-monitor-viewport.md) ⚠ | seeing the shot framing while editing | **M** (2) |
+| [Camera parented to a moving platform](cards/05_Camera_Raea_Pipeline/camera-parented-to-moving-platform--eevee-animation-blender5.md) ⚠ | an elevator/crane rise then push |  |
+| [Camera pendulum swing, cut at fastest moment](cards/05_Camera_Raea_Pipeline/camera-pendulum-swing-cut-on-action--product-animation-masterclass.md) ⚠ | a swing join between two setups |  |
+| [Camera where a person could stand](masters/05_Camera_Raea_Pipeline/camera-plausible-position.md) ⚠ | grounding a setup so it doesn't feel CG | **M** (2) |
+| [Camera-move vocabulary mapped to transforms](cards/05_Camera_Raea_Pipeline/camera-move-vocabulary-transforms--cg-cine-ch2-camera-breakdown.md) | naming and building each setup's move |  |
+| [Capture a camera path in Fly mode with Auto Keying](cards/05_Camera_Raea_Pipeline/fly-mode-autokey-camera-capture-smooth--eevee-animation-blender5.md) ⚠ | organic hand-flown camera paths |  |
+| [Choose 2D / planar / 3D track by parallax](cards/05_Camera_Raea_Pipeline/track-type-selection-2d-planar-3d--advanced-comp-nuke-wk1.md) | attaching graphics to footage (rare) |  |
+| [Cinematic aspect: letterbox / anamorphic squeeze](masters/05_Camera_Raea_Pipeline/cinematic-aspect-letterbox.md) ⚠ | a widescreen 'film' moment inside 9:16 | **M** (2) |
+| [Clarity / local contrast final pass](cards/05_Camera_Raea_Pipeline/clarity-local-contrast-final-pass--add-tons-of-detail.md) ⚠ | a final detail pop |  |
+| [Colour balance: saturation and shadow/highlight tone](cards/05_Camera_Raea_Pipeline/color-balance-saturation-and-color-tone--advanced-comp-nuke-wk1.md) ⚠ | matching CG colour to a plate |  |
+| [Composition guides: centre, thirds, golden triangle](masters/05_Camera_Raea_Pipeline/composition-guides.md) ⚠ | placing the hero and labels in a 9:16 frame | **M** (3) |
+| [Compositional balance and negative space](cards/05_Camera_Raea_Pipeline/compositional-balance-negative-space--cg-cine-ch4-chase.md) | room for captions/labels against the subject |  |
+| [Contrast falloff and haze read as distance](cards/05_Camera_Raea_Pipeline/contrast-falloff-reads-distance-haze--advanced-comp-nuke-wk1.md) | placing elements deep in the scene |  |
+| [Contrast of scale: push extremes apart](cards/05_Camera_Raea_Pipeline/scale-contrast-push-apart--improve-compositions.md) | a tiny coin vs a huge bill |  |
+| [Creep-in push to reframe and add depth](cards/05_Camera_Raea_Pipeline/creep-in-reframe-eye-triangle--cg-cine-ch3-nuke.md) | a slow push during an explanation line |  |
+| [Curated asset library with licence check](cards/05_Camera_Raea_Pipeline/curated-asset-library-licence-check--beautiful-environments.md) | logging fresh assets in ASSET-SOURCES.md |  |
+| [Dark edge framing / natural vignette from unlit objects](masters/05_Camera_Raea_Pipeline/dark-edge-framing.md) ⚠ | dark-room framing around the hero | **M** (2) |
+| [Decide the emotion before the camera](cards/05_Camera_Raea_Pipeline/story-emotion-before-camera--ten-cinematic-tips.md) | planning each setup per line |  |
+| [Decouple a follower from its parent's rotation](cards/05_Camera_Raea_Pipeline/decouple-follower-from-parent-rotation--dinosaur-run-cycle.md) | a child object animated independently of a moving parent |  |
+| [Defocus with a real bokeh shape (convolve)](cards/05_Camera_Raea_Pipeline/real-bokeh-shape-convolve--advanced-comp-nuke-wk1.md) | photographic bokeh in comp |  |
+| [Deliberate overlap for depth](cards/05_Camera_Raea_Pipeline/occlusion-overlap-stacking--add-depth-renders.md) | stacking objects so depth reads |  |
+| [Denoise the plate first](cards/05_Camera_Raea_Pipeline/denoise-first-before-key-track-paint--advanced-comp-nuke-wk1.md) ⚠ | comp work on footage (rare) |  |
+| [Dense foreground, sparse background](cards/05_Camera_Raea_Pipeline/foreground-density-detail-illusion--detail-isnt-hard.md) | cheap perceived detail in a wide |  |
+| [Depth through backlit layers](cards/05_Camera_Raea_Pipeline/backlit-depth-layers-and-facing-the-light--backlight-everything.md) ⚠ | wide shots with layered silhouettes |  |
+| [Desaturate in 3D, saturate in the grade](cards/05_Camera_Raea_Pipeline/desaturate-in-3d-saturate-in-grade--nice-colors.md) | keeping colour headroom for the accent |  |
+| [Despill to environment, keymix original](cards/05_Camera_Raea_Pipeline/despill-tint-to-environment-keymix-original--advanced-comp-nuke-wk1.md) ⚠ | keying footage (rare) |  |
+| [Display fog cube as Bounds](cards/05_Camera_Raea_Pipeline/display-as-bounds-shortcut--volumetrics-look-better.md) | keeping the viewport fast with a haze cube |  |
+| [DoF amount sells scale](cards/05_Camera_Raea_Pipeline/depth-of-field-sells-scale--advanced-comp-nuke-wk1.md) | miniature vs life-size read of a macro object |  |
+| [DoF: focus on the hero, choose f-stop per shot](masters/05_Camera_Raea_Pipeline/dof-focus-fstop.md) ⚠ | setting focus and f-stop on each macro setup | **M** (2) |
+| [Dolly zoom (Vertigo)](cards/05_Camera_Raea_Pipeline/dolly-zoom--cinematography-next-level.md) ⚠ | a realisation beat (check rule: no crash zooms) |  |
+| [Duplicate cameras to audition angles](cards/05_Camera_Raea_Pipeline/duplicate-cameras-audition-angles--nice-camera-angles.md) | exploring setups for a line |  |
+| [Dutch roll (small tilt, roll during pans)](masters/05_Camera_Raea_Pipeline/dutch-roll.md) ⚠ | tension or energy in a setup | **M** (2) |
+| [Each shot's end frame is the next start frame](cards/05_Camera_Raea_Pipeline/end-frame-is-next-start-frame-chaining--product-animation-masterclass.md) | joining setups without hard cuts |  |
+| [Edge detail: extract, then fix colour and softness](cards/05_Camera_Raea_Pipeline/edge-detail-extract-then-fix-edge-colour-and-softness--advanced-comp-nuke-wk1.md) | key edges in comp (rare) |  |
+| [Edge-detect flash on a snare (rejected)](cards/05_Camera_Raea_Pipeline/edge-detect-flash-on-snare--product-animation-masterclass.md) ⚠ | reference only: why the author dropped it |  |
+| [Explore fast, then commit](cards/05_Camera_Raea_Pipeline/explore-fast-then-commit--serene-render.md) | trying many setup ideas before building one |  |
+| [Extreme-contrast focal check](cards/05_Camera_Raea_Pipeline/extreme-contrast-focal-check--improve-compositions.md) ⚠ | verifying the focal point reads |  |
+| [Fake motion blur with post zoom blur](cards/05_Camera_Raea_Pipeline/post-zoom-blur-fake-motion-blur--product-animation-masterclass.md) ⚠ | a fast move without render motion blur |  |
+| [False Color exposure check](cards/05_Camera_Raea_Pipeline/false-colour-exposure-check--power-of-lighting.md) ⚠ | checking exposure of a dark-room frame |  |
+| [Film grain (add / match and regrain)](masters/05_Camera_Raea_Pipeline/film-grain.md) ⚠ | removing the rendered look from the final | **M** (2) |
+| [Fix key edge halos](cards/05_Camera_Raea_Pipeline/edge-halo-fix-mix-dark-and-bright-edge-versions--advanced-comp-nuke-wk1.md) ⚠ | keying footage (rare) |  |
+| [Flip the frame to re-check balance](cards/05_Camera_Raea_Pipeline/flip-composition-check--ten-cinematic-tips.md) | reviewing a board/still |  |
+| [Focal length by shot type and mood](masters/05_Camera_Raea_Pipeline/focal-length-choice.md) ⚠ | choosing lens per setup (macro, wide, product) | **M** (3) |
+| [Foreground / midground / background layers](cards/05_Camera_Raea_Pipeline/foreground-midground-background-layers--add-depth-renders.md) | giving every setup depth |  |
+| [Frame the subject with scene elements / blurred foreground](masters/05_Camera_Raea_Pipeline/foreground-framing.md) ⚠ | depth and framing in a macro setup | **M** (2) |
+| [Get it right in 3D; grade only amplifies](cards/05_Camera_Raea_Pipeline/render-first-grade-amplifies--special-look.md) ⚠ | resisting fixing the look in grade |  |
+| [Give every camera move an operator's reason](cards/05_Camera_Raea_Pipeline/motivated-operator-story-per-move--cg-cine-ch3-nuke.md) ⚠ | justifying each setup's move |  |
+| [Glow / bloom on highlights (glare, light wrap)](masters/05_Camera_Raea_Pipeline/glow-bloom.md) ⚠ | glints on metal and lit signs | **M** (3) |
+| [Graduated fisheye via panoramic camera](cards/05_Camera_Raea_Pipeline/fisheye-lens-polynomial-panoramic-camera--super-wide-angle.md) ⚠ | an extreme-wide stylised view |  |
+| [High-pass + offset tracking](cards/05_Camera_Raea_Pipeline/highpass-offset-tracking-low-contrast--advanced-comp-nuke-wk1.md) ⚠ | tracking low-contrast footage (rare) |  |
+| [High/low-res pair via Poly Reduce for export](cards/05_Camera_Raea_Pipeline/high-low-res-poly-reduce-export--houdini-volumes-masterclass.md) ⚠ | lighter GLBs for raea |  |
+| [Judge brightness on a phone](cards/05_Camera_Raea_Pipeline/phone-screen-brightness-check--dark-environments.md) | checking a dark-room preview |  |
+| [Keep detail near black (no crushed shadows)](cards/05_Camera_Raea_Pipeline/keep-detail-near-black-no-crushed-shadows--dark-environments.md) | dark-room frames on phone screens |  |
+| [Key structure: soft edge key + eroded core](cards/05_Camera_Raea_Pipeline/key-structure-core-over-edge--advanced-comp-nuke-wk1.md) ⚠ | keying footage (rare) |  |
+| [Layered camera rig (separate translate/rotate/shake transforms)](masters/05_Camera_Raea_Pipeline/layered-camera-rig.md) | complex camera flights that stay editable | **M** (2) |
+| [Leading lines converge on the focal point](masters/05_Camera_Raea_Pipeline/leading-lines.md) | pointing the eye to the hero via set lines | **M** (2) |
+| [Lens distortion and breathing in tracking](cards/05_Camera_Raea_Pipeline/lens-distortion-and-breathing-affect-tracking--advanced-comp-nuke-wk1.md) | matching CG to filmed footage (rare) |  |
+| [Lens edge softness via variable blur](cards/05_Camera_Raea_Pipeline/lens-edge-softness-sharpness-map-variable-blur--advanced-comp-nuke-wk1.md) | de-CG frame corners |  |
+| [Lens flares, grime, ghosting matched to the lens](cards/05_Camera_Raea_Pipeline/lens-flares-grime-ghosting-match-the-lens--advanced-comp-nuke-wk1.md) ⚠ | a bright light hitting the lens |  |
+| [Let the big thing spill out of frame](cards/05_Camera_Raea_Pipeline/crop-big-event-out-of-frame--cg-cine-ch3-nuke.md) | making a big number/object feel huge |  |
+| [Let the subject enter the frame](cards/05_Camera_Raea_Pipeline/subject-flies-into-frame--cg-cine-ch3-nuke.md) ⚠ | a token arriving into a held setup |  |
+| [Levels: match white, black and mid-tone contrast](cards/05_Camera_Raea_Pipeline/levels-luminance-black-white-midtone-contrast--advanced-comp-nuke-wk1.md) | matching CG to a plate/reference |  |
+| [Light and camera before modelling detail](cards/05_Camera_Raea_Pipeline/light-and-camera-before-detail--beautiful-environments.md) | prioritising build time |  |
+| [Light Groups: relight in the compositor](cards/05_Camera_Raea_Pipeline/light-groups-compositor-relight--power-of-lighting.md) | re-balancing lights without re-render |  |
+| [Lock the camera before lighting](cards/05_Camera_Raea_Pipeline/lock-camera-before-lighting--fundamentals-of-lighting.md) | starting the light pass per setup |  |
+| [Match camera height by horizon line](cards/05_Camera_Raea_Pipeline/camera-height-horizon-match--advanced-comp-nuke-wk1.md) ⚠ | placing CG into a photo plate |  |
+| [Model at real-world scale for light and DoF](cards/05_Camera_Raea_Pipeline/real-world-scale-for-light-and-dof--product-animation-masterclass.md) | every macro object before lighting |  |
+| [Motion blur as shutter](cards/05_Camera_Raea_Pipeline/motion-blur-shutter--cinematography-next-level.md) | fast flights and spinning coins |  |
+| [Move the camera on its own axes](cards/05_Camera_Raea_Pipeline/local-axis-camera-moves-rxx-gzz--nice-camera-angles.md) | precise framing adjustments |  |
+| [Near ground for parallax, fogged distance to isolate](cards/05_Camera_Raea_Pipeline/ground-parallax-distant-fog-isolation--cg-cine-ch3-nuke.md) | a low tracking shot past the hero |  |
+| [Object wipe hides the cut](cards/05_Camera_Raea_Pipeline/object-wipe-hides-cut--product-animation-masterclass.md) | a product crossing the lens joins two setups |  |
+| [One Blender scene per shot](cards/05_Camera_Raea_Pipeline/one-scene-per-shot--car-animation.md) | isolating shot setups in the build file |  |
+| [One clear focal point per frame](cards/05_Camera_Raea_Pipeline/one-clear-focal-point--renders-look-boring.md) ⚠ | every setup must read in 1 s on mute |  |
+| [One focal point with breathing room](cards/05_Camera_Raea_Pipeline/focal-point-and-breathing-room--nice-camera-angles.md) ⚠ | framing the hero with space for captions |  |
+| [One source of motion data, linked everywhere](cards/05_Camera_Raea_Pipeline/single-source-linked-transforms-reference-offset--advanced-comp-nuke-wk1.md) ⚠ | camera/object data shared between build and render |  |
+| [Orbit camera rig (Empty parent or Follow Path + Track To)](masters/05_Camera_Raea_Pipeline/orbit-camera-rig.md) ⚠ | orbit around the hero object, orbit to top-down | **M** (2) |
+| [Paint out with a tracked plate patch](cards/05_Camera_Raea_Pipeline/paint-out-by-sliding-tracked-plate-patch--advanced-comp-nuke-wk1.md) ⚠ | removing things from footage (rare) |  |
+| [Patch an under-lit backdrop with a white solid fade](cards/05_Camera_Raea_Pipeline/white-solid-fade-fixes-grey-backdrop--product-animation-masterclass.md) | emergency edit fix (rare) |  |
+| [Per-hue colour correction (Hue-vs curves / colour mixer)](masters/05_Camera_Raea_Pipeline/per-hue-correction.md) | fixing one colour without touching the accent | **M** (2) |
+| [Pose questions, don't reveal answers](cards/05_Camera_Raea_Pipeline/pose-questions-not-answers--renders-look-boring.md) | the hook / open loop frames |  |
+| [Post punch-in zoom on the beat](cards/05_Camera_Raea_Pipeline/beat-punch-in-zoom-adjustment-clip--product-animation-masterclass.md) ⚠ | an emphasis push on a key word (check rules) |  |
+| [Pre-render heavy stages to image sequences](cards/05_Camera_Raea_Pipeline/pre-render-heavy-stages-image-sequences--advanced-comp-nuke-wk1.md) ⚠ | long renders in chunks |  |
+| [Push into a letter until it becomes the next backdrop](cards/05_Camera_Raea_Pipeline/zoom-into-letter-loop-transition--product-animation-masterclass.md) | a transition built from the object's own label |  |
+| [Rack focus / focus locked to a target Empty](masters/05_Camera_Raea_Pipeline/rack-focus-target.md) | shifting attention from one object to another on the word | **M** (3) |
+| [Rank objects into importance tiers](cards/05_Camera_Raea_Pipeline/importance-tiers-centre-light-size--improve-compositions.md) | deciding what gets light, centre and size |  |
+| [Reference breakdown: copy each shot's purpose](cards/05_Camera_Raea_Pipeline/reference-shot-breakdown-copy-the-why--cg-cine-ch4-chase.md) | studying a reference video before planning |  |
+| [Reframe before relighting or remodelling](cards/05_Camera_Raea_Pipeline/reframe-to-hide-flaws--nice-camera-angles.md) ⚠ | a weak frame in review |  |
+| [Release a Track To (influence 1 -> 0) for camera exit](cards/05_Camera_Raea_Pipeline/constraint-influence-release-camera-exit--product-animation-masterclass.md) ⚠ | flying out of a tracked setup to the next |  |
+| [Relight every shot; match by contrast](cards/05_Camera_Raea_Pipeline/relight-every-shot-match-by-contrast--backlight-everything.md) | each setup lit for itself |  |
+| [Render high fps for speed ramps](cards/05_Camera_Raea_Pipeline/high-fps-render-for-speed-ramp--product-animation-masterclass.md) | slow motion on a key word (60 fps finals) |  |
+| [Render output and edit handoff (PNG sequences, proxies)](cards/05_Camera_Raea_Pipeline/render-output-and-edit-handoff--product-animation-masterclass.md) ⚠ | final render to edit |  |
+| [Reserve DoF for close-ups](cards/05_Camera_Raea_Pipeline/dof-close-ups-only--ten-cinematic-tips.md) | deciding DoF per setup |  |
+| [Restrained final grade pass](masters/05_Camera_Raea_Pipeline/final-grade-pass.md) ⚠ | the finishing grade on every episode | **M** (5) |
+| [Reusable atmosphere asset collections](cards/05_Camera_Raea_Pipeline/reusable-atmosphere-asset-collections--renders-instantly-cooler.md) | quickly adding birds, leaves, rays, haze |  |
+| [Same move in several colourways, cut on hits](cards/05_Camera_Raea_Pipeline/colour-variant-stack-cut-on-hits--product-animation-masterclass.md) ⚠ | showing variants on rhythm |  |
+| [Scale cue with recognisable objects](cards/05_Camera_Raea_Pipeline/scale-cue-recognisable-objects--serene-render.md) | showing size without people |  |
+| [Self-review by walking the fundamentals](cards/05_Camera_Raea_Pipeline/self-review-by-fundamentals-checklist--advanced-comp-nuke-wk1.md) ⚠ | checking a frame before showing |  |
+| [Separate modelling from scene building](cards/05_Camera_Raea_Pipeline/separate-modelling-from-scene-building--five-ways-environments.md) | organising the build phases |  |
+| [Shake from real handheld footage](cards/05_Camera_Raea_Pipeline/real-handheld-camera-shake-transfer--advanced-comp-nuke-wk1.md) ⚠ | authentic handheld feel from a recorded track |  |
+| [Slap comp first pass](cards/05_Camera_Raea_Pipeline/slap-comp-first-pass-scale-correct--advanced-comp-nuke-wk1.md) | fast look first, polish later |  |
+| [Slide off-centre, then rebalance the aim](cards/05_Camera_Raea_Pipeline/off-centre-then-rebalance-aim--nice-camera-angles.md) ⚠ | finding a less static angle |  |
+| [Slow focal-length pull with product turn and DoF](cards/05_Camera_Raea_Pipeline/focal-length-pull-and-dof-focus--perfect-product-animations.md) | a calm hero beat |  |
+| [Small light reference board](cards/05_Camera_Raea_Pipeline/light-reference-board-no-overplanning--five-ways-environments.md) | planning a lighting look |  |
+| [Split-tone: cool shadows in a warm frame](masters/05_Camera_Raea_Pipeline/split-tone-cool-shadows.md) ⚠ | final grade colour separation | **M** (2) |
+| [Stabilize to verify tracks, roto on stabilized plate](cards/05_Camera_Raea_Pipeline/stabilize-verify-and-roto-on-stabilized-plate--advanced-comp-nuke-wk1.md) ⚠ | footage work (rare) |  |
+| [Stepped height hierarchy rising to one peak](cards/05_Camera_Raea_Pipeline/stepped-height-hierarchy-triangle--improve-compositions.md) | arranging props or bars toward the hero |  |
+| [Story props hint at backstory](cards/05_Camera_Raea_Pipeline/story-props-hint-backstory--renders-look-boring.md) | dressing the shop with the owner's story |  |
+| [Subtle lens distortion / chromatic aberration](masters/05_Camera_Raea_Pipeline/lens-fringe-distortion.md) ⚠ | de-CG the final frame edges | **M** (3) |
+| [Very long lens for scale, pans matched to motion](cards/05_Camera_Raea_Pipeline/long-lens-scale-and-motion-matched-pan--cg-cine-ch3-nuke.md) ⚠ | a compressed tracking shot of a moving token |  |
+| [View transform: AgX vs Filmic, Looks](masters/05_Camera_Raea_Pipeline/view-transform-agx.md) ⚠ | highlights rolling off naturally (raea tone map) | **M** (2) |
+| [Vignetting match and soft final vignette](cards/05_Camera_Raea_Pipeline/vignetting-match-and-final-polish--advanced-comp-nuke-wk1.md) | focusing the eye in the final |  |
+| [What lift/gamma/gain/offset do](cards/05_Camera_Raea_Pipeline/lift-gamma-gain-offset-blackpoint-whitepoint--advanced-comp-nuke-wk1.md) | understanding grade controls |  |
+| [Wide-angle limits for natural look](cards/05_Camera_Raea_Pipeline/wide-angle-limits-tight-spaces--nice-camera-angles.md) ⚠ | lens choice in tight interiors |  |
+| [Zoom vs moving the camera (lens compression)](masters/05_Camera_Raea_Pipeline/zoom-vs-move-compression.md) ⚠ | deciding dolly vs focal change in a move | **M** (3) |
+

@@ -1,0 +1,553 @@
+00:00 you need to up your camera work if you
+00:02 
+
+00:02 want your blender animations to stand
+00:04 
+
+00:04 out in this video I will show you three
+00:06 
+
+00:06 killer tricks that will make your
+00:07 
+
+00:07 blender projects look one step closer to
+00:10 
+
+00:10 a Hollywood movie but none of that would
+00:12 
+
+00:12 be possible without a Target camera
+00:14 
+
+00:14 which is what you may ask well let me
+00:17 
+
+00:17 explain in the most simple form
+00:18 
+
+00:18 animation is moving an object from point
+00:20 
+
+00:20 A to B the speed of Animation is
+00:22 
+
+00:23 expressed by frames and in general the
+00:25 
+
+00:25 more frames it takes for an object to
+00:26 
+
+00:26 move the slower the animation but why
+00:29 
+
+00:29 I'm telling you this well if you want to
+00:31 
+
+00:31 animate a camera we not only move it
+00:33 
+
+00:33 from point A to B but also rotate it so
+00:36 
+
+00:36 it stays focused on the target which is
+00:38 
+
+00:38 a real pain in the but praise the Lord
+00:41 
+
+00:41 for the Target camera because it's the
+00:43 
+
+00:43 perfect solution to our problem with
+00:45 
+
+00:45 Target camera you will no longer have to
+00:47 
+
+00:47 worry about objects getting out of frame
+00:49 
+
+00:49 it will always stay focused and all you
+00:52 
+
+00:52 have to do is animating the camera
+00:53 
+
+00:53 position creating a Target camera is
+00:56 
+
+00:56 super easy press shift a and start by
+00:58 
+
+00:58 adding a new camera to your blender
+00:60 
+
+00:60 scene move it to the side and now add an
+01:03 
+
+01:03 empty object select the camera again and
+01:06 
+
+01:06 go to the object constraints where you
+01:08 
+
+01:08 choose the track to constraint now with
+01:12 
+
+01:12 the eyedropper tool select the empty
+01:14 
+
+01:14 object now learning how to use Target
+01:17 
+
+01:17 camera is one thing but are there any
+01:19 
+
+01:19 actual secrets that experience 3D
+01:22 
+
+01:22 artists use to always nail a perfect
+01:25 
+
+01:25 look in their projects I've spent over
+01:27 
+
+01:27 10 years working as a 3D artist and it
+01:30 
+
+01:30 almost always comes down to three things
+01:32 
+
+01:32 about image composition that might
+01:34 
+
+01:35 surprise you aren't really that hard to
+01:37 
+
+01:37 learn but first let's look how you can
+01:39 
+
+01:39 use the target camera the first example
+01:41 
+
+01:41 looks instantly cool and there are
+01:43 
+
+01:43 countless scenarios where you can use it
+01:45 
+
+01:45 it's a simple camera rotation around the
+01:47 
+
+01:47 Target and now let's learn how to do it
+01:50 
+
+01:50 place the camera in a starting location
+01:54 
+
+01:54 now press the I key to add a keyframe
+01:58 
+
+01:58 and choose location move the timeline a
+02:00 
+
+02:00 number of frames depending on how long
+02:02 
+
+02:02 you want the animation to be and place
+02:04 
+
+02:04 the camera in a new location now press
+02:07 
+
+02:07 the I key again and choose location
+02:09 
+
+02:09 again with the camera selected go to
+02:12 
+
+02:12 view cameras and choose select active
+02:15 
+
+02:15 object as camera you can also see the
+02:18 
+
+02:18 keyboard shortcuts listed on the right
+02:19 
+
+02:19 now press spacebar to preview the
+02:22 
+
+02:22 animation as you can see it takes some
+02:24 
+
+02:24 time for a camera to accelerate and it
+02:26 
+
+02:26 also slows down by the end so let's
+02:28 
+
+02:28 change it I want my motion to be linear
+02:30 
+
+02:30 throughout the entire animation with the
+02:33 
+
+02:33 camera selected move the mouse cursor
+02:35 
+
+02:35 over the timeline and press a this will
+02:37 
+
+02:37 select all keyframes now press V and
+02:41 
+
+02:41 choose the vector handle type when we
+02:43 
+
+02:43 Now launch the animation you can see the
+02:45 
+
+02:45 camera moving with a constant speed from
+02:47 
+
+02:47 start to the end so what are the
+02:50 
+
+02:50 composition Secrets I've recorded over
+02:52 
+
+02:52 four hours four hours of videos on that
+02:56 
+
+02:56 topic which can be found in my art of
+02:58 
+
+02:58 rendering Master Class Linked In the
+02:60 
+
+02:60 video description but the first tip that
+03:03 
+
+03:03 will make your composition instantly
+03:05 
+
+03:05 more dramatic is simply rolling the
+03:07 
+
+03:07 camera sideways The Horizon and all
+03:10 
+
+03:10 corresponding lines become now much more
+03:12 
+
+03:12 dramatic and engaging to the viewer
+03:14 
+
+03:14 however how do we do with a Target
+03:16 
+
+03:16 camera that is already bind to an empty
+03:19 
+
+03:19 object the solution is not that hard add
+03:22 
+
+03:22 another empty object and move it aside
+03:24 
+
+03:24 it will be used as a rotation controller
+03:26 
+
+03:26 select the camera and add the copy
+03:29 
+
+03:29 rotation constraint with the eyedropper
+03:31 
+
+03:31 tool clicked on the newly added empty
+03:33 
+
+03:33 object and change the mix mode to after
+03:37 
+
+03:37 original all you have to do now is
+03:39 
+
+03:39 rotating the empty in the z-axis to roll
+03:42 
+
+03:42 the camera the second example is the
+03:45 
+
+03:45 Classic Hollywood Effect called the
+03:46 
+
+03:46 dolly Zoom mostly known from movies such
+03:49 
+
+03:49 as vertigo and Jaws it's actually quite
+03:52 
+
+03:52 simple to achieve both with the
+03:54 
+
+03:54 traditional and 3D cameras all you have
+03:56 
+
+03:56 to do is follow this formula and voila
+03:59 
+
+03:59 nah just kidding actually all you have
+04:02 
+
+04:02 to do is zooming into the target while
+04:05 
+
+04:05 moving the camera back or zooming out of
+04:07 
+
+04:07 the target while moving the camera
+04:09 
+
+04:09 forward to do it in blender place the
+04:12 
+
+04:12 empty object around the Target and move
+04:14 
+
+04:14 the camera to the starting position with
+04:17 
+
+04:17 camera selected and the location
+04:18 
+
+04:18 keyframe and zoom into the Target by
+04:21 
+
+04:21 increasing the focal length by pressing
+04:24 
+
+04:24 the I key again we'll add a keyframe
+04:26 
+
+04:26 that will allow us animating the zoom
+04:28 
+
+04:28 effect move to the last frame and bring
+04:31 
+
+04:31 the camera forward decrease the focal
+04:34 
+
+04:34 length value to the point where your
+04:36 
+
+04:36 target is more or less of the same size
+04:38 
+
+04:38 as in the first frame add keyframes to
+04:41 
+
+04:41 the camera's new position and reduce
+04:43 
+
+04:43 focal length value and to make the
+04:45 
+
+04:45 effect even more dramatic enable the
+04:47 
+
+04:47 motion blur increase the shutter value
+04:49 
+
+04:49 to at least 2 and in Eve you can also
+04:52 
+
+04:52 try increasing the max blur volume now
+04:55 
+
+04:55 the vertigo effect is obviously not the
+04:57 
+
+04:57 only way to make your image more
+04:59 
+
+04:59 engaging and before we jump into the
+05:01 
+
+05:01 last Target camera technique the second
+05:04 
+
+05:04 composition secret is organizing your
+05:07 
+
+05:07 image into three plans the background
+05:10 
+
+05:10 Center and foreground of the image have
+05:13 
+
+05:13 to be carefully planned so they
+05:14 
+
+05:14 complement each other instead of
+05:16 
+
+05:16 fighting and bringing chaos the vertigo
+05:19 
+
+05:19 effect would lose all its power if we
+05:21 
+
+05:21 didn't have objects in the background
+05:23 
+
+05:23 that get blurry and help the viewer to
+05:25 
+
+05:25 fully focus on the target the final
+05:27 
+
+05:27 example and my personal favorite is
+05:30 
+
+05:30 camera following the target it can be
+05:32 
+
+05:32 used for any Dynamic animation such as
+05:34 
+
+05:34 car chase or something more static
+05:36 
+
+05:36 whenever you want to save time and be
+05:39 
+
+05:39 sure your moving Target always stays in
+05:41 
+
+05:41 frame so how do we do it well there are
+05:44 
+
+05:44 two ways in the first one place the
+05:46 
+
+05:46 empty object near your target before it
+05:48 
+
+05:48 starts moving and press the I key to add
+05:51 
+
+05:51 a location keyframe jump to the last
+05:53 
+
+05:53 frame where your target will and its
+05:55 
+
+05:56 motion and place the empty object there
+05:57 
+
+05:57 add another location keyframe and you're
+06:00 
+
+06:00 done but remember you can add more
+06:02 
+
+06:02 keyframes in between and also animate
+06:05 
+
+06:05 the camera movement for more action the
+06:07 
+
+06:07 second way is by parenting the empty
+06:09 
+
+06:09 object place it in your Target and now
+06:12 
+
+06:12 select the empty object first and then
+06:14 
+
+06:14 your target the order of selection here
+06:16 
+
+06:17 is important press Ctrl p and choose the
+06:20 
+
+06:20 first option the empty is now glued or
+06:22 
+
+06:22 parented to the Target and will follow
+06:24 
+
+06:24 it all the time so what is the final tip
+06:27 
+
+06:27 that will make your images look better
+06:29 
+
+06:29 it's hidden behind the magic word of
+06:31 
+
+06:32 Storytelling which is not magic at all
+06:34 
+
+06:34 and comes down to simply asking yourself
+06:37 
+
+06:37 a question what do I want the viewer to
+06:40 
+
+06:41 feel when looking at my image and
+06:43 
+
+06:43 answering this question is easier than
+06:45 
+
+06:45 you may think but requires some practice
+06:47 
+
+06:47 when working on your next project simply
+06:50 
+
+06:50 think if you can include some small bits
+06:53 
+
+06:53 of story that will make it more in
+06:54 
+
+06:54 interesting when creating let's say a 3D
+06:57 
+
+06:57 kitchen adding a bottle and glass of red
+06:59 
+
+06:59 wine will trigger different emotions
+07:02 
+
+07:02 than a can of Monster Energy drink and a
+07:04 
+
+07:04 pizza box you get the idea and if you
+07:07 
+
+07:07 want to learn more about stuff like that
+07:09 
+
+07:09 another Shameless plug check out my
+07:11 
+
+07:11 master class also make sure you check
+07:13 
+
+07:13 out this video over here I've put a ton
+07:15 
+
+07:15 of work into making it and I'm sure
+07:16 
+
+07:16 you're gonna love it thanks for watching
+07:18 
+
+07:18 and see you next time

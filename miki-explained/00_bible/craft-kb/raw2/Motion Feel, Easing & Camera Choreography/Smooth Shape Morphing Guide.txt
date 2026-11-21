@@ -1,0 +1,406 @@
+00:00 You've probably seen animations like
+00:02 
+
+00:02 this all over your feed. It looks
+00:04 
+
+00:04 complicated, but the actual method is
+00:06 
+
+00:06 way simpler than most people think. In
+00:08 
+
+00:08 this video, I'm going to show you the
+00:09 
+
+00:09 easiest way to create smooth Apple-style
+00:12 
+
+00:12 shape morphing in After Effect. No
+00:14 
+
+00:14 plugins required. What's good, ladies
+00:15 
+
+00:15 and gentlemen, boys and girls? It's your
+00:16 
+
+00:16 boy Danny X Studios, or Danny, whatever
+00:19 
+
+00:19 you want to call me. Today, we've got an
+00:21 
+
+00:21 absolute banger. We're going to show you
+00:22 
+
+00:22 how to shape morph. We're going to show
+00:24 
+
+00:24 you how to make it in that Apple style.
+00:25 
+
+00:25 [music] And I've got the Subway Surfers
+00:27 
+
+00:27 gameplay in case you're not stemmed
+00:29 
+
+00:29 enough. All right. So, the first thing
+00:30 
+
+00:30 you're going to want to do is make a new
+00:32 
+
+00:32 composition. I'm going to make it 1080
+00:34 
+
+00:34 by 1080. It's going to be any duration
+00:36 
+
+00:36 you want it to be. This one, 15 seconds.
+00:38 
+
+00:38 And I'm going to name it what I usually
+00:40 
+
+00:40 name my composition. Once you have your
+00:41 
+
+00:41 comp sorted, you're going to drag in the
+00:43 
+
+00:43 audio you want to use, and then like
+00:45 
+
+00:45 trim it accordingly. So, I'm just
+00:46 
+
+00:46 cutting off the start of this song. Next
+00:48 
+
+00:48 step is to make a solid. If you don't
+00:50 
+
+00:50 have Prime Tools, you're going to go to
+00:52 
+
+00:52 layer, new, and click solid. You can
+00:55 
+
+00:55 name it whatever you want. I'm just
+00:57 
+
+00:57 going to call it background. And then
+00:58 
+
+00:58 I'm going to give it a white fill, so
+01:00 
+
+01:00 that Apple white
+01:01 
+
+01:01 >> color. Quick interruption. Just a little
+01:02 
+
+01:02 disclaimer. I'm not going to show you
+01:03 
+
+01:03 guys how I designed the UI in this
+01:05 
+
+01:05 tutorial. All I'm going to go over is
+01:06 
+
+01:06 just like the shape morphing and how to
+01:07 
+
+01:07 make it smoother and look [music] nicer.
+01:08 
+
+01:08 Just cuz otherwise it's going to be like
+01:09 
+
+01:09 a 30-minute to an hour tutorial. If you
+01:10 
+
+01:10 want the full thing and see how I made
+01:12 
+
+01:12 it step-by-step and how I did it, you
+01:13 
+
+01:13 can look at the payhip, [music] which is
+01:14 
+
+01:14 in the bio.
+01:14 
+
+01:14 >> So, once you've imported your journal
+01:16 
+
+01:16 icon, or made it with shape layers,
+01:18 
+
+01:18 you're going to want to set keyframes
+01:19 
+
+01:19 [music] for position, rotation, and
+01:21 
+
+01:21 opacity. For this example, I'm just
+01:23 
+
+01:23 going to go five or six keyframes
+01:25 
+
+01:25 forward. I'm going to set the position
+01:26 
+
+01:26 so it's lower, make the rotation a
+01:28 
+
+01:28 little bit to the left, and turn down
+01:30 
+
+01:30 the opacity all the way. And then going
+01:32 
+
+01:32 to easy ease the keyframes. You can do
+01:34 
+
+01:34 this using F9, or Flow. I'm going to add
+01:37 
+
+01:37 [music] bounce to position,
+01:40 
+
+01:40 and the rotation.
+01:43 
+
+01:43 And then I'm just going to tweak the
+01:44 
+
+01:44 graphs a little bit, smooth it out a
+01:46 
+
+01:46 little bit so it looks nicer. I'm going
+01:48 
+
+01:48 to quickly label these two, just so I
+01:50 
+
+01:50 can like tell the difference between
+01:51 
+
+01:51 them. So, now that we have the initial
+01:53 
+
+01:53 bounce, it's time to make the things
+01:54 
+
+01:54 inside of it move.
+01:55 
+
+01:55 >> What?
+01:57 
+
+01:57 >> I'm going to set position and opacity
+01:59 
+
+01:59 key frames for each of the the little
+02:01 
+
+02:01 journal wings. Go five key frames ahead
+02:03 
+
+02:03 again, then move the position slightly
+02:05 
+
+02:05 left and right as well as turning down
+02:07 
+
+02:07 the opacity to zero on the first key
+02:09 
+
+02:09 frame. Once again, I'm going to bounce
+02:11 
+
+02:11 the position so that you get that smooth
+02:13 
+
+02:13 Apple style look. I'm going to easy ease
+02:15 
+
+02:15 the graphs and then tweak them a little
+02:17 
+
+02:17 bit just to give it that much more
+02:20 
+
+02:20 smoothness.
+02:21 
+
+02:21 After all that, I'm going to stagger the
+02:23 
+
+02:23 key frames just so they come in slightly
+02:24 
+
+02:24 different times and make some final
+02:26 
+
+02:26 adjustments before moving on to the next
+02:28 
+
+02:28 scene.
+02:29 
+
+02:29 >> [music]
+02:30 
+
+02:30 >> All right, so here's the moment
+02:31 
+
+02:31 everyone's been waiting for. We're
+02:32 
+
+02:32 finally going to shape morph something.
+02:34 
+
+02:34 Grab your UI or the button you want to
+02:37 
+
+02:37 use to shape morph and put it in the
+02:38 
+
+02:38 middle of the scene. Make sure you add
+02:40 
+
+02:40 size and roundness key frames to the
+02:42 
+
+02:42 original shape layer. Do not use scale.
+02:45 
+
+02:45 Try and match this height and the width
+02:48 
+
+02:48 of the new shape with the original shape
+02:50 
+
+02:50 layer and space out the key frames for
+02:52 
+
+02:52 around about seven or eight frames.
+02:55 
+
+02:55 And you know the drill, easy ease the
+02:57 
+
+02:57 graphs, tweak it slightly, make it look
+02:59 
+
+02:59 better.
+03:01 
+
+03:01 So, that's the base shape morph done.
+03:04 
+
+03:04 I'm going to cut the logo where the
+03:06 
+
+03:06 shape morphing ends and add position and
+03:09 
+
+03:09 opacity key frames spaced out by about
+03:11 
+
+03:11 five or six frames. On the last key
+03:13 
+
+03:13 frame, I'm going to move it down and
+03:15 
+
+03:15 turn the opacity all the way down to
+03:16 
+
+03:16 zero. And of course, easy ease the key
+03:18 
+
+03:18 frames.
+03:20 
+
+03:20 You want to make sure that the UI in the
+03:22 
+
+03:22 second shape comes in smoothly. So, I'm
+03:24 
+
+03:24 going to add position and opacity key
+03:26 
+
+03:26 frames spaced out by five or six.
+03:37 
+
+03:37 Add bounce to the position.
+03:39 
+
+03:39 Easy ease the graphs and tweak them
+03:41 
+
+03:41 again.
+03:44 
+
+03:44 Finally, I'm going to stagger all the
+03:45 
+
+03:45 key frames and just tweak it a little
+03:48 
+
+03:48 bit. See what I get for the final
+03:50 
+
+03:50 result.
+03:51 
+
+03:51 >> [music]
+03:55 
+
+03:55 >> All right guys, that was the whole
+03:56 
+
+03:56 tutorial. This is the first time I've
+03:58 
+
+03:58 ever made one, so if you liked it, drop
+03:59 
+
+03:59 a like. If you didn't, drop a dislike.
+04:01 
+
+04:01 Let me know in the comments what I can
+04:01 
+
+04:01 do better, or like what I can elaborate
+04:03 
+
+04:03 on more, if you know what I mean. If you
+04:05 
+
+04:05 want to see the full project file and
+04:06 
+
+04:06 how I did it step-by-step broken down,
+04:08 
+
+04:08 click the link in the description. I'm
+04:09 
+
+04:09 selling the full project file for you
+04:11 
+
+04:11 guys to have access to. Anyways guys,
+04:13 
+
+04:13 peace out homies.

@@ -1,0 +1,1984 @@
+00:00 so adding a really high level of detail
+00:02 
+
+00:02 to your renders can often feel like a
+00:04 
+
+00:04 very hard or even impossible task and so
+00:07 
+
+00:07 what I want to do in this one is just
+00:08 
+
+00:08 show you some of the methods that I use
+00:09 
+
+00:09 to break it down into more manageable
+00:11 
+
+00:11 chunks and actually make it not that bad
+00:14 
+
+00:14 to make a render like this so in about 1
+00:16 
+
+00:16 minute I'll do a live demo and actually
+00:18 
+
+00:18 create this render that you can see
+00:19 
+
+00:19 right here from scratch um but really
+00:21 
+
+00:21 quick before I do that I want to lay out
+00:23 
+
+00:23 my process for doing this so that it
+00:24 
+
+00:24 makes more sense as I go into that um so
+00:26 
+
+00:26 the first thing I'll usually do is find
+00:28 
+
+00:28 some reference images of the kind of
+00:30 
+
+00:30 style that I want to go for doesn't have
+00:32 
+
+00:32 to be super specific in this one I was
+00:33 
+
+00:33 literally just finding pictures of boats
+00:35 
+
+00:35 and ships and docks and stuff because I
+00:37 
+
+00:37 wanted it to feel very industrial and I
+00:39 
+
+00:39 just wanted some ideas for the kind of
+00:41 
+
+00:41 shapes and pipes and kind of things I
+00:43 
+
+00:43 could use and then I'll block out a
+00:45 
+
+00:45 basic scene in blender just by adding
+00:47 
+
+00:47 cubes and doing some really basic
+00:49 
+
+00:49 lighting and a basic camera angle just
+00:50 
+
+00:50 to get some sort of idea of where I'm
+00:53 
+
+00:53 going to be and then what I'll do often
+00:55 
+
+00:55 not always is I'll go in and model
+00:57 
+
+00:57 objects that I know are going to be
+00:58 
+
+00:58 repeated many times throughout the scene
+00:60 
+
+01:00 so in this case for example since we're
+01:02 
+
+01:02 doing this industrial kind of remender
+01:03 
+
+01:03 um I'm going to go and make things like
+01:05 
+
+01:05 railings and pipes and like industrial
+01:08 
+
+01:08 pieces that are going to be able to be
+01:11 
+
+01:11 duplicated a ton of times so I maybe
+01:13 
+
+01:13 I'll model it sometimes and sometimes
+01:14 
+
+01:14 I'll just bring it in from the asset
+01:15 
+
+01:15 browser or buy a pack or whatever um
+01:19 
+
+01:19 it's up to you how you want to bring
+01:20 
+
+01:20 models in in this case I'll just model
+01:21 
+
+01:21 it from scratch you can see me do that
+01:23 
+
+01:23 and then by the end I'll probably bring
+01:24 
+
+01:24 in some unique models or create some
+01:26 
+
+01:26 unique models myself just to break up
+01:28 
+
+01:28 the pattern of um repeating models all
+01:30 
+
+01:30 over the place just so it doesn't look
+01:32 
+
+01:32 super duplicated but most of the time
+01:34 
+
+01:34 you can't even
+01:35 
+
+01:35 tell okay so I think the best way to do
+01:38 
+
+01:38 this is just to demonstrate it let's try
+01:39 
+
+01:39 and make something similar to that
+01:40 
+
+01:40 render I was just showing you and I'll
+01:42 
+
+01:42 just do uh kind of a fast version of
+01:43 
+
+01:43 that by the way if you want to download
+01:45 
+
+01:45 this blend file it's free link below so
+01:47 
+
+01:47 let's start by blocking out the kind of
+01:49 
+
+01:49 error we want to work with so let's just
+01:50 
+
+01:50 take this maybe I could just extrude
+01:52 
+
+01:52 this straight up and let's just get a
+01:54 
+
+01:54 basic camera view set up I think I want
+01:57 
+
+01:57 this to be probably um like a landscape
+01:60 
+
+01:60 render I guess because it's going to be
+02:01 
+
+02:01 the thumbnail of the video so we'll just
+02:02 
+
+02:02 do 1920 by
+02:08 
+
+02:08 1080 sorry 1080 there we go let's do
+02:12 
+
+02:12 maybe like 24 mm and let's go to here
+02:16 
+
+02:16 and let's point this more upwards Let's
+02:19 
+
+02:19 uh increase that view distance to like
+02:20 
+
+02:20 1,000 M and I think I want something
+02:23 
+
+02:23 like that maybe move this over here a
+02:25 
+
+02:25 little bit and I want an opening at the
+02:27 
+
+02:27 top like I had in my original one so
+02:28 
+
+02:28 we'll just do that like right there
+02:31 
+
+02:31 let's get uh yeah that seems like about
+02:33 
+
+02:33 kind of what I want so that's good so
+02:36 
+
+02:36 we'll leave that here for now and the
+02:37 
+
+02:37 one thing I want to do first is just
+02:39 
+
+02:39 model some basic pieces now I don't
+02:41 
+
+02:41 always do this at the beginning usually
+02:42 
+
+02:42 I might actually do a bit more of a
+02:44 
+
+02:44 block out before this but um the process
+02:46 
+
+02:46 that I kind of followed in that one
+02:47 
+
+02:47 which I'll try and recreate here was was
+02:49 
+
+02:49 the following so let's start modeling
+02:51 
+
+02:51 some things from this uh random ship
+02:54 
+
+02:54 reference image I have here in this one
+02:56 
+
+02:56 I wanted a lot of really
+02:58 
+
+02:58 industrial uh feelings throughout the
+02:60 
+
+02:60 the whole thing so um I was I was
+03:02 
+
+03:02 looking I was looking at a lot of
+03:04 
+
+03:04 pictures of like ships and oil rigs and
+03:06 
+
+03:06 that kind of thing so um there's a lot
+03:08 
+
+03:08 of little cool things here which I can
+03:10 
+
+03:10 reuse in an environment like this which
+03:12 
+
+03:12 will be really handy so let's start with
+03:14 
+
+03:14 this kind of pipe layout thing here and
+03:17 
+
+03:17 let's uh let's make something like that
+03:19 
+
+03:19 so I'm just going to get a little
+03:19 
+
+03:19 platform to work off of then let's add a
+03:22 
+
+03:22 cylinder in here for one of the main
+03:24 
+
+03:24 pipes let's just rotate it this way can
+03:27 
+
+03:27 probably just leave it at sort of its
+03:29 
+
+03:29 default scale maybe shrink it down a
+03:30 
+
+03:30 little bit this way I'm going to be
+03:32 
+
+03:32 going kind of fast here but I want to
+03:34 
+
+03:34 just demonstrate the concepts rather
+03:36 
+
+03:36 than each individual button I'm pressing
+03:39 
+
+03:39 so for you it might be a bit slower but
+03:40 
+
+03:40 I just want to show you the basic idea
+03:42 
+
+03:42 here so let's duplicate that maybe have
+03:45 
+
+03:45 a small one here maybe a small one here
+03:48 
+
+03:48 maybe another small one over here and
+03:49 
+
+03:49 then maybe just another smaller one like
+03:52 
+
+03:52 up above over here or something I don't
+03:55 
+
+03:55 know maybe another one this way and what
+03:57 
+
+03:57 I can do on all of these is first of all
+03:58 
+
+03:58 let's shade them all out Auto smooth
+04:01 
+
+04:01 shade Auto smooth and let's just go in
+04:04 
+
+04:04 um let's just add some Edge Loops in
+04:06 
+
+04:06 here like this let's bevel them all with
+04:08 
+
+04:08 one segment and then let's alt e and
+04:11 
+
+04:11 extrude faces along normals to just push
+04:14 
+
+04:14 that outwards like this that's nice and
+04:17 
+
+04:17 honestly on all these I could probably
+04:19 
+
+04:19 just hit contrl L and then link the
+04:22 
+
+04:22 object data from that one to all the
+04:23 
+
+04:23 other ones and now we've got some like
+04:25 
+
+04:25 little pipe things going on like this
+04:27 
+
+04:27 let's maybe add some Edge loops on this
+04:29 
+
+04:29 plaque platform thing as well just to
+04:31 
+
+04:31 kind of match up with that we'll just
+04:33 
+
+04:33 bevel that and maybe just even take
+04:36 
+
+04:36 these faces here and extrude that
+04:38 
+
+04:38 up so we'll just pull that up a little
+04:40 
+
+04:40 bit and maybe on the sides we can have
+04:44 
+
+04:44 something else so let's maybe just uh
+04:46 
+
+04:46 encase this in the little thing let's
+04:47 
+
+04:47 just get a
+04:48 
+
+04:48 cube um scale this sort of to match our
+04:53 
+
+04:53 side here I probably should maybe do
+04:55 
+
+04:55 this in uh in here like I could have
+04:57 
+
+04:57 done this on the model I guess we could
+04:59 
+
+04:59 do this we could just extrude this out
+05:02 
+
+05:02 and then uh this is not the greatest
+05:04 
+
+05:04 practice ever but I'll just pull that up
+05:06 
+
+05:06 and then let's just do a loop cut here
+05:08 
+
+05:08 and mirror that across now that is kind
+05:11 
+
+05:11 of messy geometry but um I'm okay with
+05:14 
+
+05:14 it okay so we've got a little pipe thing
+05:16 
+
+05:16 we can work with if I really want I can
+05:18 
+
+05:18 go in and add like a little frame or
+05:20 
+
+05:20 something in here like let's just
+05:21 
+
+05:21 quickly do this I'm just kind of looking
+05:22 
+
+05:22 at what kind of shapes are in here and
+05:24 
+
+05:24 going off of what I think might fit in
+05:27 
+
+05:27 here so we'll just do something like
+05:29 
+
+05:29 this let's just uh shrink it down this
+05:32 
+
+05:32 way let's take all these faces here and
+05:35 
+
+05:35 here let's
+05:36 
+
+05:36 inset uh if I just apply scale first
+05:40 
+
+05:40 inset press I again to inser the
+05:43 
+
+05:43 individual faces extrude faces along
+05:45 
+
+05:45 normal just pull that in just for this
+05:46 
+
+05:46 little holder thing and then let's just
+05:49 
+
+05:49 put that a few times maybe even randomly
+05:52 
+
+05:52 throughout here and there we go we've
+05:54 
+
+05:54 got a little pipe thing let's move on to
+05:56 
+
+05:56 something else maybe a railing so let's
+05:58 
+
+05:58 just do another Cube and let's just pull
+06:00 
+
+06:00 this up and I'm just really roughly
+06:02 
+
+06:02 doing this just making some low poly
+06:03 
+
+06:03 assets which I know I can reuse
+06:05 
+
+06:05 throughout the whole thing so let's get
+06:07 
+
+06:07 a little platform here and to add
+06:09 
+
+06:09 railings um there's no one way to do
+06:12 
+
+06:12 this I'll just do it this way let's just
+06:14 
+
+06:14 um maybe take this face right here
+06:16 
+
+06:16 duplicate that up separate by selection
+06:19 
+
+06:19 just p on the keyboard to bring up the
+06:20 
+
+06:20 separate menu separate by selection and
+06:23 
+
+06:23 let's go origin to Geometry just so it's
+06:24 
+
+06:24 not all
+06:26 
+
+06:26 weird um let's maybe just duplicate that
+06:28 
+
+06:28 up a couple of times
+06:31 
+
+06:31 we have a couple little things here and
+06:33 
+
+06:33 then one at the
+06:35 
+
+06:35 top and something like that'll be good
+06:37 
+
+06:37 maybe let's extrude this one out and
+06:40 
+
+06:40 then I need a thing here let's just take
+06:43 
+
+06:43 any little piece here just duplicate
+06:44 
+
+06:44 that out this way separate that by
+06:46 
+
+06:46 selection and then I'll just extrude it
+06:49 
+
+06:49 this way and extrude it this way scale
+06:52 
+
+06:52 that up you could also just add a cube
+06:54 
+
+06:54 if you don't want to create one from
+06:56 
+
+06:56 scratch like that let's go origin back
+06:58 
+
+06:58 to Geometry you can just do that by
+07:00 
+
+07:00 right clicking as well set origin to
+07:03 
+
+07:03 Geometry let's align that up here just
+07:06 
+
+07:06 kind of put this Cube into roughly where
+07:10 
+
+07:10 the edge of the railing would be like
+07:12 
+
+07:12 there is move this over to make it fit a
+07:14 
+
+07:14 bit more and then let's just use an
+07:16 
+
+07:16 array modifier to get that all
+07:19 
+
+07:19 throughout here maybe just rotate it so
+07:20 
+
+07:20 it's lining up like this right so I
+07:25 
+
+07:25 don't know let's do 20 something of
+07:27 
+
+07:27 these and then just kind of scale it so
+07:30 
+
+07:30 that it almost
+07:32 
+
+07:32 matches I I guess I'll leave a space at
+07:34 
+
+07:34 the end there so it can connect properly
+07:36 
+
+07:36 when I join it all together so something
+07:38 
+
+07:38 like that is just going to be a nice
+07:39 
+
+07:39 basic railing does not need to be super
+07:41 
+
+07:41 fancy or anything um I might just move
+07:43 
+
+07:43 this down to like there and then put
+07:45 
+
+07:45 these into place around here maybe have
+07:48 
+
+07:48 one more little thing up here and then
+07:50 
+
+07:50 let's just kind of scale all those down
+07:52 
+
+07:52 a little
+07:53 
+
+07:53 bit okay that seems
+07:55 
+
+07:55 reasonable let's uh join those all
+07:58 
+
+07:58 together uh and the reason that what
+07:60 
+
+07:60 happening is because there's the
+08:01 
+
+08:01 modifiers on some of these so I'll just
+08:02 
+
+08:02 apply all modifiers and I think that
+08:05 
+
+08:05 should be
+08:06 
+
+08:06 good so we'll try that again join sorry
+08:10 
+
+08:10 one of them has to be active there we go
+08:12 
+
+08:12 and let's just get this across here
+08:13 
+
+08:13 we'll just scale it by 1 just kind of
+08:16 
+
+08:16 flip it around and then line it up there
+08:20 
+
+08:20 and I actually want to duplicate this
+08:21 
+
+08:21 one more time just so we have a backup
+08:22 
+
+08:22 railing just so I can use that in other
+08:24 
+
+08:24 pieces if I want to as well let's scale
+08:27 
+
+08:27 this down and maybe just apply scale
+08:30 
+
+08:30 Let's uh maybe we don't need to scale it
+08:31 
+
+08:31 down let's just join it right here okay
+08:34 
+
+08:34 so we've got a railing we got pipes we'
+08:35 
+
+08:35 got a separate railing let's do one more
+08:37 
+
+08:37 of just some some little industrial
+08:39 
+
+08:39 little uh I don't I don't know what you
+08:41 
+
+08:41 would call this this little structural
+08:43 
+
+08:43 holder container thing here let's just
+08:45 
+
+08:45 do that cuz it looks cool um so I'll
+08:47 
+
+08:47 just start with a cube and let's just
+08:50 
+
+08:50 bring this over here um now I think I'll
+08:53 
+
+08:53 just scale it up this way I'm going even
+08:56 
+
+08:56 faster here because I actually made
+08:57 
+
+08:57 pieces like this yesterday so I kind of
+08:59 
+
+08:59 know know what to do but um on my first
+09:02 
+
+09:02 try it was slower than this but I'm
+09:04 
+
+09:04 still going as fast as I can on my first
+09:06 
+
+09:06 try and just trying to get stuff out as
+09:08 
+
+09:08 quickly as I can so what I'm going to do
+09:11 
+
+09:11 here uh let me just explain what I'm
+09:12 
+
+09:12 doing let's add a couple of loop cuts
+09:14 
+
+09:14 and then let's bevel those Loop cuts and
+09:15 
+
+09:15 then I'll just increase the number of
+09:17 
+
+09:17 segments by scrolling on the scroll
+09:18 
+
+09:18 wheel um so I'll just do three and that
+09:22 
+
+09:22 means I can just grab these bottom faces
+09:24 
+
+09:24 pull those down extrude them down and
+09:27 
+
+09:27 then let's just take these top things
+09:28 
+
+09:28 just kind of fit this into a nice little
+09:31 
+
+09:31 thing like that let's do a loop cut here
+09:34 
+
+09:34 scale it by zero on the Zed axis just so
+09:37 
+
+09:37 it's flat and then we'll just have that
+09:39 
+
+09:39 right there and then we can just take
+09:40 
+
+09:40 all these faces on this side if you want
+09:43 
+
+09:43 to select all faces that are in line
+09:44 
+
+09:44 with this face in this same plane you
+09:47 
+
+09:47 could just hit shift G and then hit co-
+09:50 
+
+09:50 planner that'll select any face that's
+09:51 
+
+09:51 kind of on the same plane as that face
+09:54 
+
+09:54 and then same thing here shift G Co
+09:56 
+
+09:56 planner and now we can just do uh let's
+09:58 
+
+09:58 apply the scale so that all the
+09:60 
+
+09:60 proportions are right when we do this
+10:02 
+
+10:02 hit I to inset again if you get a weird
+10:05 
+
+10:05 inset like this just hit I again and
+10:07 
+
+10:07 that'll do individual faces and then we
+10:09 
+
+10:09 can do something like that and then to
+10:11 
+
+10:11 pull these in we'll just extrude it I'll
+10:13 
+
+10:13 just right click to cancel the transform
+10:15 
+
+10:15 and then scale it in on the Y AIS like
+10:18 
+
+10:18 this and there we go we got a little
+10:20 
+
+10:20 industrial piece now something else I
+10:22 
+
+10:22 did in my render was I just duplicated
+10:24 
+
+10:24 this and made a little variation of it
+10:27 
+
+10:27 by duplicating it um down down onto
+10:30 
+
+10:30 itself so I'll just do this here just G
+10:33 
+
+10:33 snap that on there that's the new uh
+10:35 
+
+10:35 snap controls when you press G and then
+10:38 
+
+10:38 B lets you actually grab individual
+10:40 
+
+10:40 vertices and snap those to wherever you
+10:42 
+
+10:42 want uh that's a new feature and now
+10:44 
+
+10:44 we've got a little thing like this we
+10:46 
+
+10:46 can join that together there's some
+10:47 
+
+10:47 overlapping faces which we could get rid
+10:48 
+
+10:48 of just do a quick merge by distance and
+10:51 
+
+10:51 then uh there's some faces in here which
+10:53 
+
+10:53 I'll just delete as well okay so we got
+10:56 
+
+10:56 that and this could be a whole new piece
+10:58 
+
+10:58 if we take this and like rotate it and
+10:60 
+
+10:60 combine it with this other Bridge thing
+11:03 
+
+11:03 um you know let's use that grab vertex
+11:07 
+
+11:07 snap thing as well and you can
+11:10 
+
+11:10 see that if we just kind of have a
+11:12 
+
+11:12 little thing like this we can make some
+11:16 
+
+11:16 new pieces quite
+11:18 
+
+11:18 easily so I'll just try and line this
+11:22 
+
+11:22 up and there we go okay let's just join
+11:25 
+
+11:25 these
+11:27 
+
+11:27 together so that's new piece
+11:31 
+
+11:31 join and then that we could even combine
+11:32 
+
+11:32 that with this pipe thing as well so
+11:34 
+
+11:34 we'll duplicate that up uh we can just
+11:36 
+
+11:36 make sure there's no modifiers on any of
+11:38 
+
+11:38 these which I don't think there are I'll
+11:39 
+
+11:39 lose this
+11:41 
+
+11:41 one select all this apply scale uh it's
+11:44 
+
+11:44 not going to let me do that we can just
+11:46 
+
+11:46 join it let's shade Auto
+11:49 
+
+11:49 smooth and there we
+11:52 
+
+11:52 go we've got little thing here um and we
+11:56 
+
+11:56 can also take some individual pipes and
+11:58 
+
+11:58 like separate this out into another
+12:00 
+
+12:00 asset if we really want so we can take
+12:02 
+
+12:02 this deselect all this stuff just take
+12:05 
+
+12:05 these only duplicate that um join it
+12:08 
+
+12:08 maybe have one of these holder things in
+12:10 
+
+12:10 here as
+12:12 
+
+12:12 well let's just join those together and
+12:15 
+
+12:15 we could even take this and this is its
+12:17 
+
+12:17 own little piece we can use as well okay
+12:20 
+
+12:20 so all that we've got all these little
+12:21 
+
+12:21 pieces here now let's just start using
+12:24 
+
+12:24 these in the scene uh and then I'll
+12:25 
+
+12:25 throw in a texture and kind of show you
+12:27 
+
+12:27 how we can use this to build a full
+12:29 
+
+12:29 environment
+12:31 
+
+12:31 okay so first things first let's just
+12:33 
+
+12:33 take any one of the pie any one of these
+12:35 
+
+12:35 pieces so maybe let's just take this um
+12:38 
+
+12:38 pipe thing let's duplicate that in here
+12:41 
+
+12:41 and let's just rotate it this way and
+12:43 
+
+12:43 let's just start getting this in here
+12:45 
+
+12:45 I'm going to open this up just to have a
+12:46 
+
+12:46 rendered view as I'm working on this I
+12:48 
+
+12:48 can probably move my reference kind off
+12:51 
+
+12:51 to the side here and let's just put this
+12:54 
+
+12:54 over here let's use an array modifier to
+12:56 
+
+12:56 just in uh increase the the height this
+12:59 
+
+12:59 I might just um apply scale and rotation
+13:03 
+
+13:03 and then we can just get a few of those
+13:04 
+
+13:04 going upwards like this it's okay if it
+13:07 
+
+13:07 kind of goes through the top so let we
+13:09 
+
+13:09 do one here here and here that looks
+13:12 
+
+13:12 nice we could um
+13:14 
+
+13:14 duplicate these two pieces rotate
+13:18 
+
+13:18 90° put it against this wall and maybe
+13:22 
+
+13:22 let's just do that one more time I'm
+13:24 
+
+13:24 doing it kind of messy on purpose
+13:26 
+
+13:26 because I want it to feel a bit
+13:28 
+
+13:28 more I don't know um less rendery and
+13:31 
+
+13:31 more kind of random and Industrial so
+13:34 
+
+13:34 I'm fine not having these all offset at
+13:36 
+
+13:36 the same amount so that's kind of cool
+13:39 
+
+13:39 let's take some platforms so let's do
+13:41 
+
+13:41 that uh Bridge thing we had earlier put
+13:43 
+
+13:43 that in here and let's just have that
+13:46 
+
+13:46 going this way let's use an array again
+13:49 
+
+13:49 and just have it kind of go like this
+13:52 
+
+13:52 and maybe just duplicate that a few
+13:54 
+
+13:54 times over itself and already we're
+13:56 
+
+13:56 getting tons of detail in here which is
+13:58 
+
+13:58 quite nice let be let's rotate that 90°
+14:01 
+
+14:01 kind of have it offset this
+14:04 
+
+14:04 way that's nice and then let's do um
+14:08 
+
+14:08 let's do that other couple other little
+14:10 
+
+14:10 things we got in here just put some
+14:13 
+
+14:13 pipes in here and just kind of mix up
+14:15 
+
+14:15 what we have going on just make some of
+14:17 
+
+14:17 these uh platforms feel a bit different
+14:20 
+
+14:20 than the other ones so again array
+14:21 
+
+14:21 modifier just get the orientation
+14:24 
+
+14:24 right uh what is it this way yeah there
+14:28 
+
+14:28 we go okay and we could scale this one
+14:30 
+
+14:30 way down and make it like way longer as
+14:32 
+
+14:32 well if we
+14:38 
+
+14:38 wanted so we'll have that there we could
+14:40 
+
+14:40 even do a few more honestly just kind of
+14:43 
+
+14:43 duplicate that a few different times
+14:45 
+
+14:45 throughout here and just get even more
+14:48 
+
+14:48 little pieces that feel unique even
+14:50 
+
+14:50 though they're not what else have we got
+14:53 
+
+14:53 here we've got this thing let's take
+14:55 
+
+14:55 this thing and put it in here rotate at
+14:57 
+
+14:57 90° again I just want to get it into a
+14:59 
+
+14:59 line line so we'll just do an array
+15:00 
+
+15:00 modifier increase that a few times maybe
+15:03 
+
+15:03 just three times and let's just have
+15:06 
+
+15:06 that stacked on top of itself a couple
+15:08 
+
+15:08 of times as
+15:09 
+
+15:09 well and we could just have that kind of
+15:13 
+
+15:13 there
+15:14 
+
+15:14 somewhere and if we want uh to be
+15:16 
+
+15:16 sitting on something might make more
+15:19 
+
+15:19 sense to use this one in the in the
+15:21 
+
+15:21 other versions We Do so let's just have
+15:23 
+
+15:23 that in here um let's just increase the
+15:26 
+
+15:26 exposure so you can really see what is
+15:27 
+
+15:27 going on here
+15:30 
+
+15:30 um we need more detail above us so let's
+15:32 
+
+15:32 just have one of these things down here
+15:34 
+
+15:34 just kind of coming through the wall a
+15:36 
+
+15:36 little bit doesn't really matter what's
+15:38 
+
+15:38 there as long as it's something and
+15:40 
+
+15:40 let's maybe sorry duplicate this rotate
+15:46 
+
+15:46 90° uh maybe put it this way I don't
+15:49 
+
+15:49 know and let's just use an array
+15:51 
+
+15:51 modifier on that and maybe we could have
+15:54 
+
+15:54 this one going a bit more sideways so
+15:55 
+
+15:55 let's just increase the count and let's
+15:58 
+
+15:58 have this one holding up a big platform
+15:60 
+
+15:60 or something so let's have that there um
+16:03 
+
+16:03 have another one sorry this way maybe
+16:06 
+
+16:06 let's just have two next to each other
+16:08 
+
+16:08 so we'll have like two of these beams
+16:11 
+
+16:11 let's make it a little bit smaller
+16:12 
+
+16:12 increase the array
+16:14 
+
+16:14 amount and let's just have that there
+16:17 
+
+16:17 let's duplicate that uh this
+16:23 
+
+16:23 way and it might make more sense to have
+16:25 
+
+16:25 it facing this
+16:28 
+
+16:28 direction or maybe maybe not I'm not
+16:34 
+
+16:34 sure we've got to kind of figure out uh
+16:37 
+
+16:37 what the best way to put this is I'm not
+16:38 
+
+16:38 sure but maybe just have it above it
+16:40 
+
+16:40 like this that kind of
+16:42 
+
+16:42 works and then let's have a little
+16:43 
+
+16:43 platform in there we could just take
+16:45 
+
+16:45 this thing this can be our platform
+16:46 
+
+16:46 let's just rotate it 90° this
+16:49 
+
+16:49 way uh just scale it up put it like over
+16:53 
+
+16:53 here
+16:55 
+
+16:55 somewhere maybe these things can be
+16:56 
+
+16:56 holding up a little platform here and it
+16:60 
+
+16:60 it's not really making that much sense
+17:01 
+
+17:01 it's kind of a bit of a sketch right now
+17:04 
+
+17:04 nothing is connecting up that properly
+17:06 
+
+17:06 but it's okay as long as it looks like
+17:07 
+
+17:07 it works it's really all that matters
+17:09 
+
+17:09 and artworks like this um Let's do let's
+17:12 
+
+17:12 take another one of these and scale that
+17:14 
+
+17:14 up on the I'm doing s shift Zed to just
+17:18 
+
+17:18 increase the X and Y scale so we'll have
+17:20 
+
+17:20 that there maybe just scale it down this
+17:21 
+
+17:21 way a bit too and that can go
+17:25 
+
+17:25 there and I like where this is going um
+17:28 
+
+17:28 on these walls too we can just add more
+17:30 
+
+17:30 Loop cuts and and do some insets and
+17:32 
+
+17:32 extrusions as well if you want so maybe
+17:33 
+
+17:33 let's just take all these faces here
+17:36 
+
+17:36 let's just do few Loop Cuts this way and
+17:39 
+
+17:39 we'll just take I guess this entire
+17:41 
+
+17:41 thing all these faces let's just inser
+17:44 
+
+17:44 all of those let me make sure I uh let
+17:46 
+
+17:46 me make sure I apply the scale first
+17:48 
+
+17:48 inset all these and then let's just do
+17:50 
+
+17:50 an ALT e extrude faces along normals and
+17:53 
+
+17:53 just pull all those out and that'll just
+17:55 
+
+17:55 create even more detail just on the back
+17:56 
+
+17:56 side of this which is nice and we need
+17:59 
+
+17:59 need a texture so let me go into poly
+18:01 
+
+18:01 Haven uh let's just go to the poly Haven
+18:03 
+
+18:03 add-on that'll just be the quickest
+18:05 
+
+18:05 easiest thing for this
+18:06 
+
+18:06 demonstration and basically I just need
+18:09 
+
+18:09 something very simple um any kind of
+18:12 
+
+18:12 metal texture is going to work here so
+18:14 
+
+18:14 let's just go in here and search for
+18:15 
+
+18:15 metal and a rust might work this might
+18:18 
+
+18:18 work pretty much any just basic grungy
+18:21 
+
+18:21 kind of material is going to work I
+18:22 
+
+18:22 think let's take this one let's just
+18:24 
+
+18:24 drop it on here and let's select
+18:27 
+
+18:27 actually every single object because I
+18:28 
+
+18:28 want all these objects in here right now
+18:30 
+
+18:30 to have this material so let's just hitr
+18:32 
+
+18:32 L material and we need to unwrap it I'm
+18:36 
+
+18:36 going to do it um I I don't advise you
+18:38 
+
+18:38 to do it this way especially if you're
+18:39 
+
+18:39 making assets that you want to reuse in
+18:40 
+
+18:40 future scenes or sell or put into a game
+18:43 
+
+18:43 or have um set up properly but just for
+18:46 
+
+18:46 this demonstration I'm going to do this
+18:47 
+
+18:47 in the laziest easiest way possible and
+18:50 
+
+18:50 that is to select everything in edit
+18:52 
+
+18:52 mode all at once and hit U and then Cube
+18:55 
+
+18:55 projection and that'll just um Cube
+18:58 
+
+18:58 project everything all that way once and
+18:60 
+
+18:60 if it is not lining up properly you can
+19:02 
+
+19:02 actually go into the UV editor and just
+19:04 
+
+19:04 do that multiple times um and that will
+19:07 
+
+19:07 actually fix it so that's good let's
+19:09 
+
+19:09 just scale that up and now we've got a
+19:11 
+
+19:11 rust texture
+19:12 
+
+19:12 just somewhat cleanly over everything
+19:15 
+
+19:15 it's not going to be perfect and it's
+19:17 
+
+19:17 certainly not going to be um a great way
+19:19 
+
+19:19 to do it again if you're trying to um
+19:21 
+
+19:21 like create really high quality assets
+19:24 
+
+19:24 but just to get something out quickly
+19:26 
+
+19:26 this is way I'm going to do it one thing
+19:28 
+
+19:28 I might do is just go on on to the
+19:29 
+
+19:29 railing here let's select this and I
+19:31 
+
+19:31 hope these are linked to duplicates I
+19:33 
+
+19:33 don't think they all are but just um so
+19:36 
+
+19:36 I can hopefully get at least one that's
+19:39 
+
+19:39 a bit more unique I'm going to take this
+19:40 
+
+19:40 railing and I'm just going to make this
+19:42 
+
+19:42 a different material so let's just take
+19:44 
+
+19:44 all this hit crl L and same thing on
+19:47 
+
+19:47 these I'll just select these contrl L
+19:49 
+
+19:49 just to make sure I'm selecting all the
+19:50 
+
+19:50 linked geometry let's go in here onto
+19:52 
+
+19:52 the object settings let's just make uh I
+19:55 
+
+19:55 might just take the the um roughness and
+19:58 
+
+19:58 not map I'm just going to copy that
+20:01 
+
+20:01 let's make a new texture and just assign
+20:02 
+
+20:02 it we'll just have it on like white or
+20:05 
+
+20:05 gray or something and then let's just
+20:07 
+
+20:07 paste in that normal map and that
+20:09 
+
+20:09 roughness map from the the metal texture
+20:13 
+
+20:13 but leave the color white and let me
+20:15 
+
+20:15 just make sure I've assigned that to
+20:17 
+
+20:17 this material to this uh section here um
+20:21 
+
+20:21 I don't know if that's showing up looks
+20:23 
+
+20:23 like it is I just might make it a bit
+20:25 
+
+20:25 brighter and any thing with a railing
+20:28 
+
+20:28 I'm just going to try and Link back to
+20:30 
+
+20:30 this object here so this thing I
+20:33 
+
+20:33 duplicated a few times so I'm just going
+20:34 
+
+20:34 to hit control L object and data um same
+20:37 
+
+20:37 thing if it shows up anywhere else here
+20:39 
+
+20:39 you can't really see it anywhere else so
+20:41 
+
+20:41 it's not really a problem um I guess on
+20:43 
+
+20:43 here this one is so control L object and
+20:45 
+
+20:45 data just so that something shows up
+20:47 
+
+20:47 there now we need a bit better lighting
+20:50 
+
+20:50 the first thing I'm going to do is add
+20:52 
+
+20:52 some volume so we'll just do a cube over
+20:56 
+
+20:56 everything scale that up just a cover
+20:59 
+
+20:59 our whole environment we'll go new
+21:00 
+
+21:00 texture delete this add in a volume
+21:03 
+
+21:03 scatter node if you scroll in and out
+21:05 
+
+21:05 it'll refresh the density it's way too
+21:07 
+
+21:07 high right now so we'll just do
+21:09 
+
+21:09 0.001 to start maybe a bit higher even
+21:13 
+
+21:13 0.005 that's nice increase the
+21:15 
+
+21:15 anisotropy a bit it's always nice and
+21:17 
+
+21:17 I'm going to increase the volume uh
+21:19 
+
+21:19 light bounces underneath the light path
+21:21 
+
+21:21 settings in Cycles right now so that's
+21:24 
+
+21:24 good let's uh get this out of the way so
+21:26 
+
+21:26 we'll just go into here viewport display
+21:29 
+
+21:29 display as bounds and then let's add um
+21:32 
+
+21:32 a proper light in here so right now
+21:34 
+
+21:34 we're just getting light from the
+21:35 
+
+21:35 environment which is just white I don't
+21:38 
+
+21:38 really like that I'm just going to turn
+21:39 
+
+21:39 that down a bit and I'm going to add uh
+21:42 
+
+21:42 an area light in here just to get a bit
+21:44 
+
+21:44 of directional control on where this is
+21:47 
+
+21:47 lighting it up so we'll just do some
+21:49 
+
+21:49 amount of brightness it's maybe a bit
+21:51 
+
+21:51 too much just take out any digit there
+21:54 
+
+21:54 increase the size of that area light and
+21:56 
+
+21:56 let's just try and position this to get
+21:58 
+
+21:58 some ni nice Reflections and Lighting in
+22:00 
+
+22:00 in this little industrial
+22:08 
+
+22:08 environment and if it feels like it
+22:10 
+
+22:10 should be taller I think I might just
+22:13 
+
+22:13 extend this up um we'll just Cube
+22:15 
+
+22:15 project that there and then let's just
+22:17 
+
+22:17 take every single object and duplicate
+22:20 
+
+22:20 it
+22:22 
+
+22:22 upwards so we'll just take all this
+22:24 
+
+22:24 stuff um try not to have the camera
+22:26 
+
+22:26 selected and then let's just literally
+22:29 
+
+22:29 alt D move that up and then rotate it
+22:32 
+
+22:32 90° we might not even have to rotate it
+22:34 
+
+22:34 actually could probably just get away
+22:36 
+
+22:36 with duplicating it straight up maybe
+22:39 
+
+22:39 rotate it this way if we really don't
+22:41 
+
+22:41 want any
+22:44 
+
+22:44 repetition but I actually kind of like
+22:46 
+
+22:46 it more this way that's kind of cool
+22:48 
+
+22:48 okay and then there's an area light that
+22:50 
+
+22:50 got duplicated we'll just take that one
+22:51 
+
+22:51 out and maybe just put this one back in
+22:53 
+
+22:53 here now this is the stage I'll spend
+22:55 
+
+22:55 the most time on is the lighting and
+22:56 
+
+22:56 camera angle and just try to get the
+22:59 
+
+22:59 light to reflect off in the way that I
+23:01 
+
+23:01 want it's quite tricky but it just takes
+23:03 
+
+23:03 some messing around with it it's really
+23:06 
+
+23:06 all all it
+23:07 
+
+23:07 is so maybe let's just bring that down
+23:10 
+
+23:10 let's maybe make this maybe bit more
+23:11 
+
+23:11 blue or
+23:16 
+
+23:16 something yeah I kind of like that maybe
+23:18 
+
+23:18 make this opening a little smaller I
+23:20 
+
+23:20 don't know or
+23:26 
+
+23:26 bigger and I like what is happening here
+23:29 
+
+23:29 I think I want some other lights in here
+23:30 
+
+23:30 as well so maybe let's just do um a
+23:32 
+
+23:32 spotlight or any kind of light shining
+23:34 
+
+23:34 upwards so we'll just increase that to
+23:37 
+
+23:37 like something uh just increase the
+23:39 
+
+23:39 blend and spot size maybe just take that
+23:41 
+
+23:41 down a bit that's quite a
+23:46 
+
+23:46 lot and I don't want it to be super
+23:49 
+
+23:49 bright I just want it to be lighting
+23:50 
+
+23:50 this up a little bit like that this
+23:53 
+
+23:53 could even be like orange or red or
+23:54 
+
+23:54 something might be nice
+24:27 
+
+24:27 go
+24:30 
+
+24:30 [Music]
+24:41 
+
+24:41 okay let's give this a render and just
+24:42 
+
+24:42 see what it looks
+24:47 
+
+24:47 like okay so after running this through
+24:49 
+
+24:49 Photoshop here's what it looks like the
+24:51 
+
+24:51 end result and one thing I love doing in
+24:53 
+
+24:53 Photoshop is increasing the clarity
+24:55 
+
+24:55 slider inside of the camera raw filter
+24:58 
+
+24:58 um one of the many reasons I like
+24:59 
+
+24:59 Photoshop but you can see that really
+25:01 
+
+25:01 does help bring out all the details in
+25:03 
+
+25:03 renders uh as long as you don't push it
+25:05 
+
+25:05 too high it usually looks really nice so
+25:08 
+
+25:08 anyways I hope this helps demonstrate
+25:09 
+
+25:09 the concepts that I'm trying to show
+25:10 
+
+25:10 here that getting a ton of detail isn't
+25:12 
+
+25:12 too bad if you just break it down piece
+25:14 
+
+25:14 by piece duplicate things a lot um
+25:17 
+
+25:17 definitely don't be afraid to buy packs
+25:19 
+
+25:19 and uh download free packs and um you
+25:22 
+
+25:22 know reuse previous assets you've
+25:24 
+
+25:24 already made and just um don't be afraid
+25:27 
+
+25:27 to just do whatever you can to get
+25:28 
+
+25:28 detail in there quickly so yeah I hope
+25:30 
+
+25:30 that was helpful thanks for watching and
+25:32 
+
+25:32 uh see you in the next one oh and again
+25:34 
+
+25:34 if you want to download this blend file
+25:36 
+
+25:36 there's a link below

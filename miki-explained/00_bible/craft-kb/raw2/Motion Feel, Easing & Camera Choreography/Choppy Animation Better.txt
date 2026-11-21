@@ -1,0 +1,218 @@
+00:02 Have you ever wondered why choppy animation
+sometimes feels better?
+00:06 Some of you out there are going to immediately
+disagree, but think of it this way:
+00:10 Animation is not as simple as the framerate
+of a video game.
+00:13 Your average video game is usually between
+24 frames a second, and 60 frames a second,
+00:18 but games will usually try to keep it consistent.
+00:20 If the game is optimized, it’s always going
+to try and be 24fps, 30fps, 60fps, whatever.
+00:25 It stays a consistent, solid number of frames
+per second.
+00:29 But animation changes framerate all the time
+without you noticing.
+00:32 On average, animation tends to be at a maximum
+of 24 frames a second, but it’s rare for
+00:36 animation to even be at 24 frames a second
+the whole time.
+00:40 Usually it’ll be half of that, at 12 frames
+a second, and even drop down to 8fps or even 6fps.
+00:46 This is referred to as animating on ones,
+twos, threes and fours, which is referring
+00:49 to how many frames the drawing is held for.
+00:53 Take a look at this scene from Cowboy Bebop.
+00:55 Nobody would call a fight like this “choppy”,
+but, while most of the fight is on twos, or
+00:59 12 frames a second, there are moments where
+the animation is at a mere 8 frames a second, or on threes.
+01:04 Here’s two frames from that fight – look
+at how huge the jump is between them.
+01:08 These two drawings are held on threes, at
+8 frames a second.
+01:12 You can see it in the background, which is
+still moving at 24 frames a second.
+01:16 Holding these drawings for just a frame longer,
+on threes, makes them more impactful and more
+01:20 readable compared to the rest of the shot,
+which is animated on twos.
+01:24 The huge jump between these two frames wasn’t
+an accident, and neither is the fact that
+01:28 they’re held on for just a frame longer
+than every other frame.
+01:30 It’s to make sure you feel those frames
+in the moment,
+01:32 and feel what happens between those two frames.
+01:35 When it comes to animation, it’s often more
+important what happens between frames moreso
+01:39 than what's happening in a single frame.
+01:41 Because all that matters is how the animation
+feels as a whole,
+01:44 not what it looks like frame by frame.
+01:46 And sometimes what makes that animation feel
+better is holding on certain frames.
+01:50 Think about it this way: imagine an arrow
+hitting a bullseye.
+01:53 How many frames do you think that takes?
+01:54 Three frames?
+01:56 Two?
+01:57 What about… zero?
+01:58 Nothing’s there, and then it suddenly appears,
+with the tail vibrating into place.
+02:02 To me, this feels far more impactful than
+animating the frames inbetween.
+02:06 Because at the end of the day, animation itself
+is an illusion: nothing is actually moving,
+02:10 it’s your brain inserting the movement between
+those two frames.
+02:13 So the lack of anything between those two
+frames results in a far greater impact, with
+02:16 your brain filling in all the motion.
+02:19 Now, this isn’t some hard and fast rule.
+02:21 American animation tends to animate fast movements
+on ones,
+02:24 using smears and multiples for cartoony effect.
+02:27 While Japanese animation will focus more on
+the after effects of the action, putting emphasis
+02:30 on what’s not there in a single frame, or
+what comes after.
+02:34 Both styles can be executed well, but what
+you prefer is ultimately up to you.
+02:38 Personally, I find the quote unquote “choppy”
+animation far more satisfying, and I think
+02:43 when it’s done well, people prefer it that
+way.
+02:46 I know I literally just said that what you
+prefer is up to you, but hear me out for a second.
+02:51 Before the 2000’s, animation made for TV
+02:54 limited the amount of frames drawn as an economical decision.
+02:57 Studios only have so much time, labor and
+materials for hundreds of hours of animation,
+03:01 so every frame mattered.
+03:03 And they emphasized the impact of an action
+over the action itself.
+03:06 That’s why you get these flashes of white
+in Dragon Ball Z – having them there for
+03:10 just a frame makes the impact feel way tougher.
+03:13 But over time, those economical decisions
+shifted as new technology made animation more convenient.
+03:18 After the 2000’s, TV animation slowly began
+to focus on 2D puppet animation, or what a
+03:23 lot of people would know as Flash animation,
+where all those inbetween frames ended up
+03:26 being filled in by interpolation, and animation
+was often at a full 24 frames a second.
+03:32 But 2D puppet animation can be executed just
+as well as the more limited, choppier animation
+03:35 of the 90’s, and using interpolation to
+your advantage and having every frame animated
+03:40 can be just as strong as a stylistic choice
+as hand animating on twos and threes.
+03:44 Obviously, I’m a fan of this style, hence
+why Doodley is animated this way.
+03:47 But what fascinates me is the recent trend
+we’ve been seeing that mixes the two together:
+03:52 Digital animation that can interpolate, but
+animators choose to limit the animation to
+03:56 twos and threes for that impact we were talking
+about earlier.
+03:58 And I think this style is fantastic!
+04:01 In my opinion, if you were wondering why the
+framerate drops in Puss in Boots 2 look so good,
+04:04 this is why.
+04:06 And it works so unbelievably well that I think
+this is just where digital animation in general
+04:10 is going, and I kind of love it.
+04:12 When I said earlier that people prefer it
+this way, it’s that I think people want
+04:15 to see an artist’s decisions like this.
+04:17 When an animator is holding on a frame like
+this, they want you to feel it.
+04:21 You don’t get that from fully interpolated
+digital animation.
+04:24 And that decision making, deliberately choosing
+what frames to hold on and for how long,
+04:29 is exactly the kind of reasons why 
+people love classic 2D animation.
+04:31 It gives animation a soul.
+04:33 A lot of people criticize Flash animation
+for being hollow and too digital, and while
+04:37 I think Flash animation can be done well like
+I’ve mentioned before, I’ve always seen
+04:41 people praise good Flash animation when they
+limit the framerate like this.
+04:45 Because they want to feel the artist behind
+it, not the computer.
+04:48 And the thing is, doing it this way is actually
+harder than fully interpolated, 24 frames
+04:53 a second animation, especially in 3D.
+04:55 In an article for Polygon, the director of
+The Bad Guys has actually described it as
+04:59 “fighting the computer,” which is a pretty
+good way to describe it.
+05:02 Animators and artists are literally fighting
+against what the computer gives them to add
+05:06 their own touch to it.
+05:07 Nobody’s cutting corners or doing it this
+way because it’s cheaper – it requires
+05:10 far more artistic input and decision making.
+05:13 Most of all, it requires confidence.
+05:15 And I think that should be celebrated!
+05:16 It’s risky and difficult and experimental,
+yet confident that it works anyways.
+05:20 Maybe it doesn’t work for you, and that’s
+okay, that’s what an experiment is for.
+05:25 But 3D animation is still a fairly young medium
+that really only started 25 years ago, so
+05:29 we’re still figuring it out.
+05:31 I’ve gone most of this video without mentioning
+Spider-verse, and you’ve probably been vibrating
+05:35 in your seat waiting for it to get mentioned.
+05:37 But yeah, it really can’t be understated
+how revolutionary Spider-verse was for 3D
+05:41 animation.
+05:42 I know it can feel like studios are doing
+what Spider-verse did because it’s trendy,
+05:45 but I don’t think that’s the case.
+05:47 I think what Spider-verse did instead was
+unlock something nobody realized they wanted
+05:51 in digital animation…
+05:52 To fight the computer.
+05:54 After 20 years of movies and TV that leaned
+into what the computer can do, we’re finally
+05:58 leaning back into what the artist can do.
+06:00 And I think that’s awesome.
+06:02 At the end of the day, I'm personally a huge fan of animating
+on threes, fours and beyond,
+06:06 and I love seeing it in animation.
+06:08 Aside from the economical reasons that make
+it ideal for animating by yourself, you can
+06:13 get some excellent, fluid animation in just
+a handful of drawings when you know exactly
+06:17 what drawings to emphasize and how long to
+hold onto them for.
+06:20 You don’t need to draw every single frame
+to get an idea across, just the most important ones.
+06:25 And then use classical techniques like overshoot
+and smears, to really emphasize the motion.
+06:29 But that's for another video.
+06:31 Hopefully you’ll leave this video a little
+more appreciative of the kinds of decisions
+06:33 that go into animating this way.
+06:35 I personally can’t wait to see more of it
+in animation, and I hope you do too.
+06:38 Thanks for watching.
+06:40 This video was made possible with my Patreon
+subscribers at patreon.com/doodley!
+06:43 I don’t take sponsorships, so it’s currently
+the best way to support me, and you’ll get
+06:47 access to an exclusive channel in our Discord
+server, lots of extra content and behind the
+06:51 scenes, and your name in videos!
+06:53 Thank you again to BurdenedHunter, Alamarus,
+CGts Films, Just Nero, trbodev, bananaman,
+07:01 InkerJ, Erik Richter, hobqueer as well as
+the names you see scrolling now.
+07:06 Remember to do the usual Youtube stuff, and
+have a good one. Bye!

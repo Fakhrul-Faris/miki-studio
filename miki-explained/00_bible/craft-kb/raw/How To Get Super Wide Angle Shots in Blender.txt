@@ -1,0 +1,652 @@
+00:01 okay I'm going to show you how to get
+00:02 
+
+00:02 that nice wide angle Distortion look in
+00:05 
+
+00:05 blender and how you can control exactly
+00:07 
+
+00:07 how much bending and curvature you want
+00:09 
+
+00:09 around the outside of like the image so
+00:11 
+
+00:11 exactly how much of that fisheye effect
+00:12 
+
+00:12 you want here are some examples of me
+00:14 
+
+00:14 using this technique this camera
+00:16 
+
+00:16 technique in some of my renders and you
+00:18 
+
+00:18 can see it's just a fun effect that you
+00:20 
+
+00:20 can use to spice things up a bit and
+00:22 
+
+00:22 just make things yeah more fun more
+00:25 
+
+00:25 interesting so here's how you do that so
+00:27 
+
+00:27 by default you will have here's here's a
+00:30 
+
+00:30 shot with well I can go to the first one
+00:32 
+
+00:32 here's a shot using the perspective lens
+00:34 
+
+00:34 and I'll show you how to change the
+00:35 
+
+00:35 settings in a second but here's what it
+00:37 
+
+00:37 does
+00:37 
+
+00:37 so the perspective lens if you pay
+00:39 
+
+00:39 attention to like all these straight
+00:41 
+
+00:41 lines on the edge of the frame
+00:43 
+
+00:43 look how like these lines along here
+00:46 
+
+00:46 just go straight up and down as you're
+00:48 
+
+00:48 attacking them to and then if I switch
+00:50 
+
+00:50 to my second render slot here
+00:52 
+
+00:52 um this is where I would have used the
+00:54 
+
+00:54 panoramic lens and you can see what that
+00:56 
+
+00:56 does it just it's a you know that that's
+00:58 
+
+00:58 pretty subtle change right there but you
+01:00 
+
+01:00 can see what that's doing
+01:02 
+
+01:02 um just look at how the edge of this
+01:04 
+
+01:04 Frame here these these straight lines
+01:07 
+
+01:07 here are now just kind of curving
+01:09 
+
+01:09 and nicely just bending around the
+01:11 
+
+01:11 outside to create that uh like fisheye
+01:13 
+
+01:14 type effect
+01:15 
+
+01:15 so the way I like to do this is just by
+01:18 
+
+01:18 switching the lens type over from
+01:20 
+
+01:20 perspective to panoramic so here's what
+01:21 
+
+01:21 that looks like
+01:23 
+
+01:23 if you click on the camera and you go to
+01:25 
+
+01:25 this box right here object data
+01:27 
+
+01:27 properties and by default your lens will
+01:29 
+
+01:29 be on perspective
+01:31 
+
+01:31 so I have this set at 20 millimeters so
+01:33 
+
+01:33 it's fairly wide if you just pull up
+01:36 
+
+01:36 your phone and you turn on like the main
+01:39 
+
+01:39 camera that will be around 24
+01:42 
+
+01:42 millimeters ish like the equivalent of
+01:44 
+
+01:44 that it probably won't say that but like
+01:46 
+
+01:47 on a camera if you set it to 24
+01:48 
+
+01:48 millimeters it'll look roughly like that
+01:50 
+
+01:50 wide so the if you don't know what this
+01:53 
+
+01:53 is at all millimeters is just like the
+01:54 
+
+01:54 amount of Zoom so the higher the
+01:57 
+
+01:57 millimeter number the more zoomed in it
+01:59 
+
+01:59 is your default is going to be 50 here
+02:01 
+
+02:01 oops about 590 50.
+02:05 
+
+02:05 uh this right here so then you know if
+02:07 
+
+02:08 you zoom that out a bit to 20 which is
+02:10 
+
+02:10 what I added at here that's just pulling
+02:12 
+
+02:12 it back like this so it's different than
+02:14 
+
+02:14 moving the camera back right it doesn't
+02:16 
+
+02:16 look the same as if I have the camera
+02:17 
+
+02:17 closer
+02:19 
+
+02:19 um it's actually going to give you a
+02:21 
+
+02:21 different look obviously if you zoom in
+02:23 
+
+02:23 versus walk closer to something and zoom
+02:26 
+
+02:26 out versus walk farther it's going to
+02:27 
+
+02:27 give you a different effect because
+02:28 
+
+02:28 you're actually moving the camera versus
+02:30 
+
+02:30 just zooming in and out
+02:32 
+
+02:32 so anyways
+02:34 
+
+02:34 here's how you actually activate that
+02:35 
+
+02:35 panoramic lens so in here change it from
+02:39 
+
+02:39 perspective click this drop down uh just
+02:41 
+
+02:41 there's a setting here called panoramic
+02:43 
+
+02:43 and by default
+02:46 
+
+02:46 I think it's this one fisheye Equis
+02:48 
+
+02:48 solid if I set this to the same
+02:50 
+
+02:50 millimeters as I had before it's going
+02:52 
+
+02:52 to look kind of crazy so here it is 20
+02:55 
+
+02:55 millimeters 28 millimeters on
+02:56 
+
+02:56 perspective and then 20 millimeters on
+02:58 
+
+02:58 panoramic does like a bad effect but
+03:01 
+
+03:01 quite extreme
+03:03 
+
+03:03 so if you want to control this a little
+03:04 
+
+03:04 bit more what you can do is
+03:06 
+
+03:06 when you switch it to panoramic you get
+03:08 
+
+03:08 this extra drop down here and there's
+03:10 
+
+03:10 all these different types of stuff here
+03:11 
+
+03:11 it could be really useful for like
+03:13 
+
+03:13 making an hdri or whatever some other
+03:15 
+
+03:15 weird stuff
+03:16 
+
+03:17 the one I use all the time is uh this
+03:20 
+
+03:20 one right here fish eye lens polynomial
+03:22 
+
+03:22 I think this is somewhat new
+03:24 
+
+03:24 so make sure you're up to date in
+03:26 
+
+03:26 blender if you click this one right here
+03:27 
+
+03:27 you'll get all these different settings
+03:30 
+
+03:30 here I don't really know what any of
+03:31 
+
+03:31 this stuff means or does but I do know
+03:34 
+
+03:34 that if you change K1 this slide right
+03:36 
+
+03:36 here that's essentially your focal
+03:38 
+
+03:38 length now so the number of millimeters
+03:40 
+
+03:40 like the amount of Zoom you're getting
+03:42 
+
+03:42 and K2 is going to be the amount of
+03:44 
+
+03:44 distortion you get around the outside of
+03:46 
+
+03:46 the frame and that's pretty much all you
+03:48 
+
+03:48 need to know for this effect I would
+03:50 
+
+03:50 suggest you go in and like mess with
+03:51 
+
+03:51 these and see what they actually do when
+03:52 
+
+03:52 you you can really control the amount of
+03:54 
+
+03:54 distortion in different places in the
+03:56 
+
+03:56 lens with all these other sliders but K1
+03:58 
+
+03:58 is essentially focal length and K2 is
+04:01 
+
+04:01 essentially how much uh Distortion
+04:03 
+
+04:03 you're getting around the edge
+04:05 
+
+04:05 so if I set it to whatever this is you
+04:07 
+
+04:07 can see you can actually get uh like
+04:09 
+
+04:09 there there would be like that's kind of
+04:11 
+
+04:11 similar to the perspective lens so it's
+04:13 
+
+04:13 not like warping the outside at all but
+04:15 
+
+04:15 if I pull it back here just a little bit
+04:18 
+
+04:18 this looks more like the the panoramic
+04:20 
+
+04:20 like the default panoramic lens before
+04:22 
+
+04:22 but you could actually have it somewhere
+04:24 
+
+04:24 in between you know extreme and not at
+04:26 
+
+04:26 all so I like to just kind of pull that
+04:29 
+
+04:29 back just so it's warping the edges a
+04:31 
+
+04:31 little bit but not like anything insane
+04:34 
+
+04:34 and I find that's just a nice
+04:36 
+
+04:36 just gives it like a nice look it's not
+04:38 
+
+04:38 too extreme
+04:40 
+
+04:40 um so obviously if you take this effect
+04:41 
+
+04:41 to the extreme it can look really cool
+04:42 
+
+04:42 sometimes but it can also just
+04:44 
+
+04:44 ruin things so I would say play with
+04:46 
+
+04:46 this effect but just treat it with the
+04:48 
+
+04:48 use a bit of caution you know don't go
+04:51 
+
+04:51 so crazy with it that it's just like
+04:53 
+
+04:53 insane to look at although that can be
+04:55 
+
+04:55 fun sometimes like doing this that is
+04:56 
+
+04:56 fun this is like anytime you see my
+04:58 
+
+04:58 renders that have a little bit of that
+04:59 
+
+04:59 like Distortion around the outside
+05:01 
+
+05:01 that's this oh one more thing I forgot
+05:02 
+
+05:02 to mention is in here
+05:05 
+
+05:05 just to uh just something that
+05:07 
+
+05:07 complements this effect really nicely is
+05:09 
+
+05:09 using a bit of lens Distortion with the
+05:11 
+
+05:11 node
+05:12 
+
+05:12 so what this is is if you look right in
+05:15 
+
+05:15 the corner of my render here
+05:17 
+
+05:17 you see how like there's a bit of uh
+05:18 
+
+05:18 you'd call this like chromatic
+05:20 
+
+05:20 aberration or fringing or like you see
+05:23 
+
+05:23 how it's just a bit soft and like kind
+05:26 
+
+05:26 of weird in the edge of the frame here
+05:27 
+
+05:27 in like the very corner of my render
+05:29 
+
+05:29 this is this node right here if I just
+05:31 
+
+05:32 mute this and look at what it does
+05:34 
+
+05:34 without it just let it load here
+05:37 
+
+05:37 so there we go it's without this node
+05:39 
+
+05:39 it's perfectly still like tack sharp in
+05:41 
+
+05:41 the corner
+05:42 
+
+05:42 um just around the outside of the frame
+05:44 
+
+05:44 and I find it just looks uh a bit more
+05:46 
+
+05:47 natural and like a real camera and just
+05:49 
+
+05:49 has a nice effect if you put a little
+05:51 
+
+05:51 bit of this on
+05:52 
+
+05:52 some people really don't like this
+05:53 
+
+05:53 effect like
+05:55 
+
+05:55 um it's pretty easy to make it look bad
+05:56 
+
+05:56 by by having this on here and yeah you
+05:58 
+
+05:58 can see it just adds a little bit of
+05:60 
+
+05:60 that softness back to the edge of the
+06:01 
+
+06:01 frame there
+06:03 
+
+06:03 so that's like most real cameras that
+06:06 
+
+06:06 you use in real life are going to have a
+06:08 
+
+06:08 bit of that effect this lens Distortion
+06:09 
+
+06:09 like um atic aberration effect where
+06:12 
+
+06:12 like you can see it gets kind of split
+06:14 
+
+06:14 into its individual like red green blue
+06:16 
+
+06:16 channels here
+06:18 
+
+06:18 um so it just it makes it feel a little
+06:20 
+
+06:20 bit more
+06:21 
+
+06:21 real and like you're shooting with an
+06:23 
+
+06:23 actual camera which is always nice but
+06:25 
+
+06:25 like I said a lot of people like if you
+06:28 
+
+06:28 turn this way up it makes it look really
+06:30 
+
+06:30 bad really fast and um a lot of people
+06:33 
+
+06:33 do not like this effect so just again
+06:35 
+
+06:35 use this with caution
+06:37 
+
+06:37 um you know add enough to where it's
+06:39 
+
+06:39 like a little bit noticeable and makes
+06:40 
+
+06:40 it look better but doesn't like it's not
+06:42 
+
+06:42 so extreme that it's just distracting
+06:44 
+
+06:44 and makes it look worse
+06:46 
+
+06:46 um but yeah do whatever you want
+06:47 
+
+06:47 obviously
+06:49 
+
+06:49 so this is the value I use usually
+06:51 
+
+06:51 0.0055 and I just leave that on in my
+06:54 
+
+06:54 default file so I don't even have to
+06:55 
+
+06:55 worry about it it just always adds a
+06:57 
+
+06:57 little bit but not too much to my
+06:58 
+
+06:58 renders if you want to learn more about
+06:59 
+
+06:59 my overall process of creating
+07:00 
+
+07:00 environments I suggest you go and watch
+07:02 
+
+07:02 this video right here probably my best
+07:04 
+
+07:04 video has a like overwhelmingly positive
+07:06 
+
+07:06 response I found and it's done really
+07:08 
+
+07:08 well so if you want to check that out
+07:10 
+
+07:10 I'll just leave a link to that one and
+07:12 
+
+07:12 yeah have a
+07:14 
+
+07:14 good rest your day I guess hopefully
+07:16 
+
+07:16 that was useful okay bye

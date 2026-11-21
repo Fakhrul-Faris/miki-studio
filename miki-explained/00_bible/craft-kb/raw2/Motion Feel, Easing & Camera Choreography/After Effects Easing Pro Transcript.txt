@@ -1,0 +1,354 @@
+00:00 if you're new to easing and after
+00:02 effects then this tutorial is for you
+00:03 because we're going to cover everything
+00:05 you need to know to use the graph editor
+00:07 like a pro and I'm going to share some
+00:09 useful tricks to help level up your
+00:11 easing but first we need to talk about
+00:14 timing and spacing and these are
+00:16 Concepts you may have come across before
+00:18 in books like the animat survival kit so
+00:20 timing is about the different beats of
+00:22 an action and spacing is about the gaps
+00:24 between drawings then in After Effects
+00:27 you can think of timing as the distance
+00:29 between your key frames and spacing as
+00:31 you're using the way you adjust these
+00:34 two variables will drastically change
+00:36 the way your animation feels and it's
+00:38 what breathes life into your animation
+00:40 and gives it character so I've set up
+00:42 this composition to show you how spacing
+00:44 Works in After Effects so we have a
+00:47 linear animation to start but look at
+00:49 what happens when we easy ease these key
+00:51 frames and then adjust the easing in the
+00:53 graph editor you'll see that the spacing
+00:55 changes even though our timing the
+00:58 distance between our key frames Remains
+00:60 the Same same interesting right and
+01:02 what's good about understanding these
+01:04 Concepts is that you'll start to think
+01:05 about your animation more like a frame
+01:07 by frame animator and I would highly
+01:09 encourage you to do so because from what
+01:11 I've seen and experienced thinking this
+01:14 way ends up improving your animation
+01:16 easing and after effects is also about
+01:19 believability when animating objects we
+01:21 want them to feel like whatever they are
+01:23 so for example a beach ball will have a
+01:25 lighter bounce than a bowling ball as
+01:28 animators it's our job to figure out
+01:29 what our object is made of or decide
+01:31 what kind of characteristics it has so
+01:34 that our easing reflects these qualities
+01:36 but before we get too abstract about it
+01:38 let's jump into some practical examples
+01:40 in After Effects and I can show you some
+01:42 of the tricks I've picked up over the
+01:44 years so get ready because we're about
+01:46 to make the graph editor our and
+01:48 the first thing we're going to cover is
+01:50 how to make an object feel like it's
+01:51 falling correctly and to create more
+01:53 impact when that object lands on the
+01:55 ground or hits something so let's add in
+01:57 two position key frames 10 frames apart
+02:00 and now let's lift up the square to
+02:02 outside the canvas the first thing we
+02:04 want to think about here is the falling
+02:06 so because gravity exists objects pick
+02:08 up speed as they fall but these key
+02:10 frames are linear so the speed will be
+02:12 constant just look at this animation so
+02:15 I have a trick to fix this let's select
+02:16 our first key frame and get into the
+02:18 graph editor now we can just drag down
+02:20 the key frame and add some easing to the
+02:23 graph and now you can see we're getting
+02:25 more of an accelerated fall but now
+02:27 let's make it land with more impact so
+02:29 let's add another key frame about three
+02:31 frames ahead of our second key frame now
+02:34 with our second key frame selected let's
+02:36 nudge our Square down with our down
+02:38 arrow to create a slight overshoot let's
+02:40 easy ease the last key frame and inside
+02:42 the graph editor add a bit of easing on
+02:45 the right and look how much more solid
+02:46 and lifelike our object feels like it
+02:49 has weight to it now just a quick note
+02:51 here since our object is only falling
+02:53 along the Y AIS we could also have
+02:55 separated the dimensions which you do by
+02:57 right clicking position and hitting
+02:59 separate Di dimensions and here is the
+03:01 same set of key frames on just the Y AIS
+03:04 so that we can focus on the easing
+03:06 separating Dimensions allows us to use
+03:07 the value graph for our easing and once
+03:09 you start to understand the value graph
+03:11 it can sometimes be a bit more intuitive
+03:13 and you have greater control over your
+03:15 easing now in the graph editor let's
+03:17 select the value graph then select our
+03:20 first and last key frames and easy ease
+03:22 them with F9 let's change the shape of
+03:24 the graph with our first handle so that
+03:26 it has less of a curve because we want
+03:28 it to feel like it was already moving
+03:30 outside of the comp so something like
+03:32 this you'll notice there's a weird hump
+03:35 to the left of our middle key frame and
+03:36 it looks like the graph is decelerating
+03:38 just before it hits the ground gravity
+03:40 would not let that happen and we also
+03:42 know we want the middle key frame to hit
+03:44 hard so let's use our convert vertex
+03:46 tool to add handles to this and break
+03:48 the first handle so that we can remove
+03:50 that deceleration in the graph lastly we
+03:53 just need to increase the easing on the
+03:54 last key frame and make any final tweaks
+03:57 to our handles and now we have something
+03:59 similar to our first animation with the
+04:01 speed graph now I want us to do some
+04:03 more work with the value graph so here
+04:05 is a new shape with the Anchor Point on
+04:07 the left so we can rotate it like this
+04:09 now let's create a quick little
+04:10 animation to practice with so here is an
+04:13 animation with linear key frames so we
+04:15 have an anticipation and then a fast
+04:17 action before settling back into the
+04:19 original position take note of the
+04:21 timing which as you now know is the
+04:23 spacing between these key frames but now
+04:26 let's jump into the graph editor and
+04:28 change to our value graph because I want
+04:30 you to see how it looks when the graph
+04:32 is linear it's a hard-edged zigzag and
+04:34 in real life nothing really moves like
+04:36 this it's also worth taking note of the
+04:38 invisible middle line here at zero on
+04:41 the graph when we rotate upwards we are
+04:43 getting into a negative value on our
+04:45 rotation so the graph goes down and of
+04:47 course the opposite is true for third
+04:49 key frame we can also move these up and
+04:52 down in the graph and the values will
+04:53 change this is important to note when we
+04:55 start adding curves so let's select all
+04:58 the key frames add an easy ease and
+04:60 observe what happens to the graph we're
+05:02 starting to get those curves I was
+05:03 talking about and perhaps you're
+05:05 starting to see why this can actually be
+05:06 a bit more of an intuitive graph for
+05:08 easing now we can exaggerate our curve
+05:10 on the second key frame to increase the
+05:12 easing and just keep tweaking these
+05:15 handles until we get something that
+05:16 feels the way we want it to so something
+05:19 like this and now for some 200 IQ
+05:22 if we pull up the handle on our first
+05:24 key frame so that the curve goes above
+05:26 the zero line we can add a quick
+05:28 anticipation to our anticipation and
+05:31 take a look at that this applies at any
+05:34 point in the curve so you could also
+05:35 break the second curve and pull the
+05:37 handles out again to something like this
+05:40 and you'll get a slightly different
+05:41 result and just for fun let's take a
+05:43 look at the speed graph for the same
+05:45 animation let's be honest this is not a
+05:47 graph you would have likely created by
+05:50 working with the speed graph before we
+05:52 move on if you've gotten any value graph
+05:54 out of this tutorial so far let me know
+05:57 by hitting that like button the next
+05:59 thing we're going to cover is overshoots
+06:01 so here is a circle and let's drop in
+06:03 two scale key frames 10 seconds apart
+06:05 and change the first key frame to zero
+06:07 to create a simple scale animation now
+06:10 let's go four frames ahead and add
+06:12 another scale key frame then on the
+06:14 second key frame we can change the value
+06:17 to 110 and easy ease all the key frames
+06:20 and because of how well set up the
+06:22 timing is this already looks pretty good
+06:25 but with the easing we can drastically
+06:27 change how this feels so in the speed
+06:29 graph we could increase the easing on
+06:31 the first and last key frames so that
+06:33 the overshoot hits really hard and
+06:35 bounces back and this kind of looks like
+06:37 a pumping speaker or let's do the exact
+06:40 opposite by resetting the easing and
+06:43 then adding stronger easing on either
+06:44 side of the middle key frame and this
+06:47 feels very different for the last
+06:49 example let's reset and go into the valy
+06:51 graph and now let's change the handle on
+06:54 the first key frame so that there is no
+06:56 easing at the start and it comes on very
+06:58 quickly and to make this feel right
+06:60 we're also going to change the timing of
+07:02 the second key frame and adjust the
+07:03 handles slightly like this and look at
+07:06 the results also for fun we can adjust
+07:10 the last key frames handle like this and
+07:12 now this gives us the feeling that the
+07:14 circle is locking into place which is
+07:16 pretty interesting so you may be
+07:18 starting to notice how much flexibility
+07:20 you have once you start working with the
+07:22 graph editor so let's continue with an
+07:24 elastic overshoot animation and with
+07:26 elastic style easing you're trying to
+07:28 create a graph that looks like this so
+07:30 with the same Circle let's reset the
+07:32 easing and go into the value graph and
+07:35 before we move on let's just make the
+07:36 first overshoot 120 now let's add a
+07:39 bunch of key frames six frames apart now
+07:42 we just need to lift these frames up and
+07:44 down in a decaying fashion so that the
+07:46 values get smaller and smaller until the
+07:48 last key frame like this let's select
+07:51 them all and easy ease them to smooth
+07:53 out the graph and look at what we've
+07:56 made and of course the same concept
+07:58 applies to rotation as as well and to be
+08:00 honest this is probably a better
+08:02 application of this technique than the
+08:04 scale version but in case it wasn't
+08:06 obvious I don't want you getting all
+08:07 excited about this wobbly scale
+08:09 animation because next thing you know
+08:11 you're animating every object in your
+08:12 entire scene like this and we've all
+08:14 seen that before and it's dog
+08:17 you're better than that moving on there
+08:19 is a frame by frame technique for
+08:20 beginners to practice animation and Alex
+08:23 Grigg talks about it in this video but
+08:25 essentially the idea is to start with a
+08:27 circle and animate it moving around
+08:29 while while trying to make it as
+08:31 interesting as possible and paying
+08:32 attention to where it slows down and
+08:34 speeds up and this is essentially about
+08:37 practicing easing and what's quite
+08:39 interesting is that this is fairly
+08:41 simple when drawing by hand but it's
+08:43 actually quite difficult to achieve in
+08:44 After Effects but luckily I'm here to
+08:46 show you how we can go about it and in
+08:49 doing so we're also going to learn some
+08:50 cool about key frames for starters
+08:53 we have a small circle now let's grab
+08:56 our pen tool and start drawing a cool
+08:57 path for our shape to follow and if you
+08:60 don't know why I'm doing it this way
+09:01 it's probably going to blow your mind so
+09:04 let's refine the path a bit making sure
+09:06 that it has curves in all the right
+09:08 places and they are smooth and sensual
+09:10 like your favorite anime girl and now
+09:12 let's open up the shape layer to our
+09:14 path and add a key frame now let's copy
+09:17 this key frame with crl + C now we can
+09:19 click on the position of our Circle and
+09:21 paste this key frame with crl v and boom
+09:24 we have turned the path into position
+09:26 key frames and each path Point has
+09:28 become a new key frame and this brings
+09:30 us to a new type of key frame roving key
+09:33 frames and you'll see them in the middle
+09:35 they've become round and what after
+09:37 effect is doing is automatically spacing
+09:39 the key frames so that the object
+09:41 animates smoothly along this path let's
+09:43 play this so you can see what I mean and
+09:45 you can drag the right key frame in to
+09:47 make this animation faster or pull it
+09:49 out to make the animation slower you can
+09:51 add easing on either side and everything
+09:54 will adjust
+09:56 accordingly to add or remove roving key
+09:59 frames you can select the middle key
+10:00 frames right click and click R across
+10:03 time and now we can get into adding some
+10:05 spice to this movement so let's select
+10:08 all the key frames and add an easy ease
+10:10 this will obviously look like trash but
+10:12 we've only just started so let's jump
+10:14 into the graph editor and since it
+10:16 doesn't make sense to separate our
+10:17 Dimensions we'll be using the speed
+10:19 graph and now we're going to focus on
+10:21 the first few key frames so for starters
+10:24 let's grab the second key frame and
+10:25 start dragging it up and if the two
+10:27 sides are separating you just need a
+10:29 double click on the key frame and make
+10:31 sure this check box is ticked and now
+10:33 we're just going to increase the easing
+10:35 around the key frame and play around
+10:37 with the height of the key frame so the
+10:39 lower the key frame the closer the ball
+10:41 will come to a halt and the higher up
+10:43 the key frame the opposite is true so by
+10:45 lifting up the key frame and adding
+10:47 strong Ease on either side you can see
+10:49 our circle now has this satisfying hang
+10:52 time now for our third and fourth key
+10:54 frames it'll be nice if it actually shut
+10:56 right through so we can add some ease at
+10:57 the later key frame so to do that that
+10:59 we can just select the next two key
+11:01 frames and right click to turn them into
+11:03 roving key frames again now let's lift
+11:06 up the following key frame and mess
+11:07 around with the easing some more and
+11:09 keep doing that until we get something
+11:11 we're happy with like this and then we
+11:14 can just rinse and repeat these steps
+11:15 with the next key frames by lifting them
+11:17 up or changing them into Roven key
+11:19 frames as necessary and just messing
+11:22 around with the easing until we get
+11:24 something satisfying and
+11:27 sensual now as a bonus I want to show
+11:30 you another way to do this that will
+11:32 knock your socks off or keep them on
+11:35 that's what you're into so let's reset
+11:37 this whole animation into our roving key
+11:39 frame version precompose our layer and
+11:42 then enable time remapping now we can
+11:44 just add a key frame at the start and
+11:46 then keep adding key frames at any point
+11:48 we want to slow down along the animation
+11:50 so this way we aren't confined to our
+11:52 original key frames now we can easy ease
+11:55 all of the key frames then in the graph
+11:58 editor we just need to make sure sure we
+11:59 have that checkbox selected for all the
+12:01 key frames and now we can just lift them
+12:04 all up and adjust the easing like before
+12:06 without the need to mess around with
+12:08 Roven key
+12:11 frames and with this setup you can even
+12:13 use the value graph to get your
+12:14 animation just right and that's it for
+12:17 this tutorial let me know in the
+12:19 comments what opened your eyes or turned
+12:21 you on to new possibilities take it easy
+12:24 ease and remember to subscribe for more
+12:26 motion
+12:28 XP
+12:30 [Music]

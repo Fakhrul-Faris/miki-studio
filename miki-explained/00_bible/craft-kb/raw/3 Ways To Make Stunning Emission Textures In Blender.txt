@@ -1,0 +1,829 @@
+00:00 okay so I'm going to show you three
+00:02 
+
+00:02 different methods of using emission
+00:03 
+
+00:03 Textures in blender so that you can
+00:05 
+
+00:05 create really just cool and unique light
+00:08 
+
+00:08 sources that you don't really see anyone
+00:10 
+
+00:10 else doing so let's just get into it
+00:12 
+
+00:12 okay so I'll put some examples up of
+00:13 
+
+00:13 where I've used these techniques that
+00:14 
+
+00:14 I'm about to show you the first method
+00:16 
+
+00:16 is I'll just add a a plane in here just
+00:19 
+
+00:19 a white square just to have some light
+00:22 
+
+00:22 just so you can see this by the way if
+00:24 
+
+00:24 you're wondering what this floor is if
+00:26 
+
+00:26 you just go watch my last video I showed
+00:28 
+
+00:28 you how to make this thing in like two
+00:29 
+
+00:29 seconds it's very easy
+00:31 
+
+00:31 um but anyways back to this the first
+00:34 
+
+00:34 thing that I'll usually do is just take
+00:37 
+
+00:37 and I'm not even kidding here any random
+00:39 
+
+00:39 image from my folder of downloads from
+00:42 
+
+00:42 unsplash any random image and just run
+00:45 
+
+00:45 that into the alpha and run it into the
+00:48 
+
+00:48 emission color so I'm just going to flip
+00:51 
+
+00:51 this around so I'll just invert this on
+00:53 
+
+00:53 the alpha because this image has if you
+00:56 
+
+00:56 look at this it has a white background
+00:58 
+
+00:58 so anything that's white is going to be
+01:00 
+
+01:00 opaque and everything that's dark is
+01:02 
+
+01:02 going to be transparent so I want to
+01:04 
+
+01:04 flip that around so the background is
+01:05 
+
+01:05 transparent but this thing here is um
+01:07 
+
+01:07 opaque so I'll just invert that and you
+01:09 
+
+01:09 can see it's sort of working but not
+01:10 
+
+01:10 really so I need to use a color ramp
+01:12 
+
+01:12 just drop that in
+01:14 
+
+01:14 here and then just there we go just kind
+01:17 
+
+01:17 of Crank that up till it's somewhere in
+01:19 
+
+01:19 there okay so let's just turn the
+01:22 
+
+01:22 strength up and you can see if I put
+01:25 
+
+01:25 something behind it now anywhere that
+01:28 
+
+01:28 was dark in this image because we
+01:30 
+
+01:30 inverted inverted it so anywhere that's
+01:32 
+
+01:32 dark is going to be see-through and
+01:33 
+
+01:33 anything that's light is going to be
+01:35 
+
+01:35 opaque so that's the first thing I'll do
+01:37 
+
+01:37 so you can really put anything in here
+01:38 
+
+01:38 so sometimes random images like this is
+01:41 
+
+01:41 cool sometimes just displacement maps
+01:43 
+
+01:43 are cool so I'll show you with like
+01:45 
+
+01:45 let's try like a JS placement if you
+01:47 
+
+01:47 don't know what this is just Google this
+01:48 
+
+01:48 JS placement it's just a free
+01:50 
+
+01:50 displacement map generator you've
+01:52 
+
+01:52 probably seen tons of people use this
+01:54 
+
+01:54 it's kind of overused if you just put it
+01:55 
+
+01:55 on a Plane by itself but I'll show you
+01:57 
+
+01:57 this example just so you can see what it
+01:59 
+
+01:59 is so I'll just open this up
+02:00 
+
+02:00 it's meant for displacement but if you
+02:02 
+
+02:02 put it into the emission or if you put
+02:04 
+
+02:04 it into the alpha on an emissive surface
+02:07 
+
+02:07 you can get some really complex looking
+02:08 
+
+02:08 lights without um any effort so I'll
+02:12 
+
+02:12 just take a take the color ramp up a bit
+02:14 
+
+02:14 more like this let's take this out and
+02:17 
+
+02:17 just mess with this until we get
+02:18 
+
+02:18 something
+02:22 
+
+02:22 cool so yeah there's another thing you
+02:24 
+
+02:24 can do is just put some random
+02:26 
+
+02:26 displacement map in here this also works
+02:28 
+
+02:28 with fire so I'll show you how to make
+02:29 
+
+02:29 fire like really easily just take photos
+02:32 
+
+02:32 go to unsplash just search fire download
+02:35 
+
+02:35 any of these take this and run it into
+02:38 
+
+02:38 the emission color and also again the
+02:42 
+
+02:42 alpha and then this is a bit much so
+02:44 
+
+02:44 let's just take that up apply the scale
+02:47 
+
+02:47 re unwrap it just Q project and let's
+02:50 
+
+02:50 just take this
+02:52 
+
+02:52 up and there you go um fire in like 2
+02:57 
+
+02:57 seconds no simulation needed that also
+02:60 
+
+02:60 works with with video by the way if you
+03:01 
+
+03:01 have a video of fire and you just do the
+03:03 
+
+03:03 same technique you can get uh moving
+03:05 
+
+03:05 fire without um yeah simulating it or
+03:08 
+
+03:08 anything like that so yeah there's
+03:10 
+
+03:10 really unlimited things you can put into
+03:12 
+
+03:12 here and it'll look cool in a lot of
+03:14 
+
+03:14 them so it's just about trying different
+03:16 
+
+03:16 images finding what works and just
+03:19 
+
+03:19 messing around with it and just yeah
+03:20 
+
+03:20 just finding cool stuff the next thing
+03:22 
+
+03:22 that I'll show you is an easy way to
+03:24 
+
+03:24 make light Trails like this uh just out
+03:27 
+
+03:27 pretty much out of anything so let's
+03:28 
+
+03:28 just take this random image of like
+03:30 
+
+03:30 Ramen and let's do it out of this CU why
+03:33 
+
+03:33 not so the way you do this is just take
+03:36 
+
+03:36 the UV map scale it down on the x axis
+03:39 
+
+03:39 like
+03:40 
+
+03:40 this and just do that just kind of move
+03:42 
+
+03:42 it around to a point where it looks cool
+03:46 
+
+03:46 so it's just getting you can see what it
+03:48 
+
+03:48 is it's just that image but it's getting
+03:50 
+
+03:50 really stretched out because we're
+03:52 
+
+03:52 scaling down on the UV map so much that
+03:55 
+
+03:55 now it looks like all these light
+03:56 
+
+03:56 streaks so I'll just expand that a bit
+03:59 
+
+03:59 and let's just take the strength down a
+04:01 
+
+04:01 little bit and then I don't really like
+04:03 
+
+04:03 the color so maybe let's take a hue
+04:05 
+
+04:05 saturation and just drop that in and
+04:07 
+
+04:07 change the Hue so I don't know something
+04:10 
+
+04:10 like
+04:12 
+
+04:12 that sure that's kind of cool maybe
+04:15 
+
+04:15 let's multiply in some other color so
+04:17 
+
+04:17 just mix RGB change it to
+04:20 
+
+04:20 multiply uh put this onto like some blue
+04:23 
+
+04:23 or
+04:24 
+
+04:24 something I don't know that's kind of
+04:26 
+
+04:26 cool this one here and these ones that's
+04:30 
+
+04:30 all these light Trail things here that's
+04:32 
+
+04:32 all that is it's just a stretched out
+04:34 
+
+04:34 image that's running into the emission
+04:37 
+
+04:37 color and the alpha and then you just do
+04:38 
+
+04:38 whatever you want to the color and then
+04:40 
+
+04:40 there you go it's uh yeah Ramen Ramen
+04:44 
+
+04:44 light Trails Okay the third technique
+04:45 
+
+04:45 that you can use here that something
+04:47 
+
+04:47 that I use when I just don't really know
+04:49 
+
+04:49 what I want to make but I want to make a
+04:51 
+
+04:51 thing that's cool is you can just take a
+04:54 
+
+04:54 plane do a bit of modeling like not even
+04:57 
+
+04:57 really modeling you're just like moving
+04:59 
+
+04:59 a few basic shapes around until you make
+05:01 
+
+05:01 something that's some cool pattern or
+05:03 
+
+05:03 some cool shape or
+05:04 
+
+05:04 something and you just take that and do
+05:07 
+
+05:07 the same thing put some cool textures on
+05:09 
+
+05:09 it put weird images into the color just
+05:12 
+
+05:12 try stuff until you get a cool like
+05:14 
+
+05:14 abstract thing something you'll see all
+05:16 
+
+05:16 the time is people using and something I
+05:18 
+
+05:18 used to do all the time is just use um
+05:21 
+
+05:21 an emission like you turn up the
+05:23 
+
+05:23 emission strength but you don't have
+05:24 
+
+05:24 anything running into the alpha or the
+05:27 
+
+05:27 color variation so it's just a flat
+05:29 
+
+05:29 white bar that's emitting light which
+05:33 
+
+05:33 sometimes it looks cool to do that but a
+05:34 
+
+05:34 lot of the times you just see this and
+05:36 
+
+05:36 right away like anyone who has ever used
+05:38 
+
+05:38 blender kind of knows right away it's
+05:40 
+
+05:40 like okay it's the emission has just
+05:41 
+
+05:41 turned up that's all it is but if you
+05:43 
+
+05:43 run something else into the alpha or you
+05:45 
+
+05:45 run weird images into the color it just
+05:49 
+
+05:49 switches it up and it makes it something
+05:50 
+
+05:50 that's not the same thing that everyone
+05:52 
+
+05:52 else is doing and it just looks cooler
+05:55 
+
+05:55 and more interesting too so you can take
+05:58 
+
+05:58 let's take one of the examples that I
+05:59 
+
+05:59 just showed you let's just take that for
+06:02 
+
+06:02 just to show you like literally anything
+06:03 
+
+06:03 can run in here let's plug that in to
+06:06 
+
+06:06 the color re unwrap this and just kind
+06:09 
+
+06:09 of take that down and line it up that's
+06:13 
+
+06:13 kind of cool sure what if we run this
+06:15 
+
+06:15 into the alpha so let's put it in there
+06:18 
+
+06:18 that's kind of interesting I don't
+06:21 
+
+06:21 know maybe take this the other way
+06:25 
+
+06:25 slightly and then you can always just
+06:27 
+
+06:27 kind of duplicate this um
+06:30 
+
+06:30 move the UV map around on the second one
+06:32 
+
+06:32 so it's I don't know put that in like
+06:35 
+
+06:35 that yeah there's so much stuff you can
+06:37 
+
+06:37 do by just taking like literally random
+06:41 
+
+06:41 images running them into the color and
+06:44 
+
+06:44 the alpha and just getting weird
+06:47 
+
+06:47 interesting results that you don't see
+06:49 
+
+06:49 other people
+06:50 
+
+06:50 doing just because it's always so Random
+06:53 
+
+06:53 what you get so um don't be afraid to
+06:57 
+
+06:57 just try like you can always do this
+06:58 
+
+06:58 like you can run one thing into the
+06:60 
+
+06:60 color you can run a different thing into
+07:01 
+
+07:01 the alpha so just try like weird stuff
+07:04 
+
+07:04 and let's try doing like um let's take a
+07:07 
+
+07:07 a displacement map from JS placement
+07:09 
+
+07:09 like I don't know this one let's run
+07:11 
+
+07:11 that into the alpha while we're running
+07:13 
+
+07:13 this into the color and then just kind
+07:15 
+
+07:15 of let's save this for later I want it
+07:18 
+
+07:18 again and just dial in some weird
+07:21 
+
+07:21 setting like this there we go that's
+07:23 
+
+07:23 kind of cool maybe that's too much with
+07:25 
+
+07:25 this one maybe let's take the white
+07:27 
+
+07:27 handle for what's running into the alpha
+07:28 
+
+07:28 and just take that down so so it's not
+07:30 
+
+07:30 fully opaque so now we can kind of see
+07:32 
+
+07:32 through it but I want the strength a bit
+07:34 
+
+07:34 higher so it's still bright but now we
+07:36 
+
+07:36 can see things that are behind it so
+07:38 
+
+07:38 it's we're kind of getting both Textures
+07:40 
+
+07:40 in at
+07:41 
+
+07:41 once I don't know there's just so much
+07:43 
+
+07:43 stuff you can do maybe let's duplicate
+07:45 
+
+07:45 this geometry yeah take this part crl L
+07:48 
+
+07:48 delete those
+07:50 
+
+07:50 faces uh maybe just move the UV map
+07:52 
+
+07:52 around like or just reproject
+07:57 
+
+07:57 it yeah you can see there's just so much
+07:59 
+
+07:59 cool stuff you can do and then once you
+08:01 
+
+08:01 have the set up if you just take this um
+08:04 
+
+08:04 just open up whatever image is running
+08:06 
+
+08:06 into here and just swap it out for
+08:08 
+
+08:08 anything else now you can just get you
+08:10 
+
+08:10 can try new things really really fast by
+08:13 
+
+08:13 just swapping that image sometimes if
+08:15 
+
+08:15 you want to try different options but
+08:16 
+
+08:16 you want to still save this for later
+08:18 
+
+08:18 you can just duplicate that image click
+08:20 
+
+08:20 this button like the two right here that
+08:22 
+
+08:22 pops up just click that and it won't
+08:24 
+
+08:24 discard this image when you swap this
+08:26 
+
+08:26 one out now you just open up whatever
+08:28 
+
+08:28 you want put a new one in and if you
+08:30 
+
+08:30 don't like it you can always just take
+08:31 
+
+08:31 the old one and run that back into the
+08:33 
+
+08:33 same
+08:34 
+
+08:34 thing so there's really like I said just
+08:37 
+
+08:37 unlimited things you can try here
+08:39 
+
+08:39 instead of just like compare this
+08:42 
+
+08:42 to that like everyone knows if you've
+08:47 
+
+08:47 ever used blender or any software you
+08:49 
+
+08:49 know what this is right away it's not
+08:51 
+
+08:51 that interesting if you just switch it
+08:52 
+
+08:52 up by running random images into the
+08:55 
+
+08:55 color and the alpha you could just get
+08:57 
+
+08:57 so much more interesting results um um
+09:00 
+
+09:00 and it doesn't take any extra like
+09:02 
+
+09:02 effort it's just opening up random
+09:03 
+
+09:03 images and just trying stuff and seeing
+09:05 
+
+09:05 what works some other tips to make this
+09:07 
+
+09:07 look good is one use nice textures
+09:11 
+
+09:11 around it so if you're wondering what
+09:13 
+
+09:13 this is this floor I did a tutorial like
+09:16 
+
+09:16 my last videos on how to make wet
+09:17 
+
+09:17 concrete textures like this like
+09:19 
+
+09:19 reflective floors just go watch that
+09:20 
+
+09:20 it's super easy so I'll just put a link
+09:22 
+
+09:22 to it or a card or whatever in the video
+09:24 
+
+09:24 one other thing you should do to make
+09:26 
+
+09:26 these look cool is use volumetrics like
+09:28 
+
+09:28 I showed here so I just went into the
+09:30 
+
+09:30 world settings and just put a principled
+09:32 
+
+09:32 volume in and just adjusted the density
+09:34 
+
+09:34 in the anisotropy if you're an Eevee
+09:36 
+
+09:36 just turn on turn on Bloom um if you
+09:39 
+
+09:39 don't want to use volumetrics for some
+09:40 
+
+09:40 reason use the glare node or if you
+09:42 
+
+09:42 don't want to use that bring it into
+09:44 
+
+09:44 Photoshop and add the glow yourself as
+09:47 
+
+09:47 long as you have some kind of way to
+09:49 
+
+09:49 show that it's really bright and glowing
+09:52 
+
+09:52 uh just a subtle glow always looks nice
+09:54 
+
+09:54 as long as you don't uh overdo it okay
+09:56 
+
+09:56 hopefully you learned something about
+09:57 
+
+09:57 emission textures hopefully this
+09:59 
+
+09:59 inspires you to go and make some cool
+10:01 
+
+10:01 interesting stuff that you haven't
+10:02 
+
+10:02 thought of before and uh yeah thanks for
+10:05 
+
+10:05 watching subscribe here turn on the
+10:07 
+
+10:07 notifications follow me on Instagram
+10:09 
+
+10:09 I'll link that below cuz I'm always
+10:10 
+
+10:10 posting new artwork and uh yeah I'll see
+10:13 
+
+10:13 you around peace

@@ -1,0 +1,195 @@
+00:21 lighting Products is not easy but in
+00:23 this video I will not only explain you
+00:24 the basic concepts but I will also
+00:27 Implement them in different situations
+00:29 so that you can easily your product
+00:31 these two project files are available on
+00:33 my patreon you can get it with the link
+00:35 in the
+00:37 description first off why should you
+00:39 learn product lighting good lighting
+00:42 makes anything look amazing plus it's a
+00:44 great way to make money businesses need
+00:47 high quality visuals for ads and online
+00:49 stores and they're willing to pay for
+00:51 them on top of that it's perfect for
+00:53 your
+00:55 portfolio before we move on to the basic
+00:57 concept let me introduce you today's
+00:59 sponsor
+01:01 vagon is a cloud computer platform which
+01:03 gives you access to high performance
+01:04 Cloud workstations powered by RTX
+01:06 graphic cards anywhere in the world it
+01:09 works just like your PC or laptop but
+01:11 it's way faster and stronger you can
+01:14 switch to your Cloud computer and start
+01:16 your work no matter what device you are
+01:17 using let me show you its power I'm
+01:20 running my heaviest project on vagon
+01:22 right now it has 4K textures with Max
+01:25 subdivisions and just look at how fast
+01:27 it renders
+01:32 even Clinton Jones who organizes big 3D
+01:34 challenges has shared his reviews about
+01:36 the service and it's perfect use the
+01:39 link in the description to sign up today
+01:41 and boost your workflow with a fast
+01:46 workstation so the basic concept I use
+01:48 is to light the product from three sides
+01:50 a strong intensity light from the back
+01:52 which will create these strong
+01:53 highlights a sharp light from one side
+01:56 which will create some interesting
+01:58 shadows and a soft light from the other
+01:60 side of the sharp light which will light
+02:01 the main product there are more things
+02:03 like if you are lighting something like
+02:05 glass you will need to use more
+02:07 techniques and you don't have to worry
+02:08 about it because I will explain you
+02:10 everything I
+02:13 know Theory will only take you so far so
+02:16 let's just start the Practical work I am
+02:18 using this keyboard from sketch Fab so
+02:21 you have to set up your camera and
+02:22 product before you start lighting your
+02:24 scene in my case I have already added a
+02:26 camera and I have also rotated the
+02:28 keyboard to give it a little d dnamic
+02:30 touch I always start with the highlights
+02:33 add an area light and move it to the
+02:35 back of your product it is better to
+02:37 open a small window where you can see
+02:39 the render
+02:40 view you will have to increase the
+02:42 intensity of the area light don't
+02:45 increase it too much a value like this
+02:47 will work now for the sharp light I
+02:50 usually place it on the side opposite to
+02:52 where the product is
+02:55 facing before you add another area light
+02:58 make sure to move the 3D cursor to the
+03:00 center of your product you can do that
+03:02 in two ways select your product and
+03:05 press shift plus s and select move 3D
+03:08 cursor to active mesh or you can just
+03:11 press shift and right click why we are
+03:14 doing this is so that we can rotate the
+03:16 light around the product easily change
+03:18 this option to 3D cursor and now
+03:20 duplicate the back light and press R
+03:22 twice to rotate it around the product
+03:25 place it at the side of the product
+03:27 decrease the intensity and to make this
+03:29 sharper decrease the spread value what
+03:32 it does is that it sharpens the light by
+03:34 focusing on one point I like to keep it
+03:37 like this so that it creates hard
+03:38 Shadows now we need one more light to
+03:41 complete the setup duplicate this area
+03:43 light and rotate it
+03:45 180° you can simply type 180 on your
+03:48 keyboard or manually rotate it increase
+03:51 the spread of the light and you are good
+03:53 to go this works great for products that
+03:56 are not glossy things get rough in that
+03:58 scenario but I have got a solution for
+03:60 that and I will cover that in the video
+04:01 so sit back and watch the complete
+04:06 video area lights are sharp and because
+04:09 of that Reflections look terrible you
+04:11 can use an image texture like this to
+04:13 fix this issue you can get these two
+04:15 images for free on my patreon the link
+04:18 is in description it's simple to use
+04:20 open the Shader editor and check use
+04:22 notes add an image texture and open the
+04:25 image that you have downloaded from my
+04:28 patreon you can also use an image like
+04:31 this and the process is
+04:35 similar lighting glass is a whole other
+04:38 story yet the position and rotation of
+04:40 Lights is similar we actually won't use
+04:42 area lights because they are sharp and
+04:44 have horrible Reflections what we will
+04:47 use is planes with an emission Shader
+04:49 with a gradient node let's start with
+04:51 the same steps we did with the keyboard
+04:53 I am using this bottle from the blender
+04:55 kit Library I have tweaked a lot of
+04:57 material settings to make it look good
+05:02 add a plane move it to the back open the
+05:05 Shader editor and delete the principled
+05:07 Shader add an emission node and connect
+05:10 it to the material output increase the
+05:12 strength to something you like you will
+05:14 get a problem here unlike the area
+05:17 lights these will be visible in the
+05:18 render to hide the plane from camera go
+05:21 into the object tab go under the
+05:23 visibility Tab and uncheck the camera
+05:25 you can now play with the strength of
+05:27 the emission and make sure to not go too
+05:29 high with this Val Val scale it
+05:31 according to your
+05:34 product again move the 3D cursor to the
+05:36 center of your product with shift plus s
+05:40 duplicate the back light and position it
+05:41 on the side of the
+05:46 product remove the backlight material
+05:48 and create a new material add an
+05:51 emission node and a gradient node with a
+05:53 texture mapping and coordinate node
+05:55 connect the nodes like this change these
+05:57 values to rotate the gradient add a
+05:59 color ramp and change it to spline drag
+06:02 it and make something soft like
+06:07 this make sure the bright side goes to
+06:09 the back of the product you can rotate
+06:11 it 180° on its axis this will create a
+06:15 smooth Fade Out in the glossy material
+06:17 and it works like a charm you can
+06:19 increase the strength but again don't go
+06:21 too high duplicate it and move it to the
+06:24 other
+06:27 side I like to rotate it a bit to create
+06:30 a good result like
+06:39 this so now you know how this works but
+06:42 I still have one last thing to tell
+06:45 you when you add a ground like I did for
+06:47 this render you will run into a problem
+06:50 the lights will destroy the reflections
+06:51 on the ground what you can do is use
+06:54 light linking it's very simple just
+06:56 select the light go into this tab and
+06:58 under here you will find the light
+06:60 linking option it is pretty hidden yet
+07:02 it works like a gem create a new light
+07:05 Link and drag your products or objects
+07:07 that you want the light to effect I have
+07:09 created this for every light and this is
+07:11 the final result I have also used my
+07:13 cinematic compositor for both of these
+07:16 renders and you can see how it turns
+07:18 boring sharp renders into soft
+07:20 good-looking renders you should give it
+07:22 a try link is in
+07:27 description let's do a quick recap
+07:29 lighting products is simple you just
+07:31 have to add a strong light in the
+07:32 background to create strong highlights
+07:34 you have to use another light with less
+07:36 spread value to create sharp Shadow you
+07:39 have to use one more light with high
+07:40 spread value if you are lighting
+07:42 something like glass use planes with
+07:45 gradient texture you have to make sure
+07:47 this side is outside and you hide it in
+07:49 the camera you can also use the light
+07:52 linking feature to only light your
+07:54 product thanks for watching the video
+07:57 and you can get both of these project
+07:58 files from my patreon and to make things
+08:00 better you can grab some free stuff too
+08:03 from my patreon subscribe

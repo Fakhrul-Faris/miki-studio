@@ -1,0 +1,313 @@
+00:00 In my previous tutorial, we used a photoggramometry algorithm to automatically 3D track our own footage.
+00:06 So, in this video, I'm going to show you how you can actually use that track for something with a really fast in camera
+00:12 projection-based compositing workflow. This technique is so stupidly simple that I guess many would consider this
+00:18 just being a hack. But honestly, I think that the results from this workflow can sometimes be.
+00:24 And I hope this goes without saying, but if you're a seasoned compositor with your color checkers and chrome balls and
+00:31 terabytes of cryptomats and multi-layered EXRs, this video is probably not for you. But if you just want a quick and dirty solution to
+00:37 compositing, what I'm about to show you is very powerful.
+00:44 [Music] Okay, so here we have the video file
+00:50 that we'll be using in this tutorial. We had some beautiful weather here in Norway this summer, so I just recorded this with my phone. And if you want to
+00:56 use this footage yourself, you can download it from the link in the video description. Now, I want to place our CG element in the middle of the road, like
+01:02 right here. But as you can see, our camera is moving. So if I just slap this on top here, it's just sliding around.
+01:08 It doesn't work. So we need to 3D track this shot. And I'm going to use this automated photoggramometry workflow from
+01:14 my previous tutorial. So we can just place the video file in this folder. And then we go to this script folder. And
+01:19 here you can see we can run this script to 3D track our scene automatically. It's really cool. So I'm going to run
+01:24 the script. And once it's finished, we're going to get a scene with an animated camera and a point cloud that we can import to Blender. Okay. So here
+01:31 we are in Blender version 4.5. This is where we left off in my previous tutorial. So you can see we have all
+01:36 these cameras that were used in the photoggramometry process, but we don't need these. So let's go to our outliner and you can see this cameras collection
+01:43 here. You can right click and then you can select delete here. I have no idea how to pronounce this. So
+01:49 just click this button right here. So now we deleted that entire collection and all those cameras. And we're left
+01:55 with this one camera here that is animated. So let's select it and let's go view cameras set active object as
+02:02 camera. So now you can see we have our 3D track shot here. But one thing that is a little bit annoying is that the
+02:08 rotation here is super weird. It's really difficult to navigate. So let's view this from the side by using this gizmo in the top right corner. Let's
+02:14 just press X. And you can zoom in and you can select this openg point cloud object. And now if you press A to select
+02:21 everything else. This object is highlighted. So now we can press Ctrl P and set parent to object. So now if we
+02:28 select our OpenGL point cloud, we can press R for example to rotate. You can view it from the side and we can really
+02:34 start lining this up. And you can press G to move it. And you can press R and then R again to get track ball rotation.
+02:40 And you can hold down shift to make it even more precise. But now you can see that this mesh point
+02:46 cloud is really obstructing our view here. So I want to move this to a different collection. So let's select the mesh point cloud and let's press M.
+02:52 And let's create a new collection. And I'm just going to call this mesh point cloud. And then let's click create. And
+02:59 now you can see in the outliner here you have the mesh point cloud collection. And you can click this check box here to exclude it from the view layer. So now
+03:06 we can only see our OpenGL point cloud instead. And now if you press N to bring up this side panel, you can go down to
+03:12 the photoggramometry importer. And with the OpenGL point cloud selected, you can lower the visualization size. So now I
+03:18 have this super small dots and then it's much more easy to line this up. I think I want it to be like here maybe. Let's
+03:26 see here. I want it to line up with this line. Oh, by the way, sometimes when you press Ctrl + Z, the object just
+03:32 disappears. The OpenGL point cloud just completely vanishes. This is just a bug. So, you can press Ctrl S to save your
+03:38 blend file. You can close it and you can just open it again. And then you should be able to see it. So, it's a little bit
+03:43 inconvenient, but that's how it is. So, let's line this up. I want to view this from above. And you can see this is our
+03:48 3D cursor. So, this will be our center of our scene. So, I want to move this to the right, maybe like here. And now if
+03:55 you view this through the camera, you can see that our 3D cursor is there. Oh, our drawing is also there. Pretty cool.
+04:00 And now, oh, our drawing is actually in 3D space. That's very powerful. So now we can simply add any object that we
+04:07 want. We can go shift A. We can go mesh icosphere for example, and you can open up this menu. You can increase the
+04:13 subdivisions a little bit. And then right click, set the shading to smooth for example. And now you can see this is
+04:18 one meter below ground. So if you press G and Z and then one and then left click to confirm. Now you can see that we have
+04:25 this ball in our scene. And if you view this from our camera, this is just in our scene. Very cool. But now you can
+04:32 see that this object is not casting any shadow on the ground. That is this entire effect. We want to really
+04:37 integrate this object with our scene. So what we are going to do is that we're going to create a cycllorama.
+04:43 It's like a curved backdrop that doesn't create any shadows. It's often used in like studio photography to create these
+04:50 infinite backgrounds like this. So, let's add a ground plane by going shift A and let's go mesh plane. And I'm going
+04:56 to press F2. And I'm going to call this cycllorama. And let's scale this up. And then let's press tab to go to edit mode.
+05:02 And then you can set the select mode to edge. So either press this button or press two. And then you can select this
+05:08 edge here. Um edge here. No, sorry. You can press this edge here and press G and
+05:15 X. and then move it over there. So it goes far away into the distance like this. Then let's take this one as well.
+05:20 G and then X. And then as you can see, we need to make sure that we are covering the entire place. And then
+05:27 let's take this one. G and Y. And let's just make it really big. We actually want our entire screen to be covered by
+05:34 this plane eventually. And then let's take this back line as well and press E to extrude it. And then Z to specify the
+05:40 Z-axis. And then let's go up. But we don't want it to go completely up because if you select your OpenGL point
+05:47 cloud and we just make these a little bit bigger, you can see that we have some bushes here. So we kind of don't
+05:52 want to mess too much with this angle. So let's select our cycllorama. Press tab to go to edit mode and let's select this edge at the top here. And let's
+05:59 press G and Y to move it over to the side like this. And now when you view
+06:04 this from the camera again, you can see that this is no longer covering our entire shot. So we need to extend this a lot. So, select this edge and let's
+06:11 press G and then G again. So, we can slide it on this edge. And then we can press C. So, now it just keeps on
+06:18 sliding like this. Look at that. Yeah, we'll come back to this. But we want it to be really far like that. And now we
+06:24 want to make this curve around. So, we want it to curve around like this a little bit. And we can do that by using
+06:29 a simple deform modifier. So, let's select our cycle. Let's go to the modifier properties. Add modifier deform
+06:36 simple deform. And if you set this to bend and then the Z-axis, we can bend
+06:43 this like this. But we want this to have a little bit more vertices. So, let's just set this to zero. And let's press
+06:48 tab to go to edit mode. CtrlR to add loop cuts. And then you can just scroll with your mouse wheel. Maybe you can do
+06:55 40 cuts or something. And then left click to confirm. And then just press escape. So now let's press tab to go
+07:00 back to object mode. And we can move this simple deform modifier. And we can deform this edge here. So if you view
+07:07 this from the camera, you can make sure that your entire scene is covered with
+07:13 this cycllorama. So we have this infinite background like this. And you can see we need to make this a little bit taller. So let's press tab to go to
+07:20 edit mode again. And now you can't just select this edge because it's a bunch of pieces. So with the select mode set to
+07:25 edge, you can hold down alt and then you can select one of the pieces. So you will select all of them. So now if you
+07:31 view this from the camera again, you can press G and Z instead. So, it's a little bit steeper angle, but I think we can
+07:36 live with that. Okay, so now let's just see here. Does it cover everything? Yeah, look at that. This shape just
+07:42 looks crazy. But it does cover our entire screen. So, it does its purpose. However, there is a big problem. If we
+07:48 look at this shape now, even if you right click and you set the shading to auto smooth, for example, you can see
+07:54 that you have this really sharp line here. And we don't want that. We want it to be really smooth. So, it looks like
+07:60 an infinite backdrop. So, to fix this, we can just use a bevel modifier. So let's go to modifier properties, add
+08:05 modifier, and then let's go generate bevel. And now you can see it immediately turns smooth because we have
+08:11 this smooth by angle. Now let me just set this to wireframe. So it's a little bit easier to see what's going on here. If you take this bevel modifier, you can
+08:17 increase the amount. And then you can also increase the segments. So we get
+08:22 this much smoother edge here, which is very nice to hide this shadow. Hang on.
+08:29 I think this actually might be a little bit too close. Yeah, we need to place this a little bit further back. So,
+08:34 let's select our cyclama. Let's press tab to go to edit mode. Let's set the select mode to face and let's select all
+08:39 these faces. If you view this from the camera, you can press G and Y and hold on shift. And you just want to move it a
+08:44 little bit away so we don't get any unfortunate uh shading uh weirdness there. Yeah. So, let's press tab to go
+08:52 back to object mode and let's set this to the solid view again. And I just want to hide my OpenGL point cloud. We don't
+08:57 need that for now. So now we have this infinite plane that covers our entire field of view regardless of the camera
+09:03 movement and we are ready to start projecting our texture onto this surface. So to do this I want to split
+09:08 my viewport in half. So if you hold your mouse cursor on this line until your cursor icon changes you can right click
+09:14 on it and you can go vertical split and I want to split it here. And then we can do the same thing here as well. Let's do
+09:19 a horizontal split. So now we want this to be our camera. So let's just get rid of our gizmo and the overlay. And you
+09:26 can press T to get rid of this. Uh you can even right click and you can remove the tool settings as well. So now this
+09:32 is only our camera. So in the top right corner of this camera view, let's set the viewport shading to rendered. And
+09:39 just a quick note, I'm using the cycles render engine and I'm using the GPU compute. If you don't have access to your GPU, you need to go to edit
+09:45 preferences and under system, you can set your cycles render devices to whatever GPU you have if you have a
+09:51 dedicated GPU. Okay, this next part is just so cool. Now, we're going to add the video texture from our camera to
+09:57 this cycllorama. So, let's take this editor type up here and let's set this to the shader editor. And let's select our cycllorama and let's click new
+10:04 material and we're just going to call this cycllorama. So, now nothing changes because we just
+10:10 created this principal BSDF node. But if we now delete this principal BSDF node, you can see that everything turns black
+10:15 here in the render view. And we can go shift a texture image sequence. So now
+10:21 you will be prompted to find the location of an image sequence. And we do have an image sequence because in the
+10:27 previous tutorial we converted all our video files to image sequences. So you can just find your footage. Go to scenes
+10:33 and find the folder for your footage and then you can see you have this images folder. And in here you have an image
+10:38 sequence. So you can select the first frame. Then you can press A to select all of them. And then let's go import image sequence. So now it looks like
+10:45 nothing happened but there's actually a node that is following your mouse. a little bit weird, but there it is. So,
+10:51 let's just place it here by pressing left click. And now you can connect this color to the surface here and it will
+10:57 emit the light. And now you can see that this texture is just projected onto our
+11:02 psychorama. But there are two problems here. First of all, the UVs are completely messed up. Second of all, the
+11:08 colors are incorrect. So, let's fix the colors first. So, in the render properties, you can scroll all the way
+11:14 down to color management. And let's just change the view transform from AGX to standard. And now you can see that the
+11:20 colors are correct. And now to fix the projection for this texture, we're going to do something extremely simple.
+11:25 Instead of dealing with UV unwrapping, that would need to update every frame, you can see here, if you enable auto
+11:31 refresh, you can see that this video texture is updating every frame. So, we can't really use UV projection without
+11:37 doing some fancy tricks. Let me just show you something extremely simple. If you go to the shader editor here, you
+11:43 can simply go shift A and you can search for texture coordinate node and you can just take the window projection and plug
+11:50 it into the vector. Look at that. Every part of this texture is now just a
+11:55 window into the video file. So it doesn't matter where you're looking at it from, which is so extremely clever
+12:01 because our camera is already lined up. So if you view this from the camera now, you can see that every frame is matching
+12:08 and the 3D track just works. Look at that. And the best part is if you select this object, since we have this infinite
+12:15 cycllorama setup, you can select this sphere and you can press G and shift Z for example. And look at this. If we
+12:22 move this over here, it's actually responding to the light. Look at how cool that is.
+12:28 We are doing in camera compositing with just this simple window projection and
+12:34 it just works so well. And if it works with a simple sphere like this, you can be sure it works even better with a
+12:40 detailed 3D model. But now the problem is we don't have any contact shadow.
+12:45 This is just an emission plane that is only lighting up our object. So, when we're going to add a shadow now, I want
+12:52 you to zoom out and I want you to look at this image and I want you to really think about where is the light coming
+12:57 from. And I can see that we have some really bright clouds up here. So, we can probably expect to get some light rays
+13:05 that are coming this way. Okay, good. Let's add a light source from there. So,
+13:10 let's go shift a light area light. And you can press G and Z to move this up a
+13:16 little bit. And then I want to move it over on the Y axis. Let's press G and Y. So it's over there. So if you view this
+13:22 from the camera now, you can see that we want our light source to be roughly where the clouds are. And now if you
+13:28 view this from the side here, you can take this light and you can use this little gizmo here. You can point it towards the object you want the light to
+13:34 point to. So now our light is roughly pointing towards the sphere. And you can right click and you can increase the
+13:40 size. But now you will notice that if you start increasing the power of this light, the only thing we're doing is
+13:47 that we're just adding rim light to this ball here. And that's good, but we're
+13:52 still not getting any shadows. Okay, so here's the trick. Let's take this cycllorama object here and in the shader
+13:58 editor, we want to add a diffuse shader here. So let's go shift a shader diffuse. So now let's take this diffuse
+14:05 shader and place it in between the texture and the material output like this. And look at this. Now we are
+14:12 basically relighting our scene. This actually kind of looks a little bit legit right now. We just need to
+14:18 brighten some areas. Let's uh focus a little bit more on our light first. I want to move it back a little bit more.
+14:23 So let's press G and then Z and then Z again. So you can move it back like this. And then we can maybe rotate it a
+14:31 little bit. See here? You can see that this line is kind of hitting it like that. And a really efficient way to get
+14:36 rid of this. Let me just make some more room here. Select your area light and in the object data properties you can lower
+14:42 the beam spread. Look at this. If you lower the spread here and then we also take this light and we rotate it so it's
+14:49 a little bit more pointed up. And then what we also can do, it doesn't need to be a square. It can be a rectangle. So
+14:55 select the area light, go to the object properties. You can change the shape from square to rectangle. And now you can see you can for example make it
+15:01 wider which really changes the shadow hair. Look at that. We're also really softening up the shadow hair. really
+15:08 nice. And you can make it a little bit taller as well. This effect is all about controlling the contact shadow and
+15:14 making that realistic because we get everything else for free. It is so cool. Okay, but everything else is still too
+15:19 dark. So, let's have a look at that. It's actually super simple. If you go to the world properties and you go to the
+15:26 surface here, you can change the background color. You can just crank it up to white.
+15:31 Look at that. Now, our cycllorama is lit evenly, but our contact shadow kind of disappeared a little bit. So what I want
+15:37 to do is I want to increase this area strength a little bit more. So let's just increase this light a little bit
+15:43 more. And since we changed our view transform from AGX to standard. Now you will notice that this sphere is no
+15:51 longer a smooth looking sphere. It's overexposed. But don't worry about that. I'm going to show you to fix that. The
+15:56 important thing is that we need to get our contact shadow back again. So let's just keep increasing the power of this
+16:02 light. Maybe 2,000. You just want to emphasize the bright area here. We We're
+16:08 kind of relighting or rehighlighting our scene a little bit. So, let me try 3,000. Yeah, I think I like that. It
+16:15 actually looks a little bit like it's almost cloudy. Like we're Yeah, I like that. Maybe we should move it back a
+16:21 little bit more. It's important that your light is far enough away that you
+16:27 don't get this weird perspective light. You can see it's already suffering a little bit from the shadow changing
+16:32 angle when we're moving this. Okay, so now we have this sphere that looks kind
+16:38 of integrated with our scene. I think that's nice. But this is just a clean diffuse shader that doesn't look really
+16:44 realistic. So I want to show you how extremely powerful this workflow is because this technique works with a lot of different shaders. We can use glossy
+16:51 or glass or all kinds of stuff. So let's just make some copies of our sphere. So let's move it over here and let's press
+16:57 shift D. Let's place one here and then here as well. And now let's uh give this
+17:03 some different materials. So let's take this one to the left here and let's go to the material properties. Let's click
+17:08 new material. Let's give this a uh diffuse material like this one. Want to
+17:13 make it uh really bright. And then let's take the second sphere. Let's make a new material. And let's give this a glass
+17:19 shader. Oh, look at that. Very cool. You can even see the grass behind it there.
+17:24 That is such a cool effect. And then let's take this last sphere and let's make a new material. And let's set
+17:30 this to glossy. But look at this. This glossy shader just doesn't work. Even
+17:36 though it has great contact reflection. That's amazing actually. It just has this big white flat color. And this is
+17:42 because our world color is just white. And if you zoom even further, you can see that you have this really weird
+17:47 patterns from the reflections here. So first, let's fix this weird reflection. Let's um select the cycllorama here. And
+17:55 in the shader editor, you can see that the extrapolation of the image is set to repeat. If you set this to extend, for
+18:00 example, then you will get these weird uh lines. Or you can set it to clip. But
+18:05 this kind of makes everything black, which is not good. So what I like to do is to set it to mirror. Now it looks
+18:12 kind of better. But I think our biggest problem is that our cycllorama is too far in this direction. We could probably
+18:18 make it stop here and that would be good. So let's select our cycllorama. Let's press tab to go to edit mode. And
+18:24 let's set our select mode to edge. And let's hold down alt and select this line here. And now you can press G and then G
+18:31 again to just shrink it in like this. And if you zoom in here, you can see that this is really helping on these
+18:36 weird reflections. You can see how far we can go. Can we go here maybe? But we need to be careful that we didn't remove too much. So if you go to the beginning
+18:43 here. Yeah, we removed way too much. So let's press G and G and then C. So let's
+18:49 move it over here is good. Yeah. Okay. Nice. But I have to admit when I'm
+18:54 scrubbing through the timeline here, I am a little bit distracted by this mirror projection. So I just want to
+18:60 select our camera and if you go to the object data properties, you can scroll down to viewport display and you can
+19:05 take this pass two and you can just increase this to the max. So now you just have this black border around the
+19:11 camera. This also speeds up your render time a little bit actually because there's no longer rendering outside. Okay, but now let's fix this reflection
+19:18 here. This is actually a really cool fix in your shader editor. Instead of having this shader type set to object, you can
+19:24 set it to world. And then if you go to edit preferences, you can go to add-ons
+19:29 and make sure you have the node wrangler add-on installed. And then let's select this background node here. And then you
+19:34 can press CtrlT. So now you add this texture coordinate node, a mapping node, but most importantly, we now have an
+19:40 environment texture node. This is really powerful. So now we can add an image to be our environment texture that will be
+19:47 reflected in this sphere. And what's really cool is that since we have already import an image sequence, we can actually just pick any image we want
+19:53 here. I actually think the first frame is really good for this. Yeah. So, let's go to environment texture. Let's just set this to be the first frame. And now
+19:60 look at this. If we zoom in now, look at this beautiful reflection we have on this sphere. And this is with 100%
+20:07 reflectiveness. If you go to the material properties and you increase the roughness, you can see it's already
+20:12 looking much better. But we want to try and make this look really good with low roughness as well. So first of all,
+20:17 what's happening here is that if we just zoom out, you can set the view focal length to just really wide angle. What
+20:24 we are doing is that we are using our video or a still image from our video as the HDRI environment map. So we need to
+20:31 rotate this so it looks a little bit more correct. So if you view this from the camera again, you can select this
+20:37 mapping node and you can rotate it on the Z-axis. You can, for example, set it to be uh I
+20:43 want to avoid this seam here. You might be able to recognize that this tree is also there. Yeah, let's do uh a little
+20:50 bit like this. Okay. And then something you can do, you can also increase the scale on the Z-axis just to make things
+20:55 a little bit more uh flat. So the skies get a little bit more attention. And it's actually really cool that by
+21:00 changing the location of the HDRI, you can kind of tweak the sky here. I think I want to try and move this star shape
+21:07 away a little bit. Maybe there. Okay. So now we can increase the roughness again
+21:13 since our reflection is working. But now you can see that we have the same problem that we had earlier. This is
+21:19 just way too dark. We have completely messed up our shot. And the problem here is that we have prioritized this
+21:25 reflection to look good, which has messed up the shading of our cycllorama here. So if we simply disconnect our
+21:30 background texture, we can see that the rest of our scene looks good, but now the reflection is messed up. So to get
+21:36 the best of both worlds here, we can split the light rays themselves. So we
+21:41 can see the diffuse shader on this ground plane, but the indirect lighting is still this glossy shader. So to do
+21:48 this, let's make sure we're here in the world shader type. Let's go shift A and let's search for mix shader. And let's
+21:54 place it in between the background and the world output. And then let's just duplicate our background like this. So
+21:59 now we have a white background. And now if you connect the background to the mix shader, now you can see that we can mix between perfect reflection and perfect
+22:07 environment. So we want to use some light data to control this mix shader
+22:12 node which is really powerful. So let's go shift a input and then you can go light path. And this node is so
+22:19 powerful. It allows us to extract light ray data from all kinds of data sources in the cycle to render engine. So what
+22:25 we specifically want is that we want this the glossy rays. So if you take this glossy ray and you pull it into the
+22:31 mix shader here now you can see that this is exactly the opposite of what we want. We have the dark background and we
+22:38 have the broken reflection. So now we can just swap these two. So let's move the textured background to the bottom here. Let's do move the white to the
+22:44 top. And let's just hold down control and click and drag like this. And then let's connect this bottom one as well.
+22:53 Now look at this. Our world shader looks good. And if we zoom in, we have a beautiful reflection here. And if you
+22:59 want to, you can even increase this reflection a little bit. Look at that. Now our diffuse shadow works and our
+23:06 reflection works. And what's so extremely cool about this method is that we're getting all the benefits of ray
+23:11 traced lighting because here you can see that if we select this glass sphere, if you set this shader type back to object,
+23:17 you can change the color of this glass and you can see we're even getting some minor costics here. That is really cool.
+23:25 And you can change the reflection of this icosphere if you change the color to something a little bit warmer for
+23:31 example. And then you can also add some displacement to this. Let's go shift A, search for displacement. And then you
+23:38 can go shift A and search for Voronoi texture and pull the distance into the height and then the displacement into
+23:44 displacement. And look at this. If you increase the scale here, you get this subtle texture like that. But we still
+23:52 haven't fixed the overexposure problem. So to fix this, let's use the compositor. So in this editor here,
+23:58 let's change this from shader editor to compositor. and let's click use nodes.
+24:03 And now we can add a exposure node. So let's go shift A and let's search for exposure color adjust exposure. And
+24:10 let's add it to the node tree. And now if you click this little down arrow in the viewport shading here, you can set the compositor to always. So now we can
+24:18 just click and drag on this node to lower the exposure. And you can see that we're no longer clipping our highlights. However, we lowered the exposure on
+24:25 everything. So how do we get this back up? Let's go shift A and let's search for RGB curves, which is a color
+24:32 adjustment node. And we're going to use this RGB curves node to basically recreate the AGX view transform. So,
+24:39 let's just add a point here. Let's pull this up. And now you can see that we can increase the exposure without clipping
+24:45 the highlights. So, if we select these two nodes and you can press M to mute them. Look at that. It looks kind of
+24:51 similar. See that? Yeah. But we're losing too much contrast. So to add some contrast as
+24:57 well, you can add another point below here. And if you pull this down, you can
+25:02 see that this is basically our contrast controller. Then you can pull this up. So now you can see that by turning these
+25:10 nodes on and off, we are getting rid of this really ugly highlight clipping there. Okay. And since we have the
+25:16 compositor, we might as well add some uh glare or some subtle bloom. So let's go shift A and just search for bloom. and
+25:23 we will get a glare node with the bloom preset. Here you can see this is going absolutely crazy. So I want to increase
+25:29 the size and then I want to go to highlights and I want to increase the threshold as well. Yeah, this is way too
+25:36 strong. I need to lower the strength as well. And then if your footage is a little bit
+25:42 blurry, you can go shift A and search for sharpen and do a diamond sharpen for example and uh lower it a little bit,
+25:51 which can be helpful, but it might also break a little bit in the highlights there. So that's up to you. I don't
+25:56 think I'm going to use uh the sharpening. Hang on. I think I actually want this Voronoi texture on the glass sphere as
+26:02 well. So let's go to the shader editor and let's just copy this displacement by pressing Ctrl + C. And then I select our
+26:08 glass sphere and press Ctrl +V. And let's connect this here. Yeah. Okay. So
+26:15 now to render this out as a video, let's go to the output properties and make sure you set the frame rate to be
+26:21 whatever frame rate you recorded your video in. So I recorded this in 30 frames per second. And then we're going to set our output. Let's specify our
+26:28 output folder. I'm going to save this to my desktop. Compositing version one. Accept. And then under file format, I'm
+26:34 actually just going to set this to ffmpeg video. I'm going to render this straight to video because if you really think about it, there's actually not
+26:40 that much thing that needs to be rendered here. Almost our entire scene is just this diffuse shader. And if you
+26:45 zoom in, you just have this subtle shadows. And this is actually going to render quite fast, I think. And under
+26:51 encoding, I want to change the container from to meg 4 and output quality to high
+26:56 quality. Oh, and by default, the resolution is set to whatever you shot it in. And this was shot in 4K. So, I'm
+27:02 just going to render this out in 50%, so it's an HD render. And in the render properties, you can set the sample
+27:08 count. I like to use 256 samples for this. I think that's good. If you have a lot of glass or something intricate, I
+27:13 recommended to do maybe 500, but I think 256 is good for now. So, to render it, I'm going to first save it, and then I'm
+27:19 going to go render, render animation. Okay, so here's our render. And what
+27:25 we're looking at here is actually a really efficient test to see if our shot works with this compositing technique
+27:31 because these three shaders allow us to separate and clearly see how the most common material types behave in our
+27:38 scene. The diffuse material, for example, makes it easy to see if we've been able to dial in the light direction
+27:43 and the contact shadows. The glass shader shows us that the refractions and subtle costics are working. And the
+27:50 glossy shader shows us that the reflections are working, but it's also really helpful for dialing in the glare
+27:55 values. So now that we have this static scene set up, we can add a more detailed
+28:00 animated model and we'll have a very high chance of success with minimal tweaking. Okay, so first of all, let's
+28:06 take our three spheres and let's move them to a different collection. So I'm going to select them, press M, and I make a new collection. Let's just call
+28:12 this spheres. And we can disable this collection for now. So now our scene is empty, and we can place a 3D model here.
+28:18 So, I want to use my mechanical creature kit. You can find this link in description. This is an asset pack full of mechanical stuff, but also it has
+28:25 these example creatures. So, I'm going to use one of these. So, I'm going to take this editor here. I'm going to change this to asset browser. I'm going
+28:32 to change this to mechanical creature kit. And then under example creatures, if we scale this up, you can see there
+28:38 are some preset creatures. So, I'm going to take His the steampunk crab. I'm going to pull it in here. We wait for a
+28:44 second. And then I'm simply going to press S to scale it up. And look at that. We have a crab in our scene. This
+28:50 is already animated. It's a walking mechanical crab like this. Looks around a little bit. And if we set this to
+28:55 rendered view, you can see that this is already kind of working. It might be a little bit too bright. So, I want to
+29:01 dial it down. I want to take this uh one of these objects here. Let's go to the shader editor. And we can just dial down
+29:08 the color of this one. Yes. So, I want it to be a little bit like that. And maybe we can take these
+29:15 claws and make them a little bit darker as well. And then also to improve the contact shadow a little bit. I think I
+29:21 want to just move this entire rig just a little bit below ground. So that way we
+29:26 have a little bit more efficient contact shadow. That's a trick I like to use regardless of compositing. By the way, if you have an animated creature, this
+29:33 is actually something I recommend doing. So you have it poking just a little bit through. I think it gives some weight to
+29:38 the contact. Can be helpful sometimes. Okay, but now I think this might be a little bit too big. So let's bring back
+29:44 our OpenGL point cloud. So here we can see our scene. And now we can just take this armature and we can maybe just
+29:50 scale this down. If I'm just looking at the animation here, can see we can even pull it back.
+29:58 I think I want to offset the animation a little bit. So let me just press Ctrl tab to enter pose mode. A to select all
+30:03 the bones. And then down here I can press A to select all the key frames. Then I can just see. Yeah, I want to
+30:08 press G and move it over here. So, we're kind of
+30:14 Yeah. Look at that. Nice. Sweet. And now if we do a still render of this, I think this should work.
+30:24 Look at that. Contact shadow reflections. Looks pretty good. So, I'm going to render this out as an
+30:30 animation. I'm going to go to the output properties and I'm just going to call this compositing version two. And then
+30:35 I'm going to go render render animation.
+31:01 [Music]
+31:27 So that's it. You can download the video file in the free patre post in the first link in video description. And if you
+31:32 want to support my channel, I've uploaded these 3D tracked 4K shots to my advanced project file tier on my Patreon. So you can either try and track
+31:39 them again yourself, or you can just do the compositing and see how they hold up, or you can just pick them apart and see how they work. So, in this pack, you
+31:45 get the tutorial scene with a road and three spheres. You get this shot I filmed in a random tunnel, which works
+31:50 really well with glass objects because of these extra area lights. You get this studio shot that has this animated chess
+31:56 pawn transition also with a hole in the floor, which is really fun to do. And by subscribing to this advanced project
+32:02 file tier, you'll also get access to all my previous project files I've uploaded there over the years, which is starting to become quite a lot of different stuff
+32:08 actually. I mean, if you want, you could just subscribe for one month, download absolutely everything I got there, and just unsubscribe again. I'm okay with
+32:15 that. So, if you have any more questions about this compositing workflow, I did a live stream about this not that long ago
+32:20 where you can see exactly how I set up this studio shot from start to finish. So, that's it. I can't wait to see what
+32:25 you'll create with this workflow because I'm finding this compositing hack to be so much fun. Thanks for watching.

@@ -1,0 +1,1093 @@
+00:00 in this video I'm going to show you how
+00:02 
+
+00:02 to add a very strong sense of depth to
+00:03 
+
+00:03 your renders so this can make it much
+00:05 
+
+00:05 more immersive Moody and just overall
+00:07 
+
+00:07 interesting for people to look at when
+00:09 
+
+00:09 they see your artwork so my name is Max
+00:11 
+
+00:11 I'm going to show you here some images
+00:12 
+
+00:12 that I've made with I think that I have
+00:14 
+
+00:14 a very strong sense of depth so you can
+00:16 
+
+00:16 just see what I'm talking about and
+00:18 
+
+00:18 basically throughout this video I'm just
+00:19 
+
+00:19 going to show you three of the easiest
+00:20 
+
+00:20 ways or most most important ways that
+00:22 
+
+00:22 you can add a very strong sense of depth
+00:25 
+
+00:25 to your renders to make them better so
+00:28 
+
+00:28 the first thing is volumetrics so this
+00:30 
+
+00:30 this basically adds separation and a bit
+00:32 
+
+00:32 of depth automatically by uh making
+00:35 
+
+00:35 distant objects that are further away
+00:37 
+
+00:37 appear hazier and this will just
+00:40 
+
+00:40 automatically add a sense of depth
+00:42 
+
+00:42 because farther away things will just
+00:43 
+
+00:43 become more they'll they'll look
+00:45 
+
+00:45 literally like they're more in the
+00:46 
+
+00:46 distance
+00:48 
+
+00:48 so um the way I do this is just add a
+00:51 
+
+00:51 cube over the whole scene I'll just show
+00:53 
+
+00:53 you this really the here as a live demo
+00:55 
+
+00:55 really quick so if I just hide the
+00:57 
+
+00:57 volume in this case I'll just do this
+00:59 
+
+00:59 very fast here's what the scene looks
+01:01 
+
+01:01 like from the outside it's a complete
+01:02 
+
+01:02 mess from the outside but from the
+01:03 
+
+01:03 inside it looks like this and what I'll
+01:05 
+
+01:05 do is just add a cube over the entire
+01:08 
+
+01:08 thing so I'll just add a cube scale this
+01:10 
+
+01:10 way up just cover the general area that
+01:13 
+
+01:13 this is uh that the scene is in so as
+01:17 
+
+01:17 long as you can't really see where it
+01:18 
+
+01:18 ends roughly from the camera view that's
+01:21 
+
+01:21 usually what you want and then what I'll
+01:23 
+
+01:23 do is just um set this Cube to display
+01:26 
+
+01:26 as bounds so it's out of the way so you
+01:27 
+
+01:27 can do that in here in the object
+01:29 
+
+01:29 properties underneath viewport display
+01:31 
+
+01:31 and the display as just change that over
+01:33 
+
+01:33 to bounds as a side note to you can
+01:35 
+
+01:35 actually right click this and assign a
+01:37 
+
+01:37 shortcut to that so it's really quick to
+01:38 
+
+01:38 do it like
+01:40 
+
+01:40 this okay and then for the Shader here
+01:43 
+
+01:43 I'll just go into rendered view so you
+01:44 
+
+01:44 can see what this looks like okay and
+01:45 
+
+01:45 for the Shader of that Cube I just added
+01:47 
+
+01:47 I'll just hit new I'll delete the
+01:49 
+
+01:49 principal Shader and then you can either
+01:50 
+
+01:50 add a volume scatter node or a
+01:54 
+
+01:54 principled volume node in this case
+01:56 
+
+01:56 they're going to be doing basically the
+01:57 
+
+01:57 same thing so I'll just take I'll just
+01:59 
+
+01:59 take a volume scatter
+02:00 
+
+02:00 and I'll plug that into the volume of
+02:03 
+
+02:03 that Cube that I just added now the
+02:05 
+
+02:05 density is so high right now that it's
+02:07 
+
+02:07 just pitch black we want to lower that
+02:08 
+
+02:08 way down to like 0.1 or something in
+02:11 
+
+02:11 that range and then what I'll also
+02:13 
+
+02:13 usually do is increase this anisotropy
+02:15 
+
+02:15 slider this kind of just makes it look
+02:17 
+
+02:17 more cinematic and cool sometimes by
+02:19 
+
+02:19 making it more uh kind of bright closer
+02:21 
+
+02:21 to the light sources so you can see
+02:23 
+
+02:23 there we go and that is my volume setup
+02:26 
+
+02:26 just as a bonus tip as well if you go
+02:28 
+
+02:28 into the light path settings over here
+02:31 
+
+02:31 and if you increase the number of volume
+02:32 
+
+02:32 bounces past zero to one or two um you
+02:36 
+
+02:36 can't really tell the difference in this
+02:37 
+
+02:37 case but this very often makes the
+02:39 
+
+02:39 volume look a lot more natural and just
+02:41 
+
+02:41 kind of lets the light bounce around
+02:43 
+
+02:43 through it a little bit more so I like
+02:44 
+
+02:44 increasing that to one or two uh just
+02:47 
+
+02:47 past zero any number above zero is going
+02:48 
+
+02:48 to be going to have that effect and yeah
+02:51 
+
+02:51 that's how you do volumetrics okay the
+02:53 
+
+02:53 next thing we can do to increase the
+02:55 
+
+02:55 sense of depth is have a very clearly
+02:57 
+
+02:57 defined foreground midg ground and
+03:00 
+
+03:00 background so this is very exceptionally
+03:03 
+
+03:03 clear in landscape photographs for
+03:05 
+
+03:05 example so if we take a look at
+03:07 
+
+03:07 something like um so if we take a look
+03:09 
+
+03:09 at something like this we can see a very
+03:11 
+
+03:11 clear foreground with these trees up
+03:14 
+
+03:14 close to the camera midr with this
+03:16 
+
+03:16 Middle Ground landscape right here uh
+03:19 
+
+03:19 like this chunk right here that I'm
+03:21 
+
+03:21 circling and then of course the
+03:22 
+
+03:22 background with either you can consider
+03:24 
+
+03:24 just the sky or the mountains here plus
+03:26 
+
+03:26 the sky there isn't really it doesn't
+03:28 
+
+03:28 have to be a hard cut off point like you
+03:30 
+
+03:30 might see in a a landscape photo but
+03:32 
+
+03:32 it's just very very clear in these kinds
+03:34 
+
+03:34 of photos where there's always
+03:35 
+
+03:35 foreground which is just closest to the
+03:36 
+
+03:36 camera midg ground and then background
+03:39 
+
+03:39 so the mid-ground which is between the
+03:41 
+
+03:41 the foreground and the background but if
+03:43 
+
+03:43 you can separate it out into those major
+03:44 
+
+03:44 three components of having a very clear
+03:47 
+
+03:47 section that is the foreground a very
+03:48 
+
+03:48 clear section that is the midr and then
+03:50 
+
+03:50 a very clear section that is behind that
+03:52 
+
+03:52 as the background that is how you're
+03:54 
+
+03:54 going to get the most depth so for
+03:56 
+
+03:56 example in my work if we take this one
+03:59 
+
+03:59 for example the foreground would be uh
+04:02 
+
+04:02 this of course this silhouetted rooftop
+04:04 
+
+04:04 section right here like all the you know
+04:07 
+
+04:07 dark stuff on the roof right there the
+04:09 
+
+04:09 midr would probably be uh just anything
+04:12 
+
+04:12 in the city on the actual City up to
+04:14 
+
+04:14 like around kind of like this potish
+04:17 
+
+04:17 right here so here and below is I would
+04:22 
+
+04:22 consider that the midr and then it's not
+04:24 
+
+04:24 really a clearly defined cut off like
+04:26 
+
+04:26 you might see in a landscape photograph
+04:28 
+
+04:28 but I would say it generally kind of f
+04:30 
+
+04:30 Fades into background from here upwards
+04:32 
+
+04:32 and as long as you have those three
+04:34 
+
+04:34 components they don't have to be like
+04:35 
+
+04:35 there's no doesn't have to be a hard
+04:37 
+
+04:37 line cut off or anything but as long as
+04:39 
+
+04:39 you have those three things in the
+04:40 
+
+04:40 picture that's going to maximize the
+04:42 
+
+04:42 sense of depth you get because you can
+04:44 
+
+04:44 just split it up into layers like that
+04:46 
+
+04:46 okay so another example here one I made
+04:47 
+
+04:47 in a recent video very very clear
+04:49 
+
+04:49 foreground right here up close to the
+04:51 
+
+04:51 camera um so this general area here
+04:54 
+
+04:54 foreground um I would even maybe
+04:56 
+
+04:56 consider like this kind of stuff on the
+04:59 
+
+04:59 side here the bridge like this general
+05:02 
+
+05:02 area as well probably part of the
+05:03 
+
+05:03 foreground and then if I had another
+05:06 
+
+05:06 layer to kind of show the the mid ground
+05:07 
+
+05:07 would probably be like this kind of
+05:09 
+
+05:09 section right here and like all this
+05:12 
+
+05:12 kind of stuff maybe even this kind of
+05:14 
+
+05:14 central tower thing here so all this
+05:16 
+
+05:16 kind of general area I would consider
+05:18 
+
+05:18 that midr and then above that the
+05:20 
+
+05:20 background is probably anything past
+05:23 
+
+05:23 that point which would be like you know
+05:25 
+
+05:25 this if I just kind of draw the general
+05:27 
+
+05:27 area I'm talking about like anything
+05:28 
+
+05:28 past kind of this General area here so
+05:30 
+
+05:30 this this gray overcast sky this second
+05:34 
+
+05:34 tower thing in the background that's
+05:36 
+
+05:36 almost fully faded out that is
+05:38 
+
+05:38 backgrounded if you just have those
+05:39 
+
+05:39 three components foreground midr and
+05:42 
+
+05:42 then behind that background and just
+05:44 
+
+05:44 clearly Define that in the image by you
+05:47 
+
+05:47 know having intentionally you know
+05:49 
+
+05:49 whether that's intentionally putting
+05:50 
+
+05:50 objects very up close to the camera like
+05:52 
+
+05:52 I've done here and maybe even putting
+05:55 
+
+05:55 objects really far away from the camera
+05:57 
+
+05:57 um and then having something in the
+05:58 
+
+05:58 middle between those two points that's
+06:01 
+
+06:01 that's what I usually do to to maximize
+06:03 
+
+06:03 the amount of uh of range or depth that
+06:07 
+
+06:07 you get in the image so the next thing
+06:09 
+
+06:09 is to use light to help separate objects
+06:11 
+
+06:11 and maximize depth so you might think of
+06:13 
+
+06:13 light as just a necessary thing to have
+06:16 
+
+06:16 in the render to just be able to see
+06:18 
+
+06:18 anything all at all and that is true but
+06:21 
+
+06:21 we can also use light very intentionally
+06:23 
+
+06:23 and as a tool to maximize separation
+06:26 
+
+06:26 between objects and maximize the sense
+06:28 
+
+06:28 of depth that we get in the image so for
+06:30 
+
+06:30 example on this one um I'm using sort of
+06:33 
+
+06:33 a darkish background here and then a
+06:35 
+
+06:35 very harsh Spotlight coming right down
+06:37 
+
+06:37 onto these uh mid-ground objects right
+06:39 
+
+06:39 here and that's just very very clearly
+06:43 
+
+06:43 uh separating out the mid-ground objects
+06:45 
+
+06:45 from the background just based on the
+06:46 
+
+06:46 way the light is hitting these objects
+06:49 
+
+06:49 it's kind of like coming in from the top
+06:51 
+
+06:51 it doesn't have to come from the top but
+06:52 
+
+06:52 in this case it's just coming from the
+06:53 
+
+06:53 top creating nice highlights here and
+06:55 
+
+06:55 it's you know in this area for example
+06:57 
+
+06:57 extremely clear separation from this you
+06:59 
+
+06:59 know
+07:00 
+
+07:00 mid-ground hand object from the darker
+07:03 
+
+07:03 kind of Spacey background um and so you
+07:06 
+
+07:06 know if you can create very clearly
+07:08 
+
+07:08 defined shapes um so that could mean
+07:11 
+
+07:11 like harsh lines and strong contrast
+07:13 
+
+07:13 between objects using uh basically just
+07:16 
+
+07:16 the way you point the lights which I'll
+07:18 
+
+07:18 actually show you the blend file in a
+07:19 
+
+07:19 second here um that's a very effective
+07:23 
+
+07:23 way to create separation between objects
+07:25 
+
+07:25 so if we look at the blend file here you
+07:26 
+
+07:26 will actually see that this Spotlight or
+07:29 
+
+07:29 couple of spotlights that are coming
+07:30 
+
+07:30 down here are shining in a very specific
+07:32 
+
+07:32 area and I'm intentionally leaving the
+07:34 
+
+07:34 stuff behind it in front of it dark uh
+07:38 
+
+07:38 very dark because that is going to
+07:39 
+
+07:39 maximize the separation I get from this
+07:41 
+
+07:41 kind of space background you can see
+07:43 
+
+07:43 we're using the volume trick here as
+07:44 
+
+07:44 well and uh yeah having that kind of
+07:48 
+
+07:48 just casting in a very a very uh
+07:50 
+
+07:50 intentional area is what's creating that
+07:53 
+
+07:53 very very clear separation of these
+07:55 
+
+07:55 objects if there was light everywhere
+07:57 
+
+07:57 you might not see as much of a dist
+07:59 
+
+07:59 distinction between what objects are
+08:02 
+
+08:02 closer and what objects are farther away
+08:04 
+
+08:04 like the things back here or the
+08:05 
+
+08:05 background itself um and even I guess
+08:07 
+
+08:07 the forground is kind of separated out
+08:09 
+
+08:09 into darkness as well so this is quite
+08:12 
+
+08:12 an extreme example you don't have to use
+08:14 
+
+08:14 this kind of lighting where it's just
+08:16 
+
+08:16 extreme you know Spotlight like this but
+08:19 
+
+08:19 if you can use light in a way that it
+08:20 
+
+08:20 clearly defines the shapes of the the
+08:23 
+
+08:23 objects that you're using and if you can
+08:24 
+
+08:24 use it to help separate out objects
+08:26 
+
+08:26 which are at different distances in the
+08:28 
+
+08:28 image that's really going to enhance
+08:30 
+
+08:30 that effect that we're going for here
+08:31 
+
+08:31 and you can see in this one as well
+08:32 
+
+08:32 we're using a very clear
+08:34 
+
+08:34 foreground down here up close to the
+08:36 
+
+08:36 camera very clear midr and very clear
+08:39 
+
+08:39 background of this kind of ethereal
+08:41 
+
+08:41 spaciness um so yeah I'm using kind of
+08:44 
+
+08:44 all the techniques in this image right
+08:45 
+
+08:45 here which is nice okay just as a bonus
+08:46 
+
+08:46 tip um if you have objects which are in
+08:49 
+
+08:49 front of other objects covering up
+08:51 
+
+08:51 whatever is behind them this is kind of
+08:52 
+
+08:52 something that happens naturally in 3D
+08:54 
+
+08:54 art but you can also do this
+08:56 
+
+08:56 intentionally um I guess this kind of
+08:57 
+
+08:57 just adds a very clear idea of what is
+08:60 
+
+09:00 in front of what so for example this
+09:02 
+
+09:02 dude here standing uh he's standing in a
+09:05 
+
+09:05 way which is covering up a little bit of
+09:07 
+
+09:07 the you know the frog or whatever behind
+09:09 
+
+09:09 him um and then you know just having
+09:13 
+
+09:13 something right there increases the it's
+09:16 
+
+09:16 just very clear hey this guy is in front
+09:18 
+
+09:18 of this thing and he's standing there
+09:20 
+
+09:20 makes it very obvious what's in front of
+09:22 
+
+09:22 what and that can help increase the
+09:23 
+
+09:23 sense of depth as well or like you know
+09:26 
+
+09:26 the guy it doesn't have to always be
+09:28 
+
+09:28 some guy standing there but this dude is
+09:29 
+
+09:29 standing in front of the bus which is
+09:30 
+
+09:30 covering up kind of a bit of the
+09:31 
+
+09:31 building behind it which is covering up
+09:33 
+
+09:33 a different building behind that which
+09:34 
+
+09:34 is covering up that thing whatever's in
+09:36 
+
+09:36 the background just layering things in a
+09:38 
+
+09:38 way that like you don't have to you
+09:40 
+
+09:40 don't have to be afraid of objects
+09:41 
+
+09:41 getting in the way of other objects
+09:43 
+
+09:43 necessarily um if you do that
+09:44 
+
+09:44 intentionally that is another way you
+09:45 
+
+09:45 can increase the sense of depth by just
+09:48 
+
+09:48 making it very clear what is in front
+09:50 
+
+09:50 and what is behind and just as another
+09:51 
+
+09:51 bonus tip if you still do not feel like
+09:53 
+
+09:53 you have enough depth in the image you
+09:55 
+
+09:55 can manually brush in like Smokey kind
+09:58 
+
+09:58 of effects in Photoshop here's how you
+09:60 
+
+09:60 do that you just take the Mist pass so
+10:02 
+
+10:02 just go to the view layer properties
+10:03 
+
+10:03 over here underneath passes data uh
+10:07 
+
+10:07 include just check the missed check box
+10:10 
+
+10:10 right here turn that on and then in the
+10:13 
+
+10:13 world settings you can adjust the start
+10:15 
+
+10:15 and end distance and if you want to see
+10:17 
+
+10:17 exactly what this is doing just go to
+10:19 
+
+10:19 the render uh tab up here the viewport
+10:21 
+
+10:21 shading tab switch the render pass over
+10:23 
+
+10:23 to mist and then you can see the exact
+10:26 
+
+10:26 range that this is covering and if you
+10:28 
+
+10:28 just mess with the start and end
+10:30 
+
+10:30 distance you'll be able to see kind of
+10:32 
+
+10:32 where this is covering and where it's
+10:33 
+
+10:33 not I have all these settings on by
+10:34 
+
+10:34 default and mine's just at 0 to 100 m by
+10:37 
+
+10:37 the default setting that usually works
+10:39 
+
+10:39 fine and then when you render this you
+10:41 
+
+10:41 can just go into the compositing tab
+10:43 
+
+10:43 output the Mist right here you can
+10:45 
+
+10:45 either run that through the lens
+10:46 
+
+10:46 Distortion if you use that or just run
+10:48 
+
+10:48 it straight out and then D noise it if
+10:49 
+
+10:49 you need to um so you can just drop a d
+10:52 
+
+10:52 noise node right there if you need to do
+10:54 
+
+10:54 that if it comes out noisy and then just
+10:56 
+
+10:56 save the image uh just save the Mist
+10:58 
+
+10:58 pass separately so the same way you
+10:60 
+
+10:60 would save a render and then inside
+11:01 
+
+11:01 Photoshop you could basically just drop
+11:03 
+
+11:03 those two things into a new document uh
+11:05 
+
+11:05 with the Mist pass just turn that on uh
+11:08 
+
+11:08 on the turn the layer on and then go
+11:10 
+
+11:10 over to the channels tab control click
+11:13 
+
+11:13 on any of these thumbnails to make a
+11:14 
+
+11:14 selection based off of the brightness
+11:16 
+
+11:16 values of this image so control click on
+11:18 
+
+11:18 any one of these thumbnails that'll make
+11:19 
+
+11:19 a selection based off the brightness of
+11:21 
+
+11:21 this and then if you just make a new
+11:23 
+
+11:23 layer create a mask with that selection
+11:26 
+
+11:26 active and then just fill this with
+11:28 
+
+11:28 whatever color you want
+11:30 
+
+11:30 I'll just go onto this Mist pass uh mask
+11:32 
+
+11:32 and I'll select that and just go to
+11:34 
+
+11:34 image adjustments curves and I'll just
+11:36 
+
+11:36 adjust the range of this kind of like a
+11:38 
+
+11:38 color ramp and blender and I'll just
+11:40 
+
+11:40 kind of manually um draw this into or
+11:44 
+
+11:44 I'll just put this kind of into a range
+11:46 
+
+11:46 which I'm happy to uh like really
+11:48 
+
+11:48 separate out certain objects from the
+11:50 
+
+11:50 background so right there looks kind of
+11:51 
+
+11:51 cool maybe just coming up a little bit
+11:53 
+
+11:53 past there and then what I'll do is I'll
+11:56 
+
+11:56 just apply the mask and then I'll just
+11:59 
+
+11:59 create another mask on top of that uh
+12:01 
+
+12:01 and then invert it so that I can brush
+12:03 
+
+12:03 this effect in wherever I want just take
+12:05 
+
+12:05 a brush I'll make it just really soft
+12:07 
+
+12:07 and then you could just manually go in
+12:09 
+
+12:09 and brush that that effect in there then
+12:12 
+
+12:12 you can do things like do a special like
+12:14 
+
+12:14 Cloud brush or mix in noise however you
+12:16 
+
+12:16 want um but yeah that's another way that
+12:18 
+
+12:18 I'll often add like ground fog in
+12:20 
+
+12:20 Photoshop and then if you just set the
+12:21 
+
+12:21 blending mode over to uh like screen or
+12:24 
+
+12:24 lighten that usually looks a lot better
+12:26 
+
+12:26 and you can
+12:27 
+
+12:27 see this is a really nice way to
+12:29 
+
+12:29 increase the sense of depth even further
+12:32 
+
+12:32 okay so that's it if you found that
+12:33 
+
+12:33 helpful go and check out some of my
+12:34 
+
+12:34 other videos on my channel and yeah bye

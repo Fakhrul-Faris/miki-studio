@@ -1,0 +1,206 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2908
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\fswiss\fcharset0 Arial-BoldMT;\f2\fswiss\fcharset0 Arial-ItalicMT;
+\f3\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue11;\red0\green0\blue233;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c0;\cssrgb\c0\c0\c93333;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}
+{\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid501\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid6}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs32 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+A Vox explainer video script \cb3 follows a mystery-solving arc rather than a textbook lecture\cb1 . It hooks viewers fast, zooms out for context, builds through step-by-step beats, and closes with a sharp reframe. [{\field{\*\fldinst{HYPERLINK "https://www.youtube.com/watch?v=iO0Gvm4Wu8M&t=19"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 1}}, {\field{\*\fldinst{HYPERLINK "https://github.com/CK42BB/vox-explainer-skill/blob/main/references/vox-style-guide.md"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 2}}]\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs40 \cf0 1. Cold Open and Hook (First 7\'9612 Seconds)\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls1\ilvl0
+\fs32 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Immediate payoff:
+\f0\b0  Skip long intros and channel greetings. Start right inside the story or pose a focused question (such as 
+\f2\i "Why are shipping containers all the same size?"
+\f0\i0 ). [{\field{\*\fldinst{HYPERLINK "https://medium.com/@seijiyushin/i-watched-50-vox-videos-back-to-back-here-is-what-they-all-share-88a42e293459"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 1}}, {\field{\*\fldinst{HYPERLINK "https://www.typeflow.studio/blog/vox-style-explainer-videos"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 2}}, {\field{\*\fldinst{HYPERLINK "https://github.com/CK42BB/vox-explainer-skill/blob/main/references/vox-style-guide.md"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 3}}]\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls1\ilvl0
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Tight pacing:
+\f0\b0  Keep the opening to roughly 15\'9620 words before hitting the title card. [{\field{\*\fldinst{HYPERLINK "https://medium.com/@seijiyushin/i-watched-50-vox-videos-back-to-back-here-is-what-they-all-share-88a42e293459"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 1}}]\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Visual anchor:
+\f0\b0  Pair the opening line with a striking map, surprising number, or single bold visual. An analysis by Seiji Yushin on {\field{\*\fldinst{HYPERLINK "https://medium.com/@seijiyushin/i-watched-50-vox-videos-back-to-back-here-is-what-they-all-share-88a42e293459"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 Medium}} found this exact opening pattern across 50 Vox videos. [{\field{\*\fldinst{HYPERLINK "https://medium.com/@seijiyushin/i-watched-50-vox-videos-back-to-back-here-is-what-they-all-share-88a42e293459"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 1}}]\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs40 \cf0 2. The Turn to Context (Signposting)\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls2\ilvl0
+\fs32 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Zoom out:
+\f0\b0  Transition from the specific hook to the broader history, system, or mechanism behind it.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls2\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls2\ilvl0
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Signature pivot:
+\f0\b0  Use clear signposts like 
+\f2\i "To understand how, you have to go back to..."
+\f0\i0  or 
+\f2\i "But that's not the whole story"
+\f0\i0 .\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Set expectations:
+\f0\b0  Tell the viewer what puzzle the video will unpack next. [{\field{\*\fldinst{HYPERLINK "https://github.com/CK42BB/vox-explainer-skill/blob/main/references/vox-style-guide.md"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 1}}, {\field{\*\fldinst{HYPERLINK "https://www.youtube.com/watch?v=iO0Gvm4Wu8M&t=19"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 2}}, {\field{\*\fldinst{HYPERLINK "https://www.youtube.com/watch?v=bjtokn_xVXs"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 3}}]\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs40 \cf0 3. Escalating Explanation (50\'9670% of the Script)\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls3\ilvl0
+\fs32 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 One clear throughline:
+\f0\b0  Build ideas step by step so each beat adds clarity.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls3\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls3\ilvl0
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Concrete scale:
+\f0\b0  Use specific numbers, named examples, and familiar comparisons instead of vague abstractions.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Plant and payoff:
+\f0\b0  Introduce a detail or question early, then connect it later when the mechanism clicks into place. [{\field{\*\fldinst{HYPERLINK "https://github.com/CK42BB/vox-explainer-skill/blob/main/references/vox-style-guide.md"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 1}}, {\field{\*\fldinst{HYPERLINK "https://www.youtube.com/watch?v=bjtokn_xVXs"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 2}}]\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs40 \cf0 4. Complication and Tension\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls4\ilvl0
+\fs32 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Introduce friction:
+\f0\b0  Highlight bottlenecks, hidden costs, trade-offs, or unintended consequences.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls4\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls4\ilvl0
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Raise stakes:
+\f0\b0  Show why the topic still matters or where the system breaks down. [{\field{\*\fldinst{HYPERLINK "https://www.youtube.com/watch?v=iO0Gvm4Wu8M&t=19"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 1}}, {\field{\*\fldinst{HYPERLINK "https://github.com/CK42BB/vox-explainer-skill/blob/main/references/vox-style-guide.md"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 2}}, {\field{\*\fldinst{HYPERLINK "https://www.youtube.com/watch?v=rVUrchY3dYc&t=29"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 3}}]\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls4\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs40 \cf0 5. Resolution and Reframe\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls5\ilvl0
+\fs32 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Circle back:
+\f0\b0  Return to the cold open or central question with new meaning.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls5\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls5\ilvl0
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Quotable close:
+\f0\b0  End on a concise takeaway line that summarizes the shift in understanding. [{\field{\*\fldinst{HYPERLINK "https://www.youtube.com/watch?v=iO0Gvm4Wu8M&t=19"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 1}}, {\field{\*\fldinst{HYPERLINK "https://github.com/CK42BB/vox-explainer-skill/blob/main/references/vox-style-guide.md"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 2}}]\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls5\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs40 \cf0 Script Formatting and Writing Habits\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls6\ilvl0
+\fs32 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Two-column or beat-based layout:
+\f0\b0  Pair voiceover lines with matching visuals, lower thirds, and on-screen text (
+\f3\fs28 SUPER:
+\f0\fs32 ) so timing and graphics stay aligned. A production guide from {\field{\*\fldinst{HYPERLINK "https://rivetline.ai/post/explainer-video-script"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 Rivetline}} highlights putting each beat on its own row with an estimated duration. [{\field{\*\fldinst{HYPERLINK "https://rivetline.ai/post/explainer-video-script"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 1}}]\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls6\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls6\ilvl0
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Rhythm and spoken flow:
+\f0\b0  Mix sentence lengths, favor active phrasing and concrete nouns, and read every line aloud to catch clunky phrasing. You can see how a full documentary script maps out in this {\field{\*\fldinst{HYPERLINK "https://www.scribd.com/document/1062588109/Vox-Google-Documentary-Script"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 Vox Google Documentary Script}} on Scribd. [{\field{\*\fldinst{HYPERLINK "https://github.com/CK42BB/vox-explainer-skill/blob/main/references/vox-style-guide.md"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 1}}, {\field{\*\fldinst{HYPERLINK "https://www.scribd.com/document/1062588109/Vox-Google-Documentary-Script"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 2}}]\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls6\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls6\ilvl0
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Workflow:
+\f0\b0  There is a consensus on {\field{\*\fldinst{HYPERLINK "https://www.reddit.com/r/Journalism/comments/7lxuwt/whats_the_workflow_on_this_vox_video/"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 Reddit's r/Journalism}} that strong explainers rely on a disciplined sequence from research and outlining to scriptwriting, visual planning, voiceover, and sound design. [{\field{\*\fldinst{HYPERLINK "https://www.reddit.com/r/Journalism/comments/7lxuwt/whats_the_workflow_on_this_vox_video/"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 1}}]\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls6\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+These videos break down Vox's storytelling arc, script techniques, and sound-and-visual pacing in practice:\
+\
+\
+Share your 
+\f1\b topic
+\f0\b0 , 
+\f1\b target length
+\f0\b0  (for example, a 60-second short or a 5-minute explainer), and 
+\f1\b intended audience
+\f0\b0 , and I can draft a beat-by-beat Vox-style script outline for you.\
+\
+\
+\
+\
+\
+\
+\
+}

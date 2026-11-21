@@ -1,0 +1,910 @@
+00:00 What's up everyone? And now you're going
+00:02 
+
+00:02 to learn how to create speed ramps, how
+00:04 
+
+00:04 to speed up and slow down your clips. As
+00:07 
+
+00:07 you see here in the example, this is an
+00:09 
+
+00:09 epic necessary technique you need to
+00:12 
+
+00:12 know as a creator because this way we
+00:14 
+
+00:14 can bring in momentum and flow. We can
+00:17 
+
+00:17 go in and go out and with the right
+00:20 
+
+00:20 shots, speed ramping is just super
+00:22 
+
+00:22 powerful. I love to create speed ramps
+00:24 
+
+00:24 and to speed ramp my clips. So, let's
+00:26 
+
+00:26 dive right in. All right, first of all,
+00:29 
+
+00:29 we need the right shot. And for the
+00:30 
+
+00:30 clips, it's super important that you
+00:32 
+
+00:32 walk as stable as possible and you
+00:35 
+
+00:35 always keep something in focus. And I
+00:38 
+
+00:38 play them back here. I use the gimbal
+00:40 
+
+00:40 and I always try to keep the car in the
+00:42 
+
+00:42 focus. So when I speed ramp, the car
+00:44 
+
+00:44 will always be in the center. So always
+00:47 
+
+00:47 make sure you have something centered.
+00:48 
+
+00:48 As you can see here, that the clip in
+00:50 
+
+00:50 general is as smooth as possible to
+00:53 
+
+00:53 really make that speed ramp look super
+00:55 
+
+00:55 super clean. Because if the clip is
+00:57 
+
+00:57 super shaky, the speed ramp will not
+00:59 
+
+00:59 feel smooth. Let's take this clip here
+01:01 
+
+01:01 for for example. Number one, I'm going
+01:03 
+
+01:03 to drag it here into a new comp and I
+01:05 
+
+01:05 actually want to add some more contrast.
+01:08 
+
+01:08 So I'm going to quickly add lummetry
+01:09 
+
+01:09 color. Go into basic controls. This way
+01:12 
+
+01:12 you can add contrast and change colors.
+01:15 
+
+01:15 So yeah, that looks way better. So you
+01:18 
+
+01:18 can see here we have a little bit of
+01:20 
+
+01:20 shake when I zoom in. It's not 100%
+01:22 
+
+01:22 stable at all time because what we want
+01:25 
+
+01:25 to have is that logo to be at the same
+01:27 
+
+01:27 position at all time to be 100%
+01:29 
+
+01:29 centered. So if I leave the cursor here
+01:31 
+
+01:31 and I play back, you see here now it
+01:33 
+
+01:33 just it moved away. So our goal is to
+01:36 
+
+01:36 have it 100% centered. Let's apply
+01:38 
+
+01:38 Mocha. Mocha is a great tool that comes
+01:41 
+
+01:41 right within After Effects. I'm going to
+01:44 
+
+01:44 launch Mocha. I'm going to the first
+01:46 
+
+01:46 frame. I'm now drawing a quick circle
+01:49 
+
+01:49 here with the circle tool around the
+01:51 
+
+01:51 logo. Boom. Yes. Like that. And now I'm
+01:55 
+
+01:55 going to So, we just want to make it as
+01:56 
+
+01:56 close as possible so we can track here
+01:58 
+
+01:58 the the circle the logo. Now I'm also
+02:01 
+
+02:01 checking perspective. And now I'm just
+02:03 
+
+02:03 playing back here on the track. So now
+02:06 
+
+02:06 I'm playing forward. And now Mocha is
+02:08 
+
+02:08 tracking the logo. And it runs super
+02:10 
+
+02:10 fast. As you can see here, this is one
+02:12 
+
+02:12 of a lot of methods we actually teach as
+02:14 
+
+02:14 a creator club where you can learn how
+02:16 
+
+02:16 to create this epic edit. And fun fact,
+02:18 
+
+02:18 the stabilizing technique with Mocha
+02:20 
+
+02:20 inside After Effects. I've actually
+02:21 
+
+02:21 learned from one of my students from
+02:23 
+
+02:23 Dimitro who now became a teacher inside
+02:26 
+
+02:26 Creators Club, which is just amazing to
+02:28 
+
+02:28 see. And he has an full in-depth module
+02:30 
+
+02:30 on how to stabilize all sorts of shots.
+02:33 
+
+02:33 So, he's the stabilizing speed ramping
+02:34 
+
+02:34 king. If you want to level up your
+02:36 
+
+02:36 editing skills and become a nextgen
+02:38 
+
+02:38 creator, make sure to check out the
+02:41 
+
+02:41 coolest editing and creative community
+02:43 
+
+02:43 on this planet, Creator Squad.
+02:48 
+
+02:48 So, we just tracked it within seconds.
+02:50 
+
+02:50 And you can see here, we now get rid of
+02:52 
+
+02:52 this shake. So, now it's tracked just
+02:55 
+
+02:55 like that. Pretty easy, right?
+02:57 
+
+02:57 >> Nice.
+02:58 
+
+02:58 >> Now, save it here on top. That's really
+02:59 
+
+02:59 important. And all we need to do is here
+03:02 
+
+03:02 to open up the tracking data and create
+03:04 
+
+03:04 tracking data. And now when we press U,
+03:07 
+
+03:07 we open up the key frames. We want to
+03:08 
+
+03:08 copy the center key frames here. And
+03:11 
+
+03:11 then press A. Make sure the cursor is
+03:13 
+
+03:13 all the way at the beginning. And now we
+03:16 
+
+03:16 pasting this center key frames, the
+03:18 
+
+03:18 center of the mask we've just created.
+03:19 
+
+03:19 And track this center key frames. We're
+03:22 
+
+03:22 pasting to the anchor point. Boom. And
+03:24 
+
+03:24 just like that, we just have stabilized
+03:27 
+
+03:27 the clip. So now the logo is 100%
+03:30 
+
+03:30 centered at all time, which is super
+03:32 
+
+03:32 epic and super fast, right? So look at
+03:34 
+
+03:34 that. Now, how smooth is that? That is
+03:38 
+
+03:38 so sick. So I'm bringing up scale and
+03:40 
+
+03:40 change it to 110. And maybe this already
+03:44 
+
+03:44 works here. Yeah, that's fine. Oh, let's
+03:46 
+
+03:46 change it to 115.
+03:49 
+
+03:49 So we are good. So now we don't have any
+03:51 
+
+03:51 borders. Now we need to pre-ompose
+03:53 
+
+03:53 those. So we pike everything into a
+03:55 
+
+03:55 pre-omposition. Just like that.
+03:57 
+
+03:57 pre-ompose. Move all attributes. Yes.
+03:60 
+
+04:00 And now we have a clean clip we can work
+04:02 
+
+04:02 with. Make sure you save it. So yeah,
+04:05 
+
+04:05 your project is safe and you don't lose
+04:07 
+
+04:07 your data. So I'm just going to create
+04:08 
+
+04:08 that After Effects folder. And now we
+04:10 
+
+04:10 are coming to the speed ramp part. You
+04:12 
+
+04:12 just have to right click here and select
+04:14 
+
+04:14 time and enable time remapping. And now
+04:17 
+
+04:17 we have two key frames here. This is the
+04:19 
+
+04:19 first frame and the last frame here. And
+04:22 
+
+04:22 now with bringing these key frames
+04:24 
+
+04:24 closer together, we are speeding up this
+04:27 
+
+04:27 part between those key frames. And now
+04:29 
+
+04:29 we bring it further away. We're slowing
+04:31 
+
+04:31 it down. That's pretty much how the key
+04:32 
+
+04:32 frames work. How time remapping works in
+04:34 
+
+04:34 After Effects. So now when I play it,
+04:37 
+
+04:37 it's just faster. Nothing else happened.
+04:40 
+
+04:40 It's just sped up. Okay, but that's not
+04:42 
+
+04:42 what I want, right? So we are clicking
+04:44 
+
+04:44 here on the graph editor. And now here
+04:47 
+
+04:47 you have different graphs. Um, some like
+04:49 
+
+04:49 to work in the value graph, which is
+04:51 
+
+04:51 also pretty pretty nice, but I think
+04:53 
+
+04:53 it's cool to work in the edit speed
+04:55 
+
+04:55 graph, but you can choose whatever you
+04:57 
+
+04:57 like. Just click in here on that on that
+04:59 
+
+04:59 yellow dot. Move that here a little bit
+05:01 
+
+05:01 away. Yellow dot. And we're dragging it
+05:03 
+
+05:03 down to one because one is the normal
+05:07 
+
+05:07 speed. Two is faster, three is faster,
+05:09 
+
+05:09 but one is regular speed. Zero is no
+05:12 
+
+05:12 speed. So, it the clip doesn't move. So,
+05:15 
+
+05:15 let's drag it to one and make that RAM.
+05:17 
+
+05:17 Now we take in the other one here, the
+05:19 
+
+05:19 other yellow dot and we drag it in as
+05:22 
+
+05:22 well. And this way we create a ramp
+05:25 
+
+05:25 because we're creating speed ramps.
+05:28 
+
+05:28 Right?
+05:29 
+
+05:29 So now let's see what we have done.
+05:31 
+
+05:31 Actually where the ramp goes up, we go
+05:34 
+
+05:34 up in speed and where it goes down, we
+05:36 
+
+05:36 go down in speed. So it's like a
+05:38 
+
+05:38 snowboarder going on the hill. So he
+05:40 
+
+05:40 goes up and then fires down again. And
+05:43 
+
+05:43 that is already pretty cool, right? And
+05:45 
+
+05:45 now with the ramp here, with changing
+05:47 
+
+05:47 the dot here to the left and to the
+05:49 
+
+05:49 right, we can actually change how fast
+05:52 
+
+05:52 it should speed up or how fast or slow
+05:55 
+
+05:55 it slows down. Again, I really like to
+05:57 
+
+05:57 make this hill. Yeah, somewhere around
+05:60 
+
+05:60 that. I think that is pretty epic. But
+06:02 
+
+06:02 what I want to do is I want to go back
+06:04 
+
+06:04 here to the logo again. I'm copying the
+06:06 
+
+06:06 first key frame, command C, and paste it
+06:09 
+
+06:09 again at around two seconds. And now
+06:12 
+
+06:12 look at that. We're going back in. But
+06:14 
+
+06:14 you've seen we have a black black frame
+06:17 
+
+06:17 here in between. You can easily fix that
+06:19 
+
+06:19 because now here on the on the on the
+06:21 
+
+06:21 slider control here, you can actually
+06:23 
+
+06:23 also use this one to select where you
+06:25 
+
+06:25 want to speed wrap to. So now we just
+06:27 
+
+06:27 set the frame a couple of frames back.
+06:29 
+
+06:29 So this way you avoid that black screen.
+06:32 
+
+06:32 That's pretty much it. So now we have a
+06:35 
+
+06:35 speed ramp like that. And now you can
+06:36 
+
+06:36 play around with that. Now we could go
+06:38 
+
+06:38 back here. And now let's use the skill
+06:41 
+
+06:41 we just learned. And now we use the time
+06:44 
+
+06:44 here. So we can drag here the time where
+06:47 
+
+06:47 we want to go next. And you can see here
+06:49 
+
+06:49 it's so satisfying that the Braavos logo
+06:52 
+
+06:52 stays always in the center. So let's say
+06:55 
+
+06:55 here we want to go that far out and at
+06:58 
+
+06:58 the end we want to be all the way back.
+07:01 
+
+07:01 So this way we can also create those key
+07:03 
+
+07:03 frames. And now let's go into this speed
+07:05 
+
+07:05 graph again the graph editor. Now we can
+07:08 
+
+07:08 see here that's how the key frames look
+07:10 
+
+07:10 like. This one is linear and these ones
+07:12 
+
+07:12 are bouncing. So now what I want to do
+07:15 
+
+07:15 is I'm selecting the key frames again
+07:18 
+
+07:18 like this here. Yellow dot. I'm dragging
+07:22 
+
+07:22 this one up to one so it goes back here
+07:24 
+
+07:24 to this key frame the same speed. And
+07:27 
+
+07:27 make sure here the the snap is activated
+07:29 
+
+07:29 so it snaps to the key frames which yeah
+07:31 
+
+07:31 saves you a lot of time. So now we
+07:33 
+
+07:33 snapping this one back as well. And now
+07:35 
+
+07:35 we have a smooth in and out again. Look
+07:38 
+
+07:38 at that. Swap. Swap, swap, swap. Nice.
+07:42 
+
+07:42 Now, here in this control, we can also
+07:44 
+
+07:44 go a little bit further in to see what's
+07:47 
+
+07:47 actually happening. You can see here,
+07:49 
+
+07:49 this key frame is set to zero. So,
+07:51 
+
+07:51 there's no speed. The clip speed is at
+07:53 
+
+07:53 zero. So, but we want it at normal
+07:55 
+
+07:55 speed. So, we drag it up to one. Boom.
+07:58 
+
+07:58 Both of those. And now, we make sure we
+08:00 
+
+08:00 also smooth the curves. And that way,
+08:03 
+
+08:03 look at that. We have just created that
+08:04 
+
+08:04 speed ramp, which I think looks super
+08:08 
+
+08:08 sick. Look at that. Just like that. You
+08:11 
+
+08:11 can play around with all sorts. You can
+08:14 
+
+08:14 delete key frames again. We can go back
+08:16 
+
+08:16 in again here. So, we have kind of these
+08:18 
+
+08:18 bounces. Jump back into the speed graph
+08:21 
+
+08:21 and edit those. And yes, this way you
+08:25 
+
+08:25 can create pretty easy speed ramps and
+08:28 
+
+08:28 it's a super powerful technique which
+08:30 
+
+08:30 you just should know. With high speed,
+08:33 
+
+08:33 we should see motion blur. Right now it
+08:35 
+
+08:35 looks already smooth because we have
+08:37 
+
+08:37 really well stabilized it. we have a
+08:39 
+
+08:39 clean graph because if those graphs are
+08:42 
+
+08:42 not really well ramped, if they're like
+08:45 
+
+08:45 linear or they're laggy, your speed ramp
+08:47 
+
+08:47 won't look good. So, it's important to
+08:49 
+
+08:49 have a proper clip, stabilize it well.
+08:52 
+
+08:52 Then, it's really important to really
+08:53 
+
+08:53 smooth your speed ramps. And the last
+08:55 
+
+08:55 thing you need for a good speed ramp is
+08:57 
+
+08:57 motion blur. So, all we need to do is
+08:59 
+
+08:59 literally we just apply force motion
+09:02 
+
+09:02 blur, which is an effect. Right now
+09:04 
+
+09:04 here, I'm using FX console to browse
+09:06 
+
+09:06 through my effects. Boom. Just like
+09:07 
+
+09:07 that. Super quick and easy. But it's
+09:10 
+
+09:10 exactly the same as you are searching
+09:11 
+
+09:11 here through the effects and presets
+09:13 
+
+09:13 tab. It's just faster. So I just applied
+09:16 
+
+09:16 the effect and right away look at that.
+09:19 
+
+09:19 We have applied motion blur because
+09:21 
+
+09:21 After Effects takes the data where we
+09:23 
+
+09:23 sped up the clip and actually adds
+09:26 
+
+09:26 motion blur to it. And just with one
+09:28 
+
+09:28 effect we increase the quality of the
+09:31 
+
+09:31 whole yeah clip itself of the speed ramp
+09:34 
+
+09:34 instantly. Look at that. And guys, those
+09:36 
+
+09:36 speed rams really live of the motion and
+09:39 
+
+09:39 the vibe. So, make sure you get in a
+09:41 
+
+09:41 good beat. Um, here I just imported one
+09:44 
+
+09:44 good music. Get this one in your track.
+09:46 
+
+09:46 Now, you can open up the audio waveform
+09:48 
+
+09:48 here. So, you can actually see what is
+09:50 
+
+09:50 happening inside your track and you can
+09:52 
+
+09:52 see the bass or any sort of Yeah. What
+09:55 
+
+09:55 do you want to add it to? So, this way
+09:57 
+
+09:57 you can easily see where you want to
+09:59 
+
+09:59 place your key frames. So, let's play it
+10:01 
+
+10:01 back for a second. Okay, there's no
+10:04 
+
+10:04 drop. I want that drop here. No drop.
+10:06 
+
+10:06 Come on. Give me the drop. Okay, now
+10:08 
+
+10:08 it's building up. Okay, that looks like
+10:10 
+
+10:10 a drop. So, let's place it here.
+10:15 
+
+10:15 Okay, now Oh, yes. So, now we are
+10:18 
+
+10:18 placing it on the beat. So, we are Okay,
+10:20 
+
+10:20 now here I want on that boom where the
+10:22 
+
+10:22 drop starts. I want that full motion to
+10:24 
+
+10:24 happen. So, let's make sure here the
+10:28 
+
+10:28 clip is faster. So, so we go out. We
+10:31 
+
+10:31 need to go faster out. We just drag in
+10:33 
+
+10:33 the key frame closer. And here we need
+10:36 
+
+10:36 to go really fast. Um, and edit those on
+10:38 
+
+10:38 the beat here. I think this could work.
+10:42 
+
+10:42 So, I'm taking here the audio. Look at
+10:44 
+
+10:44 the audio. And now placing the key
+10:47 
+
+10:47 frames close to where I want the beat
+10:50 
+
+10:50 changes.
+10:52 
+
+10:52 So, where the beat change in the in the
+10:53 
+
+10:53 music happens. So, like that.
+10:57 
+
+10:57 Yeah, just like that.
+11:00 
+
+11:00 Okay. I think that is right away a
+11:03 
+
+11:03 pretty solid result. Uh, which is pretty
+11:06 
+
+11:06 nice.
+11:08 
+
+11:08 Nice. And then we can transition to
+11:10 
+
+11:10 another clip on the beat going in. So
+11:12 
+
+11:12 the next clip should also be a clip that
+11:14 
+
+11:14 matches the motion of our speed ramp. So
+11:16 
+
+11:16 if you go left, right, the clip
+11:18 
+
+11:18 afterwards you're editing to should also
+11:20 
+
+11:20 go into the same direction. So yeah, but
+11:22 
+
+11:22 you see can see here it really lives of
+11:25 
+
+11:25 those key things I just shared with you.
+11:28 
+
+11:28 All right. Yeah. And that's basically
+11:29 
+
+11:29 it. I hope you have learned a lot. I
+11:31 
+
+11:31 just wanted to quickly share with you
+11:33 
+
+11:33 how I create my speed ramps because I
+11:36 
+
+11:36 can't wait to see what you guys going to
+11:37 
+
+11:37 create with those techniques. I thought
+11:39 
+
+11:39 this is pretty straightforward, a quick
+11:41 
+
+11:41 one and yeah, I hope you got a lot of
+11:43 
+
+11:43 value out of this video. So, I would
+11:45 
+
+11:45 really appreciate if you like and follow
+11:48 
+
+11:48 this YouTube channel so we can keep
+11:49 
+
+11:49 creating more of those tutorials. So,
+11:52 
+
+11:52 guys, I wish you all an amazing day and
+11:54 
+
+11:54 I can't wait to see you in the next one.

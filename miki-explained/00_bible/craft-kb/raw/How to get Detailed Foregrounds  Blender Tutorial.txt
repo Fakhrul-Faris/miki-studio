@@ -1,0 +1,1558 @@
+00:00 so if you can just get this one thing
+00:01 
+
+00:01 right in your vender it's going to make
+00:03 
+
+00:03 the whole rest of the environment look a
+00:04 
+
+00:04 lot better A lot more realistic and
+00:06 
+
+00:06 detailed and immersive and that one
+00:08 
+
+00:08 thing is the foreground so the
+00:11 
+
+00:11 foreground actually takes up a small
+00:14 
+
+00:14 amount of space in the 3D environment
+00:17 
+
+00:17 that means it's going to be not that
+00:19 
+
+00:19 hard to just work on this small little
+00:20 
+
+00:20 area but it actually takes up a
+00:22 
+
+00:22 significant percentage of space in the
+00:24 
+
+00:24 2D render that we get at the end right
+00:27 
+
+00:27 so what happens is if you can make this
+00:30 
+
+00:30 one area look really nice and detailed
+00:32 
+
+00:32 it has the effect of kind of tricking
+00:34 
+
+00:34 your brain and creating the illusion
+00:36 
+
+00:36 that the whole rest of the environment
+00:38 
+
+00:38 has as much detail as you're showing in
+00:40 
+
+00:40 the foreground even if it doesn't at all
+00:42 
+
+00:42 so in this one I'm just going to go over
+00:43 
+
+00:43 three different examples of detailed
+00:45 
+
+00:45 foregrounds that I've made and I'll show
+00:46 
+
+00:46 you my uh process that I follow to get
+00:49 
+
+00:49 detailed foregrounds and renders like
+00:50 
+
+00:50 this and uh just how to layer all this
+00:52 
+
+00:52 stuff together and and manage all it
+00:53 
+
+00:53 it's actually all stuff that's quite
+00:55 
+
+00:55 simple and easy and probably stuff
+00:56 
+
+00:56 you've done before but just layering
+00:58 
+
+00:58 layering it and explaining it in a way
+00:60 
+
+00:60 that that uh is going to let you create
+01:03 
+
+01:03 really detailed foregrounds and make it
+01:04 
+
+01:04 look really nice straight away and so
+01:06 
+
+01:06 you can implement it right away into
+01:07 
+
+01:07 your work okay so the basic process is
+01:09 
+
+01:09 layering a few different things together
+01:10 
+
+01:10 in order to create the most detail and I
+01:12 
+
+01:12 I'll show you this in in one second in
+01:14 
+
+01:14 an empty file and explain it in detail
+01:16 
+
+01:16 but the basic overview is this right
+01:19 
+
+01:19 there's kind of three main layers one is
+01:21 
+
+01:21 I start with a nice texture so that's
+01:24 
+
+01:24 just a you know a plane with a texture
+01:26 
+
+01:26 on it then I'll add some kind of medium
+01:28 
+
+01:28 shapes in here so that could be like
+01:30 
+
+01:30 rocks pillars these like hexagonal
+01:33 
+
+01:33 things or whatever just any kind of
+01:34 
+
+01:34 medium shapes and then third I'll add in
+01:37 
+
+01:37 like the fall the the small fine details
+01:39 
+
+01:39 whether that's like scattering stuff
+01:41 
+
+01:41 hand placing small objects water
+01:43 
+
+01:43 whatever um and that's going to those
+01:45 
+
+01:45 three things come together to create the
+01:48 
+
+01:48 the most detail that I've been able to
+01:49 
+
+01:49 add to foreground and make it look nice
+01:51 
+
+01:51 with as little effort as possible okay
+01:53 
+
+01:53 so let's just jum into the scene here
+01:54 
+
+01:54 and I'll show you what I mean
+01:56 
+
+01:56 exactly so ignore there's a whole bunch
+01:58 
+
+01:58 of going on up top just ignore all
+02:00 
+
+02:00 that what we want to look at here is
+02:02 
+
+02:02 this down here right the foreground so
+02:05 
+
+02:05 um there's all these different models
+02:06 
+
+02:06 down here and kind of layers what I've
+02:08 
+
+02:08 done is I've just copied and pasted all
+02:10 
+
+02:10 of just the stuff kind of from the
+02:12 
+
+02:12 bottom of the stairs down I've taken all
+02:15 
+
+02:15 that and I've just copied and pasted it
+02:16 
+
+02:16 into this empty scene and I'll just show
+02:19 
+
+02:19 you this in kind of a no lighting
+02:21 
+
+02:21 scenario just so you can see exactly
+02:22 
+
+02:22 what's going on and we'll break it down
+02:24 
+
+02:24 piece by piece as well so this this is
+02:27 
+
+02:27 literally just copy pasted same camera
+02:29 
+
+02:29 angle same object same textures
+02:30 
+
+02:30 everything
+02:31 
+
+02:31 just with uh everything else removed and
+02:33 
+
+02:33 it looks obviously quite different the
+02:35 
+
+02:35 lighting does play a big part um and
+02:37 
+
+02:37 I'll get to that later but let's just
+02:39 
+
+02:39 start with this so this is just copy
+02:41 
+
+02:41 pasted into here and I'll just break
+02:42 
+
+02:42 this down into everything that's
+02:43 
+
+02:43 happening here okay so let's just start
+02:46 
+
+02:46 hiding stuff and I'll bring this in
+02:47 
+
+02:47 piece by piece let's start with the most
+02:49 
+
+02:49 simple thing which is just the floor so
+02:52 
+
+02:52 this is just a rock plane here um
+02:55 
+
+02:55 probably should have subdivided this
+02:57 
+
+02:57 into like squares but whatever so this
+02:59 
+
+02:59 is just a plane I've got uh adaptive
+03:02 
+
+03:02 subdivision on this if you don't know
+03:04 
+
+03:04 what that is just Google blender
+03:06 
+
+03:06 adaptive subdivision you'll find it it's
+03:07 
+
+03:07 pretty easy and even if you can't do
+03:09 
+
+03:09 that if you don't want to figure that
+03:10 
+
+03:10 out just subdivide a a plane and put on
+03:13 
+
+03:13 displacement I'm sure you'll figure that
+03:15 
+
+03:15 out if you don't know how to do that so
+03:16 
+
+03:16 that's layer one is just a good
+03:19 
+
+03:19 texture okay so once you have that I
+03:22 
+
+03:22 like to add in some kind of medium
+03:24 
+
+03:24 shapes that are like fairly detailed so
+03:27 
+
+03:27 that could be models you download it
+03:29 
+
+03:29 could be cubes could be make a a
+03:31 
+
+03:31 hexagonal thing uh a bassal rock
+03:35 
+
+03:35 formation that somebody corrected me and
+03:36 
+
+03:36 pointed out in the last video this thing
+03:38 
+
+03:38 could be a uh anything right I've got
+03:42 
+
+03:42 rocks I've done this with like pillars
+03:43 
+
+03:43 I've done this with cubes whatever it is
+03:46 
+
+03:46 just depends on the environment you're
+03:48 
+
+03:48 making some sort of
+03:50 
+
+03:50 medium uh sized object to kind of
+03:53 
+
+03:53 interact with the floor that's going to
+03:55 
+
+03:55 be what I'll do next so I've just got
+03:58 
+
+03:58 things like this so for example if I
+03:59 
+
+03:59 just isolate this
+04:01 
+
+04:01 um this is using geometry nodes to
+04:03 
+
+04:03 scatter this um if you want to just copy
+04:05 
+
+04:05 this set up that's what it is there's
+04:08 
+
+04:08 this uh hexagonal thing going in there
+04:11 
+
+04:11 this doesn't the technical stuff doesn't
+04:13 
+
+04:13 matter that much if you want to hand
+04:14 
+
+04:14 place this that's fine too basically
+04:17 
+
+04:17 just some sort of rock or some thing in
+04:19 
+
+04:19 this case where it's like some model
+04:21 
+
+04:21 that's just adding some detail and I
+04:24 
+
+04:24 usually will just kind of place and
+04:26 
+
+04:26 duplicate a bunch of those in a way that
+04:28 
+
+04:28 looks nice and and that just kind of
+04:30 
+
+04:30 takes some trial and error where you
+04:32 
+
+04:32 just kind of take one try a few
+04:34 
+
+04:34 different models make make a few
+04:35 
+
+04:35 different models if you want to do that
+04:36 
+
+04:36 or download free stuff or paid stuff or
+04:38 
+
+04:38 whatever and start putting it in there
+04:40 
+
+04:40 and just see what's going to work and
+04:41 
+
+04:41 what's not and then just once you find
+04:43 
+
+04:43 something that works try duplicating
+04:45 
+
+04:45 that a few times so I just have this
+04:46 
+
+04:46 thing you know duplicated off for the
+04:47 
+
+04:47 side couple variations some smaller
+04:50 
+
+04:50 versions just whatever I thought kind of
+04:52 
+
+04:52 looked nice here and then I've also just
+04:54 
+
+04:54 got some rocks these are again from
+04:55 
+
+04:55 quickel and these are just kind of
+04:57 
+
+04:57 layered um I'll just go into render viw
+04:59 
+
+04:59 over here so you can see this more
+05:01 
+
+05:01 clearly these are just kind of layered
+05:03 
+
+05:03 on there and when I said layered I just
+05:04 
+
+05:04 mean like this model is just placed like
+05:08 
+
+05:08 intersecting with this other stuff here
+05:10 
+
+05:10 so there's nothing special about like
+05:11 
+
+05:11 layering it's just like Place objects on
+05:15 
+
+05:15 top of each other into a pile and then
+05:17 
+
+05:17 it'll look
+05:18 
+
+05:18 good okay so that's that um and then
+05:22 
+
+05:22 usually at this stage what I'll do is
+05:23 
+
+05:23 I'll have like lighting and stuff going
+05:25 
+
+05:25 on in my actual workflow but at this
+05:27 
+
+05:27 stage when I need more detail that's
+05:29 
+
+05:29 when I'll add in stuff like um you know
+05:31 
+
+05:31 like extra models water uh scatter some
+05:35 
+
+05:35 plants or something like that any kind
+05:37 
+
+05:37 of small fine details you kind of want
+05:39 
+
+05:39 to add that at the end and you notice
+05:41 
+
+05:41 the trend here that it's going to be
+05:43 
+
+05:43 kind of a recurring theme in all my
+05:45 
+
+05:45 renders with any process is like start
+05:48 
+
+05:48 with the biggest shapes and then move to
+05:50 
+
+05:50 medium shapes and then move to small
+05:51 
+
+05:51 shapes at the end and then that way you
+05:52 
+
+05:52 can build it up in a way that's very
+05:54 
+
+05:54 manageable very easy to control and then
+05:56 
+
+05:56 once you can control it it's easier to
+05:58 
+
+05:58 get everything to look good and nice
+06:00 
+
+06:00 okay so that's layer one the plane Layer
+06:02 
+
+06:02 Two some kind of medium chunks of stuff
+06:05 
+
+06:05 whether it's rocks or whatever and then
+06:07 
+
+06:07 Layer Three is going to be in this case
+06:09 
+
+06:09 um these three things so if I've got
+06:11 
+
+06:11 water um and I have a bunch of videos on
+06:14 
+
+06:14 water there's one posted on my channel
+06:15 
+
+06:15 you can go watch that after that posted
+06:17 
+
+06:17 like two videos ago on my channel um and
+06:20 
+
+06:20 then I've got also some random other
+06:23 
+
+06:23 models of like um these things in
+06:26 
+
+06:26 here um this disappeared for some reason
+06:29 
+
+06:29 but they were supposed to be in here I
+06:30 
+
+06:30 think they got key framed out but it's
+06:31 
+
+06:31 some of like random pillars from uh from
+06:34 
+
+06:34 quickel just kind of thrown in there and
+06:35 
+
+06:35 now once I go back here you can you will
+06:37 
+
+06:37 see that this kind of makes a bit more
+06:40 
+
+06:40 you know
+06:41 
+
+06:41 sense and uh yeah if you haven't seen my
+06:44 
+
+06:44 recent video on lighting go and watch
+06:45 
+
+06:45 that after as well cuz that'll kind of
+06:46 
+
+06:46 cover all whatever is going on here I
+06:49 
+
+06:49 will have an advanced or like lighting
+06:51 
+
+06:51 tricks coming out soon so stay tuned for
+06:53 
+
+06:53 that as well okay so that's the kind of
+06:55 
+
+06:55 process here let's move on to the next
+06:56 
+
+06:56 example where it's going to be the same
+06:58 
+
+06:58 uh workflow but just in a
+07:00 
+
+07:00 different examples you can understand it
+07:01 
+
+07:01 more clearly okay so here's the next
+07:04 
+
+07:04 example and let's break this down in the
+07:05 
+
+07:05 exact same way so I've just copied and
+07:07 
+
+07:07 pasted again all these foreground
+07:09 
+
+07:09 objects here just kind of from like here
+07:11 
+
+07:11 down um I've just copied and pasted all
+07:13 
+
+07:13 that into a new scene same camera angle
+07:15 
+
+07:15 same objects nothing changed at all just
+07:18 
+
+07:18 with all lighting and other objects
+07:20 
+
+07:20 removed so you can see this really
+07:22 
+
+07:22 clearly okay so if we look at this it's
+07:25 
+
+07:25 the exact same situation as before so if
+07:27 
+
+07:27 I just hide these other things here
+07:29 
+
+07:29 layer one is just a ground plane of like
+07:32 
+
+07:32 a leaf texture from quickel so you can
+07:35 
+
+07:35 get this from whatever right doesn't
+07:36 
+
+07:36 have to be from quickel or anything
+07:37 
+
+07:37 wherever you get textures just find a
+07:39 
+
+07:39 good texture and have that as the base
+07:41 
+
+07:41 layer kind of refine that and get it
+07:44 
+
+07:44 looking good before you start adding the
+07:47 
+
+07:47 other stuff so um and you'll see the
+07:50 
+
+07:50 selection looks kind of weird it's cuz
+07:51 
+
+07:51 I'm using the panoramic lens so if stuff
+07:52 
+
+07:52 isn't lining up that's just because of
+07:54 
+
+07:54 the weird lens I'm using but anyways um
+07:57 
+
+07:57 you can see there is a bit of
+07:58 
+
+07:58 displacement on here I've just got uh
+07:60 
+
+07:60 same kind of setup as before uh
+08:02 
+
+08:02 displacement map mixed with the noise
+08:05 
+
+08:05 texture kind of getting mixed and then
+08:07 
+
+08:07 that's running out here not a lot of
+08:08 
+
+08:08 displacement just enough to where it's
+08:10 
+
+08:10 kind of making the train a bit uneven
+08:12 
+
+08:12 but fairly minimal but does add a level
+08:14 
+
+08:14 of detail and same thing again adaptive
+08:17 
+
+08:17 subdivision is turned on in
+08:20 
+
+08:20 here um so that's just layer one simple
+08:23 
+
+08:23 ground plane with displacement right
+08:25 
+
+08:25 Layer Two in this case is just kind of
+08:27 
+
+08:27 these medium chunks of stuff so I've got
+08:30 
+
+08:30 these logs I've got these uh pipes and
+08:32 
+
+08:32 Industrial kind of models that I've made
+08:34 
+
+08:34 so this here is just a log from Quick
+08:36 
+
+08:36 soulle duplicated I think it's only one
+08:39 
+
+08:39 or two logs duplicated and each one's
+08:41 
+
+08:41 kind of rotated a bit differently so
+08:42 
+
+08:42 it's seems like a lot but it's just two
+08:44 
+
+08:44 models I think that's all this stuff
+08:46 
+
+08:46 here and again when I say layered it's
+08:48 
+
+08:48 just like regular models just kind of
+08:51 
+
+08:51 thrown like just chucked on top of that
+08:53 
+
+08:53 stuff there right just like that some
+08:56 
+
+08:56 big chunks of like rocks and really the
+08:59 
+
+08:59 goal at this stage is is just to get as
+09:01 
+
+09:01 much stuff in there as possible without
+09:04 
+
+09:04 um like you want to cover as much ground
+09:07 
+
+09:07 as you can literally with uh with like
+09:09 
+
+09:09 medium to large sized models and then
+09:13 
+
+09:13 kind of get the nextev the next level of
+09:15 
+
+09:15 detail by like getting a big bang for
+09:18 
+
+09:18 your buck with like detailed models like
+09:21 
+
+09:21 this whether you want to make it
+09:22 
+
+09:22 download it doesn't matter um just kind
+09:25 
+
+09:25 of get that kind of stuff in there on
+09:26 
+
+09:26 top of the ground and then move to like
+09:29 
+
+09:29 the the smaller the smaller layer after
+09:31 
+
+09:31 that so in this case we've got things
+09:33 
+
+09:33 like if I bring this in now it's
+09:34 
+
+09:34 starting to get more detailed where
+09:35 
+
+09:35 we've got like um photo scanned roots
+09:38 
+
+09:38 and stuff like these are just photo
+09:40 
+
+09:40 scans I did on my phone uh a while ago
+09:43 
+
+09:43 I've got some free models from poly
+09:45 
+
+09:45 Haven as well these are just some roots
+09:46 
+
+09:46 from there same kind of thing probably
+09:49 
+
+09:49 and then you can see it's all these kind
+09:50 
+
+09:50 of smaller things that are layered on
+09:52 
+
+09:52 top I've got like ferns um I've got this
+09:55 
+
+09:55 plane of like flowers in here somewhere
+09:58 
+
+09:58 too I'm not sure happened to
+10:00 
+
+10:00 that oh this got hidden by accident uh
+10:04 
+
+10:04 but yeah there's this too just kind of
+10:05 
+
+10:05 like an invisible plane with a bunch of
+10:08 
+
+10:08 flowers scattered on the plane so that's
+10:10 
+
+10:10 adding again smaller even even smaller
+10:13 
+
+10:13 level of detail on top of that stuff and
+10:16 
+
+10:16 just know that as well I don't organize
+10:17 
+
+10:17 it like this in my actual workflow like
+10:19 
+
+10:19 layer one layer two layer three I'm
+10:20 
+
+10:20 doing that just for the tutorial in my
+10:22 
+
+10:22 actual workflow it's a lot less uh
+10:24 
+
+10:24 structured than this but I just want to
+10:25 
+
+10:25 kind of break it down in the way that
+10:26 
+
+10:26 makes sense and it this is like a
+10:28 
+
+10:28 repeating curring theme in my renders is
+10:31 
+
+10:31 like you know the exact process that I'm
+10:33 
+
+10:33 telling you about just maybe less
+10:34 
+
+10:34 organized like in here so yeah you can
+10:36 
+
+10:36 see it's the same exact process as
+10:38 
+
+10:38 before just kind of in a different
+10:39 
+
+10:39 setting right and then again the
+10:40 
+
+10:40 lighting does make a big difference
+10:42 
+
+10:42 there once you get that in but it's
+10:44 
+
+10:44 pretty easy to light stuff like this
+10:46 
+
+10:46 when you do have like a nice detailed
+10:49 
+
+10:49 good environment to look at cuz it's
+10:50 
+
+10:50 like it's going to look good in most
+10:52 
+
+10:52 light to be honest like if you can get
+10:54 
+
+10:54 this stuff right okay let's take a look
+10:56 
+
+10:56 at the next one okay so let's take a
+10:58 
+
+10:58 look at this one uh and cool thing about
+10:60 
+
+10:60 this is it's an industrial environment
+11:02 
+
+11:02 but the same exact process still applies
+11:03 
+
+11:03 here in an actually even more simplified
+11:06 
+
+11:06 way so um we're just going to look at
+11:08 
+
+11:08 the foreground again if you do want to
+11:09 
+
+11:09 learn how to make this exact uh render
+11:11 
+
+11:11 from scratch and you want to follow
+11:12 
+
+11:12 along creating it from scratch uh that
+11:15 
+
+11:15 this is from the new Cyber environments
+11:17 
+
+11:17 course so I'm not going to spend a much
+11:18 
+
+11:18 of time like chilling the course but uh
+11:20 
+
+11:20 if you do want to learn how to make this
+11:22 
+
+11:22 exact one just go and watch that there's
+11:23 
+
+11:23 a link below okay so let's take a look
+11:26 
+
+11:26 at the foreground element to break this
+11:27 
+
+11:27 down so if I just go to scene one here
+11:30 
+
+11:30 I've copied and pasted again all
+11:31 
+
+11:31 foreground elements into this new scene
+11:33 
+
+11:33 here same camera angle same everything
+11:35 
+
+11:35 just with no lighting so let's break
+11:38 
+
+11:38 this one down so this one I'll actually
+11:40 
+
+11:40 show you the ground uh text texture
+11:42 
+
+11:42 setup here for this is actually adding
+11:44 
+
+11:44 quite a lot of detail so I will go into
+11:46 
+
+11:46 this it doesn't look like much is
+11:47 
+
+11:47 happening in this void here but if I
+11:49 
+
+11:49 just show you like if I hide the
+11:50 
+
+11:50 background and then add like a highlight
+11:52 
+
+11:52 in here that's where you get this kind
+11:54 
+
+11:54 of like nice um reflective floor kind of
+11:57 
+
+11:57 look is you know when you start having
+11:59 
+
+11:59 like bright highlights like this so
+12:01 
+
+12:01 here's the shading setup for this if I
+12:03 
+
+12:03 just look at the object here we've got
+12:05 
+
+12:05 um this is just a free Texture from poly
+12:07 
+
+12:07 Haven so the only thing I'm using is the
+12:10 
+
+12:10 base color and the normal map I'll get
+12:11 
+
+12:11 to the normal map in a second but the
+12:13 
+
+12:13 base color is just going in there
+12:15 
+
+12:15 unaltered just a concrete texture for
+12:18 
+
+12:18 the no for the roughness rather I'm
+12:19 
+
+12:19 using a noise texture with these
+12:21 
+
+12:21 settings just like scale detail
+12:22 
+
+12:22 roughness turned up on the noise texture
+12:25 
+
+12:25 noise texture is running into a color
+12:26 
+
+12:26 app to kind of crunch it and that's
+12:27 
+
+12:27 going into the roughness so that's the
+12:29 
+
+12:29 full roughness map is just removed and
+12:31 
+
+12:31 replaced with a noise texture and then
+12:33 
+
+12:33 that same noise texture is actually
+12:34 
+
+12:34 going into the normal map input as well
+12:37 
+
+12:37 and I'm using the same kind of color
+12:38 
+
+12:38 ramp as well um just slightly mod
+12:40 
+
+12:40 slightly altered that's why it's
+12:42 
+
+12:42 duplicated but same kind of thing so
+12:44 
+
+12:44 that the low roughness areas are also
+12:46 
+
+12:46 going to be low normal map strength to
+12:48 
+
+12:48 create really smooth areas to help show
+12:50 
+
+12:50 like the the puddles so that's how I get
+12:52 
+
+12:52 that like really reflective like wet
+12:54 
+
+12:54 floor kind of look is just this right
+12:57 
+
+12:57 here and then um yeah just the M from
+12:60 
+
+12:60 the texture so that's that right there
+13:02 
+
+13:02 that's it very simple but very effective
+13:03 
+
+13:03 shading setup doesn't look good in the
+13:05 
+
+13:05 white void but in an actual render it
+13:06 
+
+13:06 does look really nice so that's kind of
+13:08 
+
+13:08 taking care of a lot of the detail and
+13:10 
+
+13:10 if I look at the UV map it's scaled up
+13:12 
+
+13:12 quite a bit it's a 4K texture as well
+13:14 
+
+13:14 set it to 4K uh it's not in here but it
+13:17 
+
+13:17 is 4K and then um yeah just kind of
+13:19 
+
+13:19 scale that up to you know you don't want
+13:21 
+
+13:21 it to be like super low resolution in
+13:24 
+
+13:24 the foreground so obviously scale that
+13:26 
+
+13:26 up as much as you need to and then the
+13:27 
+
+13:27 the noise texture will break up the
+13:30 
+
+13:30 pattern so you can kind of scale it up
+13:31 
+
+13:31 as much as you want within reason and
+13:33 
+
+13:33 you're not going really you're not
+13:34 
+
+13:34 you're not going to get that like
+13:35 
+
+13:35 repeating texture look because the noise
+13:37 
+
+13:37 will break it up okay so that's layer
+13:39 
+
+13:39 one is just a floor plane right no
+13:41 
+
+13:41 displacement on this one just the
+13:43 
+
+13:43 roughness map only and normal
+13:46 
+
+13:46 map okay then Layer Two is this stuff
+13:48 
+
+13:48 right here so again start with the small
+13:51 
+
+13:51 stuff then move to kind of bigger and
+13:52 
+
+13:52 bigger chunks so we've got like um
+13:55 
+
+13:55 little like debris things here I did
+13:57 
+
+13:57 like a little rigid body simulation with
+13:59 
+
+13:59 this and and did a little thing with
+14:01 
+
+14:01 that but you like look how simple this
+14:03 
+
+14:03 is right it's a bunch of like brick Cube
+14:07 
+
+14:07 things that you can just kind of place
+14:09 
+
+14:09 into a pile it doesn't have to be
+14:11 
+
+14:11 complicated right very simple in this
+14:13 
+
+14:13 case just model some basic ass here
+14:16 
+
+14:16 with like you know some beveled cubes
+14:19 
+
+14:19 and put it in a pile and that's what
+14:22 
+
+14:22 we're dealing with here uh and then you
+14:24 
+
+14:24 just put a texture on it and then kind
+14:25 
+
+14:25 of put it into a little pile make one of
+14:27 
+
+14:27 them obviously like spend a bit of time
+14:29 
+
+14:29 making it kind of good um this is not
+14:32 
+
+14:32 good but like make it not terrible so
+14:34 
+
+14:34 that it looks okay from a medium
+14:36 
+
+14:36 distance and then you can just duplicate
+14:37 
+
+14:37 that like five six times in a row
+14:39 
+
+14:39 duplicate it a bunch more times in the
+14:40 
+
+14:40 background if you need to uh and then
+14:42 
+
+14:42 that's that right there so it's kind of
+14:44 
+
+14:44 serving the same purpose it's kind of
+14:45 
+
+14:45 serving the same purpose as those rocks
+14:47 
+
+14:47 in the other renders or whatever then
+14:49 
+
+14:49 we've got these like um little like
+14:51 
+
+14:51 panel things that kind of look like they
+14:53 
+
+14:53 fell off the main Cube but this here is
+14:56 
+
+14:56 just again like a a flattened Cube cube
+14:59 
+
+14:59 with a bevel on it right and a texture
+15:03 
+
+15:03 and you know it doesn't have to be
+15:04 
+
+15:04 something complicated it can be just
+15:05 
+
+15:05 something simple but in a it just it
+15:09 
+
+15:09 depends on the environment right like in
+15:10 
+
+15:10 this context this makes sense um and it
+15:12 
+
+15:12 looks good and so your stuff can be like
+15:15 
+
+15:15 really low poly and low quality if you
+15:18 
+
+15:18 place it a little bit far away from the
+15:20 
+
+15:20 camera and you kind of hide it in
+15:21 
+
+15:21 darkness maybe and that's that right
+15:23 
+
+15:23 there and then the third level of detail
+15:25 
+
+15:25 is this right here so I've got some
+15:27 
+
+15:27 geometry nodes scattering some tiny like
+15:30 
+
+15:30 little rocks like this if I just turn
+15:31 
+
+15:31 off the
+15:32 
+
+15:32 overlays so that's kind of like this the
+15:35 
+
+15:35 finest detail on here the finest
+15:37 
+
+15:37 smallest detail is just these little
+15:39 
+
+15:39 rocks here what this is is just like a
+15:41 
+
+15:41 low poly I I literally made a thing like
+15:43 
+
+15:43 this where it's like a cube and then
+15:46 
+
+15:46 like uh subdivide with like some things
+15:48 
+
+15:48 like this and then just kind of morph it
+15:50 
+
+15:50 into a little
+15:52 
+
+15:52 Pebble like this or whatever and like
+15:56 
+
+15:56 shrink it down like that's that's what
+15:58 
+
+15:58 these are on the it's just that like uh
+16:02 
+
+16:02 with geometry nodes scattered onto the
+16:04 
+
+16:04 floor so whether you want to use
+16:06 
+
+16:06 geometry nodes whether you want to hand
+16:08 
+
+16:08 Place 100 in a little circle and then
+16:10 
+
+16:10 duplicate that it doesn't matter the the
+16:12 
+
+16:12 thing that matters is just you know
+16:14 
+
+16:14 getting a bunch of these little like
+16:16 
+
+16:16 little tiny things scattered all over
+16:18 
+
+16:18 this is just the standard geometry nodes
+16:21 
+
+16:21 kind of shading or not shading but node
+16:24 
+
+16:24 setup that you'll see in any like
+16:26 
+
+16:26 beginner geometry noes tutorial so
+16:28 
+
+16:28 distribute points on faces
+16:30 
+
+16:30 instance on points and then just like
+16:32 
+
+16:32 the rocks are going in there random
+16:34 
+
+16:34 value on the scale random value on the
+16:36 
+
+16:36 rotation and one more layer of that with
+16:39 
+
+16:39 like a bigger or smaller version of
+16:41 
+
+16:41 it and then that's that right there so
+16:45 
+
+16:45 you can do that with the particle system
+16:46 
+
+16:46 you can hand place a little cluster and
+16:48 
+
+16:48 then duplicate that cluster you can copy
+16:50 
+
+16:50 the shade the keep calling it The
+16:51 
+
+16:51 shading setup the geometry node setup
+16:53 
+
+16:53 that I'm using here doesn't matter just
+16:55 
+
+16:55 get a bunch of little things kind of
+16:56 
+
+16:56 scattered everywhere whatever it is and
+16:58 
+
+16:58 that's going to help again just bring it
+17:00 
+
+17:00 to the next level of detail so same
+17:02 
+
+17:02 Trend start with the big chunk go to the
+17:04 
+
+17:04 medium chunks small chunks at the end so
+17:07 
+
+17:07 I hope you found that interesting and
+17:08 
+
+17:08 how it's like the same exact recurring
+17:09 
+
+17:09 theme in most of the renders that I do
+17:12 
+
+17:12 obviously there's going to be exceptions
+17:13 
+
+17:13 I kind of chose ones here that follow
+17:14 
+
+17:14 the same structure very clearly but in
+17:17 
+
+17:17 all renders that I do it's usually
+17:18 
+
+17:18 something similar to what I just showed
+17:20 
+
+17:20 there so again do go and check out the
+17:21 
+
+17:21 newest cyber environment course
+17:23 
+
+17:23 especially if you made it this far in
+17:24 
+
+17:24 the video you'll probably really like
+17:25 
+
+17:25 that so there's a link below to that if
+17:27 
+
+17:27 you want to learn how to make this
+17:28 
+
+17:28 render and a bunch of of other renders
+17:30 
+
+17:30 from scratch on your own and going to
+17:32 
+
+17:32 make a bunch of awesome stuff so link
+17:34 
+
+17:34 below to that other than that thank you
+17:36 
+
+17:36 for watching I hope this was helpful
+17:38 
+
+17:38 stay tuned for more uh videos coming
+17:40 
+
+17:40 soon and see you

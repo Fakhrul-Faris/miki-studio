@@ -1,0 +1,172 @@
+00:00 I'm going to summarize 40,000 hours of
+00:02 
+
+00:02 blender in few minutes that will help
+00:04 
+
+00:04 you make your renders feel
+00:06 
+
+00:06 [Music]
+00:08 
+
+00:08 cinematic lighting can make your render
+00:10 
+
+00:10 look dull dark flat so doing it
+00:13 
+
+00:13 correctly is the most important part of
+00:14 
+
+00:14 every project let's start with the
+00:16 
+
+00:16 outdoor lighting just place the sun
+00:18 
+
+00:18 behind the subject or in the side of it
+00:21 
+
+00:21 just make sure it is not in front of
+00:22 
+
+00:22 your
+00:28 
+
+00:28 subject now let's talk about indoor
+00:31 
+
+00:31 lighting the best way to do it is by
+00:33 
+
+00:33 adding a emission plane at the top and
+00:35 
+
+00:35 one at the
+00:46 
+
+00:46 back in the visibility tab uncheck the
+00:50 
+
+00:50 camera to hide these planes just make
+00:52 
+
+00:52 sure you don't add any light in front
+00:55 
+
+00:55 let's fix your camera if you go into the
+00:57 
+
+00:57 camera properties you can see the focal
+00:59 
+
+00:59 length option
+01:02 
+
+01:02 if your shot is about an environment use
+01:05 
+
+01:05 24 mm focal length and if your shot is
+01:08 
+
+01:08 about a character use 80 or 70
+01:11 
+
+01:11 mm under the focal length there is a
+01:14 
+
+01:14 depth of field enable it increase the
+01:17 
+
+01:17 blades to eight and ratio to two select
+01:20 
+
+01:20 your object and play with the f- stops I
+01:22 
+
+01:22 would recommend using between 0.1 and
+01:26 
+
+01:26 0.8 in the output tab change the
+01:28 
+
+01:28 resolution to cinematic ratio which is
+01:30 
+
+01:30 21 by9 you can use one of these
+01:33 
+
+01:33 resolutions for these black
+01:37 
+
+01:37 bars adding fog and blender is so easy
+01:40 
+
+01:40 just add a big Cube and add a volume
+01:42 
+
+01:42 scatter
+01:48 
+
+01:48 node make the density to
+01:51 
+
+01:51 0.01 increase the anisotropy to 0.7 and
+01:55 
+
+01:55 you are done you can also use an
+01:57 
+
+01:57 emission node just add it into the
+01:59 
+
+01:59 volume and decrease its value to
+02:07 
+
+02:07 0.03 you can use the missed pass to add
+02:10 
+
+02:10 fog in the background without increasing
+02:12 
+
+02:12 your render time just enable these
+02:15 
+
+02:15 options and play with these
+02:21 
+
+02:21 values open the compositor mix these
+02:24 
+
+02:24 like this and add a color map to control
+02:26 
+
+02:26 it
+02:32 
+
+02:32 blender compositor is too powerful you
+02:34 
+
+02:34 can add cool Distortion effect by adding
+02:36 
+
+02:36 a lens Distortion node and use 02
+02:42 
+
+02:42 value you can also add a glare node to
+02:45 
+
+02:45 add glow or you can just use my free
+02:47 
+
+02:47 starter pack which includes glare lens
+02:50 
+
+02:50 flare and Distortion just ready to
+02:52 
+
+02:52 import and use get it here
+03:00 
+
+03:00 you

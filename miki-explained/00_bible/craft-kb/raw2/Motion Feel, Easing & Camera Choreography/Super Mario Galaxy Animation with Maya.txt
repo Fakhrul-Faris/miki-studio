@@ -1,0 +1,1132 @@
+00:04 Hey there class creatives and in this
+00:05 
+
+00:05 video we'll look into Illumination's
+00:07 
+
+00:07 creative process for the Super Mario
+00:09 
+
+00:09 Brothers movie series and how animators
+00:11 
+
+00:11 use Autodesk Maya. The first movie raked
+00:13 
+
+00:13 in over a billion dollars globally. So
+00:15 
+
+00:15 we thought it might be fun to break down
+00:17 
+
+00:17 what made this movie so special and how
+00:19 
+
+00:19 the animators made each character
+00:21 
+
+00:21 uniquely entertaining based on their
+00:22 
+
+00:22 research studying the video game
+00:24 
+
+00:24 versions.
+00:25 
+
+00:25 We'll talk about how these animations
+00:26 
+
+00:26 were made, some of the technical
+00:28 
+
+00:28 limitations they had to face with the
+00:29 
+
+00:29 video game system's historical fan base
+00:31 
+
+00:31 to stay true to the source material,
+00:33 
+
+00:33 some of the clever ways they took the
+00:34 
+
+00:34 games designs and created something new
+00:37 
+
+00:37 for the Mario fan base. And of course as
+00:38 
+
+00:38 always we'll talk about the keyframe
+00:40 
+
+00:40 animation process.
+00:43 
+
+00:43 For the Super Mario Brothers movie it
+00:45 
+
+00:45 marked the first time the creative
+00:46 
+
+00:46 worlds of gaming and animation came
+00:48 
+
+00:48 together to partner with Nintendo for an
+00:50 
+
+00:50 animated feature. Nintendo's Shigeru
+00:52 
+
+00:52 Miyamoto, the Super Mario Brothers
+00:54 
+
+00:54 original creator, produced the movie and
+00:56 
+
+00:56 said the success of the movie had to do
+00:57 
+
+00:57 with Illumination and Nintendo having
+00:60 
+
+00:60 like-minded creative visions.
+01:02 
+
+01:02 The collaboration didn't just focus on
+01:03 
+
+01:03 the money,
+01:04 
+
+01:04 but how they could create something
+01:05 
+
+01:05 similar to the way Miyamoto usually
+01:07 
+
+01:07 develops games. The similar philosophies
+01:10 
+
+01:10 helped the filmmakers craft a story,
+01:12 
+
+01:12 figuring out which characters to include
+01:14 
+
+01:14 and what Nintendo fans would want to see
+01:16 
+
+01:16 most on screen. They wanted to be sure
+01:18 
+
+01:18 they told a whole new story with the
+01:19 
+
+01:19 movies.
+01:20 
+
+01:20 They started by looking at the games and
+01:22 
+
+01:22 designs to find the most common elements
+01:24 
+
+01:24 that reappear throughout the Super Mario
+01:25 
+
+01:25 universe.
+01:26 
+
+01:26 They then took those iconic elements and
+01:28 
+
+01:28 pushed the level of detail to make them
+01:30 
+
+01:30 look like quote real characters with
+01:32 
+
+01:32 real emotions, families, hopes, and
+01:34 
+
+01:34 desires. They took the challenge of the
+01:36 
+
+01:36 games trying over and over to defeat
+01:38 
+
+01:38 Bowser to the overall theme of the movie
+01:40 
+
+01:40 to be about never giving up through
+01:42 
+
+01:42 persistence. If you're not familiar with
+01:44 
+
+01:44 Illumination Entertainment, you might be
+01:45 
+
+01:45 familiar with what is the biggest
+01:47 
+
+01:47 animation franchise in the world,
+01:49 
+
+01:49 Despicable Me. Since then they have
+01:51 
+
+01:51 grown significantly and not just their
+01:53 
+
+01:53 library of hit animated movies, but
+01:55 
+
+01:55 their technology and pipeline have also
+01:57 
+
+01:57 expanded.
+01:58 
+
+01:58 Like many studios, Illumination has
+02:00 
+
+02:00 their own proprietary software. And
+02:02 
+
+02:02 anytime they get to push the boundaries
+02:04 
+
+02:04 of physics or the cartoony squash and
+02:06 
+
+02:06 stretch nature of their characters, they
+02:08 
+
+02:08 always jump at the opportunity to.
+02:11 
+
+02:11 Like most features, their process starts
+02:13 
+
+02:13 with storyboards and previs.
+02:15 
+
+02:15 With Mario they did two passes of
+02:16 
+
+02:16 previs, with one focusing on layout and
+02:19 
+
+02:19 camera and then progressing to a version
+02:21 
+
+02:21 including the characters. The art team
+02:23 
+
+02:23 aimed to remain true to the nature of
+02:25 
+
+02:25 Mario from the video game franchise, but
+02:27 
+
+02:27 also wanted to push the animation medium
+02:29 
+
+02:29 with squash and stretch along with
+02:31 
+
+02:31 integrating effects, composition, and
+02:33 
+
+02:33 lighting across multiple departments.
+02:35 
+
+02:35 They also made sure to include wear on
+02:37 
+
+02:37 Mario's overalls and you can even spot
+02:39 
+
+02:39 the leather texture on his boots.
+02:41 
+
+02:41 They used Nuke to have particles flowing
+02:43 
+
+02:43 on Mario's face along with lots of
+02:45 
+
+02:45 layers that were comped and lit.
+02:47 
+
+02:47 When it came to animation, they had to
+02:48 
+
+02:48 take it to the feature level for the big
+02:50 
+
+02:50 screen.
+02:51 
+
+02:51 Adding more subtle expressions to give
+02:53 
+
+02:53 him more life and personality were
+02:55 
+
+02:55 critical for the animation team.
+02:57 
+
+02:57 In the games the characters are by
+02:59 
+
+02:59 design like puppets controlled by the
+03:00 
+
+03:00 player.
+03:02 
+
+03:02 But for the movie they needed them to
+03:03 
+
+03:03 feel like real humans.
+03:05 
+
+03:05 The amount of polish on the movie was
+03:06 
+
+03:06 taken to a significantly higher level of
+03:08 
+
+03:08 detail than the 3D games.
+03:11 
+
+03:11 They also have the liberty to take their
+03:12 
+
+03:12 time and go in and refine every frame on
+03:14 
+
+03:14 the character's performance.
+03:16 
+
+03:16 Just like Disney and Sony Animation,
+03:18 
+
+03:18 taking that personal time to shoot
+03:20 
+
+03:20 reference and act out performances like
+03:22 
+
+03:22 all 3D features is also a key piece to
+03:25 
+
+03:25 Illumination bringing that extra realism
+03:27 
+
+03:27 to their character animation. Speaking
+03:28 
+
+03:28 of feature animation, it's not uncommon
+03:30 
+
+03:30 for character rigs to have special Mr.
+03:32 
+
+03:32 Potato Head like features that come
+03:34 
+
+03:34 apart to create extreme expressions to
+03:36 
+
+03:36 hit big moments during movies.
+03:38 
+
+03:38 And with K-pop Demon Hunters they had
+03:40 
+
+03:40 what they called chibi features. And
+03:42 
+
+03:42 they would be individual pieces of eyes,
+03:44 
+
+03:44 noses, and various other facial features
+03:47 
+
+03:47 that when overlaid on top of the
+03:48 
+
+03:48 standard character rig would look extra
+03:50 
+
+03:50 exaggerated to the cinematic camera, but
+03:53 
+
+03:53 in perspective would look completely
+03:54 
+
+03:54 different. Animation tests are also
+03:56 
+
+03:56 critical in feature production to test
+03:58 
+
+03:58 character rigs
+03:60 
+
+03:60 and even smear frames by duplicating
+04:02 
+
+04:02 limbs and to test visual effects cheats
+04:04 
+
+04:04 to give perfect lines of action to
+04:06 
+
+04:06 character silhouettes during pop frame
+04:08 
+
+04:08 like moments. And something that still
+04:10 
+
+04:10 has a lot of interest is the fact that
+04:11 
+
+04:11 both Sony and Illumination are still
+04:13 
+
+04:13 using Maya for the rigging and animation
+04:15 
+
+04:15 features.
+04:16 
+
+04:16 Disney recently revealed they're using
+04:18 
+
+04:18 Presto, which was previously only used
+04:20 
+
+04:20 by Pixar, Zootopia 2.
+04:23 
+
+04:23 But they are very much still using
+04:24 
+
+04:24 Autodesk for various other parts of
+04:26 
+
+04:26 production including tracking with Flow.
+04:28 
+
+04:28 Unreal Engine played a critical role for
+04:30 
+
+04:30 K-pop Demon Hunters layout and previs
+04:32 
+
+04:32 pipeline.
+04:33 
+
+04:33 With Unreal they were able to get final
+04:35 
+
+04:35 renders right after the layout stage.
+04:37 
+
+04:37 For the bathhouse fight scene for
+04:38 
+
+04:38 example, they were able to get the
+04:40 
+
+04:40 materials to feel wet, reflective, and
+04:42 
+
+04:42 foggy right in the engine.
+04:44 
+
+04:44 Since everything was running in real
+04:45 
+
+04:45 time, they were able to block out the
+04:46 
+
+04:46 entire sword fight with visual effects
+04:48 
+
+04:48 in just one week. They chose to use
+04:50 
+
+04:50 Unreal's control rigs since it ran
+04:52 
+
+04:52 incredibly fast so they could drop 20 to
+04:54 
+
+04:54 30 characters into a single scene
+04:56 
+
+04:56 without any lag.
+04:58 
+
+04:58 For the massive concert sequences they
+04:60 
+
+04:60 had a modular character system. With
+05:02 
+
+05:02 just one body type they mixed a bunch of
+05:04 
+
+05:04 different hairstyles and outfits to mix
+05:06 
+
+05:06 and match for endless combinations.
+05:08 
+
+05:08 Using Unreal's foliage tool, which is
+05:09 
+
+05:09 usually for painting things like trees
+05:11 
+
+05:11 and grass, they were easily able to
+05:13 
+
+05:13 paint in an entire audience of fans with
+05:15 
+
+05:15 ease.
+05:16 
+
+05:16 This real-time foundation in Unreal made
+05:18 
+
+05:18 their layout process 20 to 25% faster.
+05:21 
+
+05:21 So this is yet another example of how
+05:23 
+
+05:23 Unreal is completely changing the game
+05:25 
+
+05:25 on how it is used to create animated
+05:26 
+
+05:26 movies.
+05:27 
+
+05:27 Is it your dream to someday work for
+05:29 
+
+05:29 Illumination? If not, feel free to skip
+05:31 
+
+05:31 ahead to the next sections or stick
+05:32 
+
+05:32 around if you're just curious about what
+05:34 
+
+05:34 they look for in artists they want to
+05:35 
+
+05:35 hire. We create videos like this one to
+05:37 
+
+05:37 not only show you how 3D animated
+05:39 
+
+05:39 features are made, but to also give you
+05:41 
+
+05:41 a chance to learn the exact workflows
+05:43 
+
+05:43 necessary for your career or even your
+05:44 
+
+05:44 own personal projects. Most feature and
+05:47 
+
+05:47 AAA game studios will want Maya
+05:48 
+
+05:48 experience or something equivalent if
+05:51 
+
+05:51 you're an animator and ZBrush or
+05:52 
+
+05:52 equivalent for character sculpting.
+05:54 
+
+05:54 Several of our instructors actually work
+05:56 
+
+05:56 for some of the top animation studios in
+05:58 
+
+05:58 the world like Disney and Sony, so you
+05:60 
+
+05:60 can learn from them in our courses
+06:01 
+
+06:01 covering everything from animation and
+06:03 
+
+06:03 rigging to environment and game design
+06:05 
+
+06:05 and character creation.
+06:07 
+
+06:07 We'll have some links in the description
+06:08 
+
+06:08 if you're interested in taking your art
+06:10 
+
+06:10 in a new direction with us.
+06:11 
+
+06:11 For Pixar's Hoppers early animation
+06:13 
+
+06:13 tests were created in 2D that have a
+06:15 
+
+06:15 very Ghibli-esque look in a scene of
+06:17 
+
+06:17 King George and Maybelle traveling down
+06:18 
+
+06:18 a river. They created a world that feels
+06:21 
+
+06:21 more handcrafted with characters that
+06:22 
+
+06:22 look like they are plush toys brought to
+06:24 
+
+06:24 life. Much like Zootopia, they didn't
+06:26 
+
+06:26 want the animals to feel like humans in
+06:28 
+
+06:28 animal suits. Instead they focused on
+06:30 
+
+06:30 simple readable shapes. Character
+06:32 
+
+06:32 designs are built from beans and circles
+06:34 
+
+06:34 giving a softer rounded shape to them.
+06:36 
+
+06:36 The landscapes played a very important
+06:38 
+
+06:38 role in the art style contributing to
+06:39 
+
+06:39 the less realistic style.
+06:41 
+
+06:41 They created a new workflow that allowed
+06:43 
+
+06:43 the team to take each individual leaf
+06:45 
+
+06:45 and replace it with a painted
+06:46 
+
+06:46 brushstroke. This gave the feeling of
+06:48 
+
+06:48 being in nature without the harsh
+06:49 
+
+06:49 reality of what a typical 3D environment
+06:52 
+
+06:52 would look like. Animators shared that
+06:53 
+
+06:53 much like Spider-Verse, they targeted
+06:55 
+
+06:55 aiming on twos to give a bit more flavor
+06:57 
+
+06:57 to the movement, but it was not a strict
+06:59 
+
+06:59 rule where in specific cases animating
+07:01 
+
+07:01 on ones and threes would be used where
+07:03 
+
+07:03 it made the most sense.
+07:05 
+
+07:05 One really neat tool that Sony used on
+07:06 
+
+07:06 K-pop Demon Hunters was the ability to
+07:09 
+
+07:09 use spheres to dictate exactly where
+07:11 
+
+07:11 they didn't want motion blur.
+07:12 
+
+07:12 This way they could protect some of
+07:14 
+
+07:14 their custom-made smear frames and
+07:16 
+
+07:16 little touches while still maintaining
+07:18 
+
+07:18 depth and camera movement enhancements.
+07:20 
+
+07:20 When it came to animating on beat to
+07:22 
+
+07:22 musical numbers, they didn't just guess.
+07:24 
+
+07:24 They actually had little bouncing balls
+07:26 
+
+07:26 in the corner to animate to so that the
+07:28 
+
+07:28 animator could ensure that timing was
+07:30 
+
+07:30 exactly exactly on beat to the music.
+07:33 
+
+07:33 It's an exciting time for animation with
+07:35 
+
+07:35 some new franchises taking off and
+07:37 
+
+07:37 becoming huge hits for both Sony,
+07:39 
+
+07:39 Disney, and Illumination.
+07:41 
+
+07:41 And even though these are mostly still
+07:42 
+
+07:42 the familiar 3D animated look we have
+07:44 
+
+07:44 come to know versus the more stylized 2D
+07:46 
+
+07:46 enhanced movies like Spider-Verse and
+07:48 
+
+07:48 Go,
+07:49 
+
+07:49 they are finding unique ways to push the
+07:51 
+
+07:51 storyboards and video reference planning
+07:53 
+
+07:53 to push results on screen in fun and
+07:55 
+
+07:55 innovative ways with each feature they
+07:57 
+
+07:57 produce building upon their legacies.
+07:59 
+
+07:59 And on that note, let's get back to
+07:60 
+
+08:00 Illumination's Super Mario Brothers
+08:02 
+
+08:02 movie.
+08:03 
+
+08:03 For the Rainbow Road shot, the camera
+08:04 
+
+08:04 had to chase all the characters and the
+08:06 
+
+08:06 road was a volumetric entity with clouds
+08:08 
+
+08:08 inside. They had to ensure that the road
+08:10 
+
+08:10 was not just something solid, but
+08:12 
+
+08:12 completely lit like a rainbow. For
+08:14 
+
+08:14 Bowser's Lava Lake Keep, they had to
+08:16 
+
+08:16 ensure that all the layers of smoke
+08:17 
+
+08:17 along with the lava had to be stylized
+08:20 
+
+08:20 yet work with all the characters in the
+08:21 
+
+08:21 scene.
+08:22 
+
+08:22 They aimed for a realistic lighting
+08:24 
+
+08:24 approach, but still had a bit of
+08:25 
+
+08:25 cartooniness to it.
+08:27 
+
+08:27 Bowser's airship in the movie is
+08:28 
+
+08:28 completely different than his airship
+08:30 
+
+08:30 from the game. They wanted to combine
+08:32 
+
+08:32 his castle and his ship in the design.
+08:34 
+
+08:34 The Mushroom Kingdom had a lot of
+08:36 
+
+08:36 modeling and procedural environments in
+08:38 
+
+08:38 order to do the set extensions. Since
+08:40 
+
+08:40 it's an iconic location from the game,
+08:42 
+
+08:42 they had to pay close attention to not
+08:43 
+
+08:43 disappoint die-hard fans. They also used
+08:46 
+
+08:46 the two kingdoms to be different by
+08:47 
+
+08:47 having the world of Bowser take place at
+08:49 
+
+08:49 night while the Mushroom Kingdom
+08:51 
+
+08:51 sequences take place in the daytime.
+08:53 
+
+08:53 As with all CG night sequences, they are
+08:55 
+
+08:55 easier to hide elements with mist and
+08:57 
+
+08:57 darkness and with high contrast
+08:59 
+
+08:59 lighting. However, during the day it's
+09:00 
+
+09:00 far more complex to light the characters
+09:02 
+
+09:02 and keep them believable, but also
+09:04 
+
+09:04 interesting. Some scenes are directly
+09:06 
+
+09:06 inspired from the games. They tried to
+09:08 
+
+09:08 add a more cinematic environment on a
+09:10 
+
+09:10 bigger scale while being respectful to
+09:12 
+
+09:12 the source material. Direct inspiration
+09:14 
+
+09:14 came directly from the first level of
+09:16 
+
+09:16 Mario and even ends with jumping on the
+09:18 
+
+09:18 flagpole and sliding down next to the
+09:20 
+
+09:20 little castle. Direct constant feedback
+09:22 
+
+09:22 was given from Nintendo such as the
+09:24 
+
+09:24 signature elements of the question boxes
+09:26 
+
+09:26 being included directly in the
+09:27 
+
+09:27 storytelling. They made them opaque with
+09:29 
+
+09:29 a little light source inside. They are
+09:30 
+
+09:30 basically the same as in the games, but
+09:32 
+
+09:32 with a bit of magic added to help them
+09:34 
+
+09:34 fit with the movie.
+09:36 
+
+09:36 The biggest event from the movie that
+09:37 
+
+09:37 was one of the craziest ideas was
+09:40 
+
+09:40 Bowser's singing concert for his girl.
+09:42 
+
+09:42 They used key lights and lots of
+09:43 
+
+09:43 references from jazz concerts for the
+09:45 
+
+09:45 cinematic moment. They wanted to keep
+09:47 
+
+09:47 the idea simple with him in the light
+09:49 
+
+09:49 singing. For Lumalee they didn't use
+09:51 
+
+09:51 classic shading, but instead opted for a
+09:53 
+
+09:53 volumetric based character.
+09:55 
+
+09:55 This character ended up being quite
+09:56 
+
+09:56 difficult for them to animate since it's
+09:58 
+
+09:58 a star shape.
+09:60 
+
+09:60 They were able to pull off some extreme
+10:01 
+
+10:01 movements like him playing the
+10:02 
+
+10:02 saxophone.
+10:03 
+
+10:03 They used proprietary software for the
+10:05 
+
+10:05 grooming of the mustaches of the Mario
+10:07 
+
+10:07 brothers and Donkey Kong. Donkey Kong
+10:09 
+
+10:09 had numerous layers of fur. They had to
+10:11 
+
+10:11 add a ton of detail to make him feel
+10:13 
+
+10:13 real, but yet not realistic. They had to
+10:15 
+
+10:15 do a lot of tests to be sure that he
+10:17 
+
+10:17 looked real and that he had good surface
+10:19 
+
+10:19 scattering along with the texture and
+10:21 
+
+10:21 painting to keep his appeal. For
+10:23 
+
+10:23 destruction-based shots, they had
+10:25 
+
+10:25 various simulations taking place all
+10:27 
+
+10:27 over with smoke and dust. They didn't
+10:29 
+
+10:29 want the shots to be scary, but they did
+10:31 
+
+10:31 want to be sure that the shots were
+10:32 
+
+10:32 impressive and fun to watch.
+10:35 
+
+10:35 To achieve the look, they did a lot of
+10:36 
+
+10:36 in-house rendering and with each movie
+10:38 
+
+10:38 they produced, they were able to achieve
+10:40 
+
+10:40 more realism along with advancements in
+10:42 
+
+10:42 technology. Well, that about wraps up
+10:44 
+
+10:44 this video on how Illumination
+10:46 
+
+10:46 Entertainment's Super Mario Brothers
+10:47 
+
+10:47 series used Autodesk Maya for animation
+10:49 
+
+10:49 and why it's still such an important
+10:51 
+
+10:51 piece to the feature film animation
+10:52 
+
+10:52 creation process. As with all of these
+10:54 
+
+10:54 big movies, it really is a team effort
+10:56 
+
+10:56 and the departments work together to do
+10:58 
+
+10:58 their best to bring something new to the
+10:59 
+
+10:59 movie. The combo of working with
+11:01 
+
+11:01 Miyamoto and Nintendo helped create
+11:03 
+
+11:03 something unique to the universe of the
+11:05 
+
+11:05 Mario series at the feature film quality
+11:07 
+
+11:07 level. If you love seeing how top-tier
+11:09 
+
+11:09 animation is made, we are partnering
+11:11 
+
+11:11 with Hob Sakura to open up the locked
+11:13 
+
+11:13 archives of Japanese anime production.
+11:15 
+
+11:15 Hit subscribe so you don't miss it. We
+11:17 
+
+11:17 hope you enjoyed our insights and the
+11:18 
+
+11:18 research that we did for this video
+11:20 
+
+11:20 diving into tons of Instagram posts,
+11:22 
+
+11:22 interviews, and documentaries to
+11:23 
+
+11:23 highlight the animation process
+11:24 
+
+11:24 together. The newest entry in the series
+11:27 
+
+11:27 looks better than ever. Will you be
+11:28 
+
+11:28 watching in theaters on release day? Let
+11:30 
+
+11:30 us know your thoughts in the comments.
+11:34 
+
+11:34 And uh don't forget to like and
+11:36 
+
+11:36 subscribe and we'll see you in the next
+11:38 
+
+11:38 one. Perfect.

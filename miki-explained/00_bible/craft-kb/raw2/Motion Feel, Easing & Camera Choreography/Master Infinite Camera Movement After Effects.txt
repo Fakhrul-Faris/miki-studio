@@ -1,0 +1,586 @@
+00:00 You're just one secret sauce technique
+00:02 
+
+00:02 away from creating the best motion
+00:05 
+
+00:05 graphics. And this technique is simply
+00:07 
+
+00:07 called camera depth movement. And by
+00:09 
+
+00:09 unlocking this hidden power in After
+00:11 
+
+00:11 Effects, you'll be able to take your
+00:13 
+
+00:13 work from boring to cinematic in no
+00:15 
+
+00:15 time. So, let's get started. All right.
+00:18 
+
+00:18 There's many things that you can create
+00:19 
+
+00:19 with camera depth. But to help first
+00:22 
+
+00:22 visualize how professional camera
+00:24 
+
+00:24 movement works, let's create a practical
+00:26 
+
+00:26 motion graphic scene using only simple
+00:29 
+
+00:29 shapes first. Then of course after I
+00:32 
+
+00:32 promise we'll dive into this epic scene.
+00:34 
+
+00:34 So we need to make a scene 3D. And we
+00:37 
+
+00:37 can do this with any simple shape,
+00:39 
+
+00:39 title, or literally any type of image or
+00:42 
+
+00:42 graphic. But you just need to make the
+00:44 
+
+00:44 layer 3D. And if you want, you can set
+00:46 
+
+00:46 it Y rotation to 90°. and I'll
+00:48 
+
+00:48 reposition it off to say the side like
+00:50 
+
+00:50 so. For this, I'll create some
+00:52 
+
+00:52 additional duplicates and position them
+00:54 
+
+00:54 to create this noticeable separation.
+00:56 
+
+00:56 And just like any typical motion
+00:58 
+
+00:58 graphic, we can animate, say, their
+00:59 
+
+00:59 position, for example, to slide over by
+01:02 
+
+01:02 alt clicking the stopwatch, I'll add the
+01:03 
+
+01:03 loop out pingpong expression to each
+01:05 
+
+01:05 copy's position. And this will create a
+01:07 
+
+01:07 back and forth animation. And then we
+01:10 
+
+01:10 can offset each layer in the timeline by
+01:12 
+
+01:12 a frame or two. But back on the core
+01:13 
+
+01:13 topic, to make a six scene, do we really
+01:16 
+
+01:16 need the depth? Since we've already
+01:18 
+
+01:18 added position key frames, let's
+01:19 
+
+01:19 pre-ompose these rectangles. Then when
+01:22 
+
+01:22 that's done, let's click on continuously
+01:23 
+
+01:23 rasterize and make the layer 3D again.
+01:26 
+
+01:26 Now, we can push this back into Z
+01:28 
+
+01:28 position space to further our depth. And
+01:31 
+
+01:31 let's continue to duplicate and Z
+01:32 
+
+01:32 position this back as many times as you
+01:34 
+
+01:34 need or until at least your computer
+01:36 
+
+01:36 melts. All right, perfect. Now, let's
+01:38 
+
+01:38 actually move on to the camera movement
+01:40 
+
+01:40 by creating, you guessed it, a camera.
+01:43 
+
+01:43 And all we have to do is add a key frame
+01:45 
+
+01:45 for our position. And I also like adding
+01:46 
+
+01:46 a key frame for point of interest for
+01:48 
+
+01:48 good measure. And then we can use the
+01:50 
+
+01:50 dolly towards cursor tool to push the
+01:52 
+
+01:52 camera all the way down the hallway. And
+01:54 
+
+01:54 that's essentially depth in a nutshell.
+01:56 
+
+01:56 Keep in mind you may always revisit and
+01:58 
+
+01:58 expand and push more layers down your
+02:00 
+
+02:00 scene as well. And one of the best parts
+02:02 
+
+02:02 of the camera is enabling depth of field
+02:05 
+
+02:05 and adjusting the aperture and blur
+02:07 
+
+02:07 level to create that cinematic blur. But
+02:10 
+
+02:10 try messing around with the focus
+02:12 
+
+02:12 distance to determine where your focus
+02:14 
+
+02:14 will lie. And that's essentially the
+02:16 
+
+02:16 basic rundown on camera movement, but
+02:18 
+
+02:18 now you have an awesome motion graphic
+02:20 
+
+02:20 scene. The same tactics can actually be
+02:23 
+
+02:23 employed with scenes where you only
+02:24 
+
+02:24 have, say, JPEG or PNG images. Just make
+02:27 
+
+02:27 those layers 3D as before, and then you
+02:29 
+
+02:29 can push them forward or back in
+02:31 
+
+02:31 Zosition space, and then you create your
+02:33 
+
+02:33 camera movement, and now nothing will
+02:35 
+
+02:35 ever hold you back. However, next up,
+02:37 
+
+02:37 I'm going to show you how to create this
+02:38 
+
+02:38 epic seamless infinite movement where
+02:41 
+
+02:41 you can combine multiple scenes of depth
+02:43 
+
+02:43 together and ensure you always produce
+02:46 
+
+02:46 epic work in no time with our free
+02:47 
+
+02:47 template, seamless transitions, and
+02:49 
+
+02:49 customizable motion graphics all right
+02:50 
+
+02:50 here in our motion duck extension. You
+02:52 
+
+02:52 can add thousands of templates and
+02:54 
+
+02:54 presets directly into your project and
+02:56 
+
+02:56 tailor them to fit and tailor them to
+02:58 
+
+02:58 fit your needs in seconds. So, keep your
+03:00 
+
+03:00 creative flow going with these countless
+03:02 
+
+03:02 assets linked below. If you do pick up
+03:04 
+
+03:04 anything, you will be supporting this
+03:05 
+
+03:05 channel. So, thank you very much. All
+03:08 
+
+03:08 right. To create detailed animated
+03:10 
+
+03:10 scenes like this, I highly suggest
+03:12 
+
+03:12 working with vector graphics as you can
+03:14 
+
+03:14 zoom into these bad boys without losing
+03:16 
+
+03:16 any quality. And they're also very easy
+03:19 
+
+03:19 to get your hands on. For example, you
+03:21 
+
+03:21 can search for free vectors and find
+03:23 
+
+03:23 pretty much whatever you need. But with
+03:25 
+
+03:25 vector graphics, you can open these up
+03:26 
+
+03:26 in Adobe Illustrator, which comes a part
+03:28 
+
+03:28 of the Creative Cloud. And then you can
+03:30 
+
+03:30 start grouping objects that you won't
+03:31 
+
+03:31 have individual control over in After
+03:33 
+
+03:33 Effects in their own Illustrator layers.
+03:35 
+
+03:35 Then when you're done, just save this as
+03:37 
+
+03:37 an Illustrator document. Then you can
+03:39 
+
+03:39 open this as a composition in After
+03:42 
+
+03:42 Effects. And then you may need to adjust
+03:43 
+
+03:43 the composition size and then scale your
+03:46 
+
+03:46 graphics as needed. But this gives you
+03:48 
+
+03:48 the ultimate control over each object in
+03:50 
+
+03:50 your scene. And overall, this is just a
+03:52 
+
+03:52 professional way to approach these types
+03:54 
+
+03:54 of projects. Now, I understand it may
+03:56 
+
+03:56 feel like a completely different
+03:58 
+
+03:58 ballgame, but the steps for creating
+03:60 
+
+03:60 depth and camera movement are very
+04:01 
+
+04:01 similar. First, you're going to make all
+04:03 
+
+04:03 your layers 3D. And for this, I like to
+04:05 
+
+04:05 use two views and set the second view to
+04:07 
+
+04:07 top. And when that's set up, I would
+04:09 
+
+04:09 start by pushing your background or your
+04:11 
+
+04:11 furthest object to a Z position of
+04:13 
+
+04:13 around 10,000 points and then scale it
+04:16 
+
+04:16 up. So, your foreground objects will be
+04:18 
+
+04:18 at a Zdepth of say zero, which creates
+04:20 
+
+04:20 this massive range for your future
+04:22 
+
+04:22 camera to move through. Now, with this
+04:24 
+
+04:24 in mind, we're going to go ahead and
+04:25 
+
+04:25 push each layer back within the Z
+04:27 
+
+04:27 position range and then scale it back up
+04:29 
+
+04:29 to that composition size. And if this is
+04:32 
+
+04:32 done correctly, you'll notice that there
+04:33 
+
+04:33 will be gaps among each of your layers.
+04:36 
+
+04:36 Great. And since these are vectors, if
+04:38 
+
+04:38 you click continuously rasterize, this
+04:40 
+
+04:40 will preserve the image quality of each
+04:42 
+
+04:42 scaled up layer. And that, you know,
+04:43 
+
+04:43 that's just beautiful. Right now, you're
+04:46 
+
+04:46 welcome to animate your objects however
+04:48 
+
+04:48 you need. You know, I really like the
+04:49 
+
+04:49 puppet pen tool for distortion, but
+04:51 
+
+04:51 however, you can duplicate objects that
+04:53 
+
+04:53 you already have in your scene and say
+04:55 
+
+04:55 recycle them into your Z depth to help
+04:58 
+
+04:58 build out a more detailed composition in
+04:60 
+
+04:60 no time. From here, you could just go do
+05:02 
+
+05:02 your camera movement, but if you have
+05:04 
+
+05:04 multiple scenes, don't do the camera
+05:06 
+
+05:06 movement yet. Build out your other
+05:07 
+
+05:07 scenes in their own compositions and
+05:09 
+
+05:09 then place them together into a single
+05:11 
+
+05:11 master comp. But when that's done, be
+05:14 
+
+05:14 sure to click on continuously rasterize
+05:16 
+
+05:16 and make those scene layers 3D.
+05:19 
+
+05:19 Basically, it's like having all these
+05:20 
+
+05:20 layers in just two organized groups,
+05:22 
+
+05:22 which you know is great because when you
+05:24 
+
+05:24 create your camera, you can then animate
+05:26 
+
+05:26 the position and the point of interest
+05:27 
+
+05:27 with any of the camera tools. And then
+05:29 
+
+05:29 you'll see that you're retaining all
+05:30 
+
+05:30 that 3D data, which is great for
+05:32 
+
+05:32 organization. You know, my mind would
+05:34 
+
+05:34 just explode if this wasn't like this.
+05:36 
+
+05:36 Now, to push the camera into, say,
+05:38 
+
+05:38 another scene, you're going to need to
+05:39 
+
+05:39 reposition that comp. So you could place
+05:42 
+
+05:42 a scene under say your first comp or
+05:44 
+
+05:44 like me, we can push this forward in
+05:46 
+
+05:46 Zpace by the value of the most pushed
+05:49 
+
+05:49 back object in that scene. Now, as you
+05:51 
+
+05:51 continue to use the camera tool here, we
+05:53 
+
+05:53 are pushed into the new scene. Great,
+05:55 
+
+05:55 but it's just not perfect yet. Our goal
+05:58 
+
+05:58 now is to try to create the best
+05:59 
+
+05:59 seamless cut that we can. If there's a
+06:01 
+
+06:01 background in your new scene, I would
+06:03 
+
+06:03 animate it opacity from zero to 100% to
+06:06 
+
+06:06 create that natural fade for a camera to
+06:08 
+
+06:08 move through. Additionally, think of how
+06:10 
+
+06:10 you can place an object in the back of
+06:12 
+
+06:12 your scene that could be a transition
+06:13 
+
+06:13 foreground element, like this cloud, for
+06:15 
+
+06:15 example. This will help further hide the
+06:18 
+
+06:18 unnatural cut between two opposing
+06:19 
+
+06:19 scenes. And don't forget to turn on
+06:21 
+
+06:21 motion blur for all your scene layers.
+06:23 
+
+06:23 And that's absolutely amazing what we
+06:25 
+
+06:25 can do. For depth of field, you may want
+06:27 
+
+06:27 to key frame the focus distance to
+06:29 
+
+06:29 adjust what your camera has blurred out
+06:31 
+
+06:31 as you jump through scene to scene. But
+06:33 
+
+06:33 overall, there's nothing that can stop
+06:35 
+
+06:35 you. Now, subscribe to be the best and
+06:37 
+
+06:37 always be creating.

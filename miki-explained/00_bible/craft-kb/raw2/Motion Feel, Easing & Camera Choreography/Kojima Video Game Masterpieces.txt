@@ -1,0 +1,1198 @@
+00:00 [Music]
+00:04 
+
+00:04 It is class creatives, and in this
+00:06 
+
+00:06 video, we'll discuss how Kojima
+00:07 
+
+00:07 Productions Death Stranding series uses
+00:09 
+
+00:09 Autodesk Maya to produce award-winning
+00:11 
+
+00:11 animations for Hideo Khjima's most
+00:14 
+
+00:14 recent sequel. Many of our students are
+00:16 
+
+00:16 curious about the software and
+00:17 
+
+00:17 techniques that were used to bring
+00:18 
+
+00:18 Kjima's 2019 game of the year cutting
+00:21 
+
+00:21 edge animations to life. His sequel,
+00:24 
+
+00:24 Death Stranding 2 on the Beach, is
+00:25 
+
+00:25 making a comeback in the highly
+00:27 
+
+00:27 anticipated franchise. In this video,
+00:29 
+
+00:29 we'll discuss Hideok Khajjima's creative
+00:31 
+
+00:31 process, his departure from Konami, and
+00:33 
+
+00:33 how he went indie creating his own
+00:35 
+
+00:35 production studio. How his award-winning
+00:37 
+
+00:37 animations are made with Autodesk Maya,
+00:39 
+
+00:39 paired with state-of-the-art motion
+00:41 
+
+00:41 capture tools, how liveaction reference
+00:43 
+
+00:43 footage is used to inspire genuine
+00:45 
+
+00:45 acting choices, and his character art
+00:47 
+
+00:47 and design process. We'll dive deep into
+00:50 
+
+00:50 Kjima's award-winning career history,
+00:52 
+
+00:52 along with what's next for Kjima
+00:53 
+
+00:53 Productions as they aim to expand their
+00:55 
+
+00:55 creations beyond the video game space.
+00:59 
+
+00:59 All right, look, Morty. Cojima just
+01:00 
+
+01:00 wants us to reconnect to fractured
+01:02 
+
+01:02 society and stop the death stranding. A
+01:05 
+
+01:05 theme explored in the 2001 game Metal
+01:08 
+
+01:08 Gear Solid 2 came to be based on an
+01:09 
+
+01:09 unexpected situation where Hideo Kajjima
+01:12 
+
+01:12 was falsely identified online as an
+01:15 
+
+01:15 assassin of former Japanese prime
+01:17 
+
+01:17 minister Shinszo Abbe. On the internet
+01:20 
+
+01:20 forum 4chan, an anonymous user posted a
+01:22 
+
+01:22 photograph of him as the perpetrator.
+01:25 
+
+01:25 This event was examined through the game
+01:27 
+
+01:27 storyline on how digital manipulation
+01:29 
+
+01:29 could be used through weaponized memes
+01:31 
+
+01:31 and featured a protagonist who becomes a
+01:33 
+
+01:33 victim of a misinformation campaign.
+01:36 
+
+01:36 Kojima often reflects on the lasting
+01:38 
+
+01:38 impact of digital information online.
+01:42 
+
+01:42 Kojima created the multi-million dollar
+01:43 
+
+01:43 selling Metal Gear Solid series for
+01:45 
+
+01:45 Konami when he joined the company in the
+01:47 
+
+01:47 mid80s. During his lengthy career at
+01:50 
+
+01:50 Konami, he ascended to the role of VP.
+01:53 
+
+01:53 Throughout his career, Kojima faced
+01:54 
+
+01:54 numerous challenges, particularly with
+01:57 
+
+01:57 corporate management at Konami. Despite
+01:59 
+
+01:59 the success of his games, Kojima's
+02:01 
+
+02:01 creative vision often clashed with the
+02:03 
+
+02:03 company's profit-driven approach. This
+02:06 
+
+02:06 tension culminated in a high-profile
+02:08 
+
+02:08 fallout during the development of Metal
+02:09 
+
+02:09 Gear Solid 5: The Phantom Pain. The
+02:12 
+
+02:12 game, despite its critical acclaim and
+02:14 
+
+02:14 commercial success, was marred by
+02:16 
+
+02:16 reports of cut content and rushed
+02:18 
+
+02:18 production due to Konami's internal
+02:20 
+
+02:20 pressures. Kojima's relationship with
+02:23 
+
+02:23 Konami became increasingly strained over
+02:25 
+
+02:25 time. The company's shift towards mobile
+02:27 
+
+02:27 gaming and profit-driven strategies
+02:29 
+
+02:29 clashed even further with Kojima's
+02:31 
+
+02:31 creative aspirations. This conflict
+02:33 
+
+02:33 ultimately led to Kjima's departure from
+02:35 
+
+02:35 Konami in 2015.
+02:38 
+
+02:38 Kojima's departure from Konami was
+02:40 
+
+02:40 filled with controversy. The fallout
+02:42 
+
+02:42 highlighted the tensions between
+02:44 
+
+02:44 creative freedom and corporate
+02:45 
+
+02:45 interests, a struggle many developers
+02:47 
+
+02:47 face in the industry. He stated that
+02:50 
+
+02:50 once he left the company in 2015 to
+02:52 
+
+02:52 reestablish Kojima Productions as an
+02:54 
+
+02:54 independent studio, he couldn't get a
+02:56 
+
+02:56 credit card and the bank would not lend
+02:58 
+
+02:58 him any money. And when he tried to
+03:00 
+
+03:00 lease a floor in his building, they told
+03:02 
+
+03:02 him that he was now independent. As if
+03:04 
+
+03:04 he was yet to create anything. That is
+03:06 
+
+03:06 the moment when Kjima thought, "Oh, I
+03:08 
+
+03:08 really am indie." Only when one of the
+03:10 
+
+03:10 building's owners, a fan of Kojima's
+03:12 
+
+03:12 games, interveneed was he offered a
+03:14 
+
+03:14 rental agreement for his prime patch of
+03:16 
+
+03:16 Tokyo real estate. At times, Kjima has
+03:19 
+
+03:19 been derided for appearing pretentious
+03:20 
+
+03:20 and egotistical. He was mocked for
+03:23 
+
+03:23 placing the title a Hideo Kajjima game
+03:25 
+
+03:25 before every mission in Metal Gear Solid
+03:27 
+
+03:27 5.
+03:30 
+
+03:30 [Music]
+03:32 
+
+03:32 That was perfect.
+03:36 
+
+03:36 However, it is important to note that
+03:38 
+
+03:38 Kojima's time at Konami was coming to an
+03:40 
+
+03:40 end. Kojima does not own the Metal Gear
+03:43 
+
+03:43 IP, and he sought to drive home the
+03:44 
+
+03:44 message that he was the author of the
+03:46 
+
+03:46 series. This allowed him to use his game
+03:49 
+
+03:49 as a brand, which he leveraged to secure
+03:51 
+
+03:51 funding of his own game company, Kojima
+03:53 
+
+03:53 Productions.
+03:54 
+
+03:54 Regarding social media, Cojima states
+03:56 
+
+03:56 that he believes creators should not say
+03:58 
+
+03:58 anything at all and that they should
+03:60 
+
+03:60 represent their thoughts only on what
+04:01 
+
+04:01 they create. However, as an indie
+04:03 
+
+04:03 studio, he does not have anyone to back
+04:05 
+
+04:05 him up with promotion. So, it has become
+04:08 
+
+04:08 part of his job. He is known for teasing
+04:10 
+
+04:10 projects in ways that will generate
+04:12 
+
+04:12 excitement and anticipation for his
+04:14 
+
+04:14 games, such as when he made handprints
+04:16 
+
+04:16 left on the beach in the first Death
+04:18 
+
+04:18 Stranding trailer made of wire, filming
+04:20 
+
+04:20 the previsualization in the shared
+04:22 
+
+04:22 hallway of the office he used before
+04:24 
+
+04:24 moving there. Other companies used the
+04:27 
+
+04:27 hallway and would wonder what he could
+04:28 
+
+04:28 possibly be doing when he was seen
+04:30 
+
+04:30 filming. These cryptic posts and videos
+04:33 
+
+04:33 often lead to him meeting musicians,
+04:35 
+
+04:35 writers, directors, and actors via
+04:37 
+
+04:37 social media.
+04:39 
+
+04:39 After 30 years with Konami, Kojima went
+04:41 
+
+04:41 independent in 2015, partnering with
+04:43 
+
+04:43 Sony Entertainment.
+04:51 
+
+04:51 1 2 3 1 2 3
+04:54 
+
+04:54 [Music]
+04:56 
+
+04:56 Where he was granted the creative
+04:57 
+
+04:57 freedom he had long sought, allowing him
+04:60 
+
+04:60 to pursue projects beyond games. His
+05:03 
+
+05:03 first phase as an indie developer
+05:04 
+
+05:04 focused on establishing his IP, Death
+05:07 
+
+05:07 Stranding, which involves securing
+05:09 
+
+05:09 office space, staff, and a game engine.
+05:12 
+
+05:12 He emphasizes the importance of owning
+05:13 
+
+05:13 his IP,
+05:20 
+
+05:20 allowing for a release on multiple
+05:21 
+
+05:21 platforms and hardware. The project
+05:24 
+
+05:24 featured collaborations with Germo Del
+05:26 
+
+05:26 Toro and other Hollywood talents. The
+05:28 
+
+05:28 game was Kjima's response to the
+05:30 
+
+05:30 divisive and fragmented nature of
+05:32 
+
+05:32 contemporary society. He envisioned a
+05:35 
+
+05:35 game that would emphasize the importance
+05:36 
+
+05:36 of building connections in a
+05:38 
+
+05:38 disconnected world. This theme of
+05:40 
+
+05:40 Stranding inspired not only the title,
+05:42 
+
+05:42 but also the core gameplay mechanics
+05:44 
+
+05:44 where players are tasked with
+05:46 
+
+05:46 reconnecting a fractured America by
+05:48 
+
+05:48 delivering supplies and establishing
+05:50 
+
+05:50 communication networks.
+05:52 
+
+05:52 Kjima considers Death Stranding to be an
+05:55 
+
+05:55 especially new type of game. He worried
+05:57 
+
+05:57 whether it would be accepted or not. He
+05:59 
+
+05:59 compared playing the game to climbing
+06:01 
+
+06:01 Mount Fuji by herself. He stated, "It
+06:03 
+
+06:03 can be a hard time. You might stop
+06:05 
+
+06:05 halfway and think, why am I putting
+06:07 
+
+06:07 myself through this much trouble?" and
+06:08 
+
+06:08 give up. But when you climb all the way
+06:10 
+
+06:10 to the summit and see the rising sun and
+06:12 
+
+06:12 all the effort and hardship will be
+06:14 
+
+06:14 validated. You probably start to cry.
+06:17 
+
+06:17 That's the kind of game it is. But you
+06:19 
+
+06:19 can't cry if you turn back without going
+06:21 
+
+06:21 all the way to the summit. Wow.
+06:26 
+
+06:26 I actually remember
+06:28 
+
+06:28 I had to they asked me to they asked for
+06:34 
+
+06:34 I had to they asked me to they asked to
+06:37 
+
+06:37 scan my um
+06:40 
+
+06:40 the like underneath my feet. Quiet.
+06:48 
+
+06:48 Photorealistic visuals are an important
+06:50 
+
+06:50 aspect to Kjima's video game style.
+06:53 
+
+06:53 Casting actors who perfectly fit his
+06:55 
+
+06:55 narratives in terms of age and
+06:56 
+
+06:56 personality are critical for his
+06:58 
+
+06:58 creative vision. Facial capture
+06:60 
+
+07:00 technology is utilized to capture
+07:02 
+
+07:02 nuances of expressions so that the
+07:04 
+
+07:04 in-game character facial performances
+07:06 
+
+07:06 will match the actors. Middle Gear Solid
+07:08 
+
+07:08 5 used the Fox engine for photorealistic
+07:11 
+
+07:11 experiences to capture physical
+07:12 
+
+07:12 likeness, voice, facial expressions, and
+07:15 
+
+07:15 movements comparable to live action
+07:17 
+
+07:17 movies. The Death Stranding series uses
+07:20 
+
+07:20 the Desimma engine, originally created
+07:22 
+
+07:22 by Guerilla Games, the studio behind the
+07:24 
+
+07:24 Killzone and Horizon franchises.
+07:28 
+
+07:28 Photorealistic sculpts are created using
+07:30 
+
+07:30 ZBrush with animation done with Autodesk
+07:32 
+
+07:32 Maya. Camera captures play an important
+07:35 
+
+07:35 role capturing all angles of the actor's
+07:37 
+
+07:37 face to generate the final 3D model and
+07:40 
+
+07:40 textures. With updates in modern
+07:42 
+
+07:42 hardware and software advancements in
+07:44 
+
+07:44 skin translucency, more realistic
+07:46 
+
+07:46 dynamic shadows reflecting light changes
+07:49 
+
+07:49 will help bring the latest installment
+07:50 
+
+07:50 of Death Stranding 2 to even more
+07:52 
+
+07:52 hyperrealistic visuals for cinematics
+07:55 
+
+07:55 and gameplay. Sony's mobile motion
+07:58 
+
+07:58 capture system, Moi, is being used in
+07:60 
+
+08:00 the game development process at Kojima
+08:02 
+
+08:02 Productions. The game designer uses Moi
+08:05 
+
+08:05 to make provisional animations during
+08:07 
+
+08:07 the early stages to imagine what the
+08:08 
+
+08:08 game might be like. This allows
+08:10 
+
+08:10 animations to be integrated directly
+08:12 
+
+08:12 into the prototype build so that it can
+08:14 
+
+08:14 be directly passed onto the R team. This
+08:17 
+
+08:17 cuts down the need for animators to
+08:19 
+
+08:19 create prototype movements to test
+08:20 
+
+08:20 gameplay from scratch or conduct an
+08:23 
+
+08:23 expensive and time-consuming mocap shoot
+08:25 
+
+08:25 to capture movements. Turnaround time is
+08:27 
+
+08:27 extremely fast, cutting down the lengthy
+08:29 
+
+08:29 mocap solving process, so the captured
+08:31 
+
+08:31 movements can be integrated quickly for
+08:33 
+
+08:33 testing purposes. The additional sensors
+08:35 
+
+08:35 have improved accuracy for more
+08:37 
+
+08:37 humanlike animations. Moi allows more
+08:40 
+
+08:40 flexibility during the pre-production
+08:41 
+
+08:41 game testing phases.
+08:49 
+
+08:49 Is it your dream to someday work for
+08:51 
+
+08:51 Kjima Productions? If not, feel free to
+08:53 
+
+08:53 skip ahead to the next section, or stick
+08:55 
+
+08:55 around if you're just curious about what
+08:57 
+
+08:57 they look for in artists they want to
+08:58 
+
+08:58 hire. We create videos like this one to
+09:01 
+
+09:01 not only show you how Kjima's games are
+09:03 
+
+09:03 made, but to also give you a chance to
+09:05 
+
+09:05 learn the exact workflows necessary for
+09:07 
+
+09:07 your career or even your own personal
+09:09 
+
+09:09 projects. Like most AAA game studios,
+09:12 
+
+09:12 they'll want Maya experience or
+09:13 
+
+09:13 something equivalent if you are an
+09:15 
+
+09:15 animator. Several of our instructors
+09:17 
+
+09:17 actually work for Kima and you can learn
+09:18 
+
+09:18 from them in our courses covering
+09:20 
+
+09:20 everything from animation and rigging to
+09:22 
+
+09:22 environment and game design and
+09:24 
+
+09:24 character creation. We'll have some
+09:26 
+
+09:26 links in the description if you're
+09:27 
+
+09:27 interested in taking your art in a new
+09:29 
+
+09:29 direction with us. The 7th anniversary
+09:32 
+
+09:32 of Kjima Productions was the beginning
+09:33 
+
+09:33 of its phase 2, marked by a move to a
+09:36 
+
+09:36 larger office space. The new studio
+09:38 
+
+09:38 includes a bigger white room designed to
+09:40 
+
+09:40 house a 1:1 scale Luden statue, a more
+09:43 
+
+09:43 spacious development studio, a dedicated
+09:45 
+
+09:45 photoggramometry room, and a social
+09:47 
+
+09:47 kitchen lounge area. The
+09:49 
+
+09:49 photoggramometry room is also used for
+09:51 
+
+09:51 interviews and video shooting. They can
+09:54 
+
+09:54 capture images from 360°
+09:56 
+
+09:56 which is used to create 3D models of
+09:58 
+
+09:58 real world objects for integration into
+10:00 
+
+10:00 games. They also have a dressing room or
+10:03 
+
+10:03 waiting room for actors involved with
+10:05 
+
+10:05 their productions. They also have a
+10:07 
+
+10:07 voice recording studio which includes a
+10:09 
+
+10:09 control room and a recording booth.
+10:11 
+
+10:11 Cooima compares the control room as
+10:13 
+
+10:13 resembling the bridge of a spaceship.
+10:15 
+
+10:15 The studio also has work areas with
+10:17 
+
+10:17 partitioned spaces with long counter
+10:19 
+
+10:19 desks which are typical for Japanese
+10:22 
+
+10:22 production studios. They also have
+10:24 
+
+10:24 napping areas and meeting rooms. They
+10:27 
+
+10:27 have a tatami room for a large
+10:28 
+
+10:28 television which the staff utilizes for
+10:31 
+
+10:31 movie screenings.
+10:33 
+
+10:33 Desk training 2 will pave the way for
+10:35 
+
+10:35 his next two projects in development.
+10:38 
+
+10:38 Fisen and OD, a collaboration project
+10:40 
+
+10:40 with director Jordan Peele that is
+10:42 
+
+10:42 attempting to push the boundaries within
+10:44 
+
+10:44 the video game medium. The project was
+10:46 
+
+10:46 teased at the 2023 Game Awards.
+10:52 
+
+10:52 Due to the impact of the pandemic on his
+10:54 
+
+10:54 creative process, it led him to rewrite
+10:56 
+
+10:56 aspects of Death Stranding 2 to better
+10:58 
+
+10:58 connect with players pandemic
+10:60 
+
+10:60 experiences. He also has concerns about
+11:02 
+
+11:02 the increasing prevalence of remote work
+11:05 
+
+11:05 and the potential for entertainment to
+11:06 
+
+11:06 become overly personalized and less
+11:08 
+
+11:08 creatively challenging. He's working on
+11:11 
+
+11:11 a Death Stranding movie adaptation, but
+11:13 
+
+11:13 will not direct it himself due to his
+11:15 
+
+11:15 ongoing game projects. He plans to
+11:17 
+
+11:17 supervise the plot, emphasizing that the
+11:19 
+
+11:19 game was always conceived as a game
+11:21 
+
+11:21 first. He also has other movie projects
+11:23 
+
+11:23 in mind with a different story he has
+11:25 
+
+11:25 written. He states that the digital
+11:27 
+
+11:27 assets created for his games could
+11:28 
+
+11:28 potentially be used for movie
+11:30 
+
+11:30 adaptations.
+11:31 
+
+11:31 Kjima also signed with talent agency WME
+11:34 
+
+11:34 to expand his work in Hollywood while
+11:36 
+
+11:36 continuing his independent game
+11:38 
+
+11:38 development at Kojima Productions. His
+11:40 
+
+11:40 hopes are that with a dedicated team to
+11:42 
+
+11:42 manage his various projects, he will be
+11:44 
+
+11:44 able to utilize his time to create
+11:46 
+
+11:46 without unnecessary delays. Kojima
+11:49 
+
+11:49 envisions a third phase where he can
+11:51 
+
+11:51 work with global talent to create new
+11:52 
+
+11:52 forms of digital entertainment which
+11:55 
+
+11:55 could be movies, games, anime, or
+11:57 
+
+11:57 something entirely new. He believes that
+11:59 
+
+11:59 the world is now connected via the
+12:01 
+
+12:01 internet with accessible platforms and
+12:03 
+
+12:03 tools for creators, encouraging younger
+12:06 
+
+12:06 generations to independently create and
+12:08 
+
+12:08 share their work. He sees the future of
+12:10 
+
+12:10 entertainment as increasingly online and
+12:12 
+
+12:12 hybrid, blurring the lines between
+12:14 
+
+12:14 traditional mediums.
+12:16 
+
+12:16 Music plays a critical role in his
+12:18 
+
+12:18 storytelling, amplifying emotions and
+12:20 
+
+12:20 underscoring key moments. For Metal Gear
+12:23 
+
+12:23 Solid 2's music, he originally wanted to
+12:25 
+
+12:25 get Han Zimmer, but Zimmer stated he
+12:27 
+
+12:27 couldn't do it for that kind of money.
+12:29 
+
+12:29 Kojima explains that for the Ludens and
+12:31 
+
+12:31 Kojima Productions logo creation, the
+12:33 
+
+12:33 design for a suit was explored, aiming
+12:36 
+
+12:36 for a blend between an EVA suit and
+12:38 
+
+12:38 armor.
+12:39 
+
+12:39 Some early concepts were deemed too much
+12:41 
+
+12:41 like a robot, while others resembled a
+12:43 
+
+12:43 standard space suit. One helmet design
+12:45 
+
+12:45 was favored for its combination of a
+12:47 
+
+12:47 spaceacuit and medieval helmet
+12:49 
+
+12:49 aesthetic. The addition of a backpack
+12:51 
+
+12:51 further emphasized the spaceacuitike
+12:53 
+
+12:53 nature, suggesting the inclusion of life
+12:56 
+
+12:56 support devices. The character model was
+12:58 
+
+12:58 initially outsourced to a well-known
+12:60 
+
+12:60 company in Japan. However, the output
+13:03 
+
+13:03 was not satisfactory, so they brought
+13:05 
+
+13:05 the development inhouse. They also
+13:07 
+
+13:07 underwent a process to capture 3D face
+13:09 
+
+13:09 data of Kojima for testing purposes. The
+13:12 
+
+13:12 scene test data was then used and
+13:14 
+
+13:14 applied to the character model. The face
+13:16 
+
+13:16 seen on the character model is actually
+13:18 
+
+13:18 a modified version of Kojima's face
+13:20 
+
+13:20 captured through the 3D scanning
+13:22 
+
+13:22 process. Well, that about wraps up this
+13:24 
+
+13:24 video on the history of Kojima and how
+13:26 
+
+13:26 he continues to revolutionize the video
+13:28 
+
+13:28 game creation process. From his early
+13:31 
+
+13:31 fascination with films to his
+13:32 
+
+13:32 groundbreaking work in video games,
+13:34 
+
+13:34 Hideo Khjima's creative process is a
+13:37 
+
+13:37 testament to his unwavering dedication
+13:39 
+
+13:39 to innovation and his boundless
+13:40 
+
+13:40 imagination. His unique blend of
+13:43 
+
+13:43 cinematic storytelling, intricate
+13:45 
+
+13:45 gameplay, and a constant push for
+13:47 
+
+13:47 technological advancement has cemented
+13:49 
+
+13:49 his place as a true visionary in the
+13:51 
+
+13:51 gaming industry.
+13:53 
+
+13:53 The good news for his fans is that he
+13:55 
+
+13:55 doesn't plan on stopping anytime soon,
+13:57 
+
+13:57 stating, "I intend on continuing as I am
+13:59 
+
+13:59 now, even after I pass 80." One last
+14:02 
+
+14:02 thing about this video and our courses
+14:04 
+
+14:04 is that we don't use AI to write our
+14:05 
+
+14:05 content, or do all of our research. With
+14:08 
+
+14:08 The Rise of AI, we understand how you
+14:09 
+
+14:09 might assume we do it, too. For this
+14:11 
+
+14:11 one, we dove into tons of his online
+14:13 
+
+14:13 interviews, documentaries, behind the
+14:15 
+
+14:15 scenes footage, his Instagram posts, and
+14:17 
+
+14:17 other resources so we can celebrate his
+14:19 
+
+14:19 amazing work together. We'll include all
+14:21 
+
+14:21 of our sources in the description in
+14:22 
+
+14:22 case you want to take a closer look. The
+14:24 
+
+14:24 newest entry in the series looks better
+14:26 
+
+14:26 than ever. Will you be playing on
+14:27 
+
+14:27 release day? Let us know your thoughts
+14:29 
+
+14:29 in the comments.
+14:34 
+
+14:34 And uh don't forget to like and
+14:36 
+
+14:36 subscribe and we'll see you in the next
+14:38 
+
+14:38 one. Perfect.

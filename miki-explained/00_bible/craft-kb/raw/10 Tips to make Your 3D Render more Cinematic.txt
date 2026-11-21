@@ -1,0 +1,950 @@
+00:00 - [Martin] So, you have a 3D render,
+00:02 but something is missing.
+00:04 You can't really put your finger on it,
+00:06 but it doesn't have the proper feel,
+00:07 that last fine touch
+00:09 making your whole scene,
+color, and lighting just work.
+00:13 Well, it may very well be
+00:15 that you haven't incorporated
+some simple cinematic rules
+00:18 that can really push your
+renders to the next level,
+00:21 and that is exactly
+what we will be focusing
+00:23 on in this video.
+00:25 Hello, everybody, Martin
+here for CGBoost.com,
+00:28 and welcome to this new video,
+00:29 where I will share with you
+some of the cinematic tips
+00:31 that I've gathered throughout my career,
+00:34 and that I use pretty much every time
+00:36 I make 3D artwork or renders.
+00:39 The cinematic tips are closely connected
+00:41 to the general design
+and composition rules.
+00:44 We, of course, won't miss the
+all important rule of thirds.
+00:47 We will discuss various types of lighting,
+00:50 how different placement of camera
+00:51 changes the psychologic
+effect on the audience,
+00:54 and also some EEVEE rendering tips.
+00:58 One note, guys, this is
+not a step-by-step guide,
+01:01 rather a breakdown video.
+01:02 So, if you're not sure about Blender,
+01:04 definitely sign up for Zach's
+free blender resources bundle,
+01:08 including a Blender's beginners course
+01:10 and a comprehensive shortcut pdf.
+01:13 These materials will get you
+started in Blender in no time.
+01:16 I know, I've tried it myself.
+01:18 But with that said, I
+think it's time to have
+01:20 a look at these then cinematic tips
+01:22 that will definitely help
+you with your 3D renders.
+01:25 (light pop music)
+01:28 The first thing you'll probably notice
+01:30 when you open this scene,
+01:31 is that I've tried to make
+it as simple as possible.
+01:34 Just basic shapes, a few extrudes
+and bevels, nothing fancy.
+01:38 That goes to the characters as well,
+01:40 these in fact I downloaded
+from the awesome
+01:43 online rigging tool called Mixamo.
+01:45 You can by the way learn
+all about this topic
+01:47 on my own specialized channel,
+01:49 link is in the description.
+01:53 Right off the bat you can
+see we have three characters.
+01:56 Some mysterious figure here on the left,
+01:59 and by the looks of it,
+it is probably hiding
+02:01 from these two guys on the right.
+02:04 I actually imagined this to be some sort
+02:06 of dystopian future
+where everybody is forced
+02:09 to stay at home quarantined,
+02:11 while police forces control the streets.
+02:15 Ah, wait.
+02:17 So, you can see I have
+just a few shaders here,
+02:21 no textures and no fancy effects.
+02:23 The whole scene is
+simple on purpose though.
+02:26 What I wanted to do was to create
+02:27 a cinematic-looking final result,
+02:29 using just camera work, composition,
+02:32 lighting setup, some atmosphere,
+and a few EEVEE tricks.
+02:36 This way I believe you will be better able
+02:38 to apply these concepts
+to your own artwork
+02:41 without relying simply on your modeling,
+02:43 shading, and texture work.
+02:45 All right, but now let's
+jump into the first step
+02:47 I usually do when creating my scenes.
+02:50 The basic camera and composition.
+02:53 When placing a camera in your scene,
+02:55 the first thing you want to
+think about is the story.
+02:58 Story?
+02:59 "Well, what if my render is
+just a regular environment
+03:02 "or architectural render and
+it has no story?", you may ask.
+03:07 Well, in my opinion that's wrong.
+03:09 Even without characters
+you can, and you should,
+03:12 make your image tell
+some sort of narrative.
+03:15 Give some background
+information through various
+03:18 choices you make not only
+when creating the scene,
+03:21 but also by placing camera and lights.
+03:24 This way, your image will be always
+03:26 much more relatable and exciting.
+03:28 First off it's good to ask yourself
+03:30 what is the main focus of the image
+03:31 and what is it that you
+want to express through it.
+03:35 If I have a building as my focus,
+03:37 do I want it to feel pleasing, inviting,
+03:39 dark, obscure, colossal?
+03:42 In short: what sort of
+emotion do I want to achieve?
+03:45 You can ask the same thing when it comes
+03:47 to nature environments,
+scenes with characters,
+03:50 even hard surface and car renders.
+03:53 Every time you will be
+deciding on how you want
+03:55 the most important aspect
+of your image to feel.
+03:58 Unless you do some
+boring shot with no story
+04:01 and emotions, which I don't even know why
+04:04 you would do such a thing.
+04:05 Anyway, here, from the
+pose of our main character
+04:09 we can clearly guess she
+probably doesn't want to be seen.
+04:12 On the other hand, while these characters
+04:14 seem relaxed and unconcerned,
+04:17 in their hands they hold
+something resembling
+04:19 a weapon and a baton.
+04:22 So yeah, these are probably not some guys
+04:24 you would want to meet alone at night,
+04:26 police or not.
+04:27 While this all gives me a lot of useful
+04:29 information for how to create this shot,
+04:31 I know that it should be mysterious,
+04:34 so I will go for something dark,
+04:36 situated at night.
+04:39 I want the whole composition
+to somehow tilt towards
+04:41 these guys while also focusing
+on our main character.
+04:46 When it comes to camera placement,
+04:48 there is nothing easier
+than to quickly create
+04:50 a camera and start playing around with it.
+04:52 You simply hit Shift+A, add a camera,
+04:55 and when you hit Numpad 0,
+04:57 you will be transported into it.
+04:59 If you want you can hit
+Home key to make your
+05:02 camera view fill the viewport.
+05:04 To manipulate with your
+camera from this view,
+05:06 you can hit Shift + tilde key,
+05:09 which is right underneath your Escape key.
+05:11 And if that doesn't work for you,
+05:13 you will find a command in the view menu
+05:15 navigation and here.
+05:19 Now you are in the walk navigation mode
+05:21 and you can move around
+the scene as you would
+05:23 in any first-person shooter game.
+05:26 You know, like in Counterstrike,
+05:28 if you've ever played it.
+05:30 Using the W/A/S/D keys,
+you can fly forward,
+05:33 backward, or to the sides,
+05:35 while Q allows you to fly down, and E up.
+05:39 If you scroll your mouse wheel,
+05:41 you can make this
+movement slower or faster,
+05:44 while you probably know
+all this from Zach's
+05:46 Blender Launchpad course, right?
+05:48 Okay now, so where should
+we place our camera?
+05:51 Given what we've said,
+that this scene should
+05:53 be somewhat mysterious,
+05:55 there are a few ways we can achieve that.
+05:58 First off, I want to see
+both the main character
+05:60 and the policemen in the background,
+06:02 as well as the street and probably
+06:04 the back building over here.
+06:06 This in itself already limits
+the camera angle quite a bit.
+06:10 So go to the camera and
+fly to that position.
+06:14 Now a big topic is always at what height
+06:17 should you place your camera?
+06:18 So-called high angle shots
+looking down on the ground
+06:21 are usually and logically
+good for some sort
+06:25 of scene overview.
+06:26 When it comes to characters,
+06:27 if you want to achieve a feeling
+06:29 that your main character
+is somewhat superior,
+06:32 then the other in your scene usually
+06:34 place your camera slightly higher,
+06:36 looking down on the others
+06:38 like in these movie examples here.
+06:42 In our case though, this
+is quite the opposite.
+06:44 I think to achieve the slightly
+and easy feeling I'm after,
+06:48 I would go with a low angle shot,
+06:51 placing ut below my characters,
+06:52 almost to the street level, looking up.
+06:56 For example, something like this.
+06:59 You can even fly around
+and try to render different
+07:02 compositions and using this
+render engine workbench,
+07:06 it doesn't take too long
+to render each of them.
+07:13 Don't forget to use different slots
+07:14 to not lose your previous renders though.
+07:20 Now, can you feel it?
+07:22 Being this low, it already
+gives an impression,
+07:24 like you looking through the camera
+07:26 are somewhat smaller than the
+scene and everybody in it,
+07:30 feeling the weight of the
+shot bearing down on you,
+07:33 or at least compared to this, right?
+07:36 The composition is still
+a bit boring though,
+07:39 so let's try to improve it, shall we?
+07:42 One thing we can do to make
+the whole image more cinematic
+07:45 is to play around with
+the so-called aspect ratio
+07:48 of the shot in this output menu.
+07:50 This terminology in fact
+goes back all the way
+07:53 to the good old days when movies
+07:55 were shot on a film
+material called celluloid,
+07:58 and everything just seemed
+a bit more real and gritty.
+08:03 This aspect ratio comes from a time
+08:05 when all of the camera's operating systems
+08:08 for the celluloid film
+were more or less square,
+08:11 or rather 4:3 ratio.
+08:15 But films actually started using
+08:17 widescreen panoramic format.
+08:19 What they did to be able
+to record this widescreen
+08:22 format on a square film material,
+08:25 is that they used something
+called anamorphic format.
+08:28 It was made so that the
+recorded film images
+08:31 in the camera were squashed horizontally
+08:34 and then, when they reprojected in cinema,
+08:37 they stretched it to its intended shape.
+08:40 Hence, you can see here
+on Wiki, for example,
+08:43 there are some basic filmic formats
+08:45 which you can try out yourself.
+08:47 Just make your resolution square,
+08:49 1080:1080 for example,
+08:52 and then add this 1.85:1 aspect ratio,
+08:56 which is somewhat of an
+older film standard ratio,
+08:60 a U.S. widescreen standard.
+09:02 When you now render everything,
+09:04 you can see it's all squashed like this.
+09:06 And later, in the post-production,
+09:08 you would have to stretch
+it to look normal.
+09:11 But all this said and done,
+09:13 this is just a curiosity
+and it's pretty much
+09:16 useless for our purposes.
+09:18 I usually don't change
+the aspect ratio at all,
+09:21 unless I need to work
+specifically with some
+09:23 video files made with
+various filmic formats.
+09:26 Otherwise, in case of digital images,
+09:29 I just put in this 2560
+resolution here in the width,
+09:35 and you effectively get
+almost a 21:9 aspect ratio,
+09:40 which, at least to me, always
+makes things more epic.
+09:44 In connection with that you've probably
+09:46 heard about a certain universal principle
+09:48 called rule of thirds or golden ratio.
+09:52 In general, it tells you
+that if you divide your image
+09:55 by two equally spaced
+horizontal and vertical lines,
+09:58 all the really important stuff should
+10:01 be placed along their intersections.
+10:04 That's when, in most cases,
+10:06 things start to work out and feel good.
+10:08 Luckily, instead of you
+having to draw these,
+10:11 camera settings in Blender give you
+10:12 a rather carefully
+hidden option right here
+10:16 to activate a wide variety of
+these compositional guides.
+10:20 Here you have the classical center line,
+10:22 good for example when you
+are making some graphical
+10:25 elements or one-point perspective,
+10:28 which is centered.
+10:30 And then some diagonals
+and also the mentioned
+10:33 rule of thirds and the slightly
+10:36 different golden ratio.
+10:39 Two things I will say.
+10:41 I believe that none of these rules should
+10:43 be adhered to dogmatically,
+10:45 and also that everyone's preference
+10:47 for how exactly to follow
+these rules is a bit different.
+10:51 Me, for example, I usually
+drift slightly more
+10:53 towards the edges of my composition.
+10:56 In any case I recommend learn more
+10:59 about the composition rules,
+11:01 but then don't forget
+to follow what your gut
+11:04 tells you as well.
+11:06 For my scene here I will actually use
+11:08 this very cool variation
+of the composition lines,
+11:10 which is this golden triangle.
+11:13 It adds some nice diagonal lines
+11:15 and since I plan on tilting
+my image a bit later,
+11:18 I know I will find some use for this.
+11:21 Basically what I want to achieve
+11:23 is having the important stuff around
+11:25 these two regions over here.
+11:27 So, let's take the camera and
+move it somewhat better now.
+11:32 For example like this.
+11:35 Another very useful tool for
+achieving various psychological
+11:39 effects through your camera
+work is focal length.
+11:43 Again, it is something that originates
+11:45 from how actual cameras work.
+11:47 Every camera has a lens or a device
+11:50 through which the light
+goes into the camera,
+11:52 and then an image sensor,
+11:54 something onto which
+the light is projected
+11:57 and where the image is captured.
+11:60 The distance between these two points
+12:02 drives the way the light is
+projected onto the sensor,
+12:05 and thus how wide your
+camera perspective gets.
+12:08 And thanks to modern
+technologies like Blender,
+12:12 I can show this to you
+right now digitally.
+12:15 See the camera here.
+12:17 So, this is our lens and
+this point in the center
+12:21 is the image sensor.
+12:22 Now if you just grab this and move it,
+12:25 you can see our final image changing size,
+12:27 the whole composition
+stretches or contracts,
+12:31 and also what you can see,
+12:33 the perspective grid gets distorted
+12:35 in these extremely wide cases.
+12:38 Okay, so, that's all well and good,
+12:40 but what does it mean practically?
+12:42 Let's have a look at the
+normal settings first,
+12:44 which is around 40 to 50 millimeter lens,
+12:47 since that is roughly how
+our eye perceives the world.
+12:51 By the way, you can
+change the lens settings
+12:53 here in the properties to
+get more precise numbers.
+12:56 This normal lens will give you
+the most relatable results.
+13:00 You won't introduce much distortion
+13:02 and things will feel just normal,
+13:05 which is good if you don't
+aim at anything dramatic.
+13:10 Which we are in fact.
+13:11 So let's try a long lens,
+13:13 that is usually anything
+from 60 millimeter to 120,
+13:18 210, and sometimes even
+more, like much more.
+13:23 And what it does you can see for yourself.
+13:25 It basically squashes your perspective,
+13:27 making things look closer,
+13:30 the perception of the depth is contracted,
+13:33 and details in the scene come out.
+13:36 Thus, this is good for focusing
+13:38 on a specific point in your composition,
+13:40 making it more important.
+13:43 However, we want to do the opposite,
+13:45 focus on the whole scene
+with its various elements.
+13:48 So we will instead go
+lower with the focal length
+13:51 to about 30 millimeters.
+13:53 You can see the image expanding,
+13:55 showing more of the environment,
+13:57 and also introducing the
+slight perspective bending.
+14:02 Not too noticeable at 30 millimeters,
+14:04 but already there a bit.
+14:07 This way we achieve a bit more unusual
+14:09 feel to the composition,
+14:11 making it slightly unsettling.
+14:13 Which is what we want for this image.
+14:16 To add to that feeling,
+14:17 there is also another
+tool that I like to use,
+14:19 this time a bit simpler one.
+14:21 It is camera tilt.
+14:24 So far, we have this
+horizontal positioning
+14:26 of our camera quite straight,
+14:28 which is good for more
+relaxed compositions.
+14:31 However, to increase the
+feeling of something wrong,
+14:34 you can take your camera and rotate
+14:36 it slightly on the y-axis,
+14:39 introducing this slight angle.
+14:41 And you have to choose where you want
+14:43 it to be leaning towards.
+14:44 In our case I want to tilt the attention
+14:47 of the eye towards these guys.
+14:50 Can you feel how the composition got a bit
+14:52 more ominous with this little detail?
+14:55 You don't want to overdo it though,
+14:57 and an angle of two or four
+is usually quite enough.
+15:03 Now a very useful trick you can use
+15:05 is to flip your composition.
+15:07 This is one thing I learned from some
+15:09 of my concept art attempts.
+15:11 Concept artists love to do this regularly
+15:14 to give them fresh
+perspective on their image
+15:17 and how good the
+composition works for them.
+15:20 To do this trick quickly,
+15:21 I love to select the camera
+and then use this shortcut,
+15:25 S to scale it,
+15:26 X twice to log the horizontal
+scaling to local axis,
+15:30 and then Minus + one on your numpad.
+15:34 This way you flip your image just like
+15:36 you would in Photoshop.
+15:38 Other option is to
+render your image again.
+15:41 Open up our compositing editor
+15:43 and in between this image
+node and the composit
+15:46 you can put this flip node.
+15:48 This way you can check
+and recheck your flipped
+15:51 composition and see the result.
+15:54 What you want to look for
+is whether your composition
+15:56 isn't lacking in the flip view.
+15:58 Often times your eyes will restart,
+16:01 and start noticing something
+that you didn't see
+16:03 until you flipped the image.
+16:06 You should check whether the
+image isn't tilting too much,
+16:08 which often happens when you
+rotate your camera like we did.
+16:13 In our case though, this
+seems quite fine as it is.
+16:16 And I think with this we are
+ready with our composition.
+16:20 Therefore, let's start a whole
+new chapter: the lighting.
+16:25 Lighting is of course a
+whole new type of beast,
+16:28 and it would take a whole course
+to even scratch the surface
+16:31 of this complex discipline.
+16:33 Let me however give you a
+very quick and practical
+16:36 overview of how I approached
+lighting this scene.
+16:40 At this stage, having a
+concept art of course helps.
+16:44 However, since we have such a
+simple real-time scene here,
+16:47 it actually is often much
+faster to just add some lights
+16:51 and play around until
+you're happy with it.
+16:54 First off though, I started
+actually with thinking
+16:57 about what I want to
+achieve with this scene.
+16:60 So, mysterious, yes, we said
+it like million times already.
+17:05 Usually just having a moonlight
+17:06 in the scene helps with that.
+17:09 So I decided to have my moonlight
+as my first light source,
+17:13 probably coming from up here.
+17:16 I wanted some contrast in the lighting,
+17:18 so for the bluish dark
+silhouettes of the policemen,
+17:21 I wanted them to be lit by
+a warm street lamp light
+17:25 and possibly even a window light.
+17:27 I didn't want to go all out dark,
+17:30 mysterious, and evil on them
+with red or green lights.
+17:34 I mean, who would really
+put green or red light
+17:38 into their home, right?
+17:39 So I figured just a regular
+orange tones would be okay.
+17:44 On the other hand, I did want
+to add some mysteriousness
+17:47 to the red hero character here,
+17:49 so that's why I decided
+to have slightly cooler,
+17:52 less intense lighting for it.
+17:55 Something bluish or magentaish?
+17:59 Magenta.
+18:00 There are generally three types of lights,
+18:02 depending on the intensity
+and where it comes from.
+18:06 Key light, which usually
+is the most prominent
+18:08 light in the scene, usually
+lights the character
+18:11 from a slight angle from the front.
+18:14 Back light adds nice silhouette to it,
+18:16 helping the eye to distinguish between
+18:18 the object and its background.
+18:21 And finally, fill light
+fills the nasty dark regions
+18:24 between the two main lights.
+18:26 So with that in mind, I
+started lighting this thing.
+18:29 Let me now switch to my lighted scene
+18:32 and let's dissect it properly.
+18:34 You may wonder why everything
+turned so very dark.
+18:37 That's because I switched
+to the render preview mode
+18:40 of the EEVEE renderer and
+also I made the surface
+18:44 of the world much, much darker,
+18:46 almost all the way to black.
+18:49 Oh, and by the way, let me mention again,
+18:51 you can download these blend files
+18:52 from the Blender resources course.
+18:55 Just sign up for it and follow along
+18:57 with the lighting process.
+18:58 It usually helps to
+start with the brightest,
+19:01 most important, and also most
+natural light in your scene,
+19:05 which in our case is the moon.
+19:07 So I decided to quickly add this cylinder
+19:10 all the way back here.
+19:14 Add an emission shader
+to it, make it brighter,
+19:17 and to it I added a sun lamp.
+19:23 Back in our camera view
+you can clearly see
+19:25 how much of a difference
+this made immediately.
+19:28 I played around with the
+intensity of the light,
+19:31 and gave it a very slight bluish tone,
+19:33 since it's a moon.
+19:37 With that done I moved to the other
+19:39 most prominent light source,
+19:40 which was this window.
+19:43 Here, I selected these
+polygons in edit mode
+19:46 and added a new emission shader to them,
+19:49 this time tinted orange, like this.
+19:53 For the actual light source I added
+19:55 this area light here, made it rectangular,
+19:58 and made it to fit the frame.
+20:02 Immediately, this light gave
+our policemen more focus.
+20:07 For the main heroine, I chose a spotlight
+20:09 with some soft edges
+and bigger cone angle.
+20:13 I pointed it here so that
+it did not illuminate
+20:16 too much of the wall,
+but mostly the character.
+20:22 Then, this color,
+20:23 which is something
+between blue and magenta,
+20:26 ensured it looked more like a neon light,
+20:29 rather than another moonlight,
+20:30 which wouldn't make
+sense to have two moons.
+20:34 Anyway, this was a first step
+to lighting my characters,
+20:37 but lighting can always
+be taken a step further,
+20:41 which is what I tried to do, of course.
+20:44 For the environment, I decided
+to add a bluish spot light
+20:47 back here to bring out this high rise.
+20:51 Having it shine from
+below like this implies
+20:53 some sort of bright street light,
+20:55 and also, having a light
+illuminate something big from below
+20:58 always adds some ominousness to it.
+21:03 I decided to add this glowing
+shader to these polygons
+21:06 on the lamps and since
+these are instances,
+21:10 both of the lamps were
+immediately edited together.
+21:14 And of course don't forget
+to add a light to the lamp,
+21:17 an area light will do.
+21:19 I set it up like this and
+when I added it up here,
+21:24 it created a nice highlight on the top
+21:26 of the characters heads,
+21:27 which is another great
+cinematic lighting tool.
+21:30 If you use this top light
+in a daylight scenario
+21:34 in combination with other lights,
+21:36 you will achieve a pleasing effect.
+21:39 On the other hand, if
+you just use this light,
+21:42 it actually makes the
+result more sinister.
+21:44 Just look at this frame from
+21:45 the movie "Godfather" for example.
+21:50 Then I proceeded to add
+orangy light back here,
+21:53 just to imply there is something going on
+21:55 in the other street as well.
+21:58 It is quite important to
+make your audience feel
+22:01 like there is actually something going
+22:02 on outside of the screen's frame.
+22:05 Also, this light brought
+out the car model a bit.
+22:10 By the way, I downloaded
+this one from Blendswap
+22:13 from a user called mrhan15,
+22:16 and it's actually an
+Indonesian police car.
+22:19 So, thanks mrhan.
+22:22 That was it for the environment,
+22:23 but I decided to highlight
+my characters a bit more.
+22:26 For these guys here I actually decided
+22:28 I will not use fill light.
+22:30 If I did so, they would of course become
+22:32 a bit more visible and I would
+get rid of these dark areas.
+22:37 But to keep them tiny bit mysterious,
+22:39 I decided to leave it like this.
+22:42 Instead, I wanted them to stand out from
+22:44 the background a little bit more,
+22:45 so some cool back light
+would be ideal for that.
+22:50 And this is where we move to a stage
+22:52 where a bit of artistic cheating starts.
+22:55 This sunlight, or rather moonlight,
+22:58 by itself doesn't really make enough
+22:60 of a rim light on these characters.
+23:02 However, when I added a spotlight here,
+23:05 made it in a color of the moon,
+23:07 raised the intensity
+and restricted its angle
+23:10 to envelope only these characters,
+23:13 I achieved a very nice back light on them,
+23:16 and also I got this very
+nice cinematic feel.
+23:23 Then I decided to not have the light
+23:25 go all the way down to the street.
+23:27 You can do that by
+activating this distance
+23:29 option and restricting it.
+23:32 I love this option in EEVEE.
+23:34 Beware though, it doesn't work in Cycles,
+23:37 so this might cause some major differences
+23:39 if you decide to switch later.
+23:41 For the main heroine, I
+added two extra lights.
+23:44 One was a new spotlight
+with a very soft cone
+23:47 and a small angle value,
+shining only on her face,
+23:52 like there are these
+rogue light rays reaching
+23:55 all the way towards her from this window,
+23:57 which is nonsense, of course.
+24:00 But it looks nice.
+24:02 As long as your lighting is at least
+24:03 a bit motivated by logical light sources,
+24:06 you can get away with
+quite a lot actually.
+24:09 Just have a look at movies and see
+24:10 how often they cheat like this too.
+24:14 Finally, I made another
+spotlight coming from behind her.
+24:18 Again, completely physically incorrect,
+24:20 but, you know, there
+is a slight possibility
+24:23 that it may be coming from this
+neon light out of the frame.
+24:27 And it adds a nice cool back light,
+24:29 or rather a rim light,
+to our main character.
+24:32 Usually, rim light and back
+light are interchangeable terms,
+24:35 but the way I personally use it,
+24:37 I rather make it shine from
+the side or a sharp angle,
+24:41 so that it often illuminates my characters
+24:43 just from one side.
+24:45 And that's it, this is how I was able
+24:46 to light the scene cinematically
+with just a few lights,
+24:50 following a few simple guidelines.
+24:53 However, we can still do more.
+24:56 Oh, and one little thing I did as well was
+24:57 to select these polygons of the curtains
+25:00 and added a slightly lighter
+version of the basic shader,
+25:05 just to make it look
+like it's translucent.
+25:09 Then we can for example add a huge cube
+25:12 and make everything invisible.
+25:15 Ah, nope, it was a joke.
+25:18 But the cube part is correct.
+25:20 Scale it so that it starts about here,
+25:23 and goes all the way to
+the building back here.
+25:27 And then make a new material for it.
+25:31 In this case, it will be
+this principal volume shader.
+25:36 Be sure to plug in the
+material into the volume,
+25:39 rather than surface, and here we go,
+25:41 we have some very nice,
+mysterious fog in our scene.
+25:45 Lower the density significantly,
+25:47 also the color, and
+the anisotropy as well.
+25:51 And whoa, that looks nice, right?
+25:53 Another fast solution
+to make things awesome
+25:55 is activating this bloom option
+25:57 in the render properties window.
+26:00 You can play around
+with the settings here.
+26:02 I choose something like
+this, pretty good, right?
+26:06 I love it when you light
+your scene properly
+26:07 and then just use these effects
+26:09 to make everything just
+a bit more awesome.
+26:14 You can then also experiment
+26:15 with your depth of field values,
+26:17 activating it here and setting
+up the distance in camera.
+26:21 However, for these wide shots,
+26:23 I don't really like to use it,
+26:24 I rather focus on it when I
+have for example a close-up,
+26:28 like this one here.
+26:34 There are of course
+plenty other settings here
+26:37 that can make your EEVEE
+render look better.
+26:40 Like these soft shadows,
+26:41 which may slow down your
+scene significantly,
+26:43 but they make all of the
+shadows much more convincing.
+26:47 Also, you can increase the
+shadow resolution here,
+26:50 then you can even activate
+real-time reflections,
+26:53 though in case of this simple scene
+26:55 it doesn't make much difference,
+26:58 since we do not have reflective materials.
+27:02 Oh, and we can also use this
+ambient occlusion option,
+27:05 I usually like to crank
+up these two values
+27:08 here both to two.
+27:11 Remember, when you are
+done with everything,
+27:13 or even throughout the whole process,
+27:15 you can actually adjust your environment
+27:17 to fit your composition better.
+27:19 You can for example add
+some simple planks here,
+27:21 since this spot is a bit empty.
+27:24 And while we're at it,
+let's actually tilt them,
+27:27 so that they play nicely together
+27:29 with our established composition guide.
+27:31 Also, we can fill this spot
+27:33 with some cans and planks as well.
+27:39 And this looks better.
+27:41 Finally, when you're all done
+and happy with your scene,
+27:44 you can increase these samples here,
+27:46 though in case of EEVEE I found it's not
+27:49 that necessary to go
+overboard with the samples.
+27:52 Make your render size to 100
+27:54 and render your image with F12.
+27:57 Then, with it rendered,
+you can always improve it
+27:60 in a compositing software of your choice.
+28:03 So I choose Blender's Compositor.
+28:08 Here you can add various
+post-production effects
+28:10 like Vignette to add those
+little edge imperfections
+28:13 that lenses normally have.
+28:15 Let's quickly set it up.
+28:17 Add an ellipse mask here,
+28:19 blue node as well in between these two,
+28:21 and plug it into a mix
+node, set to multiply.
+28:26 Then just set up the width and
+height of the ellipse mask,
+28:30 and in the blur node set this to relative
+28:33 and about 40% for x and y is good enough.
+28:37 In the end you can have
+a look at the difference
+28:40 between the two versions
+with and without vignette,
+28:44 and you can control the
+intensity of the vignette
+28:46 here in this factor value.
+28:50 One more way to make
+all this more cinematic
+28:53 is to add a film grain to it,
+28:55 another thing that happens
+to camera shots you record.
+28:59 They have this very
+specific noise in them.
+29:01 So for that I have a noise texture,
+29:05 and I've added it to the project file,
+29:07 so you just find it in the
+description and download it,
+29:10 and then you can import
+it into Blender scene
+29:13 and mix it together with the
+result using the overlay mode,
+29:17 which is the correct one for
+mixing grain into your shots.
+29:24 Last thing we can do is
+to add a curves node here,
+29:27 and play around with these lines.
+29:29 First let's go to the blue channel
+29:31 and raise the blue shadows down here.
+29:34 That's something most films have,
+29:36 some nice blues in their dark areas.
+29:39 Also, you can lower the green highlights,
+29:41 but let's actually add
+one more point here,
+29:44 so that really only the
+highlights are adjusted.
+29:47 With this change you
+make the orange regions
+29:49 slightly more intense,
+29:51 which tends to be pleasing to the eye,
+29:54 since we as humans
+simply love skin colors.
+29:57 Finally, let's try to
+add a bit more contrast.
+30:01 And with that, have a
+look at the final image.
+30:05 Not bad compared to the
+original one, I think.
+30:11 Not bad at all.
+30:14 And here we are, my friends.
+30:15 Remember, all these
+tips are just guidelines
+30:18 and nothing is really set in stone.
+30:20 You will do well not
+to underestimate them,
+30:22 learn them and relearn them,
+30:24 and of course actively search
+30:26 for them in movies and paintings.
+30:28 Also, these tips that I provided are just
+30:30 scratching the surface of this topic.
+30:32 So definitely do some research,
+buy books, watch tutorials.
+30:36 And if you want some
+inspiration in this field,
+30:39 definitely read the
+description of the video,
+30:41 I will share some books and courses there.
+30:44 But that's it for today.
+30:45 I hope you learned something practical
+30:47 that you will incorporate
+into your workflows.
+30:49 Stay creative, my friends, and
+until next time, Martin out.
+30:53 (dramatic music)

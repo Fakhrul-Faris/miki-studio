@@ -1,0 +1,1309 @@
+00:01 right so getting good at this one thing
+00:03 
+
+00:03 which is creating cool environments in
+00:06 
+
+00:06 blender has completely transformed my
+00:07 
+
+00:08 life and what I do so this has basically
+00:09 
+
+00:09 just given me the freedom to be able to
+00:11 
+
+00:11 get up and do whatever the hell I want
+00:14 
+
+00:14 all day any day of the week that most of
+00:16 
+
+00:16 the time that happens to be just working
+00:17 
+
+00:17 on this because this is what I like
+00:18 
+
+00:18 doing but yeah having the freedom to
+00:20 
+
+00:20 choose whatever I want to do all day any
+00:22 
+
+00:22 day is is pretty insane all right so in
+00:25 
+
+00:25 this one I just want to talk about how
+00:27 
+
+00:27 to get really good at creating
+00:29 
+
+00:29 environments in blender all the stuff
+00:30 
+
+00:30 that's helped me over the past couple
+00:31 
+
+00:31 years how I've learned all this and what
+00:34 
+
+00:34 you can do to start making better
+00:35 
+
+00:35 environments as quickly as possible and
+00:37 
+
+00:37 yeah basically just all the advice that
+00:39 
+
+00:39 I can think of to help you out so let's
+00:41 
+
+00:41 go so before I discovered lender I was
+00:43 
+
+00:44 about 17 or 18 I can't remember exactly
+00:46 
+
+00:46 but I was about to graduate high school
+00:49 
+
+00:49 and I was in this situation where I had
+00:51 
+
+00:51 I didn't have a job I wasn't making any
+00:53 
+
+00:53 money I was not going to go to school I
+00:55 
+
+00:55 just I knew that like University just
+00:57 
+
+00:57 wasn't for me and I didn't have any like
+00:59 
+
+00:59 followers or anything I pretty much had
+01:02 
+
+01:02 no Direction it was you know when you're
+01:04 
+
+01:04 in that situation it's not a great
+01:05 
+
+01:05 feeling when family and friends ask what
+01:07 
+
+01:07 you're going to do with your life
+01:08 
+
+01:08 because everyone else is going to school
+01:09 
+
+01:09 and working and stuff
+01:11 
+
+01:11 you know I never had an answer it was I
+01:13 
+
+01:13 always kind of just mumbled and stumbled
+01:15 
+
+01:15 through it and it was you know it's
+01:16 
+
+01:16 embarrassing when you're in that
+01:17 
+
+01:17 situation and this is right around the
+01:19 
+
+01:19 time that I discovered blender and
+01:21 
+
+01:21 honestly I got pretty obsessed with it
+01:23 
+
+01:23 so you know I spent a few years getting
+01:24 
+
+01:24 good at it getting advice from other
+01:26 
+
+01:26 artists from other successful artists on
+01:28 
+
+01:28 like how to actually make this work
+01:30 
+
+01:30 watching endless tutorials but you know
+01:32 
+
+01:32 most importantly just putting in the
+01:34 
+
+01:34 Reps of actually sitting down and using
+01:36 
+
+01:36 the software and creating stuff and
+01:38 
+
+01:38 making art and doing that is What's led
+01:40 
+
+01:40 me to where I am now where I can I can
+01:42 
+
+01:42 charge a lot of money for what I do this
+01:44 
+
+01:44 is my full-time income it's just doing
+01:46 
+
+01:46 this pretty much most of my income comes
+01:48 
+
+01:48 from client work so for example I think
+01:49 
+
+01:49 most you guys have seen this like the
+01:51 
+
+01:51 illenium album cover for example or like
+01:54 
+
+01:54 my art was on the Asus website for the
+01:56 
+
+01:56 pro art Awards like I'm not bringing the
+01:58 
+
+01:58 stuff up to try and like Flex or
+01:59 
+
+01:59 something I'm just showing you like I
+02:01 
+
+02:01 want to like hopefully Inspire some of
+02:03 
+
+02:03 you guys and show you what's possible if
+02:05 
+
+02:05 you get really good at this and so I
+02:06 
+
+02:06 cannot tell you how to become successful
+02:09 
+
+02:09 but I can't tell you what's worked for
+02:10 
+
+02:10 me and what's worked for me is literally
+02:12 
+
+02:12 just getting as good as possible at this
+02:14 
+
+02:14 and then sharing that as much as
+02:16 
+
+02:16 possible I pretty much only do
+02:18 
+
+02:18 environments and so in this one I'll
+02:20 
+
+02:20 just talk about you know some of the
+02:22 
+
+02:22 best tips and advice that I can give you
+02:24 
+
+02:24 to start making better environments and
+02:26 
+
+02:26 all the stuff that's helped me over the
+02:27 
+
+02:27 last couple years so I've got three
+02:29 
+
+02:29 major points I want to cover so the
+02:30 
+
+02:30 first one is prioritize getting good at
+02:33 
+
+02:33 lighting and camera angles above
+02:35 
+
+02:35 everything else the reason I'm saying
+02:37 
+
+02:37 that is because
+02:38 
+
+02:38 when you start learning this there's so
+02:40 
+
+02:40 many different areas you need to cover
+02:41 
+
+02:41 like there's modeling you'll be
+02:42 
+
+02:42 unwrapping geometry nodes particle
+02:44 
+
+02:44 systems sculpting the time like there's
+02:47 
+
+02:47 there's so many different areas that you
+02:49 
+
+02:49 could focus on and learn and put your
+02:51 
+
+02:51 time and energy into
+02:53 
+
+02:53 but none of it none of that stuff really
+02:55 
+
+02:56 matters at all if you can't capture what
+02:59 
+
+02:59 you're looking at in a pleasing way and
+03:01 
+
+03:01 that's what lighting and camera angles
+03:03 
+
+03:03 do is it allows you to capture things in
+03:05 
+
+03:05 a nice
+03:06 
+
+03:06 good like pleasing to look at way
+03:08 
+
+03:08 so you can imagine you could have like
+03:09 
+
+03:09 the best Geometry nodes most amazing
+03:12 
+
+03:12 geometry notes setup ever combined with
+03:14 
+
+03:14 like the most intricate sculpting you've
+03:16 
+
+03:16 ever done combined with the best UV
+03:17 
+
+03:17 unwrapping combined with the best models
+03:19 
+
+03:19 if you don't capture that in a way
+03:20 
+
+03:20 that's nice to actually look at it
+03:23 
+
+03:23 doesn't matter what's in there it's not
+03:24 
+
+03:24 going to look good
+03:25 
+
+03:25 and you know the opposite of that is
+03:27 
+
+03:27 true as well like if you only
+03:29 
+
+03:29 are good at the lighting and camera
+03:30 
+
+03:30 angle part the rest of like the
+03:32 
+
+03:32 technical stuff can kind of suffer a
+03:34 
+
+03:34 little bit even like you can have stuff
+03:36 
+
+03:36 that's technically bad and light it and
+03:40 
+
+03:40 capture it well and it will look good
+03:42 
+
+03:42 and so that's why I think that's the
+03:44 
+
+03:44 most important skill to learn first like
+03:45 
+
+03:45 that's the biggest bottleneck you have
+03:47 
+
+03:47 to get through to where things will
+03:48 
+
+03:48 start looking good is like can you
+03:50 
+
+03:50 present it nicely and that's exactly
+03:51 
+
+03:51 what lighting and camera angles do just
+03:53 
+
+03:53 one tip for lighting really quick is
+03:54 
+
+03:54 just keep it as simple as possible most
+03:57 
+
+03:57 of the time my scenes generally have
+03:59 
+
+03:59 like one or two maybe three lights in
+04:02 
+
+04:02 them you know once in a while you'll
+04:04 
+
+04:04 have one that goes like way over that
+04:05 
+
+04:05 and there's way more but like almost all
+04:08 
+
+04:08 my renders most of the time have one or
+04:10 
+
+04:10 two lights at most and when you when you
+04:12 
+
+04:12 keep it simple like that it's so much
+04:14 
+
+04:14 easier to deal with because you're not
+04:16 
+
+04:16 like you're not dealing with 50 lights
+04:17 
+
+04:17 and trying to make 50 lights all look
+04:19 
+
+04:19 good and fit together so you don't have
+04:21 
+
+04:21 to worry about that it's just like
+04:22 
+
+04:22 easier to deal with less lights because
+04:24 
+
+04:24 there's less problems to go wrong but it
+04:27 
+
+04:27 also just happens to look much cleaner
+04:29 
+
+04:29 most of the time and much better you
+04:31 
+
+04:32 might be surprised if you've never tried
+04:33 
+
+04:33 this like keep the lighting as simple as
+04:34 
+
+04:34 possible I like to minimize the number
+04:36 
+
+04:36 of Lights as much as I can and that just
+04:38 
+
+04:38 makes it much easier to get good results
+04:40 
+
+04:40 um one tip for getting good with camera
+04:41 
+
+04:41 angles is literally just use a camera so
+04:44 
+
+04:44 you can use your phone too like your
+04:46 
+
+04:46 phone has a camera it it's the same
+04:47 
+
+04:47 thing just practice going out into real
+04:50 
+
+04:50 life and getting trying to get good
+04:52 
+
+04:52 photos
+04:54 
+
+04:54 um I would also recommend just following
+04:55 
+
+04:55 photographers online and just trying
+04:57 
+
+04:57 like looking look at what they do watch
+04:59 
+
+04:59 photography tutorials and listen to how
+05:01 
+
+05:02 photographers talk about the angles they
+05:03 
+
+05:03 choose and the settings they use and all
+05:05 
+
+05:05 that type of stuff and that applies
+05:07 
+
+05:07 directly to what we're doing here with
+05:09 
+
+05:09 environments and like I said capturing
+05:11 
+
+05:11 things in a pleasing way that's all
+05:13 
+
+05:13 photography is so I'd recommend learning
+05:15 
+
+05:15 at least a little bit about that and
+05:16 
+
+05:16 that'll translate super well into 3D
+05:18 
+
+05:18 okay the second thing I want to cover
+05:19 
+
+05:19 here is get access to good models and
+05:22 
+
+05:22 good textures
+05:24 
+
+05:24 so I'll talk about Textures in a second
+05:25 
+
+05:25 but models
+05:27 
+
+05:27 um this could mean just get good ad
+05:29 
+
+05:29 modeling I think that's a really
+05:30 
+
+05:30 important skill I've seen a lot of
+05:32 
+
+05:32 artists who don't know how to model and
+05:34 
+
+05:34 it looks like a pain in the ass and it's
+05:36 
+
+05:36 it's it's very convenient to know how to
+05:38 
+
+05:38 model something like you need some
+05:40 
+
+05:40 little structure you don't have to spend
+05:41 
+
+05:41 an hour going to find it you just
+05:43 
+
+05:43 quickly make it and it's done and you
+05:44 
+
+05:44 don't have to worry about it it's super
+05:46 
+
+05:46 super handy knowing how to model it's
+05:47 
+
+05:47 also valuable having a big asset library
+05:49 
+
+05:49 and having places where you can go and
+05:51 
+
+05:51 just buy models too so some places that
+05:54 
+
+05:54 I use to get my models are when I model
+05:56 
+
+05:56 it myself but also
+05:58 
+
+05:58 CG Trader and turbo squid are going to
+05:60 
+
+05:60 be the biggest just general marketplaces
+06:02 
+
+06:02 for 3D sketchfab is pretty good uh this
+06:05 
+
+06:05 it's hard to find free stuff and also
+06:08 
+
+06:08 you've got to watch out for like a lot
+06:10 
+
+06:10 of the free stuff is actually not cc0 so
+06:13 
+
+06:13 it's required on their site that you
+06:15 
+
+06:15 have to give attribution to a lot of the
+06:17 
+
+06:17 models so just watch over that but there
+06:19 
+
+06:19 is some cool good free cc0 stuff if you
+06:22 
+
+06:22 look for it
+06:23 
+
+06:23 the next place that I used to get models
+06:26 
+
+06:26 myself is quicksil Mega scans so
+06:28 
+
+06:28 there it's a great service but there is
+06:30 
+
+06:30 one caveat is that with the latest
+06:32 
+
+06:32 versions of blender this is not really
+06:34 
+
+06:34 fully compatible
+06:36 
+
+06:36 I'm not really sure why they haven't
+06:37 
+
+06:37 fixed it I've asked them about it they
+06:39 
+
+06:39 haven't told me why or when it's going
+06:41 
+
+06:41 to be fixed so it works it's just janky
+06:43 
+
+06:43 you just have to kind of rearrange a few
+06:45 
+
+06:45 things and it's kind of annoying but it
+06:47 
+
+06:47 still works uh so quickly makes sense is
+06:49 
+
+06:49 pretty good same for textures
+06:51 
+
+06:51 kid bash 3D is pretty good if you don't
+06:53 
+
+06:53 have a really good computer though it is
+06:55 
+
+06:55 pretty heavy the main point here is just
+06:57 
+
+06:57 get like organized models and get a
+06:60 
+
+06:60 collection of good models that you can
+07:02 
+
+07:02 use that's going to make it much easier
+07:03 
+
+07:03 to build good looking scenes okay for
+07:05 
+
+07:05 textures uh yeah ambient CGS probably
+07:08 
+
+07:08 the best free site because you can get
+07:09 
+
+07:09 free 4K textures
+07:12 
+
+07:12 textures.com is also pretty good
+07:14 
+
+07:14 um depends what you need just both those
+07:16 
+
+07:16 websites are just free Texture websites
+07:18 
+
+07:18 texturing isn't really something you
+07:20 
+
+07:20 need to get that good at as a skill in
+07:21 
+
+07:21 itself because like there's so many free
+07:24 
+
+07:24 textures that are really good online
+07:26 
+
+07:26 that you can just use that are done that
+07:28 
+
+07:28 you just download and apply that are
+07:30 
+
+07:30 finished that you don't need to like
+07:32 
+
+07:32 there's not that much you need to learn
+07:34 
+
+07:34 about doing that other than how to set
+07:35 
+
+07:35 it up once
+07:37 
+
+07:37 and you know like the most you'll have
+07:39 
+
+07:39 to do is like maybe make a thing darker
+07:42 
+
+07:42 here and there or like adjust the
+07:43 
+
+07:43 roughness a little bit or like turn down
+07:45 
+
+07:45 the normal map slightly like there's not
+07:47 
+
+07:47 that much you have to learn with
+07:48 
+
+07:48 texturing it's just like a very simple
+07:50 
+
+07:50 system that you have to learn to set up
+07:52 
+
+07:52 once and then you know how to do it from
+07:53 
+
+07:53 there at least that's true with the kind
+07:55 
+
+07:55 of stuff that I do like if you're
+07:56 
+
+07:56 working on like really up close models
+07:58 
+
+07:58 and you need to like really dive in uh
+08:02 
+
+08:02 adjust and like mix together different
+08:04 
+
+08:04 textures and edgeware and uh apply like
+08:07 
+
+08:07 really intricate grunge and that kind of
+08:09 
+
+08:09 stuff then yeah maybe you need to dive
+08:11 
+
+08:11 into that a little bit more and uh you
+08:13 
+
+08:13 can't just get away with slapping on a
+08:15 
+
+08:15 free texture and calling it done for the
+08:17 
+
+08:17 kind of environments that I do uh it's
+08:19 
+
+08:19 you really don't need to know that much
+08:21 
+
+08:21 about texturing it'll kind of just come
+08:22 
+
+08:22 naturally as you get good at 3D in
+08:24 
+
+08:24 general so a lot of people have been
+08:25 
+
+08:25 asking me about my asset library and
+08:27 
+
+08:27 also about showing my full creation
+08:29 
+
+08:29 process of making an artwork like start
+08:31 
+
+08:31 to finish so I actually have a new
+08:33 
+
+08:33 course available where I show you the
+08:35 
+
+08:35 creation process the full creation
+08:36 
+
+08:36 process of three entirely different
+08:38 
+
+08:38 artworks made from like zero percent
+08:40 
+
+08:40 start all the way through to 100 finish
+08:42 
+
+08:42 explain the whole way through as easy as
+08:45 
+
+08:45 I can it also comes with three different
+08:46 
+
+08:46 asset packs so the first one is the
+08:48 
+
+08:48 fantasy asset pack so it comes with like
+08:50 
+
+08:50 arches intricate pillars treasure chests
+08:54 
+
+08:54 barrels pots Etc the next one is the
+08:57 
+
+08:57 Sci-Fi slash industrial asset pack that
+08:59 
+
+08:59 one comes with rooftop antennas wires
+09:02 
+
+09:02 just industrial pieces buildings and
+09:05 
+
+09:05 then the last one is the photo scans
+09:06 
+
+09:06 asset pack which comes with like rocks
+09:08 
+
+09:08 Roots uh just terrain just stuff to add
+09:11 
+
+09:11 life to your renders all these packs are
+09:12 
+
+09:12 very easy to set up you just download
+09:13 
+
+09:14 the blend file select all the objects
+09:15 
+
+09:15 right click mark his asset and then just
+09:18 
+
+09:18 save the blend file and then you're
+09:20 
+
+09:20 pretty much done and you can just
+09:21 
+
+09:21 instantly use them in any project you
+09:23 
+
+09:23 want if you're not familiar with how to
+09:24 
+
+09:24 use the acid browser there's also a
+09:26 
+
+09:26 tutorial included in them showing
+09:28 
+
+09:28 exactly how to set it up that's just in
+09:29 
+
+09:29 case you know how to use it there's a
+09:30 
+
+09:30 lot more that I didn't mention here
+09:31 
+
+09:31 that's included with this if you want to
+09:33 
+
+09:33 check that out just it's the first link
+09:34 
+
+09:34 in the description of this video the
+09:36 
+
+09:36 third tip is work efficiently so this is
+09:39 
+
+09:39 not a video on productivity but you know
+09:43 
+
+09:43 this is a video on how to make the best
+09:44 
+
+09:44 renders possible the thing is one of the
+09:47 
+
+09:47 key things to make the best renders
+09:49 
+
+09:49 possible is actually being productive
+09:51 
+
+09:51 staying focused being organized all that
+09:53 
+
+09:53 type of stuff I'll just give you some
+09:54 
+
+09:54 quick tips here but the first thing is
+09:56 
+
+09:56 stay focused and if you're not good at
+09:59 
+
+09:59 that get good at being focused when you
+10:01 
+
+10:02 go to create a render have like an hour
+10:04 
+
+10:04 or two chunk of time even if you don't
+10:05 
+
+10:05 use the full two hours just have a chunk
+10:07 
+
+10:07 of time that you are just purely doing
+10:11 
+
+10:11 work and you're not distracted at all at
+10:12 
+
+10:12 all so like don't have any videos in the
+10:15 
+
+10:15 background don't have any podcast don't
+10:16 
+
+10:16 have the TV on don't be checking your
+10:17 
+
+10:17 phone especially this is something I
+10:19 
+
+10:19 struggled with a lot while I was trying
+10:21 
+
+10:21 to get good and as soon as I cut all
+10:23 
+
+10:23 that stuff out like I realized it's so
+10:26 
+
+10:26 much easier to get much more high
+10:29 
+
+10:29 quality work done without any
+10:30 
+
+10:30 distractions so
+10:32 
+
+10:32 please trust me when I say that like you
+10:34 
+
+10:34 will destroy the people who are not
+10:35 
+
+10:35 doing this if you start doing this the
+10:36 
+
+10:36 next thing is stay organized so this
+10:38 
+
+10:38 means like files on your computer like
+10:41 
+
+10:41 all the textures image files whatever
+10:43 
+
+10:43 other you know organize the blend files
+10:46 
+
+10:46 in a way that makes sense just be
+10:47 
+
+10:47 organized with all that but also like
+10:49 
+
+10:49 keep the asset browser organized
+10:51 
+
+10:51 um keep your blender windows and your
+10:53 
+
+10:53 default file organized all that type of
+10:55 
+
+10:55 stuff like just have a workflow that's
+10:56 
+
+10:56 as efficient for you as possible and
+10:59 
+
+10:59 that helps with like you know the days
+11:01 
+
+11:01 when you're not motivated it's so much
+11:03 
+
+11:03 easier to just get into this and just
+11:05 
+
+11:05 start making something and turn that
+11:07 
+
+11:07 into like just get into the flow really
+11:09 
+
+11:09 fast that's one thing the other thing
+11:10 
+
+11:10 too is like while you're working it's
+11:12 
+
+11:12 just faster so you'll just save time
+11:14 
+
+11:14 and you know that adds up a lot over
+11:17 
+
+11:17 time too one more thing under this
+11:18 
+
+11:18 category of work efficiently is whenever
+11:20 
+
+11:20 you start a render start with a scene
+11:23 
+
+11:23 blockout or like whatever thing is going
+11:26 
+
+11:26 to have the biggest effect on what the
+11:27 
+
+11:27 overall image looks like in the end
+11:29 
+
+11:29 so like I've made this mistake plenty of
+11:30 
+
+11:30 times too where you start working on
+11:32 
+
+11:32 something and then you like what you do
+11:33 
+
+11:33 straight away is you start modeling some
+11:35 
+
+11:35 intricate little piece that's not going
+11:37 
+
+11:37 to be the main focus and then you spend
+11:39 
+
+11:39 all this time on it and then you zoom
+11:40 
+
+11:40 out after like 40 minutes and then in
+11:43 
+
+11:43 the frame it's like this tiny piece that
+11:45 
+
+11:45 is like not an important part of the
+11:48 
+
+11:48 picture
+11:49 
+
+11:49 and then you look at that and you're
+11:50 
+
+11:50 like you just realized you've just spent
+11:52 
+
+11:52 40 minutes on like one percent of what
+11:55 
+
+11:55 you need to do and it's just very
+11:56 
+
+11:56 depressing and not motivating at that
+11:59 
+
+11:59 point what you're looking at and it's
+12:00 
+
+12:00 very easy to lose all hope at that point
+12:02 
+
+12:02 because you know you zoom out and you
+12:03 
+
+12:03 see the frame is still like empty still
+12:05 
+
+12:05 except for this one little thing I've
+12:07 
+
+12:07 done that a lot I think it's much more
+12:08 
+
+12:08 efficient to just start with the things
+12:10 
+
+12:10 that have the biggest overall effect on
+12:12 
+
+12:12 what the picture looks like so this
+12:14 
+
+12:14 could be like I said some people do this
+12:15 
+
+12:15 with a scene blockout where they just
+12:17 
+
+12:17 take like cubes and like cylinders and
+12:19 
+
+12:19 they literally just
+12:20 
+
+12:20 add these basic shapes around and like
+12:22 
+
+12:22 map out where all the objects are going
+12:23 
+
+12:23 to be and then you can add like basic
+12:24 
+
+12:24 lighting and a basic camera angle from
+12:26 
+
+12:26 there that way you have something to
+12:27 
+
+12:27 look at straight away the other thing
+12:29 
+
+12:29 you can do is just use pre-made models
+12:31 
+
+12:31 like Drop in kit bash models or drop-in
+12:33 
+
+12:33 models you downloaded somewhere and that
+12:34 
+
+12:34 will be like your starting point for
+12:36 
+
+12:36 like blocking it out just as fast as
+12:38 
+
+12:38 adding the basic shapes but these things
+12:40 
+
+12:40 are actually finished objects so I do
+12:41 
+
+12:41 that a lot you could also just start
+12:43 
+
+12:43 with the object that has
+12:45 
+
+12:45 like the most importance in the image
+12:47 
+
+12:47 like the focal point of the image
+12:49 
+
+12:49 so for example like in this one here
+12:51 
+
+12:51 I started making this with
+12:53 
+
+12:53 the fan itself and then everything else
+12:56 
+
+12:56 I kind of built around that so I didn't
+12:58 
+
+12:58 start with a scene blockout necessarily
+12:60 
+
+12:60 but I started with the main object that
+13:03 
+
+13:03 takes up like the most space in the
+13:04 
+
+13:04 frame and so that that's what allowed me
+13:07 
+
+13:07 to you know continue working on it and
+13:09 
+
+13:09 have actually stay motivated throughout
+13:11 
+
+13:11 the entire thing and have a clear sense
+13:12 
+
+13:12 of direction right from the beginning
+13:14 
+
+13:14 all right if you made it this far in
+13:15 
+
+13:15 this video you might want to go check
+13:16 
+
+13:16 out that course I mentioned earlier like
+13:18 
+
+13:18 I said it comes with
+13:20 
+
+13:20 um three I create three different
+13:21 
+
+13:21 artworks start to finish
+13:23 
+
+13:23 you get access to all those blend files
+13:25 
+
+13:25 there's also those three asset packs
+13:28 
+
+13:28 that it comes with that you can use in
+13:29 
+
+13:29 literally any project you want you just
+13:30 
+
+13:30 drag and drop any of those things in
+13:32 
+
+13:32 there
+13:33 
+
+13:33 um it also comes with a bunch of other
+13:34 
+
+13:34 stuff too like a couple other packs and
+13:36 
+
+13:36 there's also sections on like
+13:37 
+
+13:37 inspiration staying motivated how to get
+13:39 
+
+13:39 ideas how I optimize my workflow and how
+13:42 
+
+13:42 I get all done extremely fast yeah
+13:44 
+
+13:44 honestly I know there's something like I
+13:46 
+
+13:46 am selling but I'm honestly like very
+13:48 
+
+13:48 very excited about this I think it's
+13:50 
+
+13:50 it's actually sick so if you want to go
+13:52 
+
+13:52 check it out it's the first link in the
+13:53 
+
+13:53 description and uh yeah hopefully this
+13:55 
+
+13:55 video was useful and I'll see you around

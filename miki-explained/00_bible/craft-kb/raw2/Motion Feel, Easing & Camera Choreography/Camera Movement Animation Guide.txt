@@ -1,0 +1,505 @@
+00:00 You can make an animation look really
+00:02 
+
+00:02 impressive and high quality by adding
+00:04 
+
+00:04 camera movement. And the great thing is
+00:06 
+
+00:06 that you don't need an expensive program
+00:08 
+
+00:08 to do it. There are quite a few methods
+00:10 
+
+00:10 you can use. One of which is animating
+00:12 
+
+00:12 your background by hand. This is a great
+00:14 
+
+00:14 way to create an infinitely looping
+00:16 
+
+00:16 animation. Draw in the background
+00:17 
+
+00:17 element you want to be moving, ideally
+00:19 
+
+00:19 containing distinguishable sections that
+00:21 
+
+00:21 are the same type of object. Now, the
+00:23 
+
+00:23 goal is to make each of these chunks
+00:25 
+
+00:25 morph into the one directly next to it.
+00:27 
+
+00:27 In your second frame, draw what the in
+00:29 
+
+00:29 between state of this morphing would
+00:31 
+
+00:31 look like. Be creative with how you make
+00:33 
+
+00:33 details and shapes appear, disappear, or
+00:36 
+
+00:36 change. And also, don't forget to
+00:37 
+
+00:37 include a new chunk starting to appear
+00:39 
+
+00:39 at the beginning of the chain, as well
+00:41 
+
+00:41 as leaving view at the end. As you then
+00:43 
+
+00:43 fill in the gaps with more frames to
+00:45 
+
+00:45 make the movement smoother, keep in mind
+00:47 
+
+00:47 the directions these objects should be
+00:49 
+
+00:49 traveling in, and be careful to not have
+00:50 
+
+00:50 it move backwards at any point. I have
+00:52 
+
+00:52 my next frame shown in red, so I always
+00:54 
+
+00:54 know to make my object move towards the
+00:56 
+
+00:56 red. This isn't an ideal option if
+00:58 
+
+00:58 you're wanting to have a very detailed
+01:00 
+
+01:00 background, but it is great if you want
+01:02 
+
+01:02 this hand-drawn style, and you don't
+01:04 
+
+01:04 need a very fancy program to pull it
+01:06 
+
+01:06 off. The next option is more common, and
+01:08 
+
+01:08 that is zooming or panning around your
+01:10 
+
+01:10 scene with either a camera tool or
+01:13 
+
+01:13 sliding and scaling the objects
+01:14 
+
+01:14 themselves with key frames. whichever
+01:16 
+
+01:16 option. The basic idea of it is that you
+01:18 
+
+01:18 make a key frame on a timeline with the
+01:20 
+
+01:20 scene position to where you want the
+01:22 
+
+01:22 camera motion to begin. Then move
+01:24 
+
+01:24 further down the timeline and make a new
+01:26 
+
+01:26 key frame, changing the position to
+01:28 
+
+01:28 where you want the camera motion to end.
+01:30 
+
+01:30 Then the program fills in the gaps and
+01:32 
+
+01:32 makes it move smoothly from the first
+01:33 
+
+01:33 key frame to the next. Not every
+01:35 
+
+01:35 animation program will have this as a
+01:37 
+
+01:37 feature, so if that's the case for
+01:39 
+
+01:39 yours, you may need to bring your
+01:40 
+
+01:40 animation into another program after the
+01:43 
+
+01:43 drawing part is done. After Effects is
+01:45 
+
+01:45 the most standard professional option
+01:47 
+
+01:47 for piecing together and doing camera
+01:49 
+
+01:49 work for your animations, but most video
+01:51 
+
+01:51 editors, including some free ones,
+01:53 
+
+01:53 should also have what you need. I used
+01:55 
+
+01:55 one called OpenShot here as an example.
+01:57 
+
+01:57 It's pretty limited, but still allows
+01:59 
+
+01:59 you to move an image around with key
+02:01 
+
+02:01 frames. After getting the basic motion
+02:03 
+
+02:03 in, the next step is making your camera
+02:05 
+
+02:05 movement feel realistic. With details
+02:07 
+
+02:07 like slowing to a stop at the end of a
+02:09 
+
+02:09 pan, you should think of your camera as
+02:11 
+
+02:11 like a real camera. It can't just start
+02:13 
+
+02:13 moving fast without picking up speed
+02:15 
+
+02:15 first and can't stop suddenly without
+02:17 
+
+02:17 slowing down. It's the same slow in slow
+02:20 
+
+02:20 out principle that you should be
+02:21 
+
+02:21 applying to the visible stuff in your
+02:23 
+
+02:23 animation as well. Taking this method
+02:25 
+
+02:25 further, instead of having everything on
+02:27 
+
+02:27 the same layer, you can make your scene
+02:28 
+
+02:28 feel more real and less like a flat
+02:30 
+
+02:30 image by separating the elements based
+02:32 
+
+02:32 on distance. Now you can parallax,
+02:35 
+
+02:35 creating the effect where further things
+02:36 
+
+02:36 appear to move slower than closer
+02:38 
+
+02:38 things. If you're doing your camera
+02:40 
+
+02:40 movement in a second program, you'll of
+02:42 
+
+02:42 course need to have all of these
+02:43 
+
+02:43 elements exported as PGs, including the
+02:46 
+
+02:46 animation itself. See if you have the
+02:48 
+
+02:48 option to export your animation as a PNG
+02:50 
+
+02:50 sequence, which will, like it sounds,
+02:52 
+
+02:52 give you each of your frames as
+02:54 
+
+02:54 individual ordered images. Then you can
+02:56 
+
+02:56 look for an option to import the images
+02:58 
+
+02:58 as a sequence into your editing program.
+03:01 
+
+03:01 And this should give you your animation
+03:02 
+
+03:02 as a sort of transparent video that you
+03:04 
+
+03:04 can drag into your scene. For anyone
+03:06 
+
+03:06 working on a mobile device, things such
+03:09 
+
+03:09 as exporting and importing your frames
+03:10 
+
+03:10 like this probably won't be an option,
+03:12 
+
+03:12 in which case you kind of just need to
+03:14 
+
+03:14 be creative and do your best with what
+03:16 
+
+03:16 you have. The most complex fancy thing
+03:18 
+
+03:18 you can try is making your camera move
+03:20 
+
+03:20 around in 3D space. Blender is primarily
+03:23 
+
+03:23 designed for 3D animation, but is
+03:25 
+
+03:25 actually a pretty incredible program for
+03:27 
+
+03:27 2D as well, especially considering it's
+03:29 
+
+03:29 free. There's more than one way to
+03:31 
+
+03:31 create a scene for 2D animation. So,
+03:33 
+
+03:33 I'll just sum up the most simple
+03:35 
+
+03:35 beginner friendly method here. And then
+03:37 
+
+03:37 I'll have some 2D Blender tutorials that
+03:39 
+
+03:39 I like linked below for anyone
+03:41 
+
+03:41 interested. I want to create a new
+03:42 
+
+03:42 environment for this walking creature.
+03:44 
+
+03:44 And I've started by creating some assets
+03:46 
+
+03:46 that can be pieced together, like a
+03:48 
+
+03:48 ground surface, sky background, and
+03:50 
+
+03:50 various objects to place around my
+03:52 
+
+03:52 environment. Now, in Blender, I go to
+03:54 
+
+03:54 add image mesh plane and then import my
+03:57 
+
+03:57 assets with the shader option set to
+03:59 
+
+03:59 shader list. Now I move, scale and
+04:02 
+
+04:02 rotate everything around to build my
+04:04 
+
+04:04 environment. And as I do, I frequently
+04:06 
+
+04:06 check how it looks through the view of
+04:07 
+
+04:07 the camera. Animating the camera is done
+04:09 
+
+04:09 with key frames. The same basic idea as
+04:12 
+
+04:12 any other program. If you have this
+04:14 
+
+04:14 button clicked on, anything you move
+04:16 
+
+04:16 will automatically make a key frame. Now
+04:18 
+
+04:18 I have a finished moving background.
+04:20 
+
+04:20 These two animations are cool to compare
+04:22 
+
+04:22 because even though the idea of them is
+04:24 
+
+04:24 the same, the different ways they were
+04:26 
+
+04:26 made resulted in completely different
+04:28 
+
+04:28 styles. Keep in mind that if you're
+04:30 
+
+04:30 using this Blender method and you want
+04:32 
+
+04:32 your camera to rotate around the scene,
+04:34 
+
+04:34 the flatness of your objects becomes
+04:36 
+
+04:36 much more obvious and doesn't look
+04:38 
+
+04:38 great. For more freedom with your camera
+04:40 
+
+04:40 angles, you'll need to do something
+04:41 
+
+04:41 fancier. So, now I've talked a lot about
+04:43 
+
+04:43 different methods for getting your
+04:45 
+
+04:45 camera to move, but not as much any
+04:46 
+
+04:46 ideas for how to use it to effectively
+04:48 
+
+04:48 improve the look and feel of your
+04:50 
+
+04:50 animations. When you have an action
+04:52 
+
+04:52 taking place that you want to feel more
+04:54 
+
+04:54 punchy or lively, one thing to try is
+04:56 
+
+04:56 following the movement with the camera.
+04:58 
+
+04:58 In this case, I've made the camera pan
+04:60 
+
+05:00 to the right as the character steps in
+05:02 
+
+05:02 that direction. Then it follows the kick
+05:04 
+
+05:04 upward before going back as they go
+05:06 
+
+05:06 back. Compared to the version without
+05:08 
+
+05:08 camera movement, the kick feels much
+05:10 
+
+05:10 more dramatic of an action. A shake
+05:12 
+
+05:12 effect is useful for either when
+05:14 
+
+05:14 something moves past quickly near the
+05:16 
+
+05:16 camera or if you want to make something
+05:17 
+
+05:17 like a punch or explosion feel more
+05:19 
+
+05:19 impactful. This is something you can add
+05:21 
+
+05:21 as an already existing effect in your
+05:23 
+
+05:23 program or create the effect manually
+05:26 
+
+05:26 with a few closely spaced key frames.
+05:28 
+
+05:28 Here are some videos that might help you
+05:30 
+
+05:30 with creating environments for your
+05:31 
+
+05:31 animations. Thanks for watching.

@@ -1,0 +1,49 @@
+00:00 This video is based on the 12 Principles of Animation, as described by Frank Thomas and Ollie Johnston.
+00:05 Alright, so the next principle of animation
+is called Follow Through and Overlapping Action.
+00:10 This is the technique of having body parts and appendages drag behind the rest of the body,
+00:14 and continue to move when the body stops.
+00:16 Follow Through and Overlapping Action are often associated with another technique called Drag.
+00:21 These names all describe the same
+thing, but in different ways.
+00:23 For example, Follow Through refers to the
+way parts of the body continue to move after the body has stopped.
+00:29 Overlapping Action describes the offset between the timing of the main body and its other parts.
+00:33 Drag describes the technique of delaying the movement of body parts in relation to the main body.
+00:38 All three of these are basically
+describing different aspects of the same thing.
+00:42 Follow Through and Overlapping Action add a great deal of realism to a character.
+00:45 Here's a character with and without
+Follow Through and Overlapping Action.
+00:49 Basically when the main body moves, the
+tip of the appendage should be the last to catch up,
+00:54 and when the body stops, the tip should
+follow through the farthest before settling back.
+00:58 This is true of not just appendages, but
+the whole body as well.
+01:01 When coming to a stop, often the body will follow through, and then come back.
+01:05 Just as a character needs to anticipate
+his jump, he also needs to follow through his land.
+01:10 Sometimes the extra skin on a character can be treated as a separate entity with Drag and Follow Through.
+01:15 Similar to Squash and Stretch, the amount of Drag that you give something says something about its mass.
+01:19 The first one is like a TV antenna, while
+the second one is like a feather.
+01:23 It's usually easier to add the appendages after the animation of the main body is finished.
+01:27 When adding hair, for example, use the previous frame as an indicator of where the hair should be stretched towards.
+01:32 Since it has drag, it should be
+dragging from where was in the last frame.
+01:35 In addition, make sure to let the hair follow through when the body comes to a stop.
+01:39 Arms are a good place to insert Follow Through and Overlapping Action.
+01:42 Have the elbows lead the arms actions.
+01:45 The elbow comes first, followed by the forearm, and then hand.
+01:48 This is true even when
+walking. 
+01:49 The forearms drag slightly behind the elbows, and the hands drag slightly behind the forearms.
+01:54 Overlapping action helps to break up an animation to make it more interesting.
+01:58 If we offset the movement of the arms and legs, the animation appears more graceful.
+02:02 If a character is standing up from the ground,
+02:04 we could offset the top half from the
+bottom half to make it look less easy and more realistic.
+02:09 So that's all I've got for Follow Through and overlapping Action,
+02:11 The next principle is called Slow In and Slow Out.
+02:15 Thanks for watching, and I'll see you in the next video!

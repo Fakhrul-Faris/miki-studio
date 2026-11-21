@@ -1,0 +1,178 @@
+00:00 A Match Cut is an editing technique to show a 
+connection and meaning between two scenes and  
+00:05 it's given us some of the most memorable moments 
+in cinema. In animation and motion graphics we can  
+00:10 use it in the same way i want you to understand 
+it you can use it to make more impactful or even  
+00:15 seamless transitions you can use it to make your 
+boring elements feel more interesting and just add  
+00:20 a ton of production value overall and i'm going to 
+show you exactly how a match cut works by having  
+00:25 something match between two scenes that are cut 
+together usually either the subject or the motion  
+00:30 one way is to have two visually similar objects 
+in an environment that is different where the  
+00:35 composition is similar there the subjects 
+match or you can have the motion match and  
+00:39 the subject changes like in 2001 the space 
+odyssey we see the advancement in technology  
+00:44 from a bone tool to a spaceship it is the perfect 
+summary of the themes of the movie we've got the  
+00:49 whole relationship between man and technology 
+in just one editing choice but even without  
+00:54 loading your storytelling shotgun with ideas 
+in context and firing it point blank at the  
+00:58 audience with a cut like this we can exploit this 
+technique to make even something with no substance  
+01:03 seem interesting it is the perfect solution when 
+you don't have enough time or budget to make a big  
+01:07 crazy transition okay here we've got two scenes 
+that aren't connected by anything just a regular  
+01:12 cut and there's nothing wrong with a simple cut 
+despite my initial impressions great motion design  
+01:17 isn't just a series of thrilling transitions one 
+after another sometimes a cut is the best tool to  
+01:22 tell your story but when it's not we can spice 
+things up to connect their motion so let's just  
+01:27 animate the scale of these two comps so the first 
+one we're going to animate are going from 100  
+01:31 to 105 just before the cut so it's zooming in 
+as we cut and let's go into the graph editor and  
+01:37 really accentuate the easing there so we ease out 
+of that first keyframe and really accelerate into  
+01:42 that second one and then do the same for the start 
+of the second clip again going from 100 to 105  
+01:47 but in this one we're going to really ease into 
+that second frame so it's accelerating out of  
+01:51 the cut now let's look at them now this holds your 
+attention much better than this it keeps the pace  
+01:58 up and it's just a great way to elevate scenes 
+without too much work now if you are going to do  
+02:02 this please be mindful and please be subtle the 
+five percent i used here maybe is even overkill  
+02:08 because if you're not careful you're going 
+to end up with a project that looks like this
+02:15 which is fine for your tick tocks and whatever 
+attention span corroding media format comes our  
+02:20 way next to just shock our eyes open long 
+enough for them to slip an ad in there but  
+02:24 there is a reason why they 
+don't edit films like this
+02:30 now scale is one way to animate a match card 
+you can use position as well which is perhaps  
+02:34 even more common you can use rotation and any 
+other property that you can think of it's the  
+02:38 same principle one motion carries over from one 
+scene to the next and you can of course vary the  
+02:42 speed it doesn't need to be the same speed going 
+in and coming out of the car either but that will  
+02:46 be determined by what you're making so here's how 
+i've used it in my what in this personal project i  
+02:52 made explaining australia's favorite boxed wine 
+i used a lot of match cuts so let's take a look  
+02:58 at this section inspired by australia's oldest 
+drinking vessel the pouch today goon is enjoyed  
+03:05 by australians of all ages helping to keep the 
+nation's pride up and perception down all right  
+03:13 this transition here here we're just going from 
+a full screen of yellow and then scaling down  
+03:16 the kangaroo no match cut there but here we cut 
+from the kangaroo's pouch to the goon sack now the  
+03:22 goon sack is a metallic bag filled with the cheap 
+wine and it's often taken out of the box and drunk  
+03:28 upside down in in this fashion and for this 
+transition we've got the motion coming up to the  
+03:33 left as we follow the pouch shape and you can even 
+see there's i think one or two frames beforehand  
+03:38 i've even swapped out to the metallic sac here to 
+just make it a little bit smoother then within the  
+03:43 next pouring scene we match up between all of the 
+heads to show the passing of time as our drinker  
+03:47 ages matching the subject and there's also a 
+subtle rotation to match the motion between  
+03:52 all of them as well as they tilt their head back 
+and then in the next scene there is about a two  
+03:56 frame wipe in between these two scenes but it 
+functions essentially as a cut i did add that  
+04:01 wipe going vertically downwards just so it matched 
+the vo saying perception down helping to keep the  
+04:06 nation's pride up and perception down when you 
+can so here i'm matching the composition no real  
+04:11 motion matching here but add a bit of secondary 
+animation i've also added the coins bouncing as  
+04:16 if they're reacting to the transition as if the 
+cut happening somehow affected the physics of  
+04:20 this world and that's just really here saying hey 
+look at this things are being contrasted in this  
+04:25 scene now in some of these we are kind of pushing 
+the edge of what it means to be a match card on  
+04:29 what is actually a fully formed shape transition 
+but a match card does kind of have the blurry  
+04:33 edge depending on how much extra stuff you put on 
+top of it and i really think if you are wanting  
+04:38 to create a fully formed shape morphe transition 
+starting with a match card is really a great place  
+04:43 to start and then you can just add elements on 
+top and make it more intricate and more connected  
+04:47 between the two scenes so like this literal 
+match card imagine a sword that i use in my  
+04:52 animation course and no this is not a subtle plug 
+for my animation course it's not subtle at all
+05:02 so shameless plugging aside my course 
+does have two full weeks of lessons for  
+05:07 match cards and transitions because i do think 
+they are some of the most challenging but also  
+05:11 most rewarding things in animation and from the 
+first of those lessons the one just on match  
+05:15 cuts the students have created some amazing 
+assignments that i'd like to break down a  
+05:19 bit because they are great examples philip zhang 
+created this one with a beautiful minimal design
+05:28 so let's look at how the subtle motion ties 
+together each scene so starting with the newton's  
+05:32 cradle and the ball swinging left to right and as 
+soon as it hits that ball on the right we cut here  
+05:37 and we see that motion continue going from left 
+to right like this and then it swings back to the  
+05:41 left and as it comes back to the right here that 
+motion is continued that swing up and to the right  
+05:47 is the start of this flower growing and then the 
+flower head detaches and as it does it swings down  
+05:52 to the left and reconnects that motion right back 
+at the beginning with the swinging ball in the  
+05:56 newton's cradle it is such a clever application 
+of a match card i think it is beautiful champion  
+06:01 k created this one and just look at how this tells 
+the story of making a cake just using match cards  
+06:28 this is so clever how we follow through the 
+creation of this cake through just one motion that  
+06:32 shows all of the process and what i really love 
+about this is that it's not just one motion which  
+06:36 it could have been of ingredients falling from 
+top to bottom the motion changes to match what's  
+06:41 happening so the ingredients are coming in they're 
+pouring they're stirring they're mixing and they  
+06:46 all manage to seamlessly be connected which 
+is not an easy task it is really expertly done  
+06:50 and i love this sequence in the oven it breaks up 
+the paste so nicely and then them falling into the  
+06:55 cookie jar transitioning back to the bowl at the 
+beginning i love it and neil cochlin created this  
+07:00 awesome cycling match card that uses composition 
+scale and rotation to match the motion this is  
+07:05 wonderful i love how savanne used a match card 
+for the basis of this transition with this bird
+07:20 owen mckinder created this wonderfully grim 
+halloween themed match card that adds just a  
+07:24 ton of impact especially with the sound design as 
+well and mikhail matched a swinging emotion with  
+07:30 3d rotation as well for even more of a matching 
+motion and i love the subtle touch of the antenna  
+07:35 flying off in the second scene that is perfect 
+now these are all really successful examples but  
+07:41 one of the most important factors of whether 
+your match card is successful as to how well  
+07:44 it is anticipated what animation is happening 
+immediately before that transition and if you  
+07:49 want to know how to do that most effectively 
+you'll want to check out this next video

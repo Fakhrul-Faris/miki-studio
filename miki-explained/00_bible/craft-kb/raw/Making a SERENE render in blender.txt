@@ -1,0 +1,899 @@
+00:00 I'm going to show you how I made this
+00:01 nice Serene render in blender and uh at
+00:04 the very start of the recording I did
+00:06 not like it at all and I'll show you how
+00:08 I got from you know the process actually
+00:11 not going well to this end result that
+00:13 I'm actually quite happy with um and
+00:15 then we're going to cover everything
+00:16 from lighting and some cool tips there
+00:19 and how to manage all that and texturing
+00:21 and how I got this face thing in the
+00:22 middle how I set up the water and how I
+00:25 built basically everything in the scene
+00:27 so I'm just going to show you the most
+00:28 important things that happened along the
+00:29 way the total recording time was 3 hours
+00:31 but I've cut it down to just the most
+00:32 important parts and yeah let's just get
+00:35 into
+00:36 it okay so starting this one off with
+00:38 just a basic blockout to get oriented in
+00:41 this empty void so it's always nice to
+00:43 start with the general shape of the
+00:45 thing you're trying to make so I knew
+00:47 this one was going to be a cylindrical
+00:49 type environment so starting with a
+00:52 cylinder and uh I chose 128 subdivisions
+00:55 on that just so that it's not super
+00:56 Steppy it's more smooth um and then I'm
+00:60 just going in getting a basic camera
+01:01 angle 24 mm to start anywhere around
+01:04 there kind of zoomed out is where I like
+01:05 to start and then um I'm just doing a
+01:08 checker deselect on this thing I
+01:10 couldn't get it to line up perfectly for
+01:12 some reason but I got it close enough to
+01:15 where you can't really tell that it's
+01:18 slightly off but anyways that right
+01:21 there check or deselect and then I just
+01:23 uh extruded those little things in there
+01:26 and then I just added a couple more
+01:27 details from here just to get some basic
+01:32 General detail on the main structure
+01:35 which is just kind of be it's just like
+01:37 the back wall of everything so as I
+01:40 layer on more detail on top of this um
+01:43 you might not see this directly but it's
+01:46 just nice to have that kind of detail in
+01:47 there so it kind of can fill in any
+01:48 empty space or awkwardness later on it's
+01:51 just a good foundation to build off of
+01:53 and uh it's nice to make some stuff like
+01:55 this at the beginning too where it's
+01:57 just like a basic asset that you don't
+01:59 have to spend too much time on this
+02:01 pillar I'm making uh that you can reuse
+02:03 a bunch of times to build the rest of
+02:05 the bigger environment around it so I'm
+02:07 just adding some basic extrusions uh
+02:10 bevels here I just switched the bevel
+02:13 profile to one of the presets uh Cornus
+02:15 molding just for really quick easy F
+02:18 like good and fine preset and then just
+02:20 throw that on there bunch more insets
+02:24 extrusions uh repeat that a bunch of
+02:26 times
+02:27 basically and then um yeah I'm just
+02:29 adding after that a bevel modifier just
+02:32 to kind of round the corners a little
+02:33 bit not too much just a little bit and
+02:35 then U mirror modifier on the Zed axis
+02:38 so I don't have to so I don't have to
+02:39 like model it twice it's just going to
+02:41 be mirrored
+02:42 vertically and then uh there we go we
+02:44 got like a little pillar that I can use
+02:47 a bunch of times throughout the scene so
+02:49 this kind of thing is something that you
+02:50 can duplicate a ton of times and it's
+02:52 not going to look bad it's going to look
+02:54 like good nice repetition so it's it's
+02:57 nice to make one of those and then just
+02:58 reuse it a bunch of times so with this
+03:00 platform here same bevel the Cornus uh
+03:03 molding preset bevel thing in there um
+03:06 and then I'm adding a little cylinder
+03:08 here for I don't know what you call this
+03:10 like a little post thing that's going to
+03:12 be in the
+03:13 railing so uh I reduce the subdivisions
+03:16 way down to 16 to keep it low poly and
+03:18 you will not see it the minimal polygons
+03:21 at all so just keep it low so you can
+03:23 reuse a bunch of times and then uh just
+03:25 modeling a little stupid thing here
+03:27 whatever this is throwing on a bevel and
+03:29 then throwing on and array modifier to
+03:31 get that a bunch of times in a row um I
+03:33 probably should have made it a bit
+03:34 taller in retrospect but whatever and
+03:37 then yeah array a bunch of times
+03:38 duplicate that um and then from here is
+03:41 just like some basic trim little square
+03:45 things that I threw on
+03:47 here um duplicated that around a few
+03:49 times so you know just a little thing on
+03:51 the bottom duplicated that put that up
+03:53 there duplicated again on the very
+03:54 bottom and now I have this little uh
+03:57 platform thing that I can again reuse a
+03:59 bunch of times throughout the scene so
+04:01 there I'm just duplicating it and then
+04:03 joining all those loose pieces together
+04:04 into one mesh just so it's easy to work
+04:07 with taking a texture from quickel
+04:10 quickel is sort of like half sort of
+04:12 working right now still they're moving
+04:14 all their stuff to like uh the new Fab
+04:16 system and it's not um it like the it's
+04:20 still sort of working quickel Bridge so
+04:22 if you used it before you can kind of
+04:23 use it still and yeah this scene looks
+04:27 really different at this stage than it
+04:28 did or than it does in the final render
+04:31 but you'll see kind of how this will
+04:32 transform into into that final image
+04:34 that you
+04:35 saw so there's a lot of things like this
+04:37 texture that I added on the floor that
+04:39 um did not make it into the final image
+04:42 so I'm kind of skipping through a lot of
+04:44 this stuff the full recording was like 3
+04:46 hours I think and um obviously I'm
+04:49 cutting it way down for this video but
+04:52 yeah you're going to see like some of
+04:53 the things it didn't make into the final
+04:55 thing
+04:56 here anyways I'm adding a spotlight for
+04:58 the lighting uh that did make it to the
+04:59 final render
+05:00 and just kind of using this little Cube
+05:03 here to uh have a reference for the
+05:04 scale of everything I decided to
+05:06 duplicate this thing up there's probably
+05:08 a better way to do that but I just kind
+05:11 was lazy with it and duplicated that
+05:12 entire thing up I was still kind of
+05:14 figuring out at this stage exactly where
+05:16 I wanted this to go so that's why I'm
+05:18 okay with
+05:19 trying um more like rough ideas and not
+05:23 keeping everything super refined because
+05:24 it's all very much subject to change so
+05:29 um yeah if you see something that's just
+05:30 like a super obvious mistake I'm
+05:33 probably just not worrying too much
+05:34 about it at the stage where I know that
+05:37 um the final scene is probably going to
+05:39 look way different so really here what
+05:40 I'm trying to do is just uh get it to a
+05:44 point where I can commit to a direction
+05:46 and then go all out with that and I'm
+05:49 trying not to worry about small details
+05:50 too much at this stage so yeah just
+05:53 adding a volume same volume setup I
+05:55 always use just volume scatter on a cube
+05:57 over everything and then lower the
+05:59 density
+06:02 and um yeah again just trying to get get
+06:06 it kind of figured out you know like I'm
+06:07 I'm not super sure at this stage where I
+06:09 want it to
+06:12 go so I think around this point here
+06:14 you're probably seeing uh what took me
+06:16 an hour to get to in like 5 minutes that
+06:18 I'm cutting down here so you know like
+06:23 during the actual process every single
+06:24 time I make a render this happens where
+06:27 before you start and like in the
+06:28 beginning stages there's always a
+06:30 feeling of uncertainty and like like am
+06:33 I am I going to be able to finish this
+06:34 is this going to look good like am I
+06:36 even ever going to be able to make a
+06:37 render sounds silly but like that's
+06:39 literally how it feels is like like damn
+06:42 what if I can never make a good render
+06:43 again that may sound ridiculous but that
+06:47 is actually how it usually feels for me
+06:49 um and I'm definitely feeling that right
+06:51 here at this stage where it's like
+06:52 nothing is going well it looks like in
+06:55 retrospect looks okay but in the moment
+06:57 of making this just super not happy with
+06:59 it at this stage at all
+07:00 and um that's when like the worry sits
+07:02 in and then it's like if you're stressed
+07:04 about it and then that just makes it
+07:07 even harder to make something good cuz
+07:08 you're just worrying about it being bad
+07:10 so that was happening a lot here um so
+07:13 again I'm skipping through a lot of this
+07:15 the the full recording again it was 3
+07:16 hours long right so you're you're seeing
+07:19 like a Ultra speedrun version here I'm
+07:21 trying to show as much detail as I can
+07:22 so you can get a sense of how it was
+07:23 made but in reality it was like a bunch
+07:26 of different directions that didn't work
+07:27 out a bunch of like R going down like
+07:30 random Pathways that just led to nowhere
+07:32 and then deleting stuff and then coming
+07:33 back uh getting frustrated worried the
+07:36 whole time like you know that's just
+07:38 part of the process and it's part of the
+07:39 fun to be honest like it's it makes it
+07:41 more satisfying in the end when you like
+07:44 you like went through a journey to get
+07:45 there you know so it's not a bad thing
+07:47 at all it's just part of the
+07:48 process um anyways back to what I'm
+07:50 actually doing on screen this is the
+07:52 water setup from the last video I posted
+07:55 so if you want to see the like full
+07:57 shading setup for this water that's
+07:59 shown in the video and you can like
+08:00 pause it at the end there's also a
+08:01 tutorial just on the water only on my
+08:04 channel if you want to see that but yeah
+08:06 here I'm just trying to get the lighting
+08:07 kind of more dialed in I really like
+08:09 this lighting setup where it's kind of
+08:11 very um like Godly or like holy sort of
+08:14 looking like Divine lighting where um I
+08:18 don't know I'm just trying to get it to
+08:19 a point where it's it just
+08:21 feels right with the texture and the
+08:23 colors and the light and getting
+08:25 everything kind of balanced out and
+08:27 really like that's one of the most
+08:29 important things to me is getting
+08:30 everything to just feel comfortable
+08:33 Pleasant nice balanced to look at
+08:35 whether it's the colors contrast the
+08:37 amount of light coming in and how it
+08:38 bounces around um I'll spend a long time
+08:41 like trying to balance all those
+08:43 different elements together in a way
+08:45 that feels like whatever Vibe I'm trying
+08:47 to go for so in this case it's like
+08:49 trying to make it as Serene and peaceful
+08:53 and maybe a little bit dark and creepy
+08:55 but in like a peaceful Serene beautiful
+08:57 way that's the vibe I'm trying to go for
+08:59 and and I'll spend a long time usually
+09:01 just trying to dial that in as much as I
+09:05 can and uh yeah so I'm modeling a little
+09:07 Archway here just doing a little start
+09:09 cylinder delete half extr it down add
+09:11 some bevels and then uh that's a little
+09:13 Arch there and then you can even kind of
+09:17 you know go in and add a little couple
+09:18 of trim pieces and then I ended up
+09:20 actually duplicating this entire Archway
+09:23 over onto itself uh you'll see that in a
+09:25 second like five times and then that's a
+09:27 way to add like even more detail with
+09:29 that so you know my modeling strategy is
+09:31 often like just take one little chunk
+09:33 and then duplicate it as many times as
+09:35 possible
+09:37 um and that's usually a good way to like
+09:39 save time so here's what I mean like
+09:41 that's just that little one is just the
+09:42 big one duplicated downwards and then
+09:44 array modifier to get that into a
+09:47 line and then uh you can just you know
+09:50 kind of refine it from there so array
+09:52 get a few of those on there without key
+09:54 framing it and then uh align it apply
+09:57 the modifier and then just kind of force
+09:59 that into place
+10:01 um I don't know if that's the best or
+10:04 most professional mod modeling strategy
+10:06 ever but for a thing like this like it's
+10:08 it works you know okay and then now get
+10:11 that on there throw on a pillar that I
+10:12 made earlier at the beginning and just
+10:14 kind of throw another one on and then a
+10:16 little piece in the Middle with a bevel
+10:18 to top it off and then there you go you
+10:20 got a little Archway model and that's
+10:22 something that you can really easily
+10:24 reuse in future projects or even in the
+10:26 same project as I will do in a second
+10:27 here it's uh just it's really nice to
+10:30 have stuff like that in the file that
+10:32 you can just duplicate around a bunch of
+10:35 times so yeah I'm trying out a bunch of
+10:37 different camera angles here and just
+10:38 trying to figure out like what's going
+10:39 to be better if I should capture it from
+10:40 the bottom looking up or the top looking
+10:43 down uh so I did end up with an angle
+10:45 more like this right here where it's
+10:46 like up above looking kind of downwards
+10:49 which actually isn't something I do that
+10:51 often but it looks really nice when you
+10:53 do it I think
+10:54 sometimes and yeah try just trying to
+10:57 balance everything with like again still
+10:59 at this stage I'm not exactly sure where
+11:01 it's going I do have a better idea at
+11:02 this point right here of where it should
+11:05 go and I think in a second here or maybe
+11:08 in a minute or so I'll really get an
+11:12 idea of what the final thing is going to
+11:13 look like and I'll point that out when
+11:15 that happens here but yeah ended up uh
+11:17 deleting a bunch of stuff there that's
+11:19 actually a a good trick that I do very
+11:21 often is just go
+11:22 and add you know try a bunch of things
+11:25 add a bunch of stuff a lot of it sucks
+11:27 and then just go and delete the stuff
+11:29 that sucks and maybe there's like a
+11:32 little piece that was good and you just
+11:34 kind of keep doing that and
+11:37 eventually after doing that enough times
+11:39 you'll have enough good stuff that you
+11:41 can just keep in
+11:42 there but yeah if you just try a bunch
+11:44 of like try adding a bunch of things try
+11:47 a bunch of different ideas work fast
+11:49 don't refine things too much in the
+11:51 beginning so you can keep uh trying out
+11:53 new ideas on the go and you know trying
+11:55 stuff that may or may not work and then
+11:58 you know delete the stuff that's bad
+11:60 uh that that's usually the way I like to
+12:01 go about it and then it just lets me
+12:03 kind of try as many things as possible
+12:04 and like keep the good stuff and get rid
+12:06 of the bad stuff you
+12:09 know and then yeah I'm just uh throwing
+12:11 in some statues color matching that a
+12:13 bit with the mix RGB that's one thing I
+12:16 like to do a lot is either use a hue
+12:17 saturation or mix RGB node to color
+12:20 match any models that I'm bringing in to
+12:22 the rest of the environment so that it
+12:23 all feels cohesive and like it's kind of
+12:25 in the same
+12:27 space so this is the point here where I
+12:30 got a much better idea
+12:33 of what I wanted it to look like I think
+12:35 I took a really quick like one minute
+12:36 break and came back and that's why I
+12:39 just kind of had this idea in my head
+12:41 like okay I want to I want to add a
+12:42 bunch of like rocks and um these kind of
+12:45 Icelandic uh this is not like a
+12:48 realistic version of it kind of like a
+12:50 overly stylized hexa hexagonal like uh I
+12:54 don't actually know what you call this
+12:55 but like this cluster of hexagonal rocks
+12:58 everywhere you'll see in a second when I
+12:59 actually make it but that kind of
+13:01 layered with rocks kind of layered with
+13:02 trees so it's sort of um almost natural
+13:06 looking but not quite but anyways the
+13:09 point is this stuff right here this is
+13:11 at the point where I was like okay I
+13:13 know where I want this to go now and I
+13:14 can kind of just focus and go all out
+13:16 with this direction here as opposed to
+13:18 before I was just trying a bunch of
+13:19 different things and it's like totally
+13:21 uncertain where it's going to end up if
+13:23 I'm even going to finish it if it's
+13:24 going to be good or not here is actually
+13:28 I think probably 2 hours in or something
+13:30 I'm
+13:31 guessing where I was like okay now I
+13:33 know what I want to do with this and uh
+13:35 it it took you know 2 hours of like
+13:38 uncertainty and not not ending up with
+13:41 something I'm happy with to get to the
+13:43 point where I'm like okay now I know
+13:44 what I want and I can just go and do
+13:46 that it's actually surprisingly easy to
+13:49 finish a render when you have a a really
+13:52 a really clear goal and uh as long as
+13:55 you're somewhat technically proficient
+13:59 that's really the main thing is like
+14:00 having a an idea that you're excited
+14:02 about that you kind of know everything
+14:04 you need to do to get there if you can
+14:06 just get through the beginning phase
+14:08 where everything is hard and it all
+14:09 sucks and get to that point right there
+14:10 where it's like okay now I know what I
+14:12 want this to look like sort of once you
+14:14 get there it's just all downhill from
+14:16 there and it's super easy to just focus
+14:17 and and just
+14:20 like you get to I I don't like to like
+14:23 overuse this term cuz it sounds kind of
+14:25 Airy fairy but like you get into that
+14:26 flow state where stuff just starts
+14:29 happening it's almost like not even you
+14:32 doing it you're just kind of going and
+14:34 like doing actions and stuff on the
+14:35 computer screen is just forming um if
+14:38 you can get to that point it just that's
+14:40 where this becomes really fun and it's
+14:43 just uh one of the most like nice
+14:45 experiences you can have is just being
+14:47 in that state
+14:48 where you're just in the moment making
+14:52 stuff and it's looking good and it's
+14:54 going the way you want that just feels
+14:57 so nice and satisfying and um
+14:60 I don't think I'll ever stop doing that
+15:01 I don't know if it'll always be in this
+15:03 form but it's such a it's such a nice
+15:06 experience to have that it's
+15:08 like yeah it's just uh once you get
+15:11 there it's just that's why I love this
+15:12 you know okay so yeah um I'm adding
+15:16 geometry nodes doing a scatter thing I'm
+15:18 not going to talk about the technical
+15:20 specifics for that but like you know
+15:22 there's a bunch of free videos on
+15:23 YouTube of like how to scatter things
+15:24 with geometry nodes or a particle system
+15:27 um or even literally just hand duplicate
+15:30 this 100 times if you want you know you
+15:31 can do it that way it doesn't matter
+15:33 just get a cluster of this stuff and
+15:34 then start putting it around and you'll
+15:36 get something
+15:38 similar so yeah um I'm kind of just
+15:41 morphing it into place and then it's you
+15:43 know with stuff like this I never knew
+15:45 if this was right or not where it's like
+15:48 stuff is just fully intersecting going
+15:50 through the wall going through the floor
+15:53 there's a bunch of them that are um in
+15:56 the scene but you can't see them because
+15:58 they're actually behind the wall I I
+16:01 don't think that stuff matters at all
+16:03 like it doesn't matter if it's um
+16:06 everything's 100% perfect in the scene
+16:09 really it's just about at least for me
+16:11 in in an artwork like this is just get
+16:13 it to look good in the render viiew and
+16:16 whatever else like however you get there
+16:18 I don't care I just want it to look good
+16:20 in the end you know and obviously with
+16:22 like a you know some game environment
+16:23 you have to be more careful or like
+16:25 you're giving it to a client that has to
+16:26 animate it from a different angle or
+16:27 something yeah you can't just be totally
+16:30 Reckless but uh for a personal work I
+16:34 would say like for me I I'll I'll do
+16:36 whatever it takes to get there and it it
+16:37 doesn't matter to me if it it looks bad
+16:39 from the outside you know or behind the
+16:42 camera one thing I did there with those
+16:43 rocks I'll just mention is color match
+16:45 them as well so just did a quick Hue
+16:47 saturation adjustment the Rocks were
+16:48 Brown and they almost were matching but
+16:50 they were just slightly off so I tweaked
+16:52 the Hue and then it just still looked a
+16:54 bit too saturated so I brought the
+16:55 saturation down and then now those rocks
+16:57 are like perfectly the same color as
+16:58 everything else so it's a nice way to
+17:00 just kind of get everything to match and
+17:02 feel like it's all part of the same
+17:04 environment I'm also picking trees here
+17:06 which are kind of the same color excuse
+17:08 me as well where it's
+17:10 like kind of just you know Brown trees
+17:13 that they just feel right to be there
+17:15 you know if I picked a really green tree
+17:17 it could work and I did actually have
+17:18 some Greener trees in here too but it
+17:20 just seemed nice and right at this stage
+17:22 to keep everything kind of cohesive and
+17:25 then uh obviously with the water with
+17:27 like the blue water that's kind of
+17:29 broken up a little bit and split into
+17:31 like complimentary colors but at this
+17:34 stage it's like I wanted it to be easy
+17:37 to manage and then uh not have too many
+17:39 conflicting colors going on you
+17:42 know okay so yeah I'm Ting that blue and
+17:46 um I I think it's a lot easier to get it
+17:50 to look good if it's and this goes for
+17:52 like anything it's it's a lot easier to
+17:54 get it to look good if it's easy to
+17:56 manage so that's why there's only one
+17:57 light in the scene right now I think I
+17:59 think two lights there's a spotlight and
+18:00 like a really subtle area light that's
+18:02 why there was only one color up to this
+18:04 point and then I'll bringing in Second
+18:06 Color here because in order to balance
+18:10 all these different
+18:11 elements you have to have control over
+18:13 each one and as soon as you have like 10
+18:16 different lights or 10 different colors
+18:18 or you know too many different ideas
+18:21 coming together it you can't manage each
+18:23 one of those on their own so I I think
+18:26 there's a lot of um advantage to
+18:29 Simplicity and like just keeping things
+18:32 as simple as they possibly can be for as
+18:34 long as you can getting the balance
+18:36 right and then only after you've like
+18:40 gotten that to where you want it then
+18:41 start adding in more complexity but you
+18:43 have to take it step by step if you just
+18:44 try and make it complex from the
+18:45 beginning it's often like you just get
+18:47 overloaded and you can't even deal with
+18:48 it and you just give up so that's kind
+18:51 of how I approach that's why it's like
+18:54 you
+18:55 know after two hours I added the second
+18:58 color you know so
+18:59 uh after 2 hours there's still one main
+19:03 light in the scene and the other ones
+19:04 like basically doing almost nothing
+19:06 where it's just like bringing up the
+19:07 Shadows slightly an area light directly
+19:09 above everything but the main the main
+19:11 light is still that one spot light you
+19:14 know so yeah that's how I like to work
+19:16 and just um I think that it applies to
+19:19 so many things not even just within
+19:21 blender but like within a lot of things
+19:23 in in life too so yeah I'm bringing in
+19:25 some more trees here now I'm kind of
+19:27 bringing in a bit more colors where it's
+19:29 like it's still kind of just like a
+19:30 brown tree but it's a little more green
+19:32 you know and I'm still being careful to
+19:35 like not have conflicting colors and
+19:38 stuff um so okay so here's what I'm
+19:40 doing at this point for the lighting I'm
+19:42 happy with the general direction and
+19:44 shape and softness and everything but
+19:46 I'm going to cover up the entire scene
+19:48 with this plane right here so like fully
+19:51 shadowed out by this plane and then I'm
+19:53 dropping on a texture so this is a
+19:56 technique called a lighting Gobo you
+19:58 might have heard of this before
+19:59 so you can either use like a noise
+20:00 texture an image texture just throw
+20:03 objects in front of this light anything
+20:05 you want um so here's the plane you can
+20:07 see that so I'm just running this into
+20:09 the alpha so that some parts are
+20:10 transparent and anything you want in
+20:12 order to cast kind of interesting
+20:15 Shadows onto the scene like this and I
+20:17 particularly like this technique where
+20:19 the lighting is you're happy with it but
+20:22 it's kind of boring where it's not
+20:24 really giving you like it's it's maybe
+20:26 like just overhead like this or uh just
+20:29 needs to be more interesting but you
+20:30 don't want to change the angle this is a
+20:31 great technique where you can like like
+20:35 this here just looks so much more
+20:36 interesting than I did before and even
+20:38 if you don't make it this extreme with
+20:39 like super bright highlights and super
+20:41 dark shadows you just a little bit of
+20:43 that just it makes it feel just nice in
+20:46 some ways where it's like it's kind of
+20:47 the same Vibe as if you're sitting under
+20:49 a tree and like the the sun is shining
+20:51 through the leaves and you're getting
+20:53 some spots of sun and some spots of
+20:54 shade just creates a really nice
+20:56 pleasant feeling of like peace and and
+20:59 if you can have that on your you know in
+21:00 your render it just it really does
+21:03 enhance that feeling of like the kind of
+21:06 serene Vibe the peacefulness the just
+21:09 the the it just makes the lighting more
+21:11 interesting overall it's just nice and
+21:14 feels kind of like nice to look at you
+21:16 know so it's a technique I really like
+21:18 is just throwing some interesting
+21:19 Shadows whether you want to do that with
+21:21 throwing a tree in front of the light
+21:23 manually adding objects in front of the
+21:25 light to cast Shadows or like like I'm
+21:26 doing here like a random image of some
+21:28 water that's uh casting some Shadows on
+21:30 the whole scene doesn't matter how you
+21:33 do it just um get some interesting
+21:35 shadows and there will really help okay
+21:38 so here I'm duplicated that uh platform
+21:40 thing to the other side didn't end up
+21:42 keeping that but you can see what I'm
+21:44 doing here that led to me kind of
+21:45 putting the staircase on top of that um
+21:48 and then I kind of this was kind of like
+21:50 the more final look of having stairs in
+21:52 here stairs stairs and like railings are
+21:54 really nice for showing scale uh if you
+21:57 don't want to put a person directly in
+21:59 there but you still want to show
+22:00 scale putting like you know a very
+22:04 recognizable object like a staircase um
+22:07 railings Birds Windows a chair Furniture
+22:10 stuff like that is um that's a great way
+22:13 to show scale cuz it just gives you a
+22:15 reference point for you know anyone
+22:17 looking at the artwork it subconsciously
+22:19 tells you exactly how big everything
+22:22 else is cuz you automatically know how
+22:24 big you know stairs are and yes they can
+22:26 vary in size but it at least gives you a
+22:28 pretty General like generally accurate
+22:31 idea of how big everything else is um
+22:34 cuz otherwise it's like do you you don't
+22:36 how else would you know how big this
+22:38 thing is you have to have some sort of
+22:40 reference point you
+22:42 know um and you want you want it to be
+22:45 obvious too so that when you first see
+22:46 it within an instant somebody can tell
+22:49 kind of what they're looking at um yeah
+22:53 so here I'm just kind of moving the
+22:54 lighting around and you can see that
+22:55 just by spinning it around the
+22:57 scene that can really alter the mood of
+23:01 the picture so you could I I don't think
+23:05 like any one of those is better than the
+23:06 other it's just depending on the look
+23:08 you want to go
+23:09 for but yeah just interesting how that
+23:12 really shifts the mood if you just move
+23:13 the light around a little bit you
+23:15 know so there I'm duplicating that inner
+23:18 ring thing and I I like having kind of
+23:20 steps within the water like this to show
+23:22 different levels of depth that's really
+23:23 a nice sort of effect um it just looks
+23:27 nice having like a different steps going
+23:29 deeper into the water I don't know why
+23:31 it just kind of makes it look like you'd
+23:32 want to go and sit there or something or
+23:35 kind of like you know go into the water
+23:37 just looks really
+23:38 nice uh and then I'm kind of going and
+23:40 Ting that uh thing a bit more blue here
+23:43 I was I just duplicated the entire water
+23:46 uh Cube thing above itself and this is
+23:48 actually a really interesting look where
+23:50 doubling it up like this looked crazy
+23:52 cuz if you don't know the transparent
+23:54 material there is actually set to a
+23:56 brightness above the one so anything
+23:58 that passes through the water is
+23:59 actually becoming like two or three
+24:01 times brighter than before it's like
+24:03 getting multiplied higher and if you
+24:04 stack up multiple of those water uh
+24:07 surfaces on top of each other it's like
+24:08 getting doubly multiplied so it's kind
+24:11 of a really crazy look that I might do
+24:13 in a future render in this one I didn't
+24:15 stick with that but um I really did like
+24:18 that at the time actually and then one
+24:20 thing I did here which really made a big
+24:21 difference was turning up the number of
+24:23 volume bounces that really helped make
+24:25 the water just look really nice um I
+24:28 forgot to mention that in the water
+24:29 tutorial I did but that's what I ended
+24:31 up with there turn on reflective and
+24:32 refractive cosics too just cuz why
+24:34 not okay so with this thing here this is
+24:37 a random free face model from CG
+24:41 Trader um and you can see that there's
+24:43 right now no Shadows on it and you can't
+24:45 even make out any of the features of the
+24:47 face so one thing I had to do was angle
+24:50 the lighting and angle the face a bit
+24:53 differently um and by the way I just
+24:54 want to mention too if you just go on CG
+24:56 Trader search face you can actually just
+24:58 find a bunch of these for free so if
+24:60 you're wondering where I got that just
+25:02 it's a literally just random free model
+25:04 um so anyways what you're going to see
+25:06 me do here is kind of just delete excess
+25:08 crap that's in the scene that's just you
+25:10 can't even see it's not doing anything
+25:11 it doesn't cast any Shadows it's just in
+25:13 the way that lets me take this light
+25:16 here and then position it at a bit more
+25:17 of an extreme angle and just watch the
+25:19 Shadows on the face and look at how much
+25:21 uh more of the defining features you can
+25:23 see once I angle the light a little bit
+25:25 more of at like an extreme angle here
+25:29 okay so you see that so where as before
+25:32 you couldn't even tell that it was a
+25:33 face it just looked like a blob now as
+25:35 soon as I rotate the light to cast a
+25:37 little bit more extreme Shadows from the
+25:39 face and I angle the face a little bit
+25:41 more away from the light as well by just
+25:43 rotating it then we can get then you can
+25:47 actually tell what's happening because
+25:48 the Shadows reveal the
+25:50 form okay so I'm duplicating that out
+25:54 and I'm going to make some modifications
+25:55 to the second one without affecting the
+25:57 first one and then once I'm happy with
+25:58 with that I'll just link the first one
+25:60 back to the second one I'm doing that
+26:01 just because I was happy with the
+26:02 rotation of the first one I just didn't
+26:04 want to that up so just kind of
+26:06 doing it on a separate thing and then I
+26:08 can just link the first one to the
+26:09 second one when I'm ready uh and also
+26:11 it's nice to kind of do it in a separate
+26:12 copy in case I really do mess this up I
+26:14 can just um have my back up on off to
+26:17 the side there so I'm adding a plane
+26:19 subdividing it uh like doing an inset
+26:21 deleting those faces to like create a
+26:23 grid like this and then this just looks
+26:26 really up in the viewport anytime
+26:27 you're working with a face it just looks
+26:29 horrendous and scary just try not to
+26:32 focus on that just look at the actual
+26:33 technique so um that's going to be my
+26:35 Boolean uh cutter so just I had
+26:39 screencast keys off here but it's you
+26:41 select one select the other object shift
+26:43 minus on the
+26:44 numpad and then I just switched the
+26:46 Boolean operation method to fast and uh
+26:49 you can see it's very janky here but I
+26:51 was able to just get it in the right
+26:53 spot where it was kind of doing mostly
+26:55 what I wanted and then uh just app
+26:58 applied that
+26:60 modifier uh and then deleted the cutter
+27:02 object and I'm left with this here as a
+27:03 mesh now and this is again quite janky
+27:07 but enough to work with so first thing
+27:09 I'm doing is kind of just fixing that
+27:11 missing
+27:12 piece and this uh this took a decent
+27:15 amount of cleanup the geometry was like
+27:17 quite messy on this and didn't look good
+27:20 straight away but after cleaning it up
+27:22 and like deleting a bunch of excess
+27:25 nonsense that was just in the way um you
+27:28 can see like the whole backside deleting
+27:30 that all these vertices here deleting
+27:31 that any weird like tongue or anything
+27:34 on this face here that's like so the
+27:37 other person modeled that uh I just
+27:39 don't want to deal with here deleting
+27:40 all that delete delete delete until it's
+27:43 just kind of like one surface and then
+27:45 that lets me uh kind of do what I want a
+27:48 bit more from here so it's not going to
+27:50 be perfect but it's going to be close
+27:51 enough to what I want I can just take
+27:53 that whole thing extrude it all straight
+27:56 down and um then I can link the first
+27:59 one just select one object shift select
+28:01 the second one hit contrl L link object
+28:04 data from that one to the other
+28:06 one then I can go in and actually get
+28:08 what I want so there we go now we have
+28:10 that kind of like um grid thing on this
+28:13 one I I actually don't know where this
+28:14 came from I think I saw one artwork I'll
+28:16 try and Link it below but I don't even
+28:18 remember who it was that did this first
+28:20 but I saw this in one other artwork with
+28:22 like a statue that had a bunch of
+28:23 squares in it like this making up a face
+28:25 I thought it was really cool so I wanted
+28:26 to do something similar here
+28:29 and uh you can see too that it's not um
+28:33 like this it's it's shaded smooth but
+28:36 it's like a really bad like glitched
+28:39 shading so but like in the viewport
+28:43 looks bad like in the solid view just
+28:44 looks like ooh that is problematic in
+28:46 the render though doesn't look too bad
+28:48 it looks better shaded smooth with like
+28:50 the glitched shading than it did on
+28:52 shaded flat or like shade Auto smooth
+28:55 so I just kind of went with that and
+28:58 then uh I'm just kind of deleting you
+28:60 know Parts I didn't like here it was
+29:01 more interesting to have you know
+29:03 certain sections missing makes it feel
+29:04 older and Abandoned and like kind of
+29:08 helps tell the story of like you know
+29:10 something happened here um so anyways
+29:12 what I what I did here to kind of fix
+29:14 this problem of just this horrible
+29:15 shading was uh just kind leave it I left
+29:19 it on shade smooth and then just kind of
+29:22 added some Loop Cuts where it was really
+29:24 problematic and just kind of um went and
+29:26 did some little you know insets and
+29:28 stuff and kind of manually fixed any
+29:30 really badly Pro problematic areas but
+29:32 overall in the render doesn't even look
+29:35 that bad so I kind of just left it for
+29:37 the most part and sometimes that's the
+29:40 best way to fix a problem that's like oh
+29:42 no my viewport shading is all terrible
+29:43 and I don't know how to fix it but if
+29:45 you look at the render it's actually
+29:46 fine so it's like do do I want to spend
+29:50 that much time like going in and like
+29:51 doing all this modeling to fix a problem
+29:54 that isn't actually really a problem
+29:55 sometimes the solution is literally just
+29:57 like
+29:59 not worry about it at all like how I UV
+30:01 unwrap literally everything with Cube
+30:03 project um yeah anyways I'm just
+30:07 finishing this one up here with uh just
+30:09 you know a couple extra pieces of
+30:10 geometry uh I think I render this at
+30:12 4,000 by 5,000 100% just that resolution
+30:15 there I've been rendering at a little
+30:17 bit higher resolutions cuz it's just
+30:18 nice to have and then um yeah you know
+30:23 uh I think it was like 300 samples
+30:24 something like that and then yeah just
+30:26 finishing up with some photoshop
+30:27 lighting adjustments a little bit of
+30:30 like color
+30:31 adjustments but mostly just like um fix
+30:35 the lighting a little bit with like some
+30:36 exposure adjustments add some clarity
+30:38 sharpening and then add some saturation
+30:40 and like doesn't need much more than
+30:43 that you know sometimes less is more and
+30:45 if you just don't go too extreme with
+30:48 the postprocessing that'll be a much
+30:49 better result than if you you know
+30:52 overly add too much contrast and overly
+30:54 crank the saturation way too
+30:56 high sometimes less is more you can just
+30:58 leave it like not too edited you
+31:01 know by the way check out the new Cyber
+31:04 environments course that just came out
+31:05 recently and uh people have making like
+31:07 really crazy cyberpunk branders from
+31:09 that so I'm super happy with that if
+31:11 you're interested in my newest uh course
+31:13 to learn exactly everything that I know
+31:15 about making these types of renders I
+31:17 would highly recommend that so yeah link
+31:20 below comes with a bunch of asset packs
+31:21 too you get join the Discord with like
+31:23 800 other environment artists that are
+31:24 all everyone in there super chill
+31:26 everyone's giving feedback uh sharing
+31:28 the renders posting interesting stuff
+31:30 about blender like it's a really nice
+31:31 Community you can ask me questions
+31:33 directly talk to me whatever um and it's
+31:35 a full course built around making crazy
+31:37 renders so go and check that out if
+31:39 you're interested if you if you made it
+31:41 this far in the video you will probably
+31:42 like that so I'd actually highly
+31:44 recommend that for you specifically yes
+31:46 you watching this video right now um
+31:48 anyways that's it thanks for watching
+31:50 see you

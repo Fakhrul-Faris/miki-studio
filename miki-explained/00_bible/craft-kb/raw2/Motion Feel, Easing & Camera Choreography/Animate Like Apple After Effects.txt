@@ -1,0 +1,3505 @@
+00:00 Apple have just announced their brand
+00:03 
+
+00:03 new UI style
+00:07 
+
+00:07 and in this video I'll show you how to
+00:10 
+
+00:10 create liquid glass animations in After
+00:13 
+
+00:13 Effects. Make sure to watch till the end
+00:17 
+
+00:17 as I'll reveal animation secrets that
+00:20 
+
+00:20 will take you to the next level. The
+00:22 
+
+00:22 assets for this project can be found in
+00:24 
+
+00:24 my Discord server.
+00:27 
+
+00:27 Let's get started. All right. So, first
+00:29 
+
+00:29 I'm going to show you how to achieve the
+00:31 
+
+00:31 liquid glass look in After Effects. And
+00:34 
+
+00:34 then we'll recreate this animation,
+00:36 
+
+00:36 which includes shape morphing, smooth
+00:39 
+
+00:39 transitions, and a few other advanced
+00:41 
+
+00:41 techniques. Creating the liquid glass
+00:43 
+
+00:43 look is pretty simple. There are
+00:45 
+
+00:45 multiple different ways you could go
+00:47 
+
+00:47 about it, and every tutorial will show
+00:49 
+
+00:49 you something different. This is how I
+00:51 
+
+00:51 do it. Let's start off by creating a new
+00:54 
+
+00:54 composition. So go to composition, new
+00:57 
+
+00:57 comp. And we can just name this liquid
+01:00 
+
+01:00 glass example,
+01:03 
+
+01:03 1920x 1080, 30 frames, and duration can
+01:07 
+
+01:07 be however long you'd like. Then we can
+01:09 
+
+01:09 hit okay to create our comp. I'm also
+01:12 
+
+01:12 going to import one of our backgrounds
+01:14 
+
+01:14 so I can show you how it looks better.
+01:17 
+
+01:17 And let's just scale this down a little.
+01:20 
+
+01:20 Cool. All right. So let's start by
+01:23 
+
+01:23 creating our shape. I'm going to go up
+01:24 
+
+01:24 to the shape tool and create a
+01:27 
+
+01:27 rectangle.
+01:29 
+
+01:29 Something like that. Then we can align
+01:30 
+
+01:30 it using the align panel. And I'm going
+01:33 
+
+01:33 to increase the roundness so that we can
+01:35 
+
+01:35 have rounded corners. Perfect. Let's
+01:38 
+
+01:38 rename this layer to main shape.
+01:41 
+
+01:41 And now we can start applying our glass
+01:43 
+
+01:43 effect. First, let's add an adjustment
+01:46 
+
+01:46 layer to our comp. So, layer, new, and
+01:49 
+
+01:49 adjustment layer. And I'm going to
+01:51 
+
+01:51 rename this to glass. Then from the
+01:54 
+
+01:54 effects and presets panel, we're going
+01:56 
+
+01:56 to search for CC glass
+01:59 
+
+01:59 and just drag it on to our adjustment
+02:01 
+
+02:01 layer. Now, as you can see, it's already
+02:03 
+
+02:03 started affecting our comp, but we're
+02:05 
+
+02:05 going to need to change a few settings.
+02:07 
+
+02:07 Open up the surface tab within CC glass
+02:10 
+
+02:10 and change the bump map to our main
+02:13 
+
+02:13 shape. So, I'm going to press this
+02:15 
+
+02:15 dropown and then select main shape. We
+02:17 
+
+02:17 can leave the property as lightness, but
+02:19 
+
+02:19 we're going to need to change some of
+02:21 
+
+02:21 these settings. I'm going to make the
+02:22 
+
+02:22 softness 25,
+02:25 
+
+02:25 the height 60, and we can leave the
+02:28 
+
+02:28 displacement as it is. And let's also
+02:31 
+
+02:31 trackmat this adjustment layer to our
+02:33 
+
+02:33 main shape. That way, it only stays
+02:36 
+
+02:36 within the boundaries of this shape. And
+02:39 
+
+02:39 here you can see it's coming along quite
+02:40 
+
+02:40 nicely. Let's go back to the adjustment
+02:42 
+
+02:42 layer and we're going to need to change
+02:45 
+
+02:45 these light settings. Instead of using
+02:47 
+
+02:47 the effect light, we're going to be
+02:49 
+
+02:49 using After Effects lights. So, press
+02:52 
+
+02:52 the drop down and change it to AE
+02:54 
+
+02:54 lights. Now, since we don't have any
+02:56 
+
+02:56 lights in this scene, you'll notice that
+02:58 
+
+02:58 nothing has happened. So, let's add one.
+03:01 
+
+03:01 Go to layer, new, and then light. We'll
+03:05 
+
+03:05 use an ambient light, which means there
+03:07 
+
+03:07 will be light everywhere. Set the color
+03:09 
+
+03:09 to white and the intensity to 200%. Then
+03:12 
+
+03:12 hit okay to create it. And now we can
+03:14 
+
+03:14 drag this light layer to the bone. In
+03:17 
+
+03:17 After Effects, lights only affect 3D
+03:20 
+
+03:20 layers. So, we can press the main shape
+03:23 
+
+03:23 and make it 3D. That's the main glass
+03:26 
+
+03:26 effect complete. And if we move the
+03:28 
+
+03:28 shape around, you can see that it
+03:31 
+
+03:31 refracts the background quite nicely. We
+03:34 
+
+03:34 still need to style this shape a bit
+03:35 
+
+03:35 more. So, I'm going to duplicate this
+03:38 
+
+03:38 main shape layer. And we can turn it
+03:40 
+
+03:40 back on. And we're going to add a
+03:42 
+
+03:42 stroke. So, press enter and rename this
+03:44 
+
+03:44 layer to stroke. Then, we can drag it
+03:46 
+
+03:46 above the glass layer. Open up the
+03:49 
+
+03:49 settings. Open contents rectangle one
+03:52 
+
+03:52 and we can hide the fill option and turn
+03:55 
+
+03:55 on the stroke option.
+03:57 
+
+03:57 Open up the stroke settings and change
+03:60 
+
+03:60 the stroke width to two. And then we can
+04:03 
+
+04:03 go into the layers blending modes and
+04:05 
+
+04:05 change it to overlay.
+04:08 
+
+04:08 Let's also reduce the opacity of this
+04:10 
+
+04:10 layer by hitting T and change it to 50%.
+04:13 
+
+04:13 So now we've got a cool stroke around
+04:15 
+
+04:15 our shape which also reacts to the
+04:17 
+
+04:17 background colors. We can also add a
+04:20 
+
+04:20 drop shadow to our shape. Let's
+04:22 
+
+04:22 duplicate main shape again. Turn it on
+04:25 
+
+04:25 and we can rename this to drop shadow.
+04:28 
+
+04:28 Drag this layer underneath main shape.
+04:30 
+
+04:30 And we're going to add a few effects to
+04:32 
+
+04:32 this layer. First, let's search up fill
+04:36 
+
+04:36 and drag that on. I'm just going to make
+04:38 
+
+04:38 this black. And then we can add a fast
+04:41 
+
+04:41 box blur
+04:43 
+
+04:43 and increase the blur radius until
+04:45 
+
+04:45 you're happy with it.
+04:48 
+
+04:48 So I would say about 40%. And then we
+04:50 
+
+04:50 can add a transform effect.
+04:54 
+
+04:54 And we can use this to adjust the
+04:56 
+
+04:56 position and lower it slightly.
+04:59 
+
+04:59 Something like that. We can also reduce
+05:02 
+
+05:02 the opacity from here. So I'll just drag
+05:04 
+
+05:04 it down to about 35%.
+05:08 
+
+05:08 Lastly, we can trackmat this drop shadow
+05:11 
+
+05:11 to our main shape.
+05:13 
+
+05:13 Then we can invert it by pressing this
+05:15 
+
+05:15 button. And that way our drop shadow is
+05:18 
+
+05:18 only underneath the shape. And that's a
+05:20 
+
+05:20 pretty cool looking glass effect. There
+05:22 
+
+05:22 are a lot of different ways that Apple
+05:24 
+
+05:24 uses liquid glass. Sometimes it's clear
+05:27 
+
+05:27 and sometimes the background is blurred.
+05:30 
+
+05:30 To achieve this blurred look, we can add
+05:32 
+
+05:32 a gorian or a fast box blur to our glass
+05:35 
+
+05:35 layer. I'm going to search up gorian
+05:38 
+
+05:38 blur and drag it on to our glass
+05:40 
+
+05:40 adjustment layer. Then we can increase
+05:43 
+
+05:43 this amount to let's say
+05:46 
+
+05:46 27 28. And that'll just give our shape a
+05:50 
+
+05:50 blurry effect. You could also add a
+05:53 
+
+05:53 brightness and contrast if you wanted to
+05:55 
+
+05:55 make it lighter or darker.
+05:58 
+
+05:58 Now, you're probably wondering how we
+06:00 
+
+06:00 can animate this main shape layer and
+06:02 
+
+06:02 also affect the drop shadow and the
+06:04 
+
+06:04 stroke layers. And there's an easy way
+06:06 
+
+06:06 to do this. That's with property links.
+06:09 
+
+06:09 As of now, there are no property links.
+06:11 
+
+06:11 So, if I open up this rectangle path and
+06:14 
+
+06:14 change the size, you can see that our
+06:17 
+
+06:17 stroke and our drop shadow remains
+06:19 
+
+06:19 exactly where they are. We can use
+06:22 
+
+06:22 property links to link the properties of
+06:24 
+
+06:24 the stroke layer and the drop shadow
+06:26 
+
+06:26 layer to these values here. And that
+06:29 
+
+06:29 way, when I increase the size or change
+06:31 
+
+06:31 the roundness, the stroke and the drop
+06:33 
+
+06:33 shadow will be affected. Let me show you
+06:35 
+
+06:35 how it's done. First, I'm going to
+06:37 
+
+06:37 increase the size of the timeline so you
+06:39 
+
+06:39 guys can see a bit better. Let's open up
+06:41 
+
+06:41 the stroke settings, contents, rectangle
+06:45 
+
+06:45 one, and rectangle path one. As you can
+06:49 
+
+06:49 see, we've got size, position, and
+06:50 
+
+06:50 roundness here. Besides size, there's a
+06:53 
+
+06:53 whip icon. We can drag this whip icon
+06:56 
+
+06:56 onto the size of the main shape. And
+06:58 
+
+06:58 now, if I change the size of the main
+06:60 
+
+06:60 shape, it will also affect the stroke.
+07:03 
+
+07:03 The main shape layer acts as our
+07:04 
+
+07:04 controller. and the stroke follows with
+07:07 
+
+07:07 the values that it's been linked to. So
+07:08 
+
+07:08 let's link the position and also the
+07:11 
+
+07:11 roundness. You will know that it's
+07:13 
+
+07:13 linked because the values have turned
+07:14 
+
+07:14 red. Now let's do the same for the drop
+07:17 
+
+07:17 shadow. So I'm going to close this
+07:19 
+
+07:19 stroke layer and open the drop shadow
+07:22 
+
+07:22 contents rectangle one rectangle path
+07:25 
+
+07:25 one. And we can link these values up.
+07:30 
+
+07:30 So now let's close this and we could
+07:32 
+
+07:32 drag this down.
+07:34 
+
+07:34 Right? So, I'm just going to do a simple
+07:37 
+
+07:37 scale animation.
+07:39 
+
+07:39 Something like that.
+07:42 
+
+07:42 As you can see, everything is linked
+07:44 
+
+07:44 together. That's the power of property
+07:46 
+
+07:46 links. Now, here's one thing you should
+07:48 
+
+07:48 know. Even though we linked the
+07:50 
+
+07:50 properties, if I move this main shape
+07:53 
+
+07:53 layer, the stroke and the drop shadow
+07:56 
+
+07:56 won't follow. That's because we linked
+07:58 
+
+07:58 the properties of the shape within this
+08:01 
+
+08:01 layer, but we haven't linked the layers
+08:03 
+
+08:03 together. So to do that, we can select
+08:06 
+
+08:06 the drop shadow and the stroke and we
+08:08 
+
+08:08 can use the whip under parent and link
+08:11 
+
+08:11 and drag it over to the main shape. And
+08:13 
+
+08:13 now when we move this main shape,
+08:15 
+
+08:15 everything else moves with it. We could
+08:17 
+
+08:17 add one more effect to make this look a
+08:19 
+
+08:19 bit better. And that's an edge glow. The
+08:21 
+
+08:21 good thing is if we duplicate this drop
+08:23 
+
+08:23 shadow, all the property links will stay
+08:26 
+
+08:26 linked.
+08:28 
+
+08:28 As you can see, they're still red. I'm
+08:30 
+
+08:30 going to drag this duplicated drop
+08:31 
+
+08:31 shadow layer to the top. We can delete
+08:33 
+
+08:33 all of the effects inside. Let's also
+08:36 
+
+08:36 remove the trackmat. So, I'm going to
+08:38 
+
+08:38 set no mat. And let's rename this to
+08:41 
+
+08:41 edge glow. In the effects and presets
+08:44 
+
+08:44 tab, I'm going to search for CC light
+08:46 
+
+08:46 sweep. Drag this onto our edge glow
+08:49 
+
+08:49 layer. Then, we can change the center to
+08:52 
+
+08:52 the middle of our shape. We can change
+08:53 
+
+08:53 the shape type to smooth,
+08:56 
+
+08:56 the width to 100,
+08:59 
+
+08:59 the sweep intensity to zero.
+09:02 
+
+09:02 the edge intensity to 60
+09:07 
+
+09:07 and the edge thickness to about three.
+09:10 
+
+09:10 And then change light reception to
+09:13 
+
+09:13 cutout.
+09:15 
+
+09:15 And now you can see that we've got this
+09:16 
+
+09:16 cool edge glow on our shape. We could
+09:18 
+
+09:18 animate the direction. So set a key
+09:21 
+
+09:21 frame at zero. Go to one. And then I'm
+09:24 
+
+09:24 going to type in one here. So it does
+09:25 
+
+09:25 one rotation.
+09:28 
+
+09:28 And now we've got a nice little light
+09:30 
+
+09:30 sweep on our shape. If you're finding
+09:32 
+
+09:32 this video helpful so far, then be sure
+09:34 
+
+09:34 to hit the subscribe button. And if you
+09:37 
+
+09:37 want to master After Effects and land
+09:39 
+
+09:39 highpaying clients, sign up to the
+09:41 
+
+09:41 editing launchpad. I'll be releasing it
+09:44 
+
+09:44 very soon. So let me know in the
+09:46 
+
+09:46 comments below if you're looking forward
+09:47 
+
+09:47 to it. All right, let's get into the
+09:50 
+
+09:50 animation. I've created a few assets for
+09:52 
+
+09:52 us to use to speed up the process. I've
+09:55 
+
+09:55 provided these for free in my Discord
+09:57 
+
+09:57 server, so make sure to join if you're
+09:59 
+
+09:59 following along. If you're wondering how
+10:01 
+
+10:01 I created these, then you can watch my
+10:03 
+
+10:03 previous video on creating UIs. Let's
+10:06 
+
+10:06 head to After Effects.
+10:08 
+
+10:08 And here are all the assets. We've got
+10:10 
+
+10:10 AI files and PSD files so that we can
+10:13 
+
+10:13 replace the text. Let's start by
+10:15 
+
+10:15 importing the camera UI AI file. So, I'm
+10:18 
+
+10:18 going to drag it into my project panel.
+10:20 
+
+10:20 I'm going to change the import kind to
+10:22 
+
+10:22 composition so that we get access to all
+10:24 
+
+10:24 of our layers and then hit okay. Then we
+10:26 
+
+10:26 can group this up into a folder and I'll
+10:29 
+
+10:29 just name that one camera UI AI.
+10:33 
+
+10:33 Then we've got the camera UI PSD. So
+10:36 
+
+10:36 let's drag that in. I'm going to change
+10:38 
+
+10:38 the import kind for the Photoshop files
+10:40 
+
+10:40 to composition retain layer sizes. Then
+10:43 
+
+10:43 hit okay. We can group these two layers
+10:46 
+
+10:46 into a folder and name that one
+10:50 
+
+10:50 camera UI PSD.
+10:53 
+
+10:53 Now let's do the same for these four
+10:55 
+
+10:55 files. So, iOS call,
+11:01 
+
+11:01 then the PSD,
+11:06 
+
+11:06 then the music player,
+11:11 
+
+11:11 then the PSD.
+11:16 
+
+11:16 Then we can import the images. I'm going
+11:19 
+
+11:19 to unselect background free cuz we've
+11:20 
+
+11:20 imported it already. And let's just drag
+11:22 
+
+11:22 those in. Cool. But we've got all of our
+11:24 
+
+11:24 assets imported. Now, let's create a new
+11:27 
+
+11:27 composition. So, I'm going to go to
+11:28 
+
+11:28 composition, new comp. We can just name
+11:31 
+
+11:31 this liquid glass animation.
+11:35 
+
+11:35 1920x 1080, 30 frames and 10 seconds.
+11:39 
+
+11:39 Then hit okay to create. Now, let's open
+11:41 
+
+11:41 up the camera UI AI file and the camera
+11:44 
+
+11:44 UI PSD.
+11:46 
+
+11:46 I'm going to open up this text layer T
+11:48 
+
+11:48 video and copy the Photoshop file into
+11:51 
+
+11:51 our AI composition. Then I can
+11:54 
+
+11:54 rightclick create, convert to editable
+11:57 
+
+11:57 text and delete the video text layer
+11:60 
+
+11:60 from the AI file. Let's do the same for
+12:02 
+
+12:02 the photo. So I'm going to go into T
+12:04 
+
+12:04 photo in a Photoshop one and paste it
+12:06 
+
+12:06 into our AI one. And then we can right
+12:09 
+
+12:09 click, convert to editable text, and
+12:12 
+
+12:12 delete the photo text layer. So, in this
+12:15 
+
+12:15 file, we've got two different shapes.
+12:17 
+
+12:17 We've got our main shapes, which is all
+12:20 
+
+12:20 of these, and then we've got our
+12:22 
+
+12:22 selection shape, which is this one. I've
+12:24 
+
+12:24 merged all of these shapes into one
+12:26 
+
+12:26 layer so that we can apply the glass
+12:28 
+
+12:28 effect one time, and it will be applied
+12:30 
+
+12:30 to all of these. Let's right click,
+12:33 
+
+12:33 press create, and then create shapes
+12:35 
+
+12:35 from vector layers. This will convert
+12:37 
+
+12:37 this layer into an After Effects shape
+12:39 
+
+12:39 layer. So, we have a few more options.
+12:41 
+
+12:41 Then we can delete this shapes layer.
+12:43 
+
+12:43 And let's do the same for the selection.
+12:46 
+
+12:46 So select the selection, right click,
+12:49 
+
+12:49 create, create shapes from vector layer,
+12:52 
+
+12:52 and then delete the selection layer. For
+12:54 
+
+12:54 these two layers, make sure you have
+12:56 
+
+12:56 continuously rasterized turned on. If
+12:59 
+
+12:59 you don't know what this does, let me
+13:01 
+
+13:01 show you. If I have it turned off and
+13:04 
+
+13:04 scale up the button, you can see that
+13:06 
+
+13:06 we've got jagged edges. But if I turn it
+13:08 
+
+13:08 on now, our edges are completely smooth.
+13:11 
+
+13:11 So, I'm going to put that back and make
+13:13 
+
+13:13 sure it's turned on. And lastly, let's
+13:16 
+
+13:16 just make all of these layers 3D. Then,
+13:18 
+
+13:18 I'm going to select the very top layer,
+13:20 
+
+13:20 hold shift, and select the bottom layer.
+13:22 
+
+13:22 And we can copy these layers over into
+13:25 
+
+13:25 our main comp. Now, let's import our
+13:28 
+
+13:28 first background. So, I'm going to drag
+13:29 
+
+13:29 background one to the very bottom, and
+13:32 
+
+13:32 I'm going to scale it down to about like
+13:35 
+
+13:35 50%. We also need to import our stock
+13:38 
+
+13:38 image one and put it inside of this
+13:41 
+
+13:41 circle. So, I'm going to drag that just
+13:44 
+
+13:44 above the rotate icon and trackmat it to
+13:48 
+
+13:48 our shapes outlines.
+13:50 
+
+13:50 And then we can scale it down and fit it
+13:52 
+
+13:52 within this circle. So, hit S for scale,
+13:56 
+
+13:56 put it down,
+13:58 
+
+13:58 and just drag it in place.
+14:01 
+
+14:01 Perfect. Let's reenable the shapes
+14:04 
+
+14:04 outlines layer.
+14:06 
+
+14:06 Now we can apply the glass effect to our
+14:09 
+
+14:09 shapes outlines layer. First let's
+14:11 
+
+14:11 create an adjustment layer. So layer new
+14:14 
+
+14:14 adjustment layer. I'm going to drag this
+14:16 
+
+14:16 just above shape outlines and rename
+14:19 
+
+14:19 this to glass.
+14:22 
+
+14:22 Then we can add CC glass.
+14:25 
+
+14:25 And let's set this up just like we did
+14:27 
+
+14:27 in the first example. So for surface
+14:31 
+
+14:31 we're going to change the bump map to
+14:33 
+
+14:33 our shape which is shape outlines and
+14:35 
+
+14:35 the number is eight. So we can open this
+14:38 
+
+14:38 dropown and select number eight and we
+14:41 
+
+14:41 can change the softness to 25, the
+14:43 
+
+14:43 height to 60 and we can leave the
+14:46 
+
+14:46 displacement as 100. Then we've got our
+14:49 
+
+14:49 light options. We're going to change the
+14:51 
+
+14:51 effect light to AE lights. And we're
+14:54 
+
+14:54 going to need to add a light source. So
+14:56 
+
+14:56 go to layer new and then light ambient
+14:60 
+
+15:00 light color white and intensity 200%.
+15:04 
+
+15:04 Hit okay and we can drag this to the
+15:06 
+
+15:06 bone. We only need to add this ambient
+15:08 
+
+15:08 light one time to our composition. You
+15:11 
+
+15:11 can see because we have 3D layers
+15:12 
+
+15:12 enabled. It's affecting all of our
+15:15 
+
+15:15 layers. If the light is ever affecting a
+15:17 
+
+15:17 layer and you don't want it to, such as
+15:21 
+
+15:21 this rotate icon for example, you can
+15:24 
+
+15:24 open it up, open material options, and
+15:27 
+
+15:27 then you can turn accept light to off.
+15:29 
+
+15:29 And now it won't affect this rotate
+15:31 
+
+15:31 icon. And then we can press material
+15:33 
+
+15:33 options, command C to copy, and select
+15:37 
+
+15:37 all of the layers you don't want it to
+15:39 
+
+15:39 affect. So for us, that's going to be
+15:41 
+
+15:41 photo, video, and button. and then press
+15:44 
+
+15:44 command V to paste. Now we can trackmat
+15:47 
+
+15:47 this glass effect to our shape outlines.
+15:49 
+
+15:49 So let's select this whip and drag it to
+15:52 
+
+15:52 shape outlines and hide this layer so we
+15:55 
+
+15:55 only get the glass effect. We're going
+15:57 
+
+15:57 to add a few more effects to this glass
+15:59 
+
+15:59 layer. So let's add a gian blur. And I'm
+16:03 
+
+16:03 going to set the blurriness to uh to
+16:06 
+
+16:06 about 25.
+16:08 
+
+16:08 And we can also add a brightness and
+16:10 
+
+16:10 contrast because we want to make this
+16:12 
+
+16:12 part a little darker. So I'm going to
+16:15 
+
+16:15 drag the brightness down to about minus
+16:18 
+
+16:18 20. Now we also need to add the stroke
+16:21 
+
+16:21 and the drop shadow. So let's duplicate
+16:23 
+
+16:23 the shapes outlines. Rename it to
+16:25 
+
+16:25 stroke. And I'm going to duplicate it
+16:27 
+
+16:27 again and rename that to drop shadow.
+16:30 
+
+16:30 Let's drag the drop shadow underneath
+16:32 
+
+16:32 shape outlines and the stroke above the
+16:34 
+
+16:34 glass adjustment layer. Let's turn both
+16:37 
+
+16:37 of these on. So for the drop shadow, I'm
+16:40 
+
+16:40 going to go back to our example. Press
+16:42 
+
+16:42 on the drop shadow here and copy these
+16:44 
+
+16:44 effects.
+16:46 
+
+16:46 And let's go back and paste it on our
+16:48 
+
+16:48 drop shadow. Then we can trackmat it to
+16:50 
+
+16:50 shapes outlines and invert the trackmat.
+16:53 
+
+16:53 For the stroke, let's open it up.
+16:56 
+
+16:56 Contents.
+16:58 
+
+16:58 We're going to have to do this for each
+16:59 
+
+16:59 one. So let's just open all of these up
+17:02 
+
+17:02 and hide the fill. So, I'm going to hide
+17:05 
+
+17:05 the fill for all of the shapes. Then,
+17:07 
+
+17:07 besides add, we're going to add a
+17:09 
+
+17:09 stroke. And let's drag this stroke out
+17:12 
+
+17:12 to the bottom.
+17:14 
+
+17:14 Just like that. And we can leave it at
+17:16 
+
+17:16 two, 100%, and color white. Then, let's
+17:20 
+
+17:20 set the blending mode to overlay. Hit T
+17:23 
+
+17:23 to open the opacity and set it to 50%.
+17:26 
+
+17:26 And now, we've got our glass effect set
+17:27 
+
+17:27 up. Let's recolor these four layers so
+17:30 
+
+17:30 we know that these are the glass layers.
+17:32 
+
+17:32 So, I'm just going to change it to
+17:34 
+
+17:34 peach. Or actually, let's make it um
+17:38 
+
+17:38 purple.
+17:40 
+
+17:40 So, before we start animating, we need
+17:42 
+
+17:42 to make sure that we have our property
+17:44 
+
+17:44 link set up for the stroke and the drop
+17:46 
+
+17:46 shadow. For the animation, we're going
+17:48 
+
+17:48 to have this menu section expand, and
+17:50 
+
+17:50 we're also going to have these two
+17:52 
+
+17:52 circles move to either side. So, we're
+17:55 
+
+17:55 going to need to link the menus path,
+17:57 
+
+17:57 and we're also going to need to link
+17:58 
+
+17:58 these circles transform positions. So,
+18:01 
+
+18:01 I'm going to open up shape outlines
+18:04 
+
+18:04 contents. Now, we've got group one,
+18:06 
+
+18:06 group two, group three, and group four.
+18:08 
+
+18:08 If you press it, it will show you which
+18:10 
+
+18:10 one's selected. So, group one is our
+18:12 
+
+18:12 menu. Let's open that up and then open
+18:16 
+
+18:16 up path one. Here's our path that we
+18:18 
+
+18:18 need everything linked to. So, I'm going
+18:21 
+
+18:21 to open this up. Let's open stroke
+18:24 
+
+18:24 contents group one and path one. And
+18:29 
+
+18:29 let's drag this whip over onto path one
+18:32 
+
+18:32 of our shapes outlines. And then we can
+18:34 
+
+18:34 do the same for the drop shadow. So open
+18:37 
+
+18:37 up the drop shadow, open up contents,
+18:40 
+
+18:40 group one, path one, and let's drag this
+18:43 
+
+18:43 whip over to shapes outlines path one
+18:46 
+
+18:46 path. So we've got our path linked. And
+18:48 
+
+18:48 now let's link the transform positions
+18:51 
+
+18:51 of these two circles. So I'm going to
+18:52 
+
+18:52 close group one. This circle is group
+18:56 
+
+18:56 two. So, I'm going to open group two in
+18:58 
+
+18:58 our shapes outlines and then I'm going
+19:01 
+
+19:01 to open transform because we're going to
+19:03 
+
+19:03 be changing this position. So, now let's
+19:06 
+
+19:06 go to our stroke, open group two,
+19:09 
+
+19:09 transform, and we can drag the width
+19:11 
+
+19:11 besides position over to this one. And
+19:14 
+
+19:14 now, let's do the same for group two of
+19:17 
+
+19:17 our drop shadow. So, transform position
+19:21 
+
+19:21 and drag this over here.
+19:25 
+
+19:25 Now the entire effect should be linked
+19:27 
+
+19:27 to this circle. Lastly, we need to do
+19:29 
+
+19:29 the same for the rotate button and that
+19:31 
+
+19:31 would be group three. So I'm going to
+19:33 
+
+19:33 close all of these. Open up group three
+19:36 
+
+19:36 of our shapes outlines. Open up
+19:38 
+
+19:38 transform.
+19:40 
+
+19:40 This is the position we want everything
+19:41 
+
+19:41 to link to. So let's open up group three
+19:44 
+
+19:44 in our stroke transform and drag the
+19:46 
+
+19:46 width from position over to this one.
+19:49 
+
+19:49 And then the same for the drop shadow.
+19:52 
+
+19:52 So link that. And now we're all set up
+19:54 
+
+19:54 with our links. Let's start with our
+19:56 
+
+19:56 first animation, which is the expansion
+19:59 
+
+19:59 of this menu. I'm going to zoom into the
+20:01 
+
+20:01 timeline. And we can go up to about five
+20:04 
+
+20:04 frames so our animation doesn't start
+20:06 
+
+20:06 right away. Then let's open up the shape
+20:08 
+
+20:08 outlines contents group one, which is
+20:11 
+
+20:11 our menu path one, and set a key frame
+20:14 
+
+20:14 for the path. Then we can go up to about
+20:17 
+
+20:17 1 second. We're going to need to expand
+20:19 
+
+20:19 this path on either side. So, I'm going
+20:22 
+
+20:22 to zoom in a bit here. I'm going to
+20:23 
+
+20:23 press off of the layer. And this will
+20:25 
+
+20:25 allow me to select each of these points.
+20:28 
+
+20:28 Hold shift while selecting. So, you can
+20:30 
+
+20:30 select these three. And let's drag it
+20:32 
+
+20:32 over until it reaches this point. Just
+20:36 
+
+20:36 like that. Then we can do the same for
+20:38 
+
+20:38 this side. So, I'm going to select the
+20:40 
+
+20:40 first point and then hold shift and drag
+20:43 
+
+20:43 this over. Just like that. So, this is
+20:47 
+
+20:47 what we've got.
+20:49 
+
+20:49 Cool. We also want these circles to move
+20:51 
+
+20:51 over. I'm going to have this one move
+20:53 
+
+20:53 over to the left by 400 pixels and this
+20:56 
+
+20:56 one move to the right by 400 pixels. So,
+20:59 
+
+20:59 let's just open this up a bit. Our photo
+21:01 
+
+21:01 section is group two and our rotate is
+21:04 
+
+21:04 group three. So, I'm going to open up
+21:05 
+
+21:05 group two, transform, and set a key
+21:08 
+
+21:08 frame for the position. Then, I'll open
+21:10 
+
+21:10 up group three, transform, and set a key
+21:12 
+
+21:12 frame for the position. Then, we can hit
+21:14 
+
+21:14 U to reveal all of the properties that
+21:16 
+
+21:16 we've modified. We also need to move
+21:19 
+
+21:19 this picture and this rotate icon as
+21:21 
+
+21:21 well. So, I'm going to select the rotate
+21:23 
+
+21:23 icon and the picture layer or the image
+21:27 
+
+21:27 layer. Hit P to open position and set a
+21:30 
+
+21:30 key frame for these positions. Then, we
+21:32 
+
+21:32 can go over to 1 second and move these
+21:35 
+
+21:35 over by 400 pixels. So, first up, we've
+21:38 
+
+21:38 got group two, which is our photo. And
+21:40 
+
+21:40 to move something over by a set value,
+21:43 
+
+21:43 you can press on the value, press right
+21:46 
+
+21:46 on your keyboard to go to the end, and
+21:48 
+
+21:48 then type in -400.
+21:51 
+
+21:51 And that will move our shape by 400
+21:53 
+
+21:53 pixels. We could do the same for group
+21:56 
+
+21:56 three, which is this button. So, I'm
+21:59 
+
+21:59 going to press this value right on my
+22:01 
+
+22:01 keyboard. And because we're going right,
+22:03 
+
+22:03 we're going to type in plus 400. And
+22:06 
+
+22:06 let's just do the same for the rotate
+22:08 
+
+22:08 icon. So, press this value plus 400 to
+22:12 
+
+22:12 move it to the right. And the image,
+22:15 
+
+22:15 press the value, minus 400 to move it to
+22:18 
+
+22:18 the left. Now, we've got this.
+22:23 
+
+22:23 Lastly, we can easy ease these key
+22:25 
+
+22:25 frames. So, highlight them and then
+22:27 
+
+22:27 press F9 to easy ease. Let's go into the
+22:30 
+
+22:30 graph editor and just drag in these
+22:33 
+
+22:33 points a little. So, I'm going to drag
+22:35 
+
+22:35 this one to about here. and the right
+22:38 
+
+22:38 side a bit more
+22:41 
+
+22:41 to about here. So now it's going to
+22:44 
+
+22:44 start off slowly, speed up, and then
+22:47 
+
+22:47 slow down. Here's how it looks.
+22:51 
+
+22:51 Now let's set up a glass effect for the
+22:53 
+
+22:53 selection outlines layer, which is this
+22:55 
+
+22:55 shape. So we can do this quite quickly
+22:58 
+
+22:58 since we've already done it once. Let's
+22:60 
+
+22:60 duplicate this glass adjustment layer.
+23:02 
+
+23:02 Place it above selection outlines.
+23:04 
+
+23:04 Trackmat it to selection outlines. Go
+23:07 
+
+23:07 into the CC glass, go into surface and
+23:11 
+
+23:11 change the bump map to selection
+23:12 
+
+23:12 outlines which is number five. So I'm
+23:15 
+
+23:15 going to press the drop down and select
+23:16 
+
+23:16 number five. And then we can duplicate
+23:19 
+
+23:19 this layer twice.
+23:22 
+
+23:22 Name one stroke
+23:24 
+
+23:24 and name one drop shadow. I'm going to
+23:27 
+
+23:27 drag drop shadow beneath selection
+23:29 
+
+23:29 outlines and the stroke above the glass
+23:31 
+
+23:31 adjustment layer. Turn both of them on.
+23:33 
+
+23:33 We can go to our previous drop shadow
+23:35 
+
+23:35 layer and copy over these settings.
+23:37 
+
+23:37 Paste it on drop shadow. Trackmat it to
+23:40 
+
+23:40 selection outlines and invert it. Then
+23:42 
+
+23:42 we can go into our stroke contents group
+23:44 
+
+23:44 one. Turn off the fill. Add a stroke
+23:48 
+
+23:48 effect. Make sure it's two pixels width.
+23:51 
+
+23:51 Change the blending mode to overlay.
+23:54 
+
+23:54 And then hit T for opacity and change it
+23:57 
+
+23:57 to 50. For the glass effect, I'm
+23:60 
+
+23:60 actually going to increase the
+24:01 
+
+24:01 brightness of this layer.
+24:03 
+
+24:03 So, let's change that to
+24:07 
+
+24:07 30. And we can also decrease the
+24:10 
+
+24:10 contrast a bit so it pops a little more.
+24:13 
+
+24:13 Maybe about minus 10. Since we're not
+24:16 
+
+24:16 going to do any shape morphing or any
+24:19 
+
+24:19 advanced techniques, we can simply
+24:21 
+
+24:21 select the stroke and the drop shadow
+24:24 
+
+24:24 and by using the parent and link, we can
+24:26 
+
+24:26 just link it to our selection outlands
+24:28 
+
+24:28 layer. Now, when we move it around,
+24:31 
+
+24:31 everything is linked together.
+24:33 
+
+24:33 Now, let's sort out the text. We've only
+24:35 
+
+24:35 got two text options here, but we need a
+24:37 
+
+24:37 few more. I'm going to do this in a very
+24:40 
+
+24:40 non-elegant way, but it'll get the job
+24:42 
+
+24:42 done. First, let's duplicate this video
+24:44 
+
+24:44 text layer. And I'm going to drag it
+24:47 
+
+24:47 over to the left, and we can just change
+24:49 
+
+24:49 that to cinematic.
+24:52 
+
+24:52 Then, we can select the shape tool, and
+24:54 
+
+24:54 I'm going to zoom in a bit between video
+24:56 
+
+24:56 and photo. And let's create a shape
+24:59 
+
+24:59 between these two points. This is going
+25:01 
+
+25:01 to act as our spacer and it will show us
+25:03 
+
+25:03 how much space we need between the text.
+25:06 
+
+25:06 So, let's drag this besides video and
+25:08 
+
+25:08 then select the cinematic text. Whilst
+25:11 
+
+25:11 holding shift to keep it locked on an
+25:13 
+
+25:13 axis, we're going to drag it up to the
+25:15 
+
+25:15 edge of this shape.
+25:17 
+
+25:17 Just like that. So, we've got our
+25:19 
+
+25:19 cinematic text here, but it says video,
+25:21 
+
+25:21 too. So, you can press enter and then
+25:23 
+
+25:23 backspace and then enter, and it will
+25:26 
+
+25:26 take on the text that's actually written
+25:27 
+
+25:27 here. So, I'm going to duplicate this
+25:29 
+
+25:29 cinematic text, drag it beneath photo
+25:32 
+
+25:32 because we're going to add a text here.
+25:34 
+
+25:34 Drag that to the right. And let's rename
+25:36 
+
+25:36 this to portrait. And then we can take
+25:39 
+
+25:39 our spacer, move it to the edge of
+25:41 
+
+25:41 photo,
+25:43 
+
+25:43 and then we can select this. Move it up.
+25:46 
+
+25:46 And let's duplicate our text one more
+25:48 
+
+25:48 time. Drag that to the bottom. Move it
+25:52 
+
+25:52 over. And this one I'm going to type in
+25:55 
+
+25:55 panorama.
+25:56 
+
+25:56 So, panorama
+25:58 
+
+25:58 and we can just use this again.
+26:02 
+
+26:02 All right, perfect. Now, we can just
+26:04 
+
+26:04 delete the spacer cuz we won't be
+26:06 
+
+26:06 needing it anymore. Let's link all of
+26:08 
+
+26:08 these text layers up to their own null
+26:10 
+
+26:10 object. I'm going to select the top text
+26:13 
+
+26:13 layer, new, and then null object. Let's
+26:16 
+
+26:16 rename this to text null. And then we
+26:20 
+
+26:20 can select all of our text layers. And
+26:22 
+
+26:22 under parent and link, we can drag it
+26:24 
+
+26:24 over to the text null. I'm just going to
+26:26 
+
+26:26 turn on 3D for this as well. Now, when
+26:29 
+
+26:29 we move this null object, our text
+26:31 
+
+26:31 layers will move as well. We also need
+26:34 
+
+26:34 to make sure that these text layers are
+26:36 
+
+26:36 within this menu object. But if we
+26:39 
+
+26:39 trackmatted it to this shape, we would
+26:41 
+
+26:41 also see it in these circles. We're
+26:43 
+
+26:43 going to need to duplicate shapes
+26:45 
+
+26:45 outlines. And let's rename that to text
+26:48 
+
+26:48 mask. Then I'm going to open it up. And
+26:51 
+
+26:51 we know group one is the menu. So, let's
+26:54 
+
+26:54 delete all of these other groups. And
+26:56 
+
+26:56 now we can select our text layers and
+26:59 
+
+26:59 trackmat them to the text mask and they
+27:02 
+
+27:02 will stay within the menu. Now, let's
+27:05 
+
+27:05 create one more null object that will
+27:06 
+
+27:06 link the selection and the text
+27:08 
+
+27:08 together. First though, I'm going to
+27:10 
+
+27:10 select these four layers because this is
+27:13 
+
+27:13 our second glass object. And we can
+27:15 
+
+27:15 change the color so it's easier to read.
+27:17 
+
+27:17 All right. And now, let's create our
+27:19 
+
+27:19 null object. I'm just going to drag it
+27:21 
+
+27:21 under here and rename that to slide on.
+27:25 
+
+27:25 Since we've linked the stroke and the
+27:27 
+
+27:27 drop shadow to our selection, we can
+27:28 
+
+27:28 link the selection to our slider no. And
+27:31 
+
+27:31 this should move our slider. And now we
+27:33 
+
+27:33 can also link the text note to our
+27:35 
+
+27:35 slider no. This will make sure that the
+27:37 
+
+27:37 text and the selection moves together.
+27:41 
+
+27:41 Let's also make that 3D. Let's start
+27:43 
+
+27:43 animating these null objects. So, I'm
+27:46 
+
+27:46 going to go to five frames and we're
+27:48 
+
+27:48 going to press the slider no and hit P
+27:50 
+
+27:50 to open the position. Let's set a key
+27:52 
+
+27:52 frame to set our start point. And then
+27:54 
+
+27:54 let's go to 1 second. So, at 1 second,
+27:57 
+
+27:57 we want this selection to be in the very
+27:60 
+
+27:60 middle. There's different ways you could
+28:01 
+
+28:01 do this, but what I do is duplicate the
+28:04 
+
+28:04 selection outlines, which is the main
+28:06 
+
+28:06 shape. I'm going to drag it to the top,
+28:09 
+
+28:09 turn off 3D, and make it visible. Then
+28:13 
+
+28:13 I'm going to use the align panel to
+28:14 
+
+28:14 center it. And then we can zoom in a
+28:16 
+
+28:16 little. Select the slider null and make
+28:19 
+
+28:19 sure you unlink the slider null from
+28:21 
+
+28:21 here. And then we can move this position
+28:24 
+
+28:24 until our slider is in the very middle.
+28:26 
+
+28:26 Just like that. And now we can delete
+28:28 
+
+28:28 this selection outlines that we made.
+28:30 
+
+28:30 And we should have our selection going
+28:32 
+
+28:32 to the middle of the menu. Now let's
+28:34 
+
+28:34 easy ease these key frames. So highlight
+28:37 
+
+28:37 them and press F9. go into the graph
+28:39 
+
+28:39 editor and let's just adjust these
+28:43 
+
+28:43 points a little.
+28:45 
+
+28:45 So, something like
+28:48 
+
+28:48 like this. Let's see how that looks.
+28:52 
+
+28:52 Cool. For our last movement animation,
+28:55 
+
+28:55 we're going to make these text objects
+28:58 
+
+28:58 slide to the right really fast, and that
+29:00 
+
+29:00 will transition us into our next scene.
+29:03 
+
+29:03 So, I'm going to start this animation at
+29:05 
+
+29:05 about 15 frames.
+29:08 
+
+29:08 Select the text null and hit P for the
+29:10 
+
+29:10 position and set a key frame. Then we
+29:13 
+
+29:13 can go to 1 second and change the
+29:16 
+
+29:16 position to about here. So we're going
+29:20 
+
+29:20 to have this. And I'm going to easy ease
+29:22 
+
+29:22 these key frames. And for this one,
+29:25 
+
+29:25 we're going to do a really steep curve.
+29:27 
+
+29:27 So the right side can be pushed all the
+29:29 
+
+29:29 way to the edge and the left side can be
+29:31 
+
+29:31 dragged all the way over. And this is
+29:34 
+
+29:34 what we've got.
+29:36 
+
+29:36 At this point, we want these layers to
+29:38 
+
+29:38 end. So, I'm going to go one frame back.
+29:41 
+
+29:41 Select all of these layers besides
+29:44 
+
+29:44 ambient light one. I'm going to hold
+29:46 
+
+29:46 down option or alt for Windows and then
+29:48 
+
+29:48 the right square bracket. And that will
+29:50 
+
+29:50 trim our layers to this point. So now
+29:53 
+
+29:53 once our animation is done, our layers
+29:56 
+
+29:56 will vanish.
+29:57 
+
+29:57 Let's make this text responsive. So
+29:60 
+
+29:60 whenever the text is selected inside of
+30:02 
+
+30:02 the selection, the text will turn yellow
+30:04 
+
+30:04 and the previous text will turn white.
+30:07 
+
+30:07 So I think about this point the photo
+30:09 
+
+30:09 should be white and the portrait should
+30:10 
+
+30:10 be yellow. So I'm going to select photo
+30:12 
+
+30:12 and portrait. I'm going to select both
+30:14 
+
+30:14 of them. Command shift D to split. And
+30:18 
+
+30:18 then we can zoom in a bit. Let's go to
+30:20 
+
+30:20 photo and copy this fill color. Then we
+30:23 
+
+30:23 can select the second portrait text and
+30:26 
+
+30:26 change the fill color to yellow. and we
+30:28 
+
+30:28 can select the second photo text and
+30:30 
+
+30:30 change the fill color to white.
+30:33 
+
+30:33 Now it looks like the portrait text is
+30:35 
+
+30:35 being selected.
+30:37 
+
+30:37 Lastly, let's do something with the
+30:38 
+
+30:38 background so it's not so static. I'm
+30:41 
+
+30:41 going to select the background. Hit S to
+30:43 
+
+30:43 open up the scale. Set a key frame at
+30:46 
+
+30:46 the very start and go to one or I'll
+30:50 
+
+30:50 just go one frame before since we can't
+30:51 
+
+30:51 see it. And just zoom out a little to
+30:54 
+
+30:54 about here. And then we can just drag
+30:56 
+
+30:56 this key frame over to the end. Let's
+30:58 
+
+30:58 see how that looks.
+31:02 
+
+31:02 Maybe that's a bit too much. I think 46
+31:05 
+
+31:05 might be good.
+31:09 
+
+31:09 Yeah, that's looking good. Time for the
+31:11 
+
+31:11 second scene. I'm going to close all of
+31:13 
+
+31:13 these. Go to project and let's open up
+31:17 
+
+31:17 the iOS call AI and the iOS call PSD.
+31:21 
+
+31:21 I'm going to copy this text object to
+31:25 
+
+31:25 the AI file
+31:27 
+
+31:27 and we're going to convert it to
+31:28 
+
+31:28 editable text. And then we can delete
+31:31 
+
+31:31 this layer here. Let's convert our box
+31:34 
+
+31:34 to a shape because we're going to be
+31:36 
+
+31:36 adding the glass effect to this. And
+31:39 
+
+31:39 let's turn on continuously rasterize for
+31:41 
+
+31:41 this layer. Then we can make all of our
+31:43 
+
+31:43 layers 3D.
+31:45 
+
+31:45 Select the first one. Hold shift and
+31:47 
+
+31:47 select the bottom one. Command C to
+31:49 
+
+31:49 copy. Go to our comp and command V to
+31:53 
+
+31:53 paste.
+31:54 
+
+31:54 I'm going to go to one and press the
+31:57 
+
+31:57 left square bracket to bring the layers
+31:59 
+
+31:59 to your playhead.
+32:01 
+
+32:01 Let's make sure that these layers aren't
+32:02 
+
+32:02 being affected by the light.
+32:05 
+
+32:05 So, I'm going to open it up. Material
+32:07 
+
+32:07 options, except light to off. Copy this
+32:10 
+
+32:10 setting and also paste it on our slide
+32:13 
+
+32:13 to answer. We're not going to apply it
+32:15 
+
+32:15 to the box outlines because this is
+32:17 
+
+32:17 going to have the glass effect. Now, one
+32:19 
+
+32:19 more thing we need to import is the
+32:20 
+
+32:20 background. So, I'm going to import
+32:22 
+
+32:22 background 2 and place it here. Then we
+32:26 
+
+32:26 can make it 3D,
+32:28 
+
+32:28 turn off except lights
+32:31 
+
+32:31 and scale it down slightly. I'm going to
+32:34 
+
+32:34 scale it down and I'm also going to hit
+32:36 
+
+32:36 P and push it backwards. It will give us
+32:40 
+
+32:40 a parallax effect when things are
+32:42 
+
+32:42 moving. Let's create the glass effect
+32:44 
+
+32:44 for the box outlines. So, I'm going to
+32:47 
+
+32:47 copy this glass adjustment layer from
+32:49 
+
+32:49 the one we did previously. Command D to
+32:52 
+
+32:52 duplicate. Drag it above box outlines.
+32:55 
+
+32:55 Left square bracket to bring the layer
+32:57 
+
+32:57 to the playhead. Let's trackmat it to
+32:60 
+
+32:60 box outlines.
+33:01 
+
+33:01 Open up the settings surface.
+33:05 
+
+33:05 Change the bump map to box outlines,
+33:07 
+
+33:07 which is number four.
+33:11 
+
+33:11 And let's change some of these settings.
+33:13 
+
+33:13 For the softness, we can make it 35.
+33:16 
+
+33:16 Height 60. Displacement, we could
+33:19 
+
+33:19 increase a bit to about 180. Let's lower
+33:23 
+
+33:23 the blurriness to 15.
+33:27 
+
+33:27 And we can just turn off the brightness.
+33:29 
+
+33:29 Now, let's duplicate box outlines uh
+33:32 
+
+33:32 twice. Name one of them stroke, one of
+33:36 
+
+33:36 them drop shadow. Drag the drop shadow
+33:38 
+
+33:38 under box outlines and the stroke above
+33:40 
+
+33:40 glass free. Turn both the layers on.
+33:44 
+
+33:44 Let's copy the drop shadow settings from
+33:46 
+
+33:46 one of our previous ones. So, command C
+33:49 
+
+33:49 to copy. Select drop shadow and paste.
+33:52 
+
+33:52 Trackmat it to box outlines and then
+33:54 
+
+33:54 invert.
+33:56 
+
+33:56 And then for the stroke, let's select
+33:58 
+
+33:58 the stroke
+33:60 
+
+33:60 contents group one. Turn off the fill.
+34:04 
+
+34:04 Add a stroke. Change the blend mode to
+34:07 
+
+34:07 overlay
+34:09 
+
+34:09 and the opacity to 50%.
+34:12 
+
+34:12 That's our glass setup for this section.
+34:15 
+
+34:15 And let's just select those layers and
+34:17 
+
+34:17 change the color to green. Now for the
+34:20 
+
+34:20 text, I'm going to change the color to
+34:22 
+
+34:22 white and the blend mode to I think
+34:27 
+
+34:27 overlay looks quite cool. For this
+34:29 
+
+34:29 animation, the call button is going to
+34:31 
+
+34:31 remain in the center and everything else
+34:34 
+
+34:34 is going to be moving behind it. So that
+34:36 
+
+34:36 way, it's going to look like we're
+34:38 
+
+34:38 sliding over to the right. So beneath
+34:40 
+
+34:40 the call button, above slide to answer,
+34:43 
+
+34:43 I'm going to select this layer. And
+34:44 
+
+34:44 we're going to create a null object.
+34:47 
+
+34:47 Left square bracket to bring it to the
+34:48 
+
+34:48 playhead. And let's just rename this to
+34:51 
+
+34:51 call slider no. And let's link the
+34:55 
+
+34:55 stroke and the drop shadow parent and
+34:58 
+
+34:58 link it to the box outlines. And then
+35:00 
+
+35:00 link the box outlines to our new null
+35:03 
+
+35:03 object. And let's also link the
+35:05 
+
+35:05 background too and the text layer to the
+35:09 
+
+35:09 same null object. We need to make this
+35:11 
+
+35:11 call button go to the middle. So I'm
+35:13 
+
+35:13 going to turn off 3D for now. And use
+35:16 
+
+35:16 the align panel to align it to the
+35:17 
+
+35:17 center. Then we can turn on 3D again.
+35:20 
+
+35:20 Now let's animate the position of this
+35:22 
+
+35:22 cool slider. so that it slides in just
+35:25 
+
+35:25 like that. So, I'm going to set a key
+35:27 
+
+35:27 frame for the position. Then, we can go
+35:30 
+
+35:30 to
+35:32 
+
+35:32 120 frames
+35:34 
+
+35:34 and let's move it over until our call
+35:37 
+
+35:37 button is in the right place. So, about
+35:40 
+
+35:40 here. Let's highlight these key frames.
+35:42 
+
+35:42 Hit F9 to easy ease them. Go into the
+35:45 
+
+35:45 graph editor. Let's just give it a
+35:49 
+
+35:49 really steep curve. So, I'm going to
+35:50 
+
+35:50 drag the left side all the way to the
+35:52 
+
+35:52 left and the right side all the way to
+35:54 
+
+35:54 the left as well. And let's see how that
+35:56 
+
+35:56 looks.
+35:58 
+
+35:58 Cool. That's exactly the effect we're
+35:60 
+
+35:60 going for. So, this text speeds up and
+36:04 
+
+36:04 the call button starts at a very high
+36:06 
+
+36:06 speed and slows all the way down. Now,
+36:09 
+
+36:09 let's just create an out animation for
+36:11 
+
+36:11 this section. So, I'm just going to
+36:13 
+
+36:13 increase this layer length of the glass.
+36:16 
+
+36:16 Let's create a new null object. So layer
+36:19 
+
+36:19 new null object and let's go to one. Hit
+36:23 
+
+36:23 the left square bracket. I'm just going
+36:24 
+
+36:24 to name this call out animation.
+36:30 
+
+36:30 Going to make it 3D. We're going to link
+36:32 
+
+36:32 the call slider no which controls
+36:35 
+
+36:35 everything besides the call button and
+36:37 
+
+36:37 the call button to this note. So let's
+36:40 
+
+36:40 link that.
+36:42 
+
+36:42 Then we can go to about here. That would
+36:45 
+
+36:45 be 115.
+36:47 
+
+36:47 Hit S to open the scale. Set a key frame
+36:51 
+
+36:51 for the scale. Then let's go to 2
+36:54 
+
+36:54 seconds and decrease the scale to about
+36:58 
+
+36:58 here. We're going to need to adjust this
+37:00 
+
+37:00 background as we can see the edge. So
+37:03 
+
+37:03 I'm going to select the background, hit
+37:05 
+
+37:05 S, and increase the scale till we can't
+37:07 
+
+37:07 see it. So this is what we've got. Let's
+37:11 
+
+37:11 also easy ease the call out animation.
+37:13 
+
+37:13 So, I'm going to select those layers,
+37:15 
+
+37:15 hit F9, go into the graph editor, and
+37:18 
+
+37:18 let's just max out this curve.
+37:22 
+
+37:22 That's looking cool. If you remember
+37:24 
+
+37:24 from before, we can go to our end key
+37:27 
+
+37:27 frame, go one frame back, select all of
+37:30 
+
+37:30 our layers, whilst holding option or
+37:32 
+
+37:32 alt, press the right square bracket, and
+37:33 
+
+37:33 that should trim all of our layers up to
+37:35 
+
+37:35 this point. All right, it's finally time
+37:37 
+
+37:37 for our last scene, and that's the music
+37:40 
+
+37:40 player scene. Let's go to our project
+37:42 
+
+37:42 panel. Let's close these and open up
+37:45 
+
+37:45 both of our music player files. So,
+37:47 
+
+37:47 we've got the AI comp and the PSD comp.
+37:51 
+
+37:51 As always, let's copy the text over. I
+37:54 
+
+37:54 don't know why the text has gone bold,
+37:56 
+
+37:56 but yeah, let's just copy it over.
+37:60 
+
+37:60 Create, convert to editable text. And
+38:04 
+
+38:04 then this one,
+38:07 
+
+38:07 convert to editable text. And then we
+38:10 
+
+38:10 can delete both of these AI text layers.
+38:12 
+
+38:12 We have two different shape layers here.
+38:15 
+
+38:15 So we've got the music player box and
+38:18 
+
+38:18 these two circles. We can select both of
+38:20 
+
+38:20 these which is music player box and
+38:22 
+
+38:22 buttons. Right click create and create
+38:26 
+
+38:26 shapes from vector layer. Then we can
+38:28 
+
+38:28 delete both of the AI files. And now
+38:30 
+
+38:30 we've just got the shape layers. Then
+38:32 
+
+38:32 let's enable 3D for everything. And
+38:35 
+
+38:35 let's make sure to set up the material
+38:36 
+
+38:36 options. So go into material options and
+38:40 
+
+38:40 turn off accept lights. Then we can copy
+38:43 
+
+38:43 this and we can select all of our layers
+38:46 
+
+38:46 and whilst holding command or control
+38:48 
+
+38:48 deselect the shape layers because we
+38:50 
+
+38:50 want these to be affected by lights.
+38:53 
+
+38:53 Then press command V to paste those
+38:55 
+
+38:55 material options on. And lastly, let's
+38:58 
+
+38:58 not forget to turn on continuously
+38:60 
+
+38:60 rasterize for all of these layers.
+39:03 
+
+39:03 Select the top one. Shift select the
+39:05 
+
+39:05 bottom one. Command C. Go back to our
+39:08 
+
+39:08 main comp. We'll go to two. Paste. And
+39:12 
+
+39:12 then left square bracket. I'm going to
+39:14 
+
+39:14 create a null object using the shortcut.
+39:18 
+
+39:18 Left square bracket to bring it to the
+39:20 
+
+39:20 playhead. 3D. And I'm going to just
+39:22 
+
+39:22 rename this to iPhone null. Then I'm
+39:26 
+
+39:26 going to link all of these layers up to
+39:28 
+
+39:28 this null object. Hit P. And we can move
+39:31 
+
+39:31 this into position.
+39:34 
+
+39:34 Since the light is affecting our music
+39:36 
+
+39:36 player box, we can't see any of the text
+39:38 
+
+39:38 elements, but that's going to change
+39:39 
+
+39:39 shortly. So, let me hit S and just make
+39:43 
+
+39:43 it a bit smaller. Can drag it down.
+39:46 
+
+39:46 Something like that.
+39:49 
+
+39:49 Let's also drag in background three. And
+39:53 
+
+39:53 this background is actually going to be
+39:55 
+
+39:55 inside of the iPhone shape. So, I'm
+39:58 
+
+39:58 going to trackmat this to the iPhone
+39:60 
+
+39:60 shape so it's within the boundaries.
+40:02 
+
+40:02 Then I'm going to press S to change the
+40:04 
+
+40:04 scale and just make it fit. Could drag
+40:08 
+
+40:08 it up a bit. And we also need a
+40:11 
+
+40:11 background behind all of this. Let's
+40:14 
+
+40:14 create a background ourselves. Hit
+40:16 
+
+40:16 layer, new, and then solid. And I'm
+40:19 
+
+40:19 going to just name this background. Hit
+40:21 
+
+40:21 left square bracket on the keyboard. And
+40:24 
+
+40:24 then let's drag this to the bottom. Then
+40:26 
+
+40:26 we can add the four color gradient
+40:27 
+
+40:27 effect.
+40:30 
+
+40:30 I'm going to change color one to white
+40:35 
+
+40:35 and color four to white.
+40:39 
+
+40:39 Color two to like a light a light bluey
+40:43 
+
+40:43 purple. And we can use this color picker
+40:46 
+
+40:46 to do the same color here. Cool. Lastly,
+40:51 
+
+40:51 I think I want to make a stroke around
+40:53 
+
+40:53 this iPhone shape. So, I'm going to
+40:55 
+
+40:55 select this iPhone shape. Since it's
+40:57 
+
+40:57 trackmatted with this background, it's
+40:59 
+
+40:59 already turned off. So, we can right
+41:01 
+
+41:01 click, create, create shapes from vector
+41:04 
+
+41:04 layer. And we can drag this underneath.
+41:07 
+
+41:07 I'm just going to name this iPhone
+41:09 
+
+41:09 stroke.
+41:11 
+
+41:11 And then we can open it up. We can add a
+41:14 
+
+41:14 stroke effect. And this stroke, I'm
+41:17 
+
+41:17 going to make it black. And just
+41:19 
+
+41:19 increase it slightly.
+41:22 
+
+41:22 That way it kind of looks like it's an
+41:24 
+
+41:24 actual iPhone. Our layers are looking a
+41:26 
+
+41:26 bit messy. It's hard to tell, you know,
+41:28 
+
+41:28 what is what. What I'm going to do is
+41:31 
+
+41:31 select the slider up to the iPhone
+41:35 
+
+41:35 stroke. These are all the iPhone layers.
+41:38 
+
+41:38 So, we can set this to a color. Then
+41:41 
+
+41:41 we've got the button and we've got the
+41:43 
+
+41:43 torch and the camera. So, we could make
+41:46 
+
+41:46 all of these one color. And then we got
+41:48 
+
+41:48 the music player box, the extras, player
+41:51 
+
+41:51 controls, and timeline. So, we can make
+41:54 
+
+41:54 all of those one color as well. All
+41:57 
+
+41:57 right. And now, let's just create the
+41:59 
+
+41:59 glass effects for the button outlines
+42:01 
+
+42:01 and the music player box outlines. I'm
+42:03 
+
+42:03 going to duplicate the glass effect from
+42:05 
+
+42:05 our last scene. And I'm going to place
+42:08 
+
+42:08 it here above music player box. Let's
+42:10 
+
+42:10 square bracket on the keyboard to drag
+42:11 
+
+42:11 it to the playhead. And we'll make it a
+42:13 
+
+42:13 bit bigger. We can also make it purple.
+42:16 
+
+42:16 We're going to need to do the glass
+42:18 
+
+42:18 effect twice because we've got two
+42:19 
+
+42:19 different shapes. So, let's first do
+42:22 
+
+42:22 this one. I'm going to change the
+42:23 
+
+42:23 surface to the music player box
+42:26 
+
+42:26 outlines, which is number eight. So,
+42:28 
+
+42:28 let's just find number eight. Here we
+42:31 
+
+42:31 go. The softness to 25. Height can be
+42:34 
+
+42:34 60. Displacement, we can make it 100.
+42:38 
+
+42:38 The blurriness, we can set that to 25.
+42:41 
+
+42:41 And the brightness can be turned off.
+42:44 
+
+42:44 Let's trackmat this to the music player
+42:46 
+
+42:46 box. And here we've got our glass
+42:48 
+
+42:48 effect. Then let's just duplicate this
+42:51 
+
+42:51 music player box twice. One for the
+42:53 
+
+42:53 stroke
+42:55 
+
+42:55 and one for the drop shadow. Just like
+42:58 
+
+42:58 before, drag the drop shadow to the
+42:59 
+
+42:59 bottom. The stroke above the adjustment
+43:02 
+
+43:02 layer. Turn both of them on. Let's find
+43:05 
+
+43:05 the drop shadow from our previous scene.
+43:08 
+
+43:08 Copy these settings over. And you could
+43:11 
+
+43:11 set all of these settings up as presets.
+43:12 
+
+43:12 So you won't have to do this every
+43:14 
+
+43:14 single time. So let's place that onto
+43:16 
+
+43:16 the drop shadow trackmat to this shape
+43:19 
+
+43:19 and invert. Open a stroke.
+43:23 
+
+43:23 Turn off the fill. Add a stroke
+43:26 
+
+43:26 modifier.
+43:27 
+
+43:27 Uh set it to overlay and 50%.
+43:32 
+
+43:32 So that's the glass effect set up for
+43:34 
+
+43:34 our music player box. Now we just need
+43:36 
+
+43:36 to do the same for the button outlines.
+43:39 
+
+43:39 So, I'm going to duplicate this
+43:40 
+
+43:40 adjustment layer and drag it above
+43:42 
+
+43:42 button outlines.
+43:44 
+
+43:44 Track it to this shape. Open up surface
+43:47 
+
+43:47 in CC glass. And our bump map is the
+43:50 
+
+43:50 button outlines, which is number 14.
+43:54 
+
+43:54 So, let's select number 14. For the
+43:56 
+
+43:56 softness, I'm going to lower it a bit to
+43:58 
+
+43:58 about 20 and also the height to 40.
+44:04 
+
+44:04 Then, we need to add the stroke and the
+44:06 
+
+44:06 drop shadow. So, duplicate this barn
+44:09 
+
+44:09 outlines twice.
+44:11 
+
+44:11 Stroke,
+44:12 
+
+44:12 drop shadow. Drag the drop shadow under
+44:15 
+
+44:15 and the stroke above the adjustment
+44:17 
+
+44:17 layer. Then turn both of them on. Copy
+44:21 
+
+44:21 the drop shadow settings
+44:23 
+
+44:23 and paste it onto this layer. Trackmat
+44:26 
+
+44:26 it. Invert the trackmat. Open the stroke
+44:30 
+
+44:30 contents. We've got two. So, let's turn
+44:33 
+
+44:33 off the fill for both. Then we can close
+44:36 
+
+44:36 them and add a stroke.
+44:39 
+
+44:39 And let's make sure that stroke is
+44:41 
+
+44:41 outside of the group and at the bottom.
+44:45 
+
+44:45 Then we can set it to overlay and 50%.
+44:49 
+
+44:49 Awesome. Let's just make this glass
+44:51 
+
+44:51 effect green. And we can link the stroke
+44:53 
+
+44:53 and the drop shadow for the buttons to
+44:56 
+
+44:56 the buttons outlines. And we could do
+44:59 
+
+44:59 the same for the stroke and the drop
+45:00 
+
+45:00 shadow for the music player box. All
+45:04 
+
+45:04 right. And we still got a bit more
+45:05 
+
+45:05 styling to do. So for the extras, I'm
+45:08 
+
+45:08 going to lower the opacity. So hit T and
+45:11 
+
+45:11 set the opacity to 50%. So that just
+45:13 
+
+45:13 made these have less opacity. In scene
+45:17 
+
+45:17 two, we had our call animation zoom out.
+45:19 
+
+45:19 So for this one, we're going to have
+45:21 
+
+45:21 everything continue that zoom out
+45:23 
+
+45:23 animation as well. But first, I want
+45:26 
+
+45:26 this music player box and these circles
+45:28 
+
+45:28 to slide up. To do that, we're going to
+45:31 
+
+45:31 create two null objects. one for the
+45:33 
+
+45:33 music player box and all of the contents
+45:35 
+
+45:35 inside and one for these buttons and the
+45:38 
+
+45:38 contents inside these. Select the first
+45:40 
+
+45:40 text and create a new null object. Let's
+45:43 
+
+45:43 make it 3D. Call that music player.
+45:46 
+
+45:46 Let's link all of these up to extras and
+45:50 
+
+45:50 then whilst holding command select music
+45:52 
+
+45:52 player box and link that to music player
+45:56 
+
+45:56 and then link music player to iPhone.
+45:58 
+
+45:58 No. Now if I change the position of the
+46:01 
+
+46:01 music player, you can see that all of
+46:04 
+
+46:04 the elements moves together. Then we can
+46:07 
+
+46:07 do the same for these buttons. So above
+46:10 
+
+46:10 camera, I'm going to create a new null
+46:12 
+
+46:12 and press left on the square bracket to
+46:14 
+
+46:14 bring it to the play head. Let's just do
+46:16 
+
+46:16 the same with this one. Okay. And now
+46:19 
+
+46:19 select the camera, the torch, and the
+46:21 
+
+46:21 buttons outlines and drag it onto our
+46:24 
+
+46:24 null object. Drag the null object onto
+46:26 
+
+46:26 iPhone null. and just rename this to
+46:29 
+
+46:29 buttons null. So we can test this. Hit P
+46:33 
+
+46:33 and move it around. And as you can see,
+46:35 
+
+46:35 our buttons are moving. Cool. So we've
+46:39 
+
+46:39 set up our null controllers. Now let's
+46:41 
+
+46:41 animate them. So I'm going to select the
+46:43 
+
+46:43 buttons now and the music player null.
+46:45 
+
+46:45 Hit P to open the position. And we're
+46:48 
+
+46:48 going to set a key frame for the
+46:49 
+
+46:49 position. Let's move these key frames
+46:51 
+
+46:51 over to about 220. And then at the start
+46:56 
+
+46:56 at 2 seconds, we can drag this down to
+46:60 
+
+46:60 about here. Let's select all of these
+47:02 
+
+47:02 key frames. F9 to easy ease. And let's
+47:06 
+
+47:06 just set up this curve to just be the
+47:08 
+
+47:08 max. So left all the way to the left and
+47:10 
+
+47:10 the right to the left.
+47:13 
+
+47:13 Just like that. We want to offset it a
+47:15 
+
+47:15 little bit so that this goes up first
+47:19 
+
+47:19 and then these buttons. I'm going to
+47:21 
+
+47:21 select the buttons now. And whilst
+47:23 
+
+47:23 holding shift, I'm going to select all
+47:25 
+
+47:25 of these green layers.
+47:27 
+
+47:27 And then we're going to move it over
+47:30 
+
+47:30 by about three frames. Let's see how
+47:33 
+
+47:33 that looks. Cool. I'm going to hit U to
+47:36 
+
+47:36 close the key frames. And we need to do
+47:39 
+
+47:39 the zoom animation for the entry. Let's
+47:41 
+
+47:41 create a null object right at the top.
+47:43 
+
+47:43 Hit left square bracket to center it.
+47:45 
+
+47:45 Let's just call this entry animation or
+47:48 
+
+47:48 in animation. Make it 3D. and we can
+47:52 
+
+47:52 link iPhone null to this entry
+47:54 
+
+47:54 animation. Since we created this null
+47:56 
+
+47:56 object, now the anchor point is in the
+47:58 
+
+47:58 center. We can press S to open the
+48:01 
+
+48:01 scale, set a key frame, and we could
+48:04 
+
+48:04 move this key frame over to about 225.
+48:08 
+
+48:08 Then let's increase the scale.
+48:11 
+
+48:11 Since we didn't link the background to
+48:13 
+
+48:13 the iPhone, it's not scaling up. So,
+48:15 
+
+48:15 let's make sure that's linked to the
+48:17 
+
+48:17 iPhone. And now let's increase the scale
+48:20 
+
+48:20 to about 140.
+48:24 
+
+48:24 So this is what we'll have. Let's easy
+48:26 
+
+48:26 ease these key frames. Let's drag the
+48:30 
+
+48:30 left all the way to the left and the
+48:32 
+
+48:32 right to the left.
+48:36 
+
+48:36 Now that looks really smooth.
+48:39 
+
+48:39 One more thing we could do is animate
+48:41 
+
+48:41 this timeline here. Since it is a music
+48:43 
+
+48:43 player, I'm going to duplicate this
+48:45 
+
+48:45 timeline. And the bottom timeline, I'm
+48:48 
+
+48:48 going to reduce the opacity to 50%. The
+48:51 
+
+48:51 top one, we're going to mask it so it
+48:53 
+
+48:53 moves along. So, select the shape layer,
+48:55 
+
+48:55 and let's create a mask about here. Open
+48:59 
+
+48:59 the mask settings, open mask path, and
+49:02 
+
+49:02 let's set this to the start. And then we
+49:05 
+
+49:05 can select the mask path and move it
+49:08 
+
+49:08 over a little. Just like that.
+49:12 
+
+49:12 So now we've got this timeline moving
+49:14 
+
+49:14 along. There's a lot more you could do
+49:16 
+
+49:16 with these animations. You could animate
+49:18 
+
+49:18 the text. You could animate these
+49:20 
+
+49:20 buttons. It's all up to you. And that's
+49:22 
+
+49:22 pretty much all there is to this
+49:23 
+
+49:23 animation. Hope you found this video
+49:25 
+
+49:25 helpful. And if you want a part two,
+49:28 
+
+49:28 then let me know in the comments below.
+49:30 
+
+49:30 Be sure to subscribe and I'll see you
+49:32 
+
+49:32 next

@@ -1,0 +1,441 @@
+- So you have a scene,
+let's say an environment scene
+that you put a lot of hours into.
+I mean, really, really put your heart into it.
+You did everything right,
+you started from the blocking stage,
+you practiced foreground,
+mid ground and background division.
+The tree is right here around the golden rule sweet spot.
+Everything is pointing towards it,
+you then added all those little details like stones
+and fallen trunks, grass, and even dandelions.
+And then you hit render and yeah.
+So then you work some more on it and this is what you get.
+Yup, pretty boring.
+At this point the whole thing is getting frustrating.
+You spent so many hours making the scene,
+you are completely exhausted at this point, for this.
+Well, it happened to me many times.
+If I was to tell you how many times,
+I'd probably be embarrassed, twice, just for this video.
+Oftentimes I hit a stage where it almost seems
+like some sort of good-looking final result
+is just not possible.
+Well, fortunately, there is always something you can do
+to make things better.
+Things you can add
+to really bring your 3D renders to life.
+Now, this video is not going
+to be about all those important fundamentals of composition,
+camera work and lighting
+that every 3D artists should know.
+We discussed those in my previous two videos,
+focused on the topic, so check them out,
+if you haven't already.
+Instead, today, we will have a look
+at something slightly different,
+something more superficial, you might say.
+Nonetheless, something I use every time
+for every artwork I make.
+So without any further ado,
+let me introduce six ways
+to make your renders instantly cooler, like this.
+(birds chirping)
+So what I did to achieve this result,
+was I edit a blurred foreground element.
+Then I let clouds cast shadows on the ground.
+I brought the mighty weapon known as godrays.
+I then added falling leaves and flying birds.
+And last but not least adding atmosphere always helps
+to bring your scene together.
+After a bit of Eevee tinkering and compositing,
+both of which I showed you in the previous videos,
+I did achieve something that I was reasonably happy with.
+And now I will quickly break down all these six steps.
+(upbeat note)
+One little note, before we start,
+when creating this image in Blender Eevee,
+I relied heavily on the grass element
+from the add on Graswald,
+generated trees from Grove add on
+an amazing photo scan assets from Megascans.
+without these it would take days instead of hours.
+I also used these awesome VDB clouds by Travis Davis,
+which give you a ton of options
+for quickly filling your blender skies.
+Now this first step may not apply to every 3D artwork,
+but I, myself I'm heavily influenced by movie compositions,
+probably because I studied filmmaking,
+and some of that stuck with me.
+What we learned at school and when composing our shots
+at everyday shoot, was to add a bit of foreground element
+to your scene and ideally make it blurry.
+What this does is it adds an amazing sense of depth
+to our shot accentuate it even more,
+when you start moving the camera.
+If you look at these old masters, they rarely did it.
+But I think that after a century of filmmaking,
+this technique seeped into every area
+of entertainment industry, especially modern concept art.
+So if you go for example, at art station
+and browse some artwork,
+you will often find this element present.
+Here it is, and here and here, here too,
+you get the picture.
+So what I've done in my scene was to take a tree model
+and put it towards the camera where it works nicely.
+For example, here, around the side here.
+Then I switched on the depth of field option
+and right of the bat,
+things started to work much nicer.
+Not only does it add more depth,
+it can also frame your images nicely.
+And that's just step one.
+For my 3d work, I like to gather all sorts
+of reference sheets.
+And in this case, looking at many, many images,
+it became obvious that landscape shots almost always look
+more epic when there are these huge cloud shadows
+moving across them,
+especially when you compare it to a photo without shadows,
+it becomes quite obvious.
+This technique is actually very easy,
+in Blender, it won't take you more than a few minutes,
+but it adds tons of awesomeness to your images.
+Let's demonstrate here on a simple scene
+where I have this ground plane and a plane above
+where I want my clouds to be.
+Let's actually switch to Eevee,
+now you can already see
+that when you have a top down light,
+your top object is of course,
+casting shadows onto the bottom one.
+Now I want this shadow to be more cloudy and random.
+For that purpose,
+I used to import various images of clouds with Alpha,
+making light cast shadows through them.
+However that proved more performance heavy than necessary.
+There is an easier and foster solution,
+one that I nowadays use almost exclusively.
+All you need to do is to plug noise texture
+into the Alpha socket of the principal shader,
+and to make it work in Eevee,
+you always need to go to the shader options
+and set the Blend Mode and Shadow Mode to Alpha Blend.
+And for example, Alpha Hashed.
+Only then will the opacity take effect.
+Okay, then play around with the settings
+and plug in the Color Ramp noDe to drive the softness
+and hardness and with the noise node selected,
+if you hit Control + T,
+of course you must have the Node Wrangler add on,
+active in the settings.
+You get this mapping node
+where you can simply move your cloud shadows to the side,
+rotate them and even scale them super fast, super easy,
+and also tileable.
+And you can really get creative with these,
+darkening areas you don't need the viewers to look at,
+highlighting those most important spots of your image.
+Not to mention you can use them in all your 3D scenes,
+not just landscapes.
+For example, here, let's jump back
+to the previous tutorial scene with Shaolin Monk Su,
+by Juan Hernandez and use the same clouds
+in smaller scale to cast shadows on his face.
+Of course, filling your scene with glow and blooms
+and light shafts of all sorts, is generally frowned upon.
+If you do not have a good image base to start off, well,
+then no amount of glow or rays will save you.
+But let's say that the base of your image is okay,
+then adding this little detail is something I love to do.
+Basically on all of my images,
+be it in more or less prominent form.
+Creating light rays that you can put directly
+into your scene is pretty easy.
+First, you will need a black and white image
+with these rays, which you can create,
+for example, in Photoshop, Gimp
+or just download them online.
+You then put this image into a scene
+with the import images as planes option
+and just plug it into the Alpha.
+Again, don't forget the blending modes
+in the shader set up, and done.
+There is something about leaves falling through your scene
+that is just so damn amazing and poetic.
+Lately I've been playing the new samurai game,
+Ghost of Tsushima and watching the leaves fly
+and fall everywhere really made me think how much
+it adds to the overall atmosphere.
+A little thing, but so powerful.
+So let's make our own falling leaves in Blender, shall we?
+I started with getting some nice leaf textures.
+In my case, I downloaded them
+with free credits on textures.com
+and you can do it too.
+There, I found these maple leaves
+but you can definitely use different sources.
+Many you can even download for free from Blendswap,
+some even premade in Blender.
+Other you can find among Megascans assets,
+if you are subscribed to Quixel.
+In Photoshop, Gimp,
+or any other photo manipulation software,
+you put all these images together to a texture atlas,
+save it as PNG with Alpha.
+You then import it as a plane to Blender
+and cut each individual leaf.
+You can subdivide the planes,
+shape it a little bit and even play around with the shading,
+maybe adding some specular and bump.
+Let's make a camera here and aim it somewhere
+in the air and then put all these leaves
+into a separate collection
+and then add a simple object, for example,
+plane and onto it, put particle simulation.
+Activate the collection parameter here
+and choose our leaves collection to be the source
+and to make the particles not disappear
+throughout the simulation,
+make their lifetime something larger than your timeline.
+In my case, it's 2000.
+Also let's increase the damping in physics tab
+that will make the leaves fall somewhat slower,
+like they're very light, which they are.
+0.5 seems to be about right now,
+and also I don't like that they're all falling uniformly.
+So let's add some rotation here
+and activate this dynamic checker, open up angular velocity,
+leave this velocity value here
+and set a value of four down here
+or less or more if you like,
+depending on how fast you want to leaves to spin.
+To add more randomness, play with the values here.
+Now that's looking better.
+And looking at this, there was still a lot of uniformity
+in the simulation.
+One thing I've done to fix it was to add
+in several physics fields.
+First, wind, making it blow a little stronger
+to the side with a little stronger value here, like 22.
+The plane then needed some repositioning for the leaves
+to remain in the shot.
+Then adding turbulence field with size of two,
+a strength of about 50, helped with the randomness too,
+creating these very nice pathways in the air.
+Really almost like in Ghost of Tsushima.
+Limiting the number of particles
+and putting them out of focus, finalized the result for me,
+which I then upended into my scene with the fields and all,
+catched it, and bam falling leaves,
+right at your fingertips.
+This next step may be a little bit more advanced.
+Nevertheless, it's another one that I like to use,
+maybe too much, adding birds.
+To add birds into your still renders,
+you may of course simply use an image
+or for moving shot,
+you may let's say go out in the nature,
+away from your computer.
+So that's what outdoor looks like?
+Take your camera and film some flying birds,
+then get rid of the sky, and here you go.
+Or you can stay home and create your birds in Blender.
+There, you can really control the number
+and movement of your flocks.
+So it can often be the best option.
+For that purpose,
+I downloaded this seagull model from Blendswap,
+made by a user called FnaX,
+and I added a very simple shape key animation to it.
+In edit mode, I edited the mesh to be this shape
+and with it, I created this basis default state
+in the shape keys menu.
+I then jump again into edit mode and by tinkering
+with the mesh again,
+I created one shape key where the wings were down.
+If I then started scrubbing through this value,
+it looked like the bird is flapping its wings.
+You can of course make this animation look much nicer
+than me, but I figured my birds would be too small
+to notice a bad animation.
+I then key frame the shape key at a value of zero
+and frame zero.
+I went to frame 20, key framed it at value of one
+and then at frame 40, added again value of zero.
+This way, we create a very simple flapping cycle.
+To make it repeat infinitely,
+I selected all my key frames with A and hit Shift + E
+activating this super useful cyclic command here.
+Never ending flapping, here we go.
+I then put my bird into a collection
+and called it Bird Particles.
+And with that, I duplicated the model several times
+and made variations through the cyclic animation
+for each bird, in some cases making it faster
+or adding second cycle of animation,
+with different shape key values
+so that they appeared to be different birds.
+And thus, my bird particles were ready.
+Now, I created an object, this big sphere,
+and I made an emitter particle system,
+using collection setting and a birds group
+in this render section here, but nothing was happening.
+Well, watch out for that,
+because Blender remembers the last active collection
+and it puts new objects in it.
+So this sphere where we have our particle simulation,
+was created inside of the Bird Particles group,
+and then the simulation can't really work.
+So take it out, and whee, it's raining tiny little birds.
+I made them bigger here and then the real fun started
+because when I activated this Boid's option
+in the physics section,
+all sorts of weird stuff started happening.
+First off, it's better to hide the emitter,
+both here and also in the viewport display,
+so we can see better what's going on.
+The birds at this point started rotating and focusing
+on the emitter object,
+basically like some sort of flying insect.
+That's however not what I wanted, I wanted birds.
+So we need to change the behavior a little bit.
+Before that however,
+I checked the object rotation option here
+and then rotated my original particles 90 degrees
+because before that, there were flying sideways.
+Now while this looked cool, an awesome flocking bird chaos,
+this is actually not how flocks behave.
+They tend to flock together following a goal
+and often one leading bird.
+Fortunately, that's exactly what you can set up
+in these Boid's settings here.
+So I wanted the birds to cross the scene,
+heading towards this cube,
+behaving in a somewhat less mothy way.
+In this Boid brain settings here,
+you have all sorts of fun rules to play with.
+You can add goal and specify the cube
+to be the bird's destination.
+You can add separate command
+to make them fly away from each other
+and flock command, making them do the opposite.
+And also a follow leader command.
+Take note, the order in which you add these is important.
+With this fuzzy option set, it happened from the top.
+So for example now, first they will separate,
+then they will realize they have to follow the leader,
+upon which they will try to follow their goal,
+while following the leader and flocking together.
+It is really very straightforward and awesome fun playing
+with these particles and their behavior.
+I went through numerous settings,
+also tinkering with the movement tab,
+lowering some of the max air speed,
+max acceleration and angular velocity.
+And you can decrease the personal space
+to make the flock tighter.
+And by the way, you can very quickly add a new flock
+of birds by simply going to edit mode
+and duplicating the sphere,
+then putting it somewhere else.
+These were my final settings.
+I went with much lower number of birds,
+lower personal space for them and this order of commands.
+And then I added some music
+and let them chase this irresistible, invisible cube.
+(playful music)
+We talked about atmosphere and how to create it
+in the 10 tips to make our scene more cinematic.
+And in this new scene,
+I even used a similar way to add the atmospheric depth
+as I did there.
+I used cube, put a pretty simple volume shader on it,
+and with some very low numbers,
+it gave me this nice misty effect.
+However, let's now demonstrate some other methods
+you can do this.
+Apart from this 3D fog, which is awesome,
+especially with light sources,
+higher anisotropy and some bloom effect,
+you can also achieve this in other ways,
+some even more performance efficient than this.
+For example, with 2D elements,
+let me quickly add a terrain with ANT landscape here,
+some mountains and a lower a mountainous area
+in the foreground and duplicate this one.
+And now we have basically three planes,
+a foreground, a mid ground, and a background.
+Then I can add the customary cube
+with principled volume shader,
+make the density 0.02, anisotropy 0.5
+and have a very strong spotlight shine through it.
+Now this may function both as an atmosphere
+and with higher density as a mist or a fog.
+However, if you have more defined ground planes,
+like I have here,
+I can divide those by 2D layers of atmosphere.
+You simply make a plane,
+plug a gradient texture with linear mode
+into the Alpha socket.
+And I will repeat myself,
+but please don't forget to set the Blend Mode
+and Shadow Mode here to make it work.
+With this setup, it's just a matter of rotating
+to gradient placement negative 90 degrees,
+and with Color Ramp,
+slightly limiting the area with black point,
+bring the intensity of the whites up.
+Place your atmosphere plane on the borders
+of the foreground and mid ground,
+and then one even in front of the camera.
+And while this is sort of a cheat,
+not really how a true atmosphere works,
+I think it serves the purpose quite nice.
+And there is actually one more,
+slightly advanced thing you can do here.
+I have this fog extra right here.
+Again, I put it on a plane and set it up the way
+I set up my previous transparent planes.
+Then I create a large ground plane,
+spanning almost a whole scene.
+And on this plane, create a particle system
+where I use this fog plane to extend it many times
+over the surface and rotate the image planes
+to face the camera with the rotation here.
+This combined with the other atmospheric planes
+and the mist volume usually gives a pretty cool result
+even on an ugly scene like this.
+In the final scene,
+I use the atmospheric plane to divide the mid ground
+from the background.
+I added a mist volume to have a bit of
+that volumetric light catching effect,
+and also added a little bit of dust planes here and there.
+And that was it with a bit of compositing work,
+added contrast and vignette,
+the final image went a long way
+from where we originally started.
+All that, with just a few techniques,
+ones that are helping to bring my artwork to life
+for many years now.
+I definitely recommend streamlining these.
+So create our own collections of flying birds,
+falling leaves, planes with light rays and atmosphere.
+And whenever you are close to finishing a new 3D artwork,
+you just append them into your scene
+and reuse them whenever you like,
+because I guarantee you when you use them once,
+you will be using them always.
+To get some of these assets are used in this video,
+you can subscribe to the CG Boost Resources
+at cgboost.com/resources and download them from there.
+Actually do youhave your own ways
+to bring 3D artwork to life?
+Definitely share your tips in the comments,
+I can't wait for them.
+But with that, stay creative my friends
+and until next, time Martin out.
+(upbeat note)

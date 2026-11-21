@@ -1,0 +1,1867 @@
+00:00 So, in this one, I'm going to show you
+00:01 
+
+00:01 how to get good natural-looking camera
+00:04 
+
+00:04 angles for your environments in Blender.
+00:06 
+
+00:06 This is one of the most important things
+00:08 
+
+00:08 when it comes to actually making a nice
+00:09 
+
+00:09 render. So, being able to get a good
+00:12 
+
+00:12 camera angle can transform a bad render
+00:15 
+
+00:15 into something that actually does look
+00:17 
+
+00:17 good in the end. So, this means that if
+00:19 
+
+00:19 you're not that good at Blender or
+00:20 
+
+00:20 you're just kind of struggling with the
+00:22 
+
+00:22 scene or whatever, if you can just get
+00:23 
+
+00:23 this one thing right, you can make
+00:26 
+
+00:26 things that look a lot better than they
+00:27 
+
+00:27 should look for your current skill
+00:29 
+
+00:29 level. The lighting plays a big part,
+00:31 
+
+00:31 too. I have a bunch of videos on
+00:32 
+
+00:32 lighting on my channel, too, but we're
+00:34 
+
+00:34 just going to cover camera angles in
+00:35 
+
+00:35 this one, which is just as important, in
+00:36 
+
+00:36 my opinion.
+00:38 
+
+00:38 Okay, so let me show you how I find
+00:39 
+
+00:39 camera angles and some examples of how
+00:41 
+
+00:41 I've shot different scenes and just some
+00:44 
+
+00:44 general tips to make this as easy as
+00:46 
+
+00:46 possible for you.
+00:47 
+
+00:47 Okay, so let's start in this scene. This
+00:49 
+
+00:49 is a a render I finished a couple days
+00:50 
+
+00:50 ago.
+00:51 
+
+00:51 The way I actually work is I have one
+00:53 
+
+00:53 view that I keep in solid view. I was
+00:56 
+
+00:56 just doing that to look nice in the
+00:57 
+
+00:57 beginning, but this is this usually
+00:59 
+
+00:59 stays in solid view.
+01:01 
+
+01:01 Then, I'll have a second viewport. This
+01:03 
+
+01:03 is just another viewport window that you
+01:04 
+
+01:04 can open up. Just, you know, go to the
+01:06 
+
+01:06 edge of any window, drag that open,
+01:08 
+
+01:08 switch it to 3D viewport.
+01:10 
+
+01:10 Uh I'll just leave that
+01:12 
+
+01:12 open on the camera view.
+01:14 
+
+01:14 If I just go to render view here, I have
+01:16 
+
+01:16 uh there's just a default camera that
+01:18 
+
+01:18 I've added. We can just pull that back.
+01:21 
+
+01:21 So, the way this works is I have my
+01:22 
+
+01:22 working viewport nice and snappy. It's
+01:24 
+
+01:24 always in solid view or wireframe or
+01:25 
+
+01:25 whatever. This one down here stays in
+01:28 
+
+01:28 render view and stays connected to the
+01:31 
+
+01:31 camera view. The way you do that is just
+01:32 
+
+01:32 press Numpad zero. That'll just snap you
+01:35 
+
+01:35 into what the camera sees.
+01:37 
+
+01:37 You can hit Control B,
+01:39 
+
+01:39 which will do this box select thing, and
+01:40 
+
+01:40 you can just click and drag over this
+01:43 
+
+01:43 and let go,
+01:44 
+
+01:44 and that'll just only capture what the
+01:46 
+
+01:46 camera is seeing and nothing else.
+01:49 
+
+01:49 And that'll just I'll just leave that
+01:51 
+
+01:51 there off to the side so I can always
+01:52 
+
+01:52 see
+01:53 
+
+01:53 what the final camera angle is going to
+01:54 
+
+01:54 look like what as I'm moving stuff
+01:56 
+
+01:56 around and making changes to the render.
+01:59 
+
+01:59 Okay, so how do you actually find good
+02:01 
+
+02:01 angles? Let me show you how I might do
+02:03 
+
+02:03 this. So again, I've just I've just
+02:04 
+
+02:04 added a fresh camera here, which is not
+02:07 
+
+02:07 uh
+02:08 
+
+02:08 I I've not really done anything except
+02:10 
+
+02:10 just move it back.
+02:12 
+
+02:12 Now, the first thing you'll notice is
+02:14 
+
+02:14 when I'm building a scene, I'll I'll
+02:16 
+
+02:16 choose a general direction and a a
+02:18 
+
+02:18 pretty general camera angle and just
+02:20 
+
+02:20 kind of point it roughly in the
+02:22 
+
+02:22 direction I know I want to capture. If
+02:23 
+
+02:23 you look at this, there's stuff all in
+02:25 
+
+02:25 front of the camera here, but if I look
+02:27 
+
+02:27 this way, there's nothing behind there.
+02:29 
+
+02:29 So, I knew making this that I was going
+02:31 
+
+02:31 to capture something from this side of
+02:34 
+
+02:34 the render and I just built it around
+02:36 
+
+02:36 that even if I didn't know the exact
+02:38 
+
+02:38 camera angle I was going to choose. I
+02:39 
+
+02:39 knew the general direction at first. So,
+02:41 
+
+02:41 the way I like to think about this is
+02:43 
+
+02:43 you don't have to do it this way for
+02:44 
+
+02:44 every shot, but just in general,
+02:47 
+
+02:47 the way I think is it's very helpful to
+02:48 
+
+02:48 think about this is if you were
+02:50 
+
+02:50 physically in this place holding an
+02:53 
+
+02:53 actual camera, walking around the room,
+02:56 
+
+02:56 where would you go to try and find a
+02:57 
+
+02:57 nice angle? What zoom level would you
+02:60 
+
+02:60 use and where would you move around to
+03:01 
+
+03:01 try and find something that looks nice?
+03:04 
+
+03:04 Okay, so if we look at this,
+03:06 
+
+03:06 the default focal length here is 50 mm.
+03:10 
+
+03:10 All that means is the the millimeters is
+03:13 
+
+03:13 just the the zoom level, right? If you
+03:16 
+
+03:16 you probably use this if you drag this
+03:18 
+
+03:18 to the left, it zooms out. If you drag
+03:20 
+
+03:20 it to the right, it zooms in. If you've
+03:22 
+
+03:22 used a camera before, you'll understand
+03:23 
+
+03:23 this. Just to give you a really quick
+03:26 
+
+03:26 context of what zoom level this is,
+03:29 
+
+03:29 uh if you don't know, if you're if you
+03:31 
+
+03:31 have an iPhone and you use the the 1x
+03:34 
+
+03:34 camera, that'll be around 24 mm.
+03:38 
+
+03:38 That'll just be the the equivalent of
+03:39 
+
+03:39 around that zoom level.
+03:41 
+
+03:41 And you can see that that's what that
+03:43 
+
+03:43 looks like here.
+03:44 
+
+03:44 The 2x camera on an iPhone will probably
+03:46 
+
+03:46 be around 50 mm.
+03:48 
+
+03:48 The 0.5 will probably be around like 16
+03:50 
+
+03:50 mm. So, like very wide. It just We're
+03:53 
+
+03:53 not changing the distance here at all.
+03:55 
+
+03:55 We're just changing literally how zoomed
+03:57 
+
+03:57 in or how zoomed out it is, right? If
+03:59 
+
+03:59 you just see, it's just zooming the
+04:00 
+
+04:00 camera in or out. So, again, the default
+04:02 
+
+04:02 is 50.
+04:04 
+
+04:04 That's fine. You can make renders with
+04:06 
+
+04:06 that. It's not a problem. Like no focal
+04:08 
+
+04:08 length, as long as it's not outrageous,
+04:11 
+
+04:11 no focal length is really going to be a
+04:12 
+
+04:12 problem. It just depends on the look you
+04:14 
+
+04:14 want to go for.
+04:15 
+
+04:15 For an interior shot like this,
+04:18 
+
+04:18 you might want to zoom it out a little
+04:20 
+
+04:20 bit if you want to capture more of that
+04:21 
+
+04:21 space.
+04:22 
+
+04:22 So, I usually, for for a render like
+04:24 
+
+04:24 this, I'll usually actually zoom it out
+04:26 
+
+04:26 to maybe between 20 and 30 mm.
+04:30 
+
+04:30 So, 24 mm is a good very natural-looking
+04:33 
+
+04:33 focal length that I'll use.
+04:34 
+
+04:34 It doesn't have to be exactly 24. It can
+04:36 
+
+04:36 be 23. It can be 25. It doesn't matter
+04:38 
+
+04:38 that much, but
+04:39 
+
+04:39 I've zoomed it out a little bit
+04:41 
+
+04:41 because if we were at 50, it's a little
+04:42 
+
+04:42 bit hard to see the rest of the
+04:44 
+
+04:44 environment. You can see, no matter how
+04:45 
+
+04:45 far back I pull the camera, it's just a
+04:47 
+
+04:47 little bit hard to capture all of what I
+04:49 
+
+04:49 want to see in this render.
+04:52 
+
+04:52 Now, this could work.
+04:53 
+
+04:53 It just depends what you want the image
+04:55 
+
+04:55 to look like. So, having the camera
+04:57 
+
+04:57 pulled way back physically and then
+04:59 
+
+04:59 zooming it in is going to have a
+05:00 
+
+05:00 different look than pushing it forward
+05:02 
+
+05:02 and zooming it out.
+05:04 
+
+05:04 You can see we're capturing the kind of
+05:05 
+
+05:05 the same
+05:07 
+
+05:07 amount of of stuff in the middle here,
+05:09 
+
+05:09 but then it just changes the way the
+05:10 
+
+05:10 whole scene looks if it's close, zoomed
+05:13 
+
+05:13 in, sorry, close, zoomed out versus far
+05:15 
+
+05:15 away, zoomed in.
+05:17 
+
+05:17 >> [snorts]
+05:17 
+
+05:17 >> Okay, so let's let's just kind of leave
+05:19 
+
+05:19 this somewhere in the middle at around
+05:21 
+
+05:21 24 mm to start. Again, you don't have to
+05:23 
+
+05:23 use that. It's just one I'm picking cuz
+05:25 
+
+05:25 I want to capture a good amount of stuff
+05:28 
+
+05:28 in the room here.
+05:30 
+
+05:30 Now, if you were walking around holding
+05:32 
+
+05:32 a camera, you're probably not going to
+05:34 
+
+05:34 be way up here
+05:36 
+
+05:36 or way way super close to the ground.
+05:39 
+
+05:39 You're probably going to be somewhere
+05:40 
+
+05:40 kind of
+05:41 
+
+05:41 not too far off the ground. Maybe you
+05:44 
+
+05:44 could be crouched down, whatever, a
+05:45 
+
+05:45 little bit low to the ground.
+05:47 
+
+05:47 But, you're not going to be like flying
+05:48 
+
+05:48 around probably.
+05:50 
+
+05:50 Now, a shot like this could work if you
+05:52 
+
+05:52 wanted to do that. That That's certainly
+05:54 
+
+05:54 a shot that you could do, but just for
+05:56 
+
+05:56 the sake of keeping it simple, let's
+05:57 
+
+05:57 just focus on if we were if we were
+05:59 
+
+05:59 holding an actual camera in the room
+05:60 
+
+06:00 walking around.
+06:02 
+
+06:02 Let's just pull it back here.
+06:03 
+
+06:03 And we could keep it in the center just
+06:06 
+
+06:06 looking
+06:08 
+
+06:08 dead on straight down the hallway at
+06:10 
+
+06:10 this thing.
+06:11 
+
+06:11 That's fine. But it sometimes is nice to
+06:13 
+
+06:13 just move it off to one side or the
+06:14 
+
+06:14 other because if you leave it if you
+06:17 
+
+06:17 just add a camera and it's directly in
+06:18 
+
+06:18 the middle of the scene and everything
+06:20 
+
+06:20 is 100% perfectly lined up straight down
+06:23 
+
+06:23 the middle
+06:24 
+
+06:24 super precisely,
+06:26 
+
+06:26 it may just look a little bit fake or
+06:27 
+
+06:27 boring. Not necessarily, but it can. So,
+06:30 
+
+06:30 sometimes I like to just move this off
+06:31 
+
+06:31 to the side. So, let's just hit GX.
+06:33 
+
+06:33 Let's just pull it off to the side over
+06:34 
+
+06:34 here.
+06:35 
+
+06:35 Now,
+06:36 
+
+06:36 it looks a little bit unbalanced if I
+06:38 
+
+06:38 don't rotate this because this our our
+06:40 
+
+06:40 central object of interest is kind of
+06:43 
+
+06:43 the center statue library thing.
+06:47 
+
+06:47 That's no longer in the middle of the
+06:49 
+
+06:49 frame. We have this big block off to the
+06:51 
+
+06:51 side which kind of weighs down the image
+06:53 
+
+06:53 that way. It just feels very unbalanced
+06:56 
+
+06:56 pointing in this direction.
+06:58 
+
+06:58 So, I'm just going to rotate the camera.
+06:59 
+
+06:59 So, I'm going to hit RZ.
+07:01 
+
+07:01 I'm literally just going to rotate it
+07:02 
+
+07:02 this way. So, just point it a little bit
+07:04 
+
+07:04 more this direction.
+07:06 
+
+07:06 Just so that that thing is a little bit
+07:07 
+
+07:07 more in the middle.
+07:08 
+
+07:08 And that's a lot more natural looking
+07:11 
+
+07:11 than what we just had before.
+07:13 
+
+07:13 Okay, I don't really like this streak of
+07:16 
+
+07:16 light down here. That's a change I could
+07:17 
+
+07:17 make with the lighting or I could just
+07:19 
+
+07:19 move the camera so that it's a little
+07:22 
+
+07:22 bit
+07:23 
+
+07:23 past that.
+07:24 
+
+07:24 And we get a little bit more of that
+07:26 
+
+07:26 just a dark area down here. And it's
+07:28 
+
+07:28 fine to move it back a little bit. If I
+07:30 
+
+07:30 if I don't like where it is, I can
+07:31 
+
+07:31 always just move it again or change the
+07:33 
+
+07:33 focal length, zoom it in or out
+07:34 
+
+07:34 slightly.
+07:35 
+
+07:35 It There's no hard rules here. You can
+07:38 
+
+07:38 kind of put it anywhere and it's going
+07:39 
+
+07:39 to You You have to kind of find
+07:41 
+
+07:41 something that feels right.
+07:43 
+
+07:43 Okay, so this is an angle I would render
+07:44 
+
+07:44 from. Just like that. Um now
+07:48 
+
+07:48 that was pretty easy and this scene is
+07:50 
+
+07:50 making it quite easy to find a natural
+07:52 
+
+07:52 looking angle.
+07:54 
+
+07:54 One of the most important things when it
+07:55 
+
+07:55 comes to actually having a nice render
+07:57 
+
+07:57 is you want to have a focal point.
+08:01 
+
+08:01 In other words,
+08:02 
+
+08:02 an object of interest that is more
+08:04 
+
+08:04 interesting than the rest of the scene
+08:06 
+
+08:06 around it. It doesn't always have to be
+08:08 
+
+08:08 like a super interesting crazy object in
+08:10 
+
+08:10 the middle. In general,
+08:12 
+
+08:12 having a good camera angle it it does
+08:15 
+
+08:15 rely on having something interesting in
+08:17 
+
+08:17 the render that you're pointing it at.
+08:19 
+
+08:19 So, you don't have to use a a wide angle
+08:21 
+
+08:21 shot. One thing I'll do often is
+08:23 
+
+08:23 actually shift D, like duplicate this
+08:25 
+
+08:25 camera. You'll see this one is still the
+08:28 
+
+08:28 active one because it has this it's
+08:29 
+
+08:29 filled in here. This one's kind of an
+08:31 
+
+08:31 outline. What you can do is just hit
+08:33 
+
+08:33 control numpad zero. That'll bring you
+08:35 
+
+08:35 into this new camera you've added. The
+08:38 
+
+08:38 old one is still there, so if you want
+08:39 
+
+08:39 to go back to this angle, you just
+08:41 
+
+08:41 control numpad zero back into that one.
+08:43 
+
+08:43 And it lets you try out a bunch of
+08:44 
+
+08:44 different angles really quickly. If you
+08:46 
+
+08:46 want to just go to this one, we can just
+08:47 
+
+08:47 move this way back. Let's let's zoom
+08:50 
+
+08:50 this one into like 35 mm.
+08:52 
+
+08:52 Right? And then we can get a different
+08:53 
+
+08:53 look here.
+08:54 
+
+08:54 That's another angle I would render
+08:56 
+
+08:56 from. Like this also works. There's
+08:58 
+
+08:58 there's no one camera angle that only
+09:01 
+
+09:01 works for a shot, right? One thing I
+09:03 
+
+09:03 should mention is depth of field here.
+09:05 
+
+09:05 For a wide angle shot, it's not
+09:06 
+
+09:06 something I'll do that often.
+09:08 
+
+09:08 Uh I'll just use the focus distance eye
+09:10 
+
+09:10 dropper and just click on this bookshelf
+09:12 
+
+09:12 over here.
+09:13 
+
+09:13 The
+09:14 
+
+09:14 F-stop I've set to 22 here. The default
+09:17 
+
+09:17 is 2.8, which will What this is doing is
+09:21 
+
+09:21 it's blurring out objects that are not
+09:23 
+
+09:23 in the focal range. So, there's a
+09:25 
+
+09:25 certain certain distance range where the
+09:28 
+
+09:28 camera is going to be in focus and a
+09:30 
+
+09:30 certain range where past that is going
+09:32 
+
+09:32 to be out of focus on either end.
+09:35 
+
+09:35 If I crank this really high, sorry,
+09:36 
+
+09:36 really low, you'll see that the blur
+09:39 
+
+09:39 amount is going to increase the lower I
+09:40 
+
+09:40 get here, closer to zero. And eventually
+09:43 
+
+09:43 eventually it'll get to the point where
+09:44 
+
+09:44 it feels
+09:46 
+
+09:46 like everything is miniature. I don't
+09:48 
+
+09:48 recommend going that low to the point
+09:50 
+
+09:50 where it's blurring everything so much
+09:52 
+
+09:52 that everything feels tiny in the
+09:54 
+
+09:54 render.
+09:55 
+
+09:55 Because it's just a very unnatural look.
+09:57 
+
+09:57 You don't get that much blur with a real
+09:59 
+
+09:59 camera. The default value of around 2.8
+10:01 
+
+10:01 is actually fine. You can go a little
+10:03 
+
+10:03 lower down to maybe 1.8 if you want a
+10:05 
+
+10:05 little bit more, but I wouldn't
+10:06 
+
+10:06 recommend going too much past that.
+10:09 
+
+10:09 This is actually a good value to leave
+10:10 
+
+10:10 it on F2.8.
+10:12 
+
+10:12 And then again, I'm just focusing on the
+10:14 
+
+10:14 focal point, which is this bookshelf.
+10:16 
+
+10:16 That means foreground elements like this
+10:18 
+
+10:18 vase thing here are going to be a little
+10:20 
+
+10:20 bit out of focus, and that can create a
+10:22 
+
+10:22 really pleasant look in the render. It
+10:24 
+
+10:24 can make it feel more natural. It's not
+10:25 
+
+10:25 something you have to do though.
+10:26 
+
+10:26 Sometimes I just leave it off.
+10:28 
+
+10:28 Okay, so we can even go further. We can
+10:30 
+
+10:30 pull this back and we can go up to like
+10:32 
+
+10:32 50 mm, which is the default focal
+10:34 
+
+10:34 length. And that's another shot that
+10:36 
+
+10:36 would work as well.
+10:38 
+
+10:38 So, I'll put up some different examples
+10:40 
+
+10:40 of different focal lengths that I've
+10:41 
+
+10:41 shot this at.
+10:42 
+
+10:42 Again, if we just look at this one and
+10:43 
+
+10:43 compare this, this looks totally
+10:45 
+
+10:45 different than having it way back here
+10:47 
+
+10:47 at 50 mm, even if we're
+10:50 
+
+10:50 kind of capturing the same amount of
+10:51 
+
+10:51 stuff. It just creates a different look
+10:53 
+
+10:53 and you can get just a different total a
+10:56 
+
+10:56 different feeling depending on where the
+10:58 
+
+10:58 camera is positioned and what focal
+10:60 
+
+10:60 length you use. I just want to point out
+11:01 
+
+11:01 here, too, the common thing that's
+11:03 
+
+11:03 happening in all these shots is we have
+11:05 
+
+11:05 the main
+11:06 
+
+11:06 point of interest around this section
+11:09 
+
+11:09 right here.
+11:10 
+
+11:10 And above, below, and beside that, we're
+11:12 
+
+11:12 leaving some kind of breathing room for
+11:15 
+
+11:15 for that thing and just giving it a bit
+11:18 
+
+11:18 of space so it doesn't feel cramped on
+11:21 
+
+11:21 any side. It's pretty common for
+11:23 
+
+11:23 beginners to not leave enough space for
+11:26 
+
+11:26 things to breathe where things can be
+11:28 
+
+11:28 just a little bit too close to the edge
+11:30 
+
+11:30 of the frame where it just feels a
+11:31 
+
+11:31 little tight or it's just it's just a
+11:34 
+
+11:34 little too much space there where it's
+11:36 
+
+11:36 now it's kind of weighted a little bit
+11:38 
+
+11:38 heavy on the bottom compared to the top.
+11:41 
+
+11:41 So, you want to just keep that in mind.
+11:43 
+
+11:43 You're trying to create balance in all
+11:45 
+
+11:45 directions if you can, and that's going
+11:47 
+
+11:47 to make everything just feel nicer to
+11:48 
+
+11:48 look at.
+11:51 
+
+11:51 So, you can even try angles where the
+11:53 
+
+11:53 camera's elevated at a crazy angle like
+11:55 
+
+11:55 this. Again, it just feels unbalanced
+11:58 
+
+11:58 pointing in this direction, so I'm going
+11:59 
+
+11:59 to hit R. In this case,
+12:01 
+
+12:01 I'll just hit X and then X one more time
+12:03 
+
+12:03 to rotate on the camera's local X axis.
+12:07 
+
+12:07 So, we can just rotate it straight
+12:09 
+
+12:09 down like that.
+12:11 
+
+12:11 Let's pull it back a little bit here.
+12:14 
+
+12:14 Let's maybe just bring this down a
+12:15 
+
+12:15 little lower.
+12:16 
+
+12:16 Rotate this back up. And that's another
+12:18 
+
+12:18 angle that could work as well. It kind
+12:20 
+
+12:20 of feels like we're on a balcony or
+12:21 
+
+12:21 something here. Um that's that's fine. I
+12:24 
+
+12:24 would render this angle as well. That's
+12:26 
+
+12:26 that's totally usable.
+12:27 
+
+12:27 It again it just depends on the look you
+12:29 
+
+12:29 want to go for. This kind of implies
+12:31 
+
+12:31 something different than being on the
+12:33 
+
+12:33 ground. It implies that there's elevated
+12:35 
+
+12:35 spaces in here, that we're high up off
+12:37 
+
+12:37 the ground, that you know, it just kind
+12:39 
+
+12:39 of can tell a little bit of a different
+12:41 
+
+12:41 story of what's happening here depending
+12:43 
+
+12:43 on the angle you choose.
+12:44 
+
+12:44 So,
+12:45 
+
+12:45 there's no wrong answers. There are
+12:48 
+
+12:48 angles that will look better than
+12:49 
+
+12:49 others. You just have to go and find
+12:51 
+
+12:51 them and try different angles.
+12:52 
+
+12:52 Try this method that I'm showing here of
+12:54 
+
+12:54 duplicating the camera and
+12:57 
+
+12:57 leaving certain angles you think will
+12:59 
+
+12:59 work in the scene just as as empty
+13:01 
+
+13:01 cameras and you can always control the
+13:02 
+
+13:02 numpad zero back into them and even
+13:05 
+
+13:05 render multiple times and pick the shots
+13:07 
+
+13:07 that you think work best.
+13:09 
+
+13:09 Let's take a look at another example
+13:11 
+
+13:11 here. This is um
+13:13 
+
+13:13 a bit of a different angle than than the
+13:15 
+
+13:15 last one, so let's just look at what's
+13:16 
+
+13:16 going on here. You can see if we just
+13:18 
+
+13:18 look at what this render looks like,
+13:20 
+
+13:20 we're quite low down looking up at this
+13:23 
+
+13:23 thing. That's a way that you can make
+13:25 
+
+13:25 things feel
+13:26 
+
+13:26 just larger, more like overpowering. Uh
+13:30 
+
+13:30 just having the camera low looking up at
+13:31 
+
+13:31 a big thing. If you just look at this in
+13:32 
+
+13:32 3D space, this might help you kind of
+13:34 
+
+13:34 understand exactly what I'm doing here.
+13:36 
+
+13:36 You can see my my other temporary
+13:38 
+
+13:38 cameras of different angles I've tried
+13:40 
+
+13:40 when I made this. But here's the one I
+13:41 
+
+13:41 ended up with. If you just kind of look
+13:43 
+
+13:43 at the scene in 3D space and then look
+13:46 
+
+13:46 at where this camera is in relation to
+13:48 
+
+13:48 that, that should give you a better idea
+13:50 
+
+13:50 of exactly what's happening here. So if
+13:52 
+
+13:52 we look at the the camera settings,
+13:55 
+
+13:55 35 mm. Again, the default is 50.
+13:58 
+
+13:58 So I just pulled it out a little bit to
+13:60 
+
+13:60 35. It's not quite as wide as the other
+14:02 
+
+14:02 one, which I shot at around 24 mm. You
+14:05 
+
+14:05 can see that just for this one, I felt
+14:07 
+
+14:07 like it was a bit too wide angle.
+14:09 
+
+14:09 So I just
+14:11 
+
+14:11 brought it into 35.
+14:12 
+
+14:12 Okay, so let me show you maybe some
+14:14 
+
+14:14 different angles that might work here.
+14:15 
+
+14:15 Again, let's just duplicate this camera.
+14:17 
+
+14:17 Control numpad to zero into this one so
+14:19 
+
+14:19 that we are
+14:21 
+
+14:21 uh saving the other angle. I can go back
+14:23 
+
+14:23 to that anytime and I can just
+14:24 
+
+14:24 experiment with the new camera. Let's
+14:26 
+
+14:26 try like 50 mm and let's just see what I
+14:28 
+
+14:28 can get if I zoom this in. So let's
+14:30 
+
+14:30 bring that there. Let's just rotate the
+14:31 
+
+14:31 camera down this way. So the controls
+14:34 
+
+14:34 that you'll you might find helpful here
+14:35 
+
+14:35 are
+14:36 
+
+14:36 R X X. If I hit R X, it's going to do
+14:39 
+
+14:39 like this angle. Right? So I have to hit
+14:42 
+
+14:42 R X and then X one more time to rotate
+14:45 
+
+14:45 on the camera's local X axis.
+14:48 
+
+14:48 Same with moving it. So G Z Z will pull
+14:50 
+
+14:50 it straight back. That's a nice thing to
+14:53 
+
+14:53 be able to do.
+14:55 
+
+14:55 If you just do those two things, R X X
+14:56 
+
+14:56 and G Z Z, those will be very helpful.
+14:59 
+
+14:59 Let's just pull this up a little bit,
+15:01 
+
+15:01 back a little bit. That tree is
+15:02 
+
+15:02 floating, so I don't want to capture
+15:03 
+
+15:03 that as much. Let's maybe zoom in to 70
+15:06 
+
+15:06 mm.
+15:08 
+
+15:08 That's another angle that could totally
+15:09 
+
+15:09 work, right? It's it's not
+15:11 
+
+15:11 um there's nothing wrong with how the
+15:13 
+
+15:13 how that looks. It's it's not the final
+15:14 
+
+15:14 angle that I chose, but it's that could
+15:16 
+
+15:16 totally work as well. We could even
+15:18 
+
+15:18 let's just duplicate this again. Let's
+15:20 
+
+15:20 go to
+15:22 
+
+15:22 something wider. Let's go to like 20 mm,
+15:24 
+
+15:24 right? There's no again, no right
+15:26 
+
+15:26 answers here. It's just moving it
+15:28 
+
+15:28 around, trying out different ways of
+15:30 
+
+15:30 capturing it and and trying to find
+15:32 
+
+15:32 something that just works with the
+15:34 
+
+15:34 render that you're in.
+15:35 
+
+15:35 Right, if we were on the bridge looking
+15:37 
+
+15:37 at this, this could work as well. This
+15:38 
+
+15:38 feels like we're exploring this and
+15:40 
+
+15:40 walking around here if we're on this
+15:42 
+
+15:42 actual surface here. So, we can pull it
+15:44 
+
+15:44 back. Let's go to 24 mm maybe.
+15:47 
+
+15:47 That's another angle that could totally
+15:48 
+
+15:48 work.
+15:50 
+
+15:50 In one of my recent videos, I I did a
+15:52 
+
+15:52 render a street render where it was at
+15:54 
+
+15:54 70 mm. That's not something I do that
+15:56 
+
+15:56 often, but when I do it, it's it's quite
+15:57 
+
+15:57 fun to do that sometimes.
+15:59 
+
+15:59 If you look at this render here, this
+16:01 
+
+16:01 one is quite wide. This one is What is
+16:04 
+
+16:04 this one at? This is at 16 mm. So,
+16:07 
+
+16:07 that's uh very very wide angle. That's
+16:10 
+
+16:10 not I usually wouldn't go any wider than
+16:12 
+
+16:12 that. Um you can, but it you the if you
+16:16 
+
+16:16 start going getting past this, it's a
+16:17 
+
+16:17 little bit risky to look might just look
+16:19 
+
+16:19 very unnatural. So, this is already
+16:21 
+
+16:21 extremely wide
+16:23 
+
+16:23 uh and and that's
+16:24 
+
+16:24 This is still within like a normal range
+16:26 
+
+16:26 of what a camera could realistically do.
+16:28 
+
+16:28 When you start getting like below 10,
+16:29 
+
+16:29 then it starts to get like just crazy.
+16:31 
+
+16:31 But,
+16:32 
+
+16:32 you can see in a narrow like
+16:35 
+
+16:35 you know, setting like this where it's
+16:37 
+
+16:37 just a a kind of tube going down of of
+16:40 
+
+16:40 just stuff, it's kind of hard to use a
+16:42 
+
+16:42 higher focal length because, you know,
+16:44 
+
+16:44 if I zoom this in
+16:45 
+
+16:45 to cap in order to capture all that, you
+16:48 
+
+16:48 can't really reach that. Like especially
+16:49 
+
+16:49 if you're on the default focal length of
+16:51 
+
+16:51 50 mm, there's no way you're going to
+16:53 
+
+16:53 get all that in the frame. You could get
+16:56 
+
+16:56 a totally interesting shot. Like if I
+16:58 
+
+16:58 let's let's like duplicate this and and
+16:60 
+
+16:60 move it up.
+17:01 
+
+17:01 Let's set it to 50 mm and let's just try
+17:04 
+
+17:04 and do that. You could like make this
+17:07 
+
+17:07 work, but it would have a completely
+17:08 
+
+17:08 different look than than the wide angle
+17:11 
+
+17:11 shot. Like it's there's no
+17:13 
+
+17:13 wrong way to do it. It's just
+17:16 
+
+17:16 you're going to If you want a certain
+17:17 
+
+17:17 look, you're going to have to use a
+17:18 
+
+17:18 certain focal length. And you know,
+17:20 
+
+17:20 having a high focal length like this
+17:21 
+
+17:21 looking
+17:22 
+
+17:22 way down or at a different angle, that
+17:24 
+
+17:24 could work as a render. I could just
+17:26 
+
+17:26 make this, you know, build the scene a
+17:27 
+
+17:27 little bit more around this angle. And
+17:29 
+
+17:29 that that could totally be a valid
+17:30 
+
+17:30 option. But if you want to capture all
+17:32 
+
+17:32 of it in in that way that the wide angle
+17:35 
+
+17:35 looks,
+17:36 
+
+17:36 you're just not going to be able to do
+17:37 
+
+17:37 that without
+17:39 
+
+17:39 with without widening the lens to
+17:41 
+
+17:41 something like 16 mm in a shot like
+17:43 
+
+17:43 this. And that again, that's just what
+17:45 
+
+17:45 lets you capture all this stuff around
+17:48 
+
+17:48 it. I I just love wide angle shots. It's
+17:51 
+
+17:51 it's really fun to do that.
+17:52 
+
+17:52 Again, remember what I said about focal
+17:54 
+
+17:54 point as well. You want to have kind of
+17:56 
+
+17:56 one interesting thing that stands out
+17:59 
+
+17:59 above everything else. In this case,
+18:00 
+
+18:00 that's probably these signs here, this
+18:03 
+
+18:03 this general area. It's not as clear in
+18:05 
+
+18:05 this one, but it's still that's still
+18:06 
+
+18:06 definitely a factor here.
+18:09 
+
+18:09 By the way, I should mention if you want
+18:10 
+
+18:10 to learn how to make this render from
+18:12 
+
+18:12 scratch, this is part of the cyber
+18:14 
+
+18:14 environments course. This that's
+18:16 
+
+18:16 something I've spent months making just
+18:19 
+
+18:19 to try and
+18:20 
+
+18:20 boil down this way of creating renders
+18:22 
+
+18:22 like this into
+18:24 
+
+18:24 in into a thing that anyone can just
+18:26 
+
+18:26 follow and then learn how to make as
+18:28 
+
+18:28 easily as possible.
+18:30 
+
+18:30 So, it comes with a whole bunch of 3D
+18:32 
+
+18:32 assets that I use in my own work. It
+18:34 
+
+18:34 teaches you how to make 10 different
+18:35 
+
+18:35 environments. You don't have to go
+18:36 
+
+18:36 through all of them. Once you get past
+18:38 
+
+18:38 the first few, it's meant for you to
+18:39 
+
+18:39 kind of just pick the ones that are most
+18:41 
+
+18:41 most interesting to you. If you've made
+18:42 
+
+18:42 it this far in the video, you're
+18:43 
+
+18:43 probably qualified for that. It's just
+18:45 
+
+18:45 meant for people who already know the
+18:47 
+
+18:47 very basics of Blender and want to take
+18:48 
+
+18:48 their environments really to the next
+18:50 
+
+18:50 level. So, anyways, I'll leave a link
+18:51 
+
+18:51 below to that if you want to check that
+18:53 
+
+18:53 out if it's if it sounds interesting to
+18:55 
+
+18:55 you. Anyways,
+18:56 
+
+18:56 I think that I think that's it for this
+18:58 
+
+18:58 one. Um the main thing I want to point
+18:60 
+
+18:60 out here is
+19:01 
+
+19:01 don't don't neglect the camera angle
+19:03 
+
+19:03 because
+19:04 
+
+19:04 it it's the
+19:05 
+
+19:05 only way that anyone else is going to
+19:07 
+
+19:07 see what you've made and it can totally
+19:11 
+
+19:11 transform how the image looks. As you
+19:13 
+
+19:13 saw with this last one here what when I
+19:14 
+
+19:14 was moving it around, it had a totally
+19:16 
+
+19:16 different look and and didn't look very
+19:18 
+
+19:18 nice in the other angles that I was
+19:20 
+
+19:20 choosing. When I came back here and now
+19:22 
+
+19:22 the scene looks actually good and
+19:23 
+
+19:23 complete and nice to look at. A lot of
+19:25 
+
+19:25 the times, like I said at the beginning,
+19:27 
+
+19:27 when I'm struggling with a scene, often
+19:29 
+
+19:29 just moving the camera somewhere else,
+19:32 
+
+19:32 zooming it out or zooming it in, and
+19:33 
+
+19:33 just changing the position can totally
+19:35 
+
+19:35 transform how the render looks. And um
+19:37 
+
+19:37 yeah, it's worth just spending a bit
+19:39 
+
+19:39 more time and and getting used to moving
+19:41 
+
+19:41 the camera and
+19:42 
+
+19:42 and trying different angles, trying
+19:44 
+
+19:44 different focal lengths. It can really
+19:46 
+
+19:46 make a huge difference to how your work
+19:48 
+
+19:48 looks in the end. Okay, that's it for
+19:49 
+
+19:49 this one. Thank you for watching. I hope
+19:51 
+
+19:51 this is useful.
+19:52 
+
+19:52 Uh again, this one will be linked below
+19:54 
+
+19:54 in the Cyber Environments course. Other
+19:56 
+
+19:56 than that, thanks for watching and see
+19:58 
+
+19:58 you.

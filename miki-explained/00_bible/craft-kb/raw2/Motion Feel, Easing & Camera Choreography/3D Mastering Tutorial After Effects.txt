@@ -1,0 +1,1123 @@
+00:00 Everyone's chasing shortcuts, looking
+00:02 
+
+00:02 for that magic pill. But here's the
+00:04 
+
+00:04 truth. There is no magic pill. It's hard
+00:07 
+
+00:07 work, daily grind. Hi everyone. Today we
+00:10 
+
+00:10 are going to create a basic 3D reel. But
+00:15 
+
+00:15 the main purpose of this edit is
+00:17 
+
+00:17 learning design and also sharpening our
+00:20 
+
+00:20 basic skills. So first of all, right
+00:23 
+
+00:23 click new and let's bring in a solid.
+00:27 
+
+00:27 Make sure it is white. Hit okay.
+00:31 
+
+00:31 Then for the next part, as you can see
+00:34 
+
+00:34 there are these you know shapes which
+00:36 
+
+00:36 are rotating at the corners. Okay. So to
+00:40 
+
+00:40 make that simply we have to bring in
+00:42 
+
+00:42 okay our star tool and let's make a star
+00:46 
+
+00:46 like this. We'll be selecting uh you
+00:50 
+
+00:50 know of black color a bit grayish. Okay.
+00:53 
+
+00:53 Click head on to polyester polyester
+00:55 
+
+00:55 part one. And then we are going to you
+00:59 
+
+00:59 know
+01:01 
+
+01:01 increase this. Okay.
+01:04 
+
+01:04 Make something like this.
+01:07 
+
+01:07 So make sure you know you play around
+01:09 
+
+01:09 with these four things which is inner
+01:11 
+
+01:11 radius, outer radius and inner and outer
+01:13 
+
+01:13 roundness to get this shape. Okay. As it
+01:17 
+
+01:17 is like here. So now we are simply going
+01:20 
+
+01:20 to place it over here. One thing we have
+01:23 
+
+01:23 to do is make it big. So open scale
+01:26 
+
+01:26 properties and make it bit bigger and
+01:29 
+
+01:29 hit Ctrl D to copy this shape and put
+01:32 
+
+01:32 another over here. For the next part
+01:34 
+
+01:34 there is this animation. Okay, this you
+01:37 
+
+01:37 know opening animation. So to make this
+01:40 
+
+01:40 it is very simple. First of all we are
+01:43 
+
+01:43 going to select our rectangle tool and
+01:46 
+
+01:46 you know let's make a rectangle
+01:52 
+
+01:52 something like this. Okay,
+01:56 
+
+01:56 make sure to enable the strobe
+01:58 
+
+01:58 properties and delete the fill
+01:59 
+
+01:59 properties. In the strobe properties, I
+02:02 
+
+02:02 will change the color to a bit grayish.
+02:06 
+
+02:06 Make sure that the thickness of the
+02:09 
+
+02:09 stroke is less.
+02:12 
+
+02:12 Okay, around five is okay. And then I'll
+02:15 
+
+02:15 just open this up. Head on to stroke and
+02:18 
+
+02:18 then click on the plus icon for the dash
+02:22 
+
+02:22 and increase something like this. Okay,
+02:25 
+
+02:25 this is looking good. Now we need to
+02:28 
+
+02:28 bring in circles. So again head on to
+02:30 
+
+02:30 ellipse tool. This time you know hit
+02:33 
+
+02:33 okay and make the fill enabled and
+02:36 
+
+02:36 delete the stroke properties. While
+02:39 
+
+02:39 holding shift make a perfect circle. Hit
+02:42 
+
+02:42 control or comb to bring the anchor
+02:44 
+
+02:44 point towards the center and let's bring
+02:46 
+
+02:46 it over here. Let's make the circle a
+02:49 
+
+02:49 bit small
+02:52 
+
+02:52 and put it at the corner of the box. Now
+02:56 
+
+02:56 we have to make four circles and put
+02:59 
+
+02:59 each of them at the corner of the box.
+03:03 
+
+03:03 Simply select all of your circles and
+03:07 
+
+03:07 parent link it with our rectangle box.
+03:11 
+
+03:11 Okay,
+03:13 
+
+03:13 now we just animate the rectangle box.
+03:16 
+
+03:16 But before that, select the rectangle
+03:19 
+
+03:19 box for me which is shape layer 3. While
+03:22 
+
+03:22 holding Y, I'll place my anchor point
+03:25 
+
+03:25 towards this corner. Okay, because we
+03:27 
+
+03:27 want the animation to open from here for
+03:30 
+
+03:30 this box. Simply I have to you know hit
+03:34 
+
+03:34 S for scale
+03:37 
+
+03:37 and then go ahead 1 second again have
+03:41 
+
+03:41 hit scale properties go to the start and
+03:43 
+
+03:43 let's make them zero so now it will open
+03:47 
+
+03:47 up like this
+03:49 
+
+03:49 select the keys F9 and then drag it
+03:53 
+
+03:53 towards the left
+03:56 
+
+03:56 so we'll get this animation now I'll
+03:58 
+
+03:58 bring in my
+04:01 
+
+04:01 you know pointer which is this arrow
+04:06 
+
+04:06 let's hit R rotate it okay
+04:11 
+
+04:11 and then make it small and we have to do
+04:15 
+
+04:15 the animation for this two so open this
+04:18 
+
+04:18 hit U to see the animation which we did
+04:21 
+
+04:21 on the you know rectangle now same
+04:24 
+
+04:24 animation we have to do this meaning we
+04:26 
+
+04:26 have to place the key frames at the same
+04:28 
+
+04:28 points okay to match It's the animation.
+04:31 
+
+04:31 I'll hold shift and hit P for position
+04:34 
+
+04:34 key frame. Go to the start and put it
+04:38 
+
+04:38 over here. For the animation, just
+04:40 
+
+04:40 simply select this F9 and then drag this
+04:44 
+
+04:44 towards the left.
+04:47 
+
+04:47 So you'll get this same animation.
+04:51 
+
+04:51 But at the start, we don't want our
+04:53 
+
+04:53 arrow to be here. So what I'm going to
+04:56 
+
+04:56 do is just move this ahead and this two
+05:02 
+
+05:02 pull this and
+05:05 
+
+05:05 what we are going to do is basically
+05:08 
+
+05:08 hit shift and R for rotation on this
+05:11 
+
+05:11 arrow. Okay. And hit shift and P. So
+05:17 
+
+05:17 select the rotation and opacity key
+05:19 
+
+05:19 frames.
+05:21 
+
+05:21 Also I'll hit position key frame and
+05:25 
+
+05:25 go here and again hit those key frames.
+05:28 
+
+05:28 Now go to the start just bring it here.
+05:33 
+
+05:33 Okay. And then simply just rotate it
+05:40 
+
+05:40 and make the opacity zero. So we get
+05:43 
+
+05:43 this animation and then this. So I'll
+05:46 
+
+05:46 just select them. F9 and then that is
+05:49 
+
+05:49 towards the left.
+05:53 
+
+05:53 Okay, let's right click and bring in a
+05:55 
+
+05:55 text layer and type
+06:00 
+
+06:00 make this text you know of black. Make
+06:04 
+
+06:04 this small and frick it inside our box.
+06:08 
+
+06:08 Okay. So to do animation for this what
+06:12 
+
+06:12 we are going to do is from here let us
+06:16 
+
+06:16 open this hit animate first click on
+06:18 
+
+06:18 opacity.
+06:20 
+
+06:20 Okay let's make this zero open the range
+06:24 
+
+06:24 selector click on the
+06:27 
+
+06:27 end key frame.
+06:30 
+
+06:30 Okay. And then increase the start to 100
+06:33 
+
+06:33 and make this zero. Now go ahead around
+06:37 
+
+06:37 here again. Click on the end key frame
+06:40 
+
+06:40 and make it 100. Select this F9
+06:45 
+
+06:45 and then drag this towards the left. You
+06:47 
+
+06:47 can open the advanced section and just
+06:50 
+
+06:50 increase the ease high and the ease low.
+06:53 
+
+06:53 We can also hit add a property and click
+06:56 
+
+06:56 on position and drag this down a bit.
+07:02 
+
+07:02 Select this and drag this out for a
+07:04 
+
+07:04 slower animation.
+07:07 
+
+07:07 Okay,
+07:09 
+
+07:09 these things are rotating. So, we just
+07:12 
+
+07:12 have to, you know, select these two
+07:15 
+
+07:15 shape layers. Make sure the anchor point
+07:18 
+
+07:18 is at the center. Hit R for rotation.
+07:21 
+
+07:21 Go to the end. Okay.
+07:25 
+
+07:25 Or around 10 seconds. Let head to 10
+07:28 
+
+07:28 seconds. And then let's rotate both of
+07:31 
+
+07:31 them.
+07:34 
+
+07:34 We will add all the effects at the end.
+07:36 
+
+07:36 First, let's do the animation. So, our
+07:38 
+
+07:38 seam one is over. Now, for the seam,
+07:43 
+
+07:43 as you can see, it's going a bit back
+07:45 
+
+07:45 and then up. Okay, simple as that. So,
+07:49 
+
+07:49 now is the time to make everything 3D
+07:52 
+
+07:52 layer. and accept the white solid. Hit
+07:54 
+
+07:54 right click new and then bring in a
+07:58 
+
+07:58 camera. Hit okay.
+08:00 
+
+08:00 Right click new and then bring in a null
+08:03 
+
+08:03 object. Make the null object 3D. Connect
+08:06 
+
+08:06 the camera to the null. Now I'll just
+08:10 
+
+08:10 hit P for position on the lull. Click on
+08:13 
+
+08:13 the position key frame. Go ahead
+08:17 
+
+08:17 and again click here at the start. I
+08:19 
+
+08:19 just want to zoom this in and at the end
+08:22 
+
+08:22 it will just zoom out. Okay. Select this
+08:26 
+
+08:26 at nine.
+08:28 
+
+08:28 Drag this towards the left. Okay. And
+08:31 
+
+08:31 then from here for the second scene
+08:33 
+
+08:33 everything will go down. So simply I
+08:36 
+
+08:36 just hit the position key frame. Go
+08:38 
+
+08:38 ahead.
+08:40 
+
+08:40 Okay.
+08:41 
+
+08:41 And drag this
+08:44 
+
+08:44 down.
+08:48 
+
+08:48 Okay.
+08:49 
+
+08:49 something like this.
+08:56 
+
+08:56 And as you can see over here when this
+08:59 
+
+08:59 goes up there is another at the bottom
+09:01 
+
+09:01 this top or whatever it is.
+09:05 
+
+09:05 So you have to just copy them. So I'm
+09:08 
+
+09:08 just going to write Ctrl D to copy this
+09:12 
+
+09:12 head U. Okay.
+09:15 
+
+09:15 and just place it over here.
+09:20 
+
+09:20 Okay. So, you will get this animation.
+09:23 
+
+09:23 Simple as that. Now, for the second
+09:25 
+
+09:25 animation, as you can see, there's a
+09:27 
+
+09:27 grid behind this pill. So, what we are
+09:30 
+
+09:30 going to do is I'll just bring in my
+09:33 
+
+09:33 grid PNG. Okay.
+09:38 
+
+09:38 So, I'll just hit R
+09:41 
+
+09:41 on this. Rotate it
+09:45 
+
+09:45 to 90. Bring it at the center.
+09:49 
+
+09:49 Let's make that bin. Okay. Somewhat like
+09:53 
+
+09:53 this. Okay. And now we need to just
+09:56 
+
+09:56 select
+09:57 
+
+09:57 rectangle tool and then crop this out.
+10:04 
+
+10:04 Then increase the feathering on this.
+10:08 
+
+10:08 Okay. So you can see the edges are
+10:10 
+
+10:10 feathered out. Okay. And for the last
+10:14 
+
+10:14 thing, just hit T and reduce the
+10:16 
+
+10:16 opacity.
+10:18 
+
+10:18 As simple as that. Now you get this
+10:20 
+
+10:20 feathered out look.
+10:23 
+
+10:23 Now we'll bring in the capsule.
+10:31 
+
+10:31 Hit intraction presets and bring it over
+10:35 
+
+10:35 this capsule.
+10:37 
+
+10:37 Just head on to effect presets and also
+10:39 
+
+10:39 add tronee on this. Select this you know
+10:42 
+
+10:42 orange color and let's make it a bit
+10:45 
+
+10:45 black. Okay. And dark hit. Okay. And now
+10:48 
+
+10:48 you can see you know got the similar
+10:50 
+
+10:50 look. Okay. With this capsule
+10:55 
+
+10:55 and the next thing now is this text.
+10:58 
+
+10:58 Okay. And zooming out. So I'll just
+11:00 
+
+11:00 bring in another text layer. Okay. and
+11:03 
+
+11:03 I'll write anything random text on it.
+11:07 
+
+11:07 Ctrl Alt 4 to bring the anchor point to
+11:10 
+
+11:10 the center and make this a 3D layer.
+11:15 
+
+11:15 Now I just simply you know make it small
+11:18 
+
+11:18 so it fits.
+11:24 
+
+11:24 Okay. Now we have placed them here. And
+11:27 
+
+11:27 for the animation of the text, you can
+11:30 
+
+11:30 simply, you know, do the same animation
+11:31 
+
+11:31 which we did at the start. I'm going to
+11:34 
+
+11:34 use my, you know, animation preset. Put
+11:38 
+
+11:38 it over here.
+11:44 
+
+11:44 Hit the U on this. Okay. Now, for this,
+11:47 
+
+11:47 as you can see, there is some movement
+11:49 
+
+11:49 of this pill. So, to do that movement,
+11:53 
+
+11:53 we simply have to select the capsu.
+11:55 
+
+11:55 Okay. and
+11:58 
+
+11:58 just hit scale and make it bent bigger.
+12:03 
+
+12:03 Hit shift and R for rotation. So click
+12:06 
+
+12:06 on the scale property and the T
+12:08 
+
+12:08 rotation. Go ahead
+12:12 
+
+12:12 and let's you know scale this down
+12:16 
+
+12:16 and also rotate this.
+12:19 
+
+12:19 Okay. So we get this animation
+12:23 
+
+12:23 and as you can see in the video it is
+12:25 
+
+12:25 also zooming back. Okay. So simply now
+12:29 
+
+12:29 open up the null with TU
+12:33 
+
+12:33 and from here
+12:36 
+
+12:36 on the position key frame again. Go
+12:38 
+
+12:38 ahead 2 seconds and then zoom this back.
+12:43 
+
+12:43 Okay.
+12:45 
+
+12:45 and select this
+12:47 
+
+12:47 and let's change this to something like
+12:51 
+
+12:51 this mountain course
+12:54 
+
+12:54 and from here it will just go down and
+12:57 
+
+12:57 cut to do that it's very simple okay now
+13:01 
+
+13:01 play pay close attention so simply
+13:06 
+
+13:06 select the null U okay and from here
+13:11 
+
+13:11 simply just again hit the position key
+13:13 
+
+13:13 frame go ahead and drag this down. Okay.
+13:19 
+
+13:19 Now, as you can see over here, when this
+13:21 
+
+13:21 goes down, it cuts. So, what we have to
+13:24 
+
+13:24 do is select this key frames and there
+13:27 
+
+13:27 should be a faster animation at the end
+13:29 
+
+13:29 and slow animation at the start. So,
+13:31 
+
+13:31 pull this,
+13:33 
+
+13:33 select this and pull this here for this
+13:36 
+
+13:36 is a slow animation. And then make it
+13:39 
+
+13:39 something like this to make it faster
+13:41 
+
+13:41 towards the end.
+13:48 
+
+13:48 Okay. So when it's over here, what we
+13:52 
+
+13:52 have to do is
+13:55 
+
+13:55 simply just
+13:57 
+
+13:57 cut everything at the top. So just hit
+14:03 
+
+14:03 select the alt grid. Okay.
+14:06 
+
+14:06 And
+14:09 
+
+14:09 let's select the camera and also our
+14:11 
+
+14:11 null.
+14:13 
+
+14:13 Then you'll select shape layer one and
+14:16 
+
+14:16 shape layer 8. Hit alt and right
+14:18 
+
+14:18 bracket. Okay.
+14:22 
+
+14:22 And from here what we have to do is make
+14:25 
+
+14:25 the next C. So
+14:28 
+
+14:28 I'll just head on to my project and
+14:31 
+
+14:31 bring in this Z just Jesus PNG.
+14:36 
+
+14:36 Make it 3D. Hit S. Make it small. Bring
+14:40 
+
+14:40 in my, you know, frame.
+14:45 
+
+14:45 Make it 3D.
+14:47 
+
+14:47 Then make it small. Okay. And now I'm
+14:50 
+
+14:50 just going to select my cheeses and
+14:52 
+
+14:52 parent link with the frame.
+14:56 
+
+14:56 Okay. Now to animate them, first what we
+14:59 
+
+14:59 have to do is, as you can see, it comes
+15:02 
+
+15:02 down and then turns. So let's make our
+15:07 
+
+15:07 frame smaller.
+15:09 
+
+15:09 Okay. Hit R for rotation and rotate it
+15:12 
+
+15:12 like this.
+15:14 
+
+15:14 That we'll click on our pen tool. Make
+15:17 
+
+15:17 sure the fill is not selected and select
+15:20 
+
+15:20 the stroke to solid.
+15:22 
+
+15:22 And then make something like this. A
+15:25 
+
+15:25 curved line. Increase the stroke
+15:30 
+
+15:30 and make sure it's behind the frame.
+15:33 
+
+15:33 Then I'll select this and make it 3D.
+15:36 
+
+15:36 And from here on out, what I have to do
+15:39 
+
+15:39 is line, head on to stroke, click on
+15:44 
+
+15:44 taper,
+15:46 
+
+15:46 increase the start length,
+15:50 
+
+15:50 and then increase the start width.
+15:54 
+
+15:54 Okay, let's increase our you know stroke
+15:58 
+
+15:58 width something like this of the text.
+16:02 
+
+16:02 Here is the truth.
+16:04 
+
+16:04 Right click, name text
+16:17 
+
+16:17 and then again I'll just copy this
+16:21 
+
+16:21 and paste it.
+16:32 
+
+16:32 Okay. And now we'll do the animation for
+16:35 
+
+16:35 this stroke. Simply just select our
+16:40 
+
+16:40 stroke. Add trim paths. Open this up.
+16:49 
+
+16:49 End key frame. Go here.
+16:54 
+
+16:54 Click on the end key frame again. Go to
+16:56 
+
+16:56 the start and make this zero.
+16:59 
+
+16:59 Now what we can do is simply extend our
+17:02 
+
+17:02 you know this camera and just hit
+17:08 
+
+17:08 control shift D to cut our camera and
+17:11 
+
+17:11 then just hit Ctrl D. Just hit right
+17:16 
+
+17:16 click new and then null object and
+17:19 
+
+17:19 connect our camera two to null two. Make
+17:24 
+
+17:24 this 3D2. Okay. And this time we have to
+17:27 
+
+17:27 just bring this down.
+17:30 
+
+17:30 So I'll just hit P for position.
+17:35 
+
+17:35 Okay.
+17:38 
+
+17:38 Click this. Go here again. Click on the
+17:41 
+
+17:41 position key frame. Go to the start.
+17:48 
+
+17:48 Bring this up.
+17:50 
+
+17:50 Okay.
+17:53 
+
+17:53 And at the end key frame we have to
+17:55 
+
+17:55 bring this at the center. Select this.
+17:59 
+
+17:59 F9. And here we need the animation at
+18:03 
+
+18:03 the start to be fast and at the end
+18:05 
+
+18:05 should be slow.
+18:07 
+
+18:07 So we put something like this.
+18:11 
+
+18:11 So let's see our animation from the
+18:13 
+
+18:13 beginning.
+18:23 
+
+18:23 Okay.
+18:24 
+
+18:24 And from here again this part is there.
+18:28 
+
+18:28 So what is happening is
+18:31 
+
+18:31 zooming towards the camera and then this
+18:34 
+
+18:34 is coming. So to do that what we have to
+18:38 
+
+18:38 do is
+18:40 
+
+18:40 from here on out we have to simply just
+18:43 
+
+18:43 select our lull to position. Go ahead
+18:47 
+
+18:47 and just zoom this towards the camera.
+18:50 
+
+18:50 Select this and this time we want to do
+18:55 
+
+18:55 slow towards the start and faster
+18:58 
+
+18:58 towards the end.
+19:00 
+
+19:00 Okay,
+19:03 
+
+19:03 let's bring the key frames closer.
+19:08 
+
+19:08 And here again we have to simply do what
+19:11 
+
+19:11 we did previously is cut it. Okay.
+19:15 
+
+19:15 So, just select all of this.
+19:20 
+
+19:20 Hit alt and right bracket to cut this.
+19:24 
+
+19:24 Okay.
+19:26 
+
+19:26 And then we have to bring in our pill
+19:29 
+
+19:29 with this. No magic.
+19:33 
+
+19:33 Select the ellipse tool. Make the
+19:36 
+
+19:36 circle. Make sure the stroke is less.
+19:40 
+
+19:40 Make it 3D. Hit S. Make it big.
+19:45 
+
+19:45 Okay,
+19:47 
+
+19:47 this time just
+19:49 
+
+19:49 head on to contents, ellipse, stroke,
+19:54 
+
+19:54 hit dashes, and let's bring in our pill
+19:57 
+
+19:57 again.
+20:00 
+
+20:00 C to copy. Paste.
+20:04 
+
+20:04 Put it top. Okay.
+20:15 
+
+20:15 Let's cut our you know circle also from
+20:19 
+
+20:19 the start. So you see you'll get this
+20:21 
+
+20:21 animation.
+20:24 
+
+20:24 Let's head on to our null D with U and
+20:26 
+
+20:26 let's stretch this out. And from here
+20:30 
+
+20:30 simply you have to just do this no magic
+20:32 
+
+20:32 text. Okay. And at the end the same
+20:35 
+
+20:35 animation which we did at the start.
+20:38 
+
+20:38 Okay. Okay. So, using the tricks from
+20:39 
+
+20:39 the first scene, use it to complete the
+20:43 
+
+20:43 last part of this animation. Hope you
+20:46 
+
+20:46 like this tutorial. See you in the next.

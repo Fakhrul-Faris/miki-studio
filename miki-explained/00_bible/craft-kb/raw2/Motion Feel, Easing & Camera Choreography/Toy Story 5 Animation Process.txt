@@ -1,0 +1,489 @@
+00:01 [music]
+Hey, this is Class Creatives, and in
+00:04 this video, we'll look into Pixar's
+creative process for the Toy Story
+00:07 series and how it has evolved over the
+past several decades and the impact it
+00:11 has had on the animation industry, along
+with what we can expect from its most
+00:15 recent installment. The franchise has
+won several Oscars and ranked in
+00:19 billions of dollars globally. So, we
+thought it might be fun to break down
+00:22 how it all started and how the animators
+made each toy uniquely entertaining
+00:26 based on their research studying actual
+toys and how they brought each one to
+00:30 life. We'll talk about how these 3D toys
+were modeled and animated. Some of the
+00:34 technical limits they had to face with
+each movie. How they used real life
+00:38 dolls and stuffed animals to create the
+final 3D characters. How even with the
+00:41 first Toy Story movie, liveaction
+reference footage push stronger and
+00:45 original acting choices. And of course,
+as always, we'll talk about the key
+00:49 frame animation process.
+As you may already know, Toy Story was
+00:54 the world's first featurelength CG film.
+We are going to start by diving directly
+00:58 into how they accomplished this.
+Through the initial animation tests,
+01:02 they wanted to see not only how the
+models would move and how usable they
+01:06 would be for an entire featurelength
+runtime, but most importantly, how does
+01:10 the character and the storyboards
+transfer to the screen through movement.
+01:13 The test also sought out to prove
+whether an audience would sit through 70
+01:16 minutes of computer animation. Once the
+actual rendered shots were presented to
+01:21 Disney, the doubts went away and the
+transition from 2D to 3D began. We can
+01:26 see in a dialogue test here with Woody
+using a line from Tom Hanks and Turner
+01:30 and Hooch as they sought out to find
+Woody's voice actor.
+01:34 >> Oh no, no, no. You're eating the car.
+DON'T EAT THE CAR. NOT THE CAR.
+01:40 [screaming]
+>> OH, YOU STUPID [ __ ]
+01:43 >> Simple boxy shapes were modeled by hand.
+However, more organic surfaces were
+01:47 built with Nerbs modeling. They even
+used clay models of objects such as
+01:51 character heads that were scanned into
+the computer with the digitizer wand. By
+01:56 scanning the surface of the clay model,
+the computer would draw surfaces between
+01:59 the points. Due to the limitations at
+the time for portraying humans, they
+02:04 were often in the dark, and many shots
+only included their hands, legs, or
+02:08 feet. It wouldn't be until The
+Incredibles that Pixar would venture
+02:11 more into the 3D human model. And even
+the dog was limited to just flat
+02:14 textures instead of fur. Lots of assets
+were reused. Props were reused in other
+02:19 sets to populate shots. Sid's room had a
+lot of messy set dressing with cups and
+02:24 random objects placed to clutter it up.
+It's fascinating to see Pete Doctor
+02:28 explain how 3D animation works and
+breaking down the graph editor and
+02:32 pulling tangents to create weight with a
+rough 3D rig setup on what was at the
+02:36 time a state-of-the-art SGI workstation.
+Pete breaks down the concept of rough
+02:40 blocking where starting with thumbnails
+gave him the storytelling poses where he
+02:44 would then move to blocking in the 3D
+character by moving the character's body
+02:48 parts with what would be equivalent of
+just using a channel box and Maya today
+02:52 with no visible controllers. Getting the
+pantomime acting in first was critical
+02:56 before adding the face which plus the
+body movements just as how genuine 3D
+03:00 animation is done today.
+>> Uh nothing uh nothing. I'm sure Andy was
+03:04 just a little excited that's all. too
+much cake and ice cream. I suppose it's
+03:08 just a mistake.
+>> Their system was designed so that anyone
+03:12 who had never animated before could
+easily transition to the new medium.
+03:16 This was critical since most of the
+animators are coming from a completely
+03:19 2D handdrawn background. It's crazy to
+see what they were able to accomplish
+03:23 with quadriped animals like Scud and the
+creepy mutant babyface toy from Sid's
+03:27 room. Even way back then, they cheated
+the camera pushing Woody into the ground
+03:32 to get just the right camera heights in
+the final cinematic camera, ensuring
+03:36 that what the audience saw was exactly
+what they wanted, ignoring a 3D space
+03:40 perspective view. Swapping character
+rigs were also used with the parachuting
+03:45 armymen to get the shots they needed.
+Again, playing to the final cinematic
+03:49 camera that the audience sees. Animating
+camera plates and compositing tricks
+03:53 were used, as well as staging camera
+moves so shots could be cut correctly.
+03:58 In Andy's room, shots of all the toys
+became a lot more complex when it came
+04:02 to staging.
+>> Hey, Mom. Be right down. I've got to get
+04:06 Buzz.
+04:11 >> Video reference was also used heavily,
+and seeing Pete Doctor act as an army
+04:15 man is what gave them the ability to
+bring the Green Army to life so
+04:19 convincingly. Let's take a minute to
+enjoy these throwback shots to their
+04:23 storyboard to pre-production layout and
+final to see how ahead of its time Pixar
+04:27 was and how the workflow still remains
+intact to this day. Is your dream to
+04:31 someday work for Disney or Pixar
+Animation Studios? If not, feel free to
+04:35 skip ahead to the next section or stick
+around if you're just curious about what
+04:38 they look for in artists they want to
+hire. We create videos like this one to
+04:43 not only show you how 3D animated
+features are made, but to also give you
+04:46 a chance to learn the exact workflows
+necessary for your career or even your
+04:50 own personal projects.
+Most feature animation studios will want
+04:54 my experience or something equivalent if
+you are an animator or ZBrush or
+04:58 equivalent for character sculpting.
+Several of our instructors actually work
+05:02 for Disney, Pixar, and Sony. and you can
+learn from them in our courses covering
+05:06 everything from animation and rigging to
+environment and game design and
+05:10 character creation. We'll have some
+links in the description if you're
+05:13 interested in taking your art in a new
+direction with us.
+05:16 >> All right, that's enough. Look, we're
+all very impressed with Andy's new toy
+05:21 >> toy.
+>> T O Y toy.
+05:24 >> Excuse me. I I think the word you're
+searching for is space ranger. Another
+05:28 impressive feat these animators achieved
+was the fact that for the most part
+05:32 secondary animations were not possible.
+So things like clothing had to be
+05:35 animated by hand as cloth sim back then
+simply was not possible when it comes to
+05:40 designing the 3D sets. 3D naturally
+likes straight lines. But the designers
+05:45 wanted to break it up and soften it by
+rounding corners and softening things
+05:48 with lighting. The artist also aimed to
+only add the detail that was necessary
+05:53 as CG was not capable of creating photo
+realism at the time.
+05:57 They did what they could to get cheesy
+cement rock textures on a trash can at
+06:01 the Dinoco gas station. They had to
+lived in environment spaces, adding
+06:05 scuff marks, splats, dirt scuff marks,
+and more. So, environment models were
+06:10 not sterile, but had divots and
+scratches to have more character and be
+06:13 more believable. They even went as far
+as burning a real toy with a magnifying
+06:17 glass to get real life reference for
+textures, which was later used for the
+06:21 scene where Sid burns Andy's head. It's
+fun to see how Pizza Planet was
+06:25 originally Pizza Putt, a miniature golf
+place. But when Buzz became a spaceman,
+06:29 it became a spaceport instead. As we'll
+see, the visual leap from Toy Story 1 to
+06:34 Toy Story 2 isn't as drastic as the leap
+between the other two movies. As we
+06:39 stated, the biggest leap was the ability
+that Pixar developed to render humans.
+06:43 The animation test seen here for Toy
+Story 2 showed improved models, acting,
+06:47 and animation complexity. The marionette
+test was so convincing some couldn't
+06:51 believe it was key framed by hand. These
+tests were critical for the Woody's
+06:55 roundup scenes where the characters were
+rendered in color and the backgrounds in
+06:58 black and white. Then scenes were put
+through a process to make the footage
+07:02 look old, which was called the kinoscope
+effect. Bullseye shows vast amounts of
+07:06 improvement over the movement from Scud
+and Toy Story 1. Not only capturing more
+07:10 natural movements, but the ability to
+convey a ton more emotion. The
+07:14 [clears throat] animators imagine
+Bullseye to move like a big floppy dog.
+07:17 And a lot of the tests proved that this
+approach worked extremely well. They
+07:21 weren't sure at the time if Bullseye
+would need to speak. So they even did a
+07:24 few dialogue tests with him to ensure he
+would be capable just in case. One of
+07:29 the test where Bullseye Saddle Falls
+down was so successful that John Laceder
+07:33 wrote it in the film so it could be
+used. One test we can see here was to
+07:36 see if the animators wanted to animate
+her hair, which in the end they chose
+07:40 not to do. Walk tests prove a lot when
+it comes to personality and
+07:43 practicality. And Jesse's body is
+actually the same as Woody's lower body
+07:48 with a few small scaling tweaks made.
+They use Danny Devito as a reference for
+07:51 Al's personality and movements. Ah,
+prepare to die.
+08:04 Hey, give me back my power module.
+08:12 Oh no.
+>> Like in all Pixar movies, video
+08:17 reference was a big part in getting the
+movements of characters genuine and just
+08:21 right.
+>> Ow.
+08:23 >> Oh, hi Mo.
+>> The models from Toy Story 1 were refined
+08:26 for the sequel. Human models were much
+improved with the ability to add pores,
+08:30 wrinkles, and blemishes on the skin
+surfaces, which were developed and first
+08:34 used on their animated short Jerry's
+Game. A lot of the assets in the movies
+08:38 were reused as well to save production
+time, such as Zerg's Planet being a
+08:42 reused dry riverbed set in Ant Island
+from A Bug's Life, which was reshaded
+08:47 and reit
+Andy's neighborhood. They reused plants
+08:51 and bushes from A Bug's Life as well,
+and the garage sale even contained old
+08:55 props from the original Toy Story.
+Andy's room was very similar, except for
+08:58 the wallpaper being changed to having
+stars and a bit more space on the ground
+09:02 for action shots. Al's display room for
+all of his collectible display cases,
+09:08 his office filled with box toys, his toy
+store, the toy barn, and the city that
+09:12 leads up to Al's building were all
+created by hand and populated in 3D.
+09:17 There were many more elaborate sets
+created for part two. As Pixar's ability
+09:21 to build in 3D scaled,
+>> in just a few hours, you'll be sitting
+09:24 around a campfire with Andy making
+delicious hot.
+09:29 >> They're called s'mores, Buzz.
+>> Right. Right. Of course. Perhaps one of
+09:32 the biggest waves we remember in the 3D
+animation community when Toy Story 3 was
+09:37 released was the infamous Carlos Bena
+Buzz Lightyear Spanish Dance Test. With
+09:42 improvements in modeling detail and
+rigging controls, animators were able to
+09:46 get a ton more expression and polish.
+The Toy Story 1 and Toy Story 2
+09:50 characters, for example, only had three
+controls each in the brow, versus the
+09:54 Toy Story 3 characters could have up to
+20 to 25 controls. For Buzz, they
+09:59 limited the brow control so he would
+maintain the toy look from the first two
+10:02 movies.
+The 11-year gap between Toy Story 2 and
+10:06 Toy Story 3 allowed improvements in
+lighting, rendering, particles,
+10:10 simulations, modeling, and more,
+resulting in a much larger visual
+10:14 improvement than what was seen from Toy
+Story 1 to Toy Story 2. Even in the
+10:19 animation tests alone, the additional
+fidelity can easily be seen here. The
+10:23 models for the toys were built from the
+ground up with programs like Maya and
+10:26 even ZBrush, and they made conscious
+decisions on what elements of the
+10:30 characters should be kept and what
+should be scrapped. Human characters
+10:34 started to look a lot more realistic
+compared to what was possible in the
+10:37 first two movies. Especially when it
+came to their clothes and hair getting
+10:41 realistic physics, and their skin had
+photorealistic shading. The skin also
+10:46 introduced subsurface scattering that
+they developed in Ratatouille. All of
+10:50 these advancements led to all the
+characters in the movie to be far more
+10:54 convincing visually. They created a
+massive amount of new characters and
+10:58 toys for the third movie, all with
+unique designs and movements to enhance
+11:02 their personalities to feel like toys
+that were alive. It's awesome to see the
+11:06 attention to detail that the artists
+took for each supporting toy character
+11:09 through various animation tests, just as
+if they were hero characters. In
+11:14 particular, the Kenon Barbie tests are
+really fun as they have just enough
+11:17 movement to feel alive but still
+doll-like. When designing the new
+11:21 character, Lotso, the designer used
+plush toys for reference, and they went
+11:25 as far as cutting pieces of fabric to
+determine where the stitch lines would
+11:29 fall as they designed the character. The
+early plush prototypes would help the
+11:33 team with his final design, but they
+also helped the animators with
+11:37 additional reference to study how a
+plush toy would move. Technological
+11:42 advancements from movies before Toy
+Story 3, such as The Incredibles,
+11:45 Ratatouille, and Monsters Inc., all had
+a big part in the visual realism. Oh,
+11:50 no, no, no, no, no, NO, NO. BUZZ LOOKING
+ALIEN. WHERE? [screaming]
+11:57 >> With Toy Story 4, artists were now free
+to be creative with how limited and
+12:01 doll-like movements would be, and how
+human they were to get the perfect blend
+12:05 of both worlds. They focused more on the
+concept of physical limitations of
+12:10 specific toys and then adapting the
+animation to the toy's anatomy and
+12:14 materials. They applied the idea of high
+status people not needing to move,
+12:18 blink, or expend as much energy for the
+personality of Gabby Gabby. With the
+12:23 improvements in technology, visual
+storytelling was enhanced. They were
+12:27 able to use this for B. Peep's skirt to
+add to her character. She had the
+12:31 ability to adapt her skirt to be a dress
+or a cape, and they were able to
+12:35 accomplish a much more realistic version
+of her. To bring B Peep's active
+12:39 personality to life, animators studied
+gymnasts, dancers, and figure skaters as
+12:45 reference for her movements to convey
+genuine acting and body weight
+12:48 mechanics. For Forky, they intentionally
+animated him with very limited movements
+12:53 so that he would feel as if a child
+animated him with very few gestures.
+12:57 With Duke Kaboom, they animated him with
+his stance in mind. So, he's posed to
+13:01 always fit on a bike, and due to this,
+his walk is slightly off. He only has
+13:06 two hand poses, and it was Ker Reeves's
+idea to have him use a lot of poses as
+13:10 he talks. The ventriloquist doll body
+drove everything with the head dragging
+13:14 behind. There was a crazy leap in
+animation controls with over 7,000
+13:19 controllers in Woody for Toy Story 4
+compared to the 596 controllers in Toy
+13:24 Story 1. Once again, additional detail
+was given to the models of the toys.
+13:28 With B Peep in particular, the artist
+studied porcelain toys and their firing
+13:32 process. They looked at how the firing
+process smoothed out hard edges and
+13:36 resulted in small shapes like fingers
+melting into each other. They also made
+13:41 sure to make the dolls feel worn down
+with wear and tear and even small
+13:45 cracks. They used broken porcelain video
+reference to study how it breaks to
+13:49 apply it directly to B Peep. Dozens of
+versions of 4K were made physically by
+13:54 the animators, and his final design was
+actually based on one of the physical
+13:58 models. They even went as far as using
+photoreal poured rubber shader material
+14:02 for the ground and the playground scene.
+They photographed the toys in real world
+14:06 locations to get the lighting on them
+just right.
+14:18 Reach for the sky.
+>> Similar to internships with Disney
+14:23 animation, animators at Pixar will train
+and create acting tests during their
+14:27 internship using several characters from
+production to hone in their craft.
+14:34 >> Excuse me. Sorry. We were only making
+the movie here.
+14:38 >> Throughout the years, we've gathered a
+few of these from animators who go on to
+14:42 be big longtime contributors at the
+studio. And it's fun to see their
+14:45 beginnings as interns at the starts of
+their careers.
+14:50 [laughter]
+14:53 >> I'm boring you.
+>> They'll create unique storytelling
+14:56 situations for the characters and gain
+valuable experience and feedback from
+15:00 leads and veteran animators. Shots can
+range from physicality based motions
+15:05 that convey weight to pantomime shots
+telling unique storylines with gear
+15:09 changes to show genuine personality
+acting changes.
+15:13 >> You could go bigger. You could go bigger
+and Jesse, you're perfect.
+15:17 >> As simple as a walk might seem,
+capturing personality and weight with a
+15:21 genuine set of emotions layered on top
+of the cycle can be an extremely
+15:25 important addition to an animator's
+demonstration of abilities.
+15:30 >> Whoa, whoa, whoa, whoa, whoa, whoa. Back
+the truck up.
+15:34 Look at that. These shots are not only
+useful for animators personal demo reels
+15:39 for future career roles, but also are
+critical to helping them stand out
+15:43 during their internship, showcasing
+their range of acting abilities with 3D
+15:47 characters to land full-time positions
+at the studio. So, capturing the unique
+15:52 set of acting abilities with various
+types of characters and situations is
+15:56 really important to open doors for
+further opportunities. Well, that about
+15:60 wraps up this video on the history of
+Pixar's Toy Story. The leap in
+16:04 technology and attention to detail from
+Toy Story to what we see today in 3D
+16:08 animation has taken massive leaps over
+the decades. Some argue that the story
+16:12 line would have ended perfectly with Toy
+Story 3, and yet here we are on the
+16:16 fifth installment. What are your
+thoughts on the franchise? Should they
+16:20 continue to keep telling new stories
+about toys? We hope you enjoyed our
+16:23 insights and the research that we did
+for this video, diving into tons of
+16:27 Instagram posts, interviews, and
+documentaries to highlight Pixar's
+16:31 animations processed together. We did it
+the oldfashioned way with research and
+16:35 lots of notes and typing out a script.
+Pixar most likely has yet another
+16:39 massive release on their hands with Toy
+Story 5. Are you going to see it in
+16:43 theaters on release day, or are you
+sitting this one out and keeping Toy
+16:46 Story 3 as the perfect ending to the
+trilogy? Let us know your thoughts in
+16:50 the comments.
+>> [music]
+16:54 >> And uh don't forget to like and
+subscribe and we'll see you in the next
+16:57 one.
+>> Perfect.

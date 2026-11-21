@@ -1,0 +1,1885 @@
+00:00 okay so this is going to be a fun one
+00:02 
+
+00:02 I'll just show you how to set basically
+00:03 
+
+00:03 any object you want on fire like this so
+00:06 
+
+00:06 what's fun about this one is um this
+00:08 
+
+00:08 technique is the easiest way to do it
+00:10 
+
+00:10 but it's also the most like the best
+00:12 
+
+00:12 looking way to get fire in blender I
+00:13 
+
+00:13 think at least 99% of the time it's a
+00:16 
+
+00:16 bit cheaty but you'll see what I mean it
+00:17 
+
+00:17 looks good so um if I just show you the
+00:20 
+
+00:20 blend file right now I have some stuff
+00:21 
+
+00:21 in here this is just kind of a test
+00:23 
+
+00:23 scene I'm working with it's just a
+00:26 
+
+00:26 texture from quickle displacement is on
+00:29 
+
+00:29 adapter subdivision is on and then I've
+00:31 
+
+00:31 just got some other photo scans that
+00:33 
+
+00:33 I've taken of just rocks and trees and
+00:36 
+
+00:36 uh roots and stuff like that just for
+00:37 
+
+00:37 some sort of environment to uh work with
+00:41 
+
+00:41 and then if I just turn a light on here
+00:42 
+
+00:42 so you can see uh we've just got yeah
+00:45 
+
+00:45 this nothing special and then I've just
+00:47 
+
+00:47 got a uh a camera here this camera is
+00:50 
+
+00:50 just animated to move forward just two
+00:52 
+
+00:52 key frames one at the beginning one at
+00:54 
+
+00:54 the end just moving forward like this
+00:56 
+
+00:56 and then our timeline it's just uh 150
+00:58 
+
+00:58 frames long so that's it pretty simple
+01:01 
+
+01:01 and I want to make this look cool by
+01:02 
+
+01:02 adding you know some fire so let's do
+01:04 
+
+01:04 that the basic technique is take a video
+01:06 
+
+01:06 of fire slap it on an image plane and
+01:08 
+
+01:08 then wrap the image plane kind of around
+01:11 
+
+01:11 some object uh there's a bit more to it
+01:13 
+
+01:13 than that but that's the basic technique
+01:15 
+
+01:15 so let me show you how to do it take a
+01:17 
+
+01:17 plane so shift a mesh plane let's rotate
+01:21 
+
+01:21 it 90° so it's facing the camera so
+01:24 
+
+01:24 camera is here and I'll just have it the
+01:26 
+
+01:26 plane facing the camera cuz this is
+01:29 
+
+01:29 going to be a you know an image or video
+01:30 
+
+01:30 on here and then I'm just going to
+01:32 
+
+01:32 switch this down here to the Shader
+01:34 
+
+01:34 editor doesn't matter where your windows
+01:36 
+
+01:36 are just have the Shader editor open
+01:38 
+
+01:38 somewhere I also like to have the UV
+01:39 
+
+01:39 editor open but this is just the app I'm
+01:41 
+
+01:41 using so uh let's just make a new
+01:44 
+
+01:44 texture so just on that new plane hit
+01:47 
+
+01:47 new and then you basically just want to
+01:49 
+
+01:49 go to this website um pixels and then
+01:53 
+
+01:53 what you do this is just a free stock
+01:55 
+
+01:55 photo website uh in this case it
+01:56 
+
+01:56 actually has stock videos too so what
+01:58 
+
+01:58 you can do is just type in fire at the
+02:01 
+
+02:01 top of the search bar go to the videos
+02:03 
+
+02:03 section for me it's not loading the
+02:04 
+
+02:04 videos for some reason but I've used
+02:06 
+
+02:06 this site plenty of times it should work
+02:08 
+
+02:08 fine and then uh you can just download a
+02:11 
+
+02:11 bunch of stuff like this just videos of
+02:14 
+
+02:14 fire um this one you can see if you look
+02:17 
+
+02:17 at the bottom you can actually see the
+02:19 
+
+02:19 camera shaking quite a bit that doesn't
+02:20 
+
+02:20 really matter it's not too bad you won't
+02:22 
+
+02:22 see it at all on the render um one thing
+02:25 
+
+02:25 is actually the slow motion videos of
+02:27 
+
+02:27 fire happen to look really really really
+02:29 
+
+02:29 nice in 3D when we render them so if you
+02:31 
+
+02:31 want to use that uh those are some of
+02:33 
+
+02:33 the most like some of the best looking
+02:35 
+
+02:35 ones these really slow motion ones but
+02:37 
+
+02:37 uh just depends on what the look you
+02:38 
+
+02:38 want so I'm just going to take one of
+02:40 
+
+02:40 those and just throw it onto this plane
+02:42 
+
+02:42 right here and uh here's how you do that
+02:44 
+
+02:44 so just drag the file so let's try the
+02:48 
+
+02:48 slow motion one cuz I I kind of like
+02:49 
+
+02:49 this one so let's just take that you
+02:51 
+
+02:51 just drag that file from the Explorer
+02:53 
+
+02:53 the Windows File Explorer down to the
+02:55 
+
+02:55 Shader editor Let Go and there we go
+02:58 
+
+02:58 it's in and and then now uh I need to
+03:01 
+
+03:01 unwrap this because you can see this is
+03:04 
+
+03:04 the aspect ratio it's supposed to be at
+03:05 
+
+03:05 but it's kind of squished so the easiest
+03:07 
+
+03:07 way to fix that is just re unwrap it
+03:09 
+
+03:09 with a a cube project so just u c unwrap
+03:13 
+
+03:13 it and then let's just scale this so
+03:16 
+
+03:16 that it is lining up properly uh first
+03:19 
+
+03:19 of all I'm just going to plug this into
+03:20 
+
+03:20 the emission color before I do anything
+03:22 
+
+03:22 else just so I can see it in the file or
+03:24 
+
+03:24 in the render View and let's just turn
+03:26 
+
+03:26 it up so it's a bit brighter there we go
+03:28 
+
+03:28 and you can see where this is going
+03:30 
+
+03:30 let's just see here let's crop this so
+03:31 
+
+03:31 it's a bit more centered and then I can
+03:34 
+
+03:34 just have this there somewhere like this
+03:37 
+
+03:37 that's fine okay so this is a bit
+03:41 
+
+03:41 problematic having this big uh like or
+03:43 
+
+03:43 this gray Square here so what we want to
+03:46 
+
+03:46 do is take the color of this footage
+03:50 
+
+03:50 here and what's really nice is the
+03:52 
+
+03:52 background is actually black so you can
+03:54 
+
+03:54 actually go out and just record your own
+03:55 
+
+03:55 fire I'd recommend doing that too um so
+03:58 
+
+03:58 next time you're out at of fire just
+04:00 
+
+04:00 take a slow motion video of it on your
+04:02 
+
+04:02 phone that'll work totally fine and then
+04:05 
+
+04:05 um if you do it at night the background
+04:07 
+
+04:07 will just be black as long as you're
+04:08 
+
+04:08 exposed for the fire and then you just
+04:10 
+
+04:10 run the color of this into the alpha and
+04:13 
+
+04:13 that'll just mean the the black
+04:15 
+
+04:15 background will just get removed like
+04:16 
+
+04:16 this um so you can see just run it into
+04:19 
+
+04:19 the alpha and there we go if you want to
+04:22 
+
+04:22 adjust it you can actually use a RGB
+04:24 
+
+04:24 curves node or a color ramp node and
+04:26 
+
+04:26 just use that between the color and the
+04:28 
+
+04:28 alpha and you can adjust exactly where
+04:29 
+
+04:29 it cuts off I might actually do that
+04:31 
+
+04:31 because just in case the background
+04:33 
+
+04:33 isn't fully black uh it might be hard to
+04:36 
+
+04:36 see this but you can see there's kind of
+04:37 
+
+04:37 a line here where the the background
+04:39 
+
+04:39 isn't fully transparent so I'll just
+04:42 
+
+04:42 pull this black handle of the color ramp
+04:44 
+
+04:44 up just slightly so it's not uh you can
+04:47 
+
+04:47 see if I pull this make this extreme you
+04:48 
+
+04:48 can see it's not fully black so I'll
+04:50 
+
+04:50 just pull it up a little bit and there
+04:52 
+
+04:52 we go that looks good let's just bring
+04:55 
+
+04:55 the camera back to
+04:56 
+
+04:56 here so this is what I mean it's good in
+04:58 
+
+04:58 99% of the cases where you need fire
+05:00 
+
+05:00 because if I go from the side then it
+05:03 
+
+05:03 breaks the illusion obviously it's just
+05:05 
+
+05:05 a 2d plane so you
+05:07 
+
+05:07 know most of the time you're not going
+05:09 
+
+05:09 to have a shot where you're like doing a
+05:11 
+
+05:11 ro like 360 rotation around a fire over
+05:14 
+
+05:14 top of it so you know for a shot like
+05:16 
+
+05:16 this where it's just straight on this
+05:17 
+
+05:17 will work perfect but for for Stuff
+05:20 
+
+05:20 where it's like straight above you know
+05:22 
+
+05:22 you're going to have to find a different
+05:23 
+
+05:23 technique or find a different video that
+05:25 
+
+05:25 works with this angle okay so the way we
+05:28 
+
+05:28 actually get this to move cuz if I press
+05:30 
+
+05:30 play right now um it's just a still
+05:32 
+
+05:32 image so the way you get this video to
+05:34 
+
+05:34 work is uh set the number of frames
+05:37 
+
+05:37 first of all so I think this was a 17
+05:42 
+
+05:42 second video so if I just go to
+05:44 
+
+05:44 properties on this one uh let's just see
+05:47 
+
+05:47 details 55 seconds and it's 24 FPS so
+05:54 
+
+05:54 that's I'm not even going to calculate
+05:55 
+
+05:55 that but you can just multiply those two
+05:57 
+
+05:57 together to get the rough number of
+05:58 
+
+05:58 frames and then it does you don't need
+06:00 
+
+06:00 to set the number of frames in here to
+06:01 
+
+06:01 that amount all you do is set the number
+06:03 
+
+06:03 of frames in here to the length of your
+06:05 
+
+06:05 timeline or however long you want this
+06:07 
+
+06:07 to run for so my animation is going to
+06:10 
+
+06:10 be 150 frames long so I'll just set the
+06:12 
+
+06:12 frames to 150 as long as it's as long as
+06:15 
+
+06:15 the timeline it'll be fine um you can
+06:18 
+
+06:18 set it longer if you want it doesn't
+06:19 
+
+06:19 really matter so it's sort of working
+06:22 
+
+06:22 but we have to check these two boxes
+06:25 
+
+06:25 here cylic and auto refresh and that
+06:27 
+
+06:27 will just mean this will Loop and then
+06:29 
+
+06:29 it it'll it'll refresh in the viewport
+06:31 
+
+06:31 automatically and now it's actually
+06:35 
+
+06:35 working so there we go uh you can see
+06:38 
+
+06:38 it's a bit laggy right now but as soon
+06:39 
+
+06:39 as I render this out it'll look really
+06:41 
+
+06:41 really clean like I showed you before so
+06:44 
+
+06:44 that's that's basically it you could
+06:46 
+
+06:46 stop there if you wanted to but there's
+06:47 
+
+06:47 some things we can do to make this look
+06:48 
+
+06:48 better um quite a lot nicer and the
+06:51 
+
+06:51 first one is let's just take a mix node
+06:54 
+
+06:54 uh this used to be the mix RGB node but
+06:56 
+
+06:56 it's just called mix Now set this to
+06:58 
+
+06:58 color and then multiply at the bottom
+07:01 
+
+07:01 here cuz I want to multiply a color into
+07:04 
+
+07:04 this color so just drop that in here
+07:06 
+
+07:06 that's running into slot a and then
+07:09 
+
+07:09 right now it's multiplying in Gray but I
+07:10 
+
+07:10 don't want that I just want some more
+07:12 
+
+07:12 like orange Rich kind of fire color so
+07:15 
+
+07:15 I'll just make this brighter and more
+07:18 
+
+07:18 orange like this you could actually make
+07:21 
+
+07:21 this whatever you want like if you
+07:22 
+
+07:22 wanted to make this blue you could take
+07:23 
+
+07:23 a a hue saturation maybe just drop that
+07:25 
+
+07:25 to zero and then multiply in whatever
+07:27 
+
+07:27 color you want like this and then you
+07:29 
+
+07:29 can you could just get some really just
+07:32 
+
+07:32 fun stuff by you know manipulating the
+07:34 
+
+07:34 color however you want you could also
+07:36 
+
+07:36 just use a hue saturation and just
+07:38 
+
+07:38 change this uh the Hue
+07:41 
+
+07:41 value okay so I'll just do regular fire
+07:43 
+
+07:43 for this one so let's just leave this on
+07:46 
+
+07:46 orange uh it doesn't need to be that
+07:48 
+
+07:48 intense but something like that is going
+07:49 
+
+07:49 to be fine this is not doing anything
+07:51 
+
+07:51 now okay so one thing is this is the
+07:55 
+
+07:55 only light source in the entire scene is
+07:57 
+
+07:57 this fire right here and it's const L
+07:60 
+
+07:60 moving and changing so it means it's
+08:02 
+
+08:02 going to be there's going to be a lot of
+08:03 
+
+08:03 like flickering which is actually
+08:05 
+
+08:05 realistic that's what you would see in
+08:07 
+
+08:07 real life is a lot of flickering from
+08:08 
+
+08:08 the fire uh but if you want it to just
+08:11 
+
+08:11 look a little bit more stable and clean
+08:14 
+
+08:14 what you can do is turn this down a
+08:16 
+
+08:16 little bit so it's not super bright as
+08:18 
+
+08:18 long as you can see it and then just use
+08:19 
+
+08:19 a Point light to to do most of the
+08:22 
+
+08:22 lighting for you I still want a bit of
+08:24 
+
+08:24 that flickering because it looks more
+08:25 
+
+08:25 realistic and cool but um all the way up
+08:28 
+
+08:28 you'll see if you render it out it's
+08:29 
+
+08:29 it's it's a lot so let's just throw in a
+08:31 
+
+08:31 point light uh right there I'll turn up
+08:34 
+
+08:34 the size so it's like this big is
+08:37 
+
+08:37 roughly the same size as where most of
+08:39 
+
+08:39 the light would be coming from from the
+08:41 
+
+08:41 fire and then just make that like orange
+08:44 
+
+08:44 or something and then I also want to
+08:46 
+
+08:46 turn that up to like something like this
+08:49 
+
+08:49 is enough to just
+08:51 
+
+08:51 see um and then also when you're
+08:54 
+
+08:54 lighting your scene from emissive
+08:55 
+
+08:55 textures like this a lot of the times
+08:57 
+
+08:57 it's going to be very noisy and just
+08:60 
+
+08:60 hard to render so using a point light
+09:02 
+
+09:02 like this to do most of the heavy
+09:04 
+
+09:04 lifting with the lighting is going to
+09:05 
+
+09:05 just make it a lot easier to render
+09:08 
+
+09:08 usually uh okay so let's turn off this
+09:11 
+
+09:11 setting right here multiple importance
+09:12 
+
+09:12 because you can see if I move this over
+09:14 
+
+09:14 the reflection of the water or any just
+09:16 
+
+09:16 reflective surface you'll actually see
+09:19 
+
+09:19 the entire reflection of the light so if
+09:21 
+
+09:21 you just disable the setting multiple
+09:23 
+
+09:23 importance it'll still leave all the
+09:24 
+
+09:24 light coming from this light but you
+09:26 
+
+09:26 won't see that weird
+09:28 
+
+09:28 reflection okay so let's take that and
+09:30 
+
+09:30 then just kind of put it in there
+09:32 
+
+09:32 somewhere like this the other thing I
+09:34 
+
+09:34 forgot to mention here is I have
+09:35 
+
+09:35 volumetrics turned on so if I hide this
+09:38 
+
+09:38 this is what it looks like and here's
+09:40 
+
+09:40 what it looks like when we turn on the
+09:42 
+
+09:42 volumetrics this is just a big Cube if I
+09:44 
+
+09:44 just display this Bal or uh textured
+09:47 
+
+09:47 it's just a cube set to display as
+09:49 
+
+09:49 bounds uh you do that in this section
+09:51 
+
+09:51 right here object properties
+09:54 
+
+09:54 visibility um or sorry viewport display
+09:57 
+
+09:57 and the display as bounds right here and
+09:59 
+
+09:59 I just have that my uh shortcut so I
+10:01 
+
+10:01 just if you right click that assign
+10:04 
+
+10:04 shortcut mine's D for bounds or for
+10:06 
+
+10:06 display as I mean okay so then on that
+10:10 
+
+10:10 Cube I just have this material volume
+10:12 
+
+10:12 scatter 02 and isotropy is turned up a
+10:16 
+
+10:16 little
+10:17 
+
+10:17 bit 7 and there we go that's it and that
+10:21 
+
+10:21 just gives it a really nice uh nice look
+10:23 
+
+10:23 like that and so you could stop here but
+10:26 
+
+10:26 if you want to take it to the next level
+10:28 
+
+10:28 what we can do is add Sparks with a
+10:31 
+
+10:31 particle system like this so really
+10:33 
+
+10:33 quick um if I were to render this out
+10:36 
+
+10:36 I'll just show you the test render from
+10:38 
+
+10:38 the last animation this is what it would
+10:39 
+
+10:39 look like so looks pretty good uh this
+10:42 
+
+10:42 is the this is a different video of the
+10:43 
+
+10:43 fire so mine I used the more slow motion
+10:45 
+
+10:45 one so it'll look a little bit different
+10:47 
+
+10:47 but that's basically what it's going to
+10:48 
+
+10:48 look like at this point uh so it looks
+10:52 
+
+10:52 pretty good we could stop there but if
+10:53 
+
+10:53 we want to add Sparks and that next
+10:55 
+
+10:55 level of like
+10:57 
+
+10:57 realistic nice touch to the fire I'll
+10:59 
+
+10:59 show you how to do that too so the way
+11:00 
+
+11:00 you do that is we need two things we
+11:03 
+
+11:03 need an emitter object to actually emit
+11:05 
+
+11:05 the particles and then we need a spark
+11:08 
+
+11:08 object which will actually be the
+11:09 
+
+11:09 particle that comes out of that object
+11:12 
+
+11:12 so let's do the spark first so we'll
+11:13 
+
+11:13 just add a icosphere we want as little
+11:16 
+
+11:16 topology as possible you could even do a
+11:17 
+
+11:17 cube if you wanted you probably wouldn't
+11:18 
+
+11:18 notice um but I'll just do an icosphere
+11:21 
+
+11:21 because it's more round but honestly a
+11:23 
+
+11:23 cube would probably be fine and I'll
+11:25 
+
+11:25 just take these subdivisions down to one
+11:26 
+
+11:26 if you didn't see that I'll do that
+11:27 
+
+11:27 again quickly um subdivisions we do not
+11:30 
+
+11:30 need much geometry we need very very
+11:32 
+
+11:32 little so this will work fine one
+11:34 
+
+11:34 subdivision and then very simple
+11:36 
+
+11:36 material just hit new make the emission
+11:39 
+
+11:39 like this color or whatever spark kind
+11:42 
+
+11:42 of color and then we'll just scale that
+11:44 
+
+11:44 down I just kind of move it off to the
+11:46 
+
+11:46 side
+11:47 
+
+11:47 somewhere maybe just turn it up to like
+11:49 
+
+11:49 five or something okay so let's just
+11:51 
+
+11:51 create a plane roughly where that fire
+11:53 
+
+11:53 is and then doesn't need to be you're
+11:56 
+
+11:56 going to be able to see it but once we
+11:59 
+
+11:59 turn on these settings you won't be able
+11:60 
+
+11:60 to see it at all so it just it doesn't
+12:01 
+
+12:01 matter if you can actually see it right
+12:02 
+
+12:02 here so let's go to the particle tab
+12:05 
+
+12:05 here press new hit the plus we're going
+12:08 
+
+12:08 to be using the emitter setting uh let
+12:11 
+
+12:11 me just backs slash and uh isolate this
+12:13 
+
+12:13 for a sec this I'm just pressing the
+12:15 
+
+12:15 back the the slash key that's the same
+12:17 
+
+12:17 one as the question mark beside the
+12:19 
+
+12:19 shift key back slash to isolate an
+12:21 
+
+12:21 object and right now it's just dropping
+12:23 
+
+12:23 it out of the bottom uh the way you fix
+12:26 
+
+12:26 that is we want to disable gravity so it
+12:28 
+
+12:28 just kind of just floats
+12:30 
+
+12:30 around uh I don't want gravity to be
+12:32 
+
+12:32 pulling this down really uh what is it
+12:35 
+
+12:35 field weights gravity can just pull all
+12:37 
+
+12:37 the way down or close to it and then
+12:39 
+
+12:39 they'll just kind of float around
+12:40 
+
+12:40 endlessly and right now the velocity is
+12:44 
+
+12:44 set to 1 m/s coming out of the normal so
+12:46 
+
+12:46 whatever way this is facing it'll just
+12:48 
+
+12:48 go out that way uh but that's actually
+12:51 
+
+12:51 fine because the fire will be you know
+12:54 
+
+12:54 if you look at Sparks from a fire it'll
+12:55 
+
+12:55 be going like coming out of the fire
+12:57 
+
+12:57 from a Direction so that'll be fine
+12:60 
+
+12:60 maybe I can even turn it up to like two
+13:02 
+
+13:02 uh yeah that'll be totally fine like
+13:04 
+
+13:04 that and then the number 1,000 will be
+13:07 
+
+13:07 fine I think frame start and end uh our
+13:10 
+
+13:10 animation only 150 frames long so I'll
+13:12 
+
+13:12 just change I'll change this to 150 cuz
+13:15 
+
+13:15 I don't need to go for more than that
+13:17 
+
+13:17 and then the lifetime I actually want to
+13:19 
+
+13:19 be probably 150 as
+13:22 
+
+13:22 well uh if you want them to disappear
+13:24 
+
+13:24 faster then obviously change that uh the
+13:27 
+
+13:27 lifetime will just be how long they last
+13:29 
+
+13:29 so like you can see if I turn it to like
+13:31 
+
+13:31 five then they'll disappear after 10 or
+13:34 
+
+13:34 whatever this is set to so I'll just
+13:36 
+
+13:36 keep that on 150 okay so there we go uh
+13:38 
+
+13:38 we've got it we've got like some base
+13:42 
+
+13:42 level thing for Sparks here now so let's
+13:45 
+
+13:45 um what do we need to do let's let's
+13:48 
+
+13:48 change the object to actually be the
+13:49 
+
+13:49 Sparks so the way you do that is just go
+13:51 
+
+13:51 down to uh render this in the particle
+13:55 
+
+13:55 settings down to render render as Halo
+13:58 
+
+13:58 is going to be this thing if you just
+13:59 
+
+13:59 switch it to object and then just pick
+14:02 
+
+14:02 the uh the icosphere I made so right
+14:05 
+
+14:05 there I'd recommend naming it better
+14:07 
+
+14:07 than
+14:08 
+
+14:08 me uh scale can go up we don't really
+14:10 
+
+14:10 need scale Randomness but I'll turn it
+14:12 
+
+14:12 up just in case uh that'll be fine so
+14:14 
+
+14:14 there we go we've got sparks kind of
+14:15 
+
+14:15 going straight up obviously we don't
+14:18 
+
+14:18 want it going straight up we want it
+14:19 
+
+14:19 kind of going around in a cool Sparky
+14:22 
+
+14:22 way the way you do that is just add a
+14:25 
+
+14:25 one more object here a force field and
+14:28 
+
+14:28 we want to pick the turbulence Force
+14:29 
+
+14:29 field and when that does it just it just
+14:31 
+
+14:31 kind of makes the particles go I guess
+14:33 
+
+14:33 let me change this back to Halo so you
+14:34 
+
+14:34 can actually see what this is doing um
+14:37 
+
+14:37 the turbulence will do this once I turn
+14:39 
+
+14:39 it up let's turn it up to two and there
+14:43 
+
+14:43 we go and it looks like it needs to be
+14:45 
+
+14:45 stronger actually I might change the uh
+14:48 
+
+14:48 normal velocity down lower a little
+14:50 
+
+14:50 bit and so there we go the turbulence is
+14:52 
+
+14:52 kind of just making it go out and around
+14:55 
+
+14:55 and just kind of like adding noise
+14:58 
+
+14:58 randomness to the direction that
+14:60 
+
+14:60 everything's going in in kind of a nice
+15:02 
+
+15:02 way so can probably turn that up to like
+15:04 
+
+15:04 four and let's just see what that looks
+15:07 
+
+15:07 like
+15:09 
+
+15:09 yeah that's a bit much maybe 2.5 would
+15:13 
+
+15:13 be good I don't know just depends on the
+15:15 
+
+15:15 kind of look you want and oh also one
+15:18 
+
+15:18 more thing is I don't want the Sparks to
+15:21 
+
+15:21 start when the video starts I want the
+15:23 
+
+15:23 Sparks to already be in the air cuz the
+15:25 
+
+15:25 like the fire would have been there
+15:27 
+
+15:27 before the camera started recording this
+15:29 
+
+15:29 so it makes sense that the Sparks would
+15:30 
+
+15:30 already be kind of blowing around so the
+15:32 
+
+15:32 way you do that is you just set this so
+15:35 
+
+15:35 that the frame start right now it's on
+15:37 
+
+15:37 one so it'll start emitting on frame one
+15:40 
+
+15:40 I actually want it to start on like
+15:42 
+
+15:42 minus 100 or- 150 or something like that
+15:46 
+
+15:46 just so that they're already in the air
+15:49 
+
+15:49 and then maybe I can turn up the
+15:50 
+
+15:50 lifetime even more so let's just do like
+15:51 
+
+15:51 400 so it has enough overlap to go um so
+15:56 
+
+15:56 that everything is already it's not like
+15:58 
+
+15:58 disappearing by the time it starts the
+15:60 
+
+15:60 the animation so there we go maybe let's
+16:02 
+
+16:02 even go more like minus 200 on the frame
+16:04 
+
+16:04 start so that um it's already by the
+16:07 
+
+16:07 time it gets to frame one all these
+16:09 
+
+16:09 particles are already emitting all over
+16:11 
+
+16:11 the place so like that and that's really
+16:13 
+
+16:13 nice I think that'll look good once we
+16:14 
+
+16:14 had the uh once we have it on Sparks so
+16:17 
+
+16:17 let's go to render view in viewport and
+16:19 
+
+16:19 then just change that back to object
+16:21 
+
+16:21 make the object that icosphere and there
+16:23 
+
+16:23 you go let me just do a quick render of
+16:26 
+
+16:26 this and you can see we're going to need
+16:28 
+
+16:28 to turn on motion blur but this is the
+16:30 
+
+16:30 effect we're going for I just pull this
+16:32 
+
+16:32 up uh it's very low res right now but
+16:34 
+
+16:34 you can see that is going to look really
+16:36 
+
+16:36 really nice especially when it gets
+16:37 
+
+16:37 animated and I'll show you how to make
+16:39 
+
+16:39 this even nicer with some settings so
+16:42 
+
+16:42 let's turn on motion blur this is very
+16:45 
+
+16:45 important make sure you check this box
+16:47 
+
+16:47 pretty much 99% of the time you're doing
+16:49 
+
+16:49 an animation I recommend turning on
+16:50 
+
+16:50 motion BL it just makes everything look
+16:52 
+
+16:52 better um so yeah let's turn that on and
+16:54 
+
+16:54 I might even turn it up to like 7 or
+16:56 
+
+16:56 something8 around there sweet and then
+16:59 
+
+16:59 if I render this again you'll see what
+17:01 
+
+17:01 that's doing now we get a little bit of
+17:03 
+
+17:03 motion blur and then that will look
+17:05 
+
+17:05 super super nice with the turbulence cuz
+17:07 
+
+17:07 everything's kind of moving around at
+17:09 
+
+17:09 slightly different speeds and it's like
+17:10 
+
+17:10 it there's these weird little air
+17:12 
+
+17:12 pockets it looks like and it it just
+17:14 
+
+17:14 looks really really good with this uh
+17:16 
+
+17:16 you'll notice we can still see this
+17:18 
+
+17:18 plane that I added that looks terrible
+17:20 
+
+17:20 so the way you uh hide that in the
+17:23 
+
+17:23 render is you just go down to in the
+17:25 
+
+17:25 particle settings go down to um the
+17:27 
+
+17:27 render Tab and then just uncheck show
+17:29 
+
+17:29 emitter just take that off and if you
+17:31 
+
+17:31 don't want to see it in the viewport as
+17:32 
+
+17:32 well there's a viewport display tab you
+17:34 
+
+17:34 can just uncheck it there as
+17:35 
+
+17:35 well so there we go and to avoid this
+17:39 
+
+17:39 kind of thing happening where it just
+17:40 
+
+17:40 glitches out all you need to do is bake
+17:42 
+
+17:42 this also if you don't uh if you if you
+17:45 
+
+17:45 try and render the animation or the
+17:46 
+
+17:46 image and you don't see the particles at
+17:49 
+
+17:49 all this is probably the thing that's
+17:50 
+
+17:50 wrong you just haven't baked the
+17:52 
+
+17:52 animation so you just go to the cache
+17:54 
+
+17:54 right here just click bake you're done
+17:57 
+
+17:57 and then what that'll do is it'll kind
+17:58 
+
+17:58 of like freeze it into place and it
+17:60 
+
+17:60 won't glitch out and then any settings
+18:02 
+
+18:02 you need to tweak here you just have to
+18:03 
+
+18:03 delete the bake readjust and then rebake
+18:06 
+
+18:06 it and then it'll it'll just cash that
+18:08 
+
+18:08 there we go okay so I should be able to
+18:11 
+
+18:11 render this now and I think I think
+18:13 
+
+18:13 we're good here uh this is a good place
+18:14 
+
+18:14 to stop at this point I'd probably just
+18:16 
+
+18:16 tweak the fire and like um if I just go
+18:19 
+
+18:19 back here I what I'd probably do is just
+18:21 
+
+18:21 duplicate this a few more times you only
+18:23 
+
+18:23 really need one video of fire um if you
+18:26 
+
+18:26 see that it's kind of a duplicate and it
+18:28 
+
+18:28 looks like if you duplicate this it
+18:30 
+
+18:30 you'll see that it's duplicated because
+18:32 
+
+18:32 it's the same footage one trick you can
+18:34 
+
+18:34 do to just get more out of this one clip
+18:37 
+
+18:37 is you just make sure you're happy with
+18:39 
+
+18:39 the color and the actual shading setup
+18:42 
+
+18:42 here and then what you can do is just
+18:44 
+
+18:44 when you press shift d uh I'll just call
+18:47 
+
+18:47 this fire you can see there's a two
+18:49 
+
+18:49 right here anytime I duplicate that
+18:51 
+
+18:51 that's the number of objects using this
+18:52 
+
+18:52 material so I'll just click that that
+18:55 
+
+18:55 two or that three that's right there and
+18:57 
+
+18:57 then that will that will make this
+18:58 
+
+18:58 texture unique to this object and what I
+19:00 
+
+19:00 can do is just change the offset on um
+19:03 
+
+19:03 on this video here so I can just offset
+19:05 
+
+19:05 that to maybe let just up the uh up the
+19:07 
+
+19:07 frames to like 250 or
+19:09 
+
+19:09 something and then just change the
+19:11 
+
+19:11 offset by a few frames like 50 or
+19:13 
+
+19:13 something and now uh if I just bring
+19:17 
+
+19:17 this
+19:18 
+
+19:18 here now you shouldn't be able to tell
+19:22 
+
+19:22 that it's a duplicate you're it looks
+19:23 
+
+19:23 the same here but in the in the actual
+19:26 
+
+19:26 render it should be different uh which I
+19:29 
+
+19:29 think it is yeah so even though it looks
+19:32 
+
+19:32 I think my my viewport needs to be
+19:33 
+
+19:33 refreshed but even though it looks the
+19:35 
+
+19:35 same here it is actually a a different
+19:38 
+
+19:38 point in the fire and so it won't look
+19:39 
+
+19:39 like the exact same clip even if it's
+19:41 
+
+19:41 right next to each other the other thing
+19:43 
+
+19:43 you can do if you want to like wrap this
+19:45 
+
+19:45 around is you can just subdivide this a
+19:46 
+
+19:46 bunch of times and then use proportional
+19:48 
+
+19:48 editing uh make sure this setting is
+19:50 
+
+19:50 turned off create correct face
+19:51 
+
+19:51 attributes and you can just kind of wrap
+19:54 
+
+19:54 it around things like this and that
+19:56 
+
+19:56 looks really cool sometimes if it's like
+19:59 
+
+19:59 coming out from underneath an object and
+20:00 
+
+20:00 it kind of wraps around it um so yeah
+20:03 
+
+20:03 I'd recommend just going crazy with this
+20:05 
+
+20:05 just add as much of the stuff as you
+20:07 
+
+20:07 want bring in as many different clips as
+20:08 
+
+20:08 you want and you've got unlimited fire
+20:11 
+
+20:11 basically and then with the Sparks it's
+20:13 
+
+20:13 just going to look so good um let's turn
+20:15 
+
+20:15 on depth the field uh really quick so
+20:18 
+
+20:18 just camera depth the field I'll just
+20:20 
+
+20:20 focus on this thing and then for the
+20:23 
+
+20:23 render settings again let's do 2,000 x
+20:25 
+
+20:25 2,000 I'll just bring that up to 100
+20:28 
+
+20:28 output uh I have a test render F here
+20:30 
+
+20:30 but let's do a final render click this
+20:34 
+
+20:34 and then I want to switch this over from
+20:36 
+
+20:36 ffmpeg video I'm just going to do a PNG
+20:39 
+
+20:39 sequence uh that's the probably the best
+20:42 
+
+20:42 way to render animations because if it
+20:44 
+
+20:44 crashes halfway through it does means
+20:46 
+
+20:46 you don't lose progress it just it just
+20:49 
+
+20:49 stops where the the last frame is
+20:50 
+
+20:50 rendered because it saves it as a bunch
+20:51 
+
+20:51 of images and you can just continue from
+20:52 
+
+20:52 wherever it left off 24 FPS is going to
+20:55 
+
+20:55 be good for this um if you want to go
+20:57 
+
+20:57 higher you can but I kind of like 24
+20:60 
+
+20:60 because it's like more cinematic but do
+21:02 
+
+21:02 whatever you want there and then yeah
+21:04 
+
+21:04 2,000 by 2,000 let's do I'm at 40
+21:07 
+
+21:07 samples that's going to be a little bit
+21:09 
+
+21:09 low I'm going up for a bit so I have a
+21:11 
+
+21:11 bit more time to just let this cook so
+21:13 
+
+21:13 let's just do maybe 100 um and that
+21:16 
+
+21:16 should be fine for this
+21:18 
+
+21:18 one and I think I'm going to render this
+21:20 
+
+21:20 so let's I'm just going to delete this
+21:23 
+
+21:23 and have only one one thing of fire
+21:25 
+
+21:25 actually no I'll leave this in here cuz
+21:27 
+
+21:27 it's cool and and we'll just kind of put
+21:29 
+
+21:29 that there
+21:31 
+
+21:31 sweet and we should be good I might tilt
+21:34 
+
+21:34 the camera up
+21:36 
+
+21:36 slightly and I think we're good I could
+21:40 
+
+21:40 add a glare node but I can't be bothered
+21:42 
+
+21:42 right now so let's just go back here and
+21:44 
+
+21:44 then render this animation cuz I think
+21:47 
+
+21:47 we are I think we're done so before
+21:51 
+
+21:51 rendering let's go to solid view one
+21:53 
+
+21:53 more setting I forgot to mention that I
+21:54 
+
+21:54 have turned on is underneath performance
+21:56 
+
+21:56 here so it's the camera performance
+21:60 
+
+21:60 and then I have this setting check
+22:01 
+
+22:01 persistent data it just means it'll like
+22:04 
+
+22:04 take less time loading all the textures
+22:06 
+
+22:06 and information between frames it might
+22:08 
+
+22:08 increase uh memory usage like it says
+22:11 
+
+22:11 here so just if you have problems with
+22:13 
+
+22:13 that double check that setting but
+22:14 
+
+22:14 usually it just makes it a lot faster
+22:16 
+
+22:16 and doesn't have any doesn't cause any
+22:17 
+
+22:17 problems so I recommend it okay and then
+22:20 
+
+22:20 that's it um I'll show you this when
+22:22 
+
+22:22 it's when it's finished okay so here's
+22:24 
+
+22:24 the animation done by the time I
+22:26 
+
+22:26 actually post this on Instagram I think
+22:27 
+
+22:27 it'll be I'll set something else on fire
+22:29 
+
+22:29 I'll replace the stump with something
+22:31 
+
+22:31 different more interesting but the
+22:33 
+
+22:33 technique will be the exact same as what
+22:34 
+
+22:34 I just showed you here so yeah um if I
+22:38 
+
+22:38 was going to tweak anything with this
+22:39 
+
+22:39 one it would be just making the fire a
+22:41 
+
+22:41 bit smaller like it seems a little bit
+22:45 
+
+22:45 just for the size of the flame a bit
+22:46 
+
+22:46 oversized so I'd probably actually just
+22:48 
+
+22:48 scale the plane down and maybe duplicate
+22:50 
+
+22:50 it a couple more times but for the for a
+22:52 
+
+22:52 demonstration this is good enough but um
+22:55 
+
+22:55 yeah that's how you do that that's how
+22:56 
+
+22:56 you make fire hopefully that was useful
+22:58 
+
+22:58 go and this technique I hope I see a
+22:60 
+
+22:60 bunch of people sending me various
+23:02 
+
+23:02 things on fire and uh yeah I'll see you
+23:05 
+
+23:05 around bye
